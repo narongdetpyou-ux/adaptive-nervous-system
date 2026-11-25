@@ -1,0 +1,39 @@
+name: Import verified ANS v0.4.0 source once
+
+on:
+  push:
+    branches:
+      - ans/import-v040
+
+permissions: {}
+
+concurrency:
+  group: ans-initial-source-import-v040
+  cancel-in-progress: false
+
+jobs:
+  import-verified-source:
+    if: >-
+      ${{ github.repository == 'narongdetpyou-ux/adaptive-nervous-system'
+          && github.ref == 'refs/heads/ans/import-v040'
+          && github.event_name == 'push'
+          && github.event.head_commit.message == 'ANS_IMPORT_READY_V040' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the exact reviewed import commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+          set-safe-directory: false
+          show-progress: false
+          submodules: false
+          lfs: false
+      - name: Verify all 200 files and fast-forward main once
+        env:
+          ANS_IMPORT_TOKEN: ${{ github.token }}
+        run: python3 .ans-import/import_verified_source.py --manifest .ans-import/manifest.json --publish
