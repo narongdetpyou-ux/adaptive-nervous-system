@@ -1,5 +1,7 @@
 """Render the results from the official evidence after all live arms have finished."""
 import json
+import csv
+import gzip
 from pathlib import Path
 from measure import RESULT,ROOT,report
 
@@ -13,6 +15,13 @@ def main():
         d=report('scoring',arm,True)
         reports[arm]=d
         save_json(RESULT/f'official-{arm}.json',d)
+    jobs=json.loads(gzip.decompress((ROOT/'workloads.json.gz').read_bytes()))['live']
+    samples={a:json.loads((RESULT/f'live-{a}.json').read_text())['latency'] for a in ('fixed4','current_v5',w)}
+    with (RESULT/'live-requests.csv').open('w',newline='') as out:
+        writer=csv.writer(out)
+        writer.writerow(['request','wave','release_seconds','mosaics','fixed4_seconds','current_v5_seconds','selected_seconds'])
+        for j,(release,tiles) in enumerate(jobs):
+            writer.writerow([j+1,j//8+1,release,len(tiles),*[s[j] for s in samples.values()]])
     new=reports[w]
     old=reports['current_v5']
     diag=json.loads((RESULT/'attribution.json').read_text())
