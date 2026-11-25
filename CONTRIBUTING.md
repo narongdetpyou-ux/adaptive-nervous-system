@@ -1,6 +1,6 @@
 # พัฒนา ANS รอบถัดไป
 
-อ่าน [GITHUB_START.md](GITHUB_START.md) สำหรับขอบเขตของสำเนาซอร์สและตำแหน่งแพ็กเกจฉบับเต็ม
+อ่าน [simulation/GITHUB_START.md](simulation/GITHUB_START.md) สำหรับขอบเขตของสำเนาซอร์สและตำแหน่งแพ็กเกจฉบับเต็ม
 
 ## การทำงานร่วมกับเจ้าของ ANS
 
@@ -26,6 +26,21 @@ v0.4.0 ผ่านเกณฑ์เลื่อนรุ่นทั้งห�
 เก็บ baseline นี้ไว้สำหรับเปรียบเทียบ การพัฒนารุ่นใหม่ต้องไม่เปลี่ยน protocol,
 hash หรือหลักฐานเดิมเพื่อให้ผลตรวจย้อนหลังผ่าน
 
+## โครงสร้าง repository
+
+- `simulation/` เก็บซอร์ส v0.1–v0.4 ที่นำเข้ามาทั้งชุด ทั้งโค้ด tests protocol และหลักฐาน
+  ทุกไฟล์มีไบต์และตำแหน่งภายในโฟลเดอร์เหมือนตอนนำเข้า เพราะโค้ด import กันและอ่านไฟล์ตามตำแหน่งนี้
+  งานรุ่นใหม่ของแบบจำลอง เช่น `v5_*.py` และ `test_v5_*.py` ให้วางในโฟลเดอร์นี้ข้างโมดูลเดิม
+- `benchmarks/` และ `pilots/` เก็บงานที่รันจริงบนเครื่อง แต่ละงานอยู่ในโฟลเดอร์ของตัวเอง
+- ที่รากเหลือเพียง `.github/` (CI, แม่แบบ PR และหน้าแรกของ repository), `AGENTS.md`,
+  `CONTRIBUTING.md`, `.gitattributes` และ `.gitignore` ซึ่ง git อ่านจากรากเท่านั้น
+
+ซอร์สถูกย้ายเข้า `simulation/` เมื่อ 25 พฤศจิกายน 2026 ด้วย `git mv` เท่านั้น
+`simulation/test_source_layout.py` ตรวจว่าไฟล์ทั้ง 199 ไฟล์ที่ `SOURCE_IMPORT_MANIFEST.json`
+บันทึกไว้ยังมี SHA-256 เดิม tag `v0.4.0-source` และ commit `22676ec` ที่ Mosaic Queue v1 ใช้
+ยังมีไฟล์อยู่ที่รากตามโครงสร้างเดิม หากตั้ง `ANS_SOURCE` เป็น checkout ของ commit หลังการย้าย
+ให้ชี้ไปที่โฟลเดอร์ `simulation/` ของ checkout นั้น
+
 ## ขั้นตอนทำงาน
 
 1. สร้าง branch จาก `main` สำหรับงานหนึ่งเรื่อง เช่น `feat/v05-drop-reduction`
@@ -45,9 +60,10 @@ CI ทำงานบน `ubuntu-24.04` ด้วย Python `3.12.14` และ 
 `requirements.txt` (`numpy==2.3.5`) รันเมื่อเปิดหรืออัปเดต PR ที่เข้า `main`,
 เมื่อ push เข้า `main` และเมื่อสั่ง Run workflow ด้วยตนเอง
 
-รันจากราก repository:
+รันจากโฟลเดอร์ `simulation/`:
 
 ```bash
+cd simulation
 python -m pip install --requirement requirements.txt
 python freeze_v4.py --verify
 python -m unittest discover -s . -p 'test_*.py' -v
@@ -60,7 +76,8 @@ CI แสดงสองผลที่มีหน้าที่ต่าง�
 
 ตอนเริ่มต้นมี 79 tests จาก `test_lab`, `test_capacity`, `test_v3`, `test_v4`
 และ `test_v4_metrics` ชุด tests นี้ไม่ได้เรียกการตรวจ frozen chain ครบเอง
-จึงต้องรันคำสั่ง `freeze_v4.py --verify` แยกด้วย
+จึงต้องรันคำสั่ง `freeze_v4.py --verify` แยกด้วย หลังย้ายโฟลเดอร์มี `test_source_layout`
+เพิ่มอีกหนึ่งข้อ เพื่อตรวจไบต์ของไฟล์ที่นำเข้า
 
 เมื่อเพิ่ม v0.5 ให้เพิ่ม `test_v5_*.py` ที่ import และเรียกใช้ implementation v0.5 จริง
 การมีไฟล์ `v5_policy.py` เพียงอย่างเดียวไม่ได้ทำให้ tests ของ v0.4 ทดสอบ v0.5
@@ -75,7 +92,7 @@ CI แสดงสองผลที่มีหน้าที่ต่าง�
 
 รายการ hash ใน `freeze_capacity.py`, `freeze_v3.py`, `freeze_v4.py` และ
 `source_checksums.sha256` เป็นรายการไฟล์แบบระบุชื่อ การเพิ่ม workflow, เอกสารใหม่,
-`v5_*.py` และ `test_v5_*.py` ข้างโมดูลเดิมทำได้โดยไม่เปลี่ยน frozen chain
+`v5_*.py` และ `test_v5_*.py` ข้างโมดูลเดิมใน `simulation/` ทำได้โดยไม่เปลี่ยน frozen chain
 
 ไฟล์ที่ถูกตรึงมีทั้งโค้ดและ tests รุ่นเดิม, protocol, acceptance declaration,
 หลักฐาน development, `simulation.py`, ไฟล์ต้นทางใน `abc_service/` และ
@@ -93,8 +110,9 @@ v0.4 ใหม่เพื่อรองรับการแก้ของ v0
 ## ผลทดลองและเกณฑ์ประเมิน
 
 เก็บผลใหม่ในตำแหน่งใหม่ เช่น `local_runs/`, `local_reports/`, `local_packages/`
-หรือ `local_qa/` ตาม `.gitignore` และกำหนด path ผลให้ reviewer ชัดเจน
-อย่ารันเขียนทับ `v4_results/development/` หรือหลักฐานอื่นที่ผูก hash
+หรือ `local_qa/` ได้ทั้งที่รากและใน `simulation/` เพราะ `.gitignore` ทั้งสองตำแหน่งกันไว้แล้ว
+และกำหนด path ผลให้ reviewer ชัดเจน อย่ารันเขียนทับ `simulation/v4_results/development/`
+หรือหลักฐานอื่นที่ผูก hash
 
 ก่อนประเมิน candidate ให้บันทึก commit, รุ่น Python/NumPy, config, seeds,
 protocol และเกณฑ์ตัดสิน เพื่อให้แยกผลแต่ละรอบและตรวจซ้ำได้
@@ -102,7 +120,7 @@ protocol และเกณฑ์ตัดสิน เพื่อให้แ�
 
 สำเนาบน GitHub ไม่มี rows/traces และไฟล์ประกอบของแพ็กเกจเดิมครบ จึงใช้ unit tests
 และ frozen verification เป็น CI เบื้องต้น การ replay validation ฉบับเต็ม,
-สร้าง PDF เดิม หรือสร้างแพ็กเกจเดิมใหม่ต้องใช้แพ็กเกจฉบับเต็มตาม GITHUB_START.md
+สร้าง PDF เดิม หรือสร้างแพ็กเกจเดิมใหม่ต้องใช้แพ็กเกจฉบับเต็มตาม [simulation/GITHUB_START.md](simulation/GITHUB_START.md)
 
 ## Dependency และการดูแล workflow
 
