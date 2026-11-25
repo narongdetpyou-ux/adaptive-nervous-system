@@ -25,11 +25,13 @@ jobs:
       - run: python v5_development.py --seed 2000 --workers 2
         env:
           OPENBLAS_NUM_THREADS: 1
+      - run: python v5_development_cohort.py --seeds 2000 --output local_runs/v5_development/cohort-2000.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: v5-development-${{ github.sha }}
           path: |
             local_runs/v5_known_study/
             local_runs/v5_development/episodes-2000.csv
+            local_runs/v5_development/cohort-2000.json
           if-no-files-found: error
       - run: git diff --exit-code HEAD
