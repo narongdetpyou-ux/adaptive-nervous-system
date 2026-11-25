@@ -42,11 +42,20 @@ def _measurement(channel,values,source_t,scenario,environment):
     return measured
 
 
-def simulate_case(policy,scenario,policy_seed=None,regime='legacy_instant',detailed=False,config=None, *, action_space='variant'):
+def simulate_case(policy,scenario,policy_seed=None,regime='legacy_instant',detailed=False,config=None, *, action_space='variant', controller=None):
     if policy_seed is not None:raise ValueError('All v4 policies are deterministic')
     if regime not in REGIME_CONFIGS:raise ValueError('Unknown physical regime')
     environment=REGIME_CONFIGS[regime];env=Env(environment)
-    ctrl=make_controller(policy,environment,config,action_space=action_space)
+    if controller is None:
+        ctrl=make_controller(policy,environment,config,action_space=action_space)
+    else:
+        # A supplied controller is a fresh instance labelled by `policy`; it
+        # must already carry its own configuration for this exact regime.
+        if policy not in VARIANTS:raise ValueError('A supplied controller must be labelled as a V5 variant')
+        if config is not None or action_space!='variant':raise ValueError('Configure the supplied controller directly')
+        if getattr(controller,'environment',None) is not environment:raise ValueError('Controller built for another regime')
+        if getattr(controller,'last_decision',None)!=-1:raise ValueError('Controller must be fresh')
+        ctrl=controller
     arrivals,productivity=drain_arrays(scenario)
     horizon=scenario.horizon;total=horizon+FOLLOWUP_MINUTES
     pre_records=[];post_records=[];history=[];trace=[];moves=[];branches=Counter()
