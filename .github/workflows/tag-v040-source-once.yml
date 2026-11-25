@@ -1,0 +1,74 @@
+name: Create verified v0.4.0 source tag once
+
+on:
+  push:
+    branches: [chore/tag-v040-source]
+
+permissions: {}
+
+concurrency:
+  group: ans-create-v040-source-tag
+  cancel-in-progress: false
+
+jobs:
+  preserve-baseline:
+    if: >-
+      github.repository == 'narongdetpyou-ux/adaptive-nervous-system' &&
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/chore/tag-v040-source' &&
+      github.event.head_commit.message == 'Create verified v0.4.0-source baseline tag'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - name: Verify baseline commit and create tag without overwriting
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          API = 'https://api.github.com/repos/narongdetpyou-ux/adaptive-nervous-system/'
+          BASELINE = 'fd3e40ec8c801b611b55faeb885e575dbd4fca86'
+          TREE = '158ed869930219c818a13bded066ecf8ae750ea3'
+          TAG = 'v0.4.0-source'
+
+          def api(path, method='GET', payload=None, allow_missing=False):
+              headers = {
+                  'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                  'Accept': 'application/vnd.github+json',
+                  'X-GitHub-Api-Version': '2022-11-28',
+                  'User-Agent': 'ans-verified-baseline-tag',
+              }
+              data = None if payload is None else json.dumps(payload).encode('utf-8')
+              if data is not None:
+                  headers['Content-Type'] = 'application/json'
+              request = urllib.request.Request(API + path, data=data, headers=headers, method=method)
+              try:
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      return json.load(response)
+              except urllib.error.HTTPError as error:
+                  if method == 'GET' and allow_missing and error.code == 404:
+                      return None
+                  raise RuntimeError(f'GitHub API {method} failed with HTTP {error.code}') from None
+
+          commit = api('git/commits/' + BASELINE)
+          if commit.get('sha') != BASELINE or commit.get('tree', {}).get('sha') != TREE:
+              raise SystemExit('Baseline commit/tree differs from the verified source snapshot')
+
+          ref_path = 'git/ref/tags/' + TAG
+          existing = api(ref_path, allow_missing=True)
+          if existing is None:
+              api('git/refs', method='POST', payload={'ref': 'refs/tags/' + TAG, 'sha': BASELINE})
+          elif existing.get('object', {}).get('type') != 'commit' or existing.get('object', {}).get('sha') != BASELINE:
+              raise SystemExit('Tag already exists with a different target; refusing to overwrite')
+
+          result = api(ref_path)
+          if result.get('ref') != 'refs/tags/' + TAG or result.get('object', {}).get('type') != 'commit' or result.get('object', {}).get('sha') != BASELINE:
+              raise SystemExit('Tag read-back does not match the verified baseline')
+          print(f'Verified {TAG} -> {BASELINE} (tree {TREE})')
+          PY
