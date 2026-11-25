@@ -1,0 +1,1190 @@
+[
+  {
+    "field": "M101",
+    "band": "H",
+    "name": "M101_H_1603631.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s111/image/hi1110021.fits.gz",
+    "ra": 210.6292295,
+    "dec": 54.26059322,
+    "sha256": "2055f84ce24a4c026cb1838a2f590ae93624f8f8183f5d59cad7da0b236e26f4"
+  },
+  {
+    "field": "M101",
+    "band": "H",
+    "name": "M101_H_1603632.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s111/image/hi1110032.fits.gz",
+    "ra": 210.6292087,
+    "dec": 54.53003767,
+    "sha256": "180678a7881de4fe0b7f149bfb271fd3fae74d09ca950586e8159858edf3e3ce"
+  },
+  {
+    "field": "M101",
+    "band": "H",
+    "name": "M101_H_1603673.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s118/image/hi1180244.fits.gz",
+    "ra": 210.8353375,
+    "dec": 54.47413546,
+    "sha256": "d129dab8d2be3f6bb993e2e47ef48dfd138581346f51b8a966ab305cfb44fcd5"
+  },
+  {
+    "field": "M101",
+    "band": "H",
+    "name": "M101_H_1603674.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s118/image/hi1180256.fits.gz",
+    "ra": 210.8353719,
+    "dec": 54.20469102,
+    "sha256": "bbf9a4b99351fee5b7c351b27f36e859bf69a8de1d92b2147502adaf7eb5edb8"
+  },
+  {
+    "field": "M101",
+    "band": "H",
+    "name": "M101_H_1603677.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s119/image/hi1190021.fits.gz",
+    "ra": 211.0417186,
+    "dec": 54.26046222,
+    "sha256": "97d9164dd5825988e04aa58c94dbeb0f460700da638b89dab4034e24d5cc6ac5"
+  },
+  {
+    "field": "M101",
+    "band": "H",
+    "name": "M101_H_1603678.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s119/image/hi1190032.fits.gz",
+    "ra": 211.041664,
+    "dec": 54.52990666,
+    "sha256": "8abdec76b2d3d38e5a614328533941b9e43262cdcc328afd1d321e24890b9c38"
+  },
+  {
+    "field": "M101",
+    "band": "J",
+    "name": "M101_J_1603631.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s111/image/ji1110021.fits.gz",
+    "ra": 210.6292295,
+    "dec": 54.26059322,
+    "sha256": "37c9f523aac9bcd06b79b642698cb88dff55d6b2d1fb5168efaa95d05847b425"
+  },
+  {
+    "field": "M101",
+    "band": "J",
+    "name": "M101_J_1603632.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s111/image/ji1110032.fits.gz",
+    "ra": 210.6292087,
+    "dec": 54.53003767,
+    "sha256": "5374059636d8265eabaf78a55bd93df02b2ec1c7a1a13e0393da9503f3af284c"
+  },
+  {
+    "field": "M101",
+    "band": "J",
+    "name": "M101_J_1603673.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s118/image/ji1180244.fits.gz",
+    "ra": 210.8353375,
+    "dec": 54.47413546,
+    "sha256": "b73d6a1c9c4deea559dbdeb92ad5c3843671161c9c9014e638a70cde20c16b61"
+  },
+  {
+    "field": "M101",
+    "band": "J",
+    "name": "M101_J_1603674.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s118/image/ji1180256.fits.gz",
+    "ra": 210.8353719,
+    "dec": 54.20469102,
+    "sha256": "57baff51c6537da157b51ba3df730dd0140b417ceecafb5219fcc4a1daab3b4c"
+  },
+  {
+    "field": "M101",
+    "band": "J",
+    "name": "M101_J_1603677.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s119/image/ji1190021.fits.gz",
+    "ra": 211.0417186,
+    "dec": 54.26046222,
+    "sha256": "02e530ccb818671aab8548250c55ec2a4268b8c38d6c18d914776760e5497672"
+  },
+  {
+    "field": "M101",
+    "band": "J",
+    "name": "M101_J_1603678.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s119/image/ji1190032.fits.gz",
+    "ra": 211.041664,
+    "dec": 54.52990666,
+    "sha256": "81d05e47c7561100c973cba287f78c9db677f2d7de5fdf0f78a0a75ebb6bdc45"
+  },
+  {
+    "field": "M101",
+    "band": "K",
+    "name": "M101_K_1603631.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s111/image/ki1110021.fits.gz",
+    "ra": 210.6292295,
+    "dec": 54.26059322,
+    "sha256": "c0c346c6ca4d0122949f4ad5d0b543a01f3d8fb58f02f9bf2928bbd4ecc5330f"
+  },
+  {
+    "field": "M101",
+    "band": "K",
+    "name": "M101_K_1603632.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s111/image/ki1110032.fits.gz",
+    "ra": 210.6292087,
+    "dec": 54.53003767,
+    "sha256": "59a6464bf115c8f4a93b28bd357a93ba7d5a7a7e0f13a4b5bdfe95053ba18450"
+  },
+  {
+    "field": "M101",
+    "band": "K",
+    "name": "M101_K_1603673.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s118/image/ki1180244.fits.gz",
+    "ra": 210.8353375,
+    "dec": 54.47413546,
+    "sha256": "2f455cc90724e6b79c2cf661dc835b77694b5fb060e2a6139d1464acd67f354f"
+  },
+  {
+    "field": "M101",
+    "band": "K",
+    "name": "M101_K_1603674.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s118/image/ki1180256.fits.gz",
+    "ra": 210.8353719,
+    "dec": 54.20469102,
+    "sha256": "565e922c8ec3de4e9760243ed242a112ddc17aa2a8f345eeb8f4e74c6b399bdb"
+  },
+  {
+    "field": "M101",
+    "band": "K",
+    "name": "M101_K_1603677.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s119/image/ki1190021.fits.gz",
+    "ra": 211.0417186,
+    "dec": 54.26046222,
+    "sha256": "8952f34a19ab889a7b9cf1d2100172b1e778e50b6f12987a015e54270ce274df"
+  },
+  {
+    "field": "M101",
+    "band": "K",
+    "name": "M101_K_1603678.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990214n/s119/image/ki1190032.fits.gz",
+    "ra": 211.041664,
+    "dec": 54.52990666,
+    "sha256": "f296c2648e6e60dce3070fff659b46431f4c22d74b363ee7e223de9b864e162b"
+  },
+  {
+    "field": "M17",
+    "band": "H",
+    "name": "M17_H_587482.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s142/image/hi1420186.fits.gz",
+    "ra": 275.122932,
+    "dec": -16.03504219,
+    "sha256": "f874ac014aae33bcbdac161208758fb5ffeb4a71f1e4d416d54ef7f896e48f43"
+  },
+  {
+    "field": "M17",
+    "band": "H",
+    "name": "M17_H_587483.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s142/image/hi1420198.fits.gz",
+    "ra": 275.1229661,
+    "dec": -16.30448663,
+    "sha256": "7b4ddfa29ce3cc2e70dc43a168e3e77d709cf95e14424c7f190929b02aca3889"
+  },
+  {
+    "field": "M17",
+    "band": "H",
+    "name": "M17_H_587496.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s143/image/hi1430080.fits.gz",
+    "ra": 275.2466385,
+    "dec": -16.24848491,
+    "sha256": "f357e1dbe17cff36259e7cbc204bbc58673bf92199e1fd11952919485aa4c34d"
+  },
+  {
+    "field": "M17",
+    "band": "H",
+    "name": "M17_H_587497.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s143/image/hi1430092.fits.gz",
+    "ra": 275.2465956,
+    "dec": -15.97904047,
+    "sha256": "06b14e5e42ab5265e37cc679587e3c832807e65e69a4e2dbf4d5a027d2cfdeac"
+  },
+  {
+    "field": "M17",
+    "band": "J",
+    "name": "M17_J_587482.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s142/image/ji1420186.fits.gz",
+    "ra": 275.122932,
+    "dec": -16.03504219,
+    "sha256": "45c7384bc3d93a57336c5486be8147aaa025c1f52f97c0dc525344f28d9ee9cc"
+  },
+  {
+    "field": "M17",
+    "band": "J",
+    "name": "M17_J_587483.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s142/image/ji1420198.fits.gz",
+    "ra": 275.1229661,
+    "dec": -16.30448663,
+    "sha256": "b141a0e8287c97cb76c1cbe0acc7624621dde12a65d2bccceab70b71549bbe92"
+  },
+  {
+    "field": "M17",
+    "band": "J",
+    "name": "M17_J_587496.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s143/image/ji1430080.fits.gz",
+    "ra": 275.2466385,
+    "dec": -16.24848491,
+    "sha256": "d7b314d85ead379d8bcdc0a4117d79e66692d8507afcf1bd9adc5984814113ba"
+  },
+  {
+    "field": "M17",
+    "band": "J",
+    "name": "M17_J_587497.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s143/image/ji1430092.fits.gz",
+    "ra": 275.2465956,
+    "dec": -15.97904047,
+    "sha256": "e0d3d579da5a9d44ec5a7ab89d9f16b247f71d38410c396de0ced229de7e9345"
+  },
+  {
+    "field": "M17",
+    "band": "K",
+    "name": "M17_K_587482.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s142/image/ki1420186.fits.gz",
+    "ra": 275.122932,
+    "dec": -16.03504219,
+    "sha256": "bb37ab1a0032fa4f8cc6b44575ed9b519a65a7e79dd3b534e1a9fd6670ea7183"
+  },
+  {
+    "field": "M17",
+    "band": "K",
+    "name": "M17_K_587483.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s142/image/ki1420198.fits.gz",
+    "ra": 275.1229661,
+    "dec": -16.30448663,
+    "sha256": "7657f42211075326df65aa3d2d13b2916a666e027f2bddcf61551f7d05ef64b8"
+  },
+  {
+    "field": "M17",
+    "band": "K",
+    "name": "M17_K_587496.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s143/image/ki1430080.fits.gz",
+    "ra": 275.2466385,
+    "dec": -16.24848491,
+    "sha256": "1945bc11662dc57a3afe0ad99c09c9759a5b12c6ca46a019a3a995f8f27ae130"
+  },
+  {
+    "field": "M17",
+    "band": "K",
+    "name": "M17_K_587497.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990502s/s143/image/ki1430092.fits.gz",
+    "ra": 275.2465956,
+    "dec": -15.97904047,
+    "sha256": "bac11ca10347e897b0eedb1ac07e021add3f9e83406a19be0901897dc3a8baa4"
+  },
+  {
+    "field": "M31",
+    "band": "H",
+    "name": "M31_H_1590591.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s008/image/hi0080033.fits.gz",
+    "ra": 10.71769366,
+    "dec": 41.33390546,
+    "sha256": "a020290f4f59106dcb57c6fbc1f8c2fa2cdf5ac800c04a36851220de560548ec"
+  },
+  {
+    "field": "M31",
+    "band": "H",
+    "name": "M31_H_1590592.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s008/image/hi0080044.fits.gz",
+    "ra": 10.71777303,
+    "dec": 41.06446102,
+    "sha256": "31096f57c1b7dc51021241023ccce3f24c5757d31908c103da4e5bc2be09bc8f"
+  },
+  {
+    "field": "M31",
+    "band": "H",
+    "name": "M31_H_1590631.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s009/image/hi0090232.fits.gz",
+    "ra": 10.8658105,
+    "dec": 41.11509937,
+    "sha256": "7e9cbe39b902b71b9d4736cd97fbad967f63d7c290f1510336731c0dae86a1ea"
+  },
+  {
+    "field": "M31",
+    "band": "H",
+    "name": "M31_H_1590632.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s009/image/hi0090244.fits.gz",
+    "ra": 10.86574657,
+    "dec": 41.38454381,
+    "sha256": "7a971e1b7b6344d9f58a8729f3d9a10f5a460062a8072343f9b6c8f6bf50fcb9"
+  },
+  {
+    "field": "M31",
+    "band": "H",
+    "name": "M31_H_577809.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/981123n/s072/image/hi0720033.fits.gz",
+    "ra": 10.5663995,
+    "dec": 41.32626873,
+    "sha256": "0965e2b16774e5d31296a494f0aa710677546a096643e09d8df5e4a955154be9"
+  },
+  {
+    "field": "M31",
+    "band": "H",
+    "name": "M31_H_577810.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/981123n/s072/image/hi0720044.fits.gz",
+    "ra": 10.56654982,
+    "dec": 41.05682431,
+    "sha256": "8eaf5041a0dbe08c380ac77ff1e592243f31049cef13983d0005eb2d69bf80fe"
+  },
+  {
+    "field": "M31",
+    "band": "J",
+    "name": "M31_J_1590591.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s008/image/ji0080033.fits.gz",
+    "ra": 10.71769366,
+    "dec": 41.33390546,
+    "sha256": "de46f2632e03291164530048ffb25f8f8457f5b44bbe82b1d2513d381e2eb99f"
+  },
+  {
+    "field": "M31",
+    "band": "J",
+    "name": "M31_J_1590592.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s008/image/ji0080044.fits.gz",
+    "ra": 10.71777303,
+    "dec": 41.06446102,
+    "sha256": "1742e1822a7e63a4ade7971b37886cef654fdb435e7d10b2f88f304120709ac1"
+  },
+  {
+    "field": "M31",
+    "band": "J",
+    "name": "M31_J_1590631.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s009/image/ji0090232.fits.gz",
+    "ra": 10.8658105,
+    "dec": 41.11509937,
+    "sha256": "3c4bad84e26b5712b5fc9f4ef5d19ca4d44e81f3be17704966dc80dcbfffaecf"
+  },
+  {
+    "field": "M31",
+    "band": "J",
+    "name": "M31_J_1590632.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s009/image/ji0090244.fits.gz",
+    "ra": 10.86574657,
+    "dec": 41.38454381,
+    "sha256": "3484a5493304d76c933d0aaa0f11f6265f7c5e7e121dadad39725ed193a63329"
+  },
+  {
+    "field": "M31",
+    "band": "J",
+    "name": "M31_J_577809.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/981123n/s072/image/ji0720033.fits.gz",
+    "ra": 10.5663995,
+    "dec": 41.32626873,
+    "sha256": "e02ebdf9633443737ce1bb497c7997614afa4850bac4a90e967ca4e44f7687ad"
+  },
+  {
+    "field": "M31",
+    "band": "J",
+    "name": "M31_J_577810.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/981123n/s072/image/ji0720044.fits.gz",
+    "ra": 10.56654982,
+    "dec": 41.05682431,
+    "sha256": "345fe8568320f705de5fafec2b571aea83935fe170e08f9e214f876f42da174d"
+  },
+  {
+    "field": "M31",
+    "band": "K",
+    "name": "M31_K_1590591.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s008/image/ki0080033.fits.gz",
+    "ra": 10.71769366,
+    "dec": 41.33390546,
+    "sha256": "b74d00b5f14571bdc7278c602f6656fe076339029a7eb7ac1c8d44ce5923d469"
+  },
+  {
+    "field": "M31",
+    "band": "K",
+    "name": "M31_K_1590592.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s008/image/ki0080044.fits.gz",
+    "ra": 10.71777303,
+    "dec": 41.06446102,
+    "sha256": "bb80a53df001258c04e5b9f062055376067587aac89cc455207aa899c292a1b9"
+  },
+  {
+    "field": "M31",
+    "band": "K",
+    "name": "M31_K_1590631.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s009/image/ki0090232.fits.gz",
+    "ra": 10.8658105,
+    "dec": 41.11509937,
+    "sha256": "a2de0989b54d993395393eb91220729b77dd4925803aae095693ebe80a55003d"
+  },
+  {
+    "field": "M31",
+    "band": "K",
+    "name": "M31_K_1590632.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971024n/s009/image/ki0090244.fits.gz",
+    "ra": 10.86574657,
+    "dec": 41.38454381,
+    "sha256": "42009db321ac7cfec887730b67c4a527e113b626f86b338ba2465cc0b6c327cc"
+  },
+  {
+    "field": "M31",
+    "band": "K",
+    "name": "M31_K_577809.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/981123n/s072/image/ki0720033.fits.gz",
+    "ra": 10.5663995,
+    "dec": 41.32626873,
+    "sha256": "6781ed4e1ad125320f2283f3e08fdbc763ddc6e6c922012ae4f00c8e771f5cf9"
+  },
+  {
+    "field": "M31",
+    "band": "K",
+    "name": "M31_K_577810.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/981123n/s072/image/ki0720044.fits.gz",
+    "ra": 10.56654982,
+    "dec": 41.05682431,
+    "sha256": "e4ceb5bedcd2513a166e693a845c996717e6cbc187f64ef399a7584105dc9ffa"
+  },
+  {
+    "field": "M33",
+    "band": "H",
+    "name": "M33_H_188183.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s025/image/hi0250232.fits.gz",
+    "ra": 23.32661945,
+    "dec": 30.74864992,
+    "sha256": "7dc3d0d4cabb58ae02f7cbc1ade9108e49accd944a680bff72501bcf82742ae3"
+  },
+  {
+    "field": "M33",
+    "band": "H",
+    "name": "M33_H_188184.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s025/image/hi0250244.fits.gz",
+    "ra": 23.32658449,
+    "dec": 30.47920548,
+    "sha256": "8aa8b3700c634487c1cb73714bd39e5d7b4a8331e6987d7d4d6c92aa0ef94e5e"
+  },
+  {
+    "field": "M33",
+    "band": "H",
+    "name": "M33_H_188189.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s026/image/hi0260032.fits.gz",
+    "ra": 23.4663358,
+    "dec": 30.53361466,
+    "sha256": "adace2dc6f642f26b5856fe111d40cf66ecfaa25f582671af8d9e722d5f1b9f4"
+  },
+  {
+    "field": "M33",
+    "band": "H",
+    "name": "M33_H_188190.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s026/image/hi0260044.fits.gz",
+    "ra": 23.46636924,
+    "dec": 30.80305911,
+    "sha256": "45d34ec60e33df1606a244e49d5aa3705c2e42ed957bfb8c73bb15be4a733810"
+  },
+  {
+    "field": "M33",
+    "band": "H",
+    "name": "M33_H_188229.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s027/image/hi0270232.fits.gz",
+    "ra": 23.60719018,
+    "dec": 30.74780513,
+    "sha256": "3a214bc5b0d18681cf3102cb734007a5afd2e779f8e40c5ff9aa9b50fa3a9b66"
+  },
+  {
+    "field": "M33",
+    "band": "H",
+    "name": "M33_H_188230.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s027/image/hi0270244.fits.gz",
+    "ra": 23.60716581,
+    "dec": 30.47836068,
+    "sha256": "52debba486725ba9e831c3daa694143e5cf063372daaccde79294f4c561e8375"
+  },
+  {
+    "field": "M33",
+    "band": "J",
+    "name": "M33_J_188183.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s025/image/ji0250232.fits.gz",
+    "ra": 23.32661945,
+    "dec": 30.74864992,
+    "sha256": "7d33c06a7510ea178d9e5af647f5b37de52f8285150ecad0a35a095c5c7a8985"
+  },
+  {
+    "field": "M33",
+    "band": "J",
+    "name": "M33_J_188184.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s025/image/ji0250244.fits.gz",
+    "ra": 23.32658449,
+    "dec": 30.47920548,
+    "sha256": "c14f80a6495dee93ffbef5972ef014f8892516dc457e8bfa3151706e80f0c9f0"
+  },
+  {
+    "field": "M33",
+    "band": "J",
+    "name": "M33_J_188189.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s026/image/ji0260032.fits.gz",
+    "ra": 23.4663358,
+    "dec": 30.53361466,
+    "sha256": "b994d5be64c16d56bcd93474e7bd31c8c11a594d5b7738030a55aac95fc4f25b"
+  },
+  {
+    "field": "M33",
+    "band": "J",
+    "name": "M33_J_188190.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s026/image/ji0260044.fits.gz",
+    "ra": 23.46636924,
+    "dec": 30.80305911,
+    "sha256": "db08a61f1f1a1822c31663429a3c592cec44e7c9327c88b4f2b38fea0e1f3a2f"
+  },
+  {
+    "field": "M33",
+    "band": "J",
+    "name": "M33_J_188229.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s027/image/ji0270232.fits.gz",
+    "ra": 23.60719018,
+    "dec": 30.74780513,
+    "sha256": "353c14df98e7c30764acc72ebd29e63b65d0fe8e2f4f26587c3956ca8beb99e5"
+  },
+  {
+    "field": "M33",
+    "band": "J",
+    "name": "M33_J_188230.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s027/image/ji0270244.fits.gz",
+    "ra": 23.60716581,
+    "dec": 30.47836068,
+    "sha256": "51b2b9ff2bb6db7955abcf2dc33f4f1943a6c339d89b342189ce8ef18579f3a1"
+  },
+  {
+    "field": "M33",
+    "band": "K",
+    "name": "M33_K_188183.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s025/image/ki0250232.fits.gz",
+    "ra": 23.32661945,
+    "dec": 30.74864992,
+    "sha256": "4c56d55e56653fe04ebb7e713ea8da7545587324269f49f52b00e3e8f258c523"
+  },
+  {
+    "field": "M33",
+    "band": "K",
+    "name": "M33_K_188184.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s025/image/ki0250244.fits.gz",
+    "ra": 23.32658449,
+    "dec": 30.47920548,
+    "sha256": "665da5e8c93664388937ef4a7a5d021a7102a15b796b31296a54409f6642f2f2"
+  },
+  {
+    "field": "M33",
+    "band": "K",
+    "name": "M33_K_188189.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s026/image/ki0260032.fits.gz",
+    "ra": 23.4663358,
+    "dec": 30.53361466,
+    "sha256": "779f2d4d10bc56eb3003d6d42264885f69da132d3368577be0b7b3ffaacfb5b4"
+  },
+  {
+    "field": "M33",
+    "band": "K",
+    "name": "M33_K_188190.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s026/image/ki0260044.fits.gz",
+    "ra": 23.46636924,
+    "dec": 30.80305911,
+    "sha256": "8dc462a9f6aa6fc0a5cf58b6db15561f126b56d01f007aef73c64097b8205216"
+  },
+  {
+    "field": "M33",
+    "band": "K",
+    "name": "M33_K_188229.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s027/image/ki0270232.fits.gz",
+    "ra": 23.60719018,
+    "dec": 30.74780513,
+    "sha256": "005dd58dd4fb8dc5d91027b2e09dee1d38d9adca0b04ef68c4940e475027cf08"
+  },
+  {
+    "field": "M33",
+    "band": "K",
+    "name": "M33_K_188230.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/971205n/s027/image/ki0270244.fits.gz",
+    "ra": 23.60716581,
+    "dec": 30.47836068,
+    "sha256": "14dea704ac506dbd6e400fa270c399b518fc2792681eb4816cbc0da18759bab7"
+  },
+  {
+    "field": "M42",
+    "band": "H",
+    "name": "M42_H_1479294.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s086/image/hi0860032.fits.gz",
+    "ra": 83.71051892,
+    "dec": -5.467259894,
+    "sha256": "72a3f92c36776805d06f3bca02fc2022dab38a7762319e00f7722b1358c242ee"
+  },
+  {
+    "field": "M42",
+    "band": "H",
+    "name": "M42_H_1479295.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s086/image/hi0860044.fits.gz",
+    "ra": 83.71048836,
+    "dec": -5.197815451,
+    "sha256": "179744801c0ee0049e4afe4748476149d9ca80b1787bb409539de58ac264d05a"
+  },
+  {
+    "field": "M42",
+    "band": "H",
+    "name": "M42_H_1479334.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s087/image/hi0870232.fits.gz",
+    "ra": 83.83048301,
+    "dec": -5.252887098,
+    "sha256": "b12b15c23c6b2d478f3a727425ff8d59ca1fb50b60c19b8338c6f2b20acfe918"
+  },
+  {
+    "field": "M42",
+    "band": "H",
+    "name": "M42_H_1479335.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s087/image/hi0870244.fits.gz",
+    "ra": 83.83050177,
+    "dec": -5.522331542,
+    "sha256": "619335d42df99e36d2ca3c1711bd5a31485e4a3a71dbcadc9d291aa267e2c594"
+  },
+  {
+    "field": "M42",
+    "band": "H",
+    "name": "M42_H_1479340.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s088/image/hi0880032.fits.gz",
+    "ra": 83.94985818,
+    "dec": -5.466955901,
+    "sha256": "8f985eb9308088e8b3bfce9de3c5260b3167ec7d99c393523c81fb7f96b6a2a8"
+  },
+  {
+    "field": "M42",
+    "band": "H",
+    "name": "M42_H_1479341.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s088/image/hi0880044.fits.gz",
+    "ra": 83.94980798,
+    "dec": -5.197511462,
+    "sha256": "42aedc2f0e34095c46b375d4319d0e4534ffa22474539effc43eb056319bc272"
+  },
+  {
+    "field": "M42",
+    "band": "J",
+    "name": "M42_J_1479294.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s086/image/ji0860032.fits.gz",
+    "ra": 83.71051892,
+    "dec": -5.467259894,
+    "sha256": "07dcb3dd2675473d4b4cbcbbc98edccf250d5341e99ff45265eeb2bfc05b8d4a"
+  },
+  {
+    "field": "M42",
+    "band": "J",
+    "name": "M42_J_1479295.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s086/image/ji0860044.fits.gz",
+    "ra": 83.71048836,
+    "dec": -5.197815451,
+    "sha256": "37fb4216f996399b26a596c6b2d650464f6a1d45ea9e3b6d928943bbafee8f57"
+  },
+  {
+    "field": "M42",
+    "band": "J",
+    "name": "M42_J_1479334.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s087/image/ji0870232.fits.gz",
+    "ra": 83.83048301,
+    "dec": -5.252887098,
+    "sha256": "cc5f4ce5b47833324cf27beb138f506e5127f98852a9d101491ac4f4a60844a2"
+  },
+  {
+    "field": "M42",
+    "band": "J",
+    "name": "M42_J_1479335.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s087/image/ji0870244.fits.gz",
+    "ra": 83.83050177,
+    "dec": -5.522331542,
+    "sha256": "eb4d79d0bc6bc10aed88c694dddefe5d68c3a20081619327579c3945597692c7"
+  },
+  {
+    "field": "M42",
+    "band": "J",
+    "name": "M42_J_1479340.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s088/image/ji0880032.fits.gz",
+    "ra": 83.94985818,
+    "dec": -5.466955901,
+    "sha256": "261a21711e87bdfbded92360cf144e7d54dd2cb71f91fad1c473f633d0217898"
+  },
+  {
+    "field": "M42",
+    "band": "J",
+    "name": "M42_J_1479341.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s088/image/ji0880044.fits.gz",
+    "ra": 83.94980798,
+    "dec": -5.197511462,
+    "sha256": "47be91d4c30e20fa98cc0eb678faa4b2b68e4e09d624db482ca538c20a0e58b4"
+  },
+  {
+    "field": "M42",
+    "band": "K",
+    "name": "M42_K_1479294.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s086/image/ki0860032.fits.gz",
+    "ra": 83.71051892,
+    "dec": -5.467259894,
+    "sha256": "01b572a94034d015054607c5c4bcb79f540908feb562984ac0f6d8c42fb00982"
+  },
+  {
+    "field": "M42",
+    "band": "K",
+    "name": "M42_K_1479295.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s086/image/ki0860044.fits.gz",
+    "ra": 83.71048836,
+    "dec": -5.197815451,
+    "sha256": "83f3d9359e1e0d799f106ff270a1a7e17248430087bf3354fcf03e58a1704967"
+  },
+  {
+    "field": "M42",
+    "band": "K",
+    "name": "M42_K_1479334.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s087/image/ki0870232.fits.gz",
+    "ra": 83.83048301,
+    "dec": -5.252887098,
+    "sha256": "dbc76c1efb9b192443dd9fdf8cc13c8b3ec17cd71a5132c342691e64f159c8c5"
+  },
+  {
+    "field": "M42",
+    "band": "K",
+    "name": "M42_K_1479335.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s087/image/ki0870244.fits.gz",
+    "ra": 83.83050177,
+    "dec": -5.522331542,
+    "sha256": "6bdd735c5f88dd01ea963d9f76bdf568d678ed59b4b8e3376c327db55459bd5f"
+  },
+  {
+    "field": "M42",
+    "band": "K",
+    "name": "M42_K_1479340.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s088/image/ki0880032.fits.gz",
+    "ra": 83.94985818,
+    "dec": -5.466955901,
+    "sha256": "b34da4b2a9b2b377193803f5ce4e21351764825b72d698e07d340c16a242e047"
+  },
+  {
+    "field": "M42",
+    "band": "K",
+    "name": "M42_K_1479341.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/001124n/s088/image/ki0880044.fits.gz",
+    "ra": 83.94980798,
+    "dec": -5.197511462,
+    "sha256": "b976ed18e0f7b31835884c59272fdb8acfa7ba5fcf8bea7cdea1cdc70b3402a3"
+  },
+  {
+    "field": "M51",
+    "band": "H",
+    "name": "M51_H_1627598.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s023/image/hi0230033.fits.gz",
+    "ra": 202.3611144,
+    "dec": 47.32647671,
+    "sha256": "346947fee4fd0c3aa998d6465fd58bcb9e022b4abb1c2df5648257bcd176ec97"
+  },
+  {
+    "field": "M51",
+    "band": "H",
+    "name": "M51_H_1627599.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s023/image/hi0230044.fits.gz",
+    "ra": 202.3609719,
+    "dec": 47.05703229,
+    "sha256": "28ed60eb61dd78586dac246df0f9db64e7a041ebed051ffd8551460aac983bf8"
+  },
+  {
+    "field": "M51",
+    "band": "H",
+    "name": "M51_H_1627638.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s024/image/hi0240232.fits.gz",
+    "ra": 202.5213942,
+    "dec": 47.11319244,
+    "sha256": "241c7491e1ed38b433e68ea681d3e0b1c4cc82d26711882e259eac780c6ff456"
+  },
+  {
+    "field": "M51",
+    "band": "H",
+    "name": "M51_H_1627639.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s024/image/hi0240244.fits.gz",
+    "ra": 202.5213707,
+    "dec": 47.38263688,
+    "sha256": "6e5861019a324b0893e0c5dd7e5e2d0c2e7462d520ecaf50b3ec7b5b0f26c57e"
+  },
+  {
+    "field": "M51",
+    "band": "H",
+    "name": "M51_H_1627644.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s025/image/hi0250033.fits.gz",
+    "ra": 202.6852367,
+    "dec": 47.32615467,
+    "sha256": "ea7720a51f7ef778b57322fe121d2791ec89abbd1e5cfa66c27f50dfac56134c"
+  },
+  {
+    "field": "M51",
+    "band": "H",
+    "name": "M51_H_1627645.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s025/image/hi0250044.fits.gz",
+    "ra": 202.6852826,
+    "dec": 47.05671023,
+    "sha256": "a6715183a91101c4698e11b23bb3dd44130f6b8b86383d68fd5e2bf073122fcc"
+  },
+  {
+    "field": "M51",
+    "band": "J",
+    "name": "M51_J_1627598.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s023/image/ji0230033.fits.gz",
+    "ra": 202.3611144,
+    "dec": 47.32647671,
+    "sha256": "a568b2863f12023aeb30c4f29e1311dacc220492c85af3ea5f23a7aa6dabb623"
+  },
+  {
+    "field": "M51",
+    "band": "J",
+    "name": "M51_J_1627599.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s023/image/ji0230044.fits.gz",
+    "ra": 202.3609719,
+    "dec": 47.05703229,
+    "sha256": "4c67b794705cf443f5f5f37aae93359bcd3318c447da5210342a0ae38427300e"
+  },
+  {
+    "field": "M51",
+    "band": "J",
+    "name": "M51_J_1627638.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s024/image/ji0240232.fits.gz",
+    "ra": 202.5213942,
+    "dec": 47.11319244,
+    "sha256": "4620ff10da9edb4aee05670ef27f43863e95c552728e156ce8f0a3317c2009a5"
+  },
+  {
+    "field": "M51",
+    "band": "J",
+    "name": "M51_J_1627639.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s024/image/ji0240244.fits.gz",
+    "ra": 202.5213707,
+    "dec": 47.38263688,
+    "sha256": "ef1e79e0da386143a80b4d1edd8651b9d36adeae1450aca23bc3ddd7315d67f9"
+  },
+  {
+    "field": "M51",
+    "band": "J",
+    "name": "M51_J_1627644.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s025/image/ji0250033.fits.gz",
+    "ra": 202.6852367,
+    "dec": 47.32615467,
+    "sha256": "ad0043e96e304231982b0ec707283322c5bfef98f403f63d3343e84e2de164f8"
+  },
+  {
+    "field": "M51",
+    "band": "J",
+    "name": "M51_J_1627645.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s025/image/ji0250044.fits.gz",
+    "ra": 202.6852826,
+    "dec": 47.05671023,
+    "sha256": "8cd74b972c5dc0500ea7fcec3c22a5bb9c8a610a6e00d4eec6b492a389a84c8e"
+  },
+  {
+    "field": "M51",
+    "band": "K",
+    "name": "M51_K_1627598.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s023/image/ki0230033.fits.gz",
+    "ra": 202.3611144,
+    "dec": 47.32647671,
+    "sha256": "b4066b413708ae385c5982bacf4d14cb61392c72f3c7acd77e0674d24dde85ba"
+  },
+  {
+    "field": "M51",
+    "band": "K",
+    "name": "M51_K_1627599.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s023/image/ki0230044.fits.gz",
+    "ra": 202.3609719,
+    "dec": 47.05703229,
+    "sha256": "19dc0a70414cd78061a9b0b5f3954331da70f4fdc12624b70aa5f7246c7b8352"
+  },
+  {
+    "field": "M51",
+    "band": "K",
+    "name": "M51_K_1627638.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s024/image/ki0240232.fits.gz",
+    "ra": 202.5213942,
+    "dec": 47.11319244,
+    "sha256": "132acd6f76d0bd4112c753b9589316d6dd288bb36f97d2ee4cbac90bb957eb33"
+  },
+  {
+    "field": "M51",
+    "band": "K",
+    "name": "M51_K_1627639.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s024/image/ki0240244.fits.gz",
+    "ra": 202.5213707,
+    "dec": 47.38263688,
+    "sha256": "1dda7b1df9af1dd62d1cee5339896aec7f9636929eba86b5c09a7e02094f7ec3"
+  },
+  {
+    "field": "M51",
+    "band": "K",
+    "name": "M51_K_1627644.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s025/image/ki0250033.fits.gz",
+    "ra": 202.6852367,
+    "dec": 47.32615467,
+    "sha256": "00a9860230cf3a369b524289eabbf41fcc2503fbdbbab450725df6d275d5d9eb"
+  },
+  {
+    "field": "M51",
+    "band": "K",
+    "name": "M51_K_1627645.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/980527n/s025/image/ki0250044.fits.gz",
+    "ra": 202.6852826,
+    "dec": 47.05671023,
+    "sha256": "f0fe4253d5eb0c3d0b97e25271de755906b96db9956a53c04cdd0dcf1b9ef293"
+  },
+  {
+    "field": "M81",
+    "band": "H",
+    "name": "M81_H_730077.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/hi0600126.fits.gz",
+    "ra": 148.624241,
+    "dec": 69.17337904,
+    "sha256": "f1afac8f4d5ea75f5c2788326582f1614f6813341d5570d242656420f2acdbe8"
+  },
+  {
+    "field": "M81",
+    "band": "H",
+    "name": "M81_H_730078.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/hi0600138.fits.gz",
+    "ra": 148.6240178,
+    "dec": 68.9039346,
+    "sha256": "38557c95f78ff94ec75a5fc1b72ece25535c65170281c6b56fac2eb14fd949aa"
+  },
+  {
+    "field": "M81",
+    "band": "H",
+    "name": "M81_H_730101.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/hi0610138.fits.gz",
+    "ra": 148.9179548,
+    "dec": 68.95800765,
+    "sha256": "f3c7c6b3c2b4ece08a8ecf61768b8a4a4bbf43e281ddd37dd51b5f1064d970a4"
+  },
+  {
+    "field": "M81",
+    "band": "H",
+    "name": "M81_H_730102.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/hi0610150.fits.gz",
+    "ra": 148.9180481,
+    "dec": 69.22745209,
+    "sha256": "9fcc3c28070c88a17d33c263b950972c171368c5849dd598ee73d0c8857fac88"
+  },
+  {
+    "field": "M81",
+    "band": "H",
+    "name": "M81_H_730123.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/hi0620126.fits.gz",
+    "ra": 149.2193899,
+    "dec": 69.17172719,
+    "sha256": "fd8f2101866697b93645582d29706e22da786de43c2214c3cda793c4dab678eb"
+  },
+  {
+    "field": "M81",
+    "band": "H",
+    "name": "M81_H_730124.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/hi0620138.fits.gz",
+    "ra": 149.2192273,
+    "dec": 68.90228275,
+    "sha256": "4fd34c757d871f83ed71400ece1f13f602952752f6c92947062172a8ed9b1ed9"
+  },
+  {
+    "field": "M81",
+    "band": "J",
+    "name": "M81_J_730077.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/ji0600126.fits.gz",
+    "ra": 148.624241,
+    "dec": 69.17337904,
+    "sha256": "f9c72f260e2697c4dbba6fa4da95b57858b401284387d035e322b7bb9d1499db"
+  },
+  {
+    "field": "M81",
+    "band": "J",
+    "name": "M81_J_730078.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/ji0600138.fits.gz",
+    "ra": 148.6240178,
+    "dec": 68.9039346,
+    "sha256": "d8513d08b9b6984ceade9bf78f92b26f8ca119f60cac2c5f9648449dba15eb05"
+  },
+  {
+    "field": "M81",
+    "band": "J",
+    "name": "M81_J_730101.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/ji0610138.fits.gz",
+    "ra": 148.9179548,
+    "dec": 68.95800765,
+    "sha256": "60d55391095a2e9d745fb2d2f2a6f260ce24186d9f3dce142fe279cc36632dc3"
+  },
+  {
+    "field": "M81",
+    "band": "J",
+    "name": "M81_J_730102.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/ji0610150.fits.gz",
+    "ra": 148.9180481,
+    "dec": 69.22745209,
+    "sha256": "f21090c1e82c99d46bc97ac59e69274fa5fd51b783c2af5bbad8bf9b7958ee4c"
+  },
+  {
+    "field": "M81",
+    "band": "J",
+    "name": "M81_J_730123.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/ji0620126.fits.gz",
+    "ra": 149.2193899,
+    "dec": 69.17172719,
+    "sha256": "6b65dad388a50c6ebe126de8de00518631aa958e719e21b36b1a2fc958e5d87b"
+  },
+  {
+    "field": "M81",
+    "band": "J",
+    "name": "M81_J_730124.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/ji0620138.fits.gz",
+    "ra": 149.2192273,
+    "dec": 68.90228275,
+    "sha256": "509686a34bf07213df5b594a8bdf1990b6042db4d6d69d07c2f1bc710d68f9ce"
+  },
+  {
+    "field": "M81",
+    "band": "K",
+    "name": "M81_K_730077.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/ki0600126.fits.gz",
+    "ra": 148.624241,
+    "dec": 69.17337904,
+    "sha256": "9cbb9e33cf0d7352bcf00a2cd0932816ff4c4fddc53b66bba75910003c6b5dfa"
+  },
+  {
+    "field": "M81",
+    "band": "K",
+    "name": "M81_K_730078.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/ki0600138.fits.gz",
+    "ra": 148.6240178,
+    "dec": 68.9039346,
+    "sha256": "9b777e6aeece7262917c3848e70ccdd750b4f3b7b67c17860a0b614457bd3d4f"
+  },
+  {
+    "field": "M81",
+    "band": "K",
+    "name": "M81_K_730101.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/ki0610138.fits.gz",
+    "ra": 148.9179548,
+    "dec": 68.95800765,
+    "sha256": "56693c5f7d5f47c1a6515bf32adf18207cc603b9ba9745de2f840594998450ba"
+  },
+  {
+    "field": "M81",
+    "band": "K",
+    "name": "M81_K_730102.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/ki0610150.fits.gz",
+    "ra": 148.9180481,
+    "dec": 69.22745209,
+    "sha256": "364ae971ead13ab599935c7499bc2163ca83a08f6441fbc6bb1f1967977e29e2"
+  },
+  {
+    "field": "M81",
+    "band": "K",
+    "name": "M81_K_730123.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/ki0620126.fits.gz",
+    "ra": 149.2193899,
+    "dec": 69.17172719,
+    "sha256": "b43181f24364d031235715a23d3d471ad90c049f1ba996fc6e52c2cffceeedcc"
+  },
+  {
+    "field": "M81",
+    "band": "K",
+    "name": "M81_K_730124.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/ki0620138.fits.gz",
+    "ra": 149.2192273,
+    "dec": 68.90228275,
+    "sha256": "3fdf4ffa678444c5c5c947befebd817110c03354ea1da8fe4b27afe81dbb82ce"
+  },
+  {
+    "field": "M82",
+    "band": "H",
+    "name": "M82_H_730075.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/hi0600103.fits.gz",
+    "ra": 148.6247045,
+    "dec": 69.7122679,
+    "sha256": "444921827724eae16bedd29bd6f8ebdcd2cef8e891b1f8881915d487510611b9"
+  },
+  {
+    "field": "M82",
+    "band": "H",
+    "name": "M82_H_730103.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/hi0610162.fits.gz",
+    "ra": 148.9181437,
+    "dec": 69.49689653,
+    "sha256": "584e3d89542d2141cb696bde749ddf4dd5e2dd86b2eb53ea84fe8d7784f74b20"
+  },
+  {
+    "field": "M82",
+    "band": "H",
+    "name": "M82_H_730104.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/hi0610173.fits.gz",
+    "ra": 148.9182417,
+    "dec": 69.76634097,
+    "sha256": "4e9a721333f3d4e3df439b65d26722a84e6d3d2bf49a5572d8147c0dc2d6b190"
+  },
+  {
+    "field": "M82",
+    "band": "H",
+    "name": "M82_H_730121.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/hi0620103.fits.gz",
+    "ra": 149.2197274,
+    "dec": 69.71061607,
+    "sha256": "c7db6611d03bf49b7660d3710c53185ff02af726d30a83af1aba7cef0360a584"
+  },
+  {
+    "field": "M82",
+    "band": "J",
+    "name": "M82_J_730075.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/ji0600103.fits.gz",
+    "ra": 148.6247045,
+    "dec": 69.7122679,
+    "sha256": "7a3e5ab5288efa476ca6cce6055459c7e95d4f5bc99bda4696b49228383c98cd"
+  },
+  {
+    "field": "M82",
+    "band": "J",
+    "name": "M82_J_730103.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/ji0610162.fits.gz",
+    "ra": 148.9181437,
+    "dec": 69.49689653,
+    "sha256": "b2b54ed7914f903f6c2566187e652ceafa95b8f1e296cfea1a0b01ed4145ef87"
+  },
+  {
+    "field": "M82",
+    "band": "J",
+    "name": "M82_J_730104.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/ji0610173.fits.gz",
+    "ra": 148.9182417,
+    "dec": 69.76634097,
+    "sha256": "c10987ce08ed420c3fc9563bdb70bb8a878f1b6fe8fde49605fb04803453090f"
+  },
+  {
+    "field": "M82",
+    "band": "J",
+    "name": "M82_J_730121.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/ji0620103.fits.gz",
+    "ra": 149.2197274,
+    "dec": 69.71061607,
+    "sha256": "a409aa4220fc6268a654d97e6086e372c38100837ca6ea3dcca375b7c43be6d8"
+  },
+  {
+    "field": "M82",
+    "band": "K",
+    "name": "M82_K_730075.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s060/image/ki0600103.fits.gz",
+    "ra": 148.6247045,
+    "dec": 69.7122679,
+    "sha256": "6849e735af2349aa8316106e1986954f30d06bd73c633313e3b0c852c1b9999a"
+  },
+  {
+    "field": "M82",
+    "band": "K",
+    "name": "M82_K_730103.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/ki0610162.fits.gz",
+    "ra": 148.9181437,
+    "dec": 69.49689653,
+    "sha256": "4877799e540d91fdbec8a87b7d11908258da2c8ca705d7a12a9736ac793c5c9c"
+  },
+  {
+    "field": "M82",
+    "band": "K",
+    "name": "M82_K_730104.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s061/image/ki0610173.fits.gz",
+    "ra": 148.9182417,
+    "dec": 69.76634097,
+    "sha256": "b04454adfc7448a0e832a602ff181403a3807ff6e827083044fc7b0494adfb56"
+  },
+  {
+    "field": "M82",
+    "band": "K",
+    "name": "M82_K_730121.fits",
+    "url": "https://irsa.ipac.caltech.edu/ibe/data/twomass/allsky/allsky/990313n/s062/image/ki0620103.fits.gz",
+    "ra": 149.2197274,
+    "dec": 69.71061607,
+    "sha256": "0ef0416984fcbe22a26e2bd0d3a7bbd593626840272e4a52feaad0ec8a105110"
+  }
+]
