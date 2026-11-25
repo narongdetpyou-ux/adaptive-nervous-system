@@ -31,7 +31,7 @@ def stats(values):
     return dict(mean=statistics.mean(ordered),p95=percentile(.95),p99=percentile(.99))
 
 
-def summarize(rows,jobs):
+def summarize(rows,jobs,arm):
     if set(jobs)!=set(rows):
         raise ValueError('Stream keys do not match')
     times=defaultdict(list);waiting=defaultdict(list)
@@ -44,8 +44,10 @@ def summarize(rows,jobs):
         if (len(start)!=len(requests) or len(end)!=len(requests) or
             len(set(grant))!=len(grant) or len(set(change))!=len(change) or not set(change)<=set(grant)):
             raise ValueError(f'Incomplete stream or repeated preference: {key}')
+        if arm!=NEW and (grant or change):
+            raise ValueError('An unmodified reference cannot grant priority')
         for j in grant:
-            if len(requests[j][1])<4 or start[j]<8:
+            if type(j) is not int or not 0<=j<len(requests) or len(requests[j][1])<4 or start[j]<8:
                 raise ValueError('Improper first-dispatch grant')
         for j,(_,tiles) in enumerate(requests):
             if start[j]<0 or end[j]<=0 or start[j]>end[j]:
@@ -115,7 +117,7 @@ def build(path,include_live):
                 original=load(BENCH/'results'/f'scoring-{arm}.json.gz')
                 if not all(all(records[k][field]==v for field,v in r.items()) for k,r in original.items()):
                     raise ValueError('Incumbent differs from recorded reference')
-            out[name][arm]=summarize(records,jobs)
+            out[name][arm]=summarize(records,jobs,arm)
     if include_live:
         profile=load(BENCH/'profile.json');jobs=manifest['live']
         want=[[j,k,n,*profile[n]['reference']] for j,(_,tiles) in enumerate(jobs) for k,n in enumerate(tiles)]
@@ -126,7 +128,7 @@ def build(path,include_live):
             if d['checks']!=want or len(want)!=120 or len(jobs)!=48 or d['arm']!=arm:
                 raise ValueError('Live science or completion mismatch')
             cpus.append(d['cpus'])
-            out['live'][arm]=summarize({'live':{**d,**start}},{'live':jobs})
+            out['live'][arm]=summarize({'live':{**d,**start}},{'live':jobs},arm)
         if len(set(cpus[0]))!=4 or not all(x==cpus[0] for x in cpus):
             raise ValueError('CPU sets differ')
         out['live_cpus']=cpus[0]
