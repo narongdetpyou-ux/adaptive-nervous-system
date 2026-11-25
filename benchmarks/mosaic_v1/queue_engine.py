@@ -1,5 +1,6 @@
 """A common nonpreemptive dispatcher for virtual time and actual Montage workers."""
 import heapq
+import math
 import os
 import sys
 from collections import Counter
@@ -19,7 +20,17 @@ class Queue:
         self.arm=arm
         self.ctrl=None if arm in ('fixed4','oldest_ready') else make_controller('v5_full','legacy_instant')
         self.window=None
-        if arm.startswith('size_'):
+        self.priority_cap=None
+        if arm.startswith('tail_'):
+            _,cap,weight=arm.split('_')
+            self.priority_cap=float(cap)
+            self.age=float(weight)
+            if not math.isfinite(self.priority_cap) or self.priority_cap<=0:
+                raise ValueError('priority cap must be positive and finite')
+            if not math.isfinite(self.age) or self.age<0:
+                raise ValueError('arrival weight must be nonnegative and finite')
+            self.window=600.
+        elif arm.startswith('size_'):
             _,window,age=arm.split('_')
             self.window=float(window)
             self.age=float(age)
@@ -69,6 +80,8 @@ class Queue:
         else:
             # Only declared dimensions, frame counts and admitted job metadata.
             remaining=sum((0.45+(int(x.rsplit('-',1)[1])/640.)**1.4)*self.frame_counts[x]/6 for x in tiles[k:])
+            if self.priority_cap is not None:
+                remaining=min(remaining,self.priority_cap)
             self.priorities[j]=(int(at//self.window),round(remaining+self.age*at,6))
         n=self.frame_counts[tiles[k]]
         self.frames_left[j]=n

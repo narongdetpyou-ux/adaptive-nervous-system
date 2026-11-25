@@ -13,7 +13,7 @@ from make_manifest import ROOT
 import science
 
 
-def run(arm):
+def run(arm, result_dir=None):
     science.init_cpu()
     profile=json.loads((ROOT/'profile.json').read_text())
     jobs=json.loads(gzip.decompress((ROOT/'workloads.json.gz').read_bytes()))['live']
@@ -61,8 +61,9 @@ def run(arm):
             else:time.sleep(delay)
     assert len(checks)==sum(len(tiles) for _,tiles in jobs)
     result={'arm':arm,'latency':q.times(),'checks':sorted(checks),'moves':q.moves,'branches':dict(q.branches),'cpus':sorted(os.sched_getaffinity(0))}
-    (ROOT/'results').mkdir(exist_ok=True)
-    (ROOT/'results'/f'live-{arm}.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
+    output=ROOT/'results' if result_dir is None else Path(result_dir)
+    output.mkdir(parents=True,exist_ok=True)
+    (output/f'live-{arm}.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
     print(arm,'complete',len(checks),flush=True)
 
 if __name__=='__main__':run(sys.argv[1])

@@ -1,0 +1,89 @@
+"""Select on development only. Use the original replay, live runner and scoring functions."""
+import argparse
+import json
+import shutil
+import sys
+from pathlib import Path
+
+STUDY=Path(__file__).resolve().parent
+BENCH=STUDY.parent
+sys.path.insert(0,str(BENCH))
+import measure
+import live
+
+PLAN=json.loads((STUDY/'plan.json').read_text())
+INCUMBENT=PLAN['incumbent']
+REFERENCE=('fixed4','oldest_ready',INCUMBENT)
+
+
+def write(path,record):
+    path.write_text(json.dumps(record,indent=2,allow_nan=False)+'\n')
+
+
+def use_results(path):
+    path.mkdir(parents=True,exist_ok=True)
+    for split in ('development','scoring'):
+        for arm in REFERENCE:
+            name=f'{split}-{arm}.json.gz'
+            source=BENCH/'results'/name
+            dest=path/name
+            if not dest.exists():
+                shutil.copyfile(source,dest)
+            if dest.read_bytes()!=source.read_bytes():
+                raise ValueError(f'Changed reference: {name}')
+    measure.RESULT=path
+
+
+def select(path):
+    base,_=measure.summary(measure.read('development',INCUMBENT))
+    rows=[]
+    grid=PLAN['challengers']
+    for cap in grid['priority_cap']:
+        for weight in grid['arrival_weight']:
+            arm=f'tail_{cap}_{weight}'
+            measure.measure('development',arm)
+            r=measure.report('development',arm)
+            stats=r['replay'][arm]
+            eligible=(not r['failed'] and stats['p99']<base['p99'] and
+                      all(stats[m]<=1.10*base[m] for m in ('mean','p95')))
+            rows.append(dict(arm=arm,stats=stats,eligible=eligible,rank=r['rank']))
+    candidates=[r for r in rows if r['eligible']]
+    winner=INCUMBENT
+    if candidates:
+        cutoff=1.02*min(r['stats']['p99'] for r in candidates)
+        shortlist=[r for r in candidates if r['stats']['p99']<=cutoff]
+        winner=min(shortlist,key=lambda r:r['rank'])['arm']
+    write(path/'selection.json',dict(incumbent=base,winner=winner,candidates=rows))
+    print(winner,flush=True)
+
+
+def selected(path):
+    return json.loads((path/'selection.json').read_text())['winner']
+
+
+def evaluate(path):
+    winner=selected(path)
+    if winner==INCUMBENT:
+        raise SystemExit('No eligible challenger; retain incumbent.')
+    measure.measure('scoring',winner)
+    for arm in (INCUMBENT,winner):
+        write(path/f'official-{arm}.json',measure.report('scoring',arm,True))
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('action',choices=('select','live','evaluate'))
+    p.add_argument('output',type=Path)
+    p.add_argument('--arm',choices=('fixed4','incumbent','selected'),default='selected')
+    args=p.parse_args()
+    output=args.output.resolve()
+    if output==(BENCH/'results').resolve():
+        p.error('Choose a new results directory to preserve the original measurements.')
+    use_results(output)
+    if args.action=='select':
+        select(output)
+    elif args.action=='evaluate':
+        evaluate(output)
+    else:
+        arm={'fixed4':'fixed4','incumbent':INCUMBENT}.get(args.arm)
+        live.run(arm or selected(output),output)
