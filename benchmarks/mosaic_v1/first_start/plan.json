@@ -1,0 +1,11 @@
+{
+  "reference_commit": "5cb38923b05de972cc92bfaf03cb689addedf82d",
+  "incumbent": "size_600_0.03",
+  "candidate": "first_projection_once",
+  "intervention": "One causal change only. A request of at least four mosaics that has never started may advance its first raw projection after eight seconds from scheduled admission. Take the oldest eligible request, break ties by admission index, and dispatch exactly one frame. All further dispatches use the incumbent order. Four workers remain work-conserving; never preempt running tasks or change the science pipeline.",
+  "choice": "Four mosaics includes both observed long-job groups. Eight seconds is a fixed trial setting; do not tune it against any results. No alternative candidates this round.",
+  "measurement": "For every request record scheduled submission to first projection dispatch and to final mosaic completion. Report pooled P99 for each across all requests and across all declared large requests; compare the same jobs, including large jobs that never need preference. Distinguish a granted preference from an actual change in dispatch.",
+  "development": {"families":"all eight frozen families","requests_per_stream":256,"seeds":[47,53,59,61]},
+  "official": "Regardless of development outcome, run exactly this candidate and incumbent on all 96 published scored streams; verify reference latency and action traces. Use original fixed4 and oldest_ready replay results. Run fixed4, incumbent and candidate sequentially on identical four logical CPUs on the original 48-request live workload; recompute and verify 120 image/area pairs per arm. Publish aggregate findings and keep raw per-request records separate.",
+  "decision": "The unchanged 22 timing checks and image integrity decide benchmark pass. To recommend replacing the incumbent for this experiment require a strict reduction in both pooled official end-to-end P99 and large-request first-dispatch P99, and official pooled mean and P95 each no more than 10% above incumbent. These are round-specific adoption conditions. If it only starts earlier retain the incumbent. Show the timing trade-off and disclose uncertainty of the single live run."
+}

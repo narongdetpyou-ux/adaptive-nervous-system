@@ -1,0 +1,5 @@
+# Local output from scripts run inside simulation/ (see CONTRIBUTING.md).
+/local_runs/
+/local_reports/
+/local_packages/
+/local_qa/

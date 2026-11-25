@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "15ecf8c063d72f28ad55458b09ab2dd667077e5d",
+  "incumbent": "size_600_0.03",
+  "question": "Can bounded priority for large waiting requests reduce pooled scoring P99 vs the incumbent while retaining the Mosaic Queue v1 result?",
+  "development_diagnosis": "On the incumbent's 1536 development requests, all 16 at or above P99 were compound, 11 contained eight mosaics and five contained four.",
+  "challengers": {"priority_cap": [3,5,8,12,18], "arrival_weight":[0.03,0.08,0.16,0.32], "window_seconds": 600},
+  "priority": "Keep the incumbent window, existing remaining-work estimate and V5 stage control. Compare capped remaining work plus arrival weight times submission time. A cap ties very large requests of the same age and allows older requests to catch up sooner. Never use future arrivals or measured times.",
+  "selection": "Evaluate all 20 configurations only on the original development split. Retain those meeting existing replay gates, improving pooled dev P99, and keeping dev mean and P95 within 10% of the incumbent. Shortlist P99 within 2% of the lowest eligible P99; apply the original gate ranking and mean tie-break within that shortlist. If the eligible set is empty, retain incumbent. Score only the single selected policy.",
+  "decision": "The 22 original timing checks and FITS integrity decide benchmark PASS. Separately recommend the candidate for the tail objective only when official replay P99 improves and mean/P95 remain within 10% of incumbent; disclose all trade-offs and live results. Do not reselect using scored results.",
+  "live": "Use the original public workload and four physical slots. Run fixed4, incumbent and selected arm sequentially on the same four logical CPUs in this session. Do not overwrite original measurements. Compare actual 48-job mean, P95, empirical P99 and all 120 FITS pairs per arm. One run per arm cannot establish live population P99.",
+  "scope": "Mosaic queue scheduling only. V5 promotion and PR 2 stay separate."
+}

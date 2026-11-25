@@ -1,0 +1,34 @@
+{
+  "current_v5": {
+    "with_v5": {
+      "mean": 26.908105493770346,
+      "p95": 111.3247564425,
+      "p99": 163.0487702625
+    },
+    "equal_shares": {
+      "mean": 26.63561721071086,
+      "p95": 105.900058055,
+      "p99": 157.0080322275
+    },
+    "identical_request_times": 18735,
+    "requests": 24576,
+    "streams_with_v5_moves": 96,
+    "total_native_v5_moves": 96
+  },
+  "size_600_0.03": {
+    "with_v5": {
+      "mean": 16.03741636973104,
+      "p95": 60.1574361175,
+      "p99": 168.4110654675
+    },
+    "equal_shares": {
+      "mean": 16.03748305334066,
+      "p95": 60.1574361175,
+      "p99": 168.4110654675
+    },
+    "identical_request_times": 24479,
+    "requests": 24576,
+    "streams_with_v5_moves": 96,
+    "total_native_v5_moves": 96
+  }
+}

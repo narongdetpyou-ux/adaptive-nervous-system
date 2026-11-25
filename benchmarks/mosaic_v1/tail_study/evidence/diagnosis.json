@@ -1,0 +1,30 @@
+{
+  "cohort": "incumbent long development jobs at or above pooled P99",
+  "total": 8192,
+  "mean_initial_projection_wait": 269.330184681709,
+  "cutoff_seconds": 187.45776884840004,
+  "tail_count": 82,
+  "mean_tail_seconds": 297.89870555524385,
+  "families": {
+    "background_slow": 3,
+    "compound": 79
+  },
+  "tiles": {
+    "8": 73,
+    "4": 9
+  },
+  "stages": {
+    "projection": {
+      "ready_to_first_start": 269.6154054071219,
+      "first_start_to_last_completion": 14.260589237447242
+    },
+    "background": {
+      "ready_to_first_start": 0.2904052561981943,
+      "first_start_to_last_completion": 8.789363206609012
+    },
+    "coadd": {
+      "ready_to_first_start": 2.0538312642645287,
+      "first_start_to_last_completion": 2.889111183779588
+    }
+  }
+}

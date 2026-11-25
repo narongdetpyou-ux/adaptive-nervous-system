@@ -1,0 +1,20 @@
+{
+  "cohort": "large development requests at or above incumbent large-request completion P99; identical IDs in both arms",
+  "cutoff_seconds": 344.8311918136,
+  "count": 21,
+  "large_count": 2059,
+  "size_600_0.03": {
+    "release_to_first_frame": 362.27531544904764,
+    "first_to_second_frame_dispatch": 10.643905179654217,
+    "second_frame_to_first_mosaic_finish": 3.6380641661880437,
+    "first_mosaic_finish_to_final": 17.730874021300597,
+    "total": 394.2881588161905
+  },
+  "first_projection_once": {
+    "release_to_first_frame": 8.238940847142857,
+    "first_to_second_frame_dispatch": 356.6042186865001,
+    "second_frame_to_first_mosaic_finish": 12.950896545909364,
+    "first_mosaic_finish_to_final": 17.92956176425725,
+    "total": 395.72361784380956
+  }
+}
