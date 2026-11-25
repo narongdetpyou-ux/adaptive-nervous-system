@@ -1,0 +1,12 @@
+Python 3.12.14
+Linux-6.18.44-fc-v880-x86_64-with-glibc2.39
+numpy 2.3.5
+model name	: Intel(R) Xeon(R) Processor @ 2.10GHz
+5262f08c1cc795853d20e7d255e1976b1c1d3e2b379be46949a5cb6e15c33638  /opt/montage-6.1/usr/bin/mProjExec
+cce6592d732a607258247cf4b97b885dfd06bf5857c2471952e403cd551f186f  /opt/montage-6.1/usr/bin/mAdd
+3fbd0f9dba149e8792cb5ce5b389920f05d9038d2860c33bc5b81aba504a7625  /opt/montage-6.1/usr/bin/mBgExec
+280f167d78d6d75e42bb4b8d66546d82f82df3ae099850fd12b8d6912d21f35a  /opt/montage-6.1/usr/bin/mImgtbl
+b49d6e06ceccfe359f95dd0d7106f305456735b0a13798155b3ac2d45da0b26d  /opt/montage-6.1/usr/bin/mOverlaps
+634463978a4ee0f5c86e90ad81d7b4a2e766cc530d569cebb4b5a15e2b92b4ba  /opt/montage-6.1/usr/bin/mDiffExec
+c658b0ff029d516add95a85ca29aa9d8439f2d64a30ba69d39e544284c216bda  /opt/montage-6.1/usr/bin/mFitExec
+64a369d43b6ee976c31e0d0b6f81d2e67b9aba33c1d965dad6f09f9c139d5262  /opt/montage-6.1/usr/bin/mBgModel
