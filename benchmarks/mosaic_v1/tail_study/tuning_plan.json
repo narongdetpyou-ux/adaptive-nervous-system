@@ -1,0 +1,9 @@
+{
+  "incumbent":"size_600_0.03",
+  "rationale":"All oldest-overdue interventions were rejected on development. Before adding more mechanisms, test the two existing incumbent parameters, with no priority cap and no forced service. This arm set has not been officially scored in this study.",
+  "grid":{"window_seconds":[24,48,96,192,384,600],"arrival_weight":[0,0.01,0.03,0.06,0.10]},
+  "development":{"seeds":[31,37,41,43],"requests_per_stream":256},
+  "confirmation":{"seeds":[47,53,59,61],"requests_per_stream":256},
+  "selection":"Use the same long-development criteria and per-seed ranking as rescue_plan.json, excluding the incumbent. Confirm exactly one development winner on the untouched confirmation cohort. No replacement if confirmation fails and no more grids in this round.",
+  "decision":"Carry forward exactly the rescue plan's decision and live comparison. Record every prior negative result; never change the official gates. If no candidate qualifies, retain size_600_0.03."
+}

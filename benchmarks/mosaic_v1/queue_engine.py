@@ -21,6 +21,8 @@ class Queue:
         self.ctrl=None if arm in ('fixed4','oldest_ready') else make_controller('v5_full','legacy_instant')
         self.window=None
         self.priority_cap=None
+        self.rescue_after=None
+        self.running_by_job=Counter()
         if arm.startswith('tail_'):
             _,cap,weight=arm.split('_')
             self.priority_cap=float(cap)
@@ -30,6 +32,14 @@ class Queue:
             if not math.isfinite(self.age) or self.age<0:
                 raise ValueError('arrival weight must be nonnegative and finite')
             self.window=600.
+        elif arm.startswith('rescue_'):
+            _,delay,limit=arm.split('_')
+            self.rescue_after=float(delay)
+            self.rescue_slots=int(limit)
+            if not math.isfinite(self.rescue_after) or self.rescue_after<=0 or not 1<=self.rescue_slots<=4:
+                raise ValueError('expected a positive waiting time and one to four workers')
+            self.window=600.
+            self.age=0.03
         elif arm.startswith('size_'):
             _,window,age=arm.split('_')
             self.window=float(window)
@@ -109,6 +119,27 @@ class Queue:
         self.busy_time=[0.,0.,0.]
         self.tick+=1
 
+    def overdue_task(self,eligible):
+        # A request has ready work in at most one stage of its current mosaic.
+        j=self.first
+        if (j>=self.next_job or self.clock-self.jobs[j][0]<self.rescue_after
+                or self.running_by_job[j]>=self.rescue_slots):
+            return None
+        for stage in eligible:
+            heap=self.heap[stage]
+            best=None
+            for index,(_,job,frame) in enumerate(heap):
+                if job==j and (best is None or frame<best[0]):
+                    best=(frame,index)
+            if best is not None:
+                frame,index=best
+                heap[index]=heap[-1]
+                heap.pop()
+                if index<len(heap):
+                    heapq.heapify(heap)
+                return stage,j,frame
+        return None
+
     def pop(self):
         eligible=[s for s in range(3) if self.heap[s]]
         if self.arm=='fixed4':
@@ -120,8 +151,14 @@ class Queue:
             if self.arm=='current_v5':return (fair,j,s)
             if self.window is not None:return (priority,fair,j,s)
             return (j,s)
-        stage=min(eligible,key=rank)
-        _,j,frame=heapq.heappop(self.heap[stage])
+        override=self.overdue_task(eligible) if self.rescue_after is not None else None
+        if override is None:
+            stage=min(eligible,key=rank)
+            _,j,frame=heapq.heappop(self.heap[stage])
+        else:
+            stage,j,frame=override
+        if self.rescue_after is not None:
+            self.running_by_job[j]+=1
         self.waiting[stage]-=self.unit(j,stage)
         self.busy[stage]+=1
         return j,self.tile[j],stage,frame
@@ -129,6 +166,8 @@ class Queue:
     def complete(self,task,now):
         j,k,stage,_=task
         self.busy[stage]-=1
+        if self.rescue_after is not None:
+            self.running_by_job[j]-=1
         self.flow[stage]+=self.unit(j,stage)
         if stage==0:
             self.frames_left[j]-=1
