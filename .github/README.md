@@ -7,8 +7,9 @@ ANS คืองานวิจัยตัวควบคุมที่ตั�
 ## ผลล่าสุด
 
 - **Mosaic Queue v1 (รันจริง):** V5 เดิม FAIL ส่วน V5 พร้อมตัวจัดลำดับคิว PASS · [อ่านผล](../benchmarks/mosaic_v1/RESULTS_TH.md)
+  - [รันซ้ำบนเครื่องอื่น 25 พ.ย. 2026](../benchmarks/mosaic_v1/reproductions/20261125/README_TH.md): ได้คำตัดสินเดิมทุกข้อ
   - [ลดเวลารอของคำขอที่ช้าที่สุด](../benchmarks/mosaic_v1/tail_study/RESULTS_TH.md): สรุปให้คงตัวจัดคิวเดิม
-  - [ให้สิทธิ์เริ่มงานหนึ่งครั้ง](../benchmarks/mosaic_v1/first_start/RESULTS_TH.md): ผลระหว่างตรวจ ยังคงตัวจัดคิวเดิม
+  - [ให้สิทธิ์เริ่มงานหนึ่งครั้ง](../benchmarks/mosaic_v1/first_start/RESULTS_TH.md): งานใหญ่เริ่มเร็วขึ้นแต่ได้ภาพช้าเท่าเดิม สรุปให้คงตัวจัดคิวเดิม
 - **M101 pilot (รันจริง):** สร้างโมเสก M101 จากภาพ 2MASS 10 ภาพ และวัดเวลาแต่ละขั้นตอนก่อนสร้าง benchmark · [อ่านผล](../pilots/m101/RESULTS_TH.md)
 - **v0.4.0 (แบบจำลอง):** ลด CVaR90 ได้ชัดเจน แต่ยังไม่ผ่านเกณฑ์ยกระดับทั้งหมด · [อ่านผล](../README.md)
 - **v0.5 (กำลังพัฒนา):** [narongdetpyou-ux/adaptive-nervous-system#2](https://github.com/narongdetpyou-ux/adaptive-nervous-system/pull/2) ยังเป็นร่าง
@@ -28,7 +29,7 @@ ANS คืองานวิจัยตัวควบคุมที่ตั�
 
 ### งานรันจริงหลัง v0.4.0
 
-- [`benchmarks/mosaic_v1/`](../benchmarks/mosaic_v1/README.md): ชุดทดสอบ Mosaic Queue v1 รวม workload ที่ตรึงไว้ ผลใน `results/` และการศึกษาต่อยอด `tail_study/` กับ `first_start/`
+- [`benchmarks/mosaic_v1/`](../benchmarks/mosaic_v1/README.md): ชุดทดสอบ Mosaic Queue v1 รวม workload ที่ตรึงไว้ ผลใน `results/` ผลรันซ้ำใน `reproductions/` และการศึกษาต่อยอด `tail_study/` กับ `first_start/`
 - [`pilots/m101/`](../pilots/m101/README.md): pilot ภาพ M101 ที่ใช้กำหนดชุดทดสอบ
 
 ### v0.4 · [README.md](../README.md)
