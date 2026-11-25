@@ -1,6 +1,5 @@
 """A common nonpreemptive dispatcher for virtual time and actual Montage workers."""
 import heapq
-import math
 import os
 import sys
 from collections import Counter
@@ -15,32 +14,14 @@ from v4_environment import project_action
 
 class Queue:
     def __init__(self, jobs, frame_counts, arm):
+        if arm not in ('fixed4','oldest_ready','current_v5') and not arm.startswith('size_'):
+            raise ValueError(f'Unknown benchmark arm {arm!r}; experimental arms use their study runner')
         self.jobs=jobs
         self.frame_counts=frame_counts
         self.arm=arm
         self.ctrl=None if arm in ('fixed4','oldest_ready') else make_controller('v5_full','legacy_instant')
         self.window=None
-        self.priority_cap=None
-        self.rescue_after=None
-        self.running_by_job=Counter()
-        if arm.startswith('tail_'):
-            _,cap,weight=arm.split('_')
-            self.priority_cap=float(cap)
-            self.age=float(weight)
-            if not math.isfinite(self.priority_cap) or self.priority_cap<=0:
-                raise ValueError('priority cap must be positive and finite')
-            if not math.isfinite(self.age) or self.age<0:
-                raise ValueError('arrival weight must be nonnegative and finite')
-            self.window=600.
-        elif arm.startswith('rescue_'):
-            _,delay,limit=arm.split('_')
-            self.rescue_after=float(delay)
-            self.rescue_slots=int(limit)
-            if not math.isfinite(self.rescue_after) or self.rescue_after<=0 or not 1<=self.rescue_slots<=4:
-                raise ValueError('expected a positive waiting time and one to four workers')
-            self.window=600.
-            self.age=0.03
-        elif arm.startswith('size_'):
+        if arm.startswith('size_'):
             _,window,age=arm.split('_')
             self.window=float(window)
             self.age=float(age)
@@ -90,8 +71,6 @@ class Queue:
         else:
             # Only declared dimensions, frame counts and admitted job metadata.
             remaining=sum((0.45+(int(x.rsplit('-',1)[1])/640.)**1.4)*self.frame_counts[x]/6 for x in tiles[k:])
-            if self.priority_cap is not None:
-                remaining=min(remaining,self.priority_cap)
             self.priorities[j]=(int(at//self.window),round(remaining+self.age*at,6))
         n=self.frame_counts[tiles[k]]
         self.frames_left[j]=n
@@ -119,27 +98,6 @@ class Queue:
         self.busy_time=[0.,0.,0.]
         self.tick+=1
 
-    def overdue_task(self,eligible):
-        # A request has ready work in at most one stage of its current mosaic.
-        j=self.first
-        if (j>=self.next_job or self.clock-self.jobs[j][0]<self.rescue_after
-                or self.running_by_job[j]>=self.rescue_slots):
-            return None
-        for stage in eligible:
-            heap=self.heap[stage]
-            best=None
-            for index,(_,job,frame) in enumerate(heap):
-                if job==j and (best is None or frame<best[0]):
-                    best=(frame,index)
-            if best is not None:
-                frame,index=best
-                heap[index]=heap[-1]
-                heap.pop()
-                if index<len(heap):
-                    heapq.heapify(heap)
-                return stage,j,frame
-        return None
-
     def pop(self):
         eligible=[s for s in range(3) if self.heap[s]]
         if self.arm=='fixed4':
@@ -151,14 +109,8 @@ class Queue:
             if self.arm=='current_v5':return (fair,j,s)
             if self.window is not None:return (priority,fair,j,s)
             return (j,s)
-        override=self.overdue_task(eligible) if self.rescue_after is not None else None
-        if override is None:
-            stage=min(eligible,key=rank)
-            _,j,frame=heapq.heappop(self.heap[stage])
-        else:
-            stage,j,frame=override
-        if self.rescue_after is not None:
-            self.running_by_job[j]+=1
+        stage=min(eligible,key=rank)
+        _,j,frame=heapq.heappop(self.heap[stage])
         self.waiting[stage]-=self.unit(j,stage)
         self.busy[stage]+=1
         return j,self.tile[j],stage,frame
@@ -166,8 +118,6 @@ class Queue:
     def complete(self,task,now):
         j,k,stage,_=task
         self.busy[stage]-=1
-        if self.rescue_after is not None:
-            self.running_by_job[j]-=1
         self.flow[stage]+=self.unit(j,stage)
         if stage==0:
             self.frames_left[j]-=1
@@ -197,8 +147,8 @@ def service(profile,name,stage,frame,family,now):
     return seconds
 
 
-def replay(jobs,family,profile,arm):
-    q=Queue(jobs,{k:len(v['frames']) for k,v in profile.items()},arm)
+def replay(jobs,family,profile,arm,queue_factory=Queue):
+    q=queue_factory(jobs,{k:len(v['frames']) for k,v in profile.items()},arm)
     events=[]
     now=0.
     while len(q.ends)<len(jobs):

@@ -6,19 +6,19 @@ import json
 import os
 import sys
 import numpy as np
-from study import STUDY,BENCH,INCUMBENT,write,use_results
+from study import STUDY,BENCH,INCUMBENT,write,use_results,StudyQueue,measure_arm
 import measure
 from make_manifest import FAMILIES,P,workload
 from queue_engine import replay
 
-PLAN=json.loads((STUDY/'rescue_plan.json').read_text())
+PLANS={name:json.loads((STUDY/f'{name}_plan.json').read_text()) for name in ('rescue','tuning')}
 
 
 def evaluate_stream(spec):
     seed,family,arm=spec
     jobs=workload(family,seed,256)
     profile=json.loads((BENCH/'profile.json').read_text())
-    result=replay(jobs,family,profile,arm)
+    result=replay(jobs,family,profile,arm,queue_factory=StudyQueue)
     return (seed,family),result['latency']
 
 
@@ -48,13 +48,18 @@ def describe(data,base,fixed,oldest,seeds):
                 eligible=bool(passed and ratio['p99']<1 and max(ratio['mean'],ratio['p95'])<=1.10))
 
 
-def run(split,path):
-    seeds=PLAN[split]['seeds']
+def run(split,path,study):
+    plan=PLANS[study]
+    seeds=plan[split]['seeds']
     if split=='development':
-        grid=PLAN['grid']
-        candidates=[f'rescue_{age}_{n}' for age in grid['age_seconds'] for n in grid['worker_limit']]
+        grid=plan['grid']
+        if study=='rescue':
+            candidates=[f'rescue_{age}_{n}' for age in grid['age_seconds'] for n in grid['worker_limit']]
+        else:
+            candidates=[f'size_{window}_{weight}' for window in grid['window_seconds']
+                        for weight in grid['arrival_weight'] if f'size_{window}_{weight}'!=INCUMBENT]
     else:
-        winner=json.loads((path/'rescue-development.json').read_text())['winner']
+        winner=json.loads((path/f'{study}-development.json').read_text())['winner']
         if not winner:raise SystemExit('No eligible development candidate.')
         candidates=[winner]
     references=('fixed4','oldest_ready',INCUMBENT)
@@ -74,7 +79,7 @@ def run(split,path):
             print(split,arm,flush=True)
     eligible=[a for a in candidates if reports[a]['eligible']]
     winner=min(eligible,key=lambda a:(max(reports[a]['seed_p99'].values()),reports[a]['stats']['p99'],reports[a]['stats']['mean'],a)) if eligible else None
-    write(path/f'rescue-{split}.json',dict(winner=winner,incumbent=stats(baseline[INCUMBENT],list(baseline[INCUMBENT])),candidates=reports))
+    write(path/f'{study}-{split}.json',dict(winner=winner,incumbent=stats(baseline[INCUMBENT],list(baseline[INCUMBENT])),candidates=reports))
 
 
 if __name__=='__main__':
@@ -82,17 +87,18 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('split',choices=('development','confirmation','scoring','live'))
     parser.add_argument('output',type=Path)
+    parser.add_argument('--study',choices=tuple(PLANS),default='rescue')
     args=parser.parse_args()
     path=args.output.resolve()
     if path==(BENCH/'results').resolve():parser.error('Use a separate results directory.')
     use_results(path)
     if args.split in ('development','confirmation'):
-        run(args.split,path)
+        run(args.split,path,args.study)
     else:
-        winner=json.loads((path/'rescue-confirmation.json').read_text())['winner']
+        winner=json.loads((path/f'{args.study}-confirmation.json').read_text())['winner']
         if not winner:raise SystemExit('Confirmation did not support promotion to scoring.')
-        if args.split=='scoring':measure.measure('scoring',winner)
+        if args.split=='scoring':measure_arm('scoring',winner,path)
         else:
             import live
-            live.run(winner,path)
+            live.run(winner,path,queue_factory=StudyQueue)
             write(path/f'official-{winner}.json',measure.report('scoring',winner,True))

@@ -13,12 +13,12 @@ from make_manifest import ROOT
 import science
 
 
-def run(arm, result_dir=None):
+def run(arm, result_dir=None, queue_factory=Queue):
     science.init_cpu()
     profile=json.loads((ROOT/'profile.json').read_text())
     jobs=json.loads(gzip.decompress((ROOT/'workloads.json.gz').read_bytes()))['live']
     counts={k:len(v['frames']) for k,v in profile.items()}
-    q=Queue(jobs,counts,arm)
+    q=queue_factory(jobs,counts,arm)
     checks=[]
     futures={}
     with tempfile.TemporaryDirectory(dir=science.RUNS) as raw,cf.ThreadPoolExecutor(4) as pool:

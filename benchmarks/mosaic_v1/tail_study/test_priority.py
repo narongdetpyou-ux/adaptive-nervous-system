@@ -4,7 +4,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from queue_engine import Queue
+from controls import StudyQueue as Queue
+from queue_engine import Queue as BenchmarkQueue
 
 SMALL='M31-J-256'
 LARGE='M31-J-1280'
@@ -51,6 +52,10 @@ class TailPriorityTest(unittest.TestCase):
         q.advance(31)
         q.admit(31)
         self.assertEqual(q.pop(),(1,0,0,0))
+
+    def test_normal_runner_rejects_study_arm(self):
+        with self.assertRaisesRegex(ValueError,'study runner'):
+            BenchmarkQueue([],{SMALL:1},'tail_18_0.16')
 
     def test_bad_parameters(self):
         for arm in ('tail_0_0.1','tail_nan_0.1','tail_3_-1','tail_3_inf','rescue_0_2','rescue_32_5','rescue_nan_1'):

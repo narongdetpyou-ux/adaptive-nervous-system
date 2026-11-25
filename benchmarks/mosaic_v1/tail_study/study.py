@@ -1,5 +1,8 @@
 """Select on development only. Use the original replay, live runner and scoring functions."""
 import argparse
+import gzip
+import os
+from concurrent.futures import ProcessPoolExecutor
 import json
 import shutil
 import sys
@@ -10,6 +13,8 @@ BENCH=STUDY.parent
 sys.path.insert(0,str(BENCH))
 import measure
 import live
+from controls import StudyQueue
+from queue_engine import replay
 
 PLAN=json.loads((STUDY/'plan.json').read_text())
 INCUMBENT=PLAN['incumbent']
@@ -34,6 +39,20 @@ def use_results(path):
     measure.RESULT=path
 
 
+def _one_stream(spec):
+    key,jobs,arm,profile=spec
+    return key,replay(jobs,key.split('/')[1],profile,arm,queue_factory=StudyQueue)
+
+
+def measure_arm(split,arm,path):
+    profile=json.loads((BENCH/'profile.json').read_text())
+    specs=[(key,jobs,arm,profile) for key,jobs in measure.workloads().items() if key.startswith(split+'/')]
+    with ProcessPoolExecutor(int(os.getenv('MOSAIC_REPLAY_WORKERS','4'))) as pool:
+        rows=dict(pool.map(_one_stream,specs))
+    content=json.dumps(rows,separators=(',',':')).encode()
+    (path/f'{split}-{arm}.json.gz').write_bytes(gzip.compress(content,mtime=0))
+
+
 def select(path):
     base,_=measure.summary(measure.read('development',INCUMBENT))
     rows=[]
@@ -41,7 +60,7 @@ def select(path):
     for cap in grid['priority_cap']:
         for weight in grid['arrival_weight']:
             arm=f'tail_{cap}_{weight}'
-            measure.measure('development',arm)
+            measure_arm('development',arm,path)
             r=measure.report('development',arm)
             stats=r['replay'][arm]
             eligible=(not r['failed'] and stats['p99']<base['p99'] and
@@ -65,7 +84,7 @@ def evaluate(path):
     winner=selected(path)
     if winner==INCUMBENT:
         raise SystemExit('No eligible challenger; retain incumbent.')
-    measure.measure('scoring',winner)
+    measure_arm('scoring',winner,path)
     for arm in (INCUMBENT,winner):
         write(path/f'official-{arm}.json',measure.report('scoring',arm,True))
 
@@ -86,4 +105,4 @@ if __name__=='__main__':
         evaluate(output)
     else:
         arm={'fixed4':'fixed4','incumbent':INCUMBENT}.get(args.arm)
-        live.run(arm or selected(output),output)
+        live.run(arm or selected(output),output,queue_factory=StudyQueue)
