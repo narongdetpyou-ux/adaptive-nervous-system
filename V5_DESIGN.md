@@ -42,4 +42,14 @@ python v5_development_cohort.py --output local_runs/v5_development/cohort-all.js
 python v5_development_cohort.py --seeds 2001 2002 2003 2004 2005 2006 2007 --output local_runs/v5_development/cohort-new.json
 ```
 
+## Middle-stage switch study
+
+Before the selection grid, test from identical states whether V5 Full's extra middle-stage loss comes from move timing or move size. Each arm replaces exactly one V5 Full decision and keeps every other decision. The cases, five arms, metrics and decision rule were committed in `v5_switch_study_plan.json` before any intervention ran. Outcome: neither timing nor size meets the predeclared rule, so the declared variants stay unchanged and the declared development and selection grid comes next. This diagnosis uses development cases only and does not change any acceptance gate.
+
+```bash
+OPENBLAS_NUM_THREADS=1 python v5_switch_study.py
+```
+
+[Switch study results (Thai)](V5_SWITCH_STUDY_TH.md)
+
 End each round's progress report with the next research step and any action the project owner needs to take. State explicitly when no owner action is needed.
