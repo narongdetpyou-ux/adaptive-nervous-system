@@ -1,0 +1,3 @@
+current_v5 FAIL 21 of 22 timing checks; integrity passed
+size_600_0.03 PASS 22 of 22 timing checks; integrity passed
+Verified 132 inputs, 72 profile entries, 96 paired replay streams and 360 live mosaics.
