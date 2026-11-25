@@ -6,7 +6,7 @@
 
 - ภาพ 2MASS ทั้ง 132 ไฟล์ที่ดาวน์โหลดจาก IRSA มี SHA-256 ตรงกับ [`catalog.json`](../../catalog.json)
 - Montage 6.1 ทั้ง 8 โปรแกรมมี SHA-256 ตรงกับ [`host.txt` เดิม](../../host.txt)
-- ไฟล์ replay ที่สร้างใหม่ 14 ไฟล์ตรงกับ `results/` เดิมทุกไบต์ ได้แก่ development 9 ไฟล์, scoring 4 ไฟล์ และ `selection.json` ตัวเลือกที่ชนะยังเป็น `size_600_0.03` ดูรายการ hash ใน [`results/replay_sha256.txt`](results/replay_sha256.txt)
+- ไฟล์ที่สร้างใหม่จาก replay 17 ไฟล์ตรงกับ `results/` เดิมทุกไบต์ ได้แก่ development 9 ไฟล์, scoring 4 ไฟล์, `selection.json` และผลวินิจฉัย `attribution.py` อีก 3 ไฟล์ ตัวเลือกที่ชนะยังเป็น `size_600_0.03` ดูรายการ hash ใน [`results/replay_sha256.txt`](results/replay_sha256.txt)
 - รันจริงทั้ง 3 วิธีบน CPU 0–3: ภาพและแผนที่พื้นที่ครอบคลุมรวม 360 คู่ (วิธีละ 120 คู่) มี hash ตรงกับภาพอ้างอิงทุกคู่ และ V5 ย้ายสัดส่วนทรัพยากรจำนวนครั้งเท่ากับรอบเดิม
 - [`check_results.py`](../../check_results.py) ผ่านทุกข้อ ดู [`check_results.txt`](check_results.txt)
 
