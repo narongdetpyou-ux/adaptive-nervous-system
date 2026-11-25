@@ -1,0 +1,73 @@
+{
+  "version": "0.4.0",
+  "report_date_bangkok": "2026-11-25",
+  "parent_bundle": {
+    "filename": "Adaptive_Nervous_System_v030.zip",
+    "library_file_id": "libfile_dfa9d3dbb29c81918cdbe2dfa4cf3953",
+    "file_id": "file_0000000035588212bc62621fc4e33a13",
+    "bytes": 14266345,
+    "sha256": "aaff19b57247227fd3f82139fe45fc72ecc8d1d6a190c161ca7844c7d4d75cf3"
+  },
+  "upstream_provenance": [
+    "provenance.json",
+    "v020_provenance.json",
+    "v030_provenance.json"
+  ],
+  "parent_frozen_protocol": "v3_protocol.json",
+  "parent_frozen_protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054",
+  "frozen_protocol": "v4_protocol.json",
+  "frozen_protocol_sha256": "2fe838eb290ccbd274265f611ba7ec2289419e9c939698a01ea86235c8c94b1f",
+  "acceptance_declaration_sha256": "1105442baf50d0cee923c671ebc2c024d3e8697e90e280843fbdffdd005fb6ef",
+  "validation_manifest_sha256": "25ed806e4886384f171b95bfeb61d727802d19721a6267f51855129bce60eb3c",
+  "frozen_at_utc": "2026-11-25T06:34:09.966846+00:00",
+  "parent_frozen_core_modified": false,
+  "original_abc_and_neuron_flow_modified": false,
+  "selected_configuration": {
+    "risk_weight": 0.1,
+    "maximum_total_transfer": 20.0,
+    "selection_evidence": "v4_results/development_grid/selection.json"
+  },
+  "added_capabilities": [
+    "Finite stress-risk score and balance preference with pressure and idle recovery",
+    "Integer resource projection, paid resource transit, finite buffers and explicit dropped work",
+    "One-interval stage forwarding and two-interval startup capacity ramp",
+    "Common source-indexed delayed/noisy observations with same-source effective-resource normalization",
+    "Drop-adjusted demand deficit, empirical static-relative CVaR90 and physical drainage as distinct metrics",
+    "Frozen fresh704-case/seven-policy/six-regime evaluation plus independent scalar, sensor, controller and statistical audits"
+  ],
+  "validation_evidence": "v4_results/validation/",
+  "development_evidence": "v4_results/development_grid/ and v4_results/development/",
+  "data_kind": "Synthetic only; no live telemetry and no real resource-control adapter for V4.",
+  "realism_parameter_origin": "Declared synthetic stress assumptions, not measured production values or platform defaults.",
+  "legacy_shadow_scope": "shadow_replay.py is the preserved V3 observation-only recommendation adapter, not V4 validation or live control.",
+  "report_dependencies": "Core experiment uses pinned NumPy; optional report builder uses pinned PyMuPDF and Matplotlib with bundled licensed Noto fonts.",
+  "reproduction_scope": "One complete repetition of the same frozen validation, resumed through the original runtime after a technical interruption. This is reproducibility evidence, not additional independent cases.",
+  "reproduction_evidence": {
+    "path": "v4_results/validation/reproducibility.json",
+    "status": "PASS",
+    "files_compared": 88,
+    "all_byte_identical": true,
+    "repeat_resumed_after_interruption": true,
+    "preserved_accepted_evaluations": 41,
+    "preserved_accepted_artifact_files": 123,
+    "interruption_cause": "unknown",
+    "independent_recovery_review": "v4_results/recovery_independent_evidence_check.json"
+  },
+  "validation_outcome": {
+    "decision": "does_not_meet_declared_engineering_conditions",
+    "failed_category": "loss_and_endpoint_point_nonworsening",
+    "primary_cvar_superiority_vs_v3": "PASS",
+    "primary_delayed_noisy_cvar_v3": 20899.17653253679,
+    "primary_delayed_noisy_cvar_v4_hybrid": 13199.353102461151,
+    "primary_cvar_reduction_percent": 36.84271204699478,
+    "primary_paired_cvar_difference_95ci": [
+      5673.507321319139,
+      9924.062126319513
+    ],
+    "fresh_cases_per_regime": 704,
+    "regimes": 6,
+    "policies": 7,
+    "episodes": 29568,
+    "decision_evidence": "v4_results/validation/decision.json"
+  }
+}

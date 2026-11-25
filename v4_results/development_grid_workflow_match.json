@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "scope": "Existing grid versus full selected-development workflow; no new independent cases.",
+  "matched_rows": 2640,
+  "pairs": [
+    {
+      "regime": "legacy_instant",
+      "policy": "static",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_transit3",
+      "policy": "static",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "integer_transit3",
+      "policy": "static",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "finite_pipeline",
+      "policy": "static",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "startup",
+      "policy": "static",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "delayed_noisy",
+      "policy": "static",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_instant",
+      "policy": "capacity_v2",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_transit3",
+      "policy": "capacity_v2",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "integer_transit3",
+      "policy": "capacity_v2",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "finite_pipeline",
+      "policy": "capacity_v2",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "startup",
+      "policy": "capacity_v2",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "delayed_noisy",
+      "policy": "capacity_v2",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_instant",
+      "policy": "capacity_balance",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_transit3",
+      "policy": "capacity_balance",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "integer_transit3",
+      "policy": "capacity_balance",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "finite_pipeline",
+      "policy": "capacity_balance",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "startup",
+      "policy": "capacity_balance",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "delayed_noisy",
+      "policy": "capacity_balance",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_instant",
+      "policy": "v3_full",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_transit3",
+      "policy": "v3_full",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "integer_transit3",
+      "policy": "v3_full",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "finite_pipeline",
+      "policy": "v3_full",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "startup",
+      "policy": "v3_full",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "delayed_noisy",
+      "policy": "v3_full",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_instant",
+      "policy": "v4_hybrid",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "legacy_transit3",
+      "policy": "v4_hybrid",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "integer_transit3",
+      "policy": "v4_hybrid",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "finite_pipeline",
+      "policy": "v4_hybrid",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "startup",
+      "policy": "v4_hybrid",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    },
+    {
+      "regime": "delayed_noisy",
+      "policy": "v4_hybrid",
+      "episodes": 88,
+      "rows_exactly_equal": true
+    }
+  ],
+  "source_or_policy_changes": false
+}

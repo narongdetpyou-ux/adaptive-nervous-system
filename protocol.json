@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "purpose": "CPU simulation only: fixed-budget three-stage queue control with original ABC and Neuron Flow",
+  "input": "Dropbox synthetic Flash Sale minute request counts; includes bots and retries; no real traffic",
+  "horizon": 60,
+  "tail": "30 minutes at rounded median of first seven arrival counts",
+  "budget": 207,
+  "initial_staff": [69, 69, 69],
+  "nominal_productivity_per_unit_per_minute": 200,
+  "scenarios": ["surge_only", "ingress_slow", "processing_slow", "delivery_slow", "shifting_bottleneck"],
+  "scenario_seeds": [100, 101, 102, 103, 104, 105, 106, 107],
+  "abc_seeds": [11, 29, 47],
+  "policies": ["static", "maxweight", "abc"],
+  "primary_metric": "mean total unfinished work at end of each minute; equal weight per scenario and ABC seeds",
+  "secondary_metrics": ["peak backlog", "end backlog", "completed work", "allocation moves", "backlog cleared after peak"],
+  "constraints": "same arrivals, capacity shocks and initial allocation for all policies; same action catalog and 5-minute warmup/8-minute dwell for adaptive policies; no hidden future data",
+  "flow_model": "three sequential fluid queues; work can pass multiple stages within a minute; unlimited queue and no work dropped; no server or per-request latency claims",
+  "perturbation": "arrival global scale uniform 0.85..1.15 and per-minute multiplicative noise 0.90..1.10; productivity per-minute independent uniform 0.9..1.1 of nominal; fault factor 0.35..0.60, starting minute 10 to 23 with end exclusive; shifting fault stage 0 [10,16), stage 1 [16,22), stage 2 [22,28)",
+  "baseline": "static fixed; maxweight-like greedy catalog action maximizing delta dot currently observed backlog; zero if no positive gain; no lookahead",
+  "representative_trace": "shifting_bottleneck seed 100; all three ABC seeds and both baselines, chosen before execution",
+  "workflow_fault": "inject TransientAgentError on first attempt of ABC evaluation; verify successful retry and duplicate submission after runtime restart",
+  "limitations": "one source trace and perturbations only; no external validity, cost or latency guarantees; no LLM, HTTP API, live autoscaling or true neural network"
+}

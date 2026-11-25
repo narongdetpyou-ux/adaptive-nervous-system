@@ -1,0 +1,220 @@
+[
+  {
+    "sequence": 1,
+    "event_id": "flash_sale_v010:submitted",
+    "job_id": "flash_sale_v010",
+    "step_id": null,
+    "kind": "job.submitted",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {},
+    "timestamp": 1795562638.9385405
+  },
+  {
+    "sequence": 2,
+    "event_id": "flash_sale_v010:RUNNING:85576711bfb943d787c669e19f94562f",
+    "job_id": "flash_sale_v010",
+    "step_id": null,
+    "kind": "job.running",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": null
+    },
+    "timestamp": 1795562638.9404278
+  },
+  {
+    "sequence": 3,
+    "event_id": "flash_sale_v010:static:1:RUNNING",
+    "job_id": "flash_sale_v010",
+    "step_id": "static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795562638.9411995
+  },
+  {
+    "sequence": 4,
+    "event_id": "flash_sale_v010:maxweight:1:RUNNING",
+    "job_id": "flash_sale_v010",
+    "step_id": "maxweight",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795562639.7260556
+  },
+  {
+    "sequence": 5,
+    "event_id": "flash_sale_v010:abc:1:RUNNING",
+    "job_id": "flash_sale_v010",
+    "step_id": "abc",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795562640.479526
+  },
+  {
+    "sequence": 6,
+    "event_id": "flash_sale_v010:static:1:SUCCEEDED",
+    "job_id": "flash_sale_v010",
+    "step_id": "static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795562641.1992445
+  },
+  {
+    "sequence": 7,
+    "event_id": "flash_sale_v010:maxweight:1:SUCCEEDED",
+    "job_id": "flash_sale_v010",
+    "step_id": "maxweight",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795562641.2050962
+  },
+  {
+    "sequence": 8,
+    "event_id": "flash_sale_v010:abc:1:RETRY_WAIT",
+    "job_id": "flash_sale_v010",
+    "step_id": "abc",
+    "kind": "step.retry_wait",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": {
+        "message": "Controlled first-attempt failure before simulation",
+        "type": "TransientAgentError"
+      }
+    },
+    "timestamp": 1795562641.2060077
+  },
+  {
+    "sequence": 9,
+    "event_id": "flash_sale_v010:abc:2:RUNNING",
+    "job_id": "flash_sale_v010",
+    "step_id": "abc",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795562641.2673407
+  },
+  {
+    "sequence": 10,
+    "event_id": "flash_sale_v010:abc:2:SUCCEEDED",
+    "job_id": "flash_sale_v010",
+    "step_id": "abc",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795562641.5701349
+  },
+  {
+    "sequence": 11,
+    "event_id": "flash_sale_v010:comparison:1:RUNNING",
+    "job_id": "flash_sale_v010",
+    "step_id": "comparison",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795562641.5757031
+  },
+  {
+    "sequence": 12,
+    "event_id": "flash_sale_v010:comparison:1:SUCCEEDED",
+    "job_id": "flash_sale_v010",
+    "step_id": "comparison",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795562641.6292686
+  },
+  {
+    "sequence": 13,
+    "event_id": "flash_sale_v010:SUCCEEDED:330d872ab19e40c581bdf5ce8cb5cf2d",
+    "job_id": "flash_sale_v010",
+    "step_id": null,
+    "kind": "job.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": {
+        "bytes": 195407,
+        "path": "/mnt/data/ans_work/Adaptive_Nervous_System/results/workspace/reports/flash_sale_v010.json",
+        "sha256": "31c02cacfd62b5b3e899e1c4c29c2f90251053448db3926ffd6b41a247104a77"
+      }
+    },
+    "timestamp": 1795562641.6935396
+  }
+]

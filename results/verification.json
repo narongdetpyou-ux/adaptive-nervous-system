@@ -1,0 +1,36 @@
+{
+  "status": "SUCCEEDED",
+  "steps": {
+    "static": 1,
+    "maxweight": 1,
+    "abc": 2,
+    "comparison": 1
+  },
+  "peak_workers": 3,
+  "receipt_sha256": "31c02cacfd62b5b3e899e1c4c29c2f90251053448db3926ffd6b41a247104a77",
+  "receipt_bytes": 195407,
+  "duplicate_submission_created": false,
+  "restart_replay_preserved_attempts": true,
+  "restart_replay_preserved_report": true,
+  "negative_control": {
+    "status": "FAILED",
+    "steps": {
+      "bad": "FAILED",
+      "independent": "SUCCEEDED",
+      "blocked": "BLOCKED"
+    },
+    "bad_error": {
+      "message": "Lost work in summary",
+      "type": "OutputValidationError"
+    }
+  },
+  "frozen_hashes": {
+    "experiment.py": "83aa8b68b2f68ab83a26ff56a651332878d5355bfff0a7aee985f72b05090342",
+    "original/ABC.H.txt": "f8a50611ba65a935c2b0079241df3d7f90a0ef7746c647d88d0feb293e33af00",
+    "action_catalog.json": "a36d6614f1c7af608451e75974c1df23ed68f78f4b098c5badb487a8dafc03eb"
+  },
+  "trace_sha256": "0120255045744fc79008d22e81f72d1e15e28ed0fda81760683119002800f253",
+  "protocol_sha256": "6e370a01ea1f9f7e652b08bc1a9be5e749faf90338e7de00bd18ac7250529e92",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "elapsed_seconds": 4.279
+}

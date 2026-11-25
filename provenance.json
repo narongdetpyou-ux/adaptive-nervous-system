@@ -1,0 +1,10 @@
+{
+  "abc_source": "/S5_ABC_0.2.0/ABC_Causal_Service_0.2.0.zip",
+  "abc_source_scope": "Selected frozen policy files and original loader; not full service",
+  "neuron_flow_source": "/neron_flw/neuron_flow_v0.1.0/neuron_flow/neuron_flow/",
+  "neuron_flow_manifest": "/neron_flw/neuron_flow_v0.1.0/neuron_flow/SHA256SUMS.txt",
+  "neuron_flow_manifest_link": "https://www.dropbox.com/scl/fi/ioxirbkja5jw2i0enb9k1",
+  "data_source": "/Synthetic Simulation Dataset/C/load_test_summary_per_minute.csv",
+  "data_sha256": "0120255045744fc79008d22e81f72d1e15e28ed0fda81760683119002800f253",
+  "note": "Read-only local copies from Dropbox. New experiment outputs in this archive only."
+}

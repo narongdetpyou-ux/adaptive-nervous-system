@@ -1,0 +1,715 @@
+[
+  {
+    "sequence": 1,
+    "event_id": "v3_development:submitted",
+    "job_id": "v3_development",
+    "step_id": null,
+    "kind": "job.submitted",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {},
+    "timestamp": 1795566933.4185696
+  },
+  {
+    "sequence": 2,
+    "event_id": "v3_development:RUNNING:c925f84314ce45488b0d973ac66d33e1",
+    "job_id": "v3_development",
+    "step_id": null,
+    "kind": "job.running",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": null
+    },
+    "timestamp": 1795566933.419754
+  },
+  {
+    "sequence": 3,
+    "event_id": "v3_development:instant__static:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "instant__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566933.4206083
+  },
+  {
+    "sequence": 4,
+    "event_id": "v3_development:instant__abc_capacity:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "instant__abc_capacity",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566933.5631745
+  },
+  {
+    "sequence": 5,
+    "event_id": "v3_development:instant__capacity_v2:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "instant__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566933.7331614
+  },
+  {
+    "sequence": 6,
+    "event_id": "v3_development:instant__static:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "instant__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566933.9424093
+  },
+  {
+    "sequence": 7,
+    "event_id": "v3_development:instant__capacity_balance:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "instant__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566933.9439924
+  },
+  {
+    "sequence": 8,
+    "event_id": "v3_development:instant__capacity_balance:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "instant__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566934.383308
+  },
+  {
+    "sequence": 9,
+    "event_id": "v3_development:instant__v3_signal_only:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "instant__v3_signal_only",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566934.3850462
+  },
+  {
+    "sequence": 10,
+    "event_id": "v3_development:instant__v3_signal_only:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "instant__v3_signal_only",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566935.9496012
+  },
+  {
+    "sequence": 11,
+    "event_id": "v3_development:instant__v3_full:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "instant__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566935.9508677
+  },
+  {
+    "sequence": 12,
+    "event_id": "v3_development:instant__v3_full:1:RETRY_WAIT",
+    "job_id": "v3_development",
+    "step_id": "instant__v3_full",
+    "kind": "step.retry_wait",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": {
+        "message": "Controlled first-attempt failure before v0.3 computation",
+        "type": "TransientAgentError"
+      }
+    },
+    "timestamp": 1795566935.9621396
+  },
+  {
+    "sequence": 13,
+    "event_id": "v3_development:transit_1__static:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_1__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566935.9631543
+  },
+  {
+    "sequence": 14,
+    "event_id": "v3_development:transit_1__static:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_1__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566936.2239723
+  },
+  {
+    "sequence": 15,
+    "event_id": "v3_development:instant__v3_full:2:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "instant__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795566936.2257729
+  },
+  {
+    "sequence": 16,
+    "event_id": "v3_development:instant__capacity_v2:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "instant__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566936.832685
+  },
+  {
+    "sequence": 17,
+    "event_id": "v3_development:transit_1__abc_capacity:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_1__abc_capacity",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566936.8341968
+  },
+  {
+    "sequence": 18,
+    "event_id": "v3_development:instant__v3_full:2:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "instant__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795566938.3738976
+  },
+  {
+    "sequence": 19,
+    "event_id": "v3_development:transit_1__capacity_v2:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_1__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566938.375536
+  },
+  {
+    "sequence": 20,
+    "event_id": "v3_development:transit_1__capacity_v2:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_1__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566940.9298263
+  },
+  {
+    "sequence": 21,
+    "event_id": "v3_development:transit_1__capacity_balance:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_1__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566940.9318857
+  },
+  {
+    "sequence": 22,
+    "event_id": "v3_development:transit_1__capacity_balance:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_1__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566941.3647974
+  },
+  {
+    "sequence": 23,
+    "event_id": "v3_development:transit_1__v3_signal_only:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_1__v3_signal_only",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566941.366437
+  },
+  {
+    "sequence": 24,
+    "event_id": "v3_development:instant__abc_capacity:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "instant__abc_capacity",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566941.7661202
+  },
+  {
+    "sequence": 25,
+    "event_id": "v3_development:transit_1__v3_full:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_1__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566941.7677171
+  },
+  {
+    "sequence": 26,
+    "event_id": "v3_development:transit_1__v3_signal_only:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_1__v3_signal_only",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566943.0466802
+  },
+  {
+    "sequence": 27,
+    "event_id": "v3_development:transit_3__static:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_3__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566943.0483267
+  },
+  {
+    "sequence": 28,
+    "event_id": "v3_development:transit_3__static:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_3__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566943.3064313
+  },
+  {
+    "sequence": 29,
+    "event_id": "v3_development:transit_3__abc_capacity:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_3__abc_capacity",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566943.3078616
+  },
+  {
+    "sequence": 30,
+    "event_id": "v3_development:transit_1__v3_full:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_1__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566943.8240201
+  },
+  {
+    "sequence": 31,
+    "event_id": "v3_development:transit_3__capacity_v2:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_3__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566943.825716
+  },
+  {
+    "sequence": 32,
+    "event_id": "v3_development:transit_1__abc_capacity:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_1__abc_capacity",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566944.9719658
+  },
+  {
+    "sequence": 33,
+    "event_id": "v3_development:transit_3__capacity_balance:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_3__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566944.9746962
+  },
+  {
+    "sequence": 34,
+    "event_id": "v3_development:transit_3__capacity_balance:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_3__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566945.4316475
+  },
+  {
+    "sequence": 35,
+    "event_id": "v3_development:transit_3__v3_signal_only:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_3__v3_signal_only",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566945.4331543
+  },
+  {
+    "sequence": 36,
+    "event_id": "v3_development:transit_3__capacity_v2:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_3__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566946.5655098
+  },
+  {
+    "sequence": 37,
+    "event_id": "v3_development:transit_3__v3_full:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "transit_3__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566946.567117
+  },
+  {
+    "sequence": 38,
+    "event_id": "v3_development:transit_3__v3_signal_only:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_3__v3_signal_only",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566947.067976
+  },
+  {
+    "sequence": 39,
+    "event_id": "v3_development:transit_3__v3_full:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_3__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566948.6326993
+  },
+  {
+    "sequence": 40,
+    "event_id": "v3_development:transit_3__abc_capacity:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "transit_3__abc_capacity",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566950.8884826
+  },
+  {
+    "sequence": 41,
+    "event_id": "v3_development:comparison:1:RUNNING",
+    "job_id": "v3_development",
+    "step_id": "comparison",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566950.8900726
+  },
+  {
+    "sequence": 42,
+    "event_id": "v3_development:comparison:1:SUCCEEDED",
+    "job_id": "v3_development",
+    "step_id": "comparison",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795566951.8817258
+  },
+  {
+    "sequence": 43,
+    "event_id": "v3_development:SUCCEEDED:10d3400e7fe2434ba36c23f83e981565",
+    "job_id": "v3_development",
+    "step_id": null,
+    "kind": "job.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": {
+        "bytes": 24082,
+        "path": "/workspace/scratch/faa307b55489/Adaptive_Nervous_System_v030/v3_results/development/workspace/reports/v3_development.json",
+        "sha256": "e487bfa543b9f66655d3267fa3f7d9b0285036fd1beb868163008b79eda644d0"
+      }
+    },
+    "timestamp": 1795566951.8858788
+  }
+]

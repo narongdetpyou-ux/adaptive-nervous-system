@@ -1,0 +1,16 @@
+{
+  "modules": [
+    "test_lab",
+    "test_capacity",
+    "test_v3"
+  ],
+  "tests_run": 42,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "expected_failures": 0,
+  "unexpected_successes": 0,
+  "successful": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5"
+}

@@ -1,0 +1,4135 @@
+{
+  "version": "0.4.0",
+  "split": "development",
+  "scenario_count": 88,
+  "scenario_regime_pairs": 528,
+  "seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+  ],
+  "regimes": {
+    "legacy_instant": {
+      "name": "legacy_instant",
+      "transit_delay": 0,
+      "integer_resources": false,
+      "same_minute_forwarding": true,
+      "buffer_capacities": [
+        null,
+        null,
+        null
+      ],
+      "startup_factors": [],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "legacy_transit3": {
+      "name": "legacy_transit3",
+      "transit_delay": 3,
+      "integer_resources": false,
+      "same_minute_forwarding": true,
+      "buffer_capacities": [
+        null,
+        null,
+        null
+      ],
+      "startup_factors": [],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "integer_transit3": {
+      "name": "integer_transit3",
+      "transit_delay": 3,
+      "integer_resources": true,
+      "same_minute_forwarding": true,
+      "buffer_capacities": [
+        null,
+        null,
+        null
+      ],
+      "startup_factors": [],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "finite_pipeline": {
+      "name": "finite_pipeline",
+      "transit_delay": 3,
+      "integer_resources": true,
+      "same_minute_forwarding": false,
+      "buffer_capacities": [
+        60000.0,
+        40000.0,
+        40000.0
+      ],
+      "startup_factors": [],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "startup": {
+      "name": "startup",
+      "transit_delay": 3,
+      "integer_resources": true,
+      "same_minute_forwarding": false,
+      "buffer_capacities": [
+        60000.0,
+        40000.0,
+        40000.0
+      ],
+      "startup_factors": [
+        0.5,
+        0.75
+      ],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "delayed_noisy": {
+      "name": "delayed_noisy",
+      "transit_delay": 3,
+      "integer_resources": true,
+      "same_minute_forwarding": false,
+      "buffer_capacities": [
+        60000.0,
+        40000.0,
+        40000.0
+      ],
+      "startup_factors": [
+        0.5,
+        0.75
+      ],
+      "sensor_lag": 2,
+      "sensor_noise_sigma": 0.05,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    }
+  },
+  "policies": [
+    "static",
+    "capacity_v2",
+    "capacity_balance",
+    "v3_full",
+    "v4_hybrid",
+    "v4_no_risk",
+    "v4_no_recovery"
+  ],
+  "policy_replicates": {
+    "static": [
+      null
+    ],
+    "capacity_v2": [
+      null
+    ],
+    "capacity_balance": [
+      null
+    ],
+    "v3_full": [
+      null
+    ],
+    "v4_hybrid": [
+      null
+    ],
+    "v4_no_risk": [
+      null
+    ],
+    "v4_no_recovery": [
+      null
+    ]
+  },
+  "followup": {
+    "minutes": 32,
+    "arrivals": "zero",
+    "productivity": "constant last true original-horizon row",
+    "scope": "modeling assumption; future truth and terminal schedule hidden from policy",
+    "state": "resources, startup, pipeline and observation delivery continue"
+  },
+  "sensor_noise": {
+    "distribution": "independent mean-one multiplicative lognormal",
+    "log_mean": -0.0012500000000000002,
+    "log_sigma": 0.05,
+    "channels": [
+      "arrival",
+      "pre_queue",
+      "end_queue",
+      "flow"
+    ],
+    "index": "source minute, shared across every policy",
+    "resource_ledger": "exact; never noised",
+    "decision_at_t": "start queue and arrival from t-lag; negative source is zero coldstart",
+    "feedback_at_end_t": "end queue and flow from t-lag; paired with same-source effective staff",
+    "latest_feedback_at_decision_t": "source t-1-lag",
+    "timestamp": "actual source and age recorded; legacy API clock may be retimestamped"
+  },
+  "cases": [
+    {
+      "group": "surge_only",
+      "scenario_seed": 2000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 195280.0,
+      "arrivals_sha256": "af48585c84488a0ff889cf701190ab558a8cd542639ed56c3790a9b747934896",
+      "productivity_sha256": "ae0d751272254ab226d2bd49186e818066922fd43d237b981b9d3d980ca439ff",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "7f385bb870f87f461c566112e43abdf0efbe2879cd7c3dd980ba0ee0b820b1f6",
+        "pre_queue": "1f6e7400998df790e18e5936bbbdf809d2f0c1a49b99ec809205acb820a06260",
+        "end_queue": "1e0b8c23ebdfb9f7fa5181fa12d857a55eaa117f604c9888d30a03bd9aa8c8ff",
+        "flow": "7ca4bd378235322d7518106ecc6683e85deb7ec7cd23cdcb7158c9582827af8d"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "8959bc3229af5602ab29d3e426a9786440f78031cf00238ab93193451c79c4b3",
+      "extended_productivity_sha256": "e3be072c5757504624b0d27d4772a5d3f6a302bf41ad7a22300bb24353490363"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 2001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 198590.0,
+      "arrivals_sha256": "f2b6b60ff2bb9cb01351419eb67451fd385e3d89924c4d8337bee238de98138b",
+      "productivity_sha256": "7825b03a1f2297946045737e4d1421e621650714412594c4bdf07d66b8c98409",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "ab241c96bc03fad05cb4d22823ed830103e435145724a67addfb4944921b9159",
+        "pre_queue": "14395442f653ee488ae6c75665354cc4fcb0191711638b9722011ea543b2659c",
+        "end_queue": "39b7da30afdd5279adb1ded6148f0feca74d647af5b267e30617484996deabac",
+        "flow": "df53d0fd529c763398b08084c4d1a9a21e5b5be915f161e099722199747baf09"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "761cc96bce4c61f60349ec5ceafafb833f434d140fb1eacfef1031d7394ea6cc",
+      "extended_productivity_sha256": "aafb0b7e0c9aa816522d6d81eba289298fdfd0e5d7e533d74f5440ae0996510d"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 2002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 166987.0,
+      "arrivals_sha256": "77bb0d6462b47bdbcd940487c878bccce488c647e470c5b284ee157966a15288",
+      "productivity_sha256": "5fb62e00f56cb91da070986605f3533b1d1e7bfbe7f9ad3b0b06d35b8a07f254",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "068842c050e9064ad0dbeb4b69544d556bbffec2b77c77cfb508f84ab62cd4a1",
+        "pre_queue": "2b7f128496b3407e866f64239b0709d95301c68fcb7bff8983470ef3a2569b6f",
+        "end_queue": "fe6413acc8f859ad0f2d86fef21fa91855cdf612cf952c9b57022d352dbbc5f3",
+        "flow": "94c5781dcf233157a6d89f47a2138df86aab7db86a2e84c596f9ca017fa4dc3d"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "09f6eff82faf275893be3870da99c9fd32d408044c5e03348795cceb7f86e9b3",
+      "extended_productivity_sha256": "8bb2994738ed08a3478250bd305525982e4fd12349bf54bf912ba6a3b7a225eb"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 2003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 189969.0,
+      "arrivals_sha256": "404c63e78a89449c9895aed3bc569b731de7b0b18e41b9326027e9fdd86e43e5",
+      "productivity_sha256": "9fb92dab992843920af1cc100d34e5ca433d504f221dda828f523ae41ffaa1f2",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "b8e1c656b9658387facc69aace779f9ec704386d944f37bc94215bfce4ce0b2a",
+        "pre_queue": "8a1db6fab390793da37fdcbca81409c5ad43fc66e8d5d3c0bbe3daf528564595",
+        "end_queue": "3017d07ab24252607de83c3f26e217f284519ebd88b868d71fcf85e3631ce39f",
+        "flow": "9d926a7d590c39ff8b4556243d89f6af6d2039e9985203d240eb66024255b7e8"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "290d34b8f7a80b48047b451303384c7136d6277335982bc7dd5e6bfe88ce623e",
+      "extended_productivity_sha256": "4ad6717353e00cd9f044953fa18caf97d2d1e6e1f9fb767191e1271d261126d4"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 2004,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 194494.0,
+      "arrivals_sha256": "50c85569daa8ae8f35917be1b0a5397c19373554e5d9498889973d60d770c0c6",
+      "productivity_sha256": "b726c6e2cea33aedddd76f5761f99b12928f7ebb9c8d41cd80e0a8e9826244c6",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "906e6fb43e9842b7f3b5e457529b5f715733ed2157832178fd1406195d6106ca",
+        "pre_queue": "7afc0281389e928ee9c875c569411b17ce57e02ce17fea68b2c94c3ba68c8287",
+        "end_queue": "dda7d28067374f6969019d281749d102cd12796206a266ff699541f026f011c6",
+        "flow": "9cfa9917c2b55063998560413bffee13992fcb1a10a9d0e513467d57fcedc01d"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "8bf9bbadae3c4b144e74d11702ee4a00dfd4a685a0651227a2f57c31d51418c4",
+      "extended_productivity_sha256": "8b02a2a7cf2bd298533231abfb31313a25a6d1bc1eb7e4005bb2c78decd0f3c8"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 2005,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 203776.0,
+      "arrivals_sha256": "9f176210c55b8616aafe7b941df101f7f832adc3b59ca533400157084b8d0412",
+      "productivity_sha256": "a3691f5516bb4c6ffee1d118414ce6b88799f4d208c781218e4a95b2be9e3852",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "42d98db712f3aa65899eddfb9ddb8d801c676450e37718540b1cea8d7d68aae1",
+        "pre_queue": "3261e5bf341843390756a4d3dfd325ffbbeba7b26e7150c14fb232af4d5d7f21",
+        "end_queue": "0ee627b6d5bef202bbb17aa116bfb967cd34c6b37a741bd8f50c11e96f0c6ef1",
+        "flow": "9e6eed01d89cf23fab45357af13907f508b186dd93edbeb5df2fc6e4a8321b93"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "363ecf6d89a34e37f39b8b7df38134fdec2057beba78a596f897466132506bf9",
+      "extended_productivity_sha256": "150e74b1c11812971de0f5c0425704fb959a248e0be73b785a95b583e22443b2"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 2006,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 199087.0,
+      "arrivals_sha256": "68029010148f0bcd3eef77f77875250354f414dd957c447ddb1ce7727feeaa92",
+      "productivity_sha256": "6ae4311cb1007f89855f33c7adf85c94f5dade6ce266b27a911a256bce277df3",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "dfeee4e5ac3154973b48a9fbffc96ad150d82b0ad5a27979ff5bfddc34115408",
+        "pre_queue": "166728ccaed327b8f9b967547c8561b8a26457dfaead15b48418de8d126db48b",
+        "end_queue": "27dd216d62a15ada1ebdae03aab613fc09f568144e605283f45703e9917f90e1",
+        "flow": "07bc8dff72284108189f60f9376e1aea5566ee8e42796f51e0e0f169fe049b17"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "9b95bc75290502b889aa06b94518dd9b1d89bcc404c91670ea1dce9fd2776da0",
+      "extended_productivity_sha256": "19b4c01bc716169ab6a8bdf8406c449d529fca88eb4db0175b03f2d6dc3414ad"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 2007,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 160249.0,
+      "arrivals_sha256": "a0bd526b4f76a5b7342327e6ac1a16a02918d35d2ca9de2f97f0eef14981b2ab",
+      "productivity_sha256": "f0165113ddb76a6c3be328be229b1de5b32851a72b26c7a73137ff606d4400ab",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "2a79862bd0b88d555f9c1fc88833179f3a3874ed9f0452d3c5bb804b7110c62b",
+        "pre_queue": "2d86a97fc970eca45ede8ee09858e486a215758527f8d91dd1bc344c8bcef39a",
+        "end_queue": "1befb61e0347cdaf2f6ffd5e9e5f446d24a8f59bc57da0e1535dac42dd5cf9f8",
+        "flow": "5c76da8efec9a0103c4defb50462758e93f13f7f8452dd7060f1dffc78a12938"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "35f384b360a8c1cdb05e50094b57861cbd6e69580738fa8ff2965b2d8fa2c5a6",
+      "extended_productivity_sha256": "2c842803736e53143a6f3758f2f9ca3e123099a7e154f4a12dd4aa5a5a75d5e0"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 2000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 165469.0,
+      "arrivals_sha256": "bf43c26443f413031b2468e9813fe203d257c5c49cd08e8aa4c00b2d5558f7f7",
+      "productivity_sha256": "edf4b6aa5b3ec2e4b4aaa6dabbbc953cc1fdfac6cd36b953ffe9216497ee0877",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "e98de70c973f675070f72c6ba0959d4979b34f2907fcf55f7cffe0ce5c061928",
+        "pre_queue": "a2ce8d49a760d6ad70a2a934a3d2e0b5c36b920ac466cf01b8977304b080481c",
+        "end_queue": "6a4719f59ffc46cc880a3e8e01c16574c1f14997da79a660969f3e287fd28800",
+        "flow": "ecd13622ee03ef75d794e47f378d921815e9a590c4d9b87dbd5a8a2e90118239"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "7d218747f3abc24f2d7911b3aa4ca78e9315aa64dd891198048b9a6c40c20064",
+      "extended_productivity_sha256": "868ee46326039cd8e1da4e87da12f36f8b8666a87c2e7545f6b731651e450b02"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 2001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 166958.0,
+      "arrivals_sha256": "7c5b479fca86ee0586b256bcdf05d299ff8d2a2ba6cd47bdeb28d217f5b1167f",
+      "productivity_sha256": "58371e57f942393642c2d2b5368f55cb83d9b83edd6e7deb84460417354eae11",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "b2da3adbafd3f72c2819cf8ea83057e7e297f0115c59e0a69442376d0010f722",
+        "pre_queue": "346a64b1ceae284c1eeebc1cb0e5e53827581df1e4a2a3359c6ca7c4f1197e6f",
+        "end_queue": "6041012d7ae777d7c0cfd108b6cf53af80c52f86e574b3bd56779f9007741f07",
+        "flow": "05770d729c72929d34573966c62cbea0ed1fbc27aaf9741a1e658179b54a7772"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "12ba105c4788ed137e4686412c9e76b7477a5a86593bee077161d319129642d2",
+      "extended_productivity_sha256": "f9e59dbd7424ccafc097f2e563088ed55deb8763c62d97f8ba1ad856d4266f97"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 2002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 177147.0,
+      "arrivals_sha256": "9094eaff058538a01f00e5125b8ffe7a1e1736c3fcf0b85fcf9c6aee1671c88b",
+      "productivity_sha256": "ad9c093b0e9be15db1319d2648f0e9e7ee6a493084d28dbdc8d146e6e44e6df2",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "e63ae3e9553211e13aef7db692c93eb10f09481da47e940dd2548efab557b97e",
+        "pre_queue": "3772ca0783b4829ac41c33f1cb5118598224e74a8c303b6d650d8c8e63845c22",
+        "end_queue": "7466ea1272df89c96c1eafca2431f53d1223666ed9d30c9d5caa8fe59f3dd2f5",
+        "flow": "acc214738ebde3f5343da930ddaabeb2053f5c85f6b73b9b80934e3885ca8291"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "f74e441d969a0f18b4a8243eb64853419f0b58ba33ff5ec041f44f2bb987882b",
+      "extended_productivity_sha256": "3a8f1207f50537d155529a1785e8c9f70644e4bd88a02573eab1c2e7ba1cb531"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 2003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 158126.0,
+      "arrivals_sha256": "2464afaff93650ced5855462af4d4f1c78d40f8fd5df5713af344e5d5233a8ea",
+      "productivity_sha256": "dfa6493448d1d025b16b308c458b31105e3494ad8fea1ddc44f06e1b1e9e2269",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "9662fda432ed49421081632bae173567c29de55786e53d5a3e1ea4f1448fa954",
+        "pre_queue": "31c78b82cdef0c6756a8df8a499313c2705e0882a9b6a24a36f8c0b3b22d2f06",
+        "end_queue": "baebb7cc73a6522cedf74e0652e1c1bae920eaead7b133edc2e650249fea509b",
+        "flow": "d8839e1f27336e1225199e017eb84a83d7dda20af3cd2f4e73511fbd561068ca"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "0619752de6f4389b944baf95b5cead069d66538b0b599178fd931aae7263f86c",
+      "extended_productivity_sha256": "18cb0279226412d21cbccbf2a47f1363924a7ce4c7bbebf9bf9c9d64505f0c76"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 2004,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 193823.0,
+      "arrivals_sha256": "431623cdba1d0dac2ccf29c17cd2005101f3280c10d8ba77d6f568a594067e78",
+      "productivity_sha256": "6f24586fdb2f5705e45a868675d66886cb5cd0436b1afb13efecc1b2478fcbd9",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "7e25f2aa85e7118f5f0443923f456f80e6ba00304c18f5f09e120def2f98191c",
+        "pre_queue": "48ad4d784a150734e9d2d3df1bb26be3d83ec09f4a49a08b5d2d41082d82ec34",
+        "end_queue": "407a4df87585d0035894661f589590d2ed1913cfd82c33ec59c00105e5fc2edf",
+        "flow": "d633528510b675de067472add6031c54cb17aab45888585defd4466c15749a86"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "2198cb0c267e904606ada408f0c46b9614b81742d1806681e8a2e9f27ce662fb",
+      "extended_productivity_sha256": "e3de108e148cd15d690ea48f4ebb50bdd19612cb35fa47de46a2e1b5b9479645"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 2005,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 164724.0,
+      "arrivals_sha256": "f56dac529181b15d33037006c2e128cd719f6c25c599d848cb9d71c366bd40b3",
+      "productivity_sha256": "882e08f95e94a59440e191685fb6a043131a6af8dd9fc6d2f02b3ceafdfe42d7",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "a3b193397fa8ce57373d20c4a2bcf8a7eac18e9c2cb08823cebb3c34a93ec523",
+        "pre_queue": "941004557ddc2bf58e7cf4c57576161a94285aaaaa7daba22f1e8b55cf08fde4",
+        "end_queue": "7046b54d2e30cfc2c50364254400554c7f6fc4d5e3b7054e8ab55e4cfa29463d",
+        "flow": "d2980f775e8b7afe9d3e4ff90a7715d80195104cfad6bf92c626f8e37f27749a"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "7549293d420de1be7c3c9ed7b8498faa888bcd5a3afe4d92eaf6f43d97f2b091",
+      "extended_productivity_sha256": "710892ab666557b14fb66951599ead1803892bcfa9943bc89fc2862b6ad53de5"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 2006,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 199755.0,
+      "arrivals_sha256": "992905717e0f353840979ee6ad81eda2a0ae3879aad8e1f812aadac0f91aaa7b",
+      "productivity_sha256": "a20498484a6f6ea327a577f4e541f57b713b9214f097a9136c4f62420c041bec",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "f0ebe1bae5336e82b35da06dde3a6719270301c1bd6eedc40b7ed9eeb7cc9b15",
+        "pre_queue": "fdfc7740c60a87a29192ebdd9fb9bdf8f2a5e534cdda5fc2362c257d90b078f7",
+        "end_queue": "d26b9039b8f9c84594a5e54f6b82401d30e2a71b32d124c95512033e0219951d",
+        "flow": "f09a7ab9b91723a4938b62b6bacfd65cd0cc9480ed307e6465dec16f3b036170"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "ff31334ebb8e8fa7e0910918653e565de6274333e058a3d762793d03f808d671",
+      "extended_productivity_sha256": "bb8922d65a13dd5055f438360e58ef1b8d10801c7c76c7fe153ed91a9ee84813"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 2007,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 189431.0,
+      "arrivals_sha256": "808b7d4744ed5686c0f899fdb6ad51d0dd818358f5ff0441182ed882ac09cbdc",
+      "productivity_sha256": "067feff4b57f051b573fd1332109f24e44521d2959b540e10d6ca9c701be3771",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "2bf54aa37fb8c80fbdbea806fd82217e33281d1f294a9faa017fd5c700d1a7d3",
+        "pre_queue": "ecf5f94e153dbb4e6c08a95eea269f01d19f58354b79f617a5f500dc0974a780",
+        "end_queue": "cbc611cfbba055cdc3f4c777462999f5792ef2adfecfd823271c65fcea742b1e",
+        "flow": "8a8d9d020075fa8bb67ab15f3657a4e6857c58576b83ba7fdcd7671e54596f1c"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "2d9944c30dbc3468b58ccb931cb237e71832e009e0838776d54b26588b9d2476",
+      "extended_productivity_sha256": "7675b3acfe84ca470dbcf111e36ea8826fdd3d360fdf3dd0accdea9cfdd698e2"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 2000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 187572.0,
+      "arrivals_sha256": "799dbff7776859783e113fca25cb9d552df7683d87eeee9aaf11e92542295b7b",
+      "productivity_sha256": "5ed6b63bcf80f31858a870e047251ef12fac2f3f5036128c8a59629352f558bc",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "8805ca1958043ac451b2432ecc7e7d570182245b55cd8450b9a1a77775b0830a",
+        "pre_queue": "f9034420ef26a011dcf805b7064e4b4d3528267189fb41069d6fdf91f9a8b798",
+        "end_queue": "96547401c514b05d23d0be8e9363f4d22dc7bc64c4cf44ea6af131bcc91e7e83",
+        "flow": "0d4a2732f0c8a64b961c07e8a465a94be396379a96ce10603630907396de2dd1"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "28c0200a4388283832c599d11588b7361cedc8ceff067a66867785a527df7e44",
+      "extended_productivity_sha256": "136fb791ab1f95207ee1200d091367ae99b29b840e49084f3daa4c1b894d56f8"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 2001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 193453.0,
+      "arrivals_sha256": "53373e0a3e15e0c3aa070e44a0e6aeec49566bb2112391227071d665a901c9ae",
+      "productivity_sha256": "3bd52a7059ded97f2167ba90393eebfa6f6027d93c66345df314eff55fffd445",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "1735afb8a15eab275ea7b334cd185e8ce59c0ca408cfdbc4160311864ee3a589",
+        "pre_queue": "551089cc0137722db2cb0a1321653ede98b8d52cdae172e47f333f6daad9748e",
+        "end_queue": "add681d68fe1c0359cb3704e7391734c90ac73375c7a8797763ab6daefa7e491",
+        "flow": "d5c0c0e1353da0ef227645a12f5531e1d53bd6ec7d03ae34ac05c19b6e101592"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "ab3ac8934cc2f4445d64494de879c7a7321c85cfbba622d9a19066bc722ad1dd",
+      "extended_productivity_sha256": "3d64ec1970c7b716cc9d67452b61101901d4f3869bc2f24ffe6ba6d8c9d94b45"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 2002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 191938.0,
+      "arrivals_sha256": "8ff2cd1a7ea22d619d67b870c4f6b363145dc96adbc96b9fc39f164d9f5e2005",
+      "productivity_sha256": "3940eb52efae36ad3bc22c3968c1143a34361d8170fca306b47f11927d252c51",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "cfbcaac145918055ccbf03cca5a3a5059725ba15f55bc56e74cbf8d27ee0fa31",
+        "pre_queue": "73f608b5392e93a4e37c401afdda1bbb5ed8cef9c778e2ddced932e8ea855f97",
+        "end_queue": "ea8d930eed206d4deba0d220d0634b3490dad94d550fc8002a5d3e2e38fdbd9d",
+        "flow": "34ea9620b8bb8d6723ef6febbc99369fe3e454649d130337cdec2f4929680a72"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "1f5dc5043444e88f8031e0ad18d6cea046b391761a8ab3260f15f4497f86fd87",
+      "extended_productivity_sha256": "ae81190435dbc0949c6489c4348f6ffc1a9d0a4972331469f493c82388f3366c"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 2003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 179930.0,
+      "arrivals_sha256": "2c78ec349bc6fe1d8fee3e01431a50420872c99ec9bafe5060e195bbc699dd45",
+      "productivity_sha256": "617ee35a7aefaf4aafaef29999504bfeadf944ab586644ddd5f61ecac4e700ff",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "accb655df93b2a852c5e9ccf7f47173fe3db51a461a99aadf56898b60ca8119d",
+        "pre_queue": "4d29a79413f5490f832408c8e30d17ce0b2399471a9684acce54e04c9239fa55",
+        "end_queue": "503e02b9404aa4f7475f493651e717cde43f7e83ae096a7f1fc344b485299c8e",
+        "flow": "c391729c1036eef044423c9d09e1a89083f1a63f98a59fcf7ada5ab3b6ffcad1"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "1a3c19e12a043d6e1fa6e62cf95f096dca5cf722f2b982ef925a226df6825f5e",
+      "extended_productivity_sha256": "1258607937d03edf6b8ce115544d717c25f9dc5983763e746c1af883b231f313"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 2004,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 180840.0,
+      "arrivals_sha256": "e148186ad9890bb534e899b343661d03dcce29353f4bf12f83c848bb6442414e",
+      "productivity_sha256": "861d7d610bd0eda1a7066d0869c793e4fca12c27e234594591e042a5f4cdca2b",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "15f3eee0d2dc15e6955e2baaf162c165786162615c9081d243aa9a4b262bd20f",
+        "pre_queue": "a1a148a621b0b8e5832be52133963c1d5ee0b3fee2337c7a6e04d4f02cd05772",
+        "end_queue": "78ea1fe9b78ca431b66dd9728199cf2ea46257ad169c086311de037e22636b5e",
+        "flow": "9c5475e9ced880066b31e04c67338c666bc504bc389b9be6aa7d5e606e171f5a"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "a8f0e2ddb98a22315613ad725d81871c30651bc9f1b199284ac930161c03c288",
+      "extended_productivity_sha256": "10d541a3c525658a2b39d0a4e746794632159e20cb01dea2ef3021ef65327db6"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 2005,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 200263.0,
+      "arrivals_sha256": "b9283410a0f5e48032b161a0fde9903b7dae2f95a0983efa5ec06f66071df223",
+      "productivity_sha256": "4bf73f64f598e0c70d50a2a006fb586c1545c71e81c99de5949779826caf6710",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "16129304ded8b19f1c25f3dd29634de6b30f3f7bfe363c3e19171b5ffea6a38c",
+        "pre_queue": "9d630e92a3c0185455f78dd9123dc524bb1a64f3b12d62165075f6bfaa5406a7",
+        "end_queue": "2757418ed4f484d38832f33a25485d70d9a31fb4b868156be0130d9866f765a6",
+        "flow": "bcef273e82f27e19519b1d8ec235c55a0ed3f0fbcc16cb66d6a0994f7fd09c84"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "7f4655e7b29807c505afa2d5680a60fb29da8346d053a78914589ad5e880087c",
+      "extended_productivity_sha256": "2e5eb9a7a34b7cdddb41711dc435bd7f1d533b1cdc198ccc222edd108fd86e80"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 2006,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 163191.0,
+      "arrivals_sha256": "f0d82dd56bb091b2eac038d81f8039c6fa8fa787b0f6d24c8c44b316de6c2bcc",
+      "productivity_sha256": "5d1ae05114a65daa39090ff23fb858d0bab319ca28e1bb216bae9be2022510fb",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "bdf342068b2da45ffa0bc71e1b1bbb73dfebb813c2c5e9ac1ccecb66b1914c4f",
+        "pre_queue": "649c1f6dc44919cdfba4153cfb8d146f9642f575be67b578fb97572b2ad52ab6",
+        "end_queue": "8d3987193b5702adaa9e3dd9c78370e94435e24ed34c363443a99436c557f2bf",
+        "flow": "9bbe8736a27743da0648ec6d37d30982f587401590fbc79212bae1941fbaea9f"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "b487e2a137f5cee30e65190ccb5ca544b6fb7ed085695310783ef31437aedd5e",
+      "extended_productivity_sha256": "8e2a472a06610797bfe4373d2915b81acc6043230369e5c3b57f2c63e13d9658"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 2007,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 182535.0,
+      "arrivals_sha256": "b2a98a6f50a87b24c773723b8f88eeb84d77956e41967b72433045e47f8a8bbe",
+      "productivity_sha256": "7589c32186677a21ec1aa0f043c7ac2fe2268a1b427590c10b3bc2f5684cf4a0",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "566c6837017bec511b4e3f9f2215526ff01cb2f40224b0171dadd5ee832920d5",
+        "pre_queue": "1a4c6b974e88752723ff732e1f583e64f71c498f3e6361b2f38aa556fb6f02cb",
+        "end_queue": "0507788de77f7af9dc19a8f1ee94dec005f2a53e697034ad326649dd8dbaf7ab",
+        "flow": "a40dc9ace1e6d5c535dc44cd6c6089b864841d910d890d1676723792741e8bc1"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "c93217905c9ae28c81cdef17f33e6fe61779d9699c24f591f3efe50ad930411d",
+      "extended_productivity_sha256": "f01a5b2c396643880b923ba3f786d70eb27e1490464f9000abc7ae2b25d794f5"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 2000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 199948.0,
+      "arrivals_sha256": "a7eabea291b993668b2bbba9a6b840ee4563984c6f7747c3389e6fb998078d2f",
+      "productivity_sha256": "743a1da1017cd81a567ed114f4b39fd4bae051ae628a8dc173115a4e6c8ed91e",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "948ee87dba139ac8e499664fa6774224c0f6fc3c1cd8e30828d07363777f5a83",
+        "pre_queue": "776c1eb7d813c077c7cd3e906a30e6fe4189060121c685d19fd22d5a565aeada",
+        "end_queue": "3bb42ca2a6d705a848e6fbaf0cbaa62b64ff49e9123ebd41d7159af9723fa7d7",
+        "flow": "0d9c49d76cc0c8af8d3e3f06a0355b0af17c33849ae7eee78adc4c7356d4d356"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "54196f9184813208de92adc94bff5ea0f9f85032e22dd2f7df85221a34e26cc9",
+      "extended_productivity_sha256": "044226d2dc8be664c9a298c14f39eab19202556aa466326f0cc6501a36690f18"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 2001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 162926.0,
+      "arrivals_sha256": "379a3092d43486c0c42ae5adc3bb58026a53dcda31a8ecef9c45c150ca86421b",
+      "productivity_sha256": "9c4ee6d1acd2d320aad7898f2cb6a911e557d3ae1728d83ebe750c3de41b45e8",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "667e0e1e6d8507324816be33f2aed671bd3a03f5fc89591f9dd25b66520da690",
+        "pre_queue": "c131c53a8db1d77412b46d46cdb18e9e484d6cb235068ee9f4e96c7e0887262d",
+        "end_queue": "bee9f1d180636e74413d448607c96119dffc3b1d2adcb56098ce4598fdd8c7f1",
+        "flow": "efd1848089405e3141aee8630492a14ada163c3d84efb664742cf79d9fc4c827"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "6a2beb3c35fd47aa624bf64830fe8cc24810c6e728769ed3b94520e3fdb1dbed",
+      "extended_productivity_sha256": "52584406e9e1296be14289fa78440f6424c07e33d89126268397839d5ac8a443"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 2002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 169461.0,
+      "arrivals_sha256": "d52595ec5c6a8a50729635b1cb4ffb378916fc3f83a3a06dce6554adde26b5d3",
+      "productivity_sha256": "cbe9d0d770afba21e60ff8c8e5e8912310b62840cfcb5056f3ab8a5825ecb677",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "7ce0cf283dccf75e4e1e095ddff375459c5a3b992af982594c5010478c5ebd2b",
+        "pre_queue": "5d535e5bdd249166f2be5320790d6a6fa7fa202f3c0d89605aba1e4e9d1ece20",
+        "end_queue": "d782b520f0ef99692c60947f8e47916b082e89abeaa19d2aed506c8dfa0cd27b",
+        "flow": "7b863706c7ace29755d0311d72929d9d8a837d84796cddae64fe8114c86c649b"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "0339af7883248503ed4e92609e117b73cef4ebf7849f1d89bd12d03f2648ac44",
+      "extended_productivity_sha256": "6ab73e1c4c00ba17d8973bd72dd3c669267ece14f7b7a33e1f62e6ea8861522f"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 2003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 201728.0,
+      "arrivals_sha256": "8cca4dc5c41109c7e37785649bd786dc783ab7c4b057ae25f7c496b4d3ce7bbc",
+      "productivity_sha256": "aa463fafe1512e10a28f2b0f79daff3f66c8a072fc1abc7105de12daf3e380d0",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "09078c8fe7c8098f62e6c0c02e691cddeacf0323450c88ace6a6ef6509bffd54",
+        "pre_queue": "bc6c6c85bfecd60974de4123a17d3848fcba86344134757594221f5ee28d8b81",
+        "end_queue": "522372259b1d75351c67e4834899c47d44a0bea22e5687194ea0c59a590728dd",
+        "flow": "92c596ade7338bbcf2a25c1818d997f2a410f5c81aa4b97b74ef9e66a31ae3fe"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "02e77ab9f2c76c38713ff759f4d072a40e4db86a73b05337f0016c65b52d34f4",
+      "extended_productivity_sha256": "a958cf66974eb842e4b5ed92a1fc720d5ea5251930cd66de324b78bbec628fac"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 2004,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 199137.0,
+      "arrivals_sha256": "fede3b2f5afb45aa0acc08a66e18f4a18ec4f155425afc368a1ce1e0a75e94aa",
+      "productivity_sha256": "8137c9002dc6f6e4351fb6556cf5d722869f9b4da9e9ec6a04f1c319e8f80e6e",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "7a832ec8623af73608de4321d235e63bf01e929b58d99af0e329229e834f5cec",
+        "pre_queue": "cf39f87ffd4889cfc756b45f2ae2f83a87ce84c12f51d97b9fa5fa6fc0fb9118",
+        "end_queue": "b107a5ef4532431642bcbc509897cf54042ffd4fb0c82eb2e58dac21b81ea9e3",
+        "flow": "ec74ae71c22d808fe70255ded33cd402ccd591e4f7416d4de6d6485e2d251600"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "cffa03dfd9baeb7e9840726a934967c76571cc8e26f373956cab38cd8f1675ea",
+      "extended_productivity_sha256": "96ef50da972334a08abe40f86e683548f93aa01b9a2c3cf0437fd2097a1110bc"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 2005,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 203774.0,
+      "arrivals_sha256": "5da205870a0f529ea2ab2f47aa01f264fc149a1c300d6a54cfafcdfce5f4fa45",
+      "productivity_sha256": "b985a8f3d6475ac1ede08241a418d7470b2f074c5ee57d063f3ad0c77b75e965",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "28330e31d11a332a2584116b1fe814e3ac98b758c11481da0afc5502d44cf77a",
+        "pre_queue": "24163850951269c95630bc9e46ee0453fd2be56b013fec6b9c540566d74529f8",
+        "end_queue": "ede87b1baee4b1d7fd855904edaab23250ef43ff661e94db59b7494edd876292",
+        "flow": "3314bfceea4acb065be96d1623bd21321e077319ce1d638b0c6b2072de28b090"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "9f093645d6e7910ff6ce85c53574bc1fe4dbec323599a47ea466035d0f6c9c1b",
+      "extended_productivity_sha256": "f31ce58e423815532ca623baa5157af547c7c415a82709eae8e77c407e9dfbbb"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 2006,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 183155.0,
+      "arrivals_sha256": "eae26b5d2d3301469e51ab7c9075c6461034633adf5c9f13be0c2f416cc89200",
+      "productivity_sha256": "d71dd54e0ee6b4ce820cdd39e792259107728b32cd2c2d1ed1a48434ee90b98f",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "329ad47771dd6589bc0f0bcf97c3864c8577a5a63d239e211d11b93e30530185",
+        "pre_queue": "c6872c3c4f0e7bb370d6e7160584ed7b4d7833cfc0b94a16d42ac8ef67e3cc83",
+        "end_queue": "4a745e20411984708db54bd1257574a52981c59970c7fba67703f4b58e417792",
+        "flow": "1adc32652c50931dd268c917429484559bc55248ea6610ef51d647f86232e5ce"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "d4fb5ca992fbed4dfa21dd55b8e3930f7e97137f2498a2e261871d75252d2ee2",
+      "extended_productivity_sha256": "f97a82bbd0d9ba6208b2d97b3522ffd9f8e0b6ad0e78da22ec0563d0ac969190"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 2007,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 197659.0,
+      "arrivals_sha256": "f47745ac0671ee25f7523bf686a10c4aed558e3f9ffd55cf5fc4b65e90cfdb8a",
+      "productivity_sha256": "11eb44c2a1a3f53e1984da53d9c1278bea69b2470287562e1a3d5c79cdf2c003",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "41eabc393878b69c438bbdd499c36f8f47c6b898886a1400287997c7f70a4caa",
+        "pre_queue": "cadc1b0a80127bb04ba05a5a0a0295dffee9d4237c773e5b18591ca587cd7538",
+        "end_queue": "b062b4228317741a059cd5655cccf73a3f28fcad63edb4e0de32b41c003472b9",
+        "flow": "ad1362010661a6d883a21bc8f341f5ffddbf6f6e3e51302f5efa5615c1c98895"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "1a320a0a6e0de6502418bc2ba5a13624c5f776460750b3e35a654926320c10ef",
+      "extended_productivity_sha256": "675759ab4531c8bf5735fa816ba974e7aeff9d38684869ecd620df575d4ae7b2"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 2000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 182901.0,
+      "arrivals_sha256": "f3c5f0fca050623a3d8eeed90ed8ddd3140151f686f056d879759ee71b544470",
+      "productivity_sha256": "fe4c12c7dd6770f1254e6c2f4b3199faa3c73ec1d6b5e61aa4dd1dca0dc344e4",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "b7678744254307f60985eb1655d2aec0e8cd1eed301abe65772a332f6628ba4c",
+        "pre_queue": "b6a74d792a5db7ed053b4eb52e8bf265a1a3303f529cec3b167c2c755660ced4",
+        "end_queue": "319da851f4cda54aecf5b01a93fa41ad6220f65a3ec792e7ae58b3c57de0ee16",
+        "flow": "67f7f02a228e1debd9909197647433f91f0148db12466703f0ace2d218b71431"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "d68c2cd94a64071b1b570760f7337124760e87c9159f1d673cbf62aab29305f1",
+      "extended_productivity_sha256": "1a90489ff0f10d229e760a2efd5651711e47f9988076eebc63041cc3d57925dd"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 2001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 161920.0,
+      "arrivals_sha256": "815ddfe25f713bff657ab61aa78bac05f12088478edd84f038aad833aa9079b7",
+      "productivity_sha256": "bf99b2a76413d021b50758d096d87d0b6940458ef185e1e8576f47634ca3570d",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "37912f7edc54fe91bb96d4f841f0778d8f77b8579242bdbcdb181b026aed8c37",
+        "pre_queue": "8d90984e5029f6cf6aed24eaf318af083808e9d2e51c8099e4271cfae6c64e3c",
+        "end_queue": "26f80ae5bd0b03236788d9b06263ea88952a81329685012e46a10469e37f3f23",
+        "flow": "3e65ddce4edad9dfb9af361787b8077473e135fb29753f7049302aa41d6b4b19"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "32368927c24a0e2d78d8229f80102525bc004209bdb8e7dc9b1ea79ef6f29f1b",
+      "extended_productivity_sha256": "0056061b31b200263eb829cc33817d9bf593a19e19ec1fcc11fbfb5b8a7b4eaf"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 2002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 176648.0,
+      "arrivals_sha256": "102f335fc241b9d91730634b8f14d79a0f0162d9069c7dc158cb4159e1093395",
+      "productivity_sha256": "4a182da67e758f6563c97202ca2f618618762f54e6924d9c00e72701f18b937e",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "a53c1746aa1bbae7e9d10f5aad70b21fcc64f51c350d04c08f27e1a746630186",
+        "pre_queue": "0bd9adfffbafb7da0ebd1faf95a762e0f4e41e949fd47e3bcf9366e7a78d21d4",
+        "end_queue": "b2399154c9f675886608b698a1824ec9340b3db22501ba26b93cdd395e8efb05",
+        "flow": "37f9799a4889904d194fbb25a002aaef217bf7e6ecdc4d7097ea0062e5ec9260"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "c940c6dfc2fdf9d5a2a2f2cba547ec7bebd1db4d9b8fa70da5854cdbcd715a71",
+      "extended_productivity_sha256": "3bbbde34c0a48800f612e8409d554ff4f82d4d2462132823c71da907a4f9372f"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 2003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 182213.0,
+      "arrivals_sha256": "590ce83106148de2a95eefccfe7fa8164dd05c30f10563673f851358774143e6",
+      "productivity_sha256": "f3e5c5819ae9ace3c0a178579b539a089f057ba8c6c6ce34cc7f7d1effd5d9b1",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "72c085fdae6bd9252b1504ef95a70f15cb5fe37678457c5cc191662c664fd481",
+        "pre_queue": "40d9aede1dfa930ae6b19d75aac886d4ea24717f22be4057b79ff80fdf2d37db",
+        "end_queue": "0ba687d17eda53e2ed1cc6c024ec2fd176395ca29d432c12196d644a5edebfc2",
+        "flow": "82fca2c7e3d4263dede652592432a7d8311d02e66aa2bc5ea1772fd2b5c70b01"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "63ed0f7f4115685f902d8041c51ba97972d8d92fb9cf307d30c417835e6a4201",
+      "extended_productivity_sha256": "d4392e13a8263f783a12c11dc100a3f189b3d55690417cbb422f59d6cdc58a49"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 2004,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 160152.0,
+      "arrivals_sha256": "aeb8a79c110e9b837fad2f030e16a756d267c352cec01f4e9075d95bd7b49d40",
+      "productivity_sha256": "19a07dd1dbf77293161175d3aacabb3fdf6e144205ce99acb010583e2cc5aac3",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "43c9210f157acc9706a3d5f2e1b9cda5d2e97a83fd293ceba7eefeee9eda267e",
+        "pre_queue": "cc276afb2b7dde252b9dfcfa240f002d18c3d81687c3c28190af4ab02d845719",
+        "end_queue": "c4b016656992a24154c8cc1dd08a3b990ee3d25b7ce1fa0e28ca58c29d307f34",
+        "flow": "186453825dc2ee1c7962dddfadcffcf8cdb9bad991df3b542939a65d38463a92"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "0b6f60dcc049d3c93889fa8504c78873c22eade14ba4a293a8dedb537215260e",
+      "extended_productivity_sha256": "3aeb83f57605c5b008127295177d8aaa06b78fa0afd767a27e97f290343a23e7"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 2005,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 194743.0,
+      "arrivals_sha256": "792b5bc1d6611db7b38b8739204d648691e854691021c7327762c21d22414144",
+      "productivity_sha256": "2c3173c9f0160e244f0846abc2a1a51c744fa6914dfcbb740267b93b8090078e",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "e6953b95fc547d7d4fd996105d2c3dd39881e1f266455a0f804d08aa0923e342",
+        "pre_queue": "9c7430ca202c4259d1e4b4b7537583663814144de2f4dddcc6e2cf6d31734e18",
+        "end_queue": "90cd46a83a1f37a539ad2152556a236599a61199f36fefeaadf55012618e7d7d",
+        "flow": "1a6f028575355efc64339295f2abdf5d56dea72f16d9b62d668532be86b84222"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "e350c845020a0b042defa5226bbffe27877971a0c802158d1f6d6638f3b7edde",
+      "extended_productivity_sha256": "8b70b297545d7ca1b0ebde43d9f8e9e8b1e2d43e5d0d0269553703303c44b72d"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 2006,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 197322.0,
+      "arrivals_sha256": "1254b850d71fb0dfc698fa579631b29cf3ce7a711cc2ddc708f037047828a4bb",
+      "productivity_sha256": "a5a5c4805f319c455602b79d5a67c8eeca7cfc6b09cdbca0b946e065a397f5fb",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "5f5a497287db778edcfcbcfc02c20e71a106f0b1531d439cb34f655aec18730f",
+        "pre_queue": "ebe6a72a7d687e6ffcf47d624009e09185e2ca84c35aaceee71716a4f702672b",
+        "end_queue": "c03f85d3fe1706d052fbdbfce332b349e015fed8b2a7e7e19870128adecfc346",
+        "flow": "5d85976632fd7ce67b62c3bb9e0a68df1c427ef3da215b97315fe823687d597a"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "8eb2199764783a28767d1fbeafc69386ecf516dca5d0dd5f67dba94a94f518ec",
+      "extended_productivity_sha256": "1b8cc6b56a9a33998317069ee9429e0c04f5f5ef60a015aa277f0b586658c24b"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 2007,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 195842.0,
+      "arrivals_sha256": "4fb94aedcc16c3f118451ce642b49601477ca45200152bd6f6868683352e48f8",
+      "productivity_sha256": "8d038ecb63b2d4482219a06fc66e42eec11cce3400bb254b03254682c9f591cb",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.4 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          92
+        ],
+        "pre_queue": [
+          92,
+          3
+        ],
+        "end_queue": [
+          92,
+          3
+        ],
+        "flow": [
+          92,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "ad4474a8aee8453769d37d81171fbf25ecbb258e985a2200cf5e913f3f52a6eb",
+        "pre_queue": "599b8886c9d6031cbc5c0cc8453d77ba9951362334b6869bab9b8f0dae1e6f65",
+        "end_queue": "74e10c48e2d0eaec7affeaedb6b7dcf994a4bf9c6fc73ce471457de1fffed166",
+        "flow": "17a864377fe1e88cd9812973f03f8eac64dcd804a44b086083eaea4723703b90"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "f305f610c1f58b9d95074c2833576c21c5ec9a8fdddd63dea2cb316d42fa8da6",
+      "extended_productivity_sha256": "22f0627b7c71da28b7345d63a5d9569fdbc846b46cb3991bb4ea548f244b010f"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 2000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 450974.0,
+      "arrivals_sha256": "d20eaa0b2270bee5c9e9ba015aef0602496517030fc26ea4b97df905b5161e7b",
+      "productivity_sha256": "e5531746e549581ec4ec4a1ab945e5f88fb0084ef7b14dacd167776067da527f",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0677898039931009,
+        "stage_productivity_scale": [
+          0.9393558881033617,
+          1.0705937071906981,
+          1.0521704029722017
+        ],
+        "fault_factor": 0.5863235380246761,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "37c85fc36d62b7e2945b367715451c7378d66f8c4b67a57263b21626566e78f1",
+        "pre_queue": "af5c473ae95f3b96f526a58db839a9935f0ac7b36a3cf7081438f3d7ad860778",
+        "end_queue": "0032020ae54704f204c23ce33f0caa1e25432daf458703dbf5cf89e5dd877811",
+        "flow": "4a9e5edae2d94cdcc9f887c5507afb59b39bd5f8bd9f6ed371fc64eb6580617e"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "35ab3d2abdc6b9bc5ac8dd751e6077a16291fbf559be6607917b7e53b56b34b4",
+      "extended_productivity_sha256": "8db80334cbe8531d42aca07d80f5d01c71c0e4eae6cb2f63043be2b34e0eb213"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 2001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 414307.0,
+      "arrivals_sha256": "75777c27cd96ff09bb18bb534e70bdcadebeb77b8ec0d0b8cbf0f352fd18f1c4",
+      "productivity_sha256": "c6ba41781c56b19cb6d9f5d6b16c802e94264963c14543408b55c304b172cd5a",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9938086092813357,
+        "stage_productivity_scale": [
+          0.9659943193144872,
+          0.9883108266665939,
+          0.9400828947780323
+        ],
+        "fault_factor": 0.47724307532707133,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "cc52005fbc97854c5784211f8faa7ab763aba34b187ac9a107f511eae783eb1b",
+        "pre_queue": "5cd3d1c3a81c644c9d482ee8abf075762643a85568b1b0249b9a8e561002866b",
+        "end_queue": "d32180354050d21fd58eadfbd8d6df947e0de4866a9a044cc5c3117d3aa759f6",
+        "flow": "681247ac62f8a8ceaf2ab3f4892e3a683b27c2fe0a24caf5573ed72d50f9b345"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "1404361ffbc66c5846efad96618e1dc9a52ce727d9b85744e6001f705e2b1357",
+      "extended_productivity_sha256": "b8bdad282953907f5feae52d4f71478eed3c450eed0b0a98ac6e61e461fb18b8"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 2002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 464953.0,
+      "arrivals_sha256": "46611c9f8051a96f17a5109dfef2447fc23b261b7c2e7342472cc668018c2989",
+      "productivity_sha256": "07b5af10231e43f03f481151ca45c0cd0799a6d2e5109328f38165f29a2a9717",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0881952551531433,
+        "stage_productivity_scale": [
+          1.017816787113519,
+          0.9608192481102719,
+          1.0742232298694976
+        ],
+        "fault_factor": 0.5849791306930762,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "27cf8791ad4a1d7134d0965c34890645316bf5bb851e64831b2e5b42894c222c",
+        "pre_queue": "fc76f11f8c44af333337c6c0605039424663f0f05b66f3c3ab5a89a8b4102814",
+        "end_queue": "11354d85a6009faf3b5c4467ef367eef3eefc642380c2a67dd35c05a68082d34",
+        "flow": "1a479a3b5c7c10661661663163282caa5c3946b3956f5cede5ca48562760dde7"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "f92376ebcdb7bf12243fed0759c87d227a1713edab3a6a34c00ff310ab7641f6",
+      "extended_productivity_sha256": "15bcfaa03aea1c67568d872dcccae1549815240fbd203813dc36248863b65615"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 2003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 460830.0,
+      "arrivals_sha256": "bf8dfc57da5761f1c188c27f5d1e14dbb1623ffd3d2329d6bfe322d259b27aa9",
+      "productivity_sha256": "1ad2ab2751d3e0c086bafab93cdaf4872cad8650aef505c4365ef91a12e5870c",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0925890145770754,
+        "stage_productivity_scale": [
+          1.031052573103382,
+          0.923760009045662,
+          1.061364142086757
+        ],
+        "fault_factor": 0.6171119772483977,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "3655ce852cb9ecec3db07a252eb97aaa9b9daec5ec0ca6857bfc6dbd25e2eb58",
+        "pre_queue": "905a73cd702c0de0903817dfb853529ebe34ca68bce12eb9291e0c5652f3fe2b",
+        "end_queue": "469452fe51f8e4586b6ec7290001a7823ee86cf8c0c93401e4704ff6c8da8554",
+        "flow": "01020e9b7a3b093a7729224e22c755b3ccd47776d1723ef19ad3b9d046ca0451"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "1f02107640871310c8a34eda0451628d975e968b75afb47a35ec62d0f88a48c2",
+      "extended_productivity_sha256": "aa5451c3af173aae77774e7c092d2184395151e61731a92a8138e13cbdf31959"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 2004,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 394515.0,
+      "arrivals_sha256": "88c1898a718c92f83c39de554968f9e3fe8fae2d9b635ff1b6ad137f9599d9ed",
+      "productivity_sha256": "c1f6da7b4e50e42eccdfdf79b275b424a5cafd9759835b3c83b61d080bb695f2",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9395531939005655,
+        "stage_productivity_scale": [
+          0.9960513010807885,
+          0.9236037782824826,
+          0.9460475893819472
+        ],
+        "fault_factor": 0.44104158021011897,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "fd9dea13cac4a454d37c4e1af85cf5d8b6a2b8d8853810bdb9793d09b612cc95",
+        "pre_queue": "978769b38167426c0d283e22f2809546c1f8a5e8494de05c72bd8609d8f73670",
+        "end_queue": "1bd19f587ba75e558c8f7a7497450962e6129d4898cedd552278e4418103b882",
+        "flow": "0e96f32f68e066811128bb6d0db4e4783675033f7f1d2a5ee2daf6f2e3f72c8a"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "e0494bf7276359e2a83b42ba048082b0ed2f2b5567566e9238064ed8499158fe",
+      "extended_productivity_sha256": "5fa5975bc945c9af54ddfc6db5275069bb47dcccf27c4f2dcdc916bf5c5a95d8"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 2005,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 404733.0,
+      "arrivals_sha256": "d30242351ed51691debcef0abdd3c8c67e6a8c2b18fceb1e6ecdb0d5f419d7e2",
+      "productivity_sha256": "af6d53b01a6df87002daa823ee9cb1878e6b25709e8cbbbf8fe3000b20acb7e2",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9635518221777166,
+        "stage_productivity_scale": [
+          1.0061913904063602,
+          0.9437602331060608,
+          1.0448767733577184
+        ],
+        "fault_factor": 0.4437824687714514,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "819dfe2ddac0cf103b846a7197a54e13271ef0e73c472d0f9e9a88b406607c6c",
+        "pre_queue": "56090cc8e3a14574768ab7a9a278dfde4b5e15694c57e0164beaa9aa7e9bb3fa",
+        "end_queue": "47a7bd4b5829db2beae84061adfd45438adc03c078d3dc4bf475d1c119c41fde",
+        "flow": "b47e93c93d81fd3870a585fe3cb586df039a651950a67db47ff6394dd70ac159"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "b47d1cef300e5d093818564235a70505825ba45e3bb311912ab6c27eec3e58fd",
+      "extended_productivity_sha256": "0352f7ab4b3d3b2961b72a14b64bfe0a1d238c85d93ca9eb3c8879df246fb11c"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 2006,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 475099.0,
+      "arrivals_sha256": "c10a2746a50a9d4508d458e7f96a6b14a9d81ad7c9d614b18705c29503ed469d",
+      "productivity_sha256": "4bf778ee6228c1272918cc621ea4d60dda87e6c0f1cf227c4d89859bfa53af32",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0967380980175434,
+        "stage_productivity_scale": [
+          0.9239219383519275,
+          0.9536636034963625,
+          1.035844662815965
+        ],
+        "fault_factor": 0.554691847175329,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "dca9841a69223e4876e2dbffcfa69cb2cf59c3c9113a73d80ffd91f7b739dfc5",
+        "pre_queue": "7a1df4ed0b604954a1cc3c9b3d8a49181cfbd71420d64cb097d372ac1957ae8d",
+        "end_queue": "a06a3a04d38f67bf2e3ed3fb9022454bcc3cc2434bc0f4039a211335b8270c00",
+        "flow": "8427457c5173956f09b350057f8d0094bf1e51f267a0c526549a8ba783ed17ac"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "02d3a750f28881a1c057f116b282d2ebca9531c95869a85dc28e2708573491d2",
+      "extended_productivity_sha256": "812f3c5a5033d461f23da65df022a2114ac22ef716b528dbde109b2555c0bb37"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 2007,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 376919.0,
+      "arrivals_sha256": "9f7e66299a3d61216be3ab5ec758bdd4c9e10b62c32e2d51b72ace269a4a27af",
+      "productivity_sha256": "1ceb0d84348013df858bfb5b96b27e379e083b8ba48fe2f22c28d580400ccaa8",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9018276826951122,
+        "stage_productivity_scale": [
+          1.067047649230974,
+          1.0429803823927906,
+          0.9275653854140956
+        ],
+        "fault_factor": 0.5931204529766003,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "04b457390e453569370bb95314954f9e277ffb07368a441b0a44de2b123829b2",
+        "pre_queue": "0b0bc6cae6d4136789cd9da14a2fb167535b72fb2a2554a1e382da103a74f27d",
+        "end_queue": "3a1c13883fd99ae53c71438e5714d689217d8cf133940b5d1bb466346e6e8ca1",
+        "flow": "d92cbc02a3905469582395d0478d0bcb0b102edc72aedb37e7494220f10547bf"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "d0fdae14a8aeec70cb8d9cb352ac428e59e5730da2a5ada095c9c67b5b5e1609",
+      "extended_productivity_sha256": "06c22fb72c722efbec3939a5f189b4725e7689119463be7916c74d3809de32d5"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 2000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 816634.0,
+      "arrivals_sha256": "9ce61340d4cca99868183aa459e9a8006e91fa2b5d2c2d4239862242897f04ed",
+      "productivity_sha256": "a05c4586f082decf081023cb690c6768b7a31309b283dd8906b32a1e73a0d089",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9951692250474419,
+        "stage_productivity_scale": [
+          0.950206722988934,
+          0.939103295342077,
+          0.9461715136024069
+        ],
+        "fault_factor": 0.5742907870148679,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "e1ad4c8e6f85506efcbaeb4e606602596b81e81032881de2e066cddae3160cb2",
+        "pre_queue": "37aa283837a67c0b4c367eb4166fd99f0b46c996f7e13eafb7af8d5b9d34e250",
+        "end_queue": "7f8fde4615a9d3b87b0c865f3fcc72b33201e61024047a781313316ed4dc037b",
+        "flow": "be738eab268a0112b751fbc31ba525d1944c989bfdd1a092f65e678d14a57255"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "5abe22b81360e0ffb4952f17d3b1d9392eddad41a4cbee16bd7d1289043ac2c3",
+      "extended_productivity_sha256": "1be5079946302d0c1d746d7b2b88f46df3dc2f43f10c6d959047431f202e5a88"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 2001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 783510.0,
+      "arrivals_sha256": "275738e7bd62f78b8bb0c5c28526b941c11511c547c4fde71e0a7466974dbfbc",
+      "productivity_sha256": "1e53edcea41d69b7183ee95565d4cf8e4a435589dde2f34a125b3a45d3bfc3e9",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9464886111187248,
+        "stage_productivity_scale": [
+          1.075491170896333,
+          1.0132037811504662,
+          0.94524414157773
+        ],
+        "fault_factor": 0.42925103023227934,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "ee84de0fc0fdbfc4eb7036668035fa2553faa76c3646a5a3896a978770e27f3b",
+        "pre_queue": "e94b8ee38b01a0fb0ae16e6200b2f2bb8c2ccf48acabe2b08a4476437f5ae422",
+        "end_queue": "865f1735952a61bad6de689d35652600dd39f7686df44b6f216c941e3784ad96",
+        "flow": "675794062542257e9115d967d3689768fb811228e23e361a42b29cec6db46e01"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "4a49894271358681561aa697270f1f68ae1b44d4ad0ea2a1435f9cd06a3c0867",
+      "extended_productivity_sha256": "b0b983d7e7793a0710e5a15c52991f89f08d0cbb46489961d4c270938e756ce6"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 2002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 864981.0,
+      "arrivals_sha256": "b23d79d021e3202f89e0ecc506e99ea727dca9c9287d7b7839b63792264e23ea",
+      "productivity_sha256": "5776fbd2ad2ae4b45b9e4bbeef46c9f990287c85f5139f80ad91106956ead049",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0440708797456202,
+        "stage_productivity_scale": [
+          0.9989312808299697,
+          0.958030341321674,
+          1.0379516041580956
+        ],
+        "fault_factor": 0.49453735600871623,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "e3ef7b7aa1954bec327fd700a5fc98e97304ac9919bbd0c18883d59b53789f4e",
+        "pre_queue": "e5491bdf038aea3062649764a5d5ac028ca8ad174ad212adf8012fe20d3bb9d0",
+        "end_queue": "50dac84ffb5fa46e3f3a3d010327dfba0c24b195f5bd8a36f0e418fcb57acdcc",
+        "flow": "adcd8fd7c6f43ad0b8e54d6b49961a268d325f0b9ab20533e022ccd67af507b9"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "99fff0ebdf888dd795462d92984aebc5ed6058f152398bb097140d0bce528fb4",
+      "extended_productivity_sha256": "5a789cd88e64cc21e559c57f8f846373e2c060f08196c1a683d351a5800573ec"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 2003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 771252.0,
+      "arrivals_sha256": "8987ccf9e615118658fa24865cb7e550deb7055a7247c537d443f9014f4501f6",
+      "productivity_sha256": "e9c553b2813c2ee5c61d9deb04712db1ec49943679e5a92ca372f67d4717df53",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9484290422462719,
+        "stage_productivity_scale": [
+          0.9863458123515982,
+          0.9991840417468009,
+          1.077281646635722
+        ],
+        "fault_factor": 0.5152956561886775,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "ebfc2107fbc56ff6130b2ba75069ff17b6cd1b19395a20e1c8e34762a32a2516",
+        "pre_queue": "7cfe5d91977044fd647d43fff2e1ad0e8afff67b95a502443261786f4bac45e5",
+        "end_queue": "7419dcd4df0c048bad6afda74b53187248cb5e4371f12b57aefb9cd84c31b43a",
+        "flow": "b9adb1fbb82ed68037b380e832d9e76015207b4a5ab2e776ae0a37ca14550bc3"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "60542556652debc02237f9a22bab9060d2fd0ec9d990cd55f9d63a587748cb01",
+      "extended_productivity_sha256": "fa761cc10d174b4538a77a7d7472b753e4e8aa56b76705a8ab39f59f0bfcf539"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 2004,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 768470.0,
+      "arrivals_sha256": "502334d9c51350e8b61e01a8847ea337b292ac7a1217ffbe4f5ce691c92a1e6b",
+      "productivity_sha256": "9edfd15fc4957a02883339089a5623dbdef100f2ae74d6d71f048ee45e9c3b19",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9411184376933516,
+        "stage_productivity_scale": [
+          0.9841851339768187,
+          0.966677448887015,
+          1.0556873238763305
+        ],
+        "fault_factor": 0.4563141181032042,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "0ccf6cfc6e6311706c9c242cc0bc7a23a506efc032c5187cca072fd701961ad9",
+        "pre_queue": "70197e9e8217f9882ccfeb30a2b4badc04d899bea30b7005b789a8bf8409669d",
+        "end_queue": "176d51c812548ff47fd42f6a5f537c98418d70ebc0adad91419e1ba5d01518b6",
+        "flow": "45f40abf9262e0af23a76488ba746e5350cad49da01e9e723fba37f49d519c30"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "30143d46132a322bd271fe364ebd50fa05dafc968e53d187b99bcb6679088f47",
+      "extended_productivity_sha256": "bee41074b0e0f929459fc9d5651559aef5f6a44d9be4277ff205f0995fa4fa04"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 2005,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 819501.0,
+      "arrivals_sha256": "50ad6f9e0fc42c67b96c42f2d9d56ff3e1043b658a408758119d3a7d5ee1ee7c",
+      "productivity_sha256": "0294bb77ffda9e38939e0aefc8b43598df99099b7fdb69f9dfcf2c054d8aaddf",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.009035884929751,
+        "stage_productivity_scale": [
+          0.9646229302409902,
+          0.9950617939785842,
+          1.0484710386446048
+        ],
+        "fault_factor": 0.5793131649277754,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "f3135844ad7d4a2223be61882a9bb8f77bc7198a339a400f954c9035be124beb",
+        "pre_queue": "f9a80aeefaac6d35c01beca3c39926a5a0eab97bb3a2273333f087fdb83852be",
+        "end_queue": "f783695684e5a84e4cc4a548095a67535b1bc3ce35352f1e3dbcd9151e195375",
+        "flow": "1ad2061162852d834ef1ecca4b3e9be4890a9150aa69607988cf38aa906c7adf"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "43de38d17fa9cf3b4cf76a1dbbd267c6cdc875d4ecbe96488d9e18a698a23111",
+      "extended_productivity_sha256": "e2d81b56097c05e735201b20c61248ffa44ae9bedb8d69fa2e0c3ca36fd8774f"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 2006,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 756599.0,
+      "arrivals_sha256": "c136c0c660a947935589e7c6a27c8cd27c9179c8d88d09ffb3120e071c546919",
+      "productivity_sha256": "9096b931c29688ba9b450aca7ffc6a0d98917180c0eda6794cc74fe72e92729a",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9037807388727555,
+        "stage_productivity_scale": [
+          1.0191383394767874,
+          0.9772518355673621,
+          0.9562073405113318
+        ],
+        "fault_factor": 0.6113071548561734,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "de4e4ad0b8e4b4716e6467a5665fc3c833a53894eb06e8107f298f3d3c3ab395",
+        "pre_queue": "70bb37f43a72afc5c7fc17e80190604949b50de44a676c7370d492d54786a9fa",
+        "end_queue": "7229c29e4c37e0b30e2a1667d8ce3cb6987abe1f77bd42822253baf4a2749420",
+        "flow": "4c3ae7b12f944644760ebb8f51751ea86175983aae4e7141b086c67e3179f582"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "fdf80a4cc7124e82c0b1e459af2072ba5871dfe1735668ab46062d2fcd155789",
+      "extended_productivity_sha256": "554a87c90968d8bcd8a4b598fbf1d6acf1e82bbba7bbe5f3577519a5046a7cba"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 2007,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 889739.0,
+      "arrivals_sha256": "f136240932bae6eff9663fd25778d06695536c365867c80d86ac683f0408677f",
+      "productivity_sha256": "713393e915e098827a1f1a313528eff90e8766f7efc937efbf043fb2e27401d7",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.08204884866113,
+        "stage_productivity_scale": [
+          0.9868818869703608,
+          1.0399134921569904,
+          1.053616046747148
+        ],
+        "fault_factor": 0.594741248016917,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "8d3cad666ccd1ce3425a4435f60a2c592c0c4084b798ba7048f28a2df5a6fbec",
+        "pre_queue": "4ab421c39b141019bfb5a19a84fc89149ec0394997ab84323e8adcb90effcf7f",
+        "end_queue": "3a7bf3b4b5cab98f9a89c8e165328310814f17bdbde10b0cd4c1a77246eb5d01",
+        "flow": "ab2a7c7edec329470fdc78f3357da68c7b26316f718c1759eb4ac21b3dd8fcd5"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "a1ab18c10d1f3bd25a7caa859259833204515dfa8a4c960a32fcccd3fe9f4d7d",
+      "extended_productivity_sha256": "829400f2602e10fcc08f439d83f1f08da227cabd8d006da45b4b289483f356f9"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 2000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 904952.0,
+      "arrivals_sha256": "8fc9bda189b0445e584a68fdb0ed7667862b827e3f10314ebcd5fcfed3af44e4",
+      "productivity_sha256": "981bbba640a1c4bd0bc00f4cdce0402c4da5c6c1366252db2eef044b925c8eb2",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0916513932879877,
+        "stage_productivity_scale": [
+          1.0753024690098725,
+          1.0034348390324723,
+          1.008304881133005
+        ],
+        "fault_factor": 0.6005244962798746,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "46e2387f06c480bfcc5fd16878c48cce9c9c9442d3ca89117dabe4f93a6c1dd4",
+        "pre_queue": "a041b8a67707c9bcc20022f62de748c0a3997a4cd1c2bb41e3e8db615b5961db",
+        "end_queue": "7866efb4ee5ffdc23a1d09fbf0dd5c429617decec892d3a02ae4fad35d2f455f",
+        "flow": "61602e8f7bb0a13f8c6062d8d8255745ac0e14c1e55f538ff191c232d06a9417"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "dec029a9333e96422cd22b5fb3d4b4d41ff9108f900cbb7a1a8c3a0c99722688",
+      "extended_productivity_sha256": "8a3f0ec8f4b6dd63a6befebc76b4842777529a7e1253ac693c6e279cc4bbe8f7"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 2001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 839010.0,
+      "arrivals_sha256": "39eb6be401f0fcc4e204fc0af1788ba6124281d0addd2afd35a16e4b8c9e6843",
+      "productivity_sha256": "491dd87960ede6c689719ba6e486845991cb0bafa08f49f41846d5620d25ce92",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0111044790911492,
+        "stage_productivity_scale": [
+          0.942771276833856,
+          1.0308650497366045,
+          0.9203975141454599
+        ],
+        "fault_factor": 0.5615441445283823,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "46e4d368030b351d654534d6d0270ea799a860931eab0d5bae32a085451c4967",
+        "pre_queue": "507c9d399340cd97b79cb1dd0d5efbe6f95360eb7ffe91d0e1cb938d63dd51bd",
+        "end_queue": "03e9ee65d32b2e33e33bf35212ee958f61da8b03ee1250c01cf08054c2fde52c",
+        "flow": "fe4b2c75ecba02d5699630eb90d46426b6060b5b86b95b7a0b5ff7e2ab3c7fc9"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "c4c014d6d94f38983fd8df71a30201a5f0490e70ea8af1a0477d64db0dd0941f",
+      "extended_productivity_sha256": "f444cf2ab6d9afa19580c6edd5d8deb691a8f044b96249e247f001406a594a32"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 2002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 754210.0,
+      "arrivals_sha256": "4892e9bb0ecd993922ef2aae3e243ae200589424e85451fe9445bb060040bc11",
+      "productivity_sha256": "fe739cd0750b5ceb0d1a3b3583cea4e9d3fc835ff89c205acb4306402da31e88",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9123812248520636,
+        "stage_productivity_scale": [
+          0.9561544620874716,
+          0.9450294911155804,
+          0.97859642575557
+        ],
+        "fault_factor": 0.4845728499498798,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "721f36c08f6c39842f0c703313396eb3722203a608177df32e9b9735e0669ce2",
+        "pre_queue": "dc06df924a956cd114cbd81868be30b8caa066700fe910ac91df74610db31f5d",
+        "end_queue": "a9b2ec34ec93b586d3c2c81f9a5954a2730b39a72e53befe83066e7c0969c1c7",
+        "flow": "01905946d8c9b3f0990162f2b580891ae60c008be23e6ffb8fdb83d6078d4110"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "4ee05d2577368ec77062b759029515698e38a581fa1a1c52088b7e85a706bef7",
+      "extended_productivity_sha256": "e8c0e0115899ce49942ad8d6dcd9143d8aa42dd73f026b56c00d0018827cb8fa"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 2003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 762510.0,
+      "arrivals_sha256": "b5ded65fd5c4b61568f0d320fc4e99938038f7fb3a92d2475b5a6002bc02ad73",
+      "productivity_sha256": "7d2c7dabc10a09305f9bbe55311c18fbb6f6740cf1f683075ee4e5efe6027210",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9293647639673147,
+        "stage_productivity_scale": [
+          0.9611662601692967,
+          1.043170970705644,
+          0.9679677048732479
+        ],
+        "fault_factor": 0.5512498421531287,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "a82967f98d67ce7f82215128d393896d0c6e88bd88910dacefa7c77ae5ddb1e2",
+        "pre_queue": "8fea211d41e1e2a826545b3055b0e06c532578a7401671fa83dac694fce79a82",
+        "end_queue": "cf4e923258520aa2295697cd17d8cf5615a63922ad3883f169a079acb69a4524",
+        "flow": "919ef7bccc2009fc26979f456bb80e72a51fb02be5931a5a8c5245998b37b261"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "17c5de1ba0755eb7bd97abc9c7183d047731790574e50a476728034ce6684fa0",
+      "extended_productivity_sha256": "c85c7533543ce3adc68b4d0202ad04edea8c952a91c7061506b9998896f63da4"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 2004,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 892534.0,
+      "arrivals_sha256": "79ad683823ce4e4166858c53bf03a47059e5b026dc5aa13bba32af3da2bfb13f",
+      "productivity_sha256": "d391a0a4aaa16912f3db421c674e4bcf9b249d4be8a3150c55c2149d4dabda21",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.090783819907786,
+        "stage_productivity_scale": [
+          0.9201453726009633,
+          1.0139825895719627,
+          1.018890927541312
+        ],
+        "fault_factor": 0.5399194927773974,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "931738c5752d35892de6898263e0c51cb933710bc27bcfbaff6ec1a801db4ef4",
+        "pre_queue": "1ac9cfed4dd9e138d7f0de958e1a05749483998556157c06e035253fc1722d8b",
+        "end_queue": "c48521b3ba14f1203accbba1a698a2eae1918c6261b4f1e6b4da429de4f1b4e2",
+        "flow": "06374a17712fb4b211210155d9885cbe4b054357930d967208a3f7385494bf64"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "a56d10ed7161d101dc2c34b6a24d4b38cf5410b7322eb93483651fb142733009",
+      "extended_productivity_sha256": "07bfb4f5028cf554031e62eeb0fa9a273c25e3f62fa4ea8a46df5f0b81614cb5"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 2005,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 769689.0,
+      "arrivals_sha256": "35573e090757b97989678755b1f48974917cbab9b690ae16fa9382f19ea31764",
+      "productivity_sha256": "bf52d4fd2223c91f9b8597602d512194b69742dc9f0ceb20bc5c027da0b5378a",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9414627160551168,
+        "stage_productivity_scale": [
+          1.0460582365632518,
+          1.0745073555816664,
+          0.9275846353060601
+        ],
+        "fault_factor": 0.5928210710945953,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "810f51be9e6864f0645324e39a0981618f43a4c069abd21dfe83dcb46a852086",
+        "pre_queue": "5a10c94d7448cb024fab6e91952712c057bff6823c06eb938fcc2f5ca5c99cef",
+        "end_queue": "9a11d882d240bd1f95ae337bda7fc753cfbb08f8f9d7487103b212d6e6d056fd",
+        "flow": "11cd4fcd2402f4a1e113ac594ed799d590aa9eafec158e24a7be6e30357896cf"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "f247618c09866043e6744a119dec0873c9c84434d5a7af2dbdf43305da2cbc02",
+      "extended_productivity_sha256": "f2291b2be6285650fc498d3773209238b64bbf6451ddb5051936ea2b4b3a65b5"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 2006,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 746871.0,
+      "arrivals_sha256": "e65e56b8d4d7a956f59fde48aeed2962161a2282835d0bbc14043ee3fdca266f",
+      "productivity_sha256": "ba1967280bc50336848e81503073d6299e90161fa690eb94fd5d8141b6bc73ea",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9184041041001403,
+        "stage_productivity_scale": [
+          1.0452776960759318,
+          1.0639806806997025,
+          0.9464190716049226
+        ],
+        "fault_factor": 0.42493588694506335,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "a4a2dca816cf14b41ddb40fe89a4452d319851ac36fb1f5abf0b9265309a3432",
+        "pre_queue": "42a93d323c16c1c70440733973f1bd63ef4b728ff0dad1ee2a44d030916d7856",
+        "end_queue": "35727dd5a5be75dbc8eabdedabfe117e8235e646a20fa128c2f24d5fddc9066f",
+        "flow": "87fe062759ab73fef0759b7cd5d8a2d299f368ef44081f9579726d89fc372eb4"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "fe2eed8adff3619cef5029d025bfd645f356850a3d391abd8263aa8e08f1c32a",
+      "extended_productivity_sha256": "ba4f3452d29ac28e5418c9f71eebecc12798d0312169fc002edb7b1cc5cd98f8"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 2007,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 846123.0,
+      "arrivals_sha256": "6d315f1b306e401224bb1d92a9be39017a43acef075e1b6826499f7c758c5192",
+      "productivity_sha256": "7c49489acd0d3ae98f812773196211e2453539c31fd5316da1b6c21023027d7f",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0271680774110166,
+        "stage_productivity_scale": [
+          0.9658655618558772,
+          0.9233221121137508,
+          0.9583974968326059
+        ],
+        "fault_factor": 0.4579521011367369,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "4711dcebf839998f019694ef479af6b75981534c459a1f399275fccbd58a8ab0",
+        "pre_queue": "1e6ed43172a65515a4a9406961fb8cfad1ef34453da48cc2864171d0f1754a93",
+        "end_queue": "bd830318007ddd04edf22b3cf528d253ef1f16c4e15231a0407dfe2c880141f7",
+        "flow": "b7a96f09870c9938e97c943e056d4d0c1d0648fdaed69f85c27f6b6f1a3cc084"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "6d136ae3d05e8c1ec9650d097c91e64fce69e36843bce1ba9e3571ed0aa23096",
+      "extended_productivity_sha256": "acae9790a227b4d613aacffa34a4f0b670c1e5af6bc33db5060a94435e8163cc"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 2000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 713394.0,
+      "arrivals_sha256": "2862e036d09806c347d8a4dd0bf5d90d1ed8bed9ad933f9b654d91b3e3146da9",
+      "productivity_sha256": "bf05cf48ba24f7a06352f5a742c4e00c2a08fd4cb3e5abd9f016a42517d3df6d",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9092542585337994,
+        "stage_productivity_scale": [
+          1.010634501098783,
+          0.9423903060883317,
+          0.9346867608409867
+        ],
+        "fault_factor": 0.49050962896965733,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "c5313606fda21a2e3ac98690eae291839e61fb02a904c9cc8266992738893115",
+        "pre_queue": "fb3349b9158176db44719da879f7532b8d1565988db6d412b5ba20698985443b",
+        "end_queue": "13dcc3fdb43c9c909bbb2728227b1e6a16e257aa16b3049320b383cdce9e22a0",
+        "flow": "100cb2c2b5efed4a0cee85b5bf8d6a43ce03232e44525de6d2452e872c15aadc"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "a5c276690e23c4253c0b34eb90488b27e6bfee1f3ef5beaf9b216c8c33f18ab0",
+      "extended_productivity_sha256": "0563256ffa4b5c40bdf3e467aa7e9bf3d72fe72c4b7695654a948ad80805a531"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 2001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 829261.0,
+      "arrivals_sha256": "eb3c502dee5a1c6ff4edea5989476f06b640b592b75868079d389806acc46dcc",
+      "productivity_sha256": "2f4df6cae5b4c92542eea40e8585548aece7fef2bfcdef55d34d14e829fc5b73",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0503341050444586,
+        "stage_productivity_scale": [
+          0.9883017351678695,
+          1.077023291407904,
+          1.0583147729810372
+        ],
+        "fault_factor": 0.5247772811713279,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "8e3a27476304bee3b69b3ba9bc679f327e7511efae13ee92bfdc9660da35b529",
+        "pre_queue": "553dc62070f7663d280b4ea768213d39b0688004e9882e856da8d610002f3303",
+        "end_queue": "2aa1454457ed43f84ca289c21b7752728f4838e39528bb8145d3043d1525f3dc",
+        "flow": "7fb6c17c9705a69772d74b547b0f647599e8700571eee8b931702b67a239bd8e"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "4355550edb932058c76ff16eca925c1e53ec0596280ed194186e91b15cb3d613",
+      "extended_productivity_sha256": "d26396bcf60ba1d715f00071424462b2c88969d6d8645dbd09525debe6193301"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 2002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 840222.0,
+      "arrivals_sha256": "68be657fe51fa44b6cfaeb826a1b59478c8a495b96aa351e7e76fc17fcc4c21e",
+      "productivity_sha256": "683e6aaa73102a3028830dc9c27875e1c54b304046b0bfce32c3fb2738dbbf89",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.056059718228327,
+        "stage_productivity_scale": [
+          0.933568203980027,
+          0.9576929144858913,
+          0.9737955926894107
+        ],
+        "fault_factor": 0.48261140394226526,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "f38b56e9aa01460d872bda4e5138584c3195fd437c26c16096d19f8b04ed22cb",
+        "pre_queue": "1f928b358039fd5613a91a83f2cde0f0c68c9ad494ad0be2c5b93d1bd8723050",
+        "end_queue": "0f60b1cd2e0d7e8e80c39186e81877615887cc8c9a82a9407f106475e90d219f",
+        "flow": "8f4e47a6ef03c7a63242fd436290c5edfeca725aba1a923db5d7ef18ee2bf8a1"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "549d2a528e25f2c263bfb0e790c26373d886a075f7e2b09436a8903c3a0589b6",
+      "extended_productivity_sha256": "f191367b991a9395e599afeb31e5b48625eb5fa294031c3f6bc74828e9e8f4bb"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 2003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 811698.0,
+      "arrivals_sha256": "4c757292b63dc59c67c9fd177f4724c53b2ceab44538f8acff618fe45c0f4662",
+      "productivity_sha256": "fb060c21fe48c40f7d095b04d10b8b51bf3e58cce5229f4fca43065134c1b88f",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0079173282119072,
+        "stage_productivity_scale": [
+          0.9420003638217509,
+          1.0268823083783136,
+          1.0273891697292354
+        ],
+        "fault_factor": 0.43291582573946774,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "525e34dbff07f99d3995872c5821a5fcbb762ac049ddb9028452c4449689b136",
+        "pre_queue": "9daf18ffdf2b4365076f2d6c89719bd6e2f1fb6d15f40feac83879dd265599a1",
+        "end_queue": "26b3ee6f3bbfb9ab35eae3a817f091f8bd3e32646817d66272212d88670ab041",
+        "flow": "347ef3555205ef57ecc55789cb846d4c5e4ea2627945b019c0a3f9fb0adcf379"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "5aff99f0607ba19c3077f537b88ef22084502dc58adcc25e1a2802e517731ac2",
+      "extended_productivity_sha256": "b4ba0a876b97464a4ae5037d2ffb62a14958e61db53b7d1a601d976225a4b3dd"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 2004,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 752963.0,
+      "arrivals_sha256": "0b7fcd695966a738e6a3a41fe06e6ec6d8756fe9be626a65491e236de6fcdaab",
+      "productivity_sha256": "d033d89e314fc82f0e35285f2530a05e0beff418dc18674f9a8f19548aa6d70a",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9515706028138621,
+        "stage_productivity_scale": [
+          1.0438679831143782,
+          1.0012932029404125,
+          1.0157374405355657
+        ],
+        "fault_factor": 0.4642489878677919,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "e560d2e3f774d5689b91d61f7959c643d16613a0ac9957f2ab7f99c414398c3d",
+        "pre_queue": "dba6a69b578cbfbf5d32e84cc711ad60a358589863fc5567bafcbb307562c3d3",
+        "end_queue": "372775f4bee7707f5a9912a42ef8f6ec62b81d143db80b440e25913d713c605f",
+        "flow": "a7b6687b184be3c6862a9fb7bcf1807c1427d598c6cd3fe46908234846f3d051"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "bf60d2c64388b9fe7354ba7890eaeb2a148b2fb50cb2e0c43875e68c0c5ebb17",
+      "extended_productivity_sha256": "225429b7c8227b6a0a05dae3e77658d43fbaac6d76899f4d087f834520bdbf89"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 2005,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 799670.0,
+      "arrivals_sha256": "bedc78a50bc247494433899bfb2842b355ad15557b798cc214a3b7e5042652be",
+      "productivity_sha256": "ca3ad6a0b8e81e2238d80e5a471ff9ce6c6f9ce34f9d7959f74b360ee0c12ac7",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0154133056653303,
+        "stage_productivity_scale": [
+          1.0298809902950326,
+          1.0301774858216823,
+          0.9354441506947057
+        ],
+        "fault_factor": 0.5945530432863642,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "a21da8d3b4929c974ca95e3ad0495458a0c0ad93d82de4ee44f57e1249f5b7c9",
+        "pre_queue": "2a1d0f81cc51cf2ea7b6719441d4ca22fd3d5280ba364b7567d1703370f1a4bb",
+        "end_queue": "c3e91d0c7926d94b325231721636594a9cb7a22eee30c9a07eb41bcbde337a0c",
+        "flow": "cf3e64cbd952c62f27893212d892dbcdf38f3783de16dcf653ccbae6b8214528"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "5c3b8781a181f277d95a0cad8758d3d54764a4b91f3e216a6716df996cee37dc",
+      "extended_productivity_sha256": "803131b6c7d2aa191a937d57d798f19e1ad837110305074e4af049c72b785426"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 2006,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 793432.0,
+      "arrivals_sha256": "47baee531c053194b3e360597189d7aa72e40e8d4afec7ac4dd2de00bfeacfef",
+      "productivity_sha256": "3b0107d1f650588af211baf155b3e28fbeb64e6282cc4b8ecf0eab2c5d7aa443",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.011483650718289,
+        "stage_productivity_scale": [
+          0.944393046838938,
+          0.9457776256463485,
+          0.943569067262442
+        ],
+        "fault_factor": 0.6194104198366889,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "706507b22d766d934c6324746bbde6399a5b5ce6667db67bd25276d8416ff15b",
+        "pre_queue": "3e7cdc3fe17d97193b248a9f9bf704ceb4cfc1e2f27edf9fb86de7b4418cf7fc",
+        "end_queue": "2f7047abe7b1c2a0391b83597c44a705e22b03c0e8d1fa54907d1a1181704eff",
+        "flow": "366f41ab641419314aa4f4fe8f610394952d1d0eee5636548ea5b729c6bf9a7d"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "740bb74a77a4eb2d3afb3f01dc2458d63c1b880e9b82dbdbc56e32108a3303db",
+      "extended_productivity_sha256": "6de0280f96cc616d52b71a789a340f37e03140fd13d328bbbfd381c53ffa1fad"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 2007,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 723760.0,
+      "arrivals_sha256": "f444d80e112fa69689b38af7377374bba0d91a10d90eb6c4a2b9e80596212198",
+      "productivity_sha256": "e0d130ccd401a6376e3cab492316c8f254bb483b27e8a4011190483394978bde",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9040978163409322,
+        "stage_productivity_scale": [
+          0.9730321767763902,
+          0.9311444116428518,
+          1.0269022632480083
+        ],
+        "fault_factor": 0.5829936895698047,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "5c9627a45bff5777c97ac84f3d517e498ac074266c8c0ee1ee34c82483061c93",
+        "pre_queue": "84a64bb7831bb7e35610379b6c4c476b0e09105b038b24fe22c63e510be0c276",
+        "end_queue": "d34625b525f83f71a29899f11e9446b8daf2d78408125f8dbff3214c9630da07",
+        "flow": "a3e9f25109a0b7d267160cf0141f57aba6dd53c274032ccbca902579c67be0f5"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "121ed91025f51f9a25d5f630583aef4d4875c834c37d733e2721b3786cb77049",
+      "extended_productivity_sha256": "36427c6acf1ac69b3c59aa008966925fe6002c488d89e77c128e92ed9e661d67"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 2000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 740621.0,
+      "arrivals_sha256": "37ae23b462d66b3318c97d851b28513efd831b0200bb4f7c52d4ad5baa97ecb4",
+      "productivity_sha256": "b09f3fe54ca39e8bfaedf64e86e85acec771e5a8dd8818a342b3e9d85826be56",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9733525569796688,
+        "stage_productivity_scale": [
+          0.965368322473526,
+          1.0027495508663098,
+          1.042651437524283
+        ],
+        "fault_factor": 0.44560525289975833,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "61ac99c20a545dfadbc473929e23fc41a9ab6244d1ad8827e562b4b122cfa8be",
+        "pre_queue": "038d6ac97ea1736aa4a52b536d399c19f1e5aa2fd1e73c8645db0d310928be99",
+        "end_queue": "ee2d1cb5deeb17e0506c3dbaf75a547c6d0409fc60f843c6c73a727af3b83bdf",
+        "flow": "9b04ec1e5e54f55151a9be8fc8e41de9bb6aaa158b68fab293babcbbb72778ae"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "ad8fd102ad495aac61fbe2157e88028a6c5f7f0aba7fef33f2642c6ff1b258f7",
+      "extended_productivity_sha256": "540fc77bfa36b988bd791417ffe079b9fe19865b664b2a43eb14b0bf6677703c"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 2001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 820706.0,
+      "arrivals_sha256": "ba24967d837142105f0853d42fe064db443cc9a9683a2861fba1389a33f50444",
+      "productivity_sha256": "daf07888a96046fb0a42e2b84059a73e8f5604158f5016bc29b614e8873bcd70",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0657109033152525,
+        "stage_productivity_scale": [
+          0.9258416622329563,
+          0.9502112464782192,
+          1.0415821920503496
+        ],
+        "fault_factor": 0.47743371006156665,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "e32211a29eecf80aff8a7d2ba38180016916038b7bfaf81e28702b44701257e5",
+        "pre_queue": "bf1832bf480b878bcc52f2a2e418989c16eea62a7eeeceb1eb89a971d2363f38",
+        "end_queue": "7919bc218d201b8a882b457efa78c62b06db8a65d1d56b9dc382886bbbc11350",
+        "flow": "1cec17fed4122b4f0a4b2769d3302177256575de7a3d9a865bbe409be407ff4b"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "abf21d59acd13e69cccfa5a8cd731bd5134c3d42969fe43f21720ee3f3b087ca",
+      "extended_productivity_sha256": "b26f4f33fa2d51ee5ce27b617a319d10a6383a4f1444a01e6d3d63bf534eb602"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 2002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 789882.0,
+      "arrivals_sha256": "72482b22d696f2e62a676e169f1442b1b5afce0c10ea58b12b932b3b67560119",
+      "productivity_sha256": "ee03d030cfb00e79871bffffec54b5d796a6ac60f2f15d65d203d87d545f0253",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0384444124159258,
+        "stage_productivity_scale": [
+          1.041890124837409,
+          1.0453744535185305,
+          0.9797600262671425
+        ],
+        "fault_factor": 0.5470387355746477,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "7245e9e2b2d20b0fd2dbb02422a3fcb54e7c26677fd71253c52858676d12937f",
+        "pre_queue": "2d09ccc339359f66273fb9d711e2a6172437a03efaf41ee36b9c79d2438279e9",
+        "end_queue": "276ada7155d236816fdd830909d8ab23b1f73768804d2e784346b81e40393417",
+        "flow": "bd88d60db2195725cd36402d57fe9d50c3cf493211fcb5ea7ae365d23c9173cf"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "e060000c566c101b952a5ff932836299f3670e3c0c29df67d7b0dec91f1c69e7",
+      "extended_productivity_sha256": "0194e0f83d47b229ee7fb2db061efc9b1c5592a8536b984b1923ab9d820008aa"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 2003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 789130.0,
+      "arrivals_sha256": "52d104c04dcfadc99846d343b7ee10d976e32edfc10f8802f0db7780dc61dc8e",
+      "productivity_sha256": "a21d2e6338f7d83b3ada78ba006acee00da05d27f4bb3cdbdcea09c62a3397e4",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0234692158427756,
+        "stage_productivity_scale": [
+          0.9298097268744852,
+          0.9900579477250291,
+          1.0744307028085214
+        ],
+        "fault_factor": 0.43653124547126265,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "ed9bd0e93429440ebeb9a1e18b313167f8a90bde32cbe3bdd41cddc6599fcad2",
+        "pre_queue": "df4fbd47bc0b7e8b3e7fc636efd7fbcb8dd16dfafc0d6e163c97501e6f40d665",
+        "end_queue": "3d2f718911245ac6c11f23650124df9390c800ae201ba3f8443cd066d88ce932",
+        "flow": "3328489478f9f1b3573a377381f7712d216e9de34760082b905c51043ae8ac81"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "e177d50415963473a6b7ba535b5699df639ce673009412635171ff131c8c7886",
+      "extended_productivity_sha256": "4f65b768ed6c4b50aa617da72db4934905e86f6e92b8127682a8093c73c02654"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 2004,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 812733.0,
+      "arrivals_sha256": "3135984319ebc1ba963717b985015be2df0f345d611c03df250c26e800d896bb",
+      "productivity_sha256": "71102076bf43c1ccba48653e80112e3dc3ffbbfc6adcc050986e26c3afa10063",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0521609411511745,
+        "stage_productivity_scale": [
+          0.9798248754986016,
+          0.93284746492346,
+          0.9663206130318757
+        ],
+        "fault_factor": 0.5882707754834517,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "0abb5c817457975b6717211bbe5febf4c6b1810ad5332cb6b705f27bad42fbee",
+        "pre_queue": "6bb502fb3ddec5b786d51125b0083ac3ebef80c4f56af8150f81b3b19bae9339",
+        "end_queue": "8c1691cab0b3a52e73be027c6094342edbc9c312502315f64472f7bdaa94eebd",
+        "flow": "56938bab074ff7f39d863e9ee0494750d172bf476bccdc24ce4eeeb2c58d8bc6"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "0e6b9967cead560ba0fa296a1cecd4423242615b705880e4508057fa48fb96d7",
+      "extended_productivity_sha256": "d04bd7588fa2c864ad87c2b16f1dd042a62a8150514570c3005ce957688e5e0b"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 2005,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 799922.0,
+      "arrivals_sha256": "6ad26790007b7806d63c0611b30212e4ca9324e2fd98d853f19027227a5c637e",
+      "productivity_sha256": "8ad5e0b509937c77611c764fba8c6f9a28cc210d859a57479f621be55ef2e57c",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0404564591204664,
+        "stage_productivity_scale": [
+          0.9510494443054246,
+          0.9842835051820519,
+          0.9910940548066841
+        ],
+        "fault_factor": 0.4852280540303798,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "3018e8fc9f25365722ab743ba93615efda3279014e96ac328a1cd2fc152b3fb2",
+        "pre_queue": "85b92408027be9cd64f336eb27720bad423058ed13e67e44556c9a9f1b479856",
+        "end_queue": "75180edf64be4403b1a8a3ad3861318ac5e05c44d38953c270f8874ba449a4dc",
+        "flow": "53016bd3165f46352d4414d4bfe0f2bd031b1743205d3b3613122496dfbbc249"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "24e18e3dfea4075a975fe79030eba4424b8f54bf80398966a650e82c7758eea9",
+      "extended_productivity_sha256": "e9fd13378120b5a4ab59b78cec6e7cf41b267b81d7c7c821a42d404a1e4c282a"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 2006,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 737011.0,
+      "arrivals_sha256": "8fdeb28b081a3feaea8c937b6d41414db66030646caff3b1fac370e0a3e88e3e",
+      "productivity_sha256": "c14b7f82a829cc7d5da213830700d7c5f1a0e085d5d6d34eb9d20d138327b6a3",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.952562428427175,
+        "stage_productivity_scale": [
+          0.9443919431240414,
+          0.9840179884196737,
+          0.9874389362347178
+        ],
+        "fault_factor": 0.4664794449019212,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "c30f0bc078ccdd4c4e8e185478e988080e71a1472099984fbcc12ae727dc26d7",
+        "pre_queue": "294858304d8c1e3299272cdd50988f7b78074e7b747340fa60fcd8f2cc6b173f",
+        "end_queue": "0b4a1a2c5970689ff00ace01cff48532fba522b4d325ecbbeaff5258b73254a3",
+        "flow": "b2d03ee314a0187059c766c4c9bbcc8c29040503d61e5b796a45a340bb60ad95"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "1d4e532e09ad768d45838a96c1d4adea400cec6e653b4eb5424f23b5a359137f",
+      "extended_productivity_sha256": "a1bee5525791a6a247dbb331c4f86ed5b1c1fe91c15e66d8bc41fee5ca4fd6d3"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 2007,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 831537.0,
+      "arrivals_sha256": "e65b5f91877fefde17c776669c9e6b08812e3266e448efef8ca86e84fe8726c5",
+      "productivity_sha256": "d54f346c0387668d139bd15911c94eb4f9d30995e21336fd42025f79f1caff91",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0841871087339798,
+        "stage_productivity_scale": [
+          0.9573455918262626,
+          1.048723783742449,
+          1.067034585266126
+        ],
+        "fault_factor": 0.4877531323234153,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "b7b613981b7be552396e2c5adcbc044a4092e9be5950041a4c133291d015d097",
+        "pre_queue": "1723856b3512ce17b6cc44a2f270283dad78159bf59e43bc75720884191a41ac",
+        "end_queue": "ec0837e05e3d23d2e9b04c6bfc6827d2506ac9c37d7259c3c81c282f4808ed6f",
+        "flow": "340d441fbdd8e8b8d142ff10643694af79642938c2193eeb629406e9dfcedce3"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "689dc0ea67a34b607a86d62f2b986d733ccfcc66d2cd42cea9f1429c3e6d47cb",
+      "extended_productivity_sha256": "8271f5526b160660f0753461d3f36c927302a86e39f056cab92983f5e6cb894b"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 2000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1407688.0,
+      "arrivals_sha256": "8151710aa7ebf0b4a92a2e872d786b721aaac420038844c43c8272f6ac4aa061",
+      "productivity_sha256": "b75e58a51fc7c69fb84161af9518fccb8df895041ac2f16cca7a919273c9d565",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0085831496970938,
+        "stage_productivity_scale": [
+          1.0375190728448924,
+          1.0029576779859402,
+          0.9951896662220775
+        ],
+        "fault_factor": 0.46861038160503315,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "ca3206d8f6699884195a7eab4e7c470ff71ce9fc61d4676e19cca1ce0571e9b5",
+        "pre_queue": "791127c3bab79e9bc58e8cb32fc453ecdbb8a972b48e85b5ddcb288f4f763e78",
+        "end_queue": "31e639d0d339ade8e99668381ddca0beafbb4f8efd11e550ad7d0abeff6cd2eb",
+        "flow": "a9b55285d81fc93bda36c91ef074408e1760a9f80b8ddc15387412319f2fcc13"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "410fad7d74a6f57d26e2235a8cf19a87e3294b128a74ad26d33ed98019597d1f",
+      "extended_productivity_sha256": "b3cde03eaa8d6f892e6f0bb4d8209bcb8847cde2ac8a7412ecbc48b1bbf28c1d"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 2001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1308775.0,
+      "arrivals_sha256": "20d6d540c20c38d520ce524295b734995356545ea2ef976810619d7550c4ad8d",
+      "productivity_sha256": "ef4700e947ff2a490ac20ec695af2342908a40772fdd98b6ef03b3d212c8811c",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9358726819841083,
+        "stage_productivity_scale": [
+          0.9507592982880354,
+          1.0506380560815876,
+          1.033505890114952
+        ],
+        "fault_factor": 0.5444794282433458,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "a16da63c9f4b7af22b552f9afc333c395fa013ebd226dda6dc7e95f530672124",
+        "pre_queue": "51f67b8042fb7e2cfc668cbaa723a9a1a0d5984f8b5ffb00771db3c47317571d",
+        "end_queue": "f54a7e5a7c2aff03cc85173c73b4c3f9ba35c87a468060052ae3f08b92a47b5b",
+        "flow": "85ad5885d2f5db55e650ad4d90b9dc5b1194df780c3178400d243dadb1fbdc58"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "8030db3316cf5b9a2d7b10d1fada699191c2c40e5a798da9ba51012ad4cfa77e",
+      "extended_productivity_sha256": "e871fbf75e5235d56a5b19827efba4b8da46ce48750d972265c3e0f7546ca522"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 2002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1435293.0,
+      "arrivals_sha256": "83d74de2707da4461c395335cf8f4a0a668de6de092630144278ddf405a84cf6",
+      "productivity_sha256": "891621fdc06a5bdebfe172ad4a4c937e94f87fa764824b0fe7f9e44421f3f76a",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.034910764245259,
+        "stage_productivity_scale": [
+          1.0154916577617734,
+          1.0375809049746887,
+          0.9253660041850167
+        ],
+        "fault_factor": 0.4782273321430094,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "7f9dcd5774ac88b505a6987cd2d0833f6d00ae4b6e5adef16074e523a1d7daa4",
+        "pre_queue": "a856e2413be751780fefee704118b374d53e8f9ab69c6a2874e74c221b687c99",
+        "end_queue": "2d05fff826295180a2f31864d0b49b731f1161a98851c4a82db26216cbda83da",
+        "flow": "021af06edead797d06841124ccc9fa00ad9cb54c765e1ae299efc0561827cbc5"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "14173fa9ec281042b600263ea1611bd721d901cbad66015408b041d91b2e2896",
+      "extended_productivity_sha256": "e94e65eaaf7452270ac1bb289619b9219ab6fd3319f1ec9eac9045f1cd637efe"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 2003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1348383.0,
+      "arrivals_sha256": "decaa9fd74733682e072e088a8874fddae5a388b680b7fd66e6646ee6a9ddf9b",
+      "productivity_sha256": "a579d4ca451fe3f0909ce87f02405e702ef4b8d6e675054c9a871cd20424f8fd",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9808681355619266,
+        "stage_productivity_scale": [
+          1.053006547590803,
+          1.0140359847740636,
+          0.9803853174347019
+        ],
+        "fault_factor": 0.6121113518731034,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "4ef629b75f1d4ff7568be17db6a0efa3dd2cb822c09db2523ff9ac3ec34d47cb",
+        "pre_queue": "e3614d2b06d72013467253e9d78a616267eb97c07de4a32a7810c91eb9c93936",
+        "end_queue": "b506facef41c643cfe575928888dd1e61705b02d3b59ff25609534f107bccb8b",
+        "flow": "e7bac0f8de4d38c0d193a38269ea478a9ab84eb97b4ba3293b6991d5fd31fdf3"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "7189dbc97325120a63eea9c3d548fc6685f3904fbeaa844fbdc89b83e17db836",
+      "extended_productivity_sha256": "3cb2a3c6404be8195bdc904d8bd37773c1c3e06b2b759482dfa023864562469a"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 2004,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1550499.0,
+      "arrivals_sha256": "68b0d004076bcbadce70313e5a96bf1533f87c9f8ec337d4d01510f826e659d6",
+      "productivity_sha256": "15205fcaf71d18348795b98f04d269a0e28dcb85c7489d368fd77f626ab2c776",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.083216210015909,
+        "stage_productivity_scale": [
+          1.0090413205672304,
+          0.975613197608695,
+          0.9626045492487427
+        ],
+        "fault_factor": 0.5738372058174203,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "f15deb252bcc093911b85eb0f2eebf3ad1e00a9330f11fec8cd26ad9a14a47cc",
+        "pre_queue": "297e3c9a7ec89beea9c6233755f314ed1dc25821f90631159eebccc9b7cb4b79",
+        "end_queue": "f0ef2ff60df4be984ad32dea10f7aec3d1a4d197890600708426c795575f1768",
+        "flow": "f7edff098ea6751c54e377630c5c5afbc08ba9d7b7d1827478e1a23490bd02b9"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "114c3b999691caf599e133e5532e2693e028cfd71b7592f4418caf495464b98c",
+      "extended_productivity_sha256": "70499e951bd805571bce80a4123fda1819fa74a72e698d631c458610d00acfbc"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 2005,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1448849.0,
+      "arrivals_sha256": "32bf423c7fe399814376f87b44dae207b7efb6c730b19e27ed9b0a785eb17723",
+      "productivity_sha256": "2f3854cf426f5c9756ddaf03936eaea03876c8c03113073e5a9d8c7dffb7d64f",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.025040473119909,
+        "stage_productivity_scale": [
+          1.0380817860347444,
+          0.9305447209876515,
+          1.0472782690040565
+        ],
+        "fault_factor": 0.6070086129345278,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "1b407e1dc07bdb0912924ac6a206ee35f8390183c547cb217df07e4ac122e1b5",
+        "pre_queue": "cc8e157d308c496345823d0a2d38682c58847a2b014e14e5fd71b92544e7e671",
+        "end_queue": "cc3eac590bd724e2f63295f1b283cc5b79db1f8e5f62bd1ef705cb72943d5697",
+        "flow": "fda27ae9e12d89751a2c389264f6b327ee7017de1ae0b3d905ca9d01a111d459"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "123cfa72fbea1f2d20b6342dc3d4e5c2cfd28aa2cd952da1ed86ea2839964ddd",
+      "extended_productivity_sha256": "65c2344d36b259e0499d9683164bae4f4de72897cab4d005ca6959e3ef2b34e2"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 2006,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1263662.0,
+      "arrivals_sha256": "ba015b76f4b803d1f112d65f19fa68e780e92d27d9a374169f2dbdfd5f54bb02",
+      "productivity_sha256": "5591ef21f737582fe5acb95b69b47583ebef165bd2a72674d745b51989e3d275",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9020443948811406,
+        "stage_productivity_scale": [
+          0.9285102260382999,
+          1.0447103732706617,
+          1.041919768423786
+        ],
+        "fault_factor": 0.4597333256041762,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "463213d194b22bafd5240e44165859ae0588855dd371fae100b0c2580f5d8ed3",
+        "pre_queue": "f018e554e31b2c42b875ba71109b52dc48516d0c7fa8cba93fb3f971945815ca",
+        "end_queue": "ac3a1dc111da025142737bbf737eec2f79cc5377413c958f9392dcc2f8ebff7a",
+        "flow": "01102ab0c8c0915e6fbdf3cfe5d9d2b495343c15498469e3ab99e85e0b0afc7f"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "91c6b8b25f8191b4996b24fad91ac89c516524f809999f8b93eb6553c5fdfbc5",
+      "extended_productivity_sha256": "1cd6b12b3b3609c1db2d28f882e276343cdb25f15593fed3cc551045b064e00a"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 2007,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1505923.0,
+      "arrivals_sha256": "59e13a5e18e883c6971ed04886f2663b2e3789d89138c37af407f4f2fc629bbd",
+      "productivity_sha256": "08509c0e70b164ea6ee9fbfb33b22e112f5b37ed35026d968b5b3407938615bc",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.063684816922115,
+        "stage_productivity_scale": [
+          0.9448288612569883,
+          0.9972976050240977,
+          1.049095993584581
+        ],
+        "fault_factor": 0.5873829868161127,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "sensor_noise_shapes": {
+        "arrival": [
+          128
+        ],
+        "pre_queue": [
+          128,
+          3
+        ],
+        "end_queue": [
+          128,
+          3
+        ],
+        "flow": [
+          128,
+          3
+        ]
+      },
+      "sensor_noise_sha256": {
+        "arrival": "ccaa84bc2346572b13219df50f9861ab2f699135f8b1f91c9ca6558e9925e62e",
+        "pre_queue": "9b73622841393fe8c2ccd9dd03a73273bf9f05ab93c5bef2aafd3f162ec4cef2",
+        "end_queue": "541be281bcb4b29e5f1dd2b2f68de49b7e3ab7201dbb67543856ec68e6b40c18",
+        "flow": "5264a6e73f076ba089d4fe5a839ecca1be6b5c263619c42cb19b3cb557947edb"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "d4742b958de340ad74fed884b9f5c9c1e342c733aa833b47504dfb49bc8e91c8",
+      "extended_productivity_sha256": "3eb12ab3da444d8aaabb9c4d934067edd56fee7a93ee685ab224fdcb1f091458"
+    }
+  ],
+  "manifest_sha256": "c07ce8234f6b69ff7a449678ade216334e2f111578530d9c8697b9a17427a0a6"
+}

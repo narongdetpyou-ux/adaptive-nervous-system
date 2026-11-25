@@ -1,0 +1,40 @@
+{
+  "version": "0.4.0",
+  "reviewed_at_utc": "2026-11-25T07:36:43.023732+00:00",
+  "scope": "Source review of unbound orchestration helper for interruption recovery of the full repeat, not a change to primary validation or acceptance.",
+  "frozen_protocol_sha256": "2fe838eb290ccbd274265f611ba7ec2289419e9c939698a01ea86235c8c94b1f",
+  "helper": "recover_v4_run.py",
+  "helper_sha256_at_review": "c5a48fc1fce521ef137c1089bafe78ceaa83e05607cf77d50ccc6e4498fe418b",
+  "runtime_source_sha256": {
+    "neuron_flow/engine.py": "621e7f45de72831ee53e855cb39831759545369540310e70504c1bd088dc14a9",
+    "neuron_flow/storage.py": "59a3f3ed143cf330d74dabc037994c917cb02e594f9e3e2ce84162d06ed87558",
+    "neuron_flow/model.py": "e2cf7ce942d3e3a2bd029da5e1f5d049c4861041ccc5741a45dc4727f2d72134"
+  },
+  "review_result": "No blocker to built-in Runtime recovery under the existing specification and retry budget.",
+  "verified_helper_properties": [
+    "Acquires original OS workspace lock and reads original stored specification through Runtime store API.",
+    "Checks original fingerprint, run identity, frozen source/configuration and existing retry budget.",
+    "Requires41 accepted evaluations, final no-recovery evaluation RUNNING attempt1, comparison PENDING attempt0.",
+    "Snapshots41 accepted step states and123 artifact hashes, lengths and modification times.",
+    "Retains any unaccepted partial final-step artifacts separately before rerunning.",
+    "Uses original Runtime.run to record ControllerInterrupted and retry only unfinished work at attempt2.",
+    "Checks exact preservation of completed states/files after recovery.",
+    "Reports recovery-session-only elapsed time and peak-worker count; interruption cause remains unknown.",
+    "Performs no direct SQLite mutation, frozen-source edit, configuration change or retry-budget change."
+  ],
+  "required_finalization_checks": [
+    "Explicitly require injected legacy_instant/v4_hybrid attempts2, interrupted delayed_noisy/v4_no_recovery attempts2, other40 evaluations attempts1 and comparison attempts1.",
+    "For duplicate submit use only public job_id,input,steps; Runtime reconstructs stored agent_versions.",
+    "Run original restart/duplicate and corrupt-output negative-control checks with actual recovered counts.",
+    "Preserve interruption event/history and label complete repeat as resumed after interruption.",
+    "Compare deterministic outcome artifacts separately from receipts/events/verification whose provenance must differ."
+  ],
+  "files_changed_by_review": [],
+  "primary_validation_or_decision_changed": false,
+  "final_runtime_outcome": "pending when helper source review recorded",
+  "finalizer": "finalize_v4_recovery.py",
+  "finalizer_sha256_at_review": "a0598ff9418700ea26e13f7a764aa770fc1077f43fc960e142132e1107c47123",
+  "finalizer_reviewed_at_utc": "2026-11-25T07:38:57.220983+00:00",
+  "finalizer_source_review": "No blocker: actual2/2/others1/comparison1 attempts, duplicate/receipt checks, negative-control isolation, all-row and fresh physical/sensor replay, immutable frozen identities and completed-artifact preservation are enforced.",
+  "finalizer_verification_semantics": "Resumed repeat is explicit; original timing/cause/peak remain unknown; inherited accepted controller validation is distinguished from fresh physical/sensor replay; uncommitted interrupted work adds no independent cases."
+}

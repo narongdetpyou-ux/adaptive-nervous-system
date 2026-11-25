@@ -1,0 +1,81 @@
+{
+  "split": "development",
+  "status": "SUCCEEDED",
+  "steps": {
+    "static": 1,
+    "maxweight": 1,
+    "abc": 1,
+    "abc_guard": 1,
+    "abc_capacity": 2,
+    "capacity_aware": 1,
+    "comparison": 1
+  },
+  "peak_workers": 3,
+  "receipt_path": "workspace/reports/capacity_v020_development.json",
+  "receipt_sha256": "d4b2ab1b77b4fc4275e14ccb1dea422190305839b5d5aa8b1b8b6025dc44e2c2",
+  "receipt_bytes": 216518,
+  "summary_sha256": "b1f464543f17bf2a69a69039347da0b77601c573698213431f53b48496cb4c0d",
+  "duplicate_submission_created": false,
+  "restart_replay_preserved_attempts": true,
+  "restart_replay_preserved_report": true,
+  "negative_control": {
+    "status": "FAILED",
+    "steps": {
+      "bad": "FAILED",
+      "independent": "SUCCEEDED",
+      "blocked": "BLOCKED"
+    },
+    "bad_error": {
+      "message": "Lost work in summary",
+      "type": "OutputValidationError"
+    },
+    "scope": "completed-work count deliberately changed by +1 in a copied static result; no extra policy rollout"
+  },
+  "row_audit": {
+    "scenarios_checked": 44,
+    "episodes_checked": 528,
+    "simulated_minutes": 42048
+  },
+  "independent_trace_replay": {
+    "traces": 66,
+    "minutes": 5256,
+    "selection": "first scenario seed per family and first seed per policy, fixed before execution",
+    "scope": "scalar arithmetic replay of these traces; all other episodes receive summary and inline invariant checks"
+  },
+  "upstream_hashes": {
+    "neuron_flow/__init__.py": "62ef7b355ba00e0a986c51451b252eb3448678b527fa0bc3bfdcf93d2dd81d6f",
+    "neuron_flow/agents.py": "15eab79daba253d8c34c52ed1b39f943ae6e5d08e58564b29f62f4cddf754fa4",
+    "neuron_flow/engine.py": "621e7f45de72831ee53e855cb39831759545369540310e70504c1bd088dc14a9",
+    "neuron_flow/model.py": "e2cf7ce942d3e3a2bd029da5e1f5d049c4861041ccc5741a45dc4727f2d72134",
+    "neuron_flow/storage.py": "59a3f3ed143cf330d74dabc037994c917cb02e594f9e3e2ce84162d06ed87558",
+    "abc_service/__init__.py": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41",
+    "abc_service/frozen.py": "0df444936e90b016e84dfabc9fb30011d76fe591db758d63a35de9f313bb9ea3",
+    "abc_service/_frozen/experiment.py": "83aa8b68b2f68ab83a26ff56a651332878d5355bfff0a7aee985f72b05090342",
+    "abc_service/_frozen/original/ABC.H.txt": "f8a50611ba65a935c2b0079241df3d7f90a0ef7746c647d88d0feb293e33af00",
+    "abc_service/_frozen/action_catalog.json": "a36d6614f1c7af608451e75974c1df23ed68f78f4b098c5badb487a8dafc03eb",
+    "data/load_test_summary_per_minute.csv": "0120255045744fc79008d22e81f72d1e15e28ed0fda81760683119002800f253"
+  },
+  "freeze_verification": null,
+  "scenario_manifest_sha256": "84736b9f3768e2010d5d8c7bbfe9962cc8bed52edbcf36468f6e660dc69cecaf",
+  "capacity_config": {
+    "nominal_rate": 200.0,
+    "warmup": 5,
+    "dwell": 8,
+    "lookahead": 8,
+    "minimum_staff": 10.0,
+    "saturated_update": 0.7,
+    "unsaturated_prior_reversion": 0.1,
+    "rate_lower_factor": 0.85,
+    "demand_spread": 0.2,
+    "arrival_window": 3,
+    "terminal_weight": 0.25,
+    "relative_gain": 0.02,
+    "absolute_gain": 10.0,
+    "worst_case_regression_fraction": 0.0,
+    "tolerance": 1e-07
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "elapsed_seconds": 7.641,
+  "timing_scope": "local whole-workflow elapsed time, not a performance benchmark"
+}

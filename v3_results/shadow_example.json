@@ -1,0 +1,4686 @@
+{
+  "schema_version": "ans-shadow-recommendations/0.3.0",
+  "source_kind": "synthetic",
+  "mode": "read_only_shadow_replay",
+  "input_canonical_sha256": "693694b53881d1b026bbdf29ee787e7f7e2480328bc3e92bad5ccc5d700e5909",
+  "configuration_binding": {
+    "status": "default_matches_frozen_configuration",
+    "protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054"
+  },
+  "validation": {
+    "records": 92,
+    "recorded_moves": 0,
+    "known_transit_delay": 0,
+    "total_recorded_arrivals": 160185.0,
+    "total_recorded_completions": 160185.0,
+    "last_actual_change": -1000000000,
+    "scope": "observed resource ledger and serial-flow consistency; service capacity cannot be verified without independent telemetry"
+  },
+  "recommendations": [
+    {
+      "t": 0,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "warmup",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 0,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": -1,
+        "known_transit_delay": 0,
+        "branch": "warmup"
+      }
+    },
+    {
+      "t": 1,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "warmup",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 1,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 0,
+        "known_transit_delay": 0,
+        "branch": "warmup"
+      }
+    },
+    {
+      "t": 2,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "warmup",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 2,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 1,
+        "known_transit_delay": 0,
+        "branch": "warmup"
+      }
+    },
+    {
+      "t": 3,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "warmup",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 3,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 2,
+        "known_transit_delay": 0,
+        "branch": "warmup"
+      }
+    },
+    {
+      "t": 4,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "warmup",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 4,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 3,
+        "known_transit_delay": 0,
+        "branch": "warmup"
+      }
+    },
+    {
+      "t": 5,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 5,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 4,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 6,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 6,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 5,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 7,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 7,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 6,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 8,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 8,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 7,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 9,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 9,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 8,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 10,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 10,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          250.0,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 9,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 11,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 11,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          200.0,
+          109.37302331273361,
+          200.0
+        ],
+        "rate_lower": [
+          150.0,
+          82.0297674845502,
+          150.0
+        ],
+        "rate_upper": [
+          250.0,
+          136.716279140917,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          1,
+          0
+        ],
+        "last_observed_minute": 10,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 12,
+      "recommended_delta": [
+        -15.0,
+        20.0,
+        -5.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 12,
+        "mode": "full",
+        "selected_action_id": 46,
+        "estimated_rates": [
+          206.05901037292713,
+          100.45280201865354,
+          200.0
+        ],
+        "rate_lower": [
+          154.54425777969536,
+          82.13537253015491,
+          150.0
+        ],
+        "rate_upper": [
+          257.57376296615894,
+          125.77897680964364,
+          250.0
+        ],
+        "recent_busy_counts": [
+          1,
+          2,
+          0
+        ],
+        "last_observed_minute": 11,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 57898.86066969166,
+        "minimum_mean_gain": 1157.9772133938332,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 16,
+        "best_considered_action_id": 46,
+        "predicted_mean_gain": 12002.60303858137,
+        "predicted_worst_gain": 5988.128900874814,
+        "predicted_worst_terminal_change": -7370.004801076684,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 13,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 13,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          192.87806738245308,
+          99.38365896914536,
+          200.0
+        ],
+        "rate_lower": [
+          159.14472804284097,
+          82.13537253015491,
+          150.0
+        ],
+        "rate_upper": [
+          236.9678619288662,
+          125.77897680964364,
+          250.0
+        ],
+        "recent_busy_counts": [
+          2,
+          3,
+          0
+        ],
+        "last_observed_minute": 12,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 19,
+        "separation_rejected": 19,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 61403.84959222683,
+        "minimum_mean_gain": 1228.0769918445365,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 14203.563065020197,
+        "predicted_worst_gain": 3622.8802739450257,
+        "predicted_worst_terminal_change": 1991.0869554234305,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 14,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 14,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          193.59026064420777,
+          104.76049183487106,
+          200.0
+        ],
+        "rate_lower": [
+          159.14472804284097,
+          82.13537253015491,
+          150.0
+        ],
+        "rate_upper": [
+          236.9678619288662,
+          125.77897680964364,
+          250.0
+        ],
+        "recent_busy_counts": [
+          2,
+          4,
+          0
+        ],
+        "last_observed_minute": 13,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 48819.9902116977,
+        "minimum_mean_gain": 976.3998042339541,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 15867.919888787399,
+        "predicted_worst_gain": 7063.528466469928,
+        "predicted_worst_terminal_change": -1867.6557058602339,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 15,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 15,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          194.231234579787,
+          98.45723631418807,
+          200.0
+        ],
+        "rate_lower": [
+          159.14472804284097,
+          81.39246492738249,
+          150.0
+        ],
+        "rate_upper": [
+          236.9678619288662,
+          125.77897680964364,
+          250.0
+        ],
+        "recent_busy_counts": [
+          2,
+          5,
+          0
+        ],
+        "last_observed_minute": 14,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 54016.02132113138,
+        "minimum_mean_gain": 1080.3204264226276,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 15988.805957854967,
+        "predicted_worst_gain": 8419.284804602474,
+        "predicted_worst_terminal_change": -6349.193128237472,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 16,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 16,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          194.8081111218083,
+          98.92147751306797,
+          200.0
+        ],
+        "rate_lower": [
+          159.14472804284097,
+          81.39246492738249,
+          150.0
+        ],
+        "rate_upper": [
+          236.9678619288662,
+          123.12457609392365,
+          250.0
+        ],
+        "recent_busy_counts": [
+          2,
+          5,
+          0
+        ],
+        "last_observed_minute": 15,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 54410.77584143638,
+        "minimum_mean_gain": 1088.2155168287277,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 16714.143986668856,
+        "predicted_worst_gain": 11176.188627632262,
+        "predicted_worst_terminal_change": -9894.745074047649,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 17,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 17,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          195.3273000096275,
+          99.51349465970712,
+          200.0
+        ],
+        "rate_lower": [
+          146.49547500722062,
+          81.39246492738249,
+          150.0
+        ],
+        "rate_upper": [
+          244.15912501203437,
+          123.12457609392365,
+          250.0
+        ],
+        "recent_busy_counts": [
+          1,
+          5,
+          0
+        ],
+        "last_observed_minute": 16,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 60070.90071625798,
+        "minimum_mean_gain": 1201.4180143251597,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 17264.47351483291,
+        "predicted_worst_gain": 10794.249300857922,
+        "predicted_worst_terminal_change": -11476.891806774609,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 18,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 18,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          195.79457000866475,
+          94.25221805634558,
+          200.0
+        ],
+        "rate_lower": [
+          146.84592750649855,
+          78.19777744238348,
+          150.0
+        ],
+        "rate_upper": [
+          244.74321251083094,
+          123.12457609392365,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          5,
+          0
+        ],
+        "last_observed_minute": 17,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 59403.05126457069,
+        "minimum_mean_gain": 1188.061025291414,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 17251.146863158952,
+        "predicted_worst_gain": 12053.627621875254,
+        "predicted_worst_terminal_change": -14835.233996154157,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 19,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 19,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          196.21511300779827,
+          91.13143234905044,
+          200.0
+        ],
+        "rate_lower": [
+          147.1613347558487,
+          76.32485984617823,
+          150.0
+        ],
+        "rate_upper": [
+          245.26889125974782,
+          114.7322987380782,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          5,
+          0
+        ],
+        "last_observed_minute": 18,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 54708.566431068946,
+        "minimum_mean_gain": 1094.171328621379,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 18,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 16680.285140727727,
+        "predicted_worst_gain": 14862.594520056995,
+        "predicted_worst_terminal_change": -10889.058625624886,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 20,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 20,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          196.59360170701845,
+          101.10057543075806,
+          200.0
+        ],
+        "rate_lower": [
+          147.44520128026383,
+          76.32485984617823,
+          150.0
+        ],
+        "rate_upper": [
+          245.74200213377307,
+          121.1790251213562,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          5,
+          0
+        ],
+        "last_observed_minute": 19,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 36558.541790024385,
+        "minimum_mean_gain": 731.1708358004877,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 15716.863008515282,
+        "predicted_worst_gain": 8011.751509490796,
+        "predicted_worst_terminal_change": 0.0,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 21,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 21,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          196.93424153631662,
+          96.48777963298105,
+          200.0
+        ],
+        "rate_lower": [
+          147.70068115223745,
+          76.32485984617823,
+          150.0
+        ],
+        "rate_upper": [
+          246.1678019203958,
+          121.1790251213562,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          5,
+          0
+        ],
+        "last_observed_minute": 20,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 27089.19577124559,
+        "minimum_mean_gain": 541.7839154249118,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 13033.765761202658,
+        "predicted_worst_gain": 4898.417753222728,
+        "predicted_worst_terminal_change": 0.0,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 22,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 22,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          197.24081738268495,
+          94.56658490850234,
+          200.0
+        ],
+        "rate_lower": [
+          147.9306130370137,
+          76.32485984617823,
+          150.0
+        ],
+        "rate_upper": [
+          246.5510217283562,
+          121.1790251213562,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          5,
+          0
+        ],
+        "last_observed_minute": 21,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 18576.76787243409,
+        "minimum_mean_gain": 371.53535744868185,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 9482.817075764278,
+        "predicted_worst_gain": 2989.3962158413397,
+        "predicted_worst_terminal_change": 0.0,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 23,
+      "recommended_delta": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 23,
+        "mode": "full",
+        "selected_action_id": 52,
+        "estimated_rates": [
+          197.51673564441646,
+          96.72773840401423,
+          200.0
+        ],
+        "rate_lower": [
+          148.13755173331234,
+          76.32485984617823,
+          150.0
+        ],
+        "rate_upper": [
+          246.89591955552058,
+          121.1790251213562,
+          250.0
+        ],
+        "recent_busy_counts": [
+          0,
+          5,
+          0
+        ],
+        "last_observed_minute": 22,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 11872.701233265885,
+        "minimum_mean_gain": 237.45402466531772,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 17,
+        "best_considered_action_id": 52,
+        "predicted_mean_gain": 5876.170711572441,
+        "predicted_worst_gain": 2015.668047603811,
+        "predicted_worst_terminal_change": 0.0,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 24,
+      "recommended_delta": [
+        -7.0,
+        7.0,
+        0.0
+      ],
+      "reason": "selected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": false,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 24,
+        "mode": "full",
+        "selected_action_id": 31,
+        "estimated_rates": [
+          197.76506207997483,
+          173.83412708273238,
+          192.75419838524985
+        ],
+        "rate_lower": [
+          148.32379655998113,
+          79.6817333797383,
+          144.56564878893738
+        ],
+        "rate_upper": [
+          247.20632759996852,
+          237.91168056536756,
+          240.94274798156232
+        ],
+        "recent_busy_counts": [
+          0,
+          5,
+          1
+        ],
+        "last_observed_minute": 23,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 38,
+        "separation_rejected": 0,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 996.1080274286027,
+        "minimum_mean_gain": 19.922160548572055,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 2,
+        "best_considered_action_id": 31,
+        "predicted_mean_gain": 73.65089615259409,
+        "predicted_worst_gain": 4.547473508864641e-13,
+        "predicted_worst_terminal_change": 0.0,
+        "branch": "selected"
+      }
+    },
+    {
+      "t": 25,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "model_rejected",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 25,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          197.98855587197735,
+          200.90818821614823,
+          196.9887225321425
+        ],
+        "rate_lower": [
+          148.491416903983,
+          79.6817333797383,
+          163.84106862746236
+        ],
+        "rate_upper": [
+          247.4856948399717,
+          244.3880608643254,
+          228.624046384361
+        ],
+        "recent_busy_counts": [
+          0,
+          5,
+          2
+        ],
+        "last_observed_minute": 24,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 19,
+        "separation_rejected": 19,
+        "forecast_models": 33,
+        "forecast_horizon": 8,
+        "modeled_delay": 0,
+        "mean_hold_cost": 0.0,
+        "minimum_mean_gain": 10.0,
+        "stress_regression_fraction": 0.05,
+        "candidate_count": 19,
+        "admissible_count": 0,
+        "best_considered_action_id": 1,
+        "predicted_mean_gain": 0.0,
+        "predicted_worst_gain": 0.0,
+        "predicted_worst_terminal_change": 0.0,
+        "branch": "model_rejected"
+      }
+    },
+    {
+      "t": 26,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 26,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          198.18970028477963,
+          200.81736939453342,
+          197.28985027892827
+        ],
+        "rate_lower": [
+          148.64227521358472,
+          79.6817333797383,
+          163.84106862746236
+        ],
+        "rate_upper": [
+          247.73712535597454,
+          244.3880608643254,
+          228.624046384361
+        ],
+        "recent_busy_counts": [
+          0,
+          4,
+          2
+        ],
+        "last_observed_minute": 25,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 27,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 27,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          198.37073025630167,
+          200.73563245508007,
+          197.56086525103544
+        ],
+        "rate_lower": [
+          148.77804769222627,
+          83.00585498820571,
+          163.84106862746236
+        ],
+        "rate_upper": [
+          247.96341282037707,
+          244.3880608643254,
+          228.624046384361
+        ],
+        "recent_busy_counts": [
+          0,
+          3,
+          2
+        ],
+        "last_observed_minute": 26,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 28,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 28,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          198.5336572306715,
+          200.66206920957205,
+          197.8047787259319
+        ],
+        "rate_lower": [
+          148.90024292300365,
+          170.56275882813625,
+          163.84106862746236
+        ],
+        "rate_upper": [
+          248.16707153833937,
+          244.3880608643254,
+          228.624046384361
+        ],
+        "recent_busy_counts": [
+          0,
+          2,
+          2
+        ],
+        "last_observed_minute": 27,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 29,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 29,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          198.68029150760435,
+          200.59586228861485,
+          198.0243008533387
+        ],
+        "rate_lower": [
+          149.01021863070326,
+          150.44689671646114,
+          148.51822564000403
+        ],
+        "rate_upper": [
+          248.35036438450544,
+          250.74482786076857,
+          247.53037606667337
+        ],
+        "recent_busy_counts": [
+          0,
+          1,
+          1
+        ],
+        "last_observed_minute": 28,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 30,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 30,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          198.81226235684392,
+          200.53627605975336,
+          198.22187076800483
+        ],
+        "rate_lower": [
+          149.10919676763294,
+          150.40220704481501,
+          148.66640307600363
+        ],
+        "rate_upper": [
+          248.5153279460549,
+          250.6703450746917,
+          247.77733846000604
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 29,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 31,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 31,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          198.93103612115954,
+          200.48264845377804,
+          198.39968369120436
+        ],
+        "rate_lower": [
+          149.19827709086965,
+          150.36198634033354,
+          148.79976276840327
+        ],
+        "rate_upper": [
+          248.66379515144942,
+          250.60331056722254,
+          247.99960461400545
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 30,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 32,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 32,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.0379325090436,
+          200.43438360840025,
+          198.55971532208392
+        ],
+        "rate_lower": [
+          149.2784493817827,
+          150.3257877063002,
+          148.91978649156295
+        ],
+        "rate_upper": [
+          248.7974156363045,
+          250.54297951050032,
+          248.1996441526049
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 31,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 33,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 33,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.13413925813924,
+          200.39094524756024,
+          198.70374378987552
+        ],
+        "rate_lower": [
+          149.35060444360442,
+          150.29320893567018,
+          149.02780784240665
+        ],
+        "rate_upper": [
+          248.91767407267406,
+          250.4886815594503,
+          248.3796797373444
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 32,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 34,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 34,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.22072533232532,
+          200.35185072280422,
+          198.83336941088797
+        ],
+        "rate_lower": [
+          149.415543999244,
+          150.26388804210316,
+          149.12502705816598
+        ],
+        "rate_upper": [
+          249.02590666540664,
+          250.43981340350527,
+          248.54171176360995
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 33,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 35,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 35,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.2986527990928,
+          200.3166656505238,
+          198.95003246979917
+        ],
+        "rate_lower": [
+          149.4739895993196,
+          150.23749923789285,
+          149.21252435234936
+        ],
+        "rate_upper": [
+          249.123315998866,
+          250.39583206315473,
+          248.68754058724898
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 34,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 36,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 36,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.3687875191835,
+          200.2849990854714,
+          199.05502922281926
+        ],
+        "rate_lower": [
+          149.52659063938762,
+          150.21374931410355,
+          149.29127191711444
+        ],
+        "rate_upper": [
+          249.2109843989794,
+          250.35624885683927,
+          248.81878652852407
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 35,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 37,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 37,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.43190876726516,
+          200.25649917692428,
+          199.14952630053733
+        ],
+        "rate_lower": [
+          149.57393157544885,
+          150.1923743826932,
+          149.362144725403
+        ],
+        "rate_upper": [
+          249.28988595908146,
+          250.32062397115536,
+          248.93690787567166
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 36,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 38,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 38,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.48871789053865,
+          200.23084925923186,
+          199.2345736704836
+        ],
+        "rate_lower": [
+          149.616538417904,
+          150.1731369444239,
+          149.4259302528627
+        ],
+        "rate_upper": [
+          249.3608973631733,
+          250.28856157403982,
+          249.04321708810448
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 37,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 39,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 39,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.53984610148478,
+          200.2077643333087,
+          199.31111630343526
+        ],
+        "rate_lower": [
+          149.6548845761136,
+          150.15582324998152,
+          149.48333722757644
+        ],
+        "rate_upper": [
+          249.42480762685597,
+          250.25970541663585,
+          249.13889537929407
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 38,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 40,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 40,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.58586149133632,
+          200.18698789997782,
+          199.38000467309175
+        ],
+        "rate_lower": [
+          149.68939611850223,
+          150.14024092498337,
+          149.5350035048188
+        ],
+        "rate_upper": [
+          249.4823268641704,
+          250.23373487497227,
+          249.2250058413647
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 39,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 41,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 41,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.6272753422027,
+          200.16828910998004,
+          199.44200420578258
+        ],
+        "rate_lower": [
+          149.72045650665203,
+          150.12621683248503,
+          149.58150315433693
+        ],
+        "rate_upper": [
+          249.53409417775336,
+          250.21036138747505,
+          249.30250525722823
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 40,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 42,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 42,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.66454780798242,
+          200.15146019898205,
+          199.49780378520433
+        ],
+        "rate_lower": [
+          149.7484108559868,
+          150.11359514923655,
+          149.62335283890326
+        ],
+        "rate_upper": [
+          249.58068475997803,
+          250.18932524872756,
+          249.3722547315054
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 41,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 43,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 43,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.69809302718417,
+          200.13631417908385,
+          199.5480234066839
+        ],
+        "rate_lower": [
+          149.77356977038812,
+          150.10223563431288,
+          149.66101755501293
+        ],
+        "rate_upper": [
+          249.62261628398022,
+          250.17039272385483,
+          249.4350292583549
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 42,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 44,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 44,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.72828372446577,
+          200.12268276117547,
+          199.59322106601553
+        ],
+        "rate_lower": [
+          149.79621279334933,
+          150.0920120708816,
+          149.69491579951165
+        ],
+        "rate_upper": [
+          249.6603546555822,
+          250.15335345146934,
+          249.4915263325194
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 43,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 45,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 45,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.7554553520192,
+          200.11041448505793,
+          199.63389895941398
+        ],
+        "rate_lower": [
+          149.8165915140144,
+          150.08281086379344,
+          149.7254242195605
+        ],
+        "rate_upper": [
+          249.694319190024,
+          250.13801810632242,
+          249.54237369926747
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 44,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 46,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 46,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.77990981681728,
+          200.09937303655215,
+          199.6705090634726
+        ],
+        "rate_lower": [
+          149.83493236261296,
+          150.0745297774141,
+          149.75288179760446
+        ],
+        "rate_upper": [
+          249.7248872710216,
+          250.1242162956902,
+          249.58813632934073
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 45,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 47,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 47,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.80191883513555,
+          200.08943573289693,
+          199.70345815712534
+        ],
+        "rate_lower": [
+          149.85143912635166,
+          150.0670767996727,
+          149.777593617844
+        ],
+        "rate_upper": [
+          249.75239854391944,
+          250.11179466612117,
+          249.6293226964067
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 46,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 48,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 48,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.821726951622,
+          200.08049215960725,
+          199.7331123414128
+        ],
+        "rate_lower": [
+          149.8662952137165,
+          150.06036911970543,
+          149.7998342560596
+        ],
+        "rate_upper": [
+          249.77715868952748,
+          250.10061519950906,
+          249.66639042676601
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 47,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 49,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 49,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.8395542564598,
+          200.07244294364654,
+          199.75980110727153
+        ],
+        "rate_lower": [
+          149.87966569234484,
+          150.0543322077349,
+          149.81985083045365
+        ],
+        "rate_upper": [
+          249.79944282057474,
+          250.09055367955818,
+          249.6997513840894
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 48,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 50,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 50,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.85559883081382,
+          200.06519864928188,
+          199.7838209965444
+        ],
+        "rate_lower": [
+          149.89169912311036,
+          150.0488989869614,
+          149.8378657474083
+        ],
+        "rate_upper": [
+          249.81949853851728,
+          250.08149831160236,
+          249.72977624568048
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 49,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 51,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 51,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.87003894773244,
+          200.0586787843537,
+          199.80543889688997
+        ],
+        "rate_lower": [
+          149.90252921079934,
+          150.04400908826528,
+          149.85407917266747
+        ],
+        "rate_upper": [
+          249.83754868466553,
+          250.07334848044212,
+          249.75679862111247
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 50,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 52,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 52,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.8830350529592,
+          200.05281090591834,
+          199.82489500720098
+        ],
+        "rate_lower": [
+          149.9122762897194,
+          150.03960817943874,
+          149.86867125540073
+        ],
+        "rate_upper": [
+          249.85379381619902,
+          250.06601363239793,
+          249.78111875900123
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 51,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 53,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 53,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.8947315476633,
+          200.0475298153265,
+          199.84240550648087
+        ],
+        "rate_lower": [
+          149.9210486607475,
+          150.03564736149488,
+          149.88180412986065
+        ],
+        "rate_upper": [
+          249.8684144345791,
+          250.05941226915812,
+          249.8030068831011
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 52,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 54,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 54,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.90525839289697,
+          200.04277683379385,
+          199.8581649558328
+        ],
+        "rate_lower": [
+          149.92894379467273,
+          150.0320826253454,
+          149.8936237168746
+        ],
+        "rate_upper": [
+          249.8815729911212,
+          250.0534710422423,
+          249.82270619479098
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 53,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 55,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 55,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.91473255360728,
+          200.03849915041448,
+          199.87234846024953
+        ],
+        "rate_lower": [
+          149.93604941520545,
+          150.02887436281085,
+          149.90426134518714
+        ],
+        "rate_upper": [
+          249.8934156920091,
+          250.0481239380181,
+          249.84043557531191
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 54,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 56,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 56,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.92325929824656,
+          200.03464923537302,
+          199.88511361422457
+        ],
+        "rate_lower": [
+          149.94244447368493,
+          150.02598692652975,
+          149.91383521066842
+        ],
+        "rate_upper": [
+          249.9040741228082,
+          250.0433115442163,
+          249.8563920177807
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 55,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 57,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 57,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9309333684219,
+          200.03118431183572,
+          199.89660225280213
+        ],
+        "rate_lower": [
+          149.94820002631644,
+          150.0233882338768,
+          149.9224516896016
+        ],
+        "rate_upper": [
+          249.91366671052737,
+          250.03898038979463,
+          249.87075281600266
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 56,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 58,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 58,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.93784003157973,
+          200.02806588065215,
+          199.90694202752192
+        ],
+        "rate_lower": [
+          149.9533800236848,
+          150.02104941048913,
+          149.93020652064143
+        ],
+        "rate_upper": [
+          249.92230003947466,
+          250.03508235081517,
+          249.8836775344024
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 57,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 59,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 59,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.94405602842176,
+          200.02525929258695,
+          199.91624782476973
+        ],
+        "rate_lower": [
+          149.95804202131632,
+          150.0189444694402,
+          149.9371858685773
+        ],
+        "rate_upper": [
+          249.9300700355272,
+          250.0315741157337,
+          249.89530978096215
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 58,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 60,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 60,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9496504255796,
+          200.02273336332826,
+          199.92462304229275
+        ],
+        "rate_lower": [
+          149.96223781918468,
+          150.0170500224962,
+          149.94346728171956
+        ],
+        "rate_upper": [
+          249.9370630319745,
+          250.02841670416032,
+          249.90577880286594
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 59,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 61,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 61,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.95468538302163,
+          200.02046002699544,
+          199.9321607380635
+        ],
+        "rate_lower": [
+          149.96601403726623,
+          150.01534502024657,
+          149.94912055354763
+        ],
+        "rate_upper": [
+          249.94335672877702,
+          250.0255750337443,
+          249.91520092257934
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 60,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 62,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 62,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.95921684471946,
+          200.0184140242959,
+          199.93894466425715
+        ],
+        "rate_lower": [
+          149.9694126335396,
+          150.01381051822193,
+          149.95420849819286
+        ],
+        "rate_upper": [
+          249.94902105589932,
+          250.02301753036988,
+          249.92368083032144
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 61,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 63,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 63,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.96329516024753,
+          200.01657262186632,
+          199.94505019783145
+        ],
+        "rate_lower": [
+          149.97247137018564,
+          150.01242946639974,
+          149.95878764837357
+        ],
+        "rate_upper": [
+          249.9541189503094,
+          250.0207157773329,
+          249.93131274728933
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 62,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 64,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 64,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.96696564422277,
+          200.0149153596797,
+          199.95054517804832
+        ],
+        "rate_lower": [
+          149.97522423316707,
+          150.01118651975978,
+          149.96290888353624
+        ],
+        "rate_upper": [
+          249.95870705527847,
+          250.0186441995996,
+          249.9381814725604
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 63,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 65,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 65,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9702690798005,
+          200.01342382371172,
+          199.9554906602435
+        ],
+        "rate_lower": [
+          149.97770180985037,
+          150.0100678677838,
+          149.96661799518262
+        ],
+        "rate_upper": [
+          249.9628363497506,
+          250.01677977963965,
+          249.94436332530438
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 64,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 66,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 66,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.97324217182043,
+          200.01208144134054,
+          199.95994159421915
+        ],
+        "rate_lower": [
+          149.97993162886533,
+          150.0090610810054,
+          149.96995619566437
+        ],
+        "rate_upper": [
+          249.96655271477553,
+          250.01510180167568,
+          249.94992699277392
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 65,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 67,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 67,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9759179546384,
+          200.0108732972065,
+          199.96394743479723
+        ],
+        "rate_lower": [
+          149.9819384659788,
+          150.0081549729049,
+          149.97296057609793
+        ],
+        "rate_upper": [
+          249.96989744329798,
+          250.0135916215081,
+          249.95493429349654
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 66,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 68,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 68,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.97832615917454,
+          200.00978596748587,
+          199.9675526913175
+        ],
+        "rate_lower": [
+          149.9837446193809,
+          150.0073394756144,
+          149.97566451848814
+        ],
+        "rate_upper": [
+          249.97290769896819,
+          250.01223245935734,
+          249.95944086414687
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 67,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 69,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 69,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9804935432571,
+          200.0088073707373,
+          199.97079742218577
+        ],
+        "rate_lower": [
+          149.98537015744282,
+          150.00660552805297,
+          149.97809806663932
+        ],
+        "rate_upper": [
+          249.97561692907138,
+          250.0110092134216,
+          249.96349677773222
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 68,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 70,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 70,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9824441889314,
+          200.00792663366357,
+          199.9737176799672
+        ],
+        "rate_lower": [
+          149.98683314169855,
+          150.00594497524767,
+          149.9802882599754
+        ],
+        "rate_upper": [
+          249.97805523616424,
+          250.00990829207947,
+          249.967147099959
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 69,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 71,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 71,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.98419977003826,
+          200.00713397029722,
+          199.97634591197047
+        ],
+        "rate_lower": [
+          149.9881498275287,
+          150.0053504777229,
+          149.98225943397784
+        ],
+        "rate_upper": [
+          249.98024971254782,
+          250.00891746287152,
+          249.9704323899631
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 70,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 72,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 72,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.98577979303442,
+          200.0064205732675,
+          199.9787113207734
+        ],
+        "rate_lower": [
+          149.9893348447758,
+          150.0048154299506,
+          149.98403349058006
+        ],
+        "rate_upper": [
+          249.98222474129304,
+          250.00802571658437,
+          249.97338915096677
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 71,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 73,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 73,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.987201813731,
+          200.00577851594073,
+          199.98084018869608
+        ],
+        "rate_lower": [
+          149.99040136029825,
+          150.00433388695555,
+          149.98563014152205
+        ],
+        "rate_upper": [
+          249.98400226716373,
+          250.00722314492592,
+          249.9760502358701
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 72,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 74,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 74,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9884816323579,
+          200.00520066434666,
+          199.98275616982647
+        ],
+        "rate_lower": [
+          149.99136122426842,
+          150.00390049826,
+          149.98706712736987
+        ],
+        "rate_upper": [
+          249.98560204044736,
+          250.0065008304333,
+          249.97844521228308
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 73,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 75,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 75,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9896334691221,
+          200.004680597912,
+          199.98448055284382
+        ],
+        "rate_lower": [
+          149.9922251018416,
+          150.00351044843399,
+          149.98836041463287
+        ],
+        "rate_upper": [
+          249.98704183640262,
+          250.00585074739,
+          249.98060069105478
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 74,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 76,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 76,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9906701222099,
+          200.0042125381208,
+          199.98603249755945
+        ],
+        "rate_lower": [
+          149.99300259165744,
+          150.00315940359062,
+          149.9895243731696
+        ],
+        "rate_upper": [
+          249.98833765276237,
+          250.005265672651,
+          249.9825406219493
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 75,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 77,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 77,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99160310998892,
+          200.00379128430873,
+          199.9874292478035
+        ],
+        "rate_lower": [
+          149.9937023324917,
+          150.00284346323156,
+          149.99057193585264
+        ],
+        "rate_upper": [
+          249.98950388748614,
+          250.0047391053859,
+          249.98428655975437
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 76,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 78,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 78,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99244279899003,
+          200.00341215587787,
+          199.98868632302316
+        ],
+        "rate_lower": [
+          149.9943320992425,
+          150.0025591169084,
+          149.99151474226738
+        ],
+        "rate_upper": [
+          249.99055349873754,
+          250.00426519484733,
+          249.98585790377894
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 77,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 79,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 79,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99319851909104,
+          200.0030709402901,
+          199.98981769072086
+        ],
+        "rate_lower": [
+          149.99489888931828,
+          150.00230320521757,
+          149.99236326804063
+        ],
+        "rate_upper": [
+          249.9914981488638,
+          250.0038386753626,
+          249.98727211340108
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 78,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 80,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 80,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99387866718195,
+          200.00276384626108,
+          199.99083592164877
+        ],
+        "rate_lower": [
+          149.99540900038647,
+          150.0020728846958,
+          149.99312694123657
+        ],
+        "rate_upper": [
+          249.99234833397742,
+          250.00345480782636,
+          249.98854490206097
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 79,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 81,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 81,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99449080046375,
+          200.00248746163498,
+          199.9917523294839
+        ],
+        "rate_lower": [
+          149.99586810034782,
+          150.00186559622625,
+          149.9938142471129
+        ],
+        "rate_upper": [
+          249.99311350057968,
+          250.00310932704372,
+          249.98969041185487
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 80,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 82,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 82,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9950417204174,
+          200.0022387154715,
+          199.9925770965355
+        ],
+        "rate_lower": [
+          149.99628129031305,
+          150.0016790366036,
+          149.99443282240162
+        ],
+        "rate_upper": [
+          249.99380215052173,
+          250.00279839433938,
+          249.9907213706694
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 81,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 83,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 83,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99553754837567,
+          200.00201484392434,
+          199.99331938688198
+        ],
+        "rate_lower": [
+          149.99665316128176,
+          150.00151113294325,
+          149.9949895401615
+        ],
+        "rate_upper": [
+          249.99442193546957,
+          250.00251855490544,
+          249.99164923360246
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 82,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 84,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 84,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9959837935381,
+          200.00181335953192,
+          199.9939874481938
+        ],
+        "rate_lower": [
+          149.99698784515357,
+          150.00136001964893,
+          149.99549058614534
+        ],
+        "rate_upper": [
+          249.99497974192263,
+          250.00226669941492,
+          249.99248431024225
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 83,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 85,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 85,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9963854141843,
+          200.00163202357874,
+          199.9945887033744
+        ],
+        "rate_lower": [
+          149.99728906063822,
+          150.00122401768405,
+          149.99594152753082
+        ],
+        "rate_upper": [
+          249.99548176773035,
+          250.00204002947342,
+          249.993235879218
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 84,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 86,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 86,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99674687276587,
+          200.00146882122087,
+          199.99512983303697
+        ],
+        "rate_lower": [
+          149.9975601545744,
+          150.00110161591564,
+          149.9963473747777
+        ],
+        "rate_upper": [
+          249.99593359095735,
+          250.0018360265261,
+          249.99391229129623
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 85,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 87,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 87,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.9970721854893,
+          200.00132193909877,
+          199.99561684973327
+        ],
+        "rate_lower": [
+          149.99780413911697,
+          150.0009914543241,
+          149.99671263729994
+        ],
+        "rate_upper": [
+          249.9963402318616,
+          250.00165242387345,
+          249.9945210621666
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 86,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 88,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 88,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99736496694035,
+          200.0011897451889,
+          199.99605516475995
+        ],
+        "rate_lower": [
+          149.99802372520526,
+          150.00089230889168,
+          149.99704137356997
+        ],
+        "rate_upper": [
+          249.99670620867545,
+          250.0014871814861,
+          249.99506895594993
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 87,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 89,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 89,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99762847024633,
+          200.00107077067,
+          199.99644964828397
+        ],
+        "rate_lower": [
+          149.99822135268474,
+          150.0008030780025,
+          149.99733723621299
+        ],
+        "rate_upper": [
+          249.99703558780791,
+          250.0013384633375,
+          249.99556206035496
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 88,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 90,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 90,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99786562322168,
+          200.000963693603,
+          199.99680468345557
+        ],
+        "rate_lower": [
+          149.99839921741625,
+          150.00072277020226,
+          149.99760351259167
+        ],
+        "rate_upper": [
+          249.99733202902712,
+          250.00120461700376,
+          249.99600585431946
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 89,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    },
+    {
+      "t": 91,
+      "recommended_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reason": "insufficient_capacity_evidence",
+      "recorded_actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recommendation_applied_by_adapter": false,
+      "recommendation_matches_recorded_action": true,
+      "last_actual_change_before": -1000000000,
+      "last_actual_change_after": -1000000000,
+      "model_evidence": {
+        "t": 91,
+        "mode": "full",
+        "selected_action_id": null,
+        "estimated_rates": [
+          199.99807906089953,
+          200.0008673242427,
+          199.99712421511
+        ],
+        "rate_lower": [
+          149.99855929567465,
+          150.00065049318204,
+          149.9978431613325
+        ],
+        "rate_upper": [
+          249.9975988261244,
+          250.00108415530337,
+          249.99640526888751
+        ],
+        "recent_busy_counts": [
+          0,
+          0,
+          0
+        ],
+        "last_observed_minute": 90,
+        "known_transit_delay": 0,
+        "legal_candidates": 57,
+        "evidence_rejected": 57,
+        "separation_rejected": 0,
+        "branch": "insufficient_capacity_evidence"
+      }
+    }
+  ],
+  "recommended_move_count": 13,
+  "recorded_actual_move_count": 0,
+  "scope": "Recommendations on the recorded trajectory only. They were not applied; no counterfactual queue, throughput, cost saving or benefit is measured.",
+  "input_file_sha256": "4e22071e03bf98f22a6bc76d487e05fb988d9fa7c8a57a406cb9c2604161b799"
+}

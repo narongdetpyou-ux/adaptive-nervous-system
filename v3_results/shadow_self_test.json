@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "input_unchanged": true,
+  "recommendations_never_applied": true,
+  "unapplied_recommendations_did_not_advance_clock": true,
+  "actual_transfer_advanced_clock_and_locked_until_minute_13": true,
+  "synthetic_example_recommendations": 13,
+  "external_connections": 0
+}

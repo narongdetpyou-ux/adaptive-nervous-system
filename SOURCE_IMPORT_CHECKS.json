@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-25T08:13:27.147274+00:00",
+  "staging_path": "/workspace/scratch/faa307b55489/ans_github_ready/Adaptive_Nervous_System_v040",
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5",
+  "frozen_verification": {
+    "passed": true,
+    "command": "python freeze_v4.py --verify",
+    "elapsed_seconds": 0.662252976999298,
+    "protocol_sha256": "2fe838eb290ccbd274265f611ba7ec2289419e9c939698a01ea86235c8c94b1f",
+    "parent_v3_protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054",
+    "output": "SOURCE_IMPORT_FREEZE_VERIFY.json"
+  },
+  "unit_tests": {
+    "passed": true,
+    "tests_run": 79,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "modules": [
+      "test_lab",
+      "test_capacity",
+      "test_v3",
+      "test_v4",
+      "test_v4_metrics"
+    ],
+    "elapsed_seconds": 10.725201756000388,
+    "log": "SOURCE_IMPORT_TESTS.log"
+  },
+  "retained_original_file_count": 193,
+  "retained_original_bytes": 24525133,
+  "all_retained_bytes_match_original": true,
+  "original_retained_files_unchanged": true,
+  "stage_mismatches": [],
+  "original_mismatches": [],
+  "full_experiment_executed": false,
+  "github_mutations": false,
+  "release_archive_rebuilt": false,
+  "license_added": false,
+  "passed": true
+}

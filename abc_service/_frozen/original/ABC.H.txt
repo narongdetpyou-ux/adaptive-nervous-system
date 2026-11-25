@@ -1,0 +1,158 @@
+ABC.H
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# ==========================================
+# 1. การตั้งค่าระบบ และสภาวะวิกฤต (Scenario Setup)
+# ==========================================
+np.random.seed(2026)
+TIMESTEPS = 120
+BASE_CAPACITIES = np.array([20.0, 15.0, 18.0]) # Stage 0, Stage 1, Stage 2
+
+# คลื่นงานเข้ามา + คลื่นสุ่มทะลัก (Stochastic Spikes)
+arrival_rate = np.random.poisson(lam=14, size=TIMESTEPS)
+arrival_rate[20:30] += np.random.randint(15, 25, size=10)  # คลื่นทะลักรอบที่ 1
+arrival_rate[80:90] += np.random.randint(20, 30, size=10)  # คลื่นทะลักรอบที่ 2
+
+def get_system_capacity(t):
+    cap = BASE_CAPACITIES.copy().astype(float)
+    # ===== CRITICAL OUTAGE EVENT =====
+    # ณ t = 50 ถึง 65: Stage 1 ดับสมบูรณ์ 100% (เช่น ระบบไอทีล่ม/อุปกรณ์ชำรุดหนัก)
+    if 50 <= t < 65:
+        cap[1] = 0.0
+    return cap
+
+# ==========================================
+# 2. นิยามโครงสร้างตัวควบคุม (ABC Agent Architecture)
+# ==========================================
+class ABC_CausalAgent:
+    def __init__(self, dwell_time=10):
+        self.dwell_time = dwell_time
+        self.last_change = -dwell_time
+        self.current_alloc = np.array([0, 0, 0])
+
+    def decide(self, t, queues, history_queues):
+        if len(history_queues) < 5:
+            return np.array([0, 0, 0])
+        
+        # กลไก Dwell Lock Protection: ป้องกันการย้ายทีมมั่วซั่ว
+        if t - self.last_change < self.dwell_time:
+            return self.current_alloc.copy()
+            
+        recent = np.array(history_queues[-5:])
+        dQ_dt = recent[-1] - recent[0]  # คำนวณอนุพันธ์อัตราเร่ง
+        score = queues + 2.0 * dQ_dt   # Causal Vector Score
+        
+        target = np.argmax(score)
+        new_alloc = np.array([0, 0, 0])
+        
+        if score[target] > 10:
+            new_alloc[target] = 8
+            others = [i for i in range(3) if i != target]
+            new_alloc[others[0]] = -4
+            new_alloc[others[1]] = -4
+            
+        if not np.array_equal(new_alloc, self.current_alloc):
+            self.current_alloc = new_alloc
+            self.last_change = t
+            
+        return self.current_alloc.copy()
+
+# ==========================================
+# 3. ฟังก์ชันจำลองระบบ (Simulation Loop)
+# ==========================================
+def run_outage_simulation(agent_mode="abc_dwell"):
+    queues = np.array([0.0, 0.0, 0.0])
+    q_history = []
+    backlog_history = []
+    alloc_history = []
+    completed_total = 0
+    
+    if agent_mode == "abc_dwell":
+        agent = ABC_CausalAgent(dwell_time=10)
+    elif agent_mode == "abc_unconstrained":
+        agent = ABC_CausalAgent(dwell_time=0)
+    else:
+        agent = None
+
+    for t in range(TIMESTEPS):
+        queues[0] += arrival_rate[t]
+        base_cap = get_system_capacity(t)
+        
+        if agent is not None:
+            alloc = agent.decide(t, queues, q_history)
+        else:
+            alloc = np.array([0, 0, 0])
+            
+        # กำลังการผลิตจริงหลังปรับทรัพยากร (ไม่ต่ำกว่า 0)
+        eff_cap = np.maximum(0.0, base_cap + alloc)
+        
+        # การไหลของงานผ่าน 3 ด่าน (Pipeline Flow)
+        p0 = min(queues[0], eff_cap[0])
+        queues[0] -= p0
+        queues[1] += p0
+        
+        p1 = min(queues[1], eff_cap[1])
+        queues[1] -= p1
+        queues[2] += p1
+        
+        p2 = min(queues[2], eff_cap[2])
+        queues[2] -= p2
+        completed_total += p2
+        
+        q_history.append(queues.copy())
+        backlog_history.append(queues.sum())
+        alloc_history.append(alloc.copy())
+        
+    return np.array(q_history), np.array(backlog_history), completed_total, np.array(alloc_history)
+
+# ==========================================
+# 4. ประมวลผลและสร้างกราฟวิเคราะห์ (Execution & Plotting)
+# ==========================================
+q_static, bg_static, comp_static, alloc_static = run_outage_simulation("static")
+q_unconst, bg_unconst, comp_unconst, alloc_unconst = run_outage_simulation("abc_unconstrained")
+q_dwell, bg_dwell, comp_dwell, alloc_dwell = run_outage_simulation("abc_dwell")
+
+# แสดงสถิติสรุปผล
+print("=== OUTAGE STRESS TEST RESULTS ===")
+print(f"Static (No Control)  -> Peak Backlog: {bg_static.max():.0f} | Completed: {comp_static:.0f}")
+print(f"ABC Unconstrained    -> Peak Backlog: {bg_unconst.max():.0f} | Completed: {comp_unconst:.0f}")
+print(f"ABC (10-m Dwell Lock)-> Peak Backlog: {bg_dwell.max():.0f} | Completed: {comp_dwell:.0f}")
+
+# วาดกราฟ
+fig, axes = plt.subplots(3, 1, figsize=(12, 11), sharex=True)
+
+# Graph 1: Backlog รวมและการฟื้นตัว
+axes[0].plot(bg_static, label="Static Allocation", color="gray", linestyle="--")
+axes[0].plot(bg_unconst, label="ABC Unconstrained", color="red", alpha=0.7)
+axes[0].plot(bg_dwell, label="ABC + 10-Min Dwell Lock", color="blue", linewidth=2.5)
+axes[0].axvspan(50, 65, color='orange', alpha=0.25, label="100% Outage Event (Stage 1)")
+axes[0].set_title("1. Total Backlog & Recovery Curve (100% Outage at t=50..65)", fontsize=11, fontweight='bold')
+axes[0].set_ylabel("Total Backlog")
+axes[0].legend(loc="upper left")
+axes[0].grid(True, alpha=0.3)
+
+# Graph 2: ดูเจาะจงคิว Stage 1 (จุดที่ดับ)
+axes[1].plot(q_static[:, 1], label="Static (Stage 1 Queue)", color="gray", linestyle="--")
+axes[1].plot(q_dwell[:, 1], label="ABC Dwell (Stage 1 Queue)", color="purple", linewidth=2)
+axes[1].axvspan(50, 65, color='orange', alpha=0.25)
+axes[1].set_title("2. Localized Bottleneck Spikes in Stage 1 (Outage Impact)", fontsize=11, fontweight='bold')
+axes[1].set_ylabel("Stage 1 Queue Length")
+axes[1].legend(loc="upper left")
+axes[1].grid(True, alpha=0.3)
+
+# Graph 3: พฤติกรรมการตัดสินใจของ ABC Agent
+axes[2].plot(alloc_dwell[:, 0], label="Stage 0 Delta", color="green")
+axes[2].plot(alloc_dwell[:, 1], label="Stage 1 Delta", color="orange", linewidth=2)
+axes[2].plot(alloc_dwell[:, 2], label="Stage 2 Delta", color="purple")
+axes[2].axvspan(50, 65, color='orange', alpha=0.25)
+axes[2].set_title("3. ABC Resource Reallocation Dynamics (Response to Outage)", fontsize=11, fontweight='bold')
+axes[2].set_ylabel("Resource Shift Delta")
+axes[2].set_xlabel("Time Step (Minutes)")
+axes[2].legend(loc="upper left")
+axes[2].grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+

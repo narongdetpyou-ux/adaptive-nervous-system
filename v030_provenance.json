@@ -1,0 +1,31 @@
+{
+  "version": "0.3.0",
+  "report_date_bangkok": "2026-11-25",
+  "parent_bundle": {
+    "filename": "Adaptive_Nervous_System_v020.zip",
+    "library_file_id": "libfile_14a01ca4dd0081918d03131c26ca8c6f",
+    "file_id": "file_00000000a33881f6b5b5ffb7bc6e9258",
+    "bytes": 4001083,
+    "sha256": "ec2389cb5804602157d5712d72a543b32d717f0cb81100b64fa84138b0610cfa"
+  },
+  "upstream_provenance": [
+    "provenance.json",
+    "v020_provenance.json"
+  ],
+  "parent_frozen_protocol": "capacity_protocol.json",
+  "frozen_protocol": "v3_protocol.json",
+  "parent_frozen_core_modified": false,
+  "original_abc_and_neuron_flow_modified": false,
+  "added_capabilities": [
+    "Observation persistence and independent stage stress forecasts",
+    "Physical resource transfer duration0/1/3 with active/pending/committed accounting",
+    "Fixed32-minute drainage follow-up and right censoring",
+    "Fresh352-case validation split, sixpolicies, three separately analyzed regimes",
+    "Independent scalar and observation-only replay",
+    "Observation-only shadow adapter with actual-action dwell semantics"
+  ],
+  "data_kind": "Synthetic only; no live telemetry or resource control",
+  "shadow_scope": "Records recommendations only; does not execute actions or estimate observed counterfactual benefit",
+  "frozen_protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054",
+  "report_dependencies": "Core experiment uses pinned NumPy. Optional report builder uses PyMuPDF and Matplotlib with bundled Noto fonts; report source documents versions."
+}

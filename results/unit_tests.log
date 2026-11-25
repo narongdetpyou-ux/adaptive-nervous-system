@@ -1,0 +1,13 @@
+test_bad_trace (test_lab.LabTests.test_bad_trace) ... ok
+test_corrupt_summary_rejected (test_lab.LabTests.test_corrupt_summary_rejected) ... ok
+test_fresh_and_repeat_results (test_lab.LabTests.test_fresh_and_repeat_results) ... ok
+test_guard_blocks_false_signal (test_lab.LabTests.test_guard_blocks_false_signal) ... ok
+test_scenario_reproducibility (test_lab.LabTests.test_scenario_reproducibility) ... ok
+test_source_integrity (test_lab.LabTests.test_source_integrity) ... ok
+test_static_underload (test_lab.LabTests.test_static_underload) ... ok
+test_zero_traffic (test_lab.LabTests.test_zero_traffic) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.089s
+
+OK

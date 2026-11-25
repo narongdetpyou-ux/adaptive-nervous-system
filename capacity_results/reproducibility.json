@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "scope": "Fresh full validation rerun from an empty output directory; repeats are not independent statistical evidence.",
+  "files": [
+    {
+      "path": "summary.json",
+      "bytes_identical": true,
+      "sha256": "88eded982fefa2c1f76cf2fa0a6142624dbf5916613d72a390919b9e4d1c8ef7",
+      "bytes": 362925
+    },
+    {
+      "path": "episodes.csv",
+      "bytes_identical": true,
+      "sha256": "d7e1ca3bd5cc63938d7deacf051a1735ed46455d29f798c5bb278b10fb2d9618",
+      "bytes": 335609
+    },
+    {
+      "path": "scenario_manifest.json",
+      "bytes_identical": true,
+      "sha256": "4f0bc68a661238b9bf96f666fecdfc5a7a6b9f425e82f0f93b30112ef61f4451",
+      "bytes": 118302
+    },
+    {
+      "path": "representative_traces_index.json",
+      "bytes_identical": true,
+      "sha256": "de7d03efd96cfd57c52a76fa99adb4671aebd4abda6ae0f5e2fe39066b833dd9",
+      "bytes": 1717
+    },
+    {
+      "path": "traces/abc.json.gz",
+      "bytes_identical": true,
+      "sha256": "3e6e77eef1d3baa4c5ab3d51f470573e3f1b62c1b1e0fc270ac242971cf0be84",
+      "bytes": 104257
+    },
+    {
+      "path": "traces/abc_capacity.json.gz",
+      "bytes_identical": true,
+      "sha256": "11bd3994edc7eaf9c6f2bea9ac53e73d92b88890235f4d3a22c20df8a4576872",
+      "bytes": 213662
+    },
+    {
+      "path": "traces/abc_guard.json.gz",
+      "bytes_identical": true,
+      "sha256": "bbb5d38981b08de1225d2ac07687e07ef16c3629fd4f1911053f0c508155dde0",
+      "bytes": 87486
+    },
+    {
+      "path": "traces/capacity_aware.json.gz",
+      "bytes_identical": true,
+      "sha256": "6e801ad2a6c6b04cc546699070072fa3a24d672502e29f86ee314597cf211a14",
+      "bytes": 139982
+    },
+    {
+      "path": "traces/maxweight.json.gz",
+      "bytes_identical": true,
+      "sha256": "aa167ede2b404e5046ec27692e4de68cb459a96033208494390a385717cefb0b",
+      "bytes": 78328
+    },
+    {
+      "path": "traces/static.json.gz",
+      "bytes_identical": true,
+      "sha256": "ad0977d562574fde0a582c36a57d41923a4499280f009e8f9204f22a6a4a7d76",
+      "bytes": 65336
+    },
+    {
+      "path": "rows/abc.json",
+      "bytes_identical": true,
+      "sha256": "13ab4b1195fde0e116b8546034c5af42fc35a28257e08df106e79805763202a1",
+      "bytes": 278510
+    },
+    {
+      "path": "rows/abc_capacity.json",
+      "bytes_identical": true,
+      "sha256": "86c2a9818b0f176bc71f6703fd3fc605bd9bcf8fece799290c706deb10f8a18a",
+      "bytes": 276037
+    },
+    {
+      "path": "rows/abc_guard.json",
+      "bytes_identical": true,
+      "sha256": "a8094472f519bbed500578495d9649e58847c2a7e4e97feed4d7838bd638e299",
+      "bytes": 275479
+    },
+    {
+      "path": "rows/capacity_aware.json",
+      "bytes_identical": true,
+      "sha256": "db19c7a7d7eb66076423f5feb0b443d372bf5ff86a30e8f2c9fbe19372afc82f",
+      "bytes": 93691
+    },
+    {
+      "path": "rows/maxweight.json",
+      "bytes_identical": true,
+      "sha256": "4b1f952120666e104fb4187bfd65dabac6fdf134a3a55dc4620052c80b68d9e1",
+      "bytes": 95368
+    },
+    {
+      "path": "rows/static.json",
+      "bytes_identical": true,
+      "sha256": "bb72a08fb9310ca115d10b30379398984ae0a546c56204a75ebf1337ed9a0b42",
+      "bytes": 92160
+    }
+  ],
+  "validation_rollouts_repeated": 2112,
+  "frozen_sources_verified": "94eb90191ec2bb6b58b20760f8ad355f6ade41f3806558d8adfe888cb67519a9",
+  "excluded_nondeterministic_artifacts": [
+    "workflow timestamps and elapsed time",
+    "SQLite runtime state",
+    "workflow receipt containing absolute result-directory paths"
+  ]
+}

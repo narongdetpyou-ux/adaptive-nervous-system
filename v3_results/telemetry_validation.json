@@ -1,0 +1,9 @@
+{
+  "records": 92,
+  "recorded_moves": 0,
+  "known_transit_delay": 0,
+  "total_recorded_arrivals": 160185.0,
+  "total_recorded_completions": 160185.0,
+  "last_actual_change": -1000000000,
+  "scope": "observed resource ledger and serial-flow consistency; service capacity cannot be verified without independent telemetry"
+}

@@ -1,0 +1,32 @@
+{
+  "elapsed_seconds": 18.205846944000086,
+  "errors": 0,
+  "failures": 0,
+  "holdout_evaluated": false,
+  "modules": [
+    "test_lab",
+    "test_capacity",
+    "test_v3",
+    "test_v4",
+    "test_v4_metrics"
+  ],
+  "passed": true,
+  "skipped": 0,
+  "source_hashes": {
+    "audit_v4.py": "a094ff949b48b63119c438aba7484fae804755406507faa3f529d3898b9d2548",
+    "evaluate_v4.py": "94d0cdc18e87fd2833b0e3f53a45dedfe9c58f741aa2e7f823db74929279acf5",
+    "test_capacity.py": "92df2d927392760b7638fdd0295e4fbe93d7ddd0ac1c80cea2d033d92f890352",
+    "test_lab.py": "2f686961c6a9f6e0e7f98bc5f76844da7b1d6bba7672d125dc37c7db0a7154e1",
+    "test_v3.py": "31a24a94914f4d086126391ae947f24042d0ba5e6b50dc2c3d094c45fc667bdf",
+    "test_v4.py": "48b5fbbd3642a1c0d70ffbdbb615bba98be2a560535ce7882d1774fb9d54b1e9",
+    "test_v4_metrics.py": "fcd3126fa85e1a706ef348703530a534eb3982658530810f8aeaeaec58c99490",
+    "v4_environment.py": "41acc9970c579d30293782b95baf22b1c53730d33a6a64f4829d4d370f5ff17b",
+    "v4_metrics.py": "fb32e94e3a246595225a35aa337954021ba6c3d99003a10028888834474b6e65",
+    "v4_policy.py": "e0231e9dcd07c492794da828b54852c519b8ab53d305a414e2edfa0c733e3a12",
+    "v4_scenarios.py": "6f022fa8c204d2874cb2ca4cbc63acd1f6322f80fa0c560e1e188ce4af1beeb7",
+    "v4_simulation.py": "18eca8025f89513d50190a5426ef552788686993a4f489060a78f3726de90966"
+  },
+  "sources_unchanged_during_tests": true,
+  "successful": true,
+  "tests_run": 79
+}

@@ -1,0 +1,128 @@
+{
+  "instant__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/instant__static.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "83a3ecacf1416900b1eaa8edc2078b13c39ce4ce03d599f655e4fbc7da85079c"
+  },
+  "instant__abc_capacity": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/instant__abc_capacity.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "f2c059b9dc7d5755115a10f3135613be726bd46effda89dec168ed08cb0cb985"
+  },
+  "instant__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/instant__capacity_v2.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "e69f5fc8c68e478e0923646b2ee662dc8823179395af48f252b3f43b39992369"
+  },
+  "instant__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/instant__capacity_balance.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "a4a9c0392b7f71ae42d51f34660c43ae50c84ed1293201e6d52b29f2756226dd"
+  },
+  "instant__v3_signal_only": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/instant__v3_signal_only.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "8ed7b71500b62c4bfc390f62b52c04c9e4c8c4e28cf4bbca39bb6d364ae32448"
+  },
+  "instant__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/instant__v3_full.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "1c25e7c48616e23df937bc9c6404727090a087e2e662b87f1e5689908186a1d9"
+  },
+  "transit_1__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_1__static.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "8c4f8efb32154216225d8ad7ac292fc7bc32f4c194bc360f56ece6b789d11554"
+  },
+  "transit_1__abc_capacity": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_1__abc_capacity.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "997757d84cb634e7f9beffa8b7a49b89c81bba92201db57251b580c22d8f7b7f"
+  },
+  "transit_1__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_1__capacity_v2.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "6102cdd812041d16466b9c5d619564d600e30c3b1d6cdb6988c0efa97a77aa7f"
+  },
+  "transit_1__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_1__capacity_balance.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "6755a0644d39739b65c5e69a2df405652039c7aeef5a5a2e66ace3444658ee9a"
+  },
+  "transit_1__v3_signal_only": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_1__v3_signal_only.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "7efcbe0bcae77e67d4227055aacc6e831ccc7d2501edc169811ed3bfd3d3d1be"
+  },
+  "transit_1__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_1__v3_full.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "51c0dd036d54aba9153fa4c1f8a6740bdfedd72417da2278e35ac3916470569b"
+  },
+  "transit_3__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_3__static.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "651d7b3685f07c9c26c717ed3a84614fb2a9a309f972d56a7f25020db889dadb"
+  },
+  "transit_3__abc_capacity": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_3__abc_capacity.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "419215df92717b0d2d1d885800746548accaea88070ec333db9118bd0648a960"
+  },
+  "transit_3__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_3__capacity_v2.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "53c9d10cf1e4f8550ee91c1cc66eabb12fbcb49b5267f2d6eaf347fc49aee401"
+  },
+  "transit_3__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_3__capacity_balance.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "72c21a23b6348b7c624a0f8d045eb4e4d86ebb0262f5525b71a1b330de218f6e"
+  },
+  "transit_3__v3_signal_only": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_3__v3_signal_only.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "3088b61f08c72d5e581c1f21fc91194b8dba749284a7ca040bed8769f38addf8"
+  },
+  "transit_3__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/transit_3__v3_full.json.gz",
+    "selection": "first scenario seed per family, first policy seed; fixed before execution",
+    "sha256": "30c7c406b3db95c007d9c92a62c394ca3aa999579deaf40e1a218c949b65131b"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "static": {
+    "count": 11,
+    "minutes": 876,
+    "path": "traces/static.json.gz",
+    "selection": "first scenario seed in each family, first policy seed only; selected before execution",
+    "sha256": "ad0977d562574fde0a582c36a57d41923a4499280f009e8f9204f22a6a4a7d76"
+  },
+  "maxweight": {
+    "count": 11,
+    "minutes": 876,
+    "path": "traces/maxweight.json.gz",
+    "selection": "first scenario seed in each family, first policy seed only; selected before execution",
+    "sha256": "aa167ede2b404e5046ec27692e4de68cb459a96033208494390a385717cefb0b"
+  },
+  "abc": {
+    "count": 11,
+    "minutes": 876,
+    "path": "traces/abc.json.gz",
+    "selection": "first scenario seed in each family, first policy seed only; selected before execution",
+    "sha256": "3e6e77eef1d3baa4c5ab3d51f470573e3f1b62c1b1e0fc270ac242971cf0be84"
+  },
+  "abc_guard": {
+    "count": 11,
+    "minutes": 876,
+    "path": "traces/abc_guard.json.gz",
+    "selection": "first scenario seed in each family, first policy seed only; selected before execution",
+    "sha256": "bbb5d38981b08de1225d2ac07687e07ef16c3629fd4f1911053f0c508155dde0"
+  },
+  "abc_capacity": {
+    "count": 11,
+    "minutes": 876,
+    "path": "traces/abc_capacity.json.gz",
+    "selection": "first scenario seed in each family, first policy seed only; selected before execution",
+    "sha256": "11bd3994edc7eaf9c6f2bea9ac53e73d92b88890235f4d3a22c20df8a4576872"
+  },
+  "capacity_aware": {
+    "count": 11,
+    "minutes": 876,
+    "path": "traces/capacity_aware.json.gz",
+    "selection": "first scenario seed in each family, first policy seed only; selected before execution",
+    "sha256": "6e801ad2a6c6b04cc546699070072fa3a24d672502e29f86ee314597cf211a14"
+  }
+}

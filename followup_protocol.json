@@ -1,0 +1,8 @@
+{
+  "purpose": "Exploratory follow-up after seeing primary negative result; new random seeds, same source trace and generator family",
+  "scenario_seeds": [200,201,202,203,204,205,206,207],
+  "guard": "Only call original ABC when at least one stage had backlog >10 at BOTH of the last two end-of-minute observations. Otherwise hold. Original ABC state, policy and action catalog unchanged.",
+  "policy_comparison": ["static", "maxweight", "abc", "abc_guard"],
+  "primary_metric": "same as primary protocol",
+  "scope": "direct CPU policy experiment, not a second Neuron Flow workflow; no tuning after this run; independent seeds but not independent real-world data"
+}

@@ -1,0 +1,734 @@
+{
+  "version": "0.4.0",
+  "split": "development",
+  "candidate": "v4_hybrid",
+  "acceptance_declaration_sha256": "1105442baf50d0cee923c671ebc2c024d3e8697e90e280843fbdffdd005fb6ef",
+  "scope": {
+    "scenarios": 88,
+    "episodes": 3696,
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
+    "policies": [
+      "static",
+      "capacity_v2",
+      "capacity_balance",
+      "v3_full",
+      "v4_hybrid",
+      "v4_no_risk",
+      "v4_no_recovery"
+    ]
+  },
+  "primary": {
+    "passed": true,
+    "regime": "delayed_noisy",
+    "baseline": "v3_full",
+    "candidate_risk": 12967.8437238182,
+    "baseline_risk": 17468.3455919391,
+    "risk_reduction": 4500.501868120902,
+    "risk_reduction_ci95": [
+      295.18851630527814,
+      8220.321167751774
+    ],
+    "condition": "lower endpoint > 0; both zero does not establish superiority"
+  },
+  "risk_point_nonworsening": {
+    "passed": false,
+    "checks": [
+      {
+        "regime": "legacy_instant",
+        "baseline": "v3_full",
+        "candidate_risk": 407.18123062385234,
+        "baseline_risk": 5316.164969301565,
+        "risk_reduction": 4908.983738677713,
+        "passed": true
+      },
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_v2",
+        "candidate_risk": 407.18123062385234,
+        "baseline_risk": 2124.8849290377125,
+        "risk_reduction": 1717.7036984138601,
+        "passed": true
+      },
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_balance",
+        "candidate_risk": 407.18123062385234,
+        "baseline_risk": 1351.283616024123,
+        "risk_reduction": 944.1023854002706,
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "v3_full",
+        "candidate_risk": 3560.006615816967,
+        "baseline_risk": 12919.36731063575,
+        "risk_reduction": 9359.360694818783,
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_v2",
+        "candidate_risk": 3560.006615816967,
+        "baseline_risk": 3940.457857726727,
+        "risk_reduction": 380.45124190976003,
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_balance",
+        "candidate_risk": 3560.006615816967,
+        "baseline_risk": 4276.546252091873,
+        "risk_reduction": 716.5396362749057,
+        "passed": true
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "v3_full",
+        "candidate_risk": 3543.349294853296,
+        "baseline_risk": 12919.36731063575,
+        "risk_reduction": 9376.018015782452,
+        "passed": true
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_v2",
+        "candidate_risk": 3543.349294853296,
+        "baseline_risk": 3460.9449986080394,
+        "risk_reduction": -82.40429624525677,
+        "passed": false
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_balance",
+        "candidate_risk": 3543.349294853296,
+        "baseline_risk": 4267.347523412448,
+        "risk_reduction": 723.9982285591518,
+        "passed": true
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "v3_full",
+        "candidate_risk": 9861.310722945169,
+        "baseline_risk": 23163.812428334968,
+        "risk_reduction": 13302.5017053898,
+        "passed": true
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_v2",
+        "candidate_risk": 9861.310722945169,
+        "baseline_risk": 46244.74442359217,
+        "risk_reduction": 36383.433700647,
+        "passed": true
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_balance",
+        "candidate_risk": 9861.310722945169,
+        "baseline_risk": 11824.594255589673,
+        "risk_reduction": 1963.2835326445038,
+        "passed": true
+      },
+      {
+        "regime": "startup",
+        "baseline": "v3_full",
+        "candidate_risk": 11257.02891930256,
+        "baseline_risk": 23763.23870020834,
+        "risk_reduction": 12506.209780905781,
+        "passed": true
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_v2",
+        "candidate_risk": 11257.02891930256,
+        "baseline_risk": 48421.60269044699,
+        "risk_reduction": 37164.57377114443,
+        "passed": true
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_balance",
+        "candidate_risk": 11257.02891930256,
+        "baseline_risk": 11743.533418713861,
+        "risk_reduction": 486.50449941130137,
+        "passed": true
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "v3_full",
+        "candidate_risk": 12967.8437238182,
+        "baseline_risk": 17468.3455919391,
+        "risk_reduction": 4500.501868120902,
+        "passed": true
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_v2",
+        "candidate_risk": 12967.8437238182,
+        "baseline_risk": 40882.26882990527,
+        "risk_reduction": 27914.425106087067,
+        "passed": true
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_balance",
+        "candidate_risk": 12967.8437238182,
+        "baseline_risk": 14940.553648455074,
+        "risk_reduction": 1972.7099246368743,
+        "passed": true
+      }
+    ],
+    "scope": "Point engineering conditions, not statistical risk noninferiority."
+  },
+  "mean_noninferiority": {
+    "passed": true,
+    "checks": [
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_v2",
+        "candidate_mean": 24867.416582319463,
+        "baseline_mean": 24782.165329650907,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1153.8570138139912,
+        "allowance_slack_ci95": [
+          290.47198729927106,
+          1977.9537906934308
+        ],
+        "passed": true
+      },
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_balance",
+        "candidate_mean": 24867.416582319463,
+        "baseline_mean": 24715.450619137442,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1083.8065677748527,
+        "allowance_slack_ci95": [
+          485.1718093073123,
+          1730.3044036140727
+        ],
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_v2",
+        "candidate_mean": 27484.261919254976,
+        "baseline_mean": 27819.88578136044,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1726.6181511734903,
+        "allowance_slack_ci95": [
+          1091.9911905069941,
+          2385.4781913719694
+        ],
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_balance",
+        "candidate_mean": 27484.261919254976,
+        "baseline_mean": 27344.091090683432,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1227.0337259626285,
+        "allowance_slack_ci95": [
+          724.9354407364286,
+          1777.1045431131947
+        ],
+        "passed": true
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_v2",
+        "candidate_mean": 27566.211333398216,
+        "baseline_mean": 27665.712081318892,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1482.7863519866223,
+        "allowance_slack_ci95": [
+          1022.4299855205976,
+          2014.3309459445506
+        ],
+        "passed": true
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_balance",
+        "candidate_mean": 27566.211333398216,
+        "baseline_mean": 27402.50047036981,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1206.414160490087,
+        "allowance_slack_ci95": [
+          765.709332748343,
+          1674.9167168126194
+        ],
+        "passed": true
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_v2",
+        "candidate_mean": 45408.721696077504,
+        "baseline_mean": 53338.196155466445,
+        "margin_fraction": 0.05,
+        "allowance_slack": 10596.384267162262,
+        "allowance_slack_ci95": [
+          8919.428667005026,
+          12282.879766107799
+        ],
+        "passed": true
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_balance",
+        "candidate_mean": 45408.721696077504,
+        "baseline_mean": 44385.434282624636,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1195.984300678363,
+        "allowance_slack_ci95": [
+          149.9979128573221,
+          2187.648387055517
+        ],
+        "passed": true
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_v2",
+        "candidate_mean": 46106.14417660315,
+        "baseline_mean": 54149.33055758685,
+        "margin_fraction": 0.05,
+        "allowance_slack": 10750.652908863049,
+        "allowance_slack_ci95": [
+          9370.188629906857,
+          12093.753560748193
+        ],
+        "passed": true
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_balance",
+        "candidate_mean": 46106.14417660315,
+        "baseline_mean": 45115.54051847144,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1265.1733677918673,
+        "allowance_slack_ci95": [
+          251.8799559573927,
+          2266.9329540135336
+        ],
+        "passed": true
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_v2",
+        "candidate_mean": 48190.988808079666,
+        "baseline_mean": 55773.11346216572,
+        "margin_fraction": 0.05,
+        "allowance_slack": 10370.780327194341,
+        "allowance_slack_ci95": [
+          9100.171317076705,
+          11702.62846111994
+        ],
+        "passed": true
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_balance",
+        "candidate_mean": 48190.988808079666,
+        "baseline_mean": 47217.83649231072,
+        "margin_fraction": 0.05,
+        "allowance_slack": 1387.7395088465928,
+        "allowance_slack_ci95": [
+          234.30777777507865,
+          2607.8472333215996
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "loss_and_endpoint_point_nonworsening": {
+    "passed": false,
+    "checks": [
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_v2",
+        "metric": "total_dropped",
+        "candidate_mean": 0.0,
+        "baseline_mean": 0.0,
+        "mean_improvement": 0.0,
+        "passed": true
+      },
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_v2",
+        "metric": "end_deficit",
+        "candidate_mean": 21821.07476166209,
+        "baseline_mean": 24895.096184773007,
+        "mean_improvement": 3074.0214231109167,
+        "passed": true
+      },
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_v2",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 208343.06045383718,
+        "baseline_mean": 297529.0015686436,
+        "mean_improvement": 89185.94111480642,
+        "passed": true
+      },
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_balance",
+        "metric": "total_dropped",
+        "candidate_mean": 0.0,
+        "baseline_mean": 0.0,
+        "mean_improvement": 0.0,
+        "passed": true
+      },
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_balance",
+        "metric": "end_deficit",
+        "candidate_mean": 21821.07476166209,
+        "baseline_mean": 21127.730087028896,
+        "mean_improvement": -693.3446746331938,
+        "passed": false
+      },
+      {
+        "regime": "legacy_instant",
+        "baseline": "capacity_balance",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 208343.06045383718,
+        "baseline_mean": 195108.26941235305,
+        "mean_improvement": -13234.791041484132,
+        "passed": false
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_v2",
+        "metric": "total_dropped",
+        "candidate_mean": 0.0,
+        "baseline_mean": 0.0,
+        "mean_improvement": 0.0,
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_v2",
+        "metric": "end_deficit",
+        "candidate_mean": 23166.858504331885,
+        "baseline_mean": 25749.14085576077,
+        "mean_improvement": 2582.282351428883,
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_v2",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 233467.49132482687,
+        "baseline_mean": 320845.40075857297,
+        "mean_improvement": 87377.9094337461,
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_balance",
+        "metric": "total_dropped",
+        "candidate_mean": 0.0,
+        "baseline_mean": 0.0,
+        "mean_improvement": 0.0,
+        "passed": true
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_balance",
+        "metric": "end_deficit",
+        "candidate_mean": 23166.858504331885,
+        "baseline_mean": 21958.59388644216,
+        "mean_improvement": -1208.2646178897267,
+        "passed": false
+      },
+      {
+        "regime": "legacy_transit3",
+        "baseline": "capacity_balance",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 233467.49132482687,
+        "baseline_mean": 209677.57694962152,
+        "mean_improvement": -23789.91437520535,
+        "passed": false
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_v2",
+        "metric": "total_dropped",
+        "candidate_mean": 0.0,
+        "baseline_mean": 0.0,
+        "mean_improvement": 0.0,
+        "passed": true
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_v2",
+        "metric": "end_deficit",
+        "candidate_mean": 23298.798400299485,
+        "baseline_mean": 25202.267889255014,
+        "mean_improvement": 1903.4694889555285,
+        "passed": true
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_v2",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 239044.4705454606,
+        "baseline_mean": 293134.80570072966,
+        "mean_improvement": 54090.33515526907,
+        "passed": true
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_balance",
+        "metric": "total_dropped",
+        "candidate_mean": 0.0,
+        "baseline_mean": 0.0,
+        "mean_improvement": 0.0,
+        "passed": true
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_balance",
+        "metric": "end_deficit",
+        "candidate_mean": 23298.798400299485,
+        "baseline_mean": 21970.679011041546,
+        "mean_improvement": -1328.1193892579395,
+        "passed": false
+      },
+      {
+        "regime": "integer_transit3",
+        "baseline": "capacity_balance",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 239044.4705454606,
+        "baseline_mean": 215249.7278161694,
+        "mean_improvement": -23794.742729291174,
+        "passed": false
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_v2",
+        "metric": "total_dropped",
+        "candidate_mean": 44843.21958293299,
+        "baseline_mean": 56862.695766549296,
+        "mean_improvement": 12019.476183616309,
+        "passed": true
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_v2",
+        "metric": "end_deficit",
+        "candidate_mean": 51274.2423102057,
+        "baseline_mean": 63295.204662611235,
+        "mean_improvement": 12020.962352405535,
+        "passed": true
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_v2",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 1438202.8334720368,
+        "baseline_mean": 1822826.071347759,
+        "mean_improvement": 384623.23787572235,
+        "passed": true
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_balance",
+        "metric": "total_dropped",
+        "candidate_mean": 44843.21958293299,
+        "baseline_mean": 39588.139734241675,
+        "mean_improvement": -5255.079848691312,
+        "passed": false
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_balance",
+        "metric": "end_deficit",
+        "candidate_mean": 51274.2423102057,
+        "baseline_mean": 46019.162461514396,
+        "mean_improvement": -5255.0798486913045,
+        "passed": false
+      },
+      {
+        "regime": "finite_pipeline",
+        "baseline": "capacity_balance",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 1438202.8334720368,
+        "baseline_mean": 1270040.2783139152,
+        "mean_improvement": -168162.5551581215,
+        "passed": false
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_v2",
+        "metric": "total_dropped",
+        "candidate_mean": 45934.26710442686,
+        "baseline_mean": 58028.494448050966,
+        "mean_improvement": 12094.227343624108,
+        "passed": true
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_v2",
+        "metric": "end_deficit",
+        "candidate_mean": 52365.28983169959,
+        "baseline_mean": 64461.00334411289,
+        "mean_improvement": 12095.713512413298,
+        "passed": true
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_v2",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 1473116.3541598413,
+        "baseline_mean": 1860131.6291558123,
+        "mean_improvement": 387015.274995971,
+        "passed": true
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_balance",
+        "metric": "total_dropped",
+        "candidate_mean": 45934.26710442686,
+        "baseline_mean": 40623.10292070046,
+        "mean_improvement": -5311.164183726396,
+        "passed": false
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_balance",
+        "metric": "end_deficit",
+        "candidate_mean": 52365.28983169959,
+        "baseline_mean": 47054.125647973204,
+        "mean_improvement": -5311.164183726389,
+        "passed": false
+      },
+      {
+        "regime": "startup",
+        "baseline": "capacity_balance",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 1473116.3541598413,
+        "baseline_mean": 1303159.1002805969,
+        "mean_improvement": -169957.25387924444,
+        "passed": false
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_v2",
+        "metric": "total_dropped",
+        "candidate_mean": 48611.29424928537,
+        "baseline_mean": 61110.36764505487,
+        "mean_improvement": 12499.073395769497,
+        "passed": true
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_v2",
+        "metric": "end_deficit",
+        "candidate_mean": 55042.3169765581,
+        "baseline_mean": 67542.87654111683,
+        "mean_improvement": 12500.559564558731,
+        "passed": true
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_v2",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 1558781.2227953137,
+        "baseline_mean": 1958751.571459938,
+        "mean_improvement": 399970.3486646244,
+        "passed": true
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_balance",
+        "metric": "total_dropped",
+        "candidate_mean": 48611.29424928537,
+        "baseline_mean": 43972.80772318554,
+        "mean_improvement": -4638.486526099827,
+        "passed": false
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_balance",
+        "metric": "end_deficit",
+        "candidate_mean": 55042.3169765581,
+        "baseline_mean": 50403.83045045827,
+        "mean_improvement": -4638.486526099827,
+        "passed": false
+      },
+      {
+        "regime": "delayed_noisy",
+        "baseline": "capacity_balance",
+        "metric": "tail_auc_deficit",
+        "candidate_mean": 1558781.2227953137,
+        "baseline_mean": 1410349.6539601195,
+        "mean_improvement": -148431.56883519422,
+        "passed": false
+      }
+    ]
+  },
+  "integrity": {
+    "passed": false,
+    "checks": {
+      "tests_passed": true,
+      "frozen_identity_passed": false,
+      "source_and_sensor_boundary_passed": true,
+      "full_episode_accounting_passed": true,
+      "paired_scope_passed": true,
+      "independent_replay_passed": true
+    },
+    "missing_or_failed": [
+      "frozen_identity_passed"
+    ]
+  },
+  "underload": {
+    "passed": true,
+    "episodes_checked": 48,
+    "violations": [],
+    "scope": "Retained/pipeline work may be positive; every full-run drop and move must be zero."
+  },
+  "advancement_checks": {
+    "primary_final_regime_risk_superiority": {
+      "passed": true
+    },
+    "risk_point_nonworsening_every_regime": {
+      "passed": false
+    },
+    "mean_noninferiority_every_regime": {
+      "passed": true
+    },
+    "loss_and_endpoint_point_nonworsening": {
+      "passed": false
+    },
+    "integrity": {
+      "passed": false
+    },
+    "underload_zero_drops_and_moves": {
+      "passed": true
+    }
+  },
+  "failed_criteria": [
+    "risk_point_nonworsening_every_regime",
+    "loss_and_endpoint_point_nonworsening",
+    "integrity"
+  ],
+  "advancement_passed": false,
+  "decision": "does_not_meet_declared_engineering_conditions",
+  "limitations": [
+    "The primary risk is defined relative to Static within the same realism regime.",
+    "Exact scalar point means/CVaR are checked against retained rows; bootstrap intervals use the frozen metric implementation.",
+    "The 5% margin applies only to mean demand deficit, not to CVaR, dropped work or endpoint point checks.",
+    "Passing this synthetic engineering intersection does not establish safe live deployment or universal workload performance."
+  ],
+  "development_only_note": "Descriptive check on known cases, not fresh validation. frozen_identity_passed is intentionally false because this completed run preceded final freeze. No configuration override or acceptance change follows these results."
+}

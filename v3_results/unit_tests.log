@@ -1,0 +1,47 @@
+test_bad_trace (test_lab.LabTests.test_bad_trace) ... ok
+test_corrupt_summary_rejected (test_lab.LabTests.test_corrupt_summary_rejected) ... ok
+test_fresh_and_repeat_results (test_lab.LabTests.test_fresh_and_repeat_results) ... ok
+test_guard_blocks_false_signal (test_lab.LabTests.test_guard_blocks_false_signal) ... ok
+test_scenario_reproducibility (test_lab.LabTests.test_scenario_reproducibility) ... ok
+test_source_integrity (test_lab.LabTests.test_source_integrity) ... ok
+test_static_underload (test_lab.LabTests.test_static_underload) ... ok
+test_zero_traffic (test_lab.LabTests.test_zero_traffic) ... ok
+test_independent_replay_matches_hand_calculation (test_capacity.AccountingAuditTests.test_independent_replay_matches_hand_calculation) ... ok
+test_policy_replicates_do_not_change_case_weight (test_capacity.AccountingAuditTests.test_policy_replicates_do_not_change_case_weight) ... ok
+test_upstream_sources_are_byte_identical (test_capacity.AccountingAuditTests.test_upstream_sources_are_byte_identical) ... ok
+test_verifier_rejects_corrupted_physical_state (test_capacity.AccountingAuditTests.test_verifier_rejects_corrupted_physical_state) ... ok
+test_verifier_rejects_corrupted_summary_and_scope (test_capacity.AccountingAuditTests.test_verifier_rejects_corrupted_summary_and_scope) ... ok
+test_paired_bootstrap_preserves_constant_improvement (test_capacity.BenchmarkDesignTests.test_paired_bootstrap_preserves_constant_improvement) ... ok
+test_splits_are_reproducible_and_seed_disjoint (test_capacity.BenchmarkDesignTests.test_splits_are_reproducible_and_seed_disjoint) ... ok
+test_zero_baseline_has_no_percentage_claim (test_capacity.BenchmarkDesignTests.test_zero_baseline_has_no_percentage_claim) ... ok
+test_accepted_moves_respect_contract_and_commit_abc_state (test_capacity.CapacityPolicyTests.test_accepted_moves_respect_contract_and_commit_abc_state) ... ok
+test_censored_flow_is_lower_bound_not_capacity_collapse (test_capacity.CapacityPolicyTests.test_censored_flow_is_lower_bound_not_capacity_collapse) ... ok
+test_decision_cannot_use_current_or_future_hidden_rates (test_capacity.CapacityPolicyTests.test_decision_cannot_use_current_or_future_hidden_rates) ... ok
+test_observation_order_and_dwell_forecast_are_enforced (test_capacity.CapacityPolicyTests.test_observation_order_and_dwell_forecast_are_enforced) ... ok
+test_prediction_does_not_double_count_current_arrival (test_capacity.CapacityPolicyTests.test_prediction_does_not_double_count_current_arrival) ... ok
+test_underload_holds_and_rejected_abc_does_not_commit (test_capacity.CapacityPolicyTests.test_underload_holds_and_rejected_abc_does_not_commit) ... ok
+test_zero_resources_do_not_imply_zero_productivity (test_capacity.CapacityPolicyTests.test_zero_resources_do_not_imply_zero_productivity) ... ok
+test_delay_predictor_matches_scalar_service_and_does_not_charge_hold (test_v3.ProductionTransitTests.test_delay_predictor_matches_scalar_service_and_does_not_charge_hold) ... ok
+test_independent_auditor_rejects_transit_and_tail_corruption (test_v3.ProductionTransitTests.test_independent_auditor_rejects_transit_and_tail_corruption) ... ok
+test_production_ledger_matches_independent_timing (test_v3.ProductionTransitTests.test_production_ledger_matches_independent_timing) ... ok
+test_trace_row_and_observation_replay_with_delay_and_followup (test_v3.ProductionTransitTests.test_trace_row_and_observation_replay_with_delay_and_followup) ... ok
+test_zero_delay_reproduces_frozen_v2_original_horizon (test_v3.ProductionTransitTests.test_zero_delay_reproduces_frozen_v2_original_horizon) ... ok
+test_clearance_delay_zero_and_first_tail_interval (test_v3.TailCensoringTests.test_clearance_delay_zero_and_first_tail_interval) ... ok
+test_uncleared_tail_is_censored_not_a_fake_clearance_time (test_v3.TailCensoringTests.test_uncleared_tail_is_censored_not_a_fake_clearance_time) ... ok
+test_cvar_uses_fractional_tail_mass (test_v3.TailRiskMetricTests.test_cvar_uses_fractional_tail_mass) ... ok
+test_busy_capacity_inference_uses_active_resources (test_v3.TransitReferenceTests.test_busy_capacity_inference_uses_active_resources) ... ok
+test_delay_zero_activates_in_same_service_interval (test_v3.TransitReferenceTests.test_delay_zero_activates_in_same_service_interval) ... ok
+test_end_of_window_separates_actual_from_future_transfer_cost (test_v3.TransitReferenceTests.test_end_of_window_separates_actual_from_future_transfer_cost) ... ok
+test_hold_does_not_reset_timer_or_dwell (test_v3.TransitReferenceTests.test_hold_does_not_reset_timer_or_dwell) ... ok
+test_recipient_waits_exactly_delay_full_service_intervals (test_v3.TransitReferenceTests.test_recipient_waits_exactly_delay_full_service_intervals) ... ok
+test_five_busy_samples_can_override_overlap_but_not_an_empty_latest_queue (test_v3.V3ObservationTests.test_five_busy_samples_can_override_overlap_but_not_an_empty_latest_queue) ... ok
+test_full_forecast_has_independent_stage_corners_and_known_delay (test_v3.V3ObservationTests.test_full_forecast_has_independent_stage_corners_and_known_delay) ... ok
+test_full_gate_enforces_declared_stress_allowance_and_terminal_guard (test_v3.V3ObservationTests.test_full_gate_enforces_declared_stress_allowance_and_terminal_guard) ... ok
+test_hidden_current_and_future_changes_do_not_change_prior_decisions (test_v3.V3ObservationTests.test_hidden_current_and_future_changes_do_not_change_prior_decisions) ... ok
+test_stale_low_rate_anchor_is_not_erased_by_prior_reversion (test_v3.V3ObservationTests.test_stale_low_rate_anchor_is_not_erased_by_prior_reversion) ... ok
+test_two_busy_observations_are_required_for_recipient_eligibility (test_v3.V3ObservationTests.test_two_busy_observations_are_required_for_recipient_eligibility) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 2.112s
+
+OK

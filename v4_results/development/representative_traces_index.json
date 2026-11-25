@@ -1,0 +1,296 @@
+{
+  "legacy_instant__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_instant__static.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "f23b5e04a1186645677a4da6fa0fb99d741666d37ec2aae33efe609014df3655"
+  },
+  "legacy_instant__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_instant__capacity_v2.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "55aeae2ab0f8d36926a3239c842f6d5b0ff6701095806a11417a05ace73657a7"
+  },
+  "legacy_instant__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_instant__capacity_balance.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "c008802c8abebecaf8a9fb6eb110e0e4888fccdda34054ca2a6ed5864699015a"
+  },
+  "legacy_instant__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_instant__v3_full.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "66c8f81a846de2d89db3a306b2d1cec08a46ddb7f88ff69be796180a2fd87aba"
+  },
+  "legacy_instant__v4_hybrid": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_instant__v4_hybrid.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "a683c54e920480a1738dbff55582ab8ff900f74478a8c5580630615659841434"
+  },
+  "legacy_instant__v4_no_risk": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_instant__v4_no_risk.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "b47d6506e7307eb454cf406e512b8b79d9d044c385c003de76b8547e5c94a101"
+  },
+  "legacy_instant__v4_no_recovery": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_instant__v4_no_recovery.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "f8330cd851c86fdfd8acd3d2b7c2f7a446ebd6d27cbb4d517e7e790732432fc2"
+  },
+  "legacy_transit3__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_transit3__static.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "420de142c9490a708022e76e06adbb46e9f3e623967b2b56d1bc14d17f778f4d"
+  },
+  "legacy_transit3__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_transit3__capacity_v2.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "32d8b8062604f2ce060c900da1bcb7ceab021fe6ca8085a6e8e26e6ac75aa55f"
+  },
+  "legacy_transit3__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_transit3__capacity_balance.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "790b59277f9f886a6851809a399012f45a7f5c2d3e5f4a78f9f3a321d8ee30f5"
+  },
+  "legacy_transit3__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_transit3__v3_full.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "aace99da258492ec7f4cdcf116bb08b0f8b1f9a12a383159c1d2516d29c71703"
+  },
+  "legacy_transit3__v4_hybrid": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_transit3__v4_hybrid.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "5faaf904e7b246038eb2c1f4228fb35b95d2736247bf84c417e1bb5f95c71419"
+  },
+  "legacy_transit3__v4_no_risk": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_transit3__v4_no_risk.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "0ee205ca49e55084fa326f4187c936cfd5a9976d07fdd735cf2d845730be04da"
+  },
+  "legacy_transit3__v4_no_recovery": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/legacy_transit3__v4_no_recovery.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "ddf676a1fdfbef20ab673e3a10dc78bf823a76c0e0b3c0cda116696d18472e14"
+  },
+  "integer_transit3__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/integer_transit3__static.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "d74282d59e0237bc02ad1e9e62b765f7300f2325133ac3bfa95b9fe80606aa87"
+  },
+  "integer_transit3__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/integer_transit3__capacity_v2.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "0c224d17c6fe1041b03f6d8f8e87769ffda9cf7d389fb15adf64280703547c69"
+  },
+  "integer_transit3__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/integer_transit3__capacity_balance.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "36764a5301f241246a0ca8c0d2c6dba2c88c1db2748d8233dc863c1ae6ab2b2b"
+  },
+  "integer_transit3__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/integer_transit3__v3_full.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "3de42fd5450ca15fa2df642f55b2efa8c0e13d042b19526e7b50a07944180c40"
+  },
+  "integer_transit3__v4_hybrid": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/integer_transit3__v4_hybrid.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "f39de651167e8bfc91a8af7f7e1869c52492e339b0f85a12107db00f04e9552b"
+  },
+  "integer_transit3__v4_no_risk": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/integer_transit3__v4_no_risk.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "f973556996249a5a3d3fd9fb71e28c55527c3692dccc4898c1a8ec174b10f8af"
+  },
+  "integer_transit3__v4_no_recovery": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/integer_transit3__v4_no_recovery.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "7555e0b09202c87c86bc637fe7813b149a9766f07e9e70d3375a05745e1ab631"
+  },
+  "finite_pipeline__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/finite_pipeline__static.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "f5b09c29d7812f2b9a5f05b9e4453461871e482015a120f9d934f5dca5bca7d7"
+  },
+  "finite_pipeline__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/finite_pipeline__capacity_v2.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "7055330bec19e7eb9de391752a5d5593830f6b74df48a7c8f75b544c7b240b63"
+  },
+  "finite_pipeline__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/finite_pipeline__capacity_balance.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "7b0d833dcf2fe41127c3b24f8bd416aa1b5d7dd9de31489ed9fd5b73c5d13919"
+  },
+  "finite_pipeline__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/finite_pipeline__v3_full.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "70bd6c591b66392751800e68920a77949f55d47aeced1ee0f2da12cfab206b7a"
+  },
+  "finite_pipeline__v4_hybrid": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/finite_pipeline__v4_hybrid.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "4e0875e2ed1d59d5b06862457764616fb66820f0fae2697663aff5dfa1c2e5f8"
+  },
+  "finite_pipeline__v4_no_risk": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/finite_pipeline__v4_no_risk.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "450d7eafee24cc7dc38fe549e278393d3137c0246d1823d625000c3c50dabe03"
+  },
+  "finite_pipeline__v4_no_recovery": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/finite_pipeline__v4_no_recovery.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "a64d5379cf948a7d8184855a18499c054255eadebb5b06621a693c78fde7d84d"
+  },
+  "startup__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/startup__static.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "b987e43f778f4774f03299679b0b6e1e92001fcd2e9715ebc4f517faff5cc484"
+  },
+  "startup__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/startup__capacity_v2.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "d67148c883c5613dca0f9792038f383e8cd896967820bb3f28ff286e38b9eafc"
+  },
+  "startup__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/startup__capacity_balance.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "7299af292a5c5f1d61008e75c09ea85b57c69d2f12aecb04d05dd1502b905190"
+  },
+  "startup__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/startup__v3_full.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "df0ecf7fed81bcc7022a6454511cbe8ac1620a374986615fa1d8a1862ca7e291"
+  },
+  "startup__v4_hybrid": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/startup__v4_hybrid.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "6698a43ed1764d56c2d98b2525bf147aebdf4598b1d14acf8b4fa4d40740b869"
+  },
+  "startup__v4_no_risk": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/startup__v4_no_risk.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "a1663b625c979c42e4fb40d879d71a8bf0ce7d83de9711181eb678b525a021e8"
+  },
+  "startup__v4_no_recovery": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/startup__v4_no_recovery.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "0c2115bb8b78a73f8306faae54c47fbc383c2d6bcc1e7902d0b2a695dc8a1408"
+  },
+  "delayed_noisy__static": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/delayed_noisy__static.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "b1abcb0b82bcbac6706372a38eecc1b777ac72eab1685ef1708b2b85d6e6ba00"
+  },
+  "delayed_noisy__capacity_v2": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/delayed_noisy__capacity_v2.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "b058e5adb4d95bd0227a6bb546c80e1b80bfda1729f99cd2916eb883838066eb"
+  },
+  "delayed_noisy__capacity_balance": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/delayed_noisy__capacity_balance.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "5174fd9544503d52f5014320eb1f1b1d65ed0c6f976e549b63a5222f70256e3f"
+  },
+  "delayed_noisy__v3_full": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/delayed_noisy__v3_full.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "3848c36ff8a4d7846f28d3dc5854692bc5bbf8a9cc396a2f8b246a42d3f1c151"
+  },
+  "delayed_noisy__v4_hybrid": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/delayed_noisy__v4_hybrid.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "8a85440f95c9cb9737e1d3eb5f5d6fd8a25dc55f08f8485d1cbff338ae66d881"
+  },
+  "delayed_noisy__v4_no_risk": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/delayed_noisy__v4_no_risk.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "67a1fd538d3b9aadabf0ce622414c2790a39c567b8416a9e8ec7ca0ed90257c7"
+  },
+  "delayed_noisy__v4_no_recovery": {
+    "count": 11,
+    "minutes": 1228,
+    "path": "traces/delayed_noisy__v4_no_recovery.json.gz",
+    "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+    "sha256": "b60badb8348d8b6ab2b78ffd3ee005b96304e15b20b1bb799bb174e6a54de6f0"
+  }
+}

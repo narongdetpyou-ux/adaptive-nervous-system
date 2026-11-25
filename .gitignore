@@ -1,0 +1,22 @@
+# Runtime and caches; retained frozen evidence is deliberately not ignored.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+**/workspace/
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+runtime.lock
+
+# Use these NEW destinations for future local output.
+/local_runs/
+/local_reports/
+/local_packages/
+/local_qa/
+
+# Do not blanket-ignore results/, v4_results/, JSON, CSV or log files:
+# selected files there are frozen dependencies and test fixtures.

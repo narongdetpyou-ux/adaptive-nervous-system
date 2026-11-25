@@ -1,0 +1,1560 @@
+[
+  {
+    "sequence": 1,
+    "event_id": "v4_validation:submitted",
+    "job_id": "v4_validation",
+    "step_id": null,
+    "kind": "job.submitted",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {},
+    "timestamp": 1795588458.8996851
+  },
+  {
+    "sequence": 2,
+    "event_id": "v4_validation:RUNNING:33d1d07993b449cab6b0f6ad16a34dae",
+    "job_id": "v4_validation",
+    "step_id": null,
+    "kind": "job.running",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": null
+    },
+    "timestamp": 1795588458.9017608
+  },
+  {
+    "sequence": 3,
+    "event_id": "v4_validation:legacy_instant__static:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588458.903356
+  },
+  {
+    "sequence": 4,
+    "event_id": "v4_validation:legacy_instant__capacity_v2:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588459.220433
+  },
+  {
+    "sequence": 5,
+    "event_id": "v4_validation:legacy_instant__capacity_balance:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588459.4572067
+  },
+  {
+    "sequence": 6,
+    "event_id": "v4_validation:legacy_instant__static:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588482.275642
+  },
+  {
+    "sequence": 7,
+    "event_id": "v4_validation:legacy_instant__v3_full:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588482.2787879
+  },
+  {
+    "sequence": 8,
+    "event_id": "v4_validation:legacy_instant__capacity_balance:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588491.0032544
+  },
+  {
+    "sequence": 9,
+    "event_id": "v4_validation:legacy_instant__v4_hybrid:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v4_hybrid",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588491.0066838
+  },
+  {
+    "sequence": 10,
+    "event_id": "v4_validation:legacy_instant__v4_hybrid:1:RETRY_WAIT",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v4_hybrid",
+    "kind": "step.retry_wait",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": {
+        "message": "Controlled first-attempt failure before v0.4 policy computation",
+        "type": "TransientAgentError"
+      }
+    },
+    "timestamp": 1795588492.1890554
+  },
+  {
+    "sequence": 11,
+    "event_id": "v4_validation:legacy_instant__v4_no_risk:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v4_no_risk",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588492.1911662
+  },
+  {
+    "sequence": 12,
+    "event_id": "v4_validation:legacy_instant__capacity_v2:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588528.2664747
+  },
+  {
+    "sequence": 13,
+    "event_id": "v4_validation:legacy_instant__v4_hybrid:2:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v4_hybrid",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795588528.2708213
+  },
+  {
+    "sequence": 14,
+    "event_id": "v4_validation:legacy_instant__v3_full:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588556.648977
+  },
+  {
+    "sequence": 15,
+    "event_id": "v4_validation:legacy_instant__v4_no_recovery:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v4_no_recovery",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588556.6516604
+  },
+  {
+    "sequence": 16,
+    "event_id": "v4_validation:legacy_instant__v4_no_risk:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v4_no_risk",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588802.1591902
+  },
+  {
+    "sequence": 17,
+    "event_id": "v4_validation:legacy_transit3__static:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588802.1624641
+  },
+  {
+    "sequence": 18,
+    "event_id": "v4_validation:legacy_transit3__static:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588816.0175924
+  },
+  {
+    "sequence": 19,
+    "event_id": "v4_validation:legacy_transit3__capacity_v2:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588816.019765
+  },
+  {
+    "sequence": 20,
+    "event_id": "v4_validation:legacy_transit3__capacity_v2:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588878.3260396
+  },
+  {
+    "sequence": 21,
+    "event_id": "v4_validation:legacy_transit3__capacity_balance:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588878.3284311
+  },
+  {
+    "sequence": 22,
+    "event_id": "v4_validation:legacy_transit3__capacity_balance:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588895.7572362
+  },
+  {
+    "sequence": 23,
+    "event_id": "v4_validation:legacy_transit3__v3_full:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588895.759496
+  },
+  {
+    "sequence": 24,
+    "event_id": "v4_validation:legacy_instant__v4_hybrid:2:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v4_hybrid",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795588915.1605165
+  },
+  {
+    "sequence": 25,
+    "event_id": "v4_validation:legacy_transit3__v4_hybrid:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__v4_hybrid",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588915.1636748
+  },
+  {
+    "sequence": 26,
+    "event_id": "v4_validation:legacy_transit3__v3_full:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588955.2986479
+  },
+  {
+    "sequence": 27,
+    "event_id": "v4_validation:legacy_transit3__v4_no_risk:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__v4_no_risk",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795588955.3006227
+  },
+  {
+    "sequence": 28,
+    "event_id": "v4_validation:legacy_instant__v4_no_recovery:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_instant__v4_no_recovery",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589010.1613805
+  },
+  {
+    "sequence": 29,
+    "event_id": "v4_validation:legacy_transit3__v4_no_recovery:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__v4_no_recovery",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589010.1639805
+  },
+  {
+    "sequence": 30,
+    "event_id": "v4_validation:legacy_transit3__v4_no_risk:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__v4_no_risk",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589224.1180913
+  },
+  {
+    "sequence": 31,
+    "event_id": "v4_validation:integer_transit3__static:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589224.1215398
+  },
+  {
+    "sequence": 32,
+    "event_id": "v4_validation:integer_transit3__static:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589263.920396
+  },
+  {
+    "sequence": 33,
+    "event_id": "v4_validation:integer_transit3__capacity_v2:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589263.923277
+  },
+  {
+    "sequence": 34,
+    "event_id": "v4_validation:legacy_transit3__v4_hybrid:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__v4_hybrid",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589318.3801782
+  },
+  {
+    "sequence": 35,
+    "event_id": "v4_validation:integer_transit3__capacity_balance:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589318.383811
+  },
+  {
+    "sequence": 36,
+    "event_id": "v4_validation:legacy_transit3__v4_no_recovery:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "legacy_transit3__v4_no_recovery",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589353.450088
+  },
+  {
+    "sequence": 37,
+    "event_id": "v4_validation:integer_transit3__v3_full:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589353.4545395
+  },
+  {
+    "sequence": 38,
+    "event_id": "v4_validation:integer_transit3__capacity_balance:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589356.9684148
+  },
+  {
+    "sequence": 39,
+    "event_id": "v4_validation:integer_transit3__v4_hybrid:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__v4_hybrid",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589356.9706442
+  },
+  {
+    "sequence": 40,
+    "event_id": "v4_validation:integer_transit3__capacity_v2:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589389.15219
+  },
+  {
+    "sequence": 41,
+    "event_id": "v4_validation:integer_transit3__v4_no_risk:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__v4_no_risk",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589389.1645997
+  },
+  {
+    "sequence": 42,
+    "event_id": "v4_validation:integer_transit3__v3_full:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589454.0541303
+  },
+  {
+    "sequence": 43,
+    "event_id": "v4_validation:integer_transit3__v4_no_recovery:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__v4_no_recovery",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589454.0569227
+  },
+  {
+    "sequence": 44,
+    "event_id": "v4_validation:integer_transit3__v4_no_risk:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__v4_no_risk",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589825.6594114
+  },
+  {
+    "sequence": 45,
+    "event_id": "v4_validation:finite_pipeline__static:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589825.6626723
+  },
+  {
+    "sequence": 46,
+    "event_id": "v4_validation:integer_transit3__v4_hybrid:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__v4_hybrid",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589859.8666985
+  },
+  {
+    "sequence": 47,
+    "event_id": "v4_validation:finite_pipeline__static:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589863.4017038
+  },
+  {
+    "sequence": 48,
+    "event_id": "v4_validation:finite_pipeline__capacity_v2:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589863.4101691
+  },
+  {
+    "sequence": 49,
+    "event_id": "v4_validation:finite_pipeline__capacity_balance:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589863.4168563
+  },
+  {
+    "sequence": 50,
+    "event_id": "v4_validation:finite_pipeline__capacity_balance:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589907.79054
+  },
+  {
+    "sequence": 51,
+    "event_id": "v4_validation:finite_pipeline__v3_full:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589907.7932775
+  },
+  {
+    "sequence": 52,
+    "event_id": "v4_validation:finite_pipeline__capacity_v2:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589979.1617558
+  },
+  {
+    "sequence": 53,
+    "event_id": "v4_validation:finite_pipeline__v4_hybrid:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__v4_hybrid",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795589979.1655052
+  },
+  {
+    "sequence": 54,
+    "event_id": "v4_validation:finite_pipeline__v3_full:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590009.338061
+  },
+  {
+    "sequence": 55,
+    "event_id": "v4_validation:finite_pipeline__v4_no_risk:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__v4_no_risk",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590009.344266
+  },
+  {
+    "sequence": 56,
+    "event_id": "v4_validation:integer_transit3__v4_no_recovery:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "integer_transit3__v4_no_recovery",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590066.1925735
+  },
+  {
+    "sequence": 57,
+    "event_id": "v4_validation:finite_pipeline__v4_no_recovery:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__v4_no_recovery",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590066.1988332
+  },
+  {
+    "sequence": 58,
+    "event_id": "v4_validation:finite_pipeline__v4_hybrid:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__v4_hybrid",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590441.7317352
+  },
+  {
+    "sequence": 59,
+    "event_id": "v4_validation:startup__static:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "startup__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590441.750755
+  },
+  {
+    "sequence": 60,
+    "event_id": "v4_validation:startup__static:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "startup__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590460.8686476
+  },
+  {
+    "sequence": 61,
+    "event_id": "v4_validation:startup__capacity_v2:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "startup__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590460.8722181
+  },
+  {
+    "sequence": 62,
+    "event_id": "v4_validation:finite_pipeline__v4_no_risk:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__v4_no_risk",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590507.5018191
+  },
+  {
+    "sequence": 63,
+    "event_id": "v4_validation:startup__capacity_balance:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "startup__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590507.5051773
+  },
+  {
+    "sequence": 64,
+    "event_id": "v4_validation:startup__capacity_v2:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "startup__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590529.6801903
+  },
+  {
+    "sequence": 65,
+    "event_id": "v4_validation:startup__v3_full:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "startup__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590529.6829526
+  },
+  {
+    "sequence": 66,
+    "event_id": "v4_validation:startup__capacity_balance:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "startup__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590551.5570335
+  },
+  {
+    "sequence": 67,
+    "event_id": "v4_validation:startup__v4_hybrid:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "startup__v4_hybrid",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590551.5603805
+  },
+  {
+    "sequence": 68,
+    "event_id": "v4_validation:startup__v3_full:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "startup__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590609.6943944
+  },
+  {
+    "sequence": 69,
+    "event_id": "v4_validation:startup__v4_no_risk:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "startup__v4_no_risk",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590609.696808
+  },
+  {
+    "sequence": 70,
+    "event_id": "v4_validation:finite_pipeline__v4_no_recovery:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "finite_pipeline__v4_no_recovery",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590693.4724832
+  },
+  {
+    "sequence": 71,
+    "event_id": "v4_validation:startup__v4_no_recovery:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "startup__v4_no_recovery",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590693.4752262
+  },
+  {
+    "sequence": 72,
+    "event_id": "v4_validation:startup__v4_no_risk:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "startup__v4_no_risk",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590903.684647
+  },
+  {
+    "sequence": 73,
+    "event_id": "v4_validation:delayed_noisy__static:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590903.6890645
+  },
+  {
+    "sequence": 74,
+    "event_id": "v4_validation:delayed_noisy__static:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590922.7536263
+  },
+  {
+    "sequence": 75,
+    "event_id": "v4_validation:delayed_noisy__capacity_v2:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590922.75683
+  },
+  {
+    "sequence": 76,
+    "event_id": "v4_validation:delayed_noisy__capacity_v2:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590993.2386782
+  },
+  {
+    "sequence": 77,
+    "event_id": "v4_validation:delayed_noisy__capacity_balance:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795590993.2408583
+  },
+  {
+    "sequence": 78,
+    "event_id": "v4_validation:delayed_noisy__capacity_balance:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591016.3312905
+  },
+  {
+    "sequence": 79,
+    "event_id": "v4_validation:delayed_noisy__v3_full:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591016.3334455
+  },
+  {
+    "sequence": 80,
+    "event_id": "v4_validation:startup__v4_hybrid:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "startup__v4_hybrid",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591076.0508282
+  },
+  {
+    "sequence": 81,
+    "event_id": "v4_validation:delayed_noisy__v4_hybrid:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v4_hybrid",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591076.0539434
+  },
+  {
+    "sequence": 82,
+    "event_id": "v4_validation:delayed_noisy__v3_full:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591081.6899753
+  },
+  {
+    "sequence": 83,
+    "event_id": "v4_validation:delayed_noisy__v4_no_risk:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v4_no_risk",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591081.6925647
+  },
+  {
+    "sequence": 84,
+    "event_id": "v4_validation:startup__v4_no_recovery:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "startup__v4_no_recovery",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591376.6127222
+  },
+  {
+    "sequence": 85,
+    "event_id": "v4_validation:delayed_noisy__v4_no_recovery:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v4_no_recovery",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591376.62217
+  },
+  {
+    "sequence": 86,
+    "event_id": "v4_validation:delayed_noisy__v4_no_risk:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v4_no_risk",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591406.6365669
+  },
+  {
+    "sequence": 87,
+    "event_id": "v4_validation:delayed_noisy__v4_hybrid:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v4_hybrid",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795591572.1864474
+  },
+  {
+    "sequence": 88,
+    "event_id": "v4_validation:delayed_noisy__v4_no_recovery:1:RETRY_WAIT",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v4_no_recovery",
+    "kind": "step.retry_wait",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": {
+        "message": "Previous controller stopped during this attempt",
+        "type": "ControllerInterrupted"
+      }
+    },
+    "timestamp": 1795592193.7598255
+  },
+  {
+    "sequence": 89,
+    "event_id": "v4_validation:RUNNING:38b54b247d1243378e45d65b5b778264",
+    "job_id": "v4_validation",
+    "step_id": null,
+    "kind": "job.running",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": null
+    },
+    "timestamp": 1795592193.7617352
+  },
+  {
+    "sequence": 90,
+    "event_id": "v4_validation:delayed_noisy__v4_no_recovery:2:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v4_no_recovery",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795592193.8177
+  },
+  {
+    "sequence": 91,
+    "event_id": "v4_validation:delayed_noisy__v4_no_recovery:2:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "delayed_noisy__v4_no_recovery",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795592545.1261704
+  },
+  {
+    "sequence": 92,
+    "event_id": "v4_validation:comparison:1:RUNNING",
+    "job_id": "v4_validation",
+    "step_id": "comparison",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795592545.13042
+  },
+  {
+    "sequence": 93,
+    "event_id": "v4_validation:comparison:1:SUCCEEDED",
+    "job_id": "v4_validation",
+    "step_id": "comparison",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795592561.186544
+  },
+  {
+    "sequence": 94,
+    "event_id": "v4_validation:SUCCEEDED:301feeaa4a274a0496f257dd879409b8",
+    "job_id": "v4_validation",
+    "step_id": null,
+    "kind": "job.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": {
+        "bytes": 49045,
+        "path": "/workspace/scratch/faa307b55489/ANS_v040_reproduction_run/workspace/reports/v4_validation.json",
+        "sha256": "f1d2d0e845083505a0c18cf31a629fea6dc6cd554845a392ca6d981616171176"
+      }
+    },
+    "timestamp": 1795592561.1944025
+  }
+]

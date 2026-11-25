@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ANS v0.3 read-only shadow observations",
+  "description": "Recorded observations only. Latent productivity, future-arrival forecasts and prior decision evidence are not accepted record fields. Resource/flow/dwell/continuity semantics are checked by shadow_replay.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_kind",
+    "description",
+    "units",
+    "model_assumptions",
+    "initial_state",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ans-shadow-observations/0.3.0"
+    },
+    "source_kind": {
+      "type": "string",
+      "enum": [
+        "synthetic",
+        "recorded"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "units": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "time",
+        "work",
+        "resource",
+        "work_unit_definition"
+      ],
+      "properties": {
+        "time": {
+          "const": "minute"
+        },
+        "work": {
+          "const": "work_unit"
+        },
+        "resource": {
+          "const": "resource_unit"
+        },
+        "work_unit_definition": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "model_assumptions": {
+      "type": "object",
+      "const": {
+        "topology": "three_stage_serial_fluid",
+        "budget": 207,
+        "same_minute_forwarding": true,
+        "action_catalog": "ABC_Causal_Service_0.2.0",
+        "warmup_minutes": 5,
+        "dwell_minutes": 8,
+        "minimum_stage_reserve": 10,
+        "nominal_productivity_prior": 200,
+        "no_pending_resources_at_start": true
+      }
+    },
+    "initial_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "committed_staff",
+        "end_queue",
+        "last_actual_change"
+      ],
+      "properties": {
+        "committed_staff": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "end_queue": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "last_actual_change": {
+          "type": "integer",
+          "maximum": -1
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "nonnegative_vector": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t",
+        "arrival",
+        "observed_queue",
+        "staff_before",
+        "active_staff",
+        "pending_staff",
+        "committed_staff",
+        "flow",
+        "end_queue",
+        "actual_delta",
+        "known_transit_delay"
+      ],
+      "properties": {
+        "t": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "arrival": {
+          "type": "number",
+          "minimum": 0
+        },
+        "observed_queue": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "staff_before": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "active_staff": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "pending_staff": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "committed_staff": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "flow": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "end_queue": {
+          "$ref": "#/$defs/nonnegative_vector"
+        },
+        "actual_delta": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number"
+          }
+        },
+        "known_transit_delay": {
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            3
+          ]
+        }
+      }
+    }
+  },
+  "$comment": "Each record starts after scheduled incoming resources activate and ends after the recorded actual transfer and service. staff_before is committed allocation before actual_delta; committed_staff, active_staff and pending_staff describe service-time resources after actual_delta. t starts at0 and increments by1. Active+pending=committed and totals207. A new transfer at t activates incoming resources before service t+delay. The input is descriptive, not an action request."
+}

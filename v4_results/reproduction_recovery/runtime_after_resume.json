@@ -1,0 +1,2332 @@
+{
+  "job_id": "v4_validation",
+  "status": "SUCCEEDED",
+  "receipt": {
+    "bytes": 49045,
+    "path": "/workspace/scratch/faa307b55489/ANS_v040_reproduction_run/workspace/reports/v4_validation.json",
+    "sha256": "f1d2d0e845083505a0c18cf31a629fea6dc6cd554845a392ca6d981616171176"
+  },
+  "delivery_error": null,
+  "steps": {
+    "legacy_instant__static": {
+      "job_id": "v4_validation",
+      "id": "legacy_instant__static",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "static",
+        "regime": "legacy_instant",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_instant__static.json",
+          "sha256": "ee987ef07d700f0c9c8acc16b3eef78a1cc9331e711fa49ec855c029678c5d28"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_instant__static.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "063627876eafe50458df489a5ea23e7ecceb2c38e61449edbdf490a592124d52"
+        }
+      },
+      "error": null
+    },
+    "legacy_instant__capacity_v2": {
+      "job_id": "v4_validation",
+      "id": "legacy_instant__capacity_v2",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_v2",
+        "regime": "legacy_instant",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_instant__capacity_v2.json",
+          "sha256": "b0aa20b008dcc0f2ab36cb35142a2b21c2bdb49836f58b5650be463d48ccf6f3"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_instant__capacity_v2.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "a5547e31dcf34b82d8a9d768a39968f9c0d1e99e9f97956f50c2bf165194a8ef"
+        }
+      },
+      "error": null
+    },
+    "legacy_instant__capacity_balance": {
+      "job_id": "v4_validation",
+      "id": "legacy_instant__capacity_balance",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_balance",
+        "regime": "legacy_instant",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_instant__capacity_balance.json",
+          "sha256": "1ee2405a312342d9f84904a33385c673ffa93e43ee2d50cbc8a84204ebb86fea"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_instant__capacity_balance.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "154b2c305829b57d57e39ae771c1fa0d5daa287fd7d8e3bd812a6748d6edc1ec"
+        }
+      },
+      "error": null
+    },
+    "legacy_instant__v3_full": {
+      "job_id": "v4_validation",
+      "id": "legacy_instant__v3_full",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v3_full",
+        "regime": "legacy_instant",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_instant__v3_full.json",
+          "sha256": "5d50f69d44230ca7969a96448888ed250457221351626da75adba361f4ec032c"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_instant__v3_full.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "2f3e58144794acfac70c28fa553e56b477ba0a8d9a4af13eef08a4cf8b3c2a40"
+        }
+      },
+      "error": null
+    },
+    "legacy_instant__v4_hybrid": {
+      "job_id": "v4_validation",
+      "id": "legacy_instant__v4_hybrid",
+      "status": "SUCCEEDED",
+      "attempts": 2,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_hybrid",
+        "regime": "legacy_instant",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_instant__v4_hybrid.json",
+          "sha256": "6e2dbaae37104b250925d66cee976aa80f4728fe88f78a4f68e0239028b630b2"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_instant__v4_hybrid.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "680d5d165cb77cf16d6cd68bea57ac04a6db8d28f54497c7b6c328c3a5b6c86e"
+        }
+      },
+      "error": null
+    },
+    "legacy_instant__v4_no_risk": {
+      "job_id": "v4_validation",
+      "id": "legacy_instant__v4_no_risk",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_risk",
+        "regime": "legacy_instant",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_instant__v4_no_risk.json",
+          "sha256": "be52fbb6fcf88b5b33a2692d99ee18682d62f022e7e219a90ffa0f25932e7bca"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_instant__v4_no_risk.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "4fc4311c25e6dd39e80fd2c02737422fcc474b3d7672f1155490ffe442d08718"
+        }
+      },
+      "error": null
+    },
+    "legacy_instant__v4_no_recovery": {
+      "job_id": "v4_validation",
+      "id": "legacy_instant__v4_no_recovery",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_recovery",
+        "regime": "legacy_instant",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_instant__v4_no_recovery.json",
+          "sha256": "6a83748af29de2f18405d4f35646b47a4d79a87dd509b47dd576442c40727356"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_instant__v4_no_recovery.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "bfefe2735b12edaeac5624e0f7c2b953ae038518141e4ea8e8b06ae9114dedb9"
+        }
+      },
+      "error": null
+    },
+    "legacy_transit3__static": {
+      "job_id": "v4_validation",
+      "id": "legacy_transit3__static",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "static",
+        "regime": "legacy_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_transit3__static.json",
+          "sha256": "4a17a4c336ce6ff47f063488f174766c6b148c0a284c46277316ecc5c9ac6e25"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_transit3__static.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "cd37db8ce3ce7a5b28497a5ebc63be1a99ae020bb859e48770d1a2c29d7e1dc0"
+        }
+      },
+      "error": null
+    },
+    "legacy_transit3__capacity_v2": {
+      "job_id": "v4_validation",
+      "id": "legacy_transit3__capacity_v2",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_v2",
+        "regime": "legacy_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_transit3__capacity_v2.json",
+          "sha256": "2286a59f117fcbd5581ed39877d4312589f302742767aabb4b910426bc03c781"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_transit3__capacity_v2.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "3f0bc536e73925df8cfa51817f2d54093f20ffa05214e856cd21f3cce889829a"
+        }
+      },
+      "error": null
+    },
+    "legacy_transit3__capacity_balance": {
+      "job_id": "v4_validation",
+      "id": "legacy_transit3__capacity_balance",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_balance",
+        "regime": "legacy_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_transit3__capacity_balance.json",
+          "sha256": "7b59e447936782ffead29c0e6eb0cc6c9ff1674be97c86ed4ea9218afd71a187"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_transit3__capacity_balance.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "273d31842404eaa7be332e2a431eefb644d4ca08978f1c475462ad00a61ce96d"
+        }
+      },
+      "error": null
+    },
+    "legacy_transit3__v3_full": {
+      "job_id": "v4_validation",
+      "id": "legacy_transit3__v3_full",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v3_full",
+        "regime": "legacy_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_transit3__v3_full.json",
+          "sha256": "83dc7c88fb2634c9e5626cd706712595c3ad28414db43e4b7af79be2878288b9"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_transit3__v3_full.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "95a2ef4920600ffcb224afe3caf0b7c95ac730fd7f283a364435192f9f76931f"
+        }
+      },
+      "error": null
+    },
+    "legacy_transit3__v4_hybrid": {
+      "job_id": "v4_validation",
+      "id": "legacy_transit3__v4_hybrid",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_hybrid",
+        "regime": "legacy_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_transit3__v4_hybrid.json",
+          "sha256": "ab110641f4a51f4192e1841ed7bd2b983c216deefb0c238d20e133f521cc7a1b"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_transit3__v4_hybrid.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "f3c0fb5bef5cb5e75c5237ef5bcf7773bd350b11a6b8e83d3f2f1eea58c23411"
+        }
+      },
+      "error": null
+    },
+    "legacy_transit3__v4_no_risk": {
+      "job_id": "v4_validation",
+      "id": "legacy_transit3__v4_no_risk",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_risk",
+        "regime": "legacy_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_transit3__v4_no_risk.json",
+          "sha256": "cd5f2ec9b80f501c9d67e360d0e475d482c0eac17e6a77de453fbcf394dce435"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_transit3__v4_no_risk.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "597cd16c9e2f6732d363f6dde26a4bd7f67029659ce715669e135fb49f341a6e"
+        }
+      },
+      "error": null
+    },
+    "legacy_transit3__v4_no_recovery": {
+      "job_id": "v4_validation",
+      "id": "legacy_transit3__v4_no_recovery",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_recovery",
+        "regime": "legacy_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/legacy_transit3__v4_no_recovery.json",
+          "sha256": "2d0b975b765c01599ca974a48ea9d29dcd75e4bb7bf46c8f0e1d639cc89a6d52"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/legacy_transit3__v4_no_recovery.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "4ff142df89324d9344486ce213bed935811607f62dbd2fb3938db0d18bce4988"
+        }
+      },
+      "error": null
+    },
+    "integer_transit3__static": {
+      "job_id": "v4_validation",
+      "id": "integer_transit3__static",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "static",
+        "regime": "integer_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/integer_transit3__static.json",
+          "sha256": "819309b9e39b87fccab6962a67215b4a6d6d3a95f5a2c7f1efad994b55fc6e80"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/integer_transit3__static.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "56afabacaf565805a5cc092d41094d2ce7afafbd2a4e096f83f69b29bab1893f"
+        }
+      },
+      "error": null
+    },
+    "integer_transit3__capacity_v2": {
+      "job_id": "v4_validation",
+      "id": "integer_transit3__capacity_v2",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_v2",
+        "regime": "integer_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/integer_transit3__capacity_v2.json",
+          "sha256": "67c77b726974803e4ff26f64d17e8550beced0b12862fc5c901309db96efa973"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/integer_transit3__capacity_v2.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "ec9de7d926406283ead32e4ab41a6b58ce002361e1b5a2f464c0075c0ef9ca2d"
+        }
+      },
+      "error": null
+    },
+    "integer_transit3__capacity_balance": {
+      "job_id": "v4_validation",
+      "id": "integer_transit3__capacity_balance",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_balance",
+        "regime": "integer_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/integer_transit3__capacity_balance.json",
+          "sha256": "7be42c5671daa721fe7bdad4c7c50f7faf319b52f16caf61b7442d45f7108d0b"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/integer_transit3__capacity_balance.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "c053fc198b997e06474dee7173678fe7b808c980b19a4ee6fb2d040303479283"
+        }
+      },
+      "error": null
+    },
+    "integer_transit3__v3_full": {
+      "job_id": "v4_validation",
+      "id": "integer_transit3__v3_full",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v3_full",
+        "regime": "integer_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/integer_transit3__v3_full.json",
+          "sha256": "af10afe8d64dda8ee32d5d0c0d9dcc177fb131517a4b2aa4d738d6901c95a4e0"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/integer_transit3__v3_full.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "c2a3dd7fd58e93c6bceb24a26e418cb688532178e4bd7a21dca6136c1556e156"
+        }
+      },
+      "error": null
+    },
+    "integer_transit3__v4_hybrid": {
+      "job_id": "v4_validation",
+      "id": "integer_transit3__v4_hybrid",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_hybrid",
+        "regime": "integer_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/integer_transit3__v4_hybrid.json",
+          "sha256": "93d0b63d2f03160b0c602a4c24194933a77fc99ce77b235415527a370ca2a7d3"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/integer_transit3__v4_hybrid.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "3f3590b8c8b466cc102e8143975d8230b032018539c4dc85ad02050f4a5b7df6"
+        }
+      },
+      "error": null
+    },
+    "integer_transit3__v4_no_risk": {
+      "job_id": "v4_validation",
+      "id": "integer_transit3__v4_no_risk",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_risk",
+        "regime": "integer_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/integer_transit3__v4_no_risk.json",
+          "sha256": "e2b1c6edb51514ca6920c59ae74aefebc6a2d46de63ec0f6756aa80df5a8c717"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/integer_transit3__v4_no_risk.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "eb0610518c1227f1a16b4dd76371eb33235e3c798e30c6c9a66cd0f21cbd56e4"
+        }
+      },
+      "error": null
+    },
+    "integer_transit3__v4_no_recovery": {
+      "job_id": "v4_validation",
+      "id": "integer_transit3__v4_no_recovery",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_recovery",
+        "regime": "integer_transit3",
+        "rows": {
+          "count": 704,
+          "path": "rows/integer_transit3__v4_no_recovery.json",
+          "sha256": "35fadbd9292bcba692130252d56f80503076f13b45e1f2a6a0dca809b2f4d934"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/integer_transit3__v4_no_recovery.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "3da296bff35799301b197ff267dc47043b02dc508c4ec68614a22f6ee18fb293"
+        }
+      },
+      "error": null
+    },
+    "finite_pipeline__static": {
+      "job_id": "v4_validation",
+      "id": "finite_pipeline__static",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "static",
+        "regime": "finite_pipeline",
+        "rows": {
+          "count": 704,
+          "path": "rows/finite_pipeline__static.json",
+          "sha256": "77faae706731d66e1ef7506168ff88c15040ba15cd8dec6e3d68ebc77a1ec361"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/finite_pipeline__static.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "e3b2a73771803125e5bfdc4d5c0676b4620e6918b28b6b6b39d2117e332f5c64"
+        }
+      },
+      "error": null
+    },
+    "finite_pipeline__capacity_v2": {
+      "job_id": "v4_validation",
+      "id": "finite_pipeline__capacity_v2",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_v2",
+        "regime": "finite_pipeline",
+        "rows": {
+          "count": 704,
+          "path": "rows/finite_pipeline__capacity_v2.json",
+          "sha256": "12e2370b77fa52cfd2e6304f9dc171f90a6a76d969e2f9e84eeb302bb1a489e2"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/finite_pipeline__capacity_v2.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "3af72178bc0a032cb347337fcc3b96030db2a374dbad4a77fc708ac079d73d14"
+        }
+      },
+      "error": null
+    },
+    "finite_pipeline__capacity_balance": {
+      "job_id": "v4_validation",
+      "id": "finite_pipeline__capacity_balance",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_balance",
+        "regime": "finite_pipeline",
+        "rows": {
+          "count": 704,
+          "path": "rows/finite_pipeline__capacity_balance.json",
+          "sha256": "a6881a723dc291940c53ffaac1cc87f11bce785f37b6db0e67d36526b26975a3"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/finite_pipeline__capacity_balance.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "759a51ae1af10998c0036d0c3f39440c74d7b03bfe93b4ead485ef7043739595"
+        }
+      },
+      "error": null
+    },
+    "finite_pipeline__v3_full": {
+      "job_id": "v4_validation",
+      "id": "finite_pipeline__v3_full",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v3_full",
+        "regime": "finite_pipeline",
+        "rows": {
+          "count": 704,
+          "path": "rows/finite_pipeline__v3_full.json",
+          "sha256": "217c246511afdf8ac00f94925aee643a50002f77406a13e573f17d330d49fc07"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/finite_pipeline__v3_full.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "1347be83dff2769ac4cccca2f9439c43a2a01bbfbf8eb1f199808641674a192e"
+        }
+      },
+      "error": null
+    },
+    "finite_pipeline__v4_hybrid": {
+      "job_id": "v4_validation",
+      "id": "finite_pipeline__v4_hybrid",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_hybrid",
+        "regime": "finite_pipeline",
+        "rows": {
+          "count": 704,
+          "path": "rows/finite_pipeline__v4_hybrid.json",
+          "sha256": "8720d3ca7baa754e0e16be6d16e8283e7b52087628359f2f29a7918049ff75d6"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/finite_pipeline__v4_hybrid.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "723c7b2a18c70ea1233fb0c081e634dd3947cfe34adac12f5dbc28b4a2da3f39"
+        }
+      },
+      "error": null
+    },
+    "finite_pipeline__v4_no_risk": {
+      "job_id": "v4_validation",
+      "id": "finite_pipeline__v4_no_risk",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_risk",
+        "regime": "finite_pipeline",
+        "rows": {
+          "count": 704,
+          "path": "rows/finite_pipeline__v4_no_risk.json",
+          "sha256": "fb9b87fc33dcffcdf0ae89b4dcf2d2cb5751a165938db9014ed9ba1f19e163ad"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/finite_pipeline__v4_no_risk.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "bd288370981b848c56b3f5195549479f4f3d2e50272843dafd2fef823e5b98b0"
+        }
+      },
+      "error": null
+    },
+    "finite_pipeline__v4_no_recovery": {
+      "job_id": "v4_validation",
+      "id": "finite_pipeline__v4_no_recovery",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_recovery",
+        "regime": "finite_pipeline",
+        "rows": {
+          "count": 704,
+          "path": "rows/finite_pipeline__v4_no_recovery.json",
+          "sha256": "a7afe108528de53850fe965b319870ed31e00de31fc2ebcdcd99c50955507a4a"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/finite_pipeline__v4_no_recovery.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "aca53640932db8ee1b3aecbc2d499e95224c65e83f61757b4193a686c4b33136"
+        }
+      },
+      "error": null
+    },
+    "startup__static": {
+      "job_id": "v4_validation",
+      "id": "startup__static",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "static",
+        "regime": "startup",
+        "rows": {
+          "count": 704,
+          "path": "rows/startup__static.json",
+          "sha256": "082d004f546baab16457fb96902c0e08a0b4cd1e11fcba3efd05172ea9bbdfae"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/startup__static.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "421c8263ee013eb6f5408e36ce497b8e4ee59a99e1dee8863fd7efbd55b0ede9"
+        }
+      },
+      "error": null
+    },
+    "startup__capacity_v2": {
+      "job_id": "v4_validation",
+      "id": "startup__capacity_v2",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_v2",
+        "regime": "startup",
+        "rows": {
+          "count": 704,
+          "path": "rows/startup__capacity_v2.json",
+          "sha256": "176600023e70919e04945d5443f3c6bae4195ab3ecf0838a67e7f189270dcd0d"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/startup__capacity_v2.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "4b1f7ab14e12e670ed11be6e413125ec0736862251da965b59b6e057c80d064d"
+        }
+      },
+      "error": null
+    },
+    "startup__capacity_balance": {
+      "job_id": "v4_validation",
+      "id": "startup__capacity_balance",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_balance",
+        "regime": "startup",
+        "rows": {
+          "count": 704,
+          "path": "rows/startup__capacity_balance.json",
+          "sha256": "b7a2aa3257720903bd51cf1b65c6f133d63f22fcaa3fe9c150425dbb9746ece7"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/startup__capacity_balance.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "4ce189bd714d29ff3630b031de777b62838290410c8cc59bec09225b32aec3b6"
+        }
+      },
+      "error": null
+    },
+    "startup__v3_full": {
+      "job_id": "v4_validation",
+      "id": "startup__v3_full",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v3_full",
+        "regime": "startup",
+        "rows": {
+          "count": 704,
+          "path": "rows/startup__v3_full.json",
+          "sha256": "73404aea1e7d313ee3ba821b5c9aae291e3fd48859a103682a58310d7446cba1"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/startup__v3_full.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "47eab9a74f5cf46edc55549d2a3b9816f1db27adf7345427676134ce24051040"
+        }
+      },
+      "error": null
+    },
+    "startup__v4_hybrid": {
+      "job_id": "v4_validation",
+      "id": "startup__v4_hybrid",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_hybrid",
+        "regime": "startup",
+        "rows": {
+          "count": 704,
+          "path": "rows/startup__v4_hybrid.json",
+          "sha256": "f3a5e4290adf0d69fa03cc187c5831dd530c9f19fc7f9ce46bf302a11f87b320"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/startup__v4_hybrid.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "757322c63cfa18e9a5160c4302e052130e6dddb3568578b32255e41afff56c7b"
+        }
+      },
+      "error": null
+    },
+    "startup__v4_no_risk": {
+      "job_id": "v4_validation",
+      "id": "startup__v4_no_risk",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_risk",
+        "regime": "startup",
+        "rows": {
+          "count": 704,
+          "path": "rows/startup__v4_no_risk.json",
+          "sha256": "4a8d54baf7765e1974ee3b1efd0fb64a9d5e9798fcd7beeab6037b7cd3ca4f90"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/startup__v4_no_risk.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "b30f356f85f1e6e8fc1ef127e8187aff3e2ec902daba8cb966d86b243997367a"
+        }
+      },
+      "error": null
+    },
+    "startup__v4_no_recovery": {
+      "job_id": "v4_validation",
+      "id": "startup__v4_no_recovery",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_recovery",
+        "regime": "startup",
+        "rows": {
+          "count": 704,
+          "path": "rows/startup__v4_no_recovery.json",
+          "sha256": "e732fa3ba4586eecdd87ca1a433650eb67f1d0194cf0ebde0d6a06ecc1f4eabb"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/startup__v4_no_recovery.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "660f45687f4d9e10d666d047328de44816e2451deb4908217e0b296e97a31013"
+        }
+      },
+      "error": null
+    },
+    "delayed_noisy__static": {
+      "job_id": "v4_validation",
+      "id": "delayed_noisy__static",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "static",
+        "regime": "delayed_noisy",
+        "rows": {
+          "count": 704,
+          "path": "rows/delayed_noisy__static.json",
+          "sha256": "a902e38a66762695c8e7e8ed2831dd4bbd0e1339cbcd0e0953553d24e8f0bf7b"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/delayed_noisy__static.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "21619adcb695dd4ecf0a667577098ca817ab0cb8a8fc9c260d69ff5984e48238"
+        }
+      },
+      "error": null
+    },
+    "delayed_noisy__capacity_v2": {
+      "job_id": "v4_validation",
+      "id": "delayed_noisy__capacity_v2",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_v2",
+        "regime": "delayed_noisy",
+        "rows": {
+          "count": 704,
+          "path": "rows/delayed_noisy__capacity_v2.json",
+          "sha256": "dd80bc5e496fe26079aaa970529c9a7969533577af37571c13c38a4509fb14f6"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/delayed_noisy__capacity_v2.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "7ba96fcb315c24344f6dcfa6b1d007b92e57170580df1534fb0bf77141eba9ca"
+        }
+      },
+      "error": null
+    },
+    "delayed_noisy__capacity_balance": {
+      "job_id": "v4_validation",
+      "id": "delayed_noisy__capacity_balance",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "capacity_balance",
+        "regime": "delayed_noisy",
+        "rows": {
+          "count": 704,
+          "path": "rows/delayed_noisy__capacity_balance.json",
+          "sha256": "8a2a18fba7ad73e53693897a978469db164bb414d7026ad7ef94adc26e15e044"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/delayed_noisy__capacity_balance.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "ee1a0ce274334e75175fe622e7478d6c3d25cdb3e39f4cd8ed1115f086d4e7a7"
+        }
+      },
+      "error": null
+    },
+    "delayed_noisy__v3_full": {
+      "job_id": "v4_validation",
+      "id": "delayed_noisy__v3_full",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v3_full",
+        "regime": "delayed_noisy",
+        "rows": {
+          "count": 704,
+          "path": "rows/delayed_noisy__v3_full.json",
+          "sha256": "3e0a3125d82b1f9c67214bd438ed7150eb26aa4c978965daa24f2f2546a2533f"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/delayed_noisy__v3_full.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "bf7f76cada67b56f3a1ef8dfff5e8999d3218e1bfe5ad479b324dd5f19d9fd50"
+        }
+      },
+      "error": null
+    },
+    "delayed_noisy__v4_hybrid": {
+      "job_id": "v4_validation",
+      "id": "delayed_noisy__v4_hybrid",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_hybrid",
+        "regime": "delayed_noisy",
+        "rows": {
+          "count": 704,
+          "path": "rows/delayed_noisy__v4_hybrid.json",
+          "sha256": "369c218d55d8a5d87e8f6c35c455a2de142e9a3ad100878fda3b54489aa3e4d2"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/delayed_noisy__v4_hybrid.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "0bb004aefcf25fb5a0009da61b8b83339eed53e65f5cb698eb587365970c5fbe"
+        }
+      },
+      "error": null
+    },
+    "delayed_noisy__v4_no_risk": {
+      "job_id": "v4_validation",
+      "id": "delayed_noisy__v4_no_risk",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_risk",
+        "regime": "delayed_noisy",
+        "rows": {
+          "count": 704,
+          "path": "rows/delayed_noisy__v4_no_risk.json",
+          "sha256": "9ad3e3b98bc1fdbc49ccba2e3d7272385d8a09e6d4320c6480dcc3c8359eebcc"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/delayed_noisy__v4_no_risk.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "be6bc1fc0384c50a6e432a295a1d716226a828d125f6ec0380f67dc33ff65f7e"
+        }
+      },
+      "error": null
+    },
+    "delayed_noisy__v4_no_recovery": {
+      "job_id": "v4_validation",
+      "id": "delayed_noisy__v4_no_recovery",
+      "status": "SUCCEEDED",
+      "attempts": 2,
+      "ready_at": 0.0,
+      "output": {
+        "policy": "v4_no_recovery",
+        "regime": "delayed_noisy",
+        "rows": {
+          "count": 704,
+          "path": "rows/delayed_noisy__v4_no_recovery.json",
+          "sha256": "aaab5b9fad072c91e5b0d1e00155aeb67b39cc1b193d9ccf397839d97c52d880"
+        },
+        "split": "validation",
+        "traces": {
+          "count": 11,
+          "minutes": 1228,
+          "path": "traces/delayed_noisy__v4_no_recovery.json.gz",
+          "selection": "first scenario seed in each family; every deterministic policy/regime; fixed before execution",
+          "sha256": "1b8352b4c5ec0c69525e6a4b6b3aa27d603d34156c0abeffdf68e079d747c89b"
+        }
+      },
+      "error": null
+    },
+    "comparison": {
+      "job_id": "v4_validation",
+      "id": "comparison",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "overview": {
+          "episodes": 29568,
+          "followup_minutes": 946176,
+          "max_budget_error": 0.0,
+          "max_mass_error": 3.816239768639207e-09,
+          "minutes": 3300864,
+          "original_minutes": 2354688,
+          "regime_count": 6,
+          "regimes": {
+            "delayed_noisy": {
+              "overall": {
+                "capacity_balance": {
+                  "end_deficit": 51586.83132635772,
+                  "mean_deficit": 47620.684248773105,
+                  "tail_auc_deficit": 1454657.2075570838,
+                  "total_completed": 494644.20844636956,
+                  "total_dropped": 45360.78161044864,
+                  "total_moves": 4.455965909090909
+                },
+                "capacity_v2": {
+                  "end_deficit": 68942.28803598766,
+                  "mean_deficit": 56196.062687697166,
+                  "tail_auc_deficit": 2010031.8222652415,
+                  "total_completed": 477288.75173673965,
+                  "total_dropped": 62716.23832007858,
+                  "total_moves": 5.985795454545454
+                },
+                "static": {
+                  "end_deficit": 61677.50505256702,
+                  "mean_deficit": 52683.18476941479,
+                  "tail_auc_deficit": 1777558.7667957812,
+                  "total_completed": 484553.53472016024,
+                  "total_dropped": 55451.45533665796,
+                  "total_moves": 0.0
+                },
+                "v3_full": {
+                  "end_deficit": 62156.594795899844,
+                  "mean_deficit": 50701.985326473834,
+                  "tail_auc_deficit": 1792889.6385824315,
+                  "total_completed": 484074.44497682736,
+                  "total_dropped": 55930.545079990756,
+                  "total_moves": 2.460227272727273
+                },
+                "v4_hybrid": {
+                  "end_deficit": 55712.07838457434,
+                  "mean_deficit": 48571.45014999428,
+                  "tail_auc_deficit": 1586665.1134200154,
+                  "total_completed": 490518.96138815297,
+                  "total_dropped": 49486.028668665254,
+                  "total_moves": 6.8053977272727275
+                },
+                "v4_no_recovery": {
+                  "end_deficit": 55749.44954814208,
+                  "mean_deficit": 48558.859027300874,
+                  "tail_auc_deficit": 1587860.990654183,
+                  "total_completed": 490481.59022458515,
+                  "total_dropped": 49523.39983223298,
+                  "total_moves": 4.4147727272727275
+                },
+                "v4_no_risk": {
+                  "end_deficit": 55861.73060732451,
+                  "mean_deficit": 48696.88601863399,
+                  "tail_auc_deficit": 1591453.984548021,
+                  "total_completed": 490369.3091654027,
+                  "total_dropped": 49635.68089141543,
+                  "total_moves": 6.8678977272727275
+                }
+              },
+              "static_relative_harm": {
+                "capacity_balance": {
+                  "count": 260,
+                  "cvar90": 13550.42742584043,
+                  "frequency": 0.3693181818181818,
+                  "maximum_harm": 30340.124612793683,
+                  "mean_positive_harm": 1967.6455694874987
+                },
+                "capacity_v2": {
+                  "count": 389,
+                  "cvar90": 46382.66210467074,
+                  "frequency": 0.5525568181818182,
+                  "maximum_harm": 77807.47471973533,
+                  "mean_positive_harm": 7528.832895463129
+                },
+                "static": {
+                  "count": 0,
+                  "cvar90": 0.0,
+                  "frequency": 0.0,
+                  "maximum_harm": 0.0,
+                  "mean_positive_harm": 0.0
+                },
+                "v3_full": {
+                  "count": 243,
+                  "cvar90": 20899.17653253679,
+                  "frequency": 0.34517045454545453,
+                  "maximum_harm": 41680.88655086013,
+                  "mean_positive_harm": 3777.3468871635505
+                },
+                "v4_hybrid": {
+                  "count": 322,
+                  "cvar90": 13199.353102461151,
+                  "frequency": 0.45738636363636365,
+                  "maximum_harm": 21928.04145766794,
+                  "mean_positive_harm": 2462.063276282668
+                },
+                "v4_no_recovery": {
+                  "count": 321,
+                  "cvar90": 13147.07428225409,
+                  "frequency": 0.4559659090909091,
+                  "maximum_harm": 21928.04145766794,
+                  "mean_positive_harm": 2473.2277179389343
+                },
+                "v4_no_risk": {
+                  "count": 327,
+                  "cvar90": 13254.483646835864,
+                  "frequency": 0.46448863636363635,
+                  "maximum_harm": 21928.04145766794,
+                  "mean_positive_harm": 2510.8554688123536
+                }
+              },
+              "v4_hybrid_static_cvar_vs_v3_full": {
+                "baseline_policy_risk": 20899.17653253679,
+                "candidate_risk": 13199.353102461151,
+                "relative_risk_reduction_pct": 36.84271204699478,
+                "risk_reduction": 7699.823430075638,
+                "risk_reduction_ci95": [
+                  5673.507321319139,
+                  9924.062126319513
+                ]
+              },
+              "v4_hybrid_vs": {
+                "capacity_balance": {
+                  "improvement_ci95": [
+                    -1338.7305618277858,
+                    -596.287106156486
+                  ],
+                  "losses": 297,
+                  "reduction_pct": -1.9965397730413073,
+                  "reduction_pct_ci95": [
+                    -2.830114439462625,
+                    -1.2423115704294057
+                  ],
+                  "ties": 116,
+                  "wins": 291
+                },
+                "capacity_v2": {
+                  "improvement_ci95": [
+                    7189.3179746004425,
+                    8077.511478291101
+                  ],
+                  "losses": 194,
+                  "reduction_pct": 13.567876774705294,
+                  "reduction_pct_ci95": [
+                    12.842397228633864,
+                    14.314836637445104
+                  ],
+                  "ties": 64,
+                  "wins": 446
+                },
+                "static": {
+                  "improvement_ci95": [
+                    3697.1970432334824,
+                    4486.328431357618
+                  ],
+                  "losses": 322,
+                  "reduction_pct": 7.804643241324273,
+                  "reduction_pct_ci95": [
+                    7.05860148041037,
+                    8.51452508076202
+                  ],
+                  "ties": 84,
+                  "wins": 298
+                },
+                "v3_full": {
+                  "improvement_ci95": [
+                    1699.740531948011,
+                    2569.292380229686
+                  ],
+                  "losses": 307,
+                  "reduction_pct": 4.202074460715636,
+                  "reduction_pct_ci95": [
+                    3.3569909572135477,
+                    5.0680875440759
+                  ],
+                  "ties": 83,
+                  "wins": 314
+                },
+                "v4_no_recovery": {
+                  "improvement_ci95": [
+                    -52.84020925674031,
+                    26.03405502584171
+                  ],
+                  "losses": 45,
+                  "reduction_pct": -0.025929609850028824,
+                  "reduction_pct_ci95": [
+                    -0.10892397335684416,
+                    0.05365499883478788
+                  ],
+                  "ties": 601,
+                  "wins": 58
+                },
+                "v4_no_risk": {
+                  "improvement_ci95": [
+                    17.561147801122388,
+                    243.72818982348448
+                  ],
+                  "losses": 95,
+                  "reduction_pct": 0.25758498929831963,
+                  "reduction_pct_ci95": [
+                    0.035924430686423384,
+                    0.5007977330525791
+                  ],
+                  "ties": 467,
+                  "wins": 142
+                }
+              }
+            },
+            "finite_pipeline": {
+              "overall": {
+                "capacity_balance": {
+                  "end_deficit": 47390.814501624474,
+                  "mean_deficit": 44695.07935968312,
+                  "tail_auc_deficit": 1320384.6691656196,
+                  "total_completed": 498840.2252711028,
+                  "total_dropped": 41164.76478571539,
+                  "total_moves": 4.291193181818182
+                },
+                "capacity_v2": {
+                  "end_deficit": 64608.208718683105,
+                  "mean_deficit": 53622.64041793279,
+                  "tail_auc_deficit": 1871341.2841114954,
+                  "total_completed": 481622.83105404413,
+                  "total_dropped": 58382.15900277402,
+                  "total_moves": 5.730113636363637
+                },
+                "static": {
+                  "end_deficit": 61677.50505256702,
+                  "mean_deficit": 52683.18476941479,
+                  "tail_auc_deficit": 1777558.7667957812,
+                  "total_completed": 484553.53472016024,
+                  "total_dropped": 55451.45533665796,
+                  "total_moves": 0.0
+                },
+                "v3_full": {
+                  "end_deficit": 58830.00099243463,
+                  "mean_deficit": 48939.425582373195,
+                  "tail_auc_deficit": 1686438.6368715444,
+                  "total_completed": 487401.03878029267,
+                  "total_dropped": 52603.95127652555,
+                  "total_moves": 2.430397727272727
+                },
+                "v4_hybrid": {
+                  "end_deficit": 51489.49063774141,
+                  "mean_deficit": 45685.88618569227,
+                  "tail_auc_deficit": 1451542.3055213615,
+                  "total_completed": 494741.5491349859,
+                  "total_dropped": 45263.44092183232,
+                  "total_moves": 6.673295454545454
+                },
+                "v4_no_recovery": {
+                  "end_deficit": 51579.38936209734,
+                  "mean_deficit": 45716.38942643586,
+                  "tail_auc_deficit": 1454419.064700751,
+                  "total_completed": 494651.65041063,
+                  "total_dropped": 45353.33964618825,
+                  "total_moves": 4.329545454545454
+                },
+                "v4_no_risk": {
+                  "end_deficit": 51981.6686448911,
+                  "mean_deficit": 45968.97633882106,
+                  "tail_auc_deficit": 1467292.0017501516,
+                  "total_completed": 494249.3711278362,
+                  "total_dropped": 45755.61892898201,
+                  "total_moves": 6.870738636363637
+                }
+              },
+              "static_relative_harm": {
+                "capacity_balance": {
+                  "count": 225,
+                  "cvar90": 12661.730438587536,
+                  "frequency": 0.3196022727272727,
+                  "maximum_harm": 31540.562738979723,
+                  "mean_positive_harm": 1768.6022847023983
+                },
+                "capacity_v2": {
+                  "count": 326,
+                  "cvar90": 46061.872530978966,
+                  "frequency": 0.4630681818181818,
+                  "maximum_harm": 78134.94489594718,
+                  "mean_positive_harm": 6782.3482744939065
+                },
+                "static": {
+                  "count": 0,
+                  "cvar90": 0.0,
+                  "frequency": 0.0,
+                  "maximum_harm": 0.0,
+                  "mean_positive_harm": 0.0
+                },
+                "v3_full": {
+                  "count": 230,
+                  "cvar90": 21057.04941542388,
+                  "frequency": 0.32670454545454547,
+                  "maximum_harm": 40815.01335545289,
+                  "mean_positive_harm": 3540.318868601062
+                },
+                "v4_hybrid": {
+                  "count": 274,
+                  "cvar90": 9454.728893910378,
+                  "frequency": 0.38920454545454547,
+                  "maximum_harm": 13205.492931544264,
+                  "mean_positive_harm": 1640.009360494637
+                },
+                "v4_no_recovery": {
+                  "count": 273,
+                  "cvar90": 9742.203018188718,
+                  "frequency": 0.3877840909090909,
+                  "maximum_harm": 12975.583153793836,
+                  "mean_positive_harm": 1698.640792891047
+                },
+                "v4_no_risk": {
+                  "count": 288,
+                  "cvar90": 9556.571034253479,
+                  "frequency": 0.4090909090909091,
+                  "maximum_harm": 13290.721568641617,
+                  "mean_positive_harm": 1706.917428158139
+                }
+              },
+              "v4_hybrid_static_cvar_vs_v3_full": {
+                "baseline_policy_risk": 21057.04941542388,
+                "candidate_risk": 9454.728893910378,
+                "relative_risk_reduction_pct": 55.09946000798682,
+                "risk_reduction": 11602.320521513502,
+                "risk_reduction_ci95": [
+                  9864.157103872529,
+                  13293.033198980378
+                ]
+              },
+              "v4_hybrid_vs": {
+                "capacity_balance": {
+                  "improvement_ci95": [
+                    -1422.6964421957603,
+                    -524.2957315502
+                  ],
+                  "losses": 274,
+                  "reduction_pct": -2.216814110644338,
+                  "reduction_pct_ci95": [
+                    -3.2110764407589216,
+                    -1.1670300912230156
+                  ],
+                  "ties": 98,
+                  "wins": 332
+                },
+                "capacity_v2": {
+                  "improvement_ci95": [
+                    7424.274992814551,
+                    8451.849204573882
+                  ],
+                  "losses": 176,
+                  "reduction_pct": 14.801125364923768,
+                  "reduction_pct_ci95": [
+                    13.91869289250425,
+                    15.722174654406807
+                  ],
+                  "ties": 61,
+                  "wins": 467
+                },
+                "static": {
+                  "improvement_ci95": [
+                    6539.781168196817,
+                    7464.853493832878
+                  ],
+                  "losses": 274,
+                  "reduction_pct": 13.281844319679031,
+                  "reduction_pct_ci95": [
+                    12.447358346477127,
+                    14.121102985718807
+                  ],
+                  "ties": 77,
+                  "wins": 353
+                },
+                "v3_full": {
+                  "improvement_ci95": [
+                    2782.9191320633513,
+                    3704.7583948365073
+                  ],
+                  "losses": 276,
+                  "reduction_pct": 6.648094778318734,
+                  "reduction_pct_ci95": [
+                    5.699095078803219,
+                    7.532218923164493
+                  ],
+                  "ties": 77,
+                  "wins": 351
+                },
+                "v4_no_recovery": {
+                  "improvement_ci95": [
+                    -60.40847797666338,
+                    110.4314571017066
+                  ],
+                  "losses": 44,
+                  "reduction_pct": 0.0667227686313259,
+                  "reduction_pct_ci95": [
+                    -0.13100934068067996,
+                    0.24124972001143377
+                  ],
+                  "ties": 588,
+                  "wins": 72
+                },
+                "v4_no_risk": {
+                  "improvement_ci95": [
+                    140.31253082573275,
+                    449.68703905761083
+                  ],
+                  "losses": 106,
+                  "reduction_pct": 0.6158287081318597,
+                  "reduction_pct_ci95": [
+                    0.3045738146163054,
+                    0.9802125081918333
+                  ],
+                  "ties": 458,
+                  "wins": 140
+                }
+              }
+            },
+            "integer_transit3": {
+              "overall": {
+                "capacity_balance": {
+                  "end_deficit": 22994.535349361144,
+                  "mean_deficit": 28357.385465263043,
+                  "tail_auc_deficit": 230688.06460580978,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.4602272727272725
+                },
+                "capacity_v2": {
+                  "end_deficit": 27467.02935405914,
+                  "mean_deficit": 28842.675643975184,
+                  "tail_auc_deficit": 348344.4388249146,
+                  "total_completed": 539291.628465921,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.440340909090909
+                },
+                "static": {
+                  "end_deficit": 25406.487228651975,
+                  "mean_deficit": 33900.74436103619,
+                  "tail_auc_deficit": 268222.3900201197,
+                  "total_completed": 539946.2664479404,
+                  "total_dropped": 0.0,
+                  "total_moves": 0.0
+                },
+                "v3_full": {
+                  "end_deficit": 30923.5379432095,
+                  "mean_deficit": 31307.404681032334,
+                  "tail_auc_deficit": 452489.0383030096,
+                  "total_completed": 537582.5165054672,
+                  "total_dropped": 0.0,
+                  "total_moves": 2.446022727272727
+                },
+                "v4_hybrid": {
+                  "end_deficit": 24106.117333798717,
+                  "mean_deficit": 28117.630639137762,
+                  "tail_auc_deficit": 254260.79338355147,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 6.981534090909091
+                },
+                "v4_no_recovery": {
+                  "end_deficit": 24138.554548278837,
+                  "mean_deficit": 28195.809565395222,
+                  "tail_auc_deficit": 254877.78564881414,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.558238636363637
+                },
+                "v4_no_risk": {
+                  "end_deficit": 24153.244967018465,
+                  "mean_deficit": 28118.36813343765,
+                  "tail_auc_deficit": 254436.06750977298,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 7.115056818181818
+                }
+              },
+              "static_relative_harm": {
+                "capacity_balance": {
+                  "count": 219,
+                  "cvar90": 6166.290546740898,
+                  "frequency": 0.31107954545454547,
+                  "maximum_harm": 32898.428533910715,
+                  "mean_positive_harm": 816.7515925106297
+                },
+                "capacity_v2": {
+                  "count": 259,
+                  "cvar90": 6198.396737756972,
+                  "frequency": 0.3678977272727273,
+                  "maximum_harm": 24408.32607949004,
+                  "mean_positive_harm": 781.2916989914828
+                },
+                "static": {
+                  "count": 0,
+                  "cvar90": 0.0,
+                  "frequency": 0.0,
+                  "maximum_harm": 0.0,
+                  "mean_positive_harm": 0.0
+                },
+                "v3_full": {
+                  "count": 227,
+                  "cvar90": 14909.670007950288,
+                  "frequency": 0.3224431818181818,
+                  "maximum_harm": 31699.11861488715,
+                  "mean_positive_harm": 1916.5034888259834
+                },
+                "v4_hybrid": {
+                  "count": 247,
+                  "cvar90": 3308.9154188121684,
+                  "frequency": 0.3508522727272727,
+                  "maximum_harm": 9511.159569636548,
+                  "mean_positive_harm": 491.84991275957435
+                },
+                "v4_no_recovery": {
+                  "count": 250,
+                  "cvar90": 3391.5216808709138,
+                  "frequency": 0.35511363636363635,
+                  "maximum_harm": 9511.159569636548,
+                  "mean_positive_harm": 520.714167990885
+                },
+                "v4_no_risk": {
+                  "count": 250,
+                  "cvar90": 3376.1285021610115,
+                  "frequency": 0.35511363636363635,
+                  "maximum_harm": 9712.380416937609,
+                  "mean_positive_harm": 498.5034822420211
+                }
+              },
+              "v4_hybrid_static_cvar_vs_v3_full": {
+                "baseline_policy_risk": 14909.670007950288,
+                "candidate_risk": 3308.9154188121684,
+                "relative_risk_reduction_pct": 77.80691714137366,
+                "risk_reduction": 11600.75458913812,
+                "risk_reduction_ci95": [
+                  9844.584999081735,
+                  13249.108810440497
+                ]
+              },
+              "v4_hybrid_vs": {
+                "capacity_balance": {
+                  "improvement_ci95": [
+                    -27.847174566563716,
+                    516.7586317592701
+                  ],
+                  "losses": 209,
+                  "reduction_pct": 0.8454757806179928,
+                  "reduction_pct_ci95": [
+                    -0.09654270337413187,
+                    1.7887950724509964
+                  ],
+                  "ties": 85,
+                  "wins": 410
+                },
+                "capacity_v2": {
+                  "improvement_ci95": [
+                    511.4111133190721,
+                    951.1713911403485
+                  ],
+                  "losses": 276,
+                  "reduction_pct": 2.513792457354337,
+                  "reduction_pct_ci95": [
+                    1.7797190042825415,
+                    3.2688410031724127
+                  ],
+                  "ties": 193,
+                  "wins": 235
+                },
+                "static": {
+                  "improvement_ci95": [
+                    5410.611845502198,
+                    6168.9992701595875
+                  ],
+                  "losses": 247,
+                  "reduction_pct": 17.058957940006913,
+                  "reduction_pct_ci95": [
+                    16.096638088933155,
+                    18.101730278079923
+                  ],
+                  "ties": 75,
+                  "wins": 382
+                },
+                "v3_full": {
+                  "improvement_ci95": [
+                    2890.0970436221664,
+                    3509.706087920791
+                  ],
+                  "losses": 207,
+                  "reduction_pct": 10.188561058934104,
+                  "reduction_pct_ci95": [
+                    9.28455222191897,
+                    11.09325957216056
+                  ],
+                  "ties": 75,
+                  "wins": 422
+                },
+                "v4_no_recovery": {
+                  "improvement_ci95": [
+                    35.74272252816318,
+                    123.23226444703855
+                  ],
+                  "losses": 51,
+                  "reduction_pct": 0.2772714366513876,
+                  "reduction_pct_ci95": [
+                    0.12488787703500097,
+                    0.43566815828293387
+                  ],
+                  "ties": 578,
+                  "wins": 75
+                },
+                "v4_no_risk": {
+                  "improvement_ci95": [
+                    -75.25980875352425,
+                    81.58397326759625
+                  ],
+                  "losses": 90,
+                  "reduction_pct": 0.0026228204154297072,
+                  "reduction_pct_ci95": [
+                    -0.2622999133087864,
+                    0.29266504799565235
+                  ],
+                  "ties": 508,
+                  "wins": 106
+                }
+              }
+            },
+            "legacy_instant": {
+              "overall": {
+                "capacity_balance": {
+                  "end_deficit": 21922.91551545127,
+                  "mean_deficit": 25598.635688125793,
+                  "tail_auc_deficit": 210430.9116636968,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.370738636363637
+                },
+                "capacity_v2": {
+                  "end_deficit": 25803.541263218915,
+                  "mean_deficit": 26030.878346238493,
+                  "tail_auc_deficit": 311445.612106384,
+                  "total_completed": 539617.1632669074,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.3210227272727275
+                },
+                "static": {
+                  "end_deficit": 25406.487228651975,
+                  "mean_deficit": 33900.74436103619,
+                  "tail_auc_deficit": 268222.3900201197,
+                  "total_completed": 539946.2664479404,
+                  "total_dropped": 0.0,
+                  "total_moves": 0.0
+                },
+                "v3_full": {
+                  "end_deficit": 26306.659891914813,
+                  "mean_deficit": 28039.878687635133,
+                  "tail_auc_deficit": 321521.90802388755,
+                  "total_completed": 539590.8266112356,
+                  "total_dropped": 0.0,
+                  "total_moves": 2.8494318181818183
+                },
+                "v4_hybrid": {
+                  "end_deficit": 22678.517796035812,
+                  "mean_deficit": 25398.837392226324,
+                  "tail_auc_deficit": 226002.10482806544,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 7.2258522727272725
+                },
+                "v4_no_recovery": {
+                  "end_deficit": 22665.226949346936,
+                  "mean_deficit": 25401.482558789303,
+                  "tail_auc_deficit": 226150.61397874876,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.747159090909091
+                },
+                "v4_no_risk": {
+                  "end_deficit": 22649.00280060334,
+                  "mean_deficit": 25379.56837367859,
+                  "tail_auc_deficit": 224812.38297353263,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 7.295454545454546
+                }
+              },
+              "static_relative_harm": {
+                "capacity_balance": {
+                  "count": 118,
+                  "cvar90": 2182.2413881328607,
+                  "frequency": 0.16761363636363635,
+                  "maximum_harm": 19026.445114938237,
+                  "mean_positive_harm": 223.5796700577497
+                },
+                "capacity_v2": {
+                  "count": 102,
+                  "cvar90": 1707.459054333129,
+                  "frequency": 0.14488636363636365,
+                  "maximum_harm": 13711.794630269287,
+                  "mean_positive_harm": 172.4775524839869
+                },
+                "static": {
+                  "count": 0,
+                  "cvar90": 0.0,
+                  "frequency": 0.0,
+                  "maximum_harm": 0.0,
+                  "mean_positive_harm": 0.0
+                },
+                "v3_full": {
+                  "count": 106,
+                  "cvar90": 4762.587062269143,
+                  "frequency": 0.15056818181818182,
+                  "maximum_harm": 18202.276961439573,
+                  "mean_positive_harm": 522.2548589569855
+                },
+                "v4_hybrid": {
+                  "count": 89,
+                  "cvar90": 444.2656745839878,
+                  "frequency": 0.12642045454545456,
+                  "maximum_harm": 3872.917076146772,
+                  "mean_positive_harm": 44.98757270138749
+                },
+                "v4_no_recovery": {
+                  "count": 85,
+                  "cvar90": 378.02173739574397,
+                  "frequency": 0.12073863636363637,
+                  "maximum_harm": 3872.917076146772,
+                  "mean_positive_harm": 38.15047255749642
+                },
+                "v4_no_risk": {
+                  "count": 90,
+                  "cvar90": 432.06729817804603,
+                  "frequency": 0.1278409090909091,
+                  "maximum_harm": 4017.585503119426,
+                  "mean_positive_harm": 43.76238303698696
+                }
+              },
+              "v4_hybrid_static_cvar_vs_v3_full": {
+                "baseline_policy_risk": 4762.587062269143,
+                "candidate_risk": 444.2656745839878,
+                "relative_risk_reduction_pct": 90.67175741303264,
+                "risk_reduction": 4318.321387685155,
+                "risk_reduction_ci95": [
+                  3472.91096725105,
+                  5257.493873762671
+                ]
+              },
+              "v4_hybrid_vs": {
+                "capacity_balance": {
+                  "improvement_ci95": [
+                    -57.607913415819255,
+                    458.63583156520286
+                  ],
+                  "losses": 225,
+                  "reduction_pct": 0.780503689078041,
+                  "reduction_pct_ci95": [
+                    -0.21987908371269138,
+                    1.7571941709235643
+                  ],
+                  "ties": 76,
+                  "wins": 403
+                },
+                "capacity_v2": {
+                  "improvement_ci95": [
+                    422.56755879057357,
+                    843.8665429643173
+                  ],
+                  "losses": 271,
+                  "reduction_pct": 2.4280431324880736,
+                  "reduction_pct_ci95": [
+                    1.6527521889334993,
+                    3.224076296323037
+                  ],
+                  "ties": 178,
+                  "wins": 255
+                },
+                "static": {
+                  "improvement_ci95": [
+                    8080.85933467438,
+                    8932.671173878174
+                  ],
+                  "losses": 89,
+                  "reduction_pct": 25.078820919877884,
+                  "reduction_pct_ci95": [
+                    23.965487593623582,
+                    26.21231041719087
+                  ],
+                  "ties": 67,
+                  "wins": 548
+                },
+                "v3_full": {
+                  "improvement_ci95": [
+                    2389.57953848904,
+                    2898.9245628759754
+                  ],
+                  "losses": 139,
+                  "reduction_pct": 9.418875612230961,
+                  "reduction_pct_ci95": [
+                    8.63887437280133,
+                    10.234286366987686
+                  ],
+                  "ties": 67,
+                  "wins": 498
+                },
+                "v4_no_recovery": {
+                  "improvement_ci95": [
+                    -33.01027734383952,
+                    37.841602319583025
+                  ],
+                  "losses": 59,
+                  "reduction_pct": 0.010413433770489264,
+                  "reduction_pct_ci95": [
+                    -0.13200980703769202,
+                    0.14684964263496228
+                  ],
+                  "ties": 591,
+                  "wins": 54
+                },
+                "v4_no_risk": {
+                  "improvement_ci95": [
+                    -89.45799683091018,
+                    47.6667723993527
+                  ],
+                  "losses": 97,
+                  "reduction_pct": -0.07592335009021267,
+                  "reduction_pct_ci95": [
+                    -0.3513097906525121,
+                    0.18974699312518364
+                  ],
+                  "ties": 516,
+                  "wins": 91
+                }
+              }
+            },
+            "legacy_transit3": {
+              "overall": {
+                "capacity_balance": {
+                  "end_deficit": 23156.112146569412,
+                  "mean_deficit": 28418.51046450451,
+                  "tail_auc_deficit": 232815.2481488863,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.4602272727272725
+                },
+                "capacity_v2": {
+                  "end_deficit": 27700.894415170376,
+                  "mean_deficit": 28898.938632155492,
+                  "tail_auc_deficit": 356279.16875463136,
+                  "total_completed": 539198.2655252132,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.419034090909091
+                },
+                "static": {
+                  "end_deficit": 25406.487228651975,
+                  "mean_deficit": 33900.74436103619,
+                  "tail_auc_deficit": 268222.3900201197,
+                  "total_completed": 539946.2664479404,
+                  "total_dropped": 0.0,
+                  "total_moves": 0.0
+                },
+                "v3_full": {
+                  "end_deficit": 31127.773236376783,
+                  "mean_deficit": 31400.51930076147,
+                  "tail_auc_deficit": 457830.0533730285,
+                  "total_completed": 537529.8358555646,
+                  "total_dropped": 0.0,
+                  "total_moves": 2.440340909090909
+                },
+                "v4_hybrid": {
+                  "end_deficit": 24091.975534408004,
+                  "mean_deficit": 28138.19239897717,
+                  "tail_auc_deficit": 253713.33934772958,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 7.018465909090909
+                },
+                "v4_no_recovery": {
+                  "end_deficit": 24192.908491607068,
+                  "mean_deficit": 28197.135577703637,
+                  "tail_auc_deficit": 255875.93190560266,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 4.5866477272727275
+                },
+                "v4_no_risk": {
+                  "end_deficit": 24114.377241012033,
+                  "mean_deficit": 28155.198836436568,
+                  "tail_auc_deficit": 255201.5642638759,
+                  "total_completed": 540004.9900568182,
+                  "total_dropped": 0.0,
+                  "total_moves": 7.159090909090909
+                }
+              },
+              "static_relative_harm": {
+                "capacity_balance": {
+                  "count": 221,
+                  "cvar90": 6046.312077411721,
+                  "frequency": 0.31392045454545453,
+                  "maximum_harm": 32864.83509805906,
+                  "mean_positive_harm": 808.5570734509109
+                },
+                "capacity_v2": {
+                  "count": 262,
+                  "cvar90": 6597.133445703447,
+                  "frequency": 0.3721590909090909,
+                  "maximum_harm": 24408.32607949004,
+                  "mean_positive_harm": 825.2889287178732
+                },
+                "static": {
+                  "count": 0,
+                  "cvar90": 0.0,
+                  "frequency": 0.0,
+                  "maximum_harm": 0.0,
+                  "mean_positive_harm": 0.0
+                },
+                "v3_full": {
+                  "count": 229,
+                  "cvar90": 15120.652607026534,
+                  "frequency": 0.3252840909090909,
+                  "maximum_harm": 31699.11861488715,
+                  "mean_positive_harm": 1966.5648213967427
+                },
+                "v4_hybrid": {
+                  "count": 247,
+                  "cvar90": 3404.737212654607,
+                  "frequency": 0.3508522727272727,
+                  "maximum_harm": 9511.159569636548,
+                  "mean_positive_harm": 501.67519948451394
+                },
+                "v4_no_recovery": {
+                  "count": 251,
+                  "cvar90": 3590.2946400749547,
+                  "frequency": 0.3565340909090909,
+                  "maximum_harm": 10374.14849008611,
+                  "mean_positive_harm": 534.3141348247657
+                },
+                "v4_no_risk": {
+                  "count": 253,
+                  "cvar90": 3394.234665934671,
+                  "frequency": 0.359375,
+                  "maximum_harm": 9259.179838388121,
+                  "mean_positive_harm": 507.6108005510207
+                }
+              },
+              "v4_hybrid_static_cvar_vs_v3_full": {
+                "baseline_policy_risk": 15120.652607026534,
+                "candidate_risk": 3404.737212654607,
+                "relative_risk_reduction_pct": 77.48286862253265,
+                "risk_reduction": 11715.915394371927,
+                "risk_reduction_ci95": [
+                  10008.83354346911,
+                  13328.569738682447
+                ]
+              },
+              "v4_hybrid_vs": {
+                "capacity_balance": {
+                  "improvement_ci95": [
+                    20.353825377658634,
+                    547.7815025786579
+                  ],
+                  "losses": 204,
+                  "reduction_pct": 0.9863925341107074,
+                  "reduction_pct_ci95": [
+                    0.07340781820841358,
+                    1.8923079548510378
+                  ],
+                  "ties": 84,
+                  "wins": 416
+                },
+                "capacity_v2": {
+                  "improvement_ci95": [
+                    548.3369527113175,
+                    964.9262083177338
+                  ],
+                  "losses": 274,
+                  "reduction_pct": 2.632436584822704,
+                  "reduction_pct_ci95": [
+                    1.9450563311513667,
+                    3.3191470865808093
+                  ],
+                  "ties": 194,
+                  "wins": 236
+                },
+                "static": {
+                  "improvement_ci95": [
+                    5392.324122669057,
+                    6134.517416859458
+                  ],
+                  "losses": 247,
+                  "reduction_pct": 16.998305112976244,
+                  "reduction_pct_ci95": [
+                    16.02134951632717,
+                    18.002056383544364
+                  ],
+                  "ties": 74,
+                  "wins": 383
+                },
+                "v3_full": {
+                  "improvement_ci95": [
+                    2961.3264563748303,
+                    3564.271366110905
+                  ],
+                  "losses": 207,
+                  "reduction_pct": 10.389404297862015,
+                  "reduction_pct_ci95": [
+                    9.527105098298579,
+                    11.225515696999155
+                  ],
+                  "ties": 74,
+                  "wins": 423
+                },
+                "v4_no_recovery": {
+                  "improvement_ci95": [
+                    18.019428388598953,
+                    101.8482693555643
+                  ],
+                  "losses": 47,
+                  "reduction_pct": 0.2090395975294507,
+                  "reduction_pct_ci95": [
+                    0.06506731925461282,
+                    0.35869512131699927
+                  ],
+                  "ties": 585,
+                  "wins": 72
+                },
+                "v4_no_risk": {
+                  "improvement_ci95": [
+                    -71.29211685162181,
+                    105.7338310768692
+                  ],
+                  "losses": 91,
+                  "reduction_pct": 0.060402476850551216,
+                  "reduction_pct_ci95": [
+                    -0.259930040127213,
+                    0.37247834270375785
+                  ],
+                  "ties": 504,
+                  "wins": 109
+                }
+              }
+            },
+            "startup": {
+              "overall": {
+                "capacity_balance": {
+                  "end_deficit": 48172.57745268564,
+                  "mean_deficit": 45357.21894834304,
+                  "tail_auc_deficit": 1345401.0835995767,
+                  "total_completed": 498058.4623200416,
+                  "total_dropped": 41946.52773677654,
+                  "total_moves": 4.309659090909091
+                },
+                "capacity_v2": {
+                  "end_deficit": 65784.85971800423,
+                  "mean_deficit": 54439.897822934974,
+                  "tail_auc_deficit": 1908994.1160897715,
+                  "total_completed": 480446.18005472305,
+                  "total_dropped": 59558.81000209513,
+                  "total_moves": 5.748579545454546
+                },
+                "static": {
+                  "end_deficit": 61677.50505256702,
+                  "mean_deficit": 52683.18476941479,
+                  "tail_auc_deficit": 1777558.7667957812,
+                  "total_completed": 484553.53472016024,
+                  "total_dropped": 55451.45533665796,
+                  "total_moves": 0.0
+                },
+                "v3_full": {
+                  "end_deficit": 59495.294824041724,
+                  "mean_deficit": 49416.56922965981,
+                  "tail_auc_deficit": 1707728.0394829714,
+                  "total_completed": 486735.7449486855,
+                  "total_dropped": 53269.24510813264,
+                  "total_moves": 2.4417613636363638
+                },
+                "v4_hybrid": {
+                  "end_deficit": 52741.51600143369,
+                  "mean_deficit": 46526.11430842999,
+                  "tail_auc_deficit": 1491607.1171595142,
+                  "total_completed": 493489.52377129364,
+                  "total_dropped": 46515.46628552459,
+                  "total_moves": 6.684659090909091
+                },
+                "v4_no_recovery": {
+                  "end_deficit": 52945.934926249174,
+                  "mean_deficit": 46611.9101778196,
+                  "tail_auc_deficit": 1498148.5227536096,
+                  "total_completed": 493285.1048464781,
+                  "total_dropped": 46719.88521034008,
+                  "total_moves": 4.3039772727272725
+                },
+                "v4_no_risk": {
+                  "end_deficit": 53074.609066180696,
+                  "mean_deficit": 46722.874851842265,
+                  "tail_auc_deficit": 1502266.0952314187,
+                  "total_completed": 493156.4307065466,
+                  "total_dropped": 46848.55935027161,
+                  "total_moves": 6.816761363636363
+                }
+              },
+              "static_relative_harm": {
+                "capacity_balance": {
+                  "count": 230,
+                  "cvar90": 12763.061049652148,
+                  "frequency": 0.32670454545454547,
+                  "maximum_harm": 32031.651859006997,
+                  "mean_positive_harm": 1826.254545743438
+                },
+                "capacity_v2": {
+                  "count": 334,
+                  "cvar90": 47983.71859929852,
+                  "frequency": 0.4744318181818182,
+                  "maximum_harm": 81671.43732858973,
+                  "mean_positive_harm": 7252.014906937779
+                },
+                "static": {
+                  "count": 0,
+                  "cvar90": 0.0,
+                  "frequency": 0.0,
+                  "maximum_harm": 0.0,
+                  "mean_positive_harm": 0.0
+                },
+                "v3_full": {
+                  "count": 241,
+                  "cvar90": 21779.23151905103,
+                  "frequency": 0.34232954545454547,
+                  "maximum_harm": 42020.9021247763,
+                  "mean_positive_harm": 3743.0255827358396
+                },
+                "v4_hybrid": {
+                  "count": 286,
+                  "cvar90": 10582.128509776758,
+                  "frequency": 0.40625,
+                  "maximum_harm": 15213.278653206027,
+                  "mean_positive_harm": 1910.5757471210666
+                },
+                "v4_no_recovery": {
+                  "count": 284,
+                  "cvar90": 10764.826648957103,
+                  "frequency": 0.4034090909090909,
+                  "maximum_harm": 15213.278653206027,
+                  "mean_positive_harm": 1981.479341490345
+                },
+                "v4_no_risk": {
+                  "count": 299,
+                  "cvar90": 10652.199378049881,
+                  "frequency": 0.4247159090909091,
+                  "maximum_harm": 15213.278653206027,
+                  "mean_positive_harm": 1964.4012657155008
+                }
+              },
+              "v4_hybrid_static_cvar_vs_v3_full": {
+                "baseline_policy_risk": 21779.23151905103,
+                "candidate_risk": 10582.128509776758,
+                "relative_risk_reduction_pct": 51.41183700388964,
+                "risk_reduction": 11197.103009274273,
+                "risk_reduction_ci95": [
+                  9472.877343596623,
+                  12862.084051889213
+                ]
+              },
+              "v4_hybrid_vs": {
+                "capacity_balance": {
+                  "improvement_ci95": [
+                    -1594.1033749462417,
+                    -696.9476173801843
+                  ],
+                  "losses": 275,
+                  "reduction_pct": -2.5770878091494085,
+                  "reduction_pct_ci95": [
+                    -3.5286396879648207,
+                    -1.5225440435945783
+                  ],
+                  "ties": 95,
+                  "wins": 334
+                },
+                "capacity_v2": {
+                  "improvement_ci95": [
+                    7387.023832594196,
+                    8436.344217073038
+                  ],
+                  "losses": 175,
+                  "reduction_pct": 14.536734694551528,
+                  "reduction_pct_ci95": [
+                    13.642176616337032,
+                    15.43862687073785
+                  ],
+                  "ties": 61,
+                  "wins": 468
+                },
+                "static": {
+                  "improvement_ci95": [
+                    5715.82806414716,
+                    6611.491846801027
+                  ],
+                  "losses": 286,
+                  "reduction_pct": 11.686974673101558,
+                  "reduction_pct_ci95": [
+                    10.88360805940743,
+                    12.516874512860667
+                  ],
+                  "ties": 77,
+                  "wins": 341
+                },
+                "v3_full": {
+                  "improvement_ci95": [
+                    2444.5854720787324,
+                    3333.885550923694
+                  ],
+                  "losses": 280,
+                  "reduction_pct": 5.849161457964933,
+                  "reduction_pct_ci95": [
+                    4.925302802123398,
+                    6.707268149708832
+                  ],
+                  "ties": 77,
+                  "wins": 347
+                },
+                "v4_no_recovery": {
+                  "improvement_ci95": [
+                    31.445784575952167,
+                    141.98560173713682
+                  ],
+                  "losses": 47,
+                  "reduction_pct": 0.18406426396667375,
+                  "reduction_pct_ci95": [
+                    0.06732392413272494,
+                    0.3062655376854255
+                  ],
+                  "ties": 588,
+                  "wins": 69
+                },
+                "v4_no_risk": {
+                  "improvement_ci95": [
+                    68.43987342101536,
+                    342.9342451802493
+                  ],
+                  "losses": 99,
+                  "reduction_pct": 0.4211225101969935,
+                  "reduction_pct_ci95": [
+                    0.1459496214687399,
+                    0.7299713940111499
+                  ],
+                  "ties": 472,
+                  "wins": 133
+                }
+              }
+            }
+          },
+          "scenario_regime_pairs": 4224,
+          "scenarios": 704
+        },
+        "summary": {
+          "path": "summary.json",
+          "sha256": "529f6d36e71e6ee40b6596224d2aff405b64a2178c016e73bedee98552543109"
+        }
+      },
+      "error": null
+    }
+  },
+  "peak_workers": 1
+}

@@ -1,0 +1,212 @@
+{
+  "legacy_instant__static": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_instant__capacity_v2": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_instant__capacity_balance": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_instant__v3_full": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_instant__v4_hybrid": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_instant__v4_no_risk": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_instant__v4_no_recovery": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_transit3__static": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_transit3__capacity_v2": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_transit3__capacity_balance": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_transit3__v3_full": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_transit3__v4_hybrid": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_transit3__v4_no_risk": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "legacy_transit3__v4_no_recovery": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "integer_transit3__static": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "integer_transit3__capacity_v2": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "integer_transit3__capacity_balance": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "integer_transit3__v3_full": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "integer_transit3__v4_hybrid": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "integer_transit3__v4_no_risk": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "integer_transit3__v4_no_recovery": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "finite_pipeline__static": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "finite_pipeline__capacity_v2": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "finite_pipeline__capacity_balance": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "finite_pipeline__v3_full": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "finite_pipeline__v4_hybrid": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "finite_pipeline__v4_no_risk": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "finite_pipeline__v4_no_recovery": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "startup__static": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "startup__capacity_v2": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "startup__capacity_balance": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "startup__v3_full": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "startup__v4_hybrid": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "startup__v4_no_risk": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "startup__v4_no_recovery": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "delayed_noisy__static": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "delayed_noisy__capacity_v2": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "delayed_noisy__capacity_balance": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "delayed_noisy__v3_full": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "delayed_noisy__v4_hybrid": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "delayed_noisy__v4_no_risk": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  },
+  "delayed_noisy__v4_no_recovery": {
+    "traces": 11,
+    "minutes": 1228,
+    "physics_and_sensor_checks_passed": true
+  }
+}

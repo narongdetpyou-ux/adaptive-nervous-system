@@ -1,0 +1,21 @@
+{
+  "nominal_rate": 200.0,
+  "warmup": 5,
+  "dwell": 8,
+  "lookahead": 8,
+  "minimum_staff": 10.0,
+  "saturated_update": 0.7,
+  "unsaturated_prior_reversion": 0.1,
+  "rate_lower_factor": 0.85,
+  "demand_spread": 0.2,
+  "arrival_window": 3,
+  "terminal_weight": 0.25,
+  "relative_gain": 0.02,
+  "absolute_gain": 10.0,
+  "worst_case_regression_fraction": 0.0,
+  "tolerance": 1e-07,
+  "evidence_window": 5,
+  "minimum_busy_observations": 2,
+  "rate_band": 0.15,
+  "sparse_rate_band": 0.25
+}

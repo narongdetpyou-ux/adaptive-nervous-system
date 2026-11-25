@@ -1,0 +1,28 @@
+test_bad_trace (test_lab.LabTests.test_bad_trace) ... ok
+test_corrupt_summary_rejected (test_lab.LabTests.test_corrupt_summary_rejected) ... ok
+test_fresh_and_repeat_results (test_lab.LabTests.test_fresh_and_repeat_results) ... ok
+test_guard_blocks_false_signal (test_lab.LabTests.test_guard_blocks_false_signal) ... ok
+test_scenario_reproducibility (test_lab.LabTests.test_scenario_reproducibility) ... ok
+test_source_integrity (test_lab.LabTests.test_source_integrity) ... ok
+test_static_underload (test_lab.LabTests.test_static_underload) ... ok
+test_zero_traffic (test_lab.LabTests.test_zero_traffic) ... ok
+test_independent_replay_matches_hand_calculation (test_capacity.AccountingAuditTests.test_independent_replay_matches_hand_calculation) ... ok
+test_policy_replicates_do_not_change_case_weight (test_capacity.AccountingAuditTests.test_policy_replicates_do_not_change_case_weight) ... ok
+test_upstream_sources_are_byte_identical (test_capacity.AccountingAuditTests.test_upstream_sources_are_byte_identical) ... ok
+test_verifier_rejects_corrupted_physical_state (test_capacity.AccountingAuditTests.test_verifier_rejects_corrupted_physical_state) ... ok
+test_verifier_rejects_corrupted_summary_and_scope (test_capacity.AccountingAuditTests.test_verifier_rejects_corrupted_summary_and_scope) ... ok
+test_paired_bootstrap_preserves_constant_improvement (test_capacity.BenchmarkDesignTests.test_paired_bootstrap_preserves_constant_improvement) ... ok
+test_splits_are_reproducible_and_seed_disjoint (test_capacity.BenchmarkDesignTests.test_splits_are_reproducible_and_seed_disjoint) ... ok
+test_zero_baseline_has_no_percentage_claim (test_capacity.BenchmarkDesignTests.test_zero_baseline_has_no_percentage_claim) ... ok
+test_accepted_moves_respect_contract_and_commit_abc_state (test_capacity.CapacityPolicyTests.test_accepted_moves_respect_contract_and_commit_abc_state) ... ok
+test_censored_flow_is_lower_bound_not_capacity_collapse (test_capacity.CapacityPolicyTests.test_censored_flow_is_lower_bound_not_capacity_collapse) ... ok
+test_decision_cannot_use_current_or_future_hidden_rates (test_capacity.CapacityPolicyTests.test_decision_cannot_use_current_or_future_hidden_rates) ... ok
+test_observation_order_and_dwell_forecast_are_enforced (test_capacity.CapacityPolicyTests.test_observation_order_and_dwell_forecast_are_enforced) ... ok
+test_prediction_does_not_double_count_current_arrival (test_capacity.CapacityPolicyTests.test_prediction_does_not_double_count_current_arrival) ... ok
+test_underload_holds_and_rejected_abc_does_not_commit (test_capacity.CapacityPolicyTests.test_underload_holds_and_rejected_abc_does_not_commit) ... ok
+test_zero_resources_do_not_imply_zero_productivity (test_capacity.CapacityPolicyTests.test_zero_resources_do_not_imply_zero_productivity) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.297s
+
+OK

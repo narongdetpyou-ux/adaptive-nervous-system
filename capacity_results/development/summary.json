@@ -1,0 +1,5818 @@
+{
+  "scenarios": 44,
+  "episodes": 528,
+  "minutes": 42048,
+  "overall": {
+    "static": {
+      "mean_backlog": 36033.993110361516,
+      "peak_backlog": 90481.40434772609,
+      "end_backlog": 26115.77427542374,
+      "completed": 518697.36208821257,
+      "moves": 0.0
+    },
+    "maxweight": {
+      "mean_backlog": 65672.2064317914,
+      "peak_backlog": 152786.85804084348,
+      "end_backlog": 69456.46714678989,
+      "completed": 475356.66921684647,
+      "moves": 9.704545454545455
+    },
+    "abc": {
+      "mean_backlog": 55964.99891146128,
+      "peak_backlog": 130169.2315235529,
+      "end_backlog": 46104.310618558404,
+      "completed": 498708.825745078,
+      "moves": 9.636363636363637
+    },
+    "abc_guard": {
+      "mean_backlog": 44844.89763432519,
+      "peak_backlog": 108890.8377681518,
+      "end_backlog": 41576.392535839936,
+      "completed": 503236.74382779637,
+      "moves": 5.393939393939394
+    },
+    "abc_capacity": {
+      "mean_backlog": 30812.841548875884,
+      "peak_backlog": 77329.53785706643,
+      "end_backlog": 24479.95206133574,
+      "completed": 520333.1843023006,
+      "moves": 2.0303030303030303
+    },
+    "capacity_aware": {
+      "mean_backlog": 28357.15300091101,
+      "peak_backlog": 72897.66240595221,
+      "end_backlog": 27044.44306284562,
+      "completed": 517768.69330079085,
+      "moves": 4.318181818181818
+    }
+  },
+  "comparisons": {
+    "capacity_aware": {
+      "static": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 28357.15300091101,
+        "baseline_mean_backlog": 36033.993110361516,
+        "mean_backlog_improvement": 7676.84010945051,
+        "improvement_ci95": [
+          6171.7879990237425,
+          9111.864366633168
+        ],
+        "reduction_pct": 21.304439077674807,
+        "reduction_pct_ci95": [
+          17.212862322953633,
+          26.13688943862485
+        ],
+        "wins": 32,
+        "ties": 4,
+        "losses": 8,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      },
+      "maxweight": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 28357.15300091101,
+        "baseline_mean_backlog": 65672.2064317914,
+        "mean_backlog_improvement": 37315.0534308804,
+        "improvement_ci95": [
+          33844.42385092007,
+          41152.38260469768
+        ],
+        "reduction_pct": 56.82016100621901,
+        "reduction_pct_ci95": [
+          52.34514465227096,
+          61.94968550831113
+        ],
+        "wins": 44,
+        "ties": 0,
+        "losses": 0,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      },
+      "abc": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 28357.15300091101,
+        "baseline_mean_backlog": 55964.99891146128,
+        "mean_backlog_improvement": 27607.84591055027,
+        "improvement_ci95": [
+          25833.886975156795,
+          29459.426266852264
+        ],
+        "reduction_pct": 49.33055739753862,
+        "reduction_pct_ci95": [
+          45.45876518150178,
+          54.035240079402115
+        ],
+        "wins": 44,
+        "ties": 0,
+        "losses": 0,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      },
+      "abc_guard": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 28357.15300091101,
+        "baseline_mean_backlog": 44844.89763432519,
+        "mean_backlog_improvement": 16487.744633414182,
+        "improvement_ci95": [
+          14931.17770222115,
+          18279.90471871238
+        ],
+        "reduction_pct": 36.766155132873195,
+        "reduction_pct_ci95": [
+          33.4020665170817,
+          40.79663124749255
+        ],
+        "wins": 40,
+        "ties": 4,
+        "losses": 0,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      },
+      "abc_capacity": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 28357.15300091101,
+        "baseline_mean_backlog": 30812.841548875884,
+        "mean_backlog_improvement": 2455.6885479648745,
+        "improvement_ci95": [
+          1396.6724943159925,
+          3549.3773929448316
+        ],
+        "reduction_pct": 7.969691935323837,
+        "reduction_pct_ci95": [
+          4.538961974788044,
+          12.343563263527248
+        ],
+        "wins": 30,
+        "ties": 4,
+        "losses": 10,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      }
+    },
+    "abc_capacity": {
+      "static": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 30812.841548875884,
+        "baseline_mean_backlog": 36033.993110361516,
+        "mean_backlog_improvement": 5221.151561485634,
+        "improvement_ci95": [
+          4046.4788503965574,
+          6223.076171273007
+        ],
+        "reduction_pct": 14.489517011047823,
+        "reduction_pct_ci95": [
+          11.798496327310858,
+          17.162970930037375
+        ],
+        "wins": 24,
+        "ties": 14,
+        "losses": 6,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      },
+      "maxweight": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 30812.841548875884,
+        "baseline_mean_backlog": 65672.2064317914,
+        "mean_backlog_improvement": 34859.36488291552,
+        "improvement_ci95": [
+          31313.786120591347,
+          38889.231719677504
+        ],
+        "reduction_pct": 53.08084923128207,
+        "reduction_pct_ci95": [
+          48.95622813729215,
+          57.562237268587936
+        ],
+        "wins": 44,
+        "ties": 0,
+        "losses": 0,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      },
+      "abc": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 30812.841548875884,
+        "baseline_mean_backlog": 55964.99891146128,
+        "mean_backlog_improvement": 25152.1573625854,
+        "improvement_ci95": [
+          23623.920257157864,
+          26664.648049196763
+        ],
+        "reduction_pct": 44.94265675297707,
+        "reduction_pct_ci95": [
+          42.152054160938974,
+          48.25971188761546
+        ],
+        "wins": 44,
+        "ties": 0,
+        "losses": 0,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      },
+      "abc_guard": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 30812.841548875884,
+        "baseline_mean_backlog": 44844.89763432519,
+        "mean_backlog_improvement": 14032.05608544931,
+        "improvement_ci95": [
+          11789.97788179983,
+          16393.11146810781
+        ],
+        "reduction_pct": 31.290195374888956,
+        "reduction_pct_ci95": [
+          27.762646255243816,
+          35.36643453544694
+        ],
+        "wins": 37,
+        "ties": 5,
+        "losses": 2,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      },
+      "capacity_aware": {
+        "scenarios": 44,
+        "candidate_mean_backlog": 30812.841548875884,
+        "baseline_mean_backlog": 28357.15300091101,
+        "mean_backlog_improvement": -2455.6885479648745,
+        "improvement_ci95": [
+          -3549.3773929448316,
+          -1396.6724943159927
+        ],
+        "reduction_pct": -8.659855761563868,
+        "reduction_pct_ci95": [
+          -14.081753667476505,
+          -4.754780060994467
+        ],
+        "wins": 10,
+        "ties": 4,
+        "losses": 30,
+        "bootstrap_draws": 2000,
+        "bootstrap_draws_with_positive_denominator": 2000
+      }
+    }
+  },
+  "capacity_aware_vs": {
+    "static": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 28357.15300091101,
+      "baseline_mean_backlog": 36033.993110361516,
+      "mean_backlog_improvement": 7676.84010945051,
+      "improvement_ci95": [
+        6171.7879990237425,
+        9111.864366633168
+      ],
+      "reduction_pct": 21.304439077674807,
+      "reduction_pct_ci95": [
+        17.212862322953633,
+        26.13688943862485
+      ],
+      "wins": 32,
+      "ties": 4,
+      "losses": 8,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "maxweight": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 28357.15300091101,
+      "baseline_mean_backlog": 65672.2064317914,
+      "mean_backlog_improvement": 37315.0534308804,
+      "improvement_ci95": [
+        33844.42385092007,
+        41152.38260469768
+      ],
+      "reduction_pct": 56.82016100621901,
+      "reduction_pct_ci95": [
+        52.34514465227096,
+        61.94968550831113
+      ],
+      "wins": 44,
+      "ties": 0,
+      "losses": 0,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "abc": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 28357.15300091101,
+      "baseline_mean_backlog": 55964.99891146128,
+      "mean_backlog_improvement": 27607.84591055027,
+      "improvement_ci95": [
+        25833.886975156795,
+        29459.426266852264
+      ],
+      "reduction_pct": 49.33055739753862,
+      "reduction_pct_ci95": [
+        45.45876518150178,
+        54.035240079402115
+      ],
+      "wins": 44,
+      "ties": 0,
+      "losses": 0,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "abc_guard": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 28357.15300091101,
+      "baseline_mean_backlog": 44844.89763432519,
+      "mean_backlog_improvement": 16487.744633414182,
+      "improvement_ci95": [
+        14931.17770222115,
+        18279.90471871238
+      ],
+      "reduction_pct": 36.766155132873195,
+      "reduction_pct_ci95": [
+        33.4020665170817,
+        40.79663124749255
+      ],
+      "wins": 40,
+      "ties": 4,
+      "losses": 0,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "abc_capacity": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 28357.15300091101,
+      "baseline_mean_backlog": 30812.841548875884,
+      "mean_backlog_improvement": 2455.6885479648745,
+      "improvement_ci95": [
+        1396.6724943159925,
+        3549.3773929448316
+      ],
+      "reduction_pct": 7.969691935323837,
+      "reduction_pct_ci95": [
+        4.538961974788044,
+        12.343563263527248
+      ],
+      "wins": 30,
+      "ties": 4,
+      "losses": 10,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    }
+  },
+  "abc_capacity_vs": {
+    "static": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 30812.841548875884,
+      "baseline_mean_backlog": 36033.993110361516,
+      "mean_backlog_improvement": 5221.151561485634,
+      "improvement_ci95": [
+        4046.4788503965574,
+        6223.076171273007
+      ],
+      "reduction_pct": 14.489517011047823,
+      "reduction_pct_ci95": [
+        11.798496327310858,
+        17.162970930037375
+      ],
+      "wins": 24,
+      "ties": 14,
+      "losses": 6,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "maxweight": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 30812.841548875884,
+      "baseline_mean_backlog": 65672.2064317914,
+      "mean_backlog_improvement": 34859.36488291552,
+      "improvement_ci95": [
+        31313.786120591347,
+        38889.231719677504
+      ],
+      "reduction_pct": 53.08084923128207,
+      "reduction_pct_ci95": [
+        48.95622813729215,
+        57.562237268587936
+      ],
+      "wins": 44,
+      "ties": 0,
+      "losses": 0,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "abc": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 30812.841548875884,
+      "baseline_mean_backlog": 55964.99891146128,
+      "mean_backlog_improvement": 25152.1573625854,
+      "improvement_ci95": [
+        23623.920257157864,
+        26664.648049196763
+      ],
+      "reduction_pct": 44.94265675297707,
+      "reduction_pct_ci95": [
+        42.152054160938974,
+        48.25971188761546
+      ],
+      "wins": 44,
+      "ties": 0,
+      "losses": 0,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "abc_guard": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 30812.841548875884,
+      "baseline_mean_backlog": 44844.89763432519,
+      "mean_backlog_improvement": 14032.05608544931,
+      "improvement_ci95": [
+        11789.97788179983,
+        16393.11146810781
+      ],
+      "reduction_pct": 31.290195374888956,
+      "reduction_pct_ci95": [
+        27.762646255243816,
+        35.36643453544694
+      ],
+      "wins": 37,
+      "ties": 5,
+      "losses": 2,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "capacity_aware": {
+      "scenarios": 44,
+      "candidate_mean_backlog": 30812.841548875884,
+      "baseline_mean_backlog": 28357.15300091101,
+      "mean_backlog_improvement": -2455.6885479648745,
+      "improvement_ci95": [
+        -3549.3773929448316,
+        -1396.6724943159927
+      ],
+      "reduction_pct": -8.659855761563868,
+      "reduction_pct_ci95": [
+        -14.081753667476505,
+        -4.754780060994467
+      ],
+      "wins": 10,
+      "ties": 4,
+      "losses": 30,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    }
+  },
+  "by_group": {
+    "surge_only": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 750.177096356382,
+          "peak_backlog": 8177.282454063396,
+          "end_backlog": 0.0,
+          "completed": 178955.75,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 6719.525679701495,
+          "peak_backlog": 42049.224575078915,
+          "end_backlog": 250.24301000176004,
+          "completed": 178705.50698999825,
+          "moves": 7.0
+        },
+        "abc": {
+          "mean_backlog": 4148.937788037468,
+          "peak_backlog": 28206.125979594945,
+          "end_backlog": 401.6527556499509,
+          "completed": 178554.09724435004,
+          "moves": 7.0
+        },
+        "abc_guard": {
+          "mean_backlog": 4319.014540899685,
+          "peak_backlog": 28319.34498221927,
+          "end_backlog": 0.0,
+          "completed": 178955.75,
+          "moves": 2.166666666666667
+        },
+        "abc_capacity": {
+          "mean_backlog": 750.177096356382,
+          "peak_backlog": 8177.282454063396,
+          "end_backlog": 0.0,
+          "completed": 178955.75,
+          "moves": 0.0
+        },
+        "capacity_aware": {
+          "mean_backlog": 824.5376282473135,
+          "peak_backlog": 8577.741356099796,
+          "end_backlog": 0.0,
+          "completed": 178955.75,
+          "moves": 1.25
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 824.5376282473135,
+            "baseline_mean_backlog": 750.177096356382,
+            "mean_backlog_improvement": -74.36053189093155,
+            "improvement_ci95": [
+              -127.331799221947,
+              -24.587427383159522
+            ],
+            "reduction_pct": -9.912396986271826,
+            "reduction_pct_ci95": [
+              -25.968734714243617,
+              -4.93358049375923
+            ],
+            "wins": 0,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 824.5376282473135,
+            "baseline_mean_backlog": 6719.525679701495,
+            "mean_backlog_improvement": 5894.988051454182,
+            "improvement_ci95": [
+              4348.8694386092675,
+              7441.106664299095
+            ],
+            "reduction_pct": 87.72922870526268,
+            "reduction_pct_ci95": [
+              81.54144927224353,
+              97.33069306996747
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 824.5376282473135,
+            "baseline_mean_backlog": 4148.937788037468,
+            "mean_backlog_improvement": 3324.400159790154,
+            "improvement_ci95": [
+              2714.9668568705347,
+              4243.132771104332
+            ],
+            "reduction_pct": 80.12653670959631,
+            "reduction_pct_ci95": [
+              71.47219513039573,
+              95.93684715502413
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 824.5376282473135,
+            "baseline_mean_backlog": 4319.014540899685,
+            "mean_backlog_improvement": 3494.476912652371,
+            "improvement_ci95": [
+              1526.3939909343171,
+              5462.559834370424
+            ],
+            "reduction_pct": 80.90912590269826,
+            "reduction_pct_ci95": [
+              75.85322120690778,
+              92.75256469856296
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 824.5376282473135,
+            "baseline_mean_backlog": 750.177096356382,
+            "mean_backlog_improvement": -74.36053189093155,
+            "improvement_ci95": [
+              -127.331799221947,
+              -24.587427383159522
+            ],
+            "reduction_pct": -9.912396986271826,
+            "reduction_pct_ci95": [
+              -25.968734714243617,
+              -4.93358049375923
+            ],
+            "wins": 0,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 750.177096356382,
+            "baseline_mean_backlog": 750.177096356382,
+            "mean_backlog_improvement": 0.0,
+            "improvement_ci95": [
+              0.0,
+              0.0
+            ],
+            "reduction_pct": 0.0,
+            "reduction_pct_ci95": [
+              0.0,
+              0.0
+            ],
+            "wins": 0,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 750.177096356382,
+            "baseline_mean_backlog": 6719.525679701495,
+            "mean_backlog_improvement": 5969.348583345113,
+            "improvement_ci95": [
+              4373.456865992427,
+              7565.240300697799
+            ],
+            "reduction_pct": 88.83586234929446,
+            "reduction_pct_ci95": [
+              82.5146035090254,
+              97.88097662798013
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 750.177096356382,
+            "baseline_mean_backlog": 4148.937788037468,
+            "mean_backlog_improvement": 3398.7606916810855,
+            "improvement_ci95": [
+              2786.884573064472,
+              4315.920827125643
+            ],
+            "reduction_pct": 81.918815497322,
+            "reduction_pct_ci95": [
+              73.78703633725493,
+              96.7744751471919
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 750.177096356382,
+            "baseline_mean_backlog": 4319.014540899685,
+            "mean_backlog_improvement": 3568.8374445433024,
+            "improvement_ci95": [
+              1550.9814183174765,
+              5586.693470769128
+            ],
+            "reduction_pct": 82.6308272581061,
+            "reduction_pct_ci95": [
+              77.12626481871189,
+              94.24663959840697
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 750.177096356382,
+            "baseline_mean_backlog": 824.5376282473135,
+            "mean_backlog_improvement": 74.36053189093155,
+            "improvement_ci95": [
+              24.587427383159522,
+              127.331799221947
+            ],
+            "reduction_pct": 9.018452201993098,
+            "reduction_pct_ci95": [
+              4.701622179043674,
+              20.615222319373874
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "ingress_slow": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 9982.420546743122,
+          "peak_backlog": 53544.447678817916,
+          "end_backlog": 0.0,
+          "completed": 180262.75,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 17001.899483453453,
+          "peak_backlog": 57321.27268250148,
+          "end_backlog": 192.3368833945518,
+          "completed": 180070.41311660546,
+          "moves": 7.0
+        },
+        "abc": {
+          "mean_backlog": 14001.813152804245,
+          "peak_backlog": 59170.875783523574,
+          "end_backlog": 920.2951516063513,
+          "completed": 179342.45484839365,
+          "moves": 7.0
+        },
+        "abc_guard": {
+          "mean_backlog": 10053.964621098507,
+          "peak_backlog": 46326.655211528334,
+          "end_backlog": 0.0,
+          "completed": 180262.75,
+          "moves": 2.833333333333333
+        },
+        "abc_capacity": {
+          "mean_backlog": 8738.985758554281,
+          "peak_backlog": 48151.642128100815,
+          "end_backlog": 0.0,
+          "completed": 180262.75,
+          "moves": 1.25
+        },
+        "capacity_aware": {
+          "mean_backlog": 6548.9706806492495,
+          "peak_backlog": 38376.556687588025,
+          "end_backlog": 0.0,
+          "completed": 180262.75,
+          "moves": 2.25
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6548.9706806492495,
+            "baseline_mean_backlog": 9982.420546743122,
+            "mean_backlog_improvement": 3433.449866093873,
+            "improvement_ci95": [
+              3101.0585860534384,
+              3817.3531455104276
+            ],
+            "reduction_pct": 34.39496312559257,
+            "reduction_pct_ci95": [
+              27.045714348716654,
+              46.47621771184116
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6548.9706806492495,
+            "baseline_mean_backlog": 17001.899483453453,
+            "mean_backlog_improvement": 10452.928802804206,
+            "improvement_ci95": [
+              7189.105114426009,
+              13174.820140605367
+            ],
+            "reduction_pct": 61.4809469552339,
+            "reduction_pct_ci95": [
+              56.4879140441133,
+              69.4505338638782
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6548.9706806492495,
+            "baseline_mean_backlog": 14001.813152804245,
+            "mean_backlog_improvement": 7452.842472154996,
+            "improvement_ci95": [
+              4913.694558338453,
+              9991.99038597154
+            ],
+            "reduction_pct": 53.22769551929323,
+            "reduction_pct_ci95": [
+              34.33461314126984,
+              68.91242895001047
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6548.9706806492495,
+            "baseline_mean_backlog": 10053.964621098507,
+            "mean_backlog_improvement": 3504.993940449257,
+            "improvement_ci95": [
+              2080.9934486184447,
+              4618.704777130106
+            ],
+            "reduction_pct": 34.861808973287374,
+            "reduction_pct_ci95": [
+              30.416143063539174,
+              41.895175638732034
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6548.9706806492495,
+            "baseline_mean_backlog": 8738.985758554281,
+            "mean_backlog_improvement": 2190.0150779050323,
+            "improvement_ci95": [
+              1677.2932315046874,
+              2597.1642929503278
+            ],
+            "reduction_pct": 25.06028889864369,
+            "reduction_pct_ci95": [
+              20.413577904051348,
+              34.538116360930346
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 8738.985758554281,
+            "baseline_mean_backlog": 9982.420546743122,
+            "mean_backlog_improvement": 1243.4347881888405,
+            "improvement_ci95": [
+              503.8942931031106,
+              1982.9752832745708
+            ],
+            "reduction_pct": 12.456245280054098,
+            "reduction_pct_ci95": [
+              5.092426307619411,
+              23.330515545449305
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 8738.985758554281,
+            "baseline_mean_backlog": 17001.899483453453,
+            "mean_backlog_improvement": 8262.913724899172,
+            "improvement_ci95": [
+              4896.064528421236,
+              10680.68135575478
+            ],
+            "reduction_pct": 48.59994457055098,
+            "reduction_pct_ci95": [
+              40.4924394352135,
+              58.74048927331848
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 8738.985758554281,
+            "baseline_mean_backlog": 14001.813152804245,
+            "mean_backlog_improvement": 5262.8273942499645,
+            "improvement_ci95": [
+              2585.833130858753,
+              7594.877156733512
+            ],
+            "reduction_pct": 37.58675634945134,
+            "reduction_pct_ci95": [
+              17.477179336633522,
+              52.51042389584474
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 8738.985758554281,
+            "baseline_mean_backlog": 10053.964621098507,
+            "mean_backlog_improvement": 1314.9788625442247,
+            "improvement_ci95": [
+              -430.5710129659983,
+              2224.5915241356706
+            ],
+            "reduction_pct": 13.079207179471348,
+            "reduction_pct_ci95": [
+              -6.104372515551532,
+              22.8234430996628
+            ],
+            "wins": 3,
+            "ties": 0,
+            "losses": 1,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 8738.985758554281,
+            "baseline_mean_backlog": 6548.9706806492495,
+            "mean_backlog_improvement": -2190.0150779050323,
+            "improvement_ci95": [
+              -2597.1642929503278,
+              -1677.2932315046874
+            ],
+            "reduction_pct": -33.440599823969876,
+            "reduction_pct_ci95": [
+              -52.76065160507685,
+              -25.64957359113459
+            ],
+            "wins": 0,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "processing_slow": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 8051.600890732594,
+          "peak_backlog": 44194.52101891155,
+          "end_backlog": 0.0,
+          "completed": 179843.25,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 17278.80115009892,
+          "peak_backlog": 57083.928773016574,
+          "end_backlog": 0.0,
+          "completed": 179843.25,
+          "moves": 7.0
+        },
+        "abc": {
+          "mean_backlog": 16737.36523946453,
+          "peak_backlog": 62877.802697782616,
+          "end_backlog": 513.9147108660775,
+          "completed": 179329.33528913392,
+          "moves": 7.0
+        },
+        "abc_guard": {
+          "mean_backlog": 11257.803377243084,
+          "peak_backlog": 47929.10739653165,
+          "end_backlog": 0.0,
+          "completed": 179843.25,
+          "moves": 2.6666666666666665
+        },
+        "abc_capacity": {
+          "mean_backlog": 6278.619488181566,
+          "peak_backlog": 37860.71648918076,
+          "end_backlog": 0.0,
+          "completed": 179843.25,
+          "moves": 1.25
+        },
+        "capacity_aware": {
+          "mean_backlog": 4636.094884397349,
+          "peak_backlog": 28461.372776279582,
+          "end_backlog": 0.0,
+          "completed": 179843.25,
+          "moves": 2.0
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 4636.094884397349,
+            "baseline_mean_backlog": 8051.600890732594,
+            "mean_backlog_improvement": 3415.506006335245,
+            "improvement_ci95": [
+              2829.535923237099,
+              4234.92900488868
+            ],
+            "reduction_pct": 42.420210001547616,
+            "reduction_pct_ci95": [
+              32.7919830235929,
+              56.30299192335481
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 4636.094884397349,
+            "baseline_mean_backlog": 17278.80115009892,
+            "mean_backlog_improvement": 12642.706265701567,
+            "improvement_ci95": [
+              8502.251295099706,
+              17635.308729645374
+            ],
+            "reduction_pct": 73.16888571073805,
+            "reduction_pct_ci95": [
+              66.56742101953175,
+              82.53721576428468
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 4636.094884397349,
+            "baseline_mean_backlog": 16737.36523946453,
+            "mean_backlog_improvement": 12101.27035506718,
+            "improvement_ci95": [
+              10359.459026201883,
+              14109.105157983713
+            ],
+            "reduction_pct": 72.30092778601711,
+            "reduction_pct_ci95": [
+              61.848084830766275,
+              84.34912264398477
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 4636.094884397349,
+            "baseline_mean_backlog": 11257.803377243084,
+            "mean_backlog_improvement": 6621.708492845734,
+            "improvement_ci95": [
+              3687.399096362575,
+              8704.496777065753
+            ],
+            "reduction_pct": 58.818832333056086,
+            "reduction_pct_ci95": [
+              42.58789819636276,
+              74.07538471421167
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 4636.094884397349,
+            "baseline_mean_backlog": 6278.619488181566,
+            "mean_backlog_improvement": 1642.5246037842169,
+            "improvement_ci95": [
+              1214.6431182329165,
+              2436.736389628468
+            ],
+            "reduction_pct": 26.16060117794987,
+            "reduction_pct_ci95": [
+              21.865266878992216,
+              36.77580536598735
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6278.619488181566,
+            "baseline_mean_backlog": 8051.600890732594,
+            "mean_backlog_improvement": 1772.9814025510277,
+            "improvement_ci95": [
+              1521.5063557443073,
+              1967.4099726470395
+            ],
+            "reduction_pct": 22.02023456716207,
+            "reduction_pct_ci95": [
+              13.907202251208261,
+              31.779012417108856
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6278.619488181566,
+            "baseline_mean_backlog": 17278.80115009892,
+            "mean_backlog_improvement": 11000.181661917351,
+            "improvement_ci95": [
+              7263.3754046622325,
+              15178.444838224728
+            ],
+            "reduction_pct": 63.66287548748356,
+            "reduction_pct_ci95": [
+              56.56462051074248,
+              73.73621504725163
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6278.619488181566,
+            "baseline_mean_backlog": 16737.36523946453,
+            "mean_backlog_improvement": 10458.745751282962,
+            "improvement_ci95": [
+              9144.815907968965,
+              11772.675594596962
+            ],
+            "reduction_pct": 62.4874082727346,
+            "reduction_pct_ci95": [
+              51.17163181430772,
+              75.24543025559468
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6278.619488181566,
+            "baseline_mean_backlog": 11257.803377243084,
+            "mean_backlog_improvement": 4979.183889061518,
+            "improvement_ci95": [
+              2410.0361129894927,
+              7382.676873846597
+            ],
+            "reduction_pct": 44.22873381433019,
+            "reduction_pct_ci95": [
+              23.60976582439901,
+              63.60989589252482
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6278.619488181566,
+            "baseline_mean_backlog": 4636.094884397349,
+            "mean_backlog_improvement": -1642.5246037842169,
+            "improvement_ci95": [
+              -2436.736389628468,
+              -1214.6431182329165
+            ],
+            "reduction_pct": -35.42905494260027,
+            "reduction_pct_ci95": [
+              -58.16729747033126,
+              -27.984055241001887
+            ],
+            "wins": 0,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "delivery_slow": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 10533.18570607216,
+          "peak_backlog": 56592.696123394664,
+          "end_backlog": 0.0,
+          "completed": 183536.5,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 14735.737661028857,
+          "peak_backlog": 77508.90098827022,
+          "end_backlog": 238.43816032692297,
+          "completed": 183298.06183967306,
+          "moves": 7.0
+        },
+        "abc": {
+          "mean_backlog": 11946.44994194515,
+          "peak_backlog": 64101.27573425731,
+          "end_backlog": 307.0067016040417,
+          "completed": 183229.493298396,
+          "moves": 7.0
+        },
+        "abc_guard": {
+          "mean_backlog": 7025.235809536523,
+          "peak_backlog": 40309.87154903499,
+          "end_backlog": 0.0,
+          "completed": 183536.5,
+          "moves": 2.0
+        },
+        "abc_capacity": {
+          "mean_backlog": 6534.844358234603,
+          "peak_backlog": 38189.46452351887,
+          "end_backlog": 0.0,
+          "completed": 183536.5,
+          "moves": 1.9166666666666667
+        },
+        "capacity_aware": {
+          "mean_backlog": 6364.661469130245,
+          "peak_backlog": 40449.46725096098,
+          "end_backlog": 0.0,
+          "completed": 183536.5,
+          "moves": 2.0
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6364.661469130245,
+            "baseline_mean_backlog": 10533.18570607216,
+            "mean_backlog_improvement": 4168.524236941916,
+            "improvement_ci95": [
+              3638.680372121654,
+              4754.043289721607
+            ],
+            "reduction_pct": 39.575151841658396,
+            "reduction_pct_ci95": [
+              35.29102473422782,
+              46.93156768979729
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6364.661469130245,
+            "baseline_mean_backlog": 14735.737661028857,
+            "mean_backlog_improvement": 8371.076191898614,
+            "improvement_ci95": [
+              8040.846260253197,
+              8776.614767413997
+            ],
+            "reduction_pct": 56.807988744515555,
+            "reduction_pct_ci95": [
+              49.82537948696874,
+              66.55370646457894
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6364.661469130245,
+            "baseline_mean_backlog": 11946.44994194515,
+            "mean_backlog_improvement": 5581.788472814906,
+            "improvement_ci95": [
+              4597.7937596203265,
+              6565.783186009487
+            ],
+            "reduction_pct": 46.72340737156318,
+            "reduction_pct_ci95": [
+              34.79846117831443,
+              61.47584756955356
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6364.661469130245,
+            "baseline_mean_backlog": 7025.235809536523,
+            "mean_backlog_improvement": 660.5743404062787,
+            "improvement_ci95": [
+              227.00912847779182,
+              1280.1927030982197
+            ],
+            "reduction_pct": 9.402877829518134,
+            "reduction_pct_ci95": [
+              2.6839064420368515,
+              21.577804479230554
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6364.661469130245,
+            "baseline_mean_backlog": 6534.844358234603,
+            "mean_backlog_improvement": 170.18288910435808,
+            "improvement_ci95": [
+              -331.184675065394,
+              578.5065650099532
+            ],
+            "reduction_pct": 2.604237832993057,
+            "reduction_pct_ci95": [
+              -4.963833667823427,
+              12.32704126881683
+            ],
+            "wins": 3,
+            "ties": 0,
+            "losses": 1,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6534.844358234603,
+            "baseline_mean_backlog": 10533.18570607216,
+            "mean_backlog_improvement": 3998.341347837557,
+            "improvement_ci95": [
+              3060.1738071117015,
+              4936.508888563412
+            ],
+            "reduction_pct": 37.959468857865076,
+            "reduction_pct_ci95": [
+              35.02562410208317,
+              40.32297086143148
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6534.844358234603,
+            "baseline_mean_backlog": 14735.737661028857,
+            "mean_backlog_improvement": 8200.893302794257,
+            "improvement_ci95": [
+              7608.767999317273,
+              8793.018606271236
+            ],
+            "reduction_pct": 55.65308972948738,
+            "reduction_pct_ci95": [
+              50.260915803906016,
+              61.85107241792558
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6534.844358234603,
+            "baseline_mean_backlog": 11946.44994194515,
+            "mean_backlog_improvement": 5411.605583710548,
+            "improvement_ci95": [
+              4532.531559527641,
+              6181.085385759906
+            ],
+            "reduction_pct": 45.298859577604496,
+            "reduction_pct_ci95": [
+              34.93417476237253,
+              56.0592536307956
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6534.844358234603,
+            "baseline_mean_backlog": 7025.235809536523,
+            "mean_backlog_improvement": 490.3914513019206,
+            "improvement_ci95": [
+              32.40201824976157,
+              948.380884354081
+            ],
+            "reduction_pct": 6.980426915153948,
+            "reduction_pct_ci95": [
+              0.4402677253750586,
+              14.174286167123888
+            ],
+            "wins": 3,
+            "ties": 1,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 6534.844358234603,
+            "baseline_mean_backlog": 6364.661469130245,
+            "mean_backlog_improvement": -170.18288910435808,
+            "improvement_ci95": [
+              -578.5065650099532,
+              331.184675065394
+            ],
+            "reduction_pct": -2.6738718143891163,
+            "reduction_pct_ci95": [
+              -14.060254663713541,
+              4.729089529572971
+            ],
+            "wins": 1,
+            "ties": 0,
+            "losses": 3,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "shifting_bottleneck": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 9917.596243942648,
+          "peak_backlog": 48536.36108763099,
+          "end_backlog": 0.0,
+          "completed": 176716.0,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 18967.330859566264,
+          "peak_backlog": 63246.65751253712,
+          "end_backlog": 0.0,
+          "completed": 176716.0,
+          "moves": 7.0
+        },
+        "abc": {
+          "mean_backlog": 18574.26652543981,
+          "peak_backlog": 69356.39820703924,
+          "end_backlog": 482.5757196154567,
+          "completed": 176233.42428038456,
+          "moves": 7.0
+        },
+        "abc_guard": {
+          "mean_backlog": 10923.332052201831,
+          "peak_backlog": 51582.23011555608,
+          "end_backlog": 0.0,
+          "completed": 176716.0,
+          "moves": 3.0833333333333335
+        },
+        "abc_capacity": {
+          "mean_backlog": 9023.330200607199,
+          "peak_backlog": 47309.903920281744,
+          "end_backlog": 0.0,
+          "completed": 176716.0,
+          "moves": 1.4166666666666667
+        },
+        "capacity_aware": {
+          "mean_backlog": 7768.576147551374,
+          "peak_backlog": 42785.66448811618,
+          "end_backlog": 0.0,
+          "completed": 176716.0,
+          "moves": 2.5
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 7768.576147551374,
+            "baseline_mean_backlog": 9917.596243942648,
+            "mean_backlog_improvement": 2149.020096391273,
+            "improvement_ci95": [
+              1933.8051230926267,
+              2391.7440803286354
+            ],
+            "reduction_pct": 21.66875968260784,
+            "reduction_pct_ci95": [
+              18.075979105238062,
+              26.851355282777394
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 7768.576147551374,
+            "baseline_mean_backlog": 18967.330859566264,
+            "mean_backlog_improvement": 11198.75471201489,
+            "improvement_ci95": [
+              8476.039318931815,
+              14570.712494501622
+            ],
+            "reduction_pct": 59.04233334110236,
+            "reduction_pct_ci95": [
+              47.68511277090817,
+              66.29502602417168
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 7768.576147551374,
+            "baseline_mean_backlog": 18574.26652543981,
+            "mean_backlog_improvement": 10805.690377888433,
+            "improvement_ci95": [
+              7744.469926472424,
+              14292.431196302548
+            ],
+            "reduction_pct": 58.175596668049714,
+            "reduction_pct_ci95": [
+              52.65437667283635,
+              61.43791409495995
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 7768.576147551374,
+            "baseline_mean_backlog": 10923.332052201831,
+            "mean_backlog_improvement": 3154.7559046504584,
+            "improvement_ci95": [
+              1624.847719153291,
+              4486.7991256780115
+            ],
+            "reduction_pct": 28.880893573262284,
+            "reduction_pct_ci95": [
+              15.582394071861662,
+              40.168201890739844
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 7768.576147551374,
+            "baseline_mean_backlog": 9023.330200607199,
+            "mean_backlog_improvement": 1254.7540530558263,
+            "improvement_ci95": [
+              886.7285629986773,
+              1784.7089199441034
+            ],
+            "reduction_pct": 13.905664817313127,
+            "reduction_pct_ci95": [
+              10.633059106948132,
+              17.520645240989523
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 9023.330200607199,
+            "baseline_mean_backlog": 9917.596243942648,
+            "mean_backlog_improvement": 894.2660433354465,
+            "improvement_ci95": [
+              564.8319979138978,
+              1242.2397424079663
+            ],
+            "reduction_pct": 9.016963600243736,
+            "reduction_pct_ci95": [
+              5.2512374366253685,
+              15.127019192223226
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 9023.330200607199,
+            "baseline_mean_backlog": 18967.330859566264,
+            "mean_backlog_improvement": 9944.000658959063,
+            "improvement_ci95": [
+              7383.214642707117,
+              12786.003574557519
+            ],
+            "reduction_pct": 52.426990031355736,
+            "reduction_pct_ci95": [
+              41.379235498100684,
+              60.08502402249888
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 9023.330200607199,
+            "baseline_mean_backlog": 18574.26652543981,
+            "mean_backlog_improvement": 9550.936324832608,
+            "improvement_ci95": [
+              6795.412180385019,
+              12484.376374242436
+            ],
+            "reduction_pct": 51.42026099254791,
+            "reduction_pct_ci95": [
+              47.1305395903095,
+              55.02782581284178
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 9023.330200607199,
+            "baseline_mean_backlog": 10923.332052201831,
+            "mean_backlog_improvement": 1900.0018515946322,
+            "improvement_ci95": [
+              506.5584717344973,
+              2727.554776928004
+            ],
+            "reduction_pct": 17.393976879167067,
+            "reduction_pct_ci95": [
+              4.77020638977782,
+              27.753558372000665
+            ],
+            "wins": 3,
+            "ties": 0,
+            "losses": 1,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 9023.330200607199,
+            "baseline_mean_backlog": 7768.576147551374,
+            "mean_backlog_improvement": -1254.7540530558263,
+            "improvement_ci95": [
+              -1784.7089199441034,
+              -886.7285629986773
+            ],
+            "reduction_pct": -16.151660603228034,
+            "reduction_pct_ci95": [
+              -21.242461573786105,
+              -11.898201953307359
+            ],
+            "wins": 0,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "generated_underload": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 0.0,
+          "peak_backlog": 0.0,
+          "end_backlog": 0.0,
+          "completed": 427796.25,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 17748.772339752602,
+          "peak_backlog": 57240.131702665356,
+          "end_backlog": 25254.81974922055,
+          "completed": 402541.4302507795,
+          "moves": 11.75
+        },
+        "abc": {
+          "mean_backlog": 16306.85163244921,
+          "peak_backlog": 51886.53635984607,
+          "end_backlog": 27100.933726746767,
+          "completed": 400695.31627325324,
+          "moves": 11.166666666666668
+        },
+        "abc_guard": {
+          "mean_backlog": 0.0,
+          "peak_backlog": 0.0,
+          "end_backlog": 0.0,
+          "completed": 427796.25,
+          "moves": 0.0
+        },
+        "abc_capacity": {
+          "mean_backlog": 0.0,
+          "peak_backlog": 0.0,
+          "end_backlog": 0.0,
+          "completed": 427796.25,
+          "moves": 0.0
+        },
+        "capacity_aware": {
+          "mean_backlog": 0.0,
+          "peak_backlog": 0.0,
+          "end_backlog": 0.0,
+          "completed": 427796.25,
+          "moves": 0.0
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 0.0,
+            "mean_backlog_improvement": 0.0,
+            "improvement_ci95": [
+              0.0,
+              0.0
+            ],
+            "reduction_pct": null,
+            "reduction_pct_ci95": null,
+            "wins": 0,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 0
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 17748.772339752602,
+            "mean_backlog_improvement": 17748.772339752602,
+            "improvement_ci95": [
+              13208.096235655961,
+              22289.448443849247
+            ],
+            "reduction_pct": 100.0,
+            "reduction_pct_ci95": [
+              99.99999999999999,
+              100.00000000000001
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 16306.85163244921,
+            "mean_backlog_improvement": 16306.85163244921,
+            "improvement_ci95": [
+              14435.290907613893,
+              19312.775853565898
+            ],
+            "reduction_pct": 100.0,
+            "reduction_pct_ci95": [
+              100.0,
+              100.0
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 0.0,
+            "mean_backlog_improvement": 0.0,
+            "improvement_ci95": [
+              0.0,
+              0.0
+            ],
+            "reduction_pct": null,
+            "reduction_pct_ci95": null,
+            "wins": 0,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 0
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 0.0,
+            "mean_backlog_improvement": 0.0,
+            "improvement_ci95": [
+              0.0,
+              0.0
+            ],
+            "reduction_pct": null,
+            "reduction_pct_ci95": null,
+            "wins": 0,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 0
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 0.0,
+            "mean_backlog_improvement": 0.0,
+            "improvement_ci95": [
+              0.0,
+              0.0
+            ],
+            "reduction_pct": null,
+            "reduction_pct_ci95": null,
+            "wins": 0,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 0
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 17748.772339752602,
+            "mean_backlog_improvement": 17748.772339752602,
+            "improvement_ci95": [
+              13208.096235655961,
+              22289.448443849247
+            ],
+            "reduction_pct": 100.0,
+            "reduction_pct_ci95": [
+              99.99999999999999,
+              100.00000000000001
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 16306.85163244921,
+            "mean_backlog_improvement": 16306.85163244921,
+            "improvement_ci95": [
+              14435.290907613893,
+              19312.775853565898
+            ],
+            "reduction_pct": 100.0,
+            "reduction_pct_ci95": [
+              100.0,
+              100.0
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 0.0,
+            "mean_backlog_improvement": 0.0,
+            "improvement_ci95": [
+              0.0,
+              0.0
+            ],
+            "reduction_pct": null,
+            "reduction_pct_ci95": null,
+            "wins": 0,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 0
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 0.0,
+            "baseline_mean_backlog": 0.0,
+            "mean_backlog_improvement": 0.0,
+            "improvement_ci95": [
+              0.0,
+              0.0
+            ],
+            "reduction_pct": null,
+            "reduction_pct_ci95": null,
+            "wins": 0,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 0
+          }
+        }
+      }
+    },
+    "generated_sustained_processing_fault": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 84718.46980621357,
+          "peak_backlog": 192755.3723559297,
+          "end_backlog": 21095.60535044285,
+          "completed": 800768.6446495573,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 112239.04185063562,
+          "peak_backlog": 236396.4523891218,
+          "end_backlog": 70800.42355943307,
+          "completed": 751063.8264405668,
+          "moves": 12.0
+        },
+        "abc": {
+          "mean_backlog": 95844.67766890656,
+          "peak_backlog": 197499.17029024597,
+          "end_backlog": 12376.738701047398,
+          "completed": 809487.5112989525,
+          "moves": 11.833333333333332
+        },
+        "abc_guard": {
+          "mean_backlog": 45625.169768762564,
+          "peak_backlog": 109192.31816846564,
+          "end_backlog": 10266.12969644191,
+          "completed": 811598.1203035581,
+          "moves": 9.0
+        },
+        "abc_capacity": {
+          "mean_backlog": 34123.40084078234,
+          "peak_backlog": 81880.5279362775,
+          "end_backlog": 0.0,
+          "completed": 821864.25,
+          "moves": 4.666666666666666
+        },
+        "capacity_aware": {
+          "mean_backlog": 25964.98006937038,
+          "peak_backlog": 63715.27084456584,
+          "end_backlog": 0.0,
+          "completed": 821864.2500000001,
+          "moves": 6.0
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 25964.98006937038,
+            "baseline_mean_backlog": 84718.46980621357,
+            "mean_backlog_improvement": 58753.48973684319,
+            "improvement_ci95": [
+              47711.67079985212,
+              67635.61195079118
+            ],
+            "reduction_pct": 69.35145296089141,
+            "reduction_pct_ci95": [
+              62.320106874536556,
+              83.11860105788237
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 25964.98006937038,
+            "baseline_mean_backlog": 112239.04185063562,
+            "mean_backlog_improvement": 86274.06178126523,
+            "improvement_ci95": [
+              64832.514242609395,
+              107715.60931992106
+            ],
+            "reduction_pct": 76.86635626850433,
+            "reduction_pct_ci95": [
+              70.98903358059692,
+              88.44879533394378
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 25964.98006937038,
+            "baseline_mean_backlog": 95844.67766890656,
+            "mean_backlog_improvement": 69879.69759953617,
+            "improvement_ci95": [
+              56048.42929133332,
+              83092.33038760987
+            ],
+            "reduction_pct": 72.90931463188195,
+            "reduction_pct_ci95": [
+              66.23868536186862,
+              87.49397651239192
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 25964.98006937038,
+            "baseline_mean_backlog": 45625.169768762564,
+            "mean_backlog_improvement": 19660.189699392187,
+            "improvement_ci95": [
+              11858.441845536821,
+              24798.353644650968
+            ],
+            "reduction_pct": 43.09066639978314,
+            "reduction_pct_ci95": [
+              31.72010059871215,
+              70.18600555920627
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 25964.98006937038,
+            "baseline_mean_backlog": 34123.40084078234,
+            "mean_backlog_improvement": 8158.420771411957,
+            "improvement_ci95": [
+              4338.272107290311,
+              12818.25645807889
+            ],
+            "reduction_pct": 23.908580535330124,
+            "reduction_pct_ci95": [
+              13.88057411550619,
+              45.148937539946445
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 34123.40084078234,
+            "baseline_mean_backlog": 84718.46980621357,
+            "mean_backlog_improvement": 50595.06896543123,
+            "improvement_ci95": [
+              38735.29656184125,
+              58046.45631783389
+            ],
+            "reduction_pct": 59.72141503637073,
+            "reduction_pct_ci95": [
+              50.26641579137626,
+              71.91515932825801
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 34123.40084078234,
+            "baseline_mean_backlog": 112239.04185063562,
+            "mean_backlog_improvement": 78115.64100985328,
+            "improvement_ci95": [
+              59062.42830813151,
+              97168.85371157504
+            ],
+            "reduction_pct": 69.59756580406955,
+            "reduction_pct_ci95": [
+              62.48519366886664,
+              78.94078227843148
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 34123.40084078234,
+            "baseline_mean_backlog": 95844.67766890656,
+            "mean_backlog_improvement": 61721.27682812422,
+            "improvement_ci95": [
+              51489.71864226587,
+              71952.83501398258
+            ],
+            "reduction_pct": 64.39718754268138,
+            "reduction_pct_ci95": [
+              56.34239956629418,
+              77.2000341894638
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 34123.40084078234,
+            "baseline_mean_backlog": 45625.169768762564,
+            "mean_backlog_improvement": 11501.76892798023,
+            "improvement_ci95": [
+              7520.16973824651,
+              15005.039859122106
+            ],
+            "reduction_pct": 25.209262751839553,
+            "reduction_pct_ci95": [
+              15.63971618842809,
+              45.645547955417605
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 34123.40084078234,
+            "baseline_mean_backlog": 25964.98006937038,
+            "mean_backlog_improvement": -8158.420771411957,
+            "improvement_ci95": [
+              -12818.25645807889,
+              -4338.272107290311
+            ],
+            "reduction_pct": -31.420862829916256,
+            "reduction_pct_ci95": [
+              -82.31187421907666,
+              -16.117820077113926
+            ],
+            "wins": 0,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "generated_switching_fault": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 48776.54799441461,
+          "peak_backlog": 110874.22116427685,
+          "end_backlog": 364.49647381589557,
+          "completed": 845067.7535261841,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 81982.64784526832,
+          "peak_backlog": 163661.41577287414,
+          "end_backlog": 4596.243086382468,
+          "completed": 840836.0069136174,
+          "moves": 12.0
+        },
+        "abc": {
+          "mean_backlog": 64565.768849214044,
+          "peak_backlog": 149575.0057297182,
+          "end_backlog": 4196.632933017711,
+          "completed": 841235.6170669822,
+          "moves": 12.0
+        },
+        "abc_guard": {
+          "mean_backlog": 68226.76529033917,
+          "peak_backlog": 162882.45698392033,
+          "end_backlog": 2415.5995671192027,
+          "completed": 843016.6504328807,
+          "moves": 9.833333333333332
+        },
+        "abc_capacity": {
+          "mean_backlog": 48547.17194109017,
+          "peak_backlog": 105256.41958251735,
+          "end_backlog": 3466.05746929078,
+          "completed": 841966.1925307093,
+          "moves": 5.75
+        },
+        "capacity_aware": {
+          "mean_backlog": 46230.18191785601,
+          "peak_backlog": 100484.55759268862,
+          "end_backlog": 8122.050389930073,
+          "completed": 837310.19961007,
+          "moves": 9.75
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 46230.18191785601,
+            "baseline_mean_backlog": 48776.54799441461,
+            "mean_backlog_improvement": 2546.3660765585964,
+            "improvement_ci95": [
+              -4867.456558187128,
+              8882.481786592412
+            ],
+            "reduction_pct": 5.2204720941920275,
+            "reduction_pct_ci95": [
+              -9.023715499685142,
+              22.091820943855783
+            ],
+            "wins": 3,
+            "ties": 0,
+            "losses": 1,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 46230.18191785601,
+            "baseline_mean_backlog": 81982.64784526832,
+            "mean_backlog_improvement": 35752.465927412326,
+            "improvement_ci95": [
+              20110.57815732465,
+              51566.69363453018
+            ],
+            "reduction_pct": 43.60979654486213,
+            "reduction_pct_ci95": [
+              20.60357489801261,
+              77.45004465758252
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 46230.18191785601,
+            "baseline_mean_backlog": 64565.768849214044,
+            "mean_backlog_improvement": 18335.586931358037,
+            "improvement_ci95": [
+              10669.466202185213,
+              26001.70766053086
+            ],
+            "reduction_pct": 28.398309596806158,
+            "reduction_pct_ci95": [
+              16.141383420993595,
+              53.6444049341634
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 46230.18191785601,
+            "baseline_mean_backlog": 68226.76529033917,
+            "mean_backlog_improvement": 21996.58337248317,
+            "improvement_ci95": [
+              13820.999435998085,
+              30172.167308968244
+            ],
+            "reduction_pct": 32.24040195790705,
+            "reduction_pct_ci95": [
+              17.872869374785026,
+              62.75755165187947
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 46230.18191785601,
+            "baseline_mean_backlog": 48547.17194109017,
+            "mean_backlog_improvement": 2316.990023234169,
+            "improvement_ci95": [
+              -1898.8040868213357,
+              7762.3560228481765
+            ],
+            "reduction_pct": 4.772657047965069,
+            "reduction_pct_ci95": [
+              -4.751629239467285,
+              24.659382382256542
+            ],
+            "wins": 2,
+            "ties": 0,
+            "losses": 2,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 48547.17194109017,
+            "baseline_mean_backlog": 48776.54799441461,
+            "mean_backlog_improvement": 229.37605332442809,
+            "improvement_ci95": [
+              -6121.313174791816,
+              6580.065281440671
+            ],
+            "reduction_pct": 0.4702588902984703,
+            "reduction_pct_ci95": [
+              -14.998753901055741,
+              11.596677804627772
+            ],
+            "wins": 2,
+            "ties": 0,
+            "losses": 2,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 48547.17194109017,
+            "baseline_mean_backlog": 81982.64784526832,
+            "mean_backlog_improvement": 33435.47590417815,
+            "improvement_ci95": [
+              19291.40960915842,
+              54010.86608734369
+            ],
+            "reduction_pct": 40.78360089964806,
+            "reduction_pct_ci95": [
+              19.764325006527418,
+              71.70121624264071
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 48547.17194109017,
+            "baseline_mean_backlog": 64565.768849214044,
+            "mean_backlog_improvement": 16018.596908123869,
+            "improvement_ci95": [
+              11744.024178500971,
+              22810.015161939882
+            ],
+            "reduction_pct": 24.809736170777228,
+            "reduction_pct_ci95": [
+              16.13530228810498,
+              41.82662711334717
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 48547.17194109017,
+            "baseline_mean_backlog": 68226.76529033917,
+            "mean_backlog_improvement": 19679.593349249,
+            "improvement_ci95": [
+              8915.45120571163,
+              31311.077849954232
+            ],
+            "reduction_pct": 28.844388658179003,
+            "reduction_pct_ci95": [
+              15.963518931886602,
+              53.26305633893554
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 48547.17194109017,
+            "baseline_mean_backlog": 46230.18191785601,
+            "mean_backlog_improvement": -2316.990023234169,
+            "improvement_ci95": [
+              -7762.3560228481765,
+              1898.8040868213357
+            ],
+            "reduction_pct": -5.011855733882031,
+            "reduction_pct_ci95": [
+              -32.730528580706796,
+              4.536091012584474
+            ],
+            "wins": 2,
+            "ties": 0,
+            "losses": 2,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "generated_pulsed_short_fault": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 19853.89952883023,
+          "peak_backlog": 75019.85314912548,
+          "end_backlog": 0.0,
+          "completed": 817827.7499999999,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 70066.4792250933,
+          "peak_backlog": 155635.6856946023,
+          "end_backlog": 43519.268492604315,
+          "completed": 774308.4815073957,
+          "moves": 12.0
+        },
+        "abc": {
+          "mean_backlog": 60124.2310528233,
+          "peak_backlog": 129830.24036552639,
+          "end_backlog": 26136.147889405416,
+          "completed": 791691.6021105945,
+          "moves": 12.0
+        },
+        "abc_guard": {
+          "mean_backlog": 43689.52697690617,
+          "peak_backlog": 109882.72368594042,
+          "end_backlog": 17797.850673232544,
+          "completed": 800029.8993267673,
+          "moves": 9.916666666666666
+        },
+        "abc_capacity": {
+          "mean_backlog": 21970.94057298683,
+          "peak_backlog": 79863.18931945543,
+          "end_backlog": 0.0,
+          "completed": 817827.75,
+          "moves": 5.083333333333333
+        },
+        "capacity_aware": {
+          "mean_backlog": 19198.800813951,
+          "peak_backlog": 76007.19501931957,
+          "end_backlog": 0.0,
+          "completed": 817827.75,
+          "moves": 8.0
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 19198.800813951,
+            "baseline_mean_backlog": 19853.89952883023,
+            "mean_backlog_improvement": 655.098714879231,
+            "improvement_ci95": [
+              -73.2624862716657,
+              1517.0793478849155
+            ],
+            "reduction_pct": 3.2995972097468744,
+            "reduction_pct_ci95": [
+              -0.32465884034029435,
+              7.062575400728658
+            ],
+            "wins": 3,
+            "ties": 0,
+            "losses": 1,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 19198.800813951,
+            "baseline_mean_backlog": 70066.4792250933,
+            "mean_backlog_improvement": 50867.6784111423,
+            "improvement_ci95": [
+              29280.79373098337,
+              80234.38191896751
+            ],
+            "reduction_pct": 72.59916435607738,
+            "reduction_pct_ci95": [
+              62.4271991706347,
+              78.70094119163856
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 19198.800813951,
+            "baseline_mean_backlog": 60124.2310528233,
+            "mean_backlog_improvement": 40925.4302388723,
+            "improvement_ci95": [
+              38628.66323664282,
+              42822.23443456732
+            ],
+            "reduction_pct": 68.06811417332968,
+            "reduction_pct_ci95": [
+              63.92789787986914,
+              73.39220786851924
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 19198.800813951,
+            "baseline_mean_backlog": 43689.52697690617,
+            "mean_backlog_improvement": 24490.726162955172,
+            "improvement_ci95": [
+              20030.675105571052,
+              29606.348658269064
+            ],
+            "reduction_pct": 56.05628592843479,
+            "reduction_pct_ci95": [
+              48.9273479696163,
+              66.62941982890167
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 19198.800813951,
+            "baseline_mean_backlog": 21970.94057298683,
+            "mean_backlog_improvement": 2772.139759035831,
+            "improvement_ci95": [
+              1589.017165596626,
+              3705.820362786788
+            ],
+            "reduction_pct": 12.617301247649658,
+            "reduction_pct_ci95": [
+              6.826284030220535,
+              18.653630540310935
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 21970.94057298683,
+            "baseline_mean_backlog": 19853.89952883023,
+            "mean_backlog_improvement": -2117.0410441566,
+            "improvement_ci95": [
+              -2795.174012033098,
+              -1534.5947774432098
+            ],
+            "reduction_pct": -10.663099413202964,
+            "reduction_pct_ci95": [
+              -17.78163865734638,
+              -6.600461640171171
+            ],
+            "wins": 0,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 21970.94057298683,
+            "baseline_mean_backlog": 70066.4792250933,
+            "mean_backlog_improvement": 48095.538652106465,
+            "improvement_ci95": [
+              26252.17043603655,
+              76362.7830623321
+            ],
+            "reduction_pct": 68.64272214620104,
+            "reduction_pct_ci95": [
+              57.00825386661837,
+              75.53314273572934
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 21970.94057298683,
+            "baseline_mean_backlog": 60124.2310528233,
+            "mean_backlog_improvement": 38153.29047983647,
+            "improvement_ci95": [
+              36045.10446644471,
+              39685.78277933385
+            ],
+            "reduction_pct": 63.45742774874935,
+            "reduction_pct_ci95": [
+              60.491683922640135,
+              67.5551310699545
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 21970.94057298683,
+            "baseline_mean_backlog": 43689.52697690617,
+            "mean_backlog_improvement": 21718.58640391934,
+            "improvement_ci95": [
+              17009.093356846966,
+              26827.167353010493
+            ],
+            "reduction_pct": 49.711196038811686,
+            "reduction_pct_ci95": [
+              44.351948763605975,
+              59.05473446465393
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 21970.94057298683,
+            "baseline_mean_backlog": 19198.800813951,
+            "mean_backlog_improvement": -2772.139759035831,
+            "improvement_ci95": [
+              -3705.820362786788,
+              -1589.017165596626
+            ],
+            "reduction_pct": -14.439129745131943,
+            "reduction_pct_ci95": [
+              -22.931116243060707,
+              -7.326405262654346
+            ],
+            "wins": 0,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "generated_asymmetric_recovery": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 2705.0269299972897,
+          "peak_backlog": 13974.117945069956,
+          "end_backlog": 0.0,
+          "completed": 776262.5,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 59671.436848127254,
+          "peak_backlog": 140861.716127932,
+          "end_backlog": 9902.419929350119,
+          "completed": 766360.08007065,
+          "moves": 12.0
+        },
+        "abc": {
+          "mean_backlog": 37691.94235978057,
+          "peak_backlog": 102786.23817116751,
+          "end_backlog": 10861.78836413507,
+          "completed": 765400.7116358647,
+          "moves": 12.0
+        },
+        "abc_guard": {
+          "mean_backlog": 14552.245123739405,
+          "peak_backlog": 57288.31817629645,
+          "end_backlog": 2155.9135030597226,
+          "completed": 774106.5864969402,
+          "moves": 6.833333333333333
+        },
+        "abc_capacity": {
+          "mean_backlog": 1888.7873101672496,
+          "peak_backlog": 12309.195226568472,
+          "end_backlog": 0.0,
+          "completed": 776262.5000000001,
+          "moves": 1.0
+        },
+        "capacity_aware": {
+          "mean_backlog": 2279.1573071386297,
+          "peak_backlog": 14086.411131110532,
+          "end_backlog": 0.0,
+          "completed": 776262.5,
+          "moves": 7.75
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 2279.1573071386297,
+            "baseline_mean_backlog": 2705.0269299972897,
+            "mean_backlog_improvement": 425.8696228586597,
+            "improvement_ci95": [
+              -664.3057527890569,
+              1688.711545484583
+            ],
+            "reduction_pct": 15.74363708309132,
+            "reduction_pct_ci95": [
+              -93.0808680751983,
+              30.175837847726882
+            ],
+            "wins": 3,
+            "ties": 0,
+            "losses": 1,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 2279.1573071386297,
+            "baseline_mean_backlog": 59671.436848127254,
+            "mean_backlog_improvement": 57392.27954098862,
+            "improvement_ci95": [
+              43335.79337106892,
+              69971.0017495477
+            ],
+            "reduction_pct": 96.18048864326927,
+            "reduction_pct_ci95": [
+              94.28613017799141,
+              98.48237504387724
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 2279.1573071386297,
+            "baseline_mean_backlog": 37691.94235978057,
+            "mean_backlog_improvement": 35412.785052641935,
+            "improvement_ci95": [
+              28649.680120665613,
+              42695.977294312484
+            ],
+            "reduction_pct": 93.95319751531133,
+            "reduction_pct_ci95": [
+              90.07888600328731,
+              97.78505327612386
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 2279.1573071386297,
+            "baseline_mean_backlog": 14552.245123739405,
+            "mean_backlog_improvement": 12273.087816600775,
+            "improvement_ci95": [
+              10122.790110871172,
+              13395.182089692367
+            ],
+            "reduction_pct": 84.33810530431082,
+            "reduction_pct_ci95": [
+              75.69854891470357,
+              95.19828137797978
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 2279.1573071386297,
+            "baseline_mean_backlog": 1888.7873101672496,
+            "mean_backlog_improvement": -390.36999697138015,
+            "improvement_ci95": [
+              -1028.2011419183823,
+              247.46114797562132
+            ],
+            "reduction_pct": -20.667758347911246,
+            "reduction_pct_ci95": [
+              -93.0808680751983,
+              19.373900707698315
+            ],
+            "wins": 2,
+            "ties": 0,
+            "losses": 2,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 1888.7873101672496,
+            "baseline_mean_backlog": 2705.0269299972897,
+            "mean_backlog_improvement": 816.2396198300398,
+            "improvement_ci95": [
+              0.0,
+              2440.1059676328728
+            ],
+            "reduction_pct": 30.174916588754918,
+            "reduction_pct_ci95": [
+              0.0,
+              43.42135370852073
+            ],
+            "wins": 2,
+            "ties": 2,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 1888.7873101672496,
+            "baseline_mean_backlog": 59671.436848127254,
+            "mean_backlog_improvement": 57782.64953796,
+            "improvement_ci95": [
+              43205.01325448816,
+              70233.86960646152
+            ],
+            "reduction_pct": 96.83468773347205,
+            "reduction_pct_ci95": [
+              95.40331834461938,
+              98.7875470125857
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 1888.7873101672496,
+            "baseline_mean_backlog": 37691.94235978057,
+            "mean_backlog_improvement": 35803.15504961332,
+            "improvement_ci95": [
+              29146.67066114526,
+              42597.82072604941
+            ],
+            "reduction_pct": 94.98888305585785,
+            "reduction_pct_ci95": [
+              91.90861905796693,
+              98.12821469494844
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 1888.7873101672496,
+            "baseline_mean_backlog": 14552.245123739405,
+            "mean_backlog_improvement": 12663.457813572157,
+            "improvement_ci95": [
+              10906.647859007511,
+              13957.813802764786
+            ],
+            "reduction_pct": 87.0206466829917,
+            "reduction_pct_ci95": [
+              80.14470084202172,
+              95.46239690364531
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 1888.7873101672496,
+            "baseline_mean_backlog": 2279.1573071386297,
+            "mean_backlog_improvement": 390.36999697138015,
+            "improvement_ci95": [
+              -247.46114797562132,
+              1028.2011419183823
+            ],
+            "reduction_pct": 17.12782157460954,
+            "reduction_pct_ci95": [
+              -24.02931665769941,
+              48.2082295377637
+            ],
+            "wins": 2,
+            "ties": 0,
+            "losses": 2,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "generated_sustained_overload": {
+      "scenarios": 4,
+      "overall": {
+        "static": {
+          "mean_backlog": 201084.9994706741,
+          "peak_backlog": 391626.57484776626,
+          "end_backlog": 265813.4152054024,
+          "completed": 1138633.8347945977,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 305982.5978069794,
+          "peak_backlog": 629650.0522306783,
+          "end_backlog": 609266.945743975,
+          "completed": 795180.3042560247,
+          "moves": 12.0
+        },
+        "abc": {
+          "mean_backlog": 275672.68381520925,
+          "peak_backlog": 516571.8774403797,
+          "end_backlog": 423849.7301504482,
+          "completed": 980597.5198495517,
+          "moves": 12.0
+        },
+        "abc_guard": {
+          "mean_backlog": 277620.81641685014,
+          "peak_backlog": 544086.1891801768,
+          "end_backlog": 424704.82445438585,
+          "completed": 979742.4255456141,
+          "moves": 11.0
+        },
+        "abc_capacity": {
+          "mean_backlog": 201084.9994706741,
+          "peak_backlog": 391626.57484776626,
+          "end_backlog": 265813.4152054024,
+          "completed": 1138633.8347945977,
+          "moves": 0.0
+        },
+        "capacity_aware": {
+          "mean_backlog": 192112.72209172955,
+          "peak_backlog": 388930.0493187452,
+          "end_backlog": 289366.8233013718,
+          "completed": 1115080.4266986283,
+          "moves": 6.0
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 192112.72209172955,
+            "baseline_mean_backlog": 201084.9994706741,
+            "mean_backlog_improvement": 8972.277378944542,
+            "improvement_ci95": [
+              611.2386895494128,
+              19629.27197150857
+            ],
+            "reduction_pct": 4.461932716295461,
+            "reduction_pct_ci95": [
+              0.3200774835691055,
+              11.157804318442583
+            ],
+            "wins": 3,
+            "ties": 0,
+            "losses": 1,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 192112.72209172955,
+            "baseline_mean_backlog": 305982.5978069794,
+            "mean_backlog_improvement": 113869.87571524986,
+            "improvement_ci95": [
+              108303.9592994185,
+              117425.10269213602
+            ],
+            "reduction_pct": 37.21449406971879,
+            "reduction_pct_ci95": [
+              33.31677052969838,
+              42.42349481481544
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 192112.72209172955,
+            "baseline_mean_backlog": 275672.68381520925,
+            "mean_backlog_improvement": 83559.96172347969,
+            "improvement_ci95": [
+              75874.76402871229,
+              91245.15941824706
+            ],
+            "reduction_pct": 30.311295470788167,
+            "reduction_pct_ci95": [
+              26.925294267621638,
+              34.974840464613806
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 192112.72209172955,
+            "baseline_mean_backlog": 277620.81641685014,
+            "mean_backlog_improvement": 85508.09432512059,
+            "improvement_ci95": [
+              72420.71967142617,
+              98595.46897881501
+            ],
+            "reduction_pct": 30.800318012439465,
+            "reduction_pct_ci95": [
+              28.597632112648594,
+              32.442561848471904
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 192112.72209172955,
+            "baseline_mean_backlog": 201084.9994706741,
+            "mean_backlog_improvement": 8972.277378944542,
+            "improvement_ci95": [
+              611.2386895494128,
+              19629.27197150857
+            ],
+            "reduction_pct": 4.461932716295461,
+            "reduction_pct_ci95": [
+              0.3200774835691055,
+              11.157804318442583
+            ],
+            "wins": 3,
+            "ties": 0,
+            "losses": 1,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 201084.9994706741,
+            "baseline_mean_backlog": 201084.9994706741,
+            "mean_backlog_improvement": 0.0,
+            "improvement_ci95": [
+              0.0,
+              0.0
+            ],
+            "reduction_pct": 0.0,
+            "reduction_pct_ci95": [
+              0.0,
+              0.0
+            ],
+            "wins": 0,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 201084.9994706741,
+            "baseline_mean_backlog": 305982.5978069794,
+            "mean_backlog_improvement": 104897.5983363053,
+            "improvement_ci95": [
+              95062.60485846974,
+              115452.98696792749
+            ],
+            "reduction_pct": 34.282210520507114,
+            "reduction_pct_ci95": [
+              30.852531673010958,
+              37.89869410553742
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 201084.9994706741,
+            "baseline_mean_backlog": 275672.68381520925,
+            "mean_backlog_improvement": 74587.68434453514,
+            "improvement_ci95": [
+              67082.54462171337,
+              82092.82406735694
+            ],
+            "reduction_pct": 27.05661051079448,
+            "reduction_pct_ci95": [
+              25.395597824758372,
+              29.329994614487763
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 201084.9994706741,
+            "baseline_mean_backlog": 277620.81641685014,
+            "mean_backlog_improvement": 76535.81694617606,
+            "improvement_ci95": [
+              53820.050433348486,
+              97637.86102201737
+            ],
+            "reduction_pct": 27.568471966186,
+            "reduction_pct_ci95": [
+              23.17174886434948,
+              31.879984359874985
+            ],
+            "wins": 4,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 4,
+            "candidate_mean_backlog": 201084.9994706741,
+            "baseline_mean_backlog": 192112.72209172955,
+            "mean_backlog_improvement": -8972.277378944542,
+            "improvement_ci95": [
+              -19629.27197150857,
+              -611.2386895494128
+            ],
+            "reduction_pct": -4.670319217412629,
+            "reduction_pct_ci95": [
+              -12.559127149936943,
+              -0.32110526923447896
+            ],
+            "wins": 1,
+            "ties": 0,
+            "losses": 3,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    }
+  },
+  "source_slices": {
+    "legacy_flash": {
+      "scenarios": 20,
+      "overall": {
+        "static": {
+          "mean_backlog": 7846.996096769381,
+          "peak_backlog": 42209.06167256371,
+          "end_backlog": 0.0,
+          "completed": 179862.85,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 14940.658966769799,
+          "peak_backlog": 59441.99690628085,
+          "end_backlog": 136.20361074464694,
+          "completed": 179726.64638925536,
+          "moves": 7.0
+        },
+        "abc": {
+          "mean_backlog": 13081.766529538241,
+          "peak_backlog": 56742.49568043954,
+          "end_backlog": 525.0890078683757,
+          "completed": 179337.7609921316,
+          "moves": 7.0
+        },
+        "abc_guard": {
+          "mean_backlog": 8715.870080195926,
+          "peak_backlog": 42893.441850974064,
+          "end_backlog": 0.0,
+          "completed": 179862.85,
+          "moves": 2.55
+        },
+        "abc_capacity": {
+          "mean_backlog": 6265.1913803868065,
+          "peak_backlog": 35937.80190302912,
+          "end_backlog": 0.0,
+          "completed": 179862.85,
+          "moves": 1.1666666666666665
+        },
+        "capacity_aware": {
+          "mean_backlog": 5228.568161995105,
+          "peak_backlog": 31730.160511808914,
+          "end_backlog": 0.0,
+          "completed": 179862.85,
+          "moves": 2.0
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 5228.568161995105,
+            "baseline_mean_backlog": 7846.996096769381,
+            "mean_backlog_improvement": 2618.427934774275,
+            "improvement_ci95": [
+              2419.300928734282,
+              2834.5009840795947
+            ],
+            "reduction_pct": 33.36853876927869,
+            "reduction_pct_ci95": [
+              30.400220800118653,
+              37.537588685223895
+            ],
+            "wins": 16,
+            "ties": 0,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 5228.568161995105,
+            "baseline_mean_backlog": 14940.658966769799,
+            "mean_backlog_improvement": 9712.09080477469,
+            "improvement_ci95": [
+              8425.95721962511,
+              11026.258208871797
+            ],
+            "reduction_pct": 65.00443405057166,
+            "reduction_pct_ci95": [
+              61.648755256975726,
+              68.97860479069256
+            ],
+            "wins": 20,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 5228.568161995105,
+            "baseline_mean_backlog": 13081.766529538241,
+            "mean_backlog_improvement": 7853.198367543135,
+            "improvement_ci95": [
+              6927.084391582119,
+              8783.464676103553
+            ],
+            "reduction_pct": 60.03163525209571,
+            "reduction_pct_ci95": [
+              55.17441703867441,
+              65.65865647745656
+            ],
+            "wins": 20,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 5228.568161995105,
+            "baseline_mean_backlog": 8715.870080195926,
+            "mean_backlog_improvement": 3487.3019182008197,
+            "improvement_ci95": [
+              2677.1447826039616,
+              4180.995034253366
+            ],
+            "reduction_pct": 40.01094424439183,
+            "reduction_pct_ci95": [
+              33.62946314468117,
+              46.814096601171585
+            ],
+            "wins": 20,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 5228.568161995105,
+            "baseline_mean_backlog": 6265.1913803868065,
+            "mean_backlog_improvement": 1036.6232183917004,
+            "improvement_ci95": [
+              829.7820192507296,
+              1250.9376350244568
+            ],
+            "reduction_pct": 16.545755036898836,
+            "reduction_pct_ci95": [
+              13.861511073701564,
+              19.82833639365642
+            ],
+            "wins": 15,
+            "ties": 0,
+            "losses": 5,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 6265.1913803868065,
+            "baseline_mean_backlog": 7846.996096769381,
+            "mean_backlog_improvement": 1581.8047163825745,
+            "improvement_ci95": [
+              1343.1270562876593,
+              1824.546000774538
+            ],
+            "reduction_pct": 20.15809230533205,
+            "reduction_pct_ci95": [
+              16.72691500827498,
+              24.395436202430755
+            ],
+            "wins": 16,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 6265.1913803868065,
+            "baseline_mean_backlog": 14940.658966769799,
+            "mean_backlog_improvement": 8675.46758638299,
+            "improvement_ci95": [
+              7466.262938914315,
+              9857.059612093268
+            ],
+            "reduction_pct": 58.0661643216574,
+            "reduction_pct_ci95": [
+              54.60808673102011,
+              62.142413126724406
+            ],
+            "wins": 20,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 6265.1913803868065,
+            "baseline_mean_backlog": 13081.766529538241,
+            "mean_backlog_improvement": 6816.575149151434,
+            "improvement_ci95": [
+              5995.958399028789,
+              7607.455981821978
+            ],
+            "reduction_pct": 52.10745149563562,
+            "reduction_pct_ci95": [
+              47.32175904636152,
+              57.52788304107696
+            ],
+            "wins": 20,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 6265.1913803868065,
+            "baseline_mean_backlog": 8715.870080195926,
+            "mean_backlog_improvement": 2450.67869980912,
+            "improvement_ci95": [
+              1619.2995627014516,
+              3186.0272677527078
+            ],
+            "reduction_pct": 28.11743035703935,
+            "reduction_pct_ci95": [
+              20.401527944721625,
+              35.462462779589295
+            ],
+            "wins": 17,
+            "ties": 1,
+            "losses": 2,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 20,
+            "candidate_mean_backlog": 6265.1913803868065,
+            "baseline_mean_backlog": 5228.568161995105,
+            "mean_backlog_improvement": -1036.6232183917004,
+            "improvement_ci95": [
+              -1250.9376350244568,
+              -829.7820192507297
+            ],
+            "reduction_pct": -19.826139514190622,
+            "reduction_pct_ci95": [
+              -24.73234997236178,
+              -16.092122403004705
+            ],
+            "wins": 5,
+            "ties": 0,
+            "losses": 15,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    },
+    "generated_synthetic": {
+      "scenarios": 24,
+      "overall": {
+        "static": {
+          "mean_backlog": 59523.15728835497,
+          "peak_backlog": 130708.35657702805,
+          "end_backlog": 47878.919504943515,
+          "completed": 801059.4554950563,
+          "moves": 0.0
+        },
+        "maxweight": {
+          "mean_backlog": 107948.49598597609,
+          "peak_backlog": 230574.24231964562,
+          "end_backlog": 127223.3534268276,
+          "completed": 721715.0215731724,
+          "moves": 11.958333333333334
+        },
+        "abc": {
+          "mean_backlog": 91701.02589639714,
+          "peak_backlog": 191358.17805948062,
+          "end_backlog": 84086.99529413343,
+          "completed": 764851.3797058664,
+          "moves": 11.833333333333334
+        },
+        "abc_guard": {
+          "mean_backlog": 74952.42059609958,
+          "peak_backlog": 163888.66769913328,
+          "end_backlog": 76223.38631570654,
+          "completed": 772714.9886842933,
+          "moves": 7.763888888888888
+        },
+        "abc_capacity": {
+          "mean_backlog": 51269.21668928344,
+          "peak_backlog": 111822.6511520975,
+          "end_backlog": 44879.91211244887,
+          "completed": 804058.4628875512,
+          "moves": 2.75
+        },
+        "capacity_aware": {
+          "mean_backlog": 47630.97370000759,
+          "peak_backlog": 107203.91398440495,
+          "end_backlog": 49581.47894855032,
+          "completed": 799356.8960514497,
+          "moves": 6.25
+        }
+      },
+      "comparisons": {
+        "capacity_aware": {
+          "static": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 47630.97370000759,
+            "baseline_mean_backlog": 59523.15728835497,
+            "mean_backlog_improvement": 11892.18358834737,
+            "improvement_ci95": [
+              9299.720575593787,
+              14523.905957348385
+            ],
+            "reduction_pct": 19.979087350384802,
+            "reduction_pct_ci95": [
+              15.463219084651005,
+              25.332427539714498
+            ],
+            "wins": 16,
+            "ties": 4,
+            "losses": 4,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 47630.97370000759,
+            "baseline_mean_backlog": 107948.49598597609,
+            "mean_backlog_improvement": 60317.522285968495,
+            "improvement_ci95": [
+              53967.93557515089,
+              67300.67880246678
+            ],
+            "reduction_pct": 55.87620442049005,
+            "reduction_pct_ci95": [
+              50.780208794125095,
+              61.60117665425578
+            ],
+            "wins": 24,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 47630.97370000759,
+            "baseline_mean_backlog": 91701.02589639714,
+            "mean_backlog_improvement": 44070.05219638956,
+            "improvement_ci95": [
+              40995.99812085744,
+              47520.1404412349
+            ],
+            "reduction_pct": 48.05840694321068,
+            "reduction_pct_ci95": [
+              44.00790481343262,
+              52.99283840840538
+            ],
+            "wins": 24,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 47630.97370000759,
+            "baseline_mean_backlog": 74952.42059609958,
+            "mean_backlog_improvement": 27321.446896091988,
+            "improvement_ci95": [
+              24522.20293493505,
+              30269.056515949917
+            ],
+            "reduction_pct": 36.451720543250545,
+            "reduction_pct_ci95": [
+              32.75424090153755,
+              40.82879588531553
+            ],
+            "wins": 20,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_capacity": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 47630.97370000759,
+            "baseline_mean_backlog": 51269.21668928344,
+            "mean_backlog_improvement": 3638.2429892758532,
+            "improvement_ci95": [
+              1804.1943776262076,
+              5720.573931479199
+            ],
+            "reduction_pct": 7.096349864920671,
+            "reduction_pct_ci95": [
+              3.5370459038826514,
+              11.883944383509439
+            ],
+            "wins": 15,
+            "ties": 4,
+            "losses": 5,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        },
+        "abc_capacity": {
+          "static": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 51269.21668928344,
+            "baseline_mean_backlog": 59523.15728835497,
+            "mean_backlog_improvement": 8253.940599071517,
+            "improvement_ci95": [
+              6132.844633508064,
+              10086.137658484111
+            ],
+            "reduction_pct": 13.86677215236752,
+            "reduction_pct_ci95": [
+              10.827557703550347,
+              16.79748941439617
+            ],
+            "wins": 8,
+            "ties": 10,
+            "losses": 6,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "maxweight": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 51269.21668928344,
+            "baseline_mean_backlog": 107948.49598597609,
+            "mean_backlog_improvement": 56679.279296692635,
+            "improvement_ci95": [
+              50174.87256712915,
+              63612.73707788401
+            ],
+            "reduction_pct": 52.505853628619356,
+            "reduction_pct_ci95": [
+              47.91774360485841,
+              57.60038796019041
+            ],
+            "wins": 24,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 51269.21668928344,
+            "baseline_mean_backlog": 91701.02589639714,
+            "mean_backlog_improvement": 40431.8092071137,
+            "improvement_ci95": [
+              37763.50777799372,
+              43264.890223234164
+            ],
+            "reduction_pct": 44.09090172316407,
+            "reduction_pct_ci95": [
+              41.06178639881792,
+              47.69551785577388
+            ],
+            "wins": 24,
+            "ties": 0,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "abc_guard": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 51269.21668928344,
+            "baseline_mean_backlog": 74952.42059609958,
+            "mean_backlog_improvement": 23683.20390681613,
+            "improvement_ci95": [
+              19490.440460558908,
+              27720.463012207314
+            ],
+            "reduction_pct": 31.597650507432146,
+            "reduction_pct_ci95": [
+              27.657928981767615,
+              36.085024631066695
+            ],
+            "wins": 20,
+            "ties": 4,
+            "losses": 0,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          },
+          "capacity_aware": {
+            "scenarios": 24,
+            "candidate_mean_backlog": 51269.21668928344,
+            "baseline_mean_backlog": 47630.97370000759,
+            "mean_backlog_improvement": -3638.2429892758532,
+            "improvement_ci95": [
+              -5720.5739314792,
+              -1804.194377626208
+            ],
+            "reduction_pct": -7.638397258453005,
+            "reduction_pct_ci95": [
+              -13.486695813278802,
+              -3.6667419423669254
+            ],
+            "wins": 5,
+            "ties": 4,
+            "losses": 15,
+            "bootstrap_draws": 2000,
+            "bootstrap_draws_with_positive_denominator": 2000
+          }
+        }
+      }
+    }
+  },
+  "case_results": [
+    {
+      "group": "surge_only",
+      "scenario_seed": 300,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 150.84490362129344,
+        "peak_backlog": 3294.016381181038,
+        "end_backlog": 0.0,
+        "completed": 163703.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 4519.486459847508,
+        "peak_backlog": 30248.453291284488,
+        "end_backlog": 0.0,
+        "completed": 163703.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 2811.332509458092,
+        "peak_backlog": 22134.177139389372,
+        "end_backlog": 0.0,
+        "completed": 163702.99999999997,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 2320.0462371331555,
+        "peak_backlog": 18446.62404053298,
+        "end_backlog": 0.0,
+        "completed": 163703.0,
+        "moves": 2.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 150.84490362129344,
+        "peak_backlog": 3294.016381181038,
+        "end_backlog": 0.0,
+        "completed": 163703.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 197.4941087316587,
+        "peak_backlog": 4221.88618491208,
+        "end_backlog": 0.0,
+        "completed": 163703.0,
+        "moves": 1.0
+      }
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 301,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 892.523871831862,
+        "peak_backlog": 11207.231317982893,
+        "end_backlog": 0.0,
+        "completed": 192995.99999999997,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 8186.900166510374,
+        "peak_backlog": 50131.14835571879,
+        "end_backlog": 1000.9720400070402,
+        "completed": 191995.027959993,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 4058.5993465793545,
+        "peak_backlog": 28193.786681225127,
+        "end_backlog": 333.6573466690134,
+        "completed": 192662.34265333097,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 6149.499728358904,
+        "peak_backlog": 38540.26274125532,
+        "end_backlog": 0.0,
+        "completed": 192996.0,
+        "moves": 2.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 892.523871831862,
+        "peak_backlog": 11207.231317982893,
+        "end_backlog": 0.0,
+        "completed": 192995.99999999997,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 1046.749869091003,
+        "peak_backlog": 11881.19712239745,
+        "end_backlog": 0.0,
+        "completed": 192996.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 302,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 38.51686277754121,
+        "peak_backlog": 1543.4635523412671,
+        "end_backlog": 0.0,
+        "completed": 158931.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 4416.789038536182,
+        "peak_backlog": 29978.48185703241,
+        "end_backlog": 0.0,
+        "completed": 158931.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 3059.3947377363343,
+        "peak_backlog": 21840.15420946329,
+        "end_backlog": 862.9293225726856,
+        "completed": 158068.0706774273,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 971.2783659006326,
+        "peak_backlog": 9433.28047366331,
+        "end_backlog": 0.0,
+        "completed": 158931.0,
+        "moves": 1.6666666666666667
+      },
+      "abc_capacity": {
+        "mean_backlog": 38.51686277754121,
+        "peak_backlog": 1543.4635523412671,
+        "end_backlog": 0.0,
+        "completed": 158931.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 41.04251243349499,
+        "peak_backlog": 1543.4635523412671,
+        "end_backlog": 0.0,
+        "completed": 158931.0,
+        "moves": 1.0
+      }
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 303,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 1918.8227471948312,
+        "peak_backlog": 16664.418564748383,
+        "end_backlog": 0.0,
+        "completed": 200193.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 9754.927053911919,
+        "peak_backlog": 57838.814796279985,
+        "end_backlog": 0.0,
+        "completed": 200193.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 6666.424558376089,
+        "peak_backlog": 40656.38588830199,
+        "end_backlog": 410.0243533581047,
+        "completed": 199782.9756466419,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 7835.233832206047,
+        "peak_backlog": 46857.21267342546,
+        "end_backlog": 0.0,
+        "completed": 200193.0,
+        "moves": 3.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 1918.8227471948312,
+        "peak_backlog": 16664.418564748383,
+        "end_backlog": 0.0,
+        "completed": 200193.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 2012.8640227330975,
+        "peak_backlog": 16664.418564748383,
+        "end_backlog": 0.0,
+        "completed": 200192.99999999997,
+        "moves": 1.0
+      }
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 300,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 13257.892152560013,
+        "peak_backlog": 67374.48602281144,
+        "end_backlog": 0.0,
+        "completed": 178364.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 24097.90184987882,
+        "peak_backlog": 86137.93078709832,
+        "end_backlog": 0.0,
+        "completed": 178363.99999999997,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 13695.10919345201,
+        "peak_backlog": 56952.04514057526,
+        "end_backlog": 311.9315190880876,
+        "completed": 178052.0684809119,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 14889.996931010415,
+        "peak_backlog": 55431.51824034739,
+        "end_backlog": 0.0,
+        "completed": 178364.0,
+        "moves": 3.6666666666666665
+      },
+      "abc_capacity": {
+        "mean_backlog": 12691.256831611687,
+        "peak_backlog": 64350.33377737499,
+        "end_backlog": 0.0,
+        "completed": 178364.0,
+        "moves": 2.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 10097.092514904949,
+        "peak_backlog": 54702.349870895996,
+        "end_backlog": 0.0,
+        "completed": 178364.0,
+        "moves": 3.0
+      }
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 301,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 7532.760984128471,
+        "peak_backlog": 43548.85170111323,
+        "end_backlog": 0.0,
+        "completed": 184832.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 15330.152755918032,
+        "peak_backlog": 49034.052146722046,
+        "end_backlog": 758.4264160322999,
+        "completed": 184073.57358396775,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 10266.655444785256,
+        "peak_backlog": 50392.4108554385,
+        "end_backlog": 1352.464771275776,
+        "completed": 183479.5352287242,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 7526.692995419213,
+        "peak_backlog": 40460.89140040168,
+        "end_backlog": 0.0,
+        "completed": 184832.0,
+        "moves": 2.6666666666666665
+      },
+      "abc_capacity": {
+        "mean_backlog": 5408.952543092746,
+        "peak_backlog": 33591.57614621391,
+        "end_backlog": 0.0,
+        "completed": 184832.0,
+        "moves": 1.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 4037.2830066554106,
+        "peak_backlog": 25717.7163590268,
+        "end_backlog": 0.0,
+        "completed": 184832.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 302,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 12606.97186772367,
+        "peak_backlog": 64943.40111950759,
+        "end_backlog": 0.0,
+        "completed": 196773.00000000003,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 19267.62011042797,
+        "peak_backlog": 60089.011371500004,
+        "end_backlog": 0.0,
+        "completed": 196773.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 18096.6051801243,
+        "peak_backlog": 70306.39786146021,
+        "end_backlog": 1214.5532063594371,
+        "completed": 195558.44679364059,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 13015.272691082866,
+        "peak_backlog": 56182.59915667016,
+        "end_backlog": 0.0,
+        "completed": 196773.0,
+        "moves": 3.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 10764.829742210255,
+        "peak_backlog": 57784.87603646794,
+        "end_backlog": 0.0,
+        "completed": 196773.0,
+        "moves": 1.3333333333333333
+      },
+      "capacity_aware": {
+        "mean_backlog": 8570.767552928119,
+        "peak_backlog": 49259.273975020165,
+        "end_backlog": 0.0,
+        "completed": 196772.99999999997,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 303,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 6532.057182560335,
+        "peak_backlog": 38311.05187183943,
+        "end_backlog": 0.0,
+        "completed": 161082.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 9311.923217588994,
+        "peak_backlog": 34024.09642468557,
+        "end_backlog": 10.921117545907236,
+        "completed": 161071.0788824541,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 13948.882792855418,
+        "peak_backlog": 59032.64927662031,
+        "end_backlog": 802.2311097021048,
+        "completed": 160279.76889029788,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 4783.895866881532,
+        "peak_backlog": 33231.6120486941,
+        "end_backlog": 0.0,
+        "completed": 161082.0,
+        "moves": 2.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 6090.903917302439,
+        "peak_backlog": 36879.78255234641,
+        "end_backlog": 0.0,
+        "completed": 161082.0,
+        "moves": 0.6666666666666666
+      },
+      "capacity_aware": {
+        "mean_backlog": 3490.73964810852,
+        "peak_backlog": 23826.886545409125,
+        "end_backlog": 0.0,
+        "completed": 161082.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 300,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 6044.37647709492,
+        "peak_backlog": 36219.20799992223,
+        "end_backlog": 0.0,
+        "completed": 173862.00000000003,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 9792.102586377656,
+        "peak_backlog": 49692.05327986879,
+        "end_backlog": 0.0,
+        "completed": 173862.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 13615.145570614884,
+        "peak_backlog": 59673.214727225044,
+        "end_backlog": 161.46718519633882,
+        "completed": 173700.53281480368,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 12192.535884769082,
+        "peak_backlog": 43595.18593846491,
+        "end_backlog": 0.0,
+        "completed": 173861.99999999997,
+        "moves": 3.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 4138.299672687298,
+        "peak_backlog": 30215.08831864766,
+        "end_backlog": 0.0,
+        "completed": 173862.0,
+        "moves": 1.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 2925.9939142180115,
+        "peak_backlog": 19788.504914967853,
+        "end_backlog": 0.0,
+        "completed": 173862.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 301,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 4588.254498556934,
+        "peak_backlog": 28838.710369481632,
+        "end_backlog": 0.0,
+        "completed": 160572.99999999997,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 12067.88618800117,
+        "peak_backlog": 39319.7882368006,
+        "end_backlog": 0.0,
+        "completed": 160573.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 14334.521516554101,
+        "peak_backlog": 61703.9278558509,
+        "end_backlog": 0.0,
+        "completed": 160573.0,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 4171.280597815918,
+        "peak_backlog": 29550.38095149446,
+        "end_backlog": 0.0,
+        "completed": 160572.99999999997,
+        "moves": 2.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 3194.938292367064,
+        "peak_backlog": 23090.771520952403,
+        "end_backlog": 0.0,
+        "completed": 160573.0,
+        "moves": 1.3333333333333333
+      },
+      "capacity_aware": {
+        "mean_backlog": 1897.4478072018032,
+        "peak_backlog": 14263.007078526145,
+        "end_backlog": 0.0,
+        "completed": 160572.99999999997,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 302,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 6337.442988055265,
+        "peak_backlog": 37161.185603518345,
+        "end_backlog": 0.0,
+        "completed": 178775.00000000003,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 16502.39853309215,
+        "peak_backlog": 51406.51021017486,
+        "end_backlog": 0.0,
+        "completed": 178775.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 13121.485765179154,
+        "peak_backlog": 51646.54023840605,
+        "end_backlog": 169.7729436425325,
+        "completed": 178605.22705635746,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 11019.817382780217,
+        "peak_backlog": 43987.50375201072,
+        "end_backlog": 0.0,
+        "completed": 178775.00000000003,
+        "moves": 2.6666666666666665
+      },
+      "abc_capacity": {
+        "mean_backlog": 4308.699847168808,
+        "peak_backlog": 29766.136389049647,
+        "end_backlog": 0.0,
+        "completed": 178775.0,
+        "moves": 1.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 3091.719369172262,
+        "peak_backlog": 21380.034784148833,
+        "end_backlog": 0.0,
+        "completed": 178775.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 303,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 15236.329599223258,
+        "peak_backlog": 74558.980102724,
+        "end_backlog": 0.0,
+        "completed": 206163.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 30752.817292924698,
+        "peak_backlog": 87917.36336522203,
+        "end_backlog": 0.0,
+        "completed": 206162.99999999997,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 25878.30810550998,
+        "peak_backlog": 78487.52796964848,
+        "end_backlog": 1724.4187146254387,
+        "completed": 204438.5812853746,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 17647.57964360712,
+        "peak_backlog": 74583.35894415651,
+        "end_backlog": 0.0,
+        "completed": 206163.0,
+        "moves": 3.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 13472.540140503095,
+        "peak_backlog": 68370.86972807335,
+        "end_backlog": 0.0,
+        "completed": 206163.0,
+        "moves": 1.6666666666666667
+      },
+      "capacity_aware": {
+        "mean_backlog": 10629.218446997322,
+        "peak_backlog": 58413.9443274755,
+        "end_backlog": 0.0,
+        "completed": 206162.99999999994,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 300,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 12099.813783260952,
+        "peak_backlog": 62349.5710531952,
+        "end_backlog": 0.0,
+        "completed": 178681.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 15907.569648981602,
+        "peak_backlog": 81035.86536367802,
+        "end_backlog": 0.0,
+        "completed": 178681.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 12678.666572012904,
+        "peak_backlog": 69142.18268245787,
+        "end_backlog": 0.0,
+        "completed": 178681.0,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 8206.734819206977,
+        "peak_backlog": 43272.43162572528,
+        "end_backlog": 0.0,
+        "completed": 178681.0,
+        "moves": 2.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 7196.696408986154,
+        "peak_backlog": 41067.18116941332,
+        "end_backlog": 0.0,
+        "completed": 178681.00000000003,
+        "moves": 2.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 7796.165725399594,
+        "peak_backlog": 47570.04874013378,
+        "end_backlog": 0.0,
+        "completed": 178681.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 301,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 14526.605467214116,
+        "peak_backlog": 73073.48394070921,
+        "end_backlog": 0.0,
+        "completed": 192727.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 18431.869036909116,
+        "peak_backlog": 91545.55301907583,
+        "end_backlog": 0.0,
+        "completed": 192726.99999999997,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 13746.603994178464,
+        "peak_backlog": 75465.58133894402,
+        "end_backlog": 769.7219755081968,
+        "completed": 191957.27802449182,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 9556.70506436209,
+        "peak_backlog": 54461.57857613543,
+        "end_backlog": 0.0,
+        "completed": 192727.0,
+        "moves": 2.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 9556.70506436209,
+        "peak_backlog": 54461.57857613543,
+        "end_backlog": 0.0,
+        "completed": 192727.0,
+        "moves": 2.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 9433.517321551122,
+        "peak_backlog": 58001.318101007346,
+        "end_backlog": 0.0,
+        "completed": 192727.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 302,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 7145.359252841104,
+        "peak_backlog": 42797.31271490503,
+        "end_backlog": 0.0,
+        "completed": 183005.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 12009.167762225314,
+        "peak_backlog": 67579.1994685227,
+        "end_backlog": 687.4572463619558,
+        "completed": 182317.54275363806,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 10702.374904874028,
+        "peak_backlog": 54910.5207777079,
+        "end_backlog": 458.30483090797014,
+        "completed": 182546.69516909207,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 5174.974470023742,
+        "peak_backlog": 32438.025749431432,
+        "end_backlog": 0.0,
+        "completed": 183005.0,
+        "moves": 2.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 4288.251111536404,
+        "peak_backlog": 26831.571809126694,
+        "end_backlog": 0.0,
+        "completed": 183005.0,
+        "moves": 1.6666666666666667
+      },
+      "capacity_aware": {
+        "mean_backlog": 3604.907230495244,
+        "peak_backlog": 24405.164640119583,
+        "end_backlog": 0.0,
+        "completed": 183005.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 303,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 8360.964320972465,
+        "peak_backlog": 48150.41678476921,
+        "end_backlog": 0.0,
+        "completed": 179733.00000000003,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 12594.344195999402,
+        "peak_backlog": 69874.98610180436,
+        "end_backlog": 266.2953949457361,
+        "completed": 179466.70460505423,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 10658.154296715204,
+        "peak_backlog": 56886.81813791948,
+        "end_backlog": 0.0,
+        "completed": 179733.0000000001,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 5162.528884553284,
+        "peak_backlog": 31067.450244847834,
+        "end_backlog": 0.0,
+        "completed": 179733.0,
+        "moves": 2.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 5097.724848053762,
+        "peak_backlog": 30397.526539400056,
+        "end_backlog": 0.0,
+        "completed": 179733.0,
+        "moves": 2.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 4624.055599075017,
+        "peak_backlog": 31821.337522583213,
+        "end_backlog": 0.0,
+        "completed": 179733.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 300,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 8872.854621375445,
+        "peak_backlog": 45255.57583567851,
+        "end_backlog": 0.0,
+        "completed": 178987.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 18115.039114474945,
+        "peak_backlog": 61449.56460204069,
+        "end_backlog": 0.0,
+        "completed": 178987.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 16967.08022685689,
+        "peak_backlog": 58529.829018602584,
+        "end_backlog": 1556.8589441229215,
+        "completed": 177430.1410558771,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 9867.226137758553,
+        "peak_backlog": 46176.77461366634,
+        "end_backlog": 0.0,
+        "completed": 178987.0,
+        "moves": 3.3333333333333335
+      },
+      "abc_capacity": {
+        "mean_backlog": 7496.43886036631,
+        "peak_backlog": 42258.167759526965,
+        "end_backlog": 0.0,
+        "completed": 178987.0,
+        "moves": 1.6666666666666667
+      },
+      "capacity_aware": {
+        "mean_backlog": 6660.639439755823,
+        "peak_backlog": 39438.74524064858,
+        "end_backlog": 0.0,
+        "completed": 178987.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 301,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 6253.435791146573,
+        "peak_backlog": 33819.93593517211,
+        "end_backlog": 0.0,
+        "completed": 156833.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 14048.661963498558,
+        "peak_backlog": 49756.421149905516,
+        "end_backlog": 0.0,
+        "completed": 156833.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 11245.363816731917,
+        "peak_backlog": 42875.866476165866,
+        "end_backlog": 0.0,
+        "completed": 156833.0,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 7902.69203323263,
+        "peak_backlog": 43850.98239394522,
+        "end_backlog": 0.0,
+        "completed": 156833.0,
+        "moves": 3.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 5341.6946983820835,
+        "peak_backlog": 33532.988801471205,
+        "end_backlog": 0.0,
+        "completed": 156833.0,
+        "moves": 1.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 4404.036992995214,
+        "peak_backlog": 28478.371130293766,
+        "end_backlog": 0.0,
+        "completed": 156833.0,
+        "moves": 2.0
+      }
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 302,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 12287.013868020622,
+        "peak_backlog": 55504.165139539284,
+        "end_backlog": 0.0,
+        "completed": 165948.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 17752.05495365611,
+        "peak_backlog": 60976.73659252198,
+        "end_backlog": 0.0,
+        "completed": 165947.99999999997,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 20722.70165466632,
+        "peak_backlog": 80679.97008611324,
+        "end_backlog": 0.0,
+        "completed": 165948.0,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 11269.047698778644,
+        "peak_backlog": 51716.18329612527,
+        "end_backlog": 0.0,
+        "completed": 165948.0,
+        "moves": 3.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 11447.302181416162,
+        "peak_backlog": 53882.69167999474,
+        "end_backlog": 0.0,
+        "completed": 165948.0,
+        "moves": 2.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 10268.802419986727,
+        "peak_backlog": 49768.86973515827,
+        "end_backlog": 0.0,
+        "completed": 165948.00000000003,
+        "moves": 3.0
+      }
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 303,
+      "source": "legacy_flash",
+      "static": {
+        "mean_backlog": 12257.080695227945,
+        "peak_backlog": 59565.767440134056,
+        "end_backlog": 0.0,
+        "completed": 205096.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 25953.567406635444,
+        "peak_backlog": 80803.90770568029,
+        "end_backlog": 0.0,
+        "completed": 205096.0,
+        "moves": 7.0
+      },
+      "abc": {
+        "mean_backlog": 25361.920403504104,
+        "peak_backlog": 95339.92724727526,
+        "end_backlog": 373.44393433890536,
+        "completed": 204722.5560656611,
+        "moves": 7.0
+      },
+      "abc_guard": {
+        "mean_backlog": 14654.362339037501,
+        "peak_backlog": 64584.98015848749,
+        "end_backlog": 0.0,
+        "completed": 205096.0,
+        "moves": 3.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 11807.885062264244,
+        "peak_backlog": 59565.767440134056,
+        "end_backlog": 0.0,
+        "completed": 205095.99999999997,
+        "moves": 1.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 9740.82573746773,
+        "peak_backlog": 53456.6718463641,
+        "end_backlog": 0.0,
+        "completed": 205096.0,
+        "moves": 3.0
+      }
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 300,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 427901.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 14379.240947526176,
+        "peak_backlog": 42096.93908265842,
+        "end_backlog": 38617.36734163403,
+        "completed": 389283.63265836594,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 20820.882048866635,
+        "peak_backlog": 59476.11326667826,
+        "end_backlog": 35623.87496949568,
+        "completed": 392277.12503050425,
+        "moves": 11.333333333333334
+      },
+      "abc_guard": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 427901.0,
+        "moves": 0.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 427901.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 427901.0,
+        "moves": 0.0
+      }
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 301,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 447208.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 24336.749985732033,
+        "peak_backlog": 91123.95919568153,
+        "end_backlog": 10680.115420540733,
+        "completed": 436527.88457945926,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 14788.45726766369,
+        "peak_backlog": 50746.90231228003,
+        "end_backlog": 15736.561384137276,
+        "completed": 431471.4386158627,
+        "moves": 11.0
+      },
+      "abc_guard": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 447208.0,
+        "moves": 0.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 447208.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 447208.0,
+        "moves": 0.0
+      }
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 302,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 399952.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 20242.146901966462,
+        "peak_backlog": 53925.35209623505,
+        "end_backlog": 18763.729120599157,
+        "completed": 381188.270879401,
+        "moves": 11.0
+      },
+      "abc": {
+        "mean_backlog": 15535.942665702416,
+        "peak_backlog": 43660.136552826596,
+        "end_backlog": 21449.910102266505,
+        "completed": 378502.0898977335,
+        "moves": 11.333333333333334
+      },
+      "abc_guard": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 399952.0,
+        "moves": 0.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 399952.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 399952.0,
+        "moves": 0.0
+      }
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 303,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 436124.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 12036.951523785747,
+        "peak_backlog": 41814.27643608644,
+        "end_backlog": 32958.067114108264,
+        "completed": 403165.9328858918,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 14082.124547564095,
+        "peak_backlog": 53662.99330759939,
+        "end_backlog": 35593.38845108761,
+        "completed": 400530.6115489124,
+        "moves": 11.0
+      },
+      "abc_guard": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 436124.0,
+        "moves": 0.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 436124.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 0.0,
+        "peak_backlog": 0.0,
+        "end_backlog": 0.0,
+        "completed": 436124.0,
+        "moves": 0.0
+      }
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 300,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 79134.01044993261,
+        "peak_backlog": 187934.68316113352,
+        "end_backlog": 0.0,
+        "completed": 843822.0000000001,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 88420.66969944253,
+        "peak_backlog": 201025.79140196147,
+        "end_backlog": 12176.025544048396,
+        "completed": 831645.9744559516,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 70738.36436060841,
+        "peak_backlog": 157060.93480879086,
+        "end_backlog": 323.34552885143484,
+        "completed": 843498.6544711484,
+        "moves": 11.666666666666666
+      },
+      "abc_guard": {
+        "mean_backlog": 29353.648894838858,
+        "peak_backlog": 79857.66286423619,
+        "end_backlog": 0.0,
+        "completed": 843821.9999999999,
+        "moves": 8.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 24215.657620838614,
+        "peak_backlog": 60427.634562921805,
+        "end_backlog": 0.0,
+        "completed": 843822.0,
+        "moves": 6.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 21309.199340735882,
+        "peak_backlog": 52923.873618004116,
+        "end_backlog": 0.0,
+        "completed": 843822.0,
+        "moves": 6.0
+      }
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 301,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 99065.45701411083,
+        "peak_backlog": 217915.8564706072,
+        "end_backlog": 34462.84629838883,
+        "completed": 775309.1537016114,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 143108.84478958667,
+        "peak_backlog": 274339.8060341667,
+        "end_backlog": 124624.85756395239,
+        "completed": 685147.1424360473,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 109878.76773019905,
+        "peak_backlog": 229310.540580724,
+        "end_backlog": 7094.247385604341,
+        "completed": 802677.7526143957,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 55319.67412062255,
+        "peak_backlog": 132480.6004195748,
+        "end_backlog": 22353.116007515655,
+        "completed": 787418.8839924843,
+        "moves": 10.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 39976.29953336364,
+        "peak_backlog": 98019.86597389018,
+        "end_backlog": 0.0,
+        "completed": 809772.0,
+        "moves": 6.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 33972.545624483355,
+        "peak_backlog": 84423.4013661443,
+        "end_backlog": 0.0,
+        "completed": 809772.0000000003,
+        "moves": 6.0
+      }
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 302,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 117160.34077601774,
+        "peak_backlog": 248861.47611863693,
+        "end_backlog": 49919.575103382565,
+        "completed": 799574.4248966174,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 153276.94773880168,
+        "peak_backlog": 288613.2766928028,
+        "end_backlog": 136199.88396465906,
+        "completed": 713294.1160353409,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 136074.98740300434,
+        "peak_backlog": 250698.38053182527,
+        "end_backlog": 41399.86172922646,
+        "completed": 808094.1382707735,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 72930.79029155108,
+        "peak_backlog": 156357.37131886111,
+        "end_backlog": 18711.402778251988,
+        "completed": 830782.597221748,
+        "moves": 10.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 62071.785571874614,
+        "peak_backlog": 141624.34899357418,
+        "end_backlog": 0.0,
+        "completed": 849494.0000000001,
+        "moves": 3.6666666666666665
+      },
+      "capacity_aware": {
+        "mean_backlog": 46982.02826406286,
+        "peak_backlog": 108910.18747983151,
+        "end_backlog": 0.0,
+        "completed": 849494.0000000001,
+        "moves": 6.0
+      }
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 303,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 43514.07098479311,
+        "peak_backlog": 116309.47367334104,
+        "end_backlog": 0.0,
+        "completed": 784369.0000000001,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 64149.70517471159,
+        "peak_backlog": 181606.93542755634,
+        "end_backlog": 10200.9271650724,
+        "completed": 774168.0728349275,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 66686.59118181442,
+        "peak_backlog": 152926.8252396438,
+        "end_backlog": 689.5001605073539,
+        "completed": 783679.4998394926,
+        "moves": 11.666666666666666
+      },
+      "abc_guard": {
+        "mean_backlog": 24896.565768037788,
+        "peak_backlog": 68073.63807119051,
+        "end_backlog": 0.0,
+        "completed": 784369.0,
+        "moves": 8.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 10229.860637052481,
+        "peak_backlog": 27450.262214723873,
+        "end_backlog": 0.0,
+        "completed": 784369.0,
+        "moves": 3.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 1596.147048199433,
+        "peak_backlog": 8603.62091428344,
+        "end_backlog": 0.0,
+        "completed": 784369.0,
+        "moves": 6.0
+      }
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 300,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 90861.33349876052,
+        "peak_backlog": 186133.82672795263,
+        "end_backlog": 1457.9858952635823,
+        "completed": 885927.0141047364,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 98201.07705130479,
+        "peak_backlog": 175794.3814897188,
+        "end_backlog": 0.0,
+        "completed": 887385.0,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 108002.37827100628,
+        "peak_backlog": 237524.51648640117,
+        "end_backlog": 3367.4835632270165,
+        "completed": 884017.516436773,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 105185.05738527847,
+        "peak_backlog": 230669.15432726845,
+        "end_backlog": 1617.9919924820995,
+        "completed": 885767.0080075179,
+        "moves": 10.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 81851.27147436769,
+        "peak_backlog": 157867.57891200075,
+        "end_backlog": 9022.424685794553,
+        "completed": 878362.5753142055,
+        "moves": 5.666666666666667
+      },
+      "capacity_aware": {
+        "mean_backlog": 79404.86702319824,
+        "peak_backlog": 165296.1550371804,
+        "end_backlog": 21749.55511657595,
+        "completed": 865635.4448834242,
+        "moves": 10.0
+      }
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 301,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 14555.006948659598,
+        "peak_backlog": 52620.90121335135,
+        "end_backlog": 0.0,
+        "completed": 784594.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 49642.15331027543,
+        "peak_backlog": 136849.78454232702,
+        "end_backlog": 18384.972345529874,
+        "completed": 766209.0276544701,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 31873.29273905512,
+        "peak_backlog": 85297.87413101249,
+        "end_backlog": 0.0,
+        "completed": 784594.0,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 24334.1987168035,
+        "peak_backlog": 68040.2920342046,
+        "end_backlog": 0.0,
+        "completed": 784593.9999999997,
+        "moves": 9.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 19086.552481211333,
+        "peak_backlog": 58090.16127513296,
+        "end_backlog": 0.0,
+        "completed": 784594.0,
+        "moves": 6.666666666666667
+      },
+      "capacity_aware": {
+        "mean_backlog": 8467.388665801438,
+        "peak_backlog": 26243.012801676043,
+        "end_backlog": 0.0,
+        "completed": 784593.9999999999,
+        "moves": 9.0
+      }
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 302,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 22620.568685584538,
+        "peak_backlog": 59021.444318998474,
+        "end_backlog": 0.0,
+        "completed": 834401.9999999999,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 83073.9837164277,
+        "peak_backlog": 167497.7985082332,
+        "end_backlog": 0.0,
+        "completed": 834401.9999999997,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 32687.262657113708,
+        "peak_backlog": 83644.45271679772,
+        "end_backlog": 13419.048168843829,
+        "completed": 820982.951831156,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 56024.18522175797,
+        "peak_backlog": 152665.08882695925,
+        "end_backlog": 0.0,
+        "completed": 834401.9999999999,
+        "moves": 9.666666666666666
+      },
+      "abc_capacity": {
+        "mean_backlog": 18470.500147096027,
+        "peak_backlog": 47504.77215105025,
+        "end_backlog": 0.0,
+        "completed": 834402.0,
+        "moves": 4.333333333333333
+      },
+      "capacity_aware": {
+        "mean_backlog": 21460.040965901702,
+        "peak_backlog": 66888.16186525852,
+        "end_backlog": 0.0,
+        "completed": 834402.0000000002,
+        "moves": 9.0
+      }
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 303,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 67069.28284465376,
+        "peak_backlog": 145720.71239680494,
+        "end_backlog": 0.0,
+        "completed": 875348.0000000001,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 97013.3773030654,
+        "peak_backlog": 174503.69855121756,
+        "end_backlog": 0.0,
+        "completed": 875348.0,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 85700.14172968107,
+        "peak_backlog": 191833.1795846614,
+        "end_backlog": 0.0,
+        "completed": 875348.0,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 87363.61983751676,
+        "peak_backlog": 200155.29274724898,
+        "end_backlog": 8044.406275994712,
+        "completed": 867303.5937240053,
+        "moves": 10.666666666666666
+      },
+      "abc_capacity": {
+        "mean_backlog": 74780.36366168565,
+        "peak_backlog": 157563.16599188544,
+        "end_backlog": 4841.805191368567,
+        "completed": 870506.1948086316,
+        "moves": 6.333333333333333
+      },
+      "capacity_aware": {
+        "mean_backlog": 75588.43101652265,
+        "peak_backlog": 143510.90066663947,
+        "end_backlog": 10738.646443144342,
+        "completed": 864609.3535568557,
+        "moves": 11.0
+      }
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 300,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 24234.17522630506,
+        "peak_backlog": 83165.66975164964,
+        "end_backlog": 0.0,
+        "completed": 873143.9999999999,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 117758.53781635633,
+        "peak_backlog": 213854.41875824658,
+        "end_backlog": 169129.76682563295,
+        "completed": 704014.2331743671,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 65751.45241678302,
+        "peak_backlog": 137193.5825169025,
+        "end_backlog": 46644.617962841294,
+        "completed": 826499.3820371585,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 47922.74366521715,
+        "peak_backlog": 113091.06580669472,
+        "end_backlog": 15345.49300527299,
+        "completed": 857798.5069947271,
+        "moves": 11.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 26345.799900591108,
+        "peak_backlog": 84414.95314259753,
+        "end_backlog": 0.0,
+        "completed": 873144.0,
+        "moves": 6.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 22308.422550107076,
+        "peak_backlog": 82713.45341123958,
+        "end_backlog": 0.0,
+        "completed": 873143.9999999999,
+        "moves": 8.0
+      }
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 301,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 13219.635108403056,
+        "peak_backlog": 58615.62988317542,
+        "end_backlog": 0.0,
+        "completed": 749840.9999999999,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 47515.75762257963,
+        "peak_backlog": 139227.28851134126,
+        "end_backlog": 0.0,
+        "completed": 749841.0,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 54619.5136980294,
+        "peak_backlog": 122786.85651284219,
+        "end_backlog": 27246.73329298072,
+        "completed": 722594.2667070194,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 45051.711178169186,
+        "peak_backlog": 121592.25459615437,
+        "end_backlog": 11545.200882878198,
+        "completed": 738295.7991171215,
+        "moves": 9.666666666666666
+      },
+      "abc_capacity": {
+        "mean_backlog": 16302.839120546874,
+        "peak_backlog": 70115.72194884498,
+        "end_backlog": 0.0,
+        "completed": 749841.0,
+        "moves": 5.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 12928.575745457334,
+        "peak_backlog": 59146.4033631294,
+        "end_backlog": 0.0,
+        "completed": 749841.0,
+        "moves": 8.0
+      }
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 302,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 24151.08908288163,
+        "peak_backlog": 86709.04288681856,
+        "end_backlog": 0.0,
+        "completed": 866543.9999999999,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 73958.41638196477,
+        "peak_backlog": 175312.69944990834,
+        "end_backlog": 0.0,
+        "completed": 866544.0000000001,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 65459.253603853016,
+        "peak_backlog": 139409.37802306327,
+        "end_backlog": 18078.583023721552,
+        "completed": 848465.4169762783,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 46555.393800552294,
+        "peak_backlog": 112114.55003207317,
+        "end_backlog": 34236.94061818697,
+        "completed": 832307.0593818129,
+        "moves": 10.333333333333334
+      },
+      "abc_capacity": {
+        "mean_backlog": 25493.34056137723,
+        "peak_backlog": 90302.43609075148,
+        "end_backlog": 0.0,
+        "completed": 866543.9999999999,
+        "moves": 5.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 24499.405465611577,
+        "peak_backlog": 88416.10282710649,
+        "end_backlog": 0.0,
+        "completed": 866544.0,
+        "moves": 8.0
+      }
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 303,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 17810.69869773118,
+        "peak_backlog": 71589.07007485833,
+        "end_backlog": 0.0,
+        "completed": 781782.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 41033.20507947245,
+        "peak_backlog": 94148.33605891292,
+        "end_backlog": 4947.307144784318,
+        "completed": 776834.6928552156,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 54666.70449262775,
+        "peak_backlog": 119931.14440929754,
+        "end_backlog": 12574.657278078106,
+        "completed": 769207.3427219217,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 35228.25926368606,
+        "peak_backlog": 92733.02430883942,
+        "end_backlog": 10063.768186592022,
+        "completed": 771718.231813408,
+        "moves": 8.666666666666666
+      },
+      "abc_capacity": {
+        "mean_backlog": 19741.78270943211,
+        "peak_backlog": 74619.64609562774,
+        "end_backlog": 0.0,
+        "completed": 781781.9999999999,
+        "moves": 4.333333333333333
+      },
+      "capacity_aware": {
+        "mean_backlog": 17058.799494628012,
+        "peak_backlog": 73752.82047580282,
+        "end_backlog": 0.0,
+        "completed": 781782.0000000001,
+        "moves": 8.0
+      }
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 300,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 7317.052009284745,
+        "peak_backlog": 30691.193009584233,
+        "end_backlog": 0.0,
+        "completed": 834240.9999999999,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 77827.5732437283,
+        "peak_backlog": 157139.7545062671,
+        "end_backlog": 29143.53476978541,
+        "completed": 805097.4652302148,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 42956.38030284564,
+        "peak_backlog": 122735.45029756399,
+        "end_backlog": 7791.878221362128,
+        "completed": 826449.1217786378,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 18357.195883538127,
+        "peak_backlog": 68171.34190177241,
+        "end_backlog": 8623.65401223889,
+        "completed": 825617.345987761,
+        "moves": 8.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 4063.577385774248,
+        "peak_backlog": 24031.5021355783,
+        "end_backlog": 0.0,
+        "completed": 834241.0,
+        "moves": 3.6666666666666665
+      },
+      "capacity_aware": {
+        "mean_backlog": 5070.136310367263,
+        "peak_backlog": 24879.21639120524,
+        "end_backlog": 0.0,
+        "completed": 834241.0000000001,
+        "moves": 8.0
+      }
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 301,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 936.9892573149931,
+        "peak_backlog": 7199.384283084437,
+        "end_backlog": 0.0,
+        "completed": 738363.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 56227.74497523741,
+        "peak_backlog": 128753.6135346778,
+        "end_backlog": 0.0,
+        "completed": 738363.0000000001,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 33374.133863534196,
+        "peak_backlog": 93826.12710894096,
+        "end_backlog": 2015.1061660301486,
+        "completed": 736347.8938339697,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 11045.3784559514,
+        "peak_backlog": 40798.146254789004,
+        "end_backlog": 0.0,
+        "completed": 738363.0,
+        "moves": 6.333333333333333
+      },
+      "abc_capacity": {
+        "mean_backlog": 936.9892573149931,
+        "peak_backlog": 7199.384283084437,
+        "end_backlog": 0.0,
+        "completed": 738363.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 1986.8326165587414,
+        "peak_backlog": 13667.912693712035,
+        "end_backlog": 0.0,
+        "completed": 738363.0,
+        "moves": 8.0
+      }
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 302,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 2390.3197688553296,
+        "peak_backlog": 16002.5061095594,
+        "end_backlog": 0.0,
+        "completed": 811760.0000000002,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 69082.57926801466,
+        "peak_backlog": 152849.21099078338,
+        "end_backlog": 2453.5126533494513,
+        "completed": 809306.4873466508,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 48363.548679038475,
+        "peak_backlog": 118038.36053072603,
+        "end_backlog": 26646.24911985164,
+        "completed": 785113.7508801484,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 15329.23563081318,
+        "peak_backlog": 61955.79831207637,
+        "end_backlog": 0.0,
+        "completed": 811760.0,
+        "moves": 7.333333333333333
+      },
+      "abc_capacity": {
+        "mean_backlog": 2378.835913045667,
+        "peak_backlog": 16002.5061095594,
+        "end_backlog": 0.0,
+        "completed": 811760.0000000003,
+        "moves": 0.3333333333333333
+      },
+      "capacity_aware": {
+        "mean_backlog": 1898.0127022803117,
+        "peak_backlog": 15260.981559070613,
+        "end_backlog": 0.0,
+        "completed": 811760.0,
+        "moves": 9.0
+      }
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 303,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 175.7466845340905,
+        "peak_backlog": 2003.3883780517572,
+        "end_backlog": 0.0,
+        "completed": 720686.0,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 35547.849905528645,
+        "peak_backlog": 124704.28547999973,
+        "end_backlog": 8012.632294265616,
+        "completed": 712673.3677057343,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 26073.706593703973,
+        "peak_backlog": 76545.01474743908,
+        "end_backlog": 6993.919949296368,
+        "completed": 713692.0800507031,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 13477.170524654915,
+        "peak_backlog": 58227.98623654803,
+        "end_backlog": 0.0,
+        "completed": 720686.0,
+        "moves": 5.666666666666667
+      },
+      "abc_capacity": {
+        "mean_backlog": 175.7466845340905,
+        "peak_backlog": 2003.3883780517572,
+        "end_backlog": 0.0,
+        "completed": 720686.0,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 161.6475993482031,
+        "peak_backlog": 2537.5338804542425,
+        "end_backlog": 0.0,
+        "completed": 720686.0,
+        "moves": 6.0
+      }
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 300,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 222493.06290896758,
+        "peak_backlog": 429673.31956843694,
+        "end_backlog": 301483.35092180886,
+        "completed": 1176903.6490781917,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 342212.0228323371,
+        "peak_backlog": 703840.9032925954,
+        "end_backlog": 667683.8294230785,
+        "completed": 810703.1705769217,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 302856.1449140533,
+        "peak_backlog": 543205.5572822156,
+        "end_backlog": 428362.7659644787,
+        "completed": 1050024.2340355213,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 328397.27970749745,
+        "peak_backlog": 626124.7582296483,
+        "end_backlog": 471876.35721904767,
+        "completed": 1006510.6427809522,
+        "moves": 11.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 222493.06290896758,
+        "peak_backlog": 429673.3195684369,
+        "end_backlog": 301483.35092180886,
+        "completed": 1176903.6490781917,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 224106.05173263536,
+        "peak_backlog": 457777.67351133656,
+        "end_backlog": 377704.00997628714,
+        "completed": 1100682.990023713,
+        "moves": 5.0
+      }
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 301,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 252170.70137228072,
+        "peak_backlog": 484051.02258125594,
+        "end_backlog": 364781.4867893135,
+        "completed": 1129481.5132106862,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 357870.0396357167,
+        "peak_backlog": 723561.2068777604,
+        "end_backlog": 689778.6011704562,
+        "completed": 804484.3988295438,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 335993.2675019088,
+        "peak_backlog": 661986.3532059636,
+        "end_backlog": 555671.1557429298,
+        "completed": 938591.8442570703,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 335630.98644612526,
+        "peak_backlog": 657381.6103891196,
+        "end_backlog": 613838.5778520165,
+        "completed": 880424.4221479832,
+        "moves": 11.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 252170.70137228072,
+        "peak_backlog": 484051.02258125594,
+        "end_backlog": 364781.48678931344,
+        "completed": 1129481.5132106862,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 242731.27646335727,
+        "peak_backlog": 485180.1082017763,
+        "end_backlog": 406352.7125517052,
+        "completed": 1087910.2874482952,
+        "moves": 4.0
+      }
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 302,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 170237.59501511508,
+        "peak_backlog": 335038.2875403755,
+        "end_backlog": 214260.29321677762,
+        "completed": 1107635.7067832223,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 261754.62207192942,
+        "peak_backlog": 549271.2240032703,
+        "end_backlog": 543601.8698957124,
+        "completed": 778294.1301042868,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 234238.71558530178,
+        "peak_backlog": 433907.24626626883,
+        "end_backlog": 382654.3973701478,
+        "completed": 939241.602629852,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 214177.5672349649,
+        "peak_backlog": 439269.3476126969,
+        "end_backlog": 316040.2437258743,
+        "completed": 1005855.7562741259,
+        "moves": 11.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 170237.59501511508,
+        "peak_backlog": 335038.2875403755,
+        "end_backlog": 214260.29321677762,
+        "completed": 1107635.7067832223,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 145010.38778735918,
+        "peak_backlog": 292856.19311537413,
+        "end_backlog": 176112.59378206907,
+        "completed": 1145783.4062179313,
+        "moves": 7.0
+      }
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 303,
+      "source": "generated_synthetic",
+      "static": {
+        "mean_backlog": 159438.638586333,
+        "peak_backlog": 317743.6697009968,
+        "end_backlog": 182728.5298937096,
+        "completed": 1140514.4701062904,
+        "moves": 0.0
+      },
+      "maxweight": {
+        "mean_backlog": 262093.70668793432,
+        "peak_backlog": 541926.8747490868,
+        "end_backlog": 536003.4824866533,
+        "completed": 787239.5175133463,
+        "moves": 12.0
+      },
+      "abc": {
+        "mean_backlog": 229602.60725957304,
+        "peak_backlog": 427188.35300707066,
+        "end_backlog": 328710.6015242366,
+        "completed": 994532.3984757634,
+        "moves": 12.0
+      },
+      "abc_guard": {
+        "mean_backlog": 232277.432278813,
+        "peak_backlog": 453569.0404892426,
+        "end_backlog": 297064.11902060494,
+        "completed": 1026178.8809793951,
+        "moves": 11.0
+      },
+      "abc_capacity": {
+        "mean_backlog": 159438.638586333,
+        "peak_backlog": 317743.6697009968,
+        "end_backlog": 182728.5298937096,
+        "completed": 1140514.4701062904,
+        "moves": 0.0
+      },
+      "capacity_aware": {
+        "mean_backlog": 156603.1723835664,
+        "peak_backlog": 319906.22244649386,
+        "end_backlog": 197297.9768954259,
+        "completed": 1125945.023104574,
+        "moves": 8.0
+      }
+    }
+  ],
+  "max_mass_error": 8.149072527885437e-10,
+  "max_budget_error": 0.0,
+  "analysis": {
+    "primary_metric": "mean total end-of-minute backlog",
+    "weighting": "average three policy draws within each stochastic policy/scenario; then equal scenario weight; equal seed counts per family",
+    "paired_units": "scenario family and seed, not individual policy draws",
+    "bootstrap": "percentile 95% paired bootstrap, resample seeds within each family, retain the observed number of cases per family",
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 20261125,
+    "percentage_definition": "100 * (mean baseline - mean candidate) / mean baseline; positive favors candidate",
+    "interval_scope": "Monte Carlo scenario variation conditional on these synthetic families, not uncertainty over real services or alternative models; unadjusted exploratory comparisons",
+    "zero_denominator": "relative reduction and its interval are null when the relevant mean baseline is zero; absolute differences remain defined",
+    "combined_scope": "descriptive mixture of legacy and generated synthetic families with 60/96-minute horizons; inspect source slices and every family"
+  }
+}

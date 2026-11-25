@@ -1,0 +1,7 @@
+{
+  "output": "v3_results/shadow_example.json",
+  "records": 92,
+  "recommended_moves": 13,
+  "recorded_moves": 0,
+  "recommendations_applied": false
+}

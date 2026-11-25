@@ -1,0 +1,426 @@
+{
+  "version": "0.3.0",
+  "status": "frozen locally after known-case development and before new validation; no external registry",
+  "purpose": "Test whether observed-signal gating, explicit uncertainty and physical resource transfer delay reduce adverse cases while preserving original-horizon backlog performance",
+  "scenario_design": {
+    "families": "All eleven v0.2 families unchanged; no family selected or removed using v0.3 policy results",
+    "legacy_families": {
+      "source": "data/load_test_summary_per_minute.csv, original synthetic requests including retries and bots",
+      "generator": "simulation.scenarios unchanged, with fresh split seeds",
+      "horizon": 60,
+      "groups": [
+        "surge_only",
+        "ingress_slow",
+        "processing_slow",
+        "delivery_slow",
+        "shifting_bottleneck"
+      ]
+    },
+    "generated_families": {
+      "source": "independently specified synthetic arrivals; does not use the source CSV",
+      "horizon": 96,
+      "rng": "numpy default_rng SeedSequence([20261125, generated_group_index, scenario_seed, stream]); stream 0 arrivals, stream 1 productivity",
+      "arrivals": "Poisson of piecewise/sinusoidal demand * Uniform(0.9,1.1) episode scale * independent LogNormal(-0.5*0.08^2,0.08) minute factor; phase Uniform(0,2*pi)",
+      "base_productivity": "200 * per-stage Uniform(0.92,1.08) * clip(1+z_t,0.82,1.18), where z_t=0.65*z_(t-1)+Normal(0,0.035), z_-1=0",
+      "fault_factor": "Uniform(0.42,0.62) per episode for specified abrupt faults",
+      "groups": {
+        "generated_underload": "demand 4800+1400*sin(2*pi*t/31+phase), zero demand [64,72); stage-1 productivity multiplied by 0.75 in [24,44). Tests censored-throughput inference and avoiding unnecessary moves.",
+        "generated_sustained_processing_fault": "demand 10500, 4500 before minute 12 and 5500 from minute 72; stage-1 productivity multiplied by fault_factor in [16,64).",
+        "generated_switching_fault": "demand 10000+1500*sin(2*pi*t/37+phase), 4000 before minute 10 and 5000 from minute 80; fault_factor applied to stage 0 [14,31), stage 2 [31,39), stage 1 [39,59), stage 0 [59,71).",
+        "generated_pulsed_short_fault": "base demand 4500; pulses (start,length,height): (12,5,23500),(31,3,28000),(51,7,20500),(74,4,25000). Three-minute faults at stage/start (1,13),(0,32),(2,53),(1,75); each is shorter than dwell.",
+        "generated_asymmetric_recovery": "base demand 9500, 4500 before minute 12 and from minute 80; base productivity multipliers [1.35,0.72,1.18]; stage 2 additional multiplier 0.58 in [20,48); stage 1 additional multiplier 1.55 in [48,72).",
+        "generated_sustained_overload": "demand 18000+1200*sin(2*pi*t/29+phase), 5000 before minute 10 and 6000 from minute 80; stage 2 multiplier 0.75 in [32,56)."
+      },
+      "intervals": "zero-based half-open [start,end); stage indices 0,1,2"
+    },
+    "generator_files_sha256": {
+      "simulation.py": "644b4541f7d3ffcab438b0436c9504d46dce461447b923eb10b38234e0bffe5d",
+      "capacity_scenarios.py": "218d74c2e35cd721b94ed33a1a69e2340289e410f79307199afb7577d6abc6aa",
+      "data/load_test_summary_per_minute.csv": "0120255045744fc79008d22e81f72d1e15e28ed0fda81760683119002800f253"
+    },
+    "development": {
+      "scenario_seeds": [
+        1000,
+        1001,
+        1002,
+        1003
+      ],
+      "counts": {
+        "scenarios": 44,
+        "regimes": 3,
+        "scenario_regime_pairs": 132,
+        "policy_draws_per_case": 8,
+        "episodes": 1056,
+        "original_minutes": 84096,
+        "followup_minutes": 33792,
+        "total_minutes": 117888
+      },
+      "status": "Known prior v0.2 validation cases reused openly as v0.3 development; not held out"
+    },
+    "validation": {
+      "scenario_seeds": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026,
+        2027,
+        2028,
+        2029,
+        2030,
+        2031
+      ],
+      "counts": {
+        "scenarios": 352,
+        "regimes": 3,
+        "scenario_regime_pairs": 1056,
+        "policy_draws_per_case": 8,
+        "episodes": 8448,
+        "original_minutes": 672768,
+        "followup_minutes": 270336,
+        "total_minutes": 943104
+      },
+      "status": "New seeds, not used in development or evaluated before final freeze"
+    }
+  },
+  "resource_model": {
+    "budget": 207,
+    "initial_allocation": [
+      69,
+      69,
+      69
+    ],
+    "stages": 3,
+    "regimes_minutes": {
+      "instant": 0,
+      "transit_1": 1,
+      "transit_3": 3
+    },
+    "instant": "Original v0.2 zero-delay physics: donor removal and recipient activation before this minute processing",
+    "transit": "At action minute t donors lose transferred resources immediately. Recipients gain them before processing minute t+D. Incoming resources are unavailable for exactly D processing minutes. Active plus in-transit resources always equals207.",
+    "accounting": "Only actual available capacity processes work. No resource creation, no work dropping, no arbitrary money penalty.",
+    "observation": "Past service-rate estimates must divide by active resources, not committed incoming resources. A policy adapter may expose committed target allocations for a frozen controller budget check while it is dwell-locked; eligible transfers occur after previous arrivals because D<8.",
+    "constraints": "Original action catalog and warmup5/dwell8; root freezes any per-policy reserve or veto differences explicitly"
+  },
+  "followup": {
+    "minutes": 32,
+    "arrivals": "Exactly zero after original H",
+    "productivity": "Constant last true original-horizon productivity row for all32 follow-up minutes",
+    "assumption": "A prespecified synthetic drainage condition, not observed real recovery or a predicted service future",
+    "information_boundary": "The policy is not told originalH, the follow-up switch, future arrivals or true productivity; it continues on ordinary observations",
+    "metrics": "Score originalH separately. Tail mean and AUC use end-of-minute backlog at H..H+31. Clearance time is0 if already empty at H, else first subsequent zero-backlog observation1..32; if still nonempty, censor and cap time at32."
+  },
+  "policies": [
+    "static",
+    "abc_capacity",
+    "capacity_v2",
+    "capacity_balance",
+    "v3_signal_only",
+    "v3_full"
+  ],
+  "policy_seeds": {
+    "static": [
+      null
+    ],
+    "abc_capacity": [
+      11,
+      29,
+      47
+    ],
+    "capacity_v2": [
+      null
+    ],
+    "capacity_balance": [
+      null
+    ],
+    "v3_signal_only": [
+      null
+    ],
+    "v3_full": [
+      null
+    ]
+  },
+  "policy_roles": {
+    "static": "Fixed69/69/69",
+    "abc_capacity": "Unchanged v0.2 ABC-proposal veto mode with seeds11,29,47",
+    "capacity_v2": "Unchanged v0.2 full-catalog selector",
+    "capacity_balance": "Simple inverse-estimated-rate allocation comparator; implementation/configuration frozen by root",
+    "v3_signal_only": "v0.2 prediction mechanism with new observed persistence/separation veto; ablation specified by root",
+    "v3_full": "New observed veto plus per-stage uncertainty ensemble and known physical transit delay prediction; implementation/configuration frozen by root"
+  },
+  "policy_observations": "Current external arrivals and queues, prior actual active allocations, completed flow and end queues; declared transport delay is known. Future environment arrays and scenario labels are excluded.",
+  "scoring": {
+    "primary": "Mean total unfinished work at end of each minute over original H only; 60-minute legacy and96-minute generated cases each contribute one per-case time average",
+    "secondary_original": [
+      "peak_backlog",
+      "end_backlog",
+      "completed",
+      "moves",
+      "resource_minutes_lost"
+    ],
+    "followup": [
+      "tail_mean_backlog",
+      "tail_auc",
+      "tail_end_backlog",
+      "drain_time_capped",
+      "drain_uncleared_fraction",
+      "tail_resource_minutes_lost"
+    ],
+    "optional": [
+      "tail_moves",
+      "total_moves",
+      "tail_completed"
+    ],
+    "loss_units": "resource_minutes_lost is the sum of inactive in-transit resources during original H; tail loss is separate; no monetary interpretation",
+    "risk": "For each paired case, positive harm is max(candidate mean backlog - comparator mean backlog,0). Harm frequency uses1e-6 tolerance. Report mean positive harm, maximum harm and CVaR90.",
+    "cvar90": "Mean of the worst10% of empirical positive-part case harms, with fractional weight at the boundary so tail mass is exactly10%; harms are computed after averaging policy draws",
+    "static_relative_risk": "Report every policy relative to Static, then compare the frequency/mean-harm/CVaR risk profiles of v3_full to V2 with the same paired bootstrap. This is different from candidate-minus-V2 harm."
+  },
+  "analysis": {
+    "regimes": "Analyze each delay regime separately; no pooled mean across transport regimes",
+    "weighting": "Average ABC seeds within each family/scenario/regime, then equally weight cases; equal case counts per family",
+    "bootstrap": "2000 paired percentile resamples within each family; all policy outcomes for a case move together",
+    "bootstrap_seed": 20261126,
+    "confidence_interval": 0.95,
+    "comparisons": {
+      "primary_candidate": "v3_full",
+      "primary_baselines": [
+        "static",
+        "capacity_v2"
+      ],
+      "other_comparators": [
+        "capacity_balance",
+        "abc_capacity"
+      ],
+      "ablation": "v3_signal_only"
+    },
+    "noninferiority_margin_vs_v2_pct": 5,
+    "noninferiority_scope": "Predeclared engineering allowance, not an observed achievement. Exact primary and advancement conditions are in acceptance_criteria.",
+    "source_and_family_reporting": "Preserve separate legacy_flash and generated_synthetic slices and all11 family effects, including zero baselines and adverse cases",
+    "zero_denominator": "Relative reductions and ratio CIs are null if baseline mean is zero; absolute harm remains reportable",
+    "censoring": "Mean capped drain time is restricted to32 minutes; report uncleared fraction alongside it, never average only cleared cases and call that overall clearance time",
+    "interval_scope": "Conditional Monte Carlo variation of these synthetic families and fixed policy seeds. Does not cover simulator/model uncertainty, alternative workloads or deployment.",
+    "multiplicity": "Only explicitly frozen decision comparisons support the acceptance rule; secondary/source/family intervals are descriptive and unadjusted"
+  },
+  "integrity": "Root specifies and verifies original-frozen source hashes, new source/protocol hashes, active+in-transit budget, work conservation, catalog/reserve/dwell, observation-only decisions, drain accounting and independent representative replays",
+  "no_tuning": "No policy, generator, configuration, metric or acceptance-rule changes after validation outcomes. Any change starts a new version and validation design.",
+  "limitations": [
+    "Arrival and productivity families are reused, even though validation seeds are new; all cases share the same sequential fluid queue simulator.",
+    "Resource transport models a specific source of lost capacity but not arbitrary migration effects, service startup, rollback, contention or monetary cost.",
+    "Zero-arrival constant-productivity drainage is an explicit artificial follow-up assumption.",
+    "A lower case-average backlog does not imply more completed work, lower real latency, smaller terminal backlog, or no adverse individual cases.",
+    "Passing any engineering criterion supports further experiments, not automatic live control or a formal guarantee."
+  ],
+  "acceptance_criteria": {
+    "status": "Specified before validation and before inspecting v0.3 development outcomes; the 5% engineering margin was declared before development execution",
+    "candidate": "v3_full",
+    "tolerance_absolute": 1e-06,
+    "primary": {
+      "regime": "instant",
+      "baseline": "static",
+      "metric": "original-H mean_backlog",
+      "condition": "lower endpoint of paired95% absolute mean-improvement CI >0"
+    },
+    "noninferiority": {
+      "regime": "instant",
+      "baseline": "capacity_v2",
+      "metric": "original-H mean_backlog",
+      "condition": "lower endpoint of paired95% reduction_pct CI >=-5.0%",
+      "engineering_margin_pct": 5.0,
+      "meaning": "Permits up to5% less favorable mean performance than V2 as a prespecified engineering allowance in exchange for lower downside; it is not a proof that an outcome satisfies that allowance",
+      "zero_denominator": "When the V2 mean is zero, use the absolute-improvement lower CI endpoint >=-1e-6, corresponding to a zero relative allowance with numerical tolerance"
+    },
+    "advancement_all_required": [
+      {
+        "id": "primary_and_noninferiority",
+        "condition": "Both the primary and noninferiority criteria pass"
+      },
+      {
+        "id": "surge_only_mean",
+        "regime": "instant",
+        "group": "surge_only",
+        "condition": "v3_full point mean backlog <= Static point mean backlog +1e-6"
+      },
+      {
+        "id": "mean_vs_static_each_regime",
+        "regimes": [
+          "instant",
+          "transit_1",
+          "transit_3"
+        ],
+        "condition": "For every regime, the paired95% absolute mean-backlog improvement lower CI endpoint versus Static >0"
+      },
+      {
+        "id": "static_relative_cvar_each_regime",
+        "regimes": [
+          "instant",
+          "transit_1",
+          "transit_3"
+        ],
+        "condition": "For every regime, v3_full point CVaR90 of positive case mean-backlog harm relative to Static is strictly less than the corresponding capacity_v2 point CVaR90, or both CVaRs are zero within1e-6"
+      },
+      {
+        "id": "tail_auc_each_regime",
+        "regimes": [
+          "instant",
+          "transit_1",
+          "transit_3"
+        ],
+        "condition": "For every regime, v3_full point mean32-minute tail AUC <= capacity_v2 point mean tail AUC +1e-6"
+      },
+      {
+        "id": "original_terminal_each_regime",
+        "regimes": [
+          "instant",
+          "transit_1",
+          "transit_3"
+        ],
+        "condition": "For every regime, v3_full point mean original-H end backlog <= capacity_v2 point mean original-H end backlog +1e-6"
+      },
+      {
+        "id": "invariants_tests_underload",
+        "condition": "All declared invariant checks and tests pass. Every v3_full generated_underload episode in every regime has zero backlog and no reallocation over original H and follow-up, within1e-6 for work/resource values"
+      }
+    ],
+    "reporting": "Report each criterion separately, including every failed regime/family. An overall pass is an intersection of these declared engineering conditions; secondary intervals remain unadjusted.",
+    "scope": "Advancement supports broader experimentation only. It does not establish universal non-regression, deployment safety, statistical familywise coverage or a formal stability guarantee.",
+    "no_retuning": "No changes to acceptance thresholds, sources, policy or metrics after validation outcomes. Any later variant requires a new version and new validation design."
+  },
+  "final_policy_semantics": {
+    "evidence": "Recipient has at least two saturated observations in the last five and latest end queue >10; additionally recipient upper current capacity < maximum donor lower current capacity OR all five observations saturated. Separation is from at least one donor, not every donor.",
+    "bands": "Point rate +/-15% after two busy observations, otherwise +/-25%, expanded to recent busy extrema +/-15%; conservative lower anchor prevents prior reversion alone from implying donor recovery. Engineering stress assumptions, not confidence intervals.",
+    "base_forecasts": "Nine unchanged V2 design forecasts. Rank mean gain on those nine. Require nonnegative gain in each and mean gain > max(10,2% mean hold cost).",
+    "full_stress": "Append 8 independent low/high per-stage corners at each of 3 demand factors, making 24 stress forecasts and33 total. Each stress forecast permits at most5% relative cost regression against holding, with hold-cost floor1.",
+    "full_terminal": "Mean terminal-backlog change in the original nine forecasts must be nonpositive.",
+    "full_delay": "Joint allocation forecast removes incoming resources for the known0/1/3 complete intervals; holds lose no capacity. No additional additive migration penalty.",
+    "ablation": "Signal-only uses the same evidence prefilter but the original nine forecasts, assumeszero transfer delay, and omits the full terminal veto. The full-versus-ablation contrast combines these mechanisms; even instant comparisons retain both corner and terminal-veto differences.",
+    "capacity_balance": "Same observed point-rate estimator, legal action catalogue, five-minute warmup, eight-minute dwell and reserve10. If any stage end queue exceeds10 in each of the lasttwo observations, select a move reducing squared distance from target allocation207*(1/rate)/sum(1/rate); otherwisehold.",
+    "development": "One initial instant-only trial and one final three-regime development run, all on known seeds1000..1003. Initial artifacts and V3_DEVELOPMENT_NOTES.md preserved. No further policy tuning despite disappointing development outcomes.",
+    "allowances_distinct": "The5% per-stress-forecast allowance was a development choice. The5% statistical noninferiority engineering margin was specified before development outcomes and remains unchanged."
+  },
+  "frozen_at_utc": "2026-11-25T00:39:12.125504+00:00",
+  "controller_configuration": {
+    "nominal_rate": 200.0,
+    "warmup": 5,
+    "dwell": 8,
+    "lookahead": 8,
+    "minimum_staff": 10.0,
+    "saturated_update": 0.7,
+    "unsaturated_prior_reversion": 0.1,
+    "rate_lower_factor": 0.85,
+    "demand_spread": 0.2,
+    "arrival_window": 3,
+    "terminal_weight": 0.25,
+    "relative_gain": 0.02,
+    "absolute_gain": 10.0,
+    "worst_case_regression_fraction": 0.0,
+    "tolerance": 1e-07,
+    "evidence_window": 5,
+    "minimum_busy_observations": 2,
+    "rate_band": 0.15,
+    "sparse_rate_band": 0.25,
+    "stress_regression_fraction": 0.05
+  },
+  "implementation_sha256": {
+    "v3_policy.py": "147b44efed5bd71d04d45c0d4d832552c5b5f0698e8d9f03dd21f12d6c488d0b",
+    "v3_simulation.py": "16e8f5241aca6fdf74c9356e30508012efcee106f0f140fb315aec13a557500a",
+    "v3_scenarios.py": "35dc4d8437aef5c7fe241b797aa76850e083c3d9d09b32846938f53b1b39d8a9",
+    "v3_metrics.py": "8014489c86035ee99ad3d6bd32580fd4df34088a8580c0d0394146422738d11b",
+    "v3_agents.py": "a836bc9a8ef35ae579b6bff0d3a36555d09f759018ff9dc3b495cb4a5e38c4eb",
+    "run_v3.py": "00d98669523323b6ce033d89cd51802956dae9eca724a9a1ebaa6b91e227ef66",
+    "freeze_v3.py": "ed6248726af3343a7953e77a2a5a330df3c5abca894b8096e9f073d43de73f06",
+    "audit_v3.py": "cd8ad97fa67d96c5387cef83e5c6fe2fb43fabbafac9844b394e99b66b7d20b6",
+    "test_v3.py": "31a24a94914f4d086126391ae947f24042d0ba5e6b50dc2c3d094c45fc667bdf",
+    "diagnose_v2.py": "89fa102b821c1cf80c8a4b08b6656d64ef22a8fe2dca929fcc5058ee920efc72",
+    "v3_protocol_draft.json": "21fd6d6f8d27adedde1640085c391d166e28527c385503a62901b0aca7c8f20d"
+  },
+  "parent_v2_verification": {
+    "protocol_sha256": "94eb90191ec2bb6b58b20760f8ad355f6ade41f3806558d8adfe888cb67519a9",
+    "implementation_sha256": {
+      "capacity_policy.py": "5eb6fd45cfd0527dc5b50a99bf981693732db72888239558ce445ff3bcdfbb77",
+      "capacity_simulation.py": "716c3a201a3201175981be8ad37db40ca20994c186e7063f564d9ae73f1763c2",
+      "capacity_scenarios.py": "218d74c2e35cd721b94ed33a1a69e2340289e410f79307199afb7577d6abc6aa",
+      "capacity_metrics.py": "32456344e3f624c1c98cd008cc424e878296bc6bc41b27bd974c11aacd13b286",
+      "capacity_agents.py": "31e7d748f83a20a86b36c7c4da65a49722f8e823daaca9f27c751365676c0f30",
+      "run_capacity.py": "1c956cdc0eeeb709ef4cb71e9614b6a2e1fd330cff90e417f5dee3a402745589",
+      "audit_capacity.py": "e8010171ede21ceb31806e5cbb5a8e5026461c832f7f73024100490110f37cc8",
+      "test_capacity.py": "92df2d927392760b7638fdd0295e4fbe93d7ddd0ac1c80cea2d033d92f890352",
+      "freeze_capacity.py": "14152ef2ca026b967cc916f07be0f9d4e693477411c85bd03963d79e819471ff",
+      "simulation.py": "644b4541f7d3ffcab438b0436c9504d46dce461447b923eb10b38234e0bffe5d",
+      "protocol.json": "6e370a01ea1f9f7e652b08bc1a9be5e749faf90338e7de00bd18ac7250529e92",
+      "protocol.sha256": "c746b75cf5eba79bea075c353c430590d797be5854560b696225dac72d2cd9a6",
+      "source_checksums.sha256": "e4f81af5760fe4b8e54b550cb135166c3b629a9bc0bedb8842455196097c38b3",
+      "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7"
+    },
+    "upstream_sha256": {
+      "neuron_flow/__init__.py": "62ef7b355ba00e0a986c51451b252eb3448678b527fa0bc3bfdcf93d2dd81d6f",
+      "neuron_flow/agents.py": "15eab79daba253d8c34c52ed1b39f943ae6e5d08e58564b29f62f4cddf754fa4",
+      "neuron_flow/engine.py": "621e7f45de72831ee53e855cb39831759545369540310e70504c1bd088dc14a9",
+      "neuron_flow/model.py": "e2cf7ce942d3e3a2bd029da5e1f5d049c4861041ccc5741a45dc4727f2d72134",
+      "neuron_flow/storage.py": "59a3f3ed143cf330d74dabc037994c917cb02e594f9e3e2ce84162d06ed87558",
+      "abc_service/__init__.py": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41",
+      "abc_service/frozen.py": "0df444936e90b016e84dfabc9fb30011d76fe591db758d63a35de9f313bb9ea3",
+      "abc_service/_frozen/experiment.py": "83aa8b68b2f68ab83a26ff56a651332878d5355bfff0a7aee985f72b05090342",
+      "abc_service/_frozen/original/ABC.H.txt": "f8a50611ba65a935c2b0079241df3d7f90a0ef7746c647d88d0feb293e33af00",
+      "abc_service/_frozen/action_catalog.json": "a36d6614f1c7af608451e75974c1df23ed68f78f4b098c5badb487a8dafc03eb",
+      "data/load_test_summary_per_minute.csv": "0120255045744fc79008d22e81f72d1e15e28ed0fda81760683119002800f253"
+    },
+    "validation_manifest_sha256": "b5ce7c420fa560b0fbaaee4cfda79af0081734836bb843bfd65937bdf7cd6c1f"
+  },
+  "validation_manifest_sha256": "99c9d2e68e109df1b1b2a63d467ffe151fb141d50258fb59cf5b6d22ce07a49a",
+  "development_manifest_sha256": "2aa046724ac256f1a304daab3d41f3112b1cf85b1021ddf145a2c588edbe40a6",
+  "expected_development_scope": {
+    "scenarios": 44,
+    "regimes": 3,
+    "scenario_regime_pairs": 132,
+    "policy_draws_per_case": 8,
+    "episodes": 1056,
+    "original_minutes": 84096,
+    "followup_minutes": 33792,
+    "total_minutes": 117888
+  },
+  "expected_validation_scope": {
+    "scenarios": 352,
+    "regimes": 3,
+    "scenario_regime_pairs": 1056,
+    "policy_draws_per_case": 8,
+    "episodes": 8448,
+    "original_minutes": 672768,
+    "followup_minutes": 270336,
+    "total_minutes": 943104
+  },
+  "representative_selection": "First scenario seed in every family and first policy seed per policy, separately in each of three regimes; 198 complete traces selected before outcomes.",
+  "workflow": "Original NeuronFlow runtime, 18 regime/policy evaluation steps with three workers, descriptor-only artifact exchange, comparison join, first-attempt instant/v3_full transient failure before computation, restart/duplicate reuse, deliberately corrupted static result rejected with dependent blocked and independent branch successful.",
+  "boundary": "All prediction inputs are past/current observations and known transfer duration. Actual environment arrays and terminal schedule stay in the simulator and independent verifier.",
+  "no_tuning_rule": "No policy, configuration, generator, or acceptance changes after inspecting validation outcomes; a subsequent change is a new experiment.",
+  "known_development_evidence_sha256": {
+    "v3_results/diagnosis/diagnosis.json": "72a973fae6580b0529fc0fbcc686fef5165e3931bc6f49203480ccf68cd28d16",
+    "v3_results/development_initial/summary.json": "e1b2ced167b3bdc50569fd7d245b77c3ef8ab177253cf182fb94fd283806cbad",
+    "v3_results/development_initial/configuration.json": "e040137ba353db0910810847c6b545d727d1d5908b97eed32d71aeeaa3d69b07",
+    "v3_results/development_initial/v3_policy_initial.py": "053721a8baabab3dd6e89586b635f38ab2c9cd9a06a46b9e685ea0d4d60a90f5",
+    "v3_results/development/summary.json": "c013978b63d3cb4791d6010bbe9f06c8efcedfb19f5634af40add4ebdba122c8",
+    "V3_DEVELOPMENT_NOTES.md": "1c8fae04eb5af0c266d802d82516bc87eb441520fc6c52d6133ba36e78b8df42"
+  }
+}

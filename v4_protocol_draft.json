@@ -1,0 +1,383 @@
+{
+  "version": "0.4.0",
+  "status": "Acceptance fixed before development; controller and implementation hashes will be frozen after documented development and before fresh validation.",
+  "created_at_utc": "2026-11-25T06:10:24.498677+00:00",
+  "purpose": "Test a causal hybrid of balance-based recovery and finite stress-risk penalties against harmful inaction, while adding six nested realism regimes and preserving dropped-work accounting.",
+  "parent_v3_protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054",
+  "scenario_design": {
+    "families": "All eleven prior scenario families; preserve source slices and each family without outcome-based removal.",
+    "legacy_groups": [
+      "surge_only",
+      "ingress_slow",
+      "processing_slow",
+      "delivery_slow",
+      "shifting_bottleneck"
+    ],
+    "generated_groups": [
+      "generated_underload",
+      "generated_sustained_processing_fault",
+      "generated_switching_fault",
+      "generated_pulsed_short_fault",
+      "generated_asymmetric_recovery",
+      "generated_sustained_overload"
+    ],
+    "original_horizon": "60 minutes for legacy families; 96 minutes for generated families.",
+    "development": {
+      "seeds": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007
+      ],
+      "scenarios": 88,
+      "regime_count": 6,
+      "episodes": 3696,
+      "original_minutes": 294336,
+      "followup_minutes": 118272,
+      "total_minutes": 412608,
+      "status": "Known v0.3 validation cases now openly reused for development. All v0.3 outcomes are known evidence, not fresh validation."
+    },
+    "validation": {
+      "seeds": [
+        4000,
+        4001,
+        4002,
+        4003,
+        4004,
+        4005,
+        4006,
+        4007,
+        4008,
+        4009,
+        4010,
+        4011,
+        4012,
+        4013,
+        4014,
+        4015,
+        4016,
+        4017,
+        4018,
+        4019,
+        4020,
+        4021,
+        4022,
+        4023,
+        4024,
+        4025,
+        4026,
+        4027,
+        4028,
+        4029,
+        4030,
+        4031,
+        4032,
+        4033,
+        4034,
+        4035,
+        4036,
+        4037,
+        4038,
+        4039,
+        4040,
+        4041,
+        4042,
+        4043,
+        4044,
+        4045,
+        4046,
+        4047,
+        4048,
+        4049,
+        4050,
+        4051,
+        4052,
+        4053,
+        4054,
+        4055,
+        4056,
+        4057,
+        4058,
+        4059,
+        4060,
+        4061,
+        4062,
+        4063
+      ],
+      "scenarios": 704,
+      "regime_count": 6,
+      "episodes": 29568,
+      "original_minutes": 2354688,
+      "followup_minutes": 946176,
+      "total_minutes": 3300864,
+      "status": "Reserved seeds. No controller outcomes may be evaluated before final source/configuration freeze."
+    }
+  },
+  "nested_regimes": [
+    {
+      "name": "legacy_instant",
+      "addition": "Original fluid, same-minute serial service; zero resource transfer delay."
+    },
+    {
+      "name": "legacy_transit3",
+      "addition": "Resource transfer loses exactly three complete service intervals."
+    },
+    {
+      "name": "integer_transit3",
+      "addition": "Integer resource allocations by stable largest-remainder projection of raw catalogue targets; service and workload remain continuous fluid."
+    },
+    {
+      "name": "finite_pipeline",
+      "addition": "One full interval of forwarding between stages and finite stage buffers [60000,40000,40000]. Overflow is explicit dropped work, never erased from demand deficit."
+    },
+    {
+      "name": "startup",
+      "addition": "Incoming resource service at 50% and 75% during the first two active intervals after the three-interval transfer."
+    },
+    {
+      "name": "delayed_noisy",
+      "addition": "Sensor lag of two intervals and 5% lognormal multiplicative sensor noise. The exact packet timing, channel treatment and stochastic streams must be frozen before validation."
+    }
+  ],
+  "policies": [
+    "static",
+    "capacity_v2",
+    "capacity_balance",
+    "v3_full",
+    "v4_hybrid",
+    "v4_no_risk",
+    "v4_no_recovery"
+  ],
+  "policy_seeds": {
+    "static": [
+      null
+    ],
+    "capacity_v2": [
+      null
+    ],
+    "capacity_balance": [
+      null
+    ],
+    "v3_full": [
+      null
+    ],
+    "v4_hybrid": [
+      null
+    ],
+    "v4_no_risk": [
+      null
+    ],
+    "v4_no_recovery": [
+      null
+    ]
+  },
+  "controller_configuration": "Pending development freeze; acceptance criteria below are already fixed.",
+  "policy_information_boundary": "Only the declared observation interface, known mechanics, resource commands and causal history are available. No true future arrivals/productivity, hidden scenario identity, validation outcome or offline static counterfactual is an online input. Censored flow is not treated as exact service capacity.",
+  "resource_model": {
+    "budget": 207,
+    "initial_allocation": [
+      69,
+      69,
+      69
+    ],
+    "minimum_staff": 10,
+    "warmup": 5,
+    "dwell": 8,
+    "catalogue": "Original frozen action catalogue, including hold; no overlapping transfers.",
+    "loss_units": "resource_minutes_lost counts pending resources only; startup_capacity_minutes_lost counts active minus effective resources. Keep original and follow-up totals separate, in resource-minutes, without monetary interpretation."
+  },
+  "followup": {
+    "minutes": 32,
+    "arrivals": 0,
+    "productivity": "Fixed at the last original-horizon true productivity row.",
+    "information": "The controller is not told original H or the future follow-up switch.",
+    "drainage": "Physical drainage uses retained queues plus in-flight work; permanent drops are not cleared jobs. A nonzero demand deficit caused by drops need not imply physical retained work remains."
+  },
+  "scoring": {
+    "per_minute_deficit": "D_t = cumulative offered work minus cumulative completed work = retained queued work + in-flight work + cumulative dropped work.",
+    "primary_case_metric": "M = mean of end-of-minute D_t over original H only; no normalization by completed or accepted work.",
+    "static_relative_harm": "h_p = max(M_p - M_static, 0) for the same scenario and realism regime.",
+    "cvar90": "R_p is the exact empirical mean over the largest 10% of h_p, with fractional mass at the boundary. Compare R_p values using the same paired bootstrap, not CVaR of candidate-minus-comparator harms.",
+    "required_loss_reporting": "Report original and follow-up offered/completed/dropped separately and full-run totals. A finite buffer cannot improve the score by discarding work.",
+    "endpoints": "Report original terminal deficit, follow-up deficit mean/AUC/end, retained queue and in-flight work, physical capped drainage time and censoring.",
+    "definitions": "mean_queue/end_queue/tail_end_queue include retained service queues plus forwarding pipeline. peak_service_queue_max_over_full_run is max_t of the SUM of service queues over original plus follow-up, excluding pipeline; end_inflight_work and tail_end_inflight_work are scalar pipeline sums."
+  },
+  "analysis": {
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 20261127,
+    "confidence_interval": 0.95,
+    "bootstrap": "Paired percentile resampling of scenario cases within each family; all policies use the same resampled indices. Regimes remain separate.",
+    "weighting": "Equal case weights with equal counts per family; this does not normalize workload scale.",
+    "regime_handling": "Six nested regimes analyzed separately, without pooling them into one headline effect or treating them as independent replications.",
+    "noninferiority": "Use the declared linear slack statistic 1.05*mean(baseline)-mean(candidate), including zero baselines; do not substitute a confidence interval for a different ratio statistic.",
+    "sources": "Report both legacy_flash and generated_synthetic slices and all eleven families.",
+    "interval_scope": "Conditional Monte Carlo uncertainty for the declared synthetic workload and mechanics; not real-system uncertainty, calibrated forecast confidence, or a deployment guarantee."
+  },
+  "acceptance_criteria": {
+    "status": "Declared and accepted by root before any v0.4 development outcomes; fixed throughout development and validation.",
+    "declared_at_utc": "2026-11-25T06:10:24.498677+00:00",
+    "candidate": "v4_hybrid",
+    "tolerance_absolute": 1e-06,
+    "primary": {
+      "regime": "delayed_noisy",
+      "baseline": "v3_full",
+      "metric": "static-relative positive-harm CVaR90 of original-H mean demand deficit",
+      "condition": "paired-bootstrap lower endpoint of the 95% CI for R_v3_full minus R_v4_hybrid is strictly greater than zero",
+      "point_when_both_zero": "This superiority criterion does not pass merely because both risks are zero."
+    },
+    "risk_point_nonworsening": {
+      "regimes": [
+        "legacy_instant",
+        "legacy_transit3",
+        "integer_transit3",
+        "finite_pipeline",
+        "startup",
+        "delayed_noisy"
+      ],
+      "baselines": [
+        "v3_full",
+        "capacity_v2",
+        "capacity_balance"
+      ],
+      "condition": "R_v4_hybrid <= R_baseline + tolerance_absolute in every regime for every listed baseline",
+      "scope": "Engineering point checks, not statistical tail-risk noninferiority claims; no positive risk margin."
+    },
+    "mean_noninferiority": {
+      "regimes": [
+        "legacy_instant",
+        "legacy_transit3",
+        "integer_transit3",
+        "finite_pipeline",
+        "startup",
+        "delayed_noisy"
+      ],
+      "baselines": [
+        "capacity_v2",
+        "capacity_balance"
+      ],
+      "margin_fraction": 0.05,
+      "statistic": "1.05 * mean(M_baseline) - mean(M_v4_hybrid)",
+      "condition": "paired-bootstrap lower endpoint of the 95% CI for the statistic is >= 0 in every regime for each baseline, within tolerance_absolute",
+      "scope": "The same candidate is compared separately with both fixed baselines; do not choose the empirically best baseline after outcomes."
+    },
+    "loss_and_endpoint_point_nonworsening": {
+      "regimes": [
+        "legacy_instant",
+        "legacy_transit3",
+        "integer_transit3",
+        "finite_pipeline",
+        "startup",
+        "delayed_noisy"
+      ],
+      "baselines": [
+        "capacity_v2",
+        "capacity_balance"
+      ],
+      "metrics": [
+        "total_dropped",
+        "end_deficit",
+        "tail_auc_deficit"
+      ],
+      "condition": "candidate point mean <= baseline point mean + tolerance_absolute in each regime, for each metric and baseline",
+      "metric_scopes": {
+        "total_dropped": "all original H plus the fixed 32-minute follow-up",
+        "end_deficit": "original-H terminal offered minus completed",
+        "tail_auc_deficit": "sum of offered-minus-completed deficit over the fixed 32 follow-up minutes"
+      }
+    },
+    "integrity": {
+      "condition": "All required unit tests, frozen identities, full episode accounting, source/sensor/observation boundary audit, paired scope checks, and independent representative replay checks pass."
+    },
+    "underload": {
+      "group": "generated_underload",
+      "policy": "v4_hybrid",
+      "condition": "Every underload case in every regime has zero dropped work and zero moves over original H plus follow-up, within tolerance_absolute",
+      "scope": "Retained work, pipeline work and demand deficit may be positive due to declared flow timing; zero backlog is not required."
+    },
+    "advancement": "Every primary, risk point, mean noninferiority, loss/endpoint, integrity and underload condition must pass. Report every failed condition. Criteria cannot be relaxed using development or validation outcomes.",
+    "inference_scope": "One predeclared primary CVaR comparison in the final realism regime. The global decision also uses the listed engineering intersection and mean-noninferiority checks. Secondary, source, family and ablation intervals are descriptive and unadjusted; no universal safety or deployment claim."
+  },
+  "no_tuning": "Freeze controller/environment/metrics/evaluator/configuration/manifest/source hashes before reserved outcomes. No acceptance change during development or validation. Any post-validation change requires a new version and new held-out design.",
+  "development_grid": {
+    "declared_before_any_v4_development_outcomes": true,
+    "recorded_at_utc": "2026-11-25T06:13:34.596931+00:00",
+    "grid": {
+      "stress_penalty_weight": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "maximum_total_transfer": [
+        20,
+        30
+      ]
+    },
+    "candidates": 6,
+    "fixed_configuration": {
+      "lookahead": 16,
+      "terminal_weight": 0.5,
+      "minimum_staff": 10,
+      "dwell": 8,
+      "warmup": 5,
+      "balance_arbitration_tolerance": 0.1,
+      "stale_busy_anchor_expiry_minutes": 8,
+      "busy_observation_window": 5,
+      "recovery_factor_floor": 0.25,
+      "idle_empty_observations": 3,
+      "idle_stress_cost_increase_limit": 10
+    },
+    "selection_scope": "All 88 known development scenarios in all six regimes. Retain outcomes for every grid member; no fresh-seed outcome is available to selection.",
+    "lexicographic_ranking": [
+      "Count of point-mean margin violations across 6 regimes and both capacity_v2/capacity_balance: mean_hybrid > 1.05*mean_baseline + 1e-6.",
+      "Maximum over 6 regimes of R_hybrid / max(min(R_v3_full,R_capacity_v2,R_capacity_balance),1 work unit).",
+      "Sum over the 6 regimes of R_hybrid.",
+      "Mean original-H moves across all known cases and regimes.",
+      "Ascending stress_penalty_weight, then ascending maximum_total_transfer."
+    ],
+    "scope_warning": "This cross-regime ordering and one-unit denominator floor are development selection rules only, never pooled headline effects, calibrated losses or validation acceptance rules.",
+    "bootstrap": "Point outcomes suffice for the fixed selection ordering. The selected development candidate and validation summary use the frozen 2000-draw analysis."
+  },
+  "controller_semantics": {
+    "status": "Specified before development outcomes; final selected grid values and implementation hashes remain pending freeze.",
+    "state": "One shared estimator/history/resource command state and one dwell clock; do not hot-switch independently advancing stateful controllers.",
+    "forecasts": "Sixteen steps; nine base design forecasts and 24 independent stage-rate stress corners. Known transfer/startup/pipeline mechanics are predicted. Engineering scenarios are not calibrated probability samples.",
+    "score": "Mean base-nine cost improvement versus hold minus lambda times the upper-quartile mean of positive stress-corner regret. Forecast cost is mean predicted deficit plus 0.5 times terminal deficit; there is no separate terminal hard veto.",
+    "hurdle": "max(10 work units,0.01*mean recent observed arrival), with the declared recovery attenuation when applicable; it is tied to flow, not backlog stock.",
+    "catalogue": "Evaluate the complete legal original catalogue subject to a declared maximum total transfer of20 or30 resource units per move, defined as the sum of positive deltas. Both raw and integer-projected applied deltas must satisfy the cap. Explicitly evaluate the inverse-estimated-rate capacity-balance proposal among legal capped candidates.",
+    "arbitration": "Prefer the balance-directed proposal when its positive adjusted gain is at least 90% of the best positive adjusted gain and clears the applicable hurdle.",
+    "stale_observations": "The previous busy-rate lower anchor expires after eight source minutes. Removing a stale low anchor can narrow the interval. Sparse evidence and sensor lag separately widen the point-relative band. Recent evidence uses a five-observation window. Prior reversion remains an explicit estimator assumption, not observed recovery.",
+    "pressure_recovery": "For persistent observed pressure with total end queue above10 work units and target-allocation imbalance of at least5 resource units (half L1 distance), multiply both the risk weight and hurdle by max(0.25,1/(1+pressure_streak/8)). The streak permits a decline of at most max(10 work units,2% of the previous observed queue), so it includes nearly flat or slightly declining queues. Physical constraints are unchanged.",
+    "idle_recovery": "After three consecutive delivered end-queue observations with total measured queue <=10 work units, allow a balance-directed move only if the mean cost across the nine base forecasts does not increase and none of all33 forecasts increases cost by more than10 work units. This permits a model-neutral return under low observed queue pressure without requiring strictly positive gain.",
+    "v4_no_risk": "Only the stress-score penalty weight is set to zero; physical constraints and idle-recovery checks remain.",
+    "v4_no_recovery": "Both pressure-recovery attenuation and idle-rebalance recovery are disabled. This is a combined recovery ablation, not an isolation of one component.",
+    "hard_constraints": "Keep resource budget, reserve, catalogue, warmup, dwell, and physical movement timing hard. A model stress test is not a formal safety proof."
+  },
+  "research_basis": [
+    {
+      "title": "Adaptive Policies for Scheduling with Reconfiguration Delay: An End-to-End Solution for All-Optical Data Centers",
+      "authors": "Chang-Heng Wang and Tara Javidi",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1511.03417",
+      "doi": "10.1109/TNET.2016.2644617",
+      "relevance": "Motivates candidate-versus-current improvement thresholds that account for reconfiguration overhead. Its network stability theorem is not asserted for this ANS model."
+    },
+    {
+      "title": "Delay-Optimal Scheduling for Queueing Systems with Switching Overhead",
+      "authors": "Ping-Chun Hsieh, I-Hong Hou and Xi Liu",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1701.03831",
+      "relevance": "Motivates modeling lost service during switching and a controlled bias toward the current allocation. Its parallel-queue assumptions and guarantees do not establish ANS performance."
+    },
+    {
+      "title": "Linear robust adaptive model predictive control: Computational complexity and conservatism",
+      "authors": "Johannes Koehler, Elisa Andina, Raffaele Soloperto, Matthias A. Mueller and Frank Allgoewer",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/1909.01813",
+      "relevance": "Motivates separating point-estimate performance from uncertainty handling and using recent observations. ANS stress weights are uncalibrated engineering choices, not this paper's robust constraint guarantee."
+    }
+  ]
+}

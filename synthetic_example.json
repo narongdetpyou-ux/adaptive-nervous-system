@@ -1,0 +1,4177 @@
+{
+  "schema_version": "ans-shadow-observations/0.3.0",
+  "source_kind": "synthetic",
+  "description": "Synthetic example copied from the saved STATIC development trajectory: processing_slow, seed1000, instant regime. Includes its recorded follow-up observations. This is not real service telemetry. True productivity and original decision evidence were removed.",
+  "units": {
+    "time": "minute",
+    "work": "work_unit",
+    "resource": "resource_unit",
+    "work_unit_definition": "One abstract work unit per synthetic request count; three-stage serial fluid model. Resource units are abstract and are not measured servers."
+  },
+  "model_assumptions": {
+    "topology": "three_stage_serial_fluid",
+    "budget": 207,
+    "same_minute_forwarding": true,
+    "action_catalog": "ABC_Causal_Service_0.2.0",
+    "warmup_minutes": 5,
+    "dwell_minutes": 8,
+    "minimum_stage_reserve": 10,
+    "nominal_productivity_prior": 200,
+    "no_pending_resources_at_start": true
+  },
+  "initial_state": {
+    "committed_staff": [
+      69.0,
+      69.0,
+      69.0
+    ],
+    "end_queue": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "last_actual_change": -1000000000
+  },
+  "records": [
+    {
+      "t": 0,
+      "arrival": 645.0,
+      "observed_queue": [
+        645.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        645.0,
+        645.0,
+        645.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 1,
+      "arrival": 784.0,
+      "observed_queue": [
+        784.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        784.0,
+        784.0,
+        784.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 2,
+      "arrival": 783.0,
+      "observed_queue": [
+        783.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        783.0,
+        783.0,
+        783.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 3,
+      "arrival": 790.0,
+      "observed_queue": [
+        790.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        790.0,
+        790.0,
+        790.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 4,
+      "arrival": 806.0,
+      "observed_queue": [
+        806.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        806.0,
+        806.0,
+        806.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 5,
+      "arrival": 672.0,
+      "observed_queue": [
+        672.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        672.0,
+        672.0,
+        672.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 6,
+      "arrival": 704.0,
+      "observed_queue": [
+        704.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        704.0,
+        704.0,
+        704.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 7,
+      "arrival": 1013.0,
+      "observed_queue": [
+        1013.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        1013.0,
+        1013.0,
+        1013.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 8,
+      "arrival": 1710.0,
+      "observed_queue": [
+        1710.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        1710.0,
+        1710.0,
+        1710.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 9,
+      "arrival": 3190.0,
+      "observed_queue": [
+        3190.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        3190.0,
+        3190.0,
+        3190.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 10,
+      "arrival": 13253.0,
+      "observed_queue": [
+        13253.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        13253.0,
+        7546.738608578619,
+        7546.738608578619
+      ],
+      "end_queue": [
+        0.0,
+        5706.261391421381,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 11,
+      "arrival": 16637.0,
+      "observed_queue": [
+        16637.0,
+        5706.261391421381,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        14218.071715731972,
+        6667.459652447869,
+        6667.459652447869
+      ],
+      "end_queue": [
+        2418.9282842680277,
+        13256.873454705485,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 12,
+      "arrival": 11507.0,
+      "observed_queue": [
+        13925.928284268028,
+        13256.873454705485,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        12918.807335242385,
+        6825.856381549861,
+        6825.856381549861
+      ],
+      "end_queue": [
+        1007.1209490256424,
+        19349.82440839801,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 13,
+      "arrival": 11612.0,
+      "observed_queue": [
+        12619.120949025642,
+        19349.82440839801,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        12619.120949025642,
+        7387.47456563542,
+        7387.47456563542
+      ],
+      "end_queue": [
+        0.0,
+        24581.470791788233,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 14,
+      "arrival": 9249.0,
+      "observed_queue": [
+        9249.0,
+        24581.470791788233,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        9249.0,
+        6607.153035281637,
+        6607.153035281637
+      ],
+      "end_queue": [
+        0.0,
+        27223.317756506596,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 15,
+      "arrival": 10423.0,
+      "observed_queue": [
+        10423.0,
+        27223.317756506596,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        10423.0,
+        6839.3102238542815,
+        6839.3102238542815
+      ],
+      "end_queue": [
+        0.0,
+        30807.00753265232,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 16,
+      "arrival": 9812.0,
+      "observed_queue": [
+        9812.0,
+        30807.00753265232,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        9812.0,
+        6883.937924284693,
+        6883.937924284693
+      ],
+      "end_queue": [
+        0.0,
+        33735.06960836763,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 17,
+      "arrival": 10223.0,
+      "observed_queue": [
+        10223.0,
+        33735.06960836763,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        10223.0,
+        6347.8195806170115,
+        6347.8195806170115
+      ],
+      "end_queue": [
+        0.0,
+        37610.25002775062,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 18,
+      "arrival": 7856.0,
+      "observed_queue": [
+        7856.0,
+        37610.25002775062,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        7856.0,
+        6195.782740454468,
+        6195.782740454468
+      ],
+      "end_queue": [
+        0.0,
+        39270.46728729615,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 19,
+      "arrival": 6357.0,
+      "observed_queue": [
+        6357.0,
+        39270.46728729615,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        6357.0,
+        7270.741507281373,
+        7270.741507281373
+      ],
+      "end_queue": [
+        0.0,
+        38356.72578001478,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 20,
+      "arrival": 4077.0,
+      "observed_queue": [
+        4077.0,
+        38356.72578001478,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        4077.0,
+        6521.2498332271425,
+        6521.2498332271425
+      ],
+      "end_queue": [
+        0.0,
+        35912.475946787636,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 21,
+      "arrival": 3167.0,
+      "observed_queue": [
+        3167.0,
+        35912.475946787636,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        3167.0,
+        6468.281886119933,
+        6468.281886119933
+      ],
+      "end_queue": [
+        0.0,
+        32611.1940606677,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 22,
+      "arrival": 2660.0,
+      "observed_queue": [
+        2660.0,
+        32611.1940606677,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        2660.0,
+        6738.122346101405,
+        6738.122346101405
+      ],
+      "end_queue": [
+        0.0,
+        28533.071714566297,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 23,
+      "arrival": 2469.0,
+      "observed_queue": [
+        2469.0,
+        28533.071714566297,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        2469.0,
+        14274.700833922056,
+        13300.03968858224
+      ],
+      "end_queue": [
+        0.0,
+        16727.37088064424,
+        974.6611453398164
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 24,
+      "arrival": 2276.0,
+      "observed_queue": [
+        2276.0,
+        16727.37088064424,
+        974.6611453398164
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        2276.0,
+        14663.283651859527,
+        13717.44278306166
+      ],
+      "end_queue": [
+        0.0,
+        4340.087228784714,
+        1920.5020141376826
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 25,
+      "arrival": 1187.0,
+      "observed_queue": [
+        1187.0,
+        4340.087228784714,
+        1920.5020141376826
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        1187.0,
+        5527.087228784714,
+        7447.589242922397
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 26,
+      "arrival": 1066.0,
+      "observed_queue": [
+        1066.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        1066.0,
+        1066.0,
+        1066.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 27,
+      "arrival": 1116.0,
+      "observed_queue": [
+        1116.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        1116.0,
+        1116.0,
+        1116.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 28,
+      "arrival": 1083.0,
+      "observed_queue": [
+        1083.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        1083.0,
+        1083.0,
+        1083.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 29,
+      "arrival": 891.0,
+      "observed_queue": [
+        891.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        891.0,
+        891.0,
+        891.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 30,
+      "arrival": 753.0,
+      "observed_queue": [
+        753.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        753.0,
+        753.0,
+        753.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 31,
+      "arrival": 767.0,
+      "observed_queue": [
+        767.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        767.0,
+        767.0,
+        767.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 32,
+      "arrival": 709.0,
+      "observed_queue": [
+        709.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        709.0,
+        709.0,
+        709.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 33,
+      "arrival": 801.0,
+      "observed_queue": [
+        801.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        801.0,
+        801.0,
+        801.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 34,
+      "arrival": 740.0,
+      "observed_queue": [
+        740.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        740.0,
+        740.0,
+        740.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 35,
+      "arrival": 695.0,
+      "observed_queue": [
+        695.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        695.0,
+        695.0,
+        695.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 36,
+      "arrival": 774.0,
+      "observed_queue": [
+        774.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        774.0,
+        774.0,
+        774.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 37,
+      "arrival": 687.0,
+      "observed_queue": [
+        687.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        687.0,
+        687.0,
+        687.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 38,
+      "arrival": 786.0,
+      "observed_queue": [
+        786.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        786.0,
+        786.0,
+        786.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 39,
+      "arrival": 803.0,
+      "observed_queue": [
+        803.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        803.0,
+        803.0,
+        803.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 40,
+      "arrival": 735.0,
+      "observed_queue": [
+        735.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        735.0,
+        735.0,
+        735.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 41,
+      "arrival": 780.0,
+      "observed_queue": [
+        780.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        780.0,
+        780.0,
+        780.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 42,
+      "arrival": 728.0,
+      "observed_queue": [
+        728.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        728.0,
+        728.0,
+        728.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 43,
+      "arrival": 780.0,
+      "observed_queue": [
+        780.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        780.0,
+        780.0,
+        780.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 44,
+      "arrival": 681.0,
+      "observed_queue": [
+        681.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        681.0,
+        681.0,
+        681.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 45,
+      "arrival": 762.0,
+      "observed_queue": [
+        762.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        762.0,
+        762.0,
+        762.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 46,
+      "arrival": 696.0,
+      "observed_queue": [
+        696.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        696.0,
+        696.0,
+        696.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 47,
+      "arrival": 772.0,
+      "observed_queue": [
+        772.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        772.0,
+        772.0,
+        772.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 48,
+      "arrival": 701.0,
+      "observed_queue": [
+        701.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        701.0,
+        701.0,
+        701.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 49,
+      "arrival": 687.0,
+      "observed_queue": [
+        687.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        687.0,
+        687.0,
+        687.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 50,
+      "arrival": 766.0,
+      "observed_queue": [
+        766.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        766.0,
+        766.0,
+        766.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 51,
+      "arrival": 755.0,
+      "observed_queue": [
+        755.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        755.0,
+        755.0,
+        755.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 52,
+      "arrival": 670.0,
+      "observed_queue": [
+        670.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        670.0,
+        670.0,
+        670.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 53,
+      "arrival": 759.0,
+      "observed_queue": [
+        759.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        759.0,
+        759.0,
+        759.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 54,
+      "arrival": 714.0,
+      "observed_queue": [
+        714.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        714.0,
+        714.0,
+        714.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 55,
+      "arrival": 788.0,
+      "observed_queue": [
+        788.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        788.0,
+        788.0,
+        788.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 56,
+      "arrival": 714.0,
+      "observed_queue": [
+        714.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        714.0,
+        714.0,
+        714.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 57,
+      "arrival": 694.0,
+      "observed_queue": [
+        694.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        694.0,
+        694.0,
+        694.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 58,
+      "arrival": 763.0,
+      "observed_queue": [
+        763.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        763.0,
+        763.0,
+        763.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 59,
+      "arrival": 707.0,
+      "observed_queue": [
+        707.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        707.0,
+        707.0,
+        707.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 60,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 61,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 62,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 63,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 64,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 65,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 66,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 67,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 68,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 69,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 70,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 71,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 72,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 73,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 74,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 75,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 76,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 77,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 78,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 79,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 80,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 81,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 82,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 83,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 84,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 85,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 86,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 87,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 88,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 89,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 90,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    },
+    {
+      "t": 91,
+      "arrival": 0.0,
+      "observed_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "staff_before": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "active_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "pending_staff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "committed_staff": [
+        69.0,
+        69.0,
+        69.0
+      ],
+      "flow": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_queue": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_transit_delay": 0
+    }
+  ]
+}

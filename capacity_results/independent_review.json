@@ -1,0 +1,513 @@
+{
+  "review_metadata": {
+    "schema": "capacity-results-independent-review-v1",
+    "reviewer_script": "review_capacity_results.py",
+    "reviewer_script_sha256": "ca916b21efbc684b2380422cdf8cf76f764578dd2e789eba9b8e8d66e175b09c",
+    "result_directory": "/workspace/scratch/faa307b55489/Adaptive_Nervous_System_v020/capacity_results/validation",
+    "protocol_sha256": "94eb90191ec2bb6b58b20760f8ad355f6ade41f3806558d8adfe888cb67519a9",
+    "summary_sha256": "88eded982fefa2c1f76cf2fa0a6142624dbf5916613d72a390919b9e4d1c8ef7",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scope": "Audit of saved validation evidence; no new policy/environment experiment"
+  },
+  "scope": {
+    "scenarios_checked": 176,
+    "episodes_checked": 2112,
+    "simulated_minutes": 168192
+  },
+  "checks": {
+    "full_aggregation_equal": true,
+    "independent_policy_means_agree": true,
+    "all_11_upstream_hashes_match": true,
+    "protocol_implementation_and_environment_freeze_verified": true,
+    "summary_receipt_trace_hashes_match": true,
+    "csv_rows_match_json": true,
+    "representative_scalar_replay": {
+      "traces": 66,
+      "minutes": 5256
+    },
+    "causal_decision_replay_from_observations_only": {
+      "traces": 22,
+      "decisions": 1752,
+      "all_recorded_actions_and_full_evidence_equal": true
+    },
+    "generated_underload_zero_moves_and_backlog": true
+  },
+  "primary_vs_static": {
+    "scenarios": 176,
+    "candidate_mean_backlog": 25411.835375552368,
+    "baseline_mean_backlog": 33169.29017594217,
+    "mean_backlog_improvement": 7757.454800389803,
+    "improvement_ci95": [
+      6847.1688032689035,
+      8671.374331771383
+    ],
+    "reduction_pct": 23.387460989491778,
+    "reduction_pct_ci95": [
+      20.75975792715104,
+      26.321313763923925
+    ],
+    "wins": 139,
+    "ties": 17,
+    "losses": 20,
+    "bootstrap_draws": 2000,
+    "bootstrap_draws_with_positive_denominator": 2000
+  },
+  "primary_passes": true,
+  "advancement_checks": {
+    "legacy_flash": {
+      "static": {
+        "absolute_improvement_ci95": [
+          2517.089061659239,
+          2730.833624007469
+        ],
+        "reduction_pct": 30.66958375221118,
+        "passes": true
+      },
+      "abc_guard": {
+        "absolute_improvement_ci95": [
+          2583.248088538889,
+          3468.427684633531
+        ],
+        "reduction_pct": 33.69603553855152,
+        "passes": true
+      }
+    },
+    "generated_synthetic": {
+      "static": {
+        "absolute_improvement_ci95": [
+          10351.577236097975,
+          13726.459181560062
+        ],
+        "reduction_pct": 22.422544077782632,
+        "passes": true
+      },
+      "abc_guard": {
+        "absolute_improvement_ci95": [
+          25499.73270092698,
+          29760.11130885873
+        ],
+        "reduction_pct": 39.945094303219896,
+        "passes": true
+      }
+    }
+  },
+  "advancement_passes": true,
+  "harms_vs_static_count": 20,
+  "harms_vs_static_by_group": {
+    "generated_switching_fault": 3,
+    "surge_only": 11,
+    "generated_pulsed_short_fault": 3,
+    "generated_asymmetric_recovery": 3
+  },
+  "largest_absolute_harms_vs_static": [
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 1004,
+      "static_mean": 62417.477337281736,
+      "capacity_aware_mean": 71276.04242537469,
+      "absolute_increase": 8858.565088092953,
+      "increase_pct": 14.192443312350537,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 138290.09989218734,
+      "capacity_aware_peak": 142171.9441805613,
+      "capacity_aware_moves": 11.0
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 1014,
+      "static_mean": 74471.5615235922,
+      "capacity_aware_mean": 76743.39837696805,
+      "absolute_increase": 2271.8368533758476,
+      "increase_pct": 3.0506099333718706,
+      "static_end": 0.0,
+      "capacity_aware_end": 10879.57998166009,
+      "static_peak": 169331.2896987342,
+      "capacity_aware_peak": 167442.87042727013,
+      "capacity_aware_moves": 11.0
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 1013,
+      "static_mean": 1353.919921319247,
+      "capacity_aware_mean": 2113.5244259820906,
+      "absolute_increase": 759.6045046628437,
+      "increase_pct": 56.104093949861685,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 11488.384075964013,
+      "capacity_aware_peak": 16714.647946108926,
+      "capacity_aware_moves": 2.0
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 1010,
+      "static_mean": 1728.6044382440543,
+      "capacity_aware_mean": 2296.9072444528356,
+      "absolute_increase": 568.3028062087812,
+      "increase_pct": 32.87639402257192,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 16361.585328662122,
+      "capacity_aware_peak": 16901.614051226148,
+      "capacity_aware_moves": 2.0
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 1013,
+      "static_mean": 26988.04977096754,
+      "capacity_aware_mean": 27412.17993551615,
+      "absolute_increase": 424.1301645486092,
+      "increase_pct": 1.571548030139133,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 68591.82002289707,
+      "capacity_aware_peak": 79503.57916074668,
+      "capacity_aware_moves": 9.0
+    }
+  ],
+  "largest_relative_harms_vs_static": [
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 1015,
+      "static_mean": 30.08841607254387,
+      "capacity_aware_mean": 273.9549111884462,
+      "absolute_increase": 243.86649511590232,
+      "increase_pct": 810.4996106406351,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 1375.5305571459176,
+      "capacity_aware_peak": 4461.709147292111,
+      "capacity_aware_moves": 6.0
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 1013,
+      "static_mean": 1353.919921319247,
+      "capacity_aware_mean": 2113.5244259820906,
+      "absolute_increase": 759.6045046628437,
+      "increase_pct": 56.104093949861685,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 11488.384075964013,
+      "capacity_aware_peak": 16714.647946108926,
+      "capacity_aware_moves": 2.0
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 1011,
+      "static_mean": 200.24240832096123,
+      "capacity_aware_mean": 312.32271811558894,
+      "absolute_increase": 112.08030979462771,
+      "increase_pct": 55.972314123878434,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 2382.3773632316643,
+      "capacity_aware_peak": 4932.514081010779,
+      "capacity_aware_moves": 7.0
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 1002,
+      "static_mean": 496.04833897363426,
+      "capacity_aware_mean": 703.0813024936534,
+      "absolute_increase": 207.03296352001917,
+      "increase_pct": 41.73644930419237,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 8037.57819828131,
+      "capacity_aware_peak": 7184.052477503123,
+      "capacity_aware_moves": 2.0
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 1010,
+      "static_mean": 1728.6044382440543,
+      "capacity_aware_mean": 2296.9072444528356,
+      "absolute_increase": 568.3028062087812,
+      "increase_pct": 32.87639402257192,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_peak": 16361.585328662122,
+      "capacity_aware_peak": 16901.614051226148,
+      "capacity_aware_moves": 2.0
+    }
+  ],
+  "by_group": {
+    "surge_only": {
+      "static_mean": 699.6658120206023,
+      "capacity_aware_mean": 832.594079134218,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": -18.998822699329132,
+      "static_wins_ties_losses": [
+        4,
+        1,
+        11
+      ]
+    },
+    "ingress_slow": {
+      "static_mean": 10091.429682571743,
+      "capacity_aware_mean": 6793.976364306184,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": 32.675779567293404,
+      "static_wins_ties_losses": [
+        16,
+        0,
+        0
+      ]
+    },
+    "processing_slow": {
+      "static_mean": 10185.352422770924,
+      "capacity_aware_mean": 6265.392938382829,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": 38.486243005440066,
+      "static_wins_ties_losses": [
+        16,
+        0,
+        0
+      ]
+    },
+    "delivery_slow": {
+      "static_mean": 9596.732151723327,
+      "capacity_aware_mean": 5797.032102345349,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": 39.59368657273246,
+      "static_wins_ties_losses": [
+        16,
+        0,
+        0
+      ]
+    },
+    "shifting_bottleneck": {
+      "static_mean": 12116.283464517395,
+      "capacity_aware_mean": 9907.787277627085,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": 18.22750510383736,
+      "static_wins_ties_losses": [
+        16,
+        0,
+        0
+      ]
+    },
+    "generated_underload": {
+      "static_mean": 0.0,
+      "capacity_aware_mean": 0.0,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": null,
+      "static_wins_ties_losses": [
+        0,
+        16,
+        0
+      ]
+    },
+    "generated_sustained_processing_fault": {
+      "static_mean": 58468.359889314124,
+      "capacity_aware_mean": 13924.363069107021,
+      "static_end": 2547.756451543442,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": 76.18478935364855,
+      "static_wins_ties_losses": [
+        16,
+        0,
+        0
+      ]
+    },
+    "generated_switching_fault": {
+      "static_mean": 38146.821697226915,
+      "capacity_aware_mean": 30235.19651256119,
+      "static_end": 0.0,
+      "capacity_aware_end": 679.9737488537556,
+      "static_reduction_pct": 20.739932798230637,
+      "static_wins_ties_losses": [
+        13,
+        0,
+        3
+      ]
+    },
+    "generated_pulsed_short_fault": {
+      "static_mean": 17708.720491259024,
+      "capacity_aware_mean": 17259.276326095372,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": 2.537982150576582,
+      "static_wins_ties_losses": [
+        13,
+        0,
+        3
+      ]
+    },
+    "generated_asymmetric_recovery": {
+      "static_mean": 2973.0515349769657,
+      "capacity_aware_mean": 1099.9149194914746,
+      "static_end": 0.0,
+      "capacity_aware_end": 0.0,
+      "static_reduction_pct": 63.00383943731414,
+      "static_wins_ties_losses": [
+        13,
+        0,
+        3
+      ]
+    },
+    "generated_sustained_overload": {
+      "static_mean": 204875.77478898285,
+      "capacity_aware_mean": 187414.6555420253,
+      "static_end": 273242.63310819125,
+      "capacity_aware_end": 267874.3402443655,
+      "static_reduction_pct": 8.522783752711646,
+      "static_wins_ties_losses": [
+        16,
+        0,
+        0
+      ]
+    }
+  },
+  "terminal_harms_vs_static": [
+    {
+      "group": "generated_sustained_overload",
+      "seed": 1002,
+      "extra_end_backlog": 34649.22095268738,
+      "static_end": 370945.50888659165,
+      "capacity_aware_end": 405594.729839279,
+      "mean_backlog_improvement": 5825.028689736704
+    },
+    {
+      "group": "generated_sustained_overload",
+      "seed": 1004,
+      "extra_end_backlog": 31858.399982107512,
+      "static_end": 182057.3113484956,
+      "capacity_aware_end": 213915.7113306031,
+      "mean_backlog_improvement": 4180.63185128849
+    },
+    {
+      "group": "generated_sustained_overload",
+      "seed": 1006,
+      "extra_end_backlog": 27256.178871780285,
+      "static_end": 419790.92804339714,
+      "capacity_aware_end": 447047.1069151774,
+      "mean_backlog_improvement": 10120.37126644564
+    },
+    {
+      "group": "generated_sustained_overload",
+      "seed": 1009,
+      "extra_end_backlog": 18865.373894625925,
+      "static_end": 267444.69459009235,
+      "capacity_aware_end": 286310.0684847183,
+      "mean_backlog_improvement": 11085.694797760429
+    },
+    {
+      "group": "generated_sustained_overload",
+      "seed": 1000,
+      "extra_end_backlog": 16397.837235442974,
+      "static_end": 248686.79351336005,
+      "capacity_aware_end": 265084.630748803,
+      "mean_backlog_improvement": 8263.487337067723
+    },
+    {
+      "group": "generated_sustained_overload",
+      "seed": 1005,
+      "extra_end_backlog": 13487.522721219837,
+      "static_end": 215085.14101249754,
+      "capacity_aware_end": 228572.66373371737,
+      "mean_backlog_improvement": 13667.338502474391
+    },
+    {
+      "group": "generated_switching_fault",
+      "seed": 1014,
+      "extra_end_backlog": 10879.57998166009,
+      "static_end": 0.0,
+      "capacity_aware_end": 10879.57998166009,
+      "mean_backlog_improvement": -2271.8368533758476
+    },
+    {
+      "group": "generated_sustained_overload",
+      "seed": 1007,
+      "extra_end_backlog": 2253.212721357908,
+      "static_end": 179371.46632133226,
+      "capacity_aware_end": 181624.67904269017,
+      "mean_backlog_improvement": 15926.968789602339
+    }
+  ],
+  "mean_completed_increase_pct": 0.12797725836655258,
+  "mean_terminal_reduction_pct": 2.6237591447863244,
+  "abc_only_gate_tradeoff": {
+    "vs_static": {
+      "scenarios": 176,
+      "candidate_mean_backlog": 29203.76030849625,
+      "baseline_mean_backlog": 33169.29017594217,
+      "mean_backlog_improvement": 3965.529867445916,
+      "improvement_ci95": [
+        3273.233796757047,
+        4687.462212022878
+      ],
+      "reduction_pct": 11.955425776105809,
+      "reduction_pct_ci95": [
+        10.012724980827198,
+        13.91408456302516
+      ],
+      "wins": 91,
+      "ties": 52,
+      "losses": 33,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "vs_abc": {
+      "scenarios": 176,
+      "candidate_mean_backlog": 29203.76030849625,
+      "baseline_mean_backlog": 52921.450447219635,
+      "mean_backlog_improvement": 23717.690138723374,
+      "improvement_ci95": [
+        22258.858776496876,
+        25132.461465398545
+      ],
+      "reduction_pct": 44.81678022483123,
+      "reduction_pct_ci95": [
+        42.967558898302016,
+        46.67328710400728
+      ],
+      "wins": 175,
+      "ties": 0,
+      "losses": 1,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "vs_catalog": {
+      "scenarios": 176,
+      "candidate_mean_backlog": 29203.76030849625,
+      "baseline_mean_backlog": 25411.835375552368,
+      "mean_backlog_improvement": -3791.924932943886,
+      "improvement_ci95": [
+        -4339.226263597103,
+        -3244.2937172820684
+      ],
+      "reduction_pct": -14.921885321954866,
+      "reduction_pct_ci95": [
+        -17.89447624674881,
+        -12.258241744685725
+      ],
+      "wins": 21,
+      "ties": 17,
+      "losses": 138,
+      "bootstrap_draws": 2000,
+      "bootstrap_draws_with_positive_denominator": 2000
+    },
+    "mean_moves": 2.1893939393939394,
+    "catalog_mean_moves": 4.323863636363637,
+    "terminal_backlog": 24489.51907384483,
+    "catalog_terminal_backlog": 24414.02854483812
+  },
+  "limitations": [
+    "Confidence intervals reflect Monte Carlo scenario seeds within specified synthetic families, conditional on fixed policy draws and simulator; no model/deployment uncertainty.",
+    "Only the complete-mixture capacity_aware vs static interval is the primary claim; secondary intervals are unadjusted exploratory comparisons.",
+    "Positive average effects can coexist with worse cases and severe relative regression when baseline backlog is small; inspect the reported case failures.",
+    "The forecast ensemble does not guarantee actual non-regression: hidden abrupt faults and demand shifts remain possible.",
+    "Scalar replay verifies prespecified representative traces; other episodes have row accounting plus simulator inline invariants, not independent complete replay.",
+    "Observation-only replay checks reproducibility of recorded decisions with the frozen controller; it is not a proof of optimality or a formal security analysis."
+  ]
+}

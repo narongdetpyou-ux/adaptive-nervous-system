@@ -1,0 +1,715 @@
+[
+  {
+    "sequence": 1,
+    "event_id": "v3_validation:submitted",
+    "job_id": "v3_validation",
+    "step_id": null,
+    "kind": "job.submitted",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {},
+    "timestamp": 1795567152.6155355
+  },
+  {
+    "sequence": 2,
+    "event_id": "v3_validation:RUNNING:88d26125016743f5b7f997f7ad376891",
+    "job_id": "v3_validation",
+    "step_id": null,
+    "kind": "job.running",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": null
+    },
+    "timestamp": 1795567152.6171787
+  },
+  {
+    "sequence": 3,
+    "event_id": "v3_validation:instant__static:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "instant__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567152.6182187
+  },
+  {
+    "sequence": 4,
+    "event_id": "v3_validation:instant__abc_capacity:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "instant__abc_capacity",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567152.7964294
+  },
+  {
+    "sequence": 5,
+    "event_id": "v3_validation:instant__capacity_v2:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "instant__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567152.94437
+  },
+  {
+    "sequence": 6,
+    "event_id": "v3_validation:instant__static:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "instant__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567154.7273428
+  },
+  {
+    "sequence": 7,
+    "event_id": "v3_validation:instant__capacity_balance:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "instant__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567154.7289677
+  },
+  {
+    "sequence": 8,
+    "event_id": "v3_validation:instant__capacity_balance:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "instant__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567158.0817125
+  },
+  {
+    "sequence": 9,
+    "event_id": "v3_validation:instant__v3_signal_only:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "instant__v3_signal_only",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567158.0834813
+  },
+  {
+    "sequence": 10,
+    "event_id": "v3_validation:instant__v3_signal_only:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "instant__v3_signal_only",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567170.1199698
+  },
+  {
+    "sequence": 11,
+    "event_id": "v3_validation:instant__v3_full:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "instant__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567170.12173
+  },
+  {
+    "sequence": 12,
+    "event_id": "v3_validation:instant__v3_full:1:RETRY_WAIT",
+    "job_id": "v3_validation",
+    "step_id": "instant__v3_full",
+    "kind": "step.retry_wait",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": {
+        "message": "Controlled first-attempt failure before v0.3 computation",
+        "type": "TransientAgentError"
+      }
+    },
+    "timestamp": 1795567170.2152817
+  },
+  {
+    "sequence": 13,
+    "event_id": "v3_validation:transit_1__static:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567170.2169905
+  },
+  {
+    "sequence": 14,
+    "event_id": "v3_validation:transit_1__static:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567171.9659193
+  },
+  {
+    "sequence": 15,
+    "event_id": "v3_validation:instant__v3_full:2:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "instant__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795567171.9677384
+  },
+  {
+    "sequence": 16,
+    "event_id": "v3_validation:instant__capacity_v2:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "instant__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567173.6416173
+  },
+  {
+    "sequence": 17,
+    "event_id": "v3_validation:transit_1__abc_capacity:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__abc_capacity",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567173.6482954
+  },
+  {
+    "sequence": 18,
+    "event_id": "v3_validation:instant__v3_full:2:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "instant__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795567187.214085
+  },
+  {
+    "sequence": 19,
+    "event_id": "v3_validation:transit_1__capacity_v2:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567187.2159424
+  },
+  {
+    "sequence": 20,
+    "event_id": "v3_validation:transit_1__capacity_v2:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567208.2225752
+  },
+  {
+    "sequence": 21,
+    "event_id": "v3_validation:transit_1__capacity_balance:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567208.2242458
+  },
+  {
+    "sequence": 22,
+    "event_id": "v3_validation:transit_1__capacity_balance:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567211.830343
+  },
+  {
+    "sequence": 23,
+    "event_id": "v3_validation:transit_1__v3_signal_only:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__v3_signal_only",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567211.832465
+  },
+  {
+    "sequence": 24,
+    "event_id": "v3_validation:instant__abc_capacity:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "instant__abc_capacity",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567217.424158
+  },
+  {
+    "sequence": 25,
+    "event_id": "v3_validation:transit_1__v3_full:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567217.4260213
+  },
+  {
+    "sequence": 26,
+    "event_id": "v3_validation:transit_1__v3_signal_only:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__v3_signal_only",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567224.71202
+  },
+  {
+    "sequence": 27,
+    "event_id": "v3_validation:transit_3__static:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567224.7140677
+  },
+  {
+    "sequence": 28,
+    "event_id": "v3_validation:transit_3__static:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567227.1023607
+  },
+  {
+    "sequence": 29,
+    "event_id": "v3_validation:transit_3__abc_capacity:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__abc_capacity",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567227.1041455
+  },
+  {
+    "sequence": 30,
+    "event_id": "v3_validation:transit_1__v3_full:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567233.81852
+  },
+  {
+    "sequence": 31,
+    "event_id": "v3_validation:transit_3__capacity_v2:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__capacity_v2",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567233.8203733
+  },
+  {
+    "sequence": 32,
+    "event_id": "v3_validation:transit_1__abc_capacity:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_1__abc_capacity",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567241.2981758
+  },
+  {
+    "sequence": 33,
+    "event_id": "v3_validation:transit_3__capacity_balance:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__capacity_balance",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567241.2998004
+  },
+  {
+    "sequence": 34,
+    "event_id": "v3_validation:transit_3__capacity_balance:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__capacity_balance",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567244.9011242
+  },
+  {
+    "sequence": 35,
+    "event_id": "v3_validation:transit_3__v3_signal_only:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__v3_signal_only",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567244.9032557
+  },
+  {
+    "sequence": 36,
+    "event_id": "v3_validation:transit_3__capacity_v2:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__capacity_v2",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567255.8764448
+  },
+  {
+    "sequence": 37,
+    "event_id": "v3_validation:transit_3__v3_full:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__v3_full",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567255.8781743
+  },
+  {
+    "sequence": 38,
+    "event_id": "v3_validation:transit_3__v3_signal_only:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__v3_signal_only",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567256.727345
+  },
+  {
+    "sequence": 39,
+    "event_id": "v3_validation:transit_3__v3_full:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__v3_full",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567271.4004235
+  },
+  {
+    "sequence": 40,
+    "event_id": "v3_validation:transit_3__abc_capacity:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "transit_3__abc_capacity",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567291.4603128
+  },
+  {
+    "sequence": 41,
+    "event_id": "v3_validation:comparison:1:RUNNING",
+    "job_id": "v3_validation",
+    "step_id": "comparison",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567291.4623003
+  },
+  {
+    "sequence": 42,
+    "event_id": "v3_validation:comparison:1:SUCCEEDED",
+    "job_id": "v3_validation",
+    "step_id": "comparison",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795567295.7564614
+  },
+  {
+    "sequence": 43,
+    "event_id": "v3_validation:SUCCEEDED:25da55a70b8e42d0951094c17a42c4af",
+    "job_id": "v3_validation",
+    "step_id": null,
+    "kind": "job.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": {
+        "bytes": 24418,
+        "path": "/workspace/scratch/faa307b55489/Adaptive_Nervous_System_v030/v3_results/validation/workspace/reports/v3_validation.json",
+        "sha256": "ff64bf35a5262bc814dae907fa2da45e1df91c888b16b5e2fe6d82248423d971"
+      }
+    },
+    "timestamp": 1795567295.7615695
+  }
+]

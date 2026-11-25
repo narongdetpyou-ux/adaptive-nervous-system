@@ -1,0 +1,1073 @@
+{
+  "abc_vs": {
+    "maxweight": {
+      "losses": 2,
+      "reduction_pct": 21.457884519484008,
+      "ties": 0,
+      "wins": 38
+    },
+    "static": {
+      "losses": 37,
+      "reduction_pct": -45.68573543824584,
+      "ties": 0,
+      "wins": 3
+    }
+  },
+  "by_group": {
+    "delivery_slow": {
+      "abc": 10950.514601452916,
+      "maxweight": 13309.294446430511,
+      "static": 9257.896138282616
+    },
+    "ingress_slow": {
+      "abc": 11109.349022379607,
+      "maxweight": 14665.857213379142,
+      "static": 9448.712421362361
+    },
+    "processing_slow": {
+      "abc": 16856.88081987524,
+      "maxweight": 22683.9433886575,
+      "static": 10548.87202961191
+    },
+    "shifting_bottleneck": {
+      "abc": 19385.284621644885,
+      "maxweight": 22468.576736629486,
+      "static": 13029.982682023941
+    },
+    "surge_only": {
+      "abc": 4164.178556001212,
+      "maxweight": 6404.445779078096,
+      "static": 591.9038459908691
+    }
+  },
+  "case_results": [
+    {
+      "abc": {
+        "completed": 186721.20274180154,
+        "end_backlog": 322.7972581984802,
+        "mean_backlog": 6300.029345930082,
+        "moves": 7,
+        "peak_backlog": 40061.89585396947
+      },
+      "group": "surge_only",
+      "maxweight": {
+        "completed": 186508.71088969946,
+        "end_backlog": 535.2891103005537,
+        "mean_backlog": 7398.35945904284,
+        "moves": 7,
+        "peak_backlog": 46635.58918551795
+      },
+      "scenario_seed": 100,
+      "static": {
+        "completed": 187043.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 787.4834771364737,
+        "moves": 0,
+        "peak_backlog": 8728.392831712423
+      }
+    },
+    {
+      "abc": {
+        "completed": 177132.171842964,
+        "end_backlog": 230.82815703599707,
+        "mean_backlog": 2315.441895419577,
+        "moves": 7,
+        "peak_backlog": 22542.207447071505
+      },
+      "group": "surge_only",
+      "maxweight": {
+        "completed": 177016.75776444603,
+        "end_backlog": 346.24223555399567,
+        "mean_backlog": 6290.328911451031,
+        "moves": 7,
+        "peak_backlog": 39716.6714953472
+      },
+      "scenario_seed": 101,
+      "static": {
+        "completed": 177363.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 368.5145498626679,
+        "moves": 0,
+        "peak_backlog": 6105.92245270947
+      }
+    },
+    {
+      "abc": {
+        "completed": 201687.9359766404,
+        "end_backlog": 867.0640233596016,
+        "mean_backlog": 7095.507239994443,
+        "moves": 7,
+        "peak_backlog": 43523.35410265982
+      },
+      "group": "surge_only",
+      "maxweight": {
+        "completed": 202555.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 9912.807553931581,
+        "moves": 7,
+        "peak_backlog": 58334.641650807214
+      },
+      "scenario_seed": 102,
+      "static": {
+        "completed": 202555.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 1714.8305614064886,
+        "moves": 0,
+        "peak_backlog": 16306.097371139873
+      }
+    },
+    {
+      "abc": {
+        "completed": 189253.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 3862.534079567661,
+        "moves": 7,
+        "peak_backlog": 28308.48695134872
+      },
+      "group": "surge_only",
+      "maxweight": {
+        "completed": 188378.9349800763,
+        "end_backlog": 874.0650199236967,
+        "mean_backlog": 7987.380086041081,
+        "moves": 7,
+        "peak_backlog": 49918.52406484111
+      },
+      "scenario_seed": 103,
+      "static": {
+        "completed": 189253.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 960.2894596567088,
+        "moves": 0,
+        "peak_backlog": 10657.22331797145
+      }
+    },
+    {
+      "abc": {
+        "completed": 153563.74540527433,
+        "end_backlog": 2910.254594725688,
+        "mean_backlog": 3055.5523694145068,
+        "moves": 7,
+        "peak_backlog": 22356.412450496726
+      },
+      "group": "surge_only",
+      "maxweight": {
+        "completed": 156474.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 4312.629057786505,
+        "moves": 7,
+        "peak_backlog": 29965.609362395582
+      },
+      "scenario_seed": 104,
+      "static": {
+        "completed": 156474.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 144.956357361782,
+        "moves": 0,
+        "peak_backlog": 3713.524762553374
+      }
+    },
+    {
+      "abc": {
+        "completed": 185131.80657895686,
+        "end_backlog": 486.19342104316377,
+        "mean_backlog": 4856.260606048872,
+        "moves": 7,
+        "peak_backlog": 32294.36455251323
+      },
+      "group": "surge_only",
+      "maxweight": {
+        "completed": 185131.80657895686,
+        "end_backlog": 486.19342104316377,
+        "mean_backlog": 7431.76454438725,
+        "moves": 7,
+        "peak_backlog": 46108.94557395835
+      },
+      "scenario_seed": 105,
+      "static": {
+        "completed": 185618.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 712.9234349143062,
+        "moves": 0,
+        "peak_backlog": 8997.768874107816
+      }
+    },
+    {
+      "abc": {
+        "completed": 153785.3333333333,
+        "end_backlog": 1641.6666666666667,
+        "mean_backlog": 2455.5445217650595,
+        "moves": 7,
+        "peak_backlog": 19117.764240669778
+      },
+      "group": "surge_only",
+      "maxweight": {
+        "completed": 155427.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 3911.075432184162,
+        "moves": 7,
+        "peak_backlog": 27364.119183472765
+      },
+      "scenario_seed": 106,
+      "static": {
+        "completed": 155427.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 19.76928060460438,
+        "moves": 0,
+        "peak_backlog": 677.1980783946692
+      }
+    },
+    {
+      "abc": {
+        "completed": 156443.0396883115,
+        "end_backlog": 764.9603116885164,
+        "mean_backlog": 3372.558389869495,
+        "moves": 7,
+        "peak_backlog": 22671.75844519346
+      },
+      "group": "surge_only",
+      "maxweight": {
+        "completed": 157208.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 3991.221187800317,
+        "moves": 7,
+        "peak_backlog": 27836.43470480088
+      },
+      "scenario_seed": 107,
+      "static": {
+        "completed": 157208.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 26.463646983921294,
+        "moves": 0,
+        "peak_backlog": 1557.5078686086963
+      }
+    },
+    {
+      "abc": {
+        "completed": 199559.0757896819,
+        "end_backlog": 669.9242103180509,
+        "mean_backlog": 11410.403649427577,
+        "moves": 7,
+        "peak_backlog": 63098.186104854816
+      },
+      "group": "ingress_slow",
+      "maxweight": {
+        "completed": 200229.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 18848.1812334054,
+        "moves": 7,
+        "peak_backlog": 58502.30476619746
+      },
+      "scenario_seed": 100,
+      "static": {
+        "completed": 200229.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 11911.873691836907,
+        "moves": 0,
+        "peak_backlog": 61769.05135398895
+      }
+    },
+    {
+      "abc": {
+        "completed": 159288.2353017716,
+        "end_backlog": 2700.7646982283627,
+        "mean_backlog": 3502.4125955219392,
+        "moves": 7,
+        "peak_backlog": 23442.32400347284
+      },
+      "group": "ingress_slow",
+      "maxweight": {
+        "completed": 161893.19043683555,
+        "end_backlog": 95.80956316446009,
+        "mean_backlog": 8862.198739342955,
+        "moves": 7,
+        "peak_backlog": 31546.592072825697
+      },
+      "scenario_seed": 101,
+      "static": {
+        "completed": 161989.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 4264.645712517506,
+        "moves": 0,
+        "peak_backlog": 25745.00469538469
+      }
+    },
+    {
+      "abc": {
+        "completed": 155087.61670203018,
+        "end_backlog": 497.383297969853,
+        "mean_backlog": 6314.59791423669,
+        "moves": 7,
+        "peak_backlog": 32739.94549693911
+      },
+      "group": "ingress_slow",
+      "maxweight": {
+        "completed": 155585.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 7505.71121072248,
+        "moves": 7,
+        "peak_backlog": 27444.198062256357
+      },
+      "scenario_seed": 102,
+      "static": {
+        "completed": 155585.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 7783.460134722832,
+        "moves": 0,
+        "peak_backlog": 43938.305612496515
+      }
+    },
+    {
+      "abc": {
+        "completed": 179426.19586658085,
+        "end_backlog": 1860.8041334191776,
+        "mean_backlog": 10362.594183729903,
+        "moves": 7,
+        "peak_backlog": 46845.58814742637
+      },
+      "group": "ingress_slow",
+      "maxweight": {
+        "completed": 180951.64831963356,
+        "end_backlog": 335.3516803664272,
+        "mean_backlog": 13161.701632881837,
+        "moves": 7,
+        "peak_backlog": 43023.805089540896
+      },
+      "scenario_seed": 103,
+      "static": {
+        "completed": 181287.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 7207.604614578756,
+        "moves": 0,
+        "peak_backlog": 41586.621367757856
+      }
+    },
+    {
+      "abc": {
+        "completed": 195904.32512653797,
+        "end_backlog": 434.6748734620376,
+        "mean_backlog": 16655.48844171992,
+        "moves": 7,
+        "peak_backlog": 63605.86799251241
+      },
+      "group": "ingress_slow",
+      "maxweight": {
+        "completed": 196339.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 17989.949228243273,
+        "moves": 7,
+        "peak_backlog": 58214.7583311764
+      },
+      "scenario_seed": 104,
+      "static": {
+        "completed": 196339.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 8412.228788253653,
+        "moves": 0,
+        "peak_backlog": 48738.54857901005
+      }
+    },
+    {
+      "abc": {
+        "completed": 185379.85920820312,
+        "end_backlog": 445.14079179682955,
+        "mean_backlog": 15348.673424950186,
+        "moves": 7,
+        "peak_backlog": 49418.216738404415
+      },
+      "group": "ingress_slow",
+      "maxweight": {
+        "completed": 185825.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 21744.969448280008,
+        "moves": 7,
+        "peak_backlog": 92160.83610239103
+      },
+      "scenario_seed": 105,
+      "static": {
+        "completed": 185825.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 14528.31214551961,
+        "moves": 0,
+        "peak_backlog": 72066.31711854796
+      }
+    },
+    {
+      "abc": {
+        "completed": 161848.47973808073,
+        "end_backlog": 963.5202619192705,
+        "mean_backlog": 9175.111832634022,
+        "moves": 7,
+        "peak_backlog": 43974.18497530993
+      },
+      "group": "ingress_slow",
+      "maxweight": {
+        "completed": 162614.08093748838,
+        "end_backlog": 197.91906251160867,
+        "mean_backlog": 8497.77556968473,
+        "moves": 7,
+        "peak_backlog": 30627.57805535753
+      },
+      "scenario_seed": 106,
+      "static": {
+        "completed": 162812.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 7535.542467800246,
+        "moves": 0,
+        "peak_backlog": 42632.2976967298
+      }
+    },
+    {
+      "abc": {
+        "completed": 178720.32399314188,
+        "end_backlog": 1178.6760068581252,
+        "mean_backlog": 16105.510136816623,
+        "moves": 7,
+        "peak_backlog": 67394.85402304328
+      },
+      "group": "ingress_slow",
+      "maxweight": {
+        "completed": 179899.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 20716.370644472445,
+        "moves": 7,
+        "peak_backlog": 88591.10336973585
+      },
+      "scenario_seed": 107,
+      "static": {
+        "completed": 179899.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 13946.031815669376,
+        "moves": 0,
+        "peak_backlog": 69794.35394617252
+      }
+    },
+    {
+      "abc": {
+        "completed": 191396.83617378306,
+        "end_backlog": 219.16382621694018,
+        "mean_backlog": 13927.939270901064,
+        "moves": 7,
+        "peak_backlog": 67396.0039105132
+      },
+      "group": "processing_slow",
+      "maxweight": {
+        "completed": 191616.00000000006,
+        "end_backlog": 0.0,
+        "mean_backlog": 20256.432317901334,
+        "moves": 7,
+        "peak_backlog": 61450.232131947676
+      },
+      "scenario_seed": 100,
+      "static": {
+        "completed": 191615.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 8365.001819788487,
+        "moves": 0,
+        "peak_backlog": 47203.40147981994
+      }
+    },
+    {
+      "abc": {
+        "completed": 187569.43219476106,
+        "end_backlog": 298.5678052389417,
+        "mean_backlog": 17315.87211157758,
+        "moves": 7,
+        "peak_backlog": 76660.59129693243
+      },
+      "group": "processing_slow",
+      "maxweight": {
+        "completed": 187867.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 22737.03060788184,
+        "moves": 7,
+        "peak_backlog": 68589.59925122457
+      },
+      "scenario_seed": 101,
+      "static": {
+        "completed": 187868.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 10468.092148426951,
+        "moves": 0,
+        "peak_backlog": 56407.904845313584
+      }
+    },
+    {
+      "abc": {
+        "completed": 197573.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 23407.893105193303,
+        "moves": 7,
+        "peak_backlog": 88397.49451156364
+      },
+      "group": "processing_slow",
+      "maxweight": {
+        "completed": 197573.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 24177.386221930617,
+        "moves": 7,
+        "peak_backlog": 72236.9062747182
+      },
+      "scenario_seed": 102,
+      "static": {
+        "completed": 197573.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 10808.446581917058,
+        "moves": 0,
+        "peak_backlog": 58847.054832797636
+      }
+    },
+    {
+      "abc": {
+        "completed": 159789.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 12906.7193416192,
+        "moves": 7,
+        "peak_backlog": 62095.005805532994
+      },
+      "group": "processing_slow",
+      "maxweight": {
+        "completed": 159789.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 18455.605323790605,
+        "moves": 7,
+        "peak_backlog": 57820.91653125858
+      },
+      "scenario_seed": 103,
+      "static": {
+        "completed": 159789.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 8792.424792590842,
+        "moves": 0,
+        "peak_backlog": 48595.667728913715
+      }
+    },
+    {
+      "abc": {
+        "completed": 165257.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 13451.909238393033,
+        "moves": 7,
+        "peak_backlog": 64677.53040766654
+      },
+      "group": "processing_slow",
+      "maxweight": {
+        "completed": 165258.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 22531.40778094962,
+        "moves": 7,
+        "peak_backlog": 68572.21609890062
+      },
+      "scenario_seed": 104,
+      "static": {
+        "completed": 165258.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 11171.852027865174,
+        "moves": 0,
+        "peak_backlog": 60041.230458655686
+      }
+    },
+    {
+      "abc": {
+        "completed": 176676.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 12069.29975993563,
+        "moves": 7,
+        "peak_backlog": 53104.41352831115
+      },
+      "group": "processing_slow",
+      "maxweight": {
+        "completed": 176676.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 18407.622694726124,
+        "moves": 7,
+        "peak_backlog": 56775.466096419994
+      },
+      "scenario_seed": 105,
+      "static": {
+        "completed": 176676.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 8255.257396552053,
+        "moves": 0,
+        "peak_backlog": 47700.941582285224
+      }
+    },
+    {
+      "abc": {
+        "completed": 196132.21105874202,
+        "end_backlog": 229.78894125798215,
+        "mean_backlog": 18706.325561188172,
+        "moves": 7,
+        "peak_backlog": 76709.14318719949
+      },
+      "group": "processing_slow",
+      "maxweight": {
+        "completed": 196362.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 20960.308948926733,
+        "moves": 7,
+        "peak_backlog": 63655.671011639184
+      },
+      "scenario_seed": 106,
+      "static": {
+        "completed": 196361.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 9006.17779586529,
+        "moves": 0,
+        "peak_backlog": 50563.885459175784
+      }
+    },
+    {
+      "abc": {
+        "completed": 200726.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 23069.088170193954,
+        "moves": 7,
+        "peak_backlog": 86003.91080234745
+      },
+      "group": "processing_slow",
+      "maxweight": {
+        "completed": 200726.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 33945.75321315312,
+        "moves": 7,
+        "peak_backlog": 96723.94624945105
+      },
+      "scenario_seed": 107,
+      "static": {
+        "completed": 200726.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 17523.723673889424,
+        "moves": 0,
+        "peak_backlog": 84263.78045363317
+      }
+    },
+    {
+      "abc": {
+        "completed": 203359.78408000883,
+        "end_backlog": 637.2159199912273,
+        "mean_backlog": 14845.600221142597,
+        "moves": 7,
+        "peak_backlog": 78347.12085272993
+      },
+      "group": "delivery_slow",
+      "maxweight": {
+        "completed": 203997.00000000006,
+        "end_backlog": 0.0,
+        "mean_backlog": 18855.534525422503,
+        "moves": 7,
+        "peak_backlog": 93457.63656690619
+      },
+      "scenario_seed": 100,
+      "static": {
+        "completed": 203997.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 14353.803875453928,
+        "moves": 0,
+        "peak_backlog": 73182.33125862195
+      }
+    },
+    {
+      "abc": {
+        "completed": 154716.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 5398.6195118700025,
+        "moves": 7,
+        "peak_backlog": 33345.06230792059
+      },
+      "group": "delivery_slow",
+      "maxweight": {
+        "completed": 154716.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 8395.579800768535,
+        "moves": 7,
+        "peak_backlog": 50115.54103472079
+      },
+      "scenario_seed": 101,
+      "static": {
+        "completed": 154716.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 4671.73056489786,
+        "moves": 0,
+        "peak_backlog": 28713.09035665948
+      }
+    },
+    {
+      "abc": {
+        "completed": 171637.86615236048,
+        "end_backlog": 50.133847639522095,
+        "mean_backlog": 9198.417674328886,
+        "moves": 7,
+        "peak_backlog": 54740.17959967435
+      },
+      "group": "delivery_slow",
+      "maxweight": {
+        "completed": 171513.5101911525,
+        "end_backlog": 174.48980884748426,
+        "mean_backlog": 9693.285737060149,
+        "moves": 7,
+        "peak_backlog": 57599.30939321772
+      },
+      "scenario_seed": 102,
+      "static": {
+        "completed": 171688.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 4848.699545859216,
+        "moves": 0,
+        "peak_backlog": 30528.07697296997
+      }
+    },
+    {
+      "abc": {
+        "completed": 193742.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 13446.283219132627,
+        "moves": 7,
+        "peak_backlog": 72279.51078196852
+      },
+      "group": "delivery_slow",
+      "maxweight": {
+        "completed": 192959.45304721117,
+        "end_backlog": 782.5469527888731,
+        "mean_backlog": 14571.336099719892,
+        "moves": 7,
+        "peak_backlog": 76867.96649694529
+      },
+      "scenario_seed": 103,
+      "static": {
+        "completed": 193741.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 9851.308265959207,
+        "moves": 0,
+        "peak_backlog": 53378.36449490513
+      }
+    },
+    {
+      "abc": {
+        "completed": 185257.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 15775.469907933457,
+        "moves": 7,
+        "peak_backlog": 80730.7936274054
+      },
+      "group": "delivery_slow",
+      "maxweight": {
+        "completed": 185257.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 18343.1075967359,
+        "moves": 7,
+        "peak_backlog": 90228.08771956817
+      },
+      "scenario_seed": 104,
+      "static": {
+        "completed": 185258.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 14683.689986822888,
+        "moves": 0,
+        "peak_backlog": 72701.91952337329
+      }
+    },
+    {
+      "abc": {
+        "completed": 149390.62184162065,
+        "end_backlog": 348.3781583793421,
+        "mean_backlog": 8557.075402149509,
+        "moves": 7,
+        "peak_backlog": 49896.63708415214
+      },
+      "group": "delivery_slow",
+      "maxweight": {
+        "completed": 149739.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 10161.911024034902,
+        "moves": 7,
+        "peak_backlog": 58302.876261983845
+      },
+      "scenario_seed": 105,
+      "static": {
+        "completed": 149739.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 6951.196375334778,
+        "moves": 0,
+        "peak_backlog": 40573.93568703579
+      }
+    },
+    {
+      "abc": {
+        "completed": 182238.6560533184,
+        "end_backlog": 119.3439466816089,
+        "mean_backlog": 14174.775015647023,
+        "moves": 7,
+        "peak_backlog": 75746.40081044381
+      },
+      "group": "delivery_slow",
+      "maxweight": {
+        "completed": 182357.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 16833.048340236874,
+        "moves": 7,
+        "peak_backlog": 85786.44310590798
+      },
+      "scenario_seed": 106,
+      "static": {
+        "completed": 182358.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 13007.686339878896,
+        "moves": 0,
+        "peak_backlog": 67121.37706453433
+      }
+    },
+    {
+      "abc": {
+        "completed": 161129.84245346792,
+        "end_backlog": 943.1575465321027,
+        "mean_backlog": 6207.875859419237,
+        "moves": 7,
+        "peak_backlog": 37751.36260068335
+      },
+      "group": "delivery_slow",
+      "maxweight": {
+        "completed": 161996.64811092406,
+        "end_backlog": 76.35188907601685,
+        "mean_backlog": 9620.552447465332,
+        "moves": 7,
+        "peak_backlog": 55459.04612124452
+      },
+      "scenario_seed": 107,
+      "static": {
+        "completed": 162073.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 5695.054152054163,
+        "moves": 0,
+        "peak_backlog": 33502.861404731215
+      }
+    },
+    {
+      "abc": {
+        "completed": 205417.22912481902,
+        "end_backlog": 456.77087518098375,
+        "mean_backlog": 17199.407261334396,
+        "moves": 7,
+        "peak_backlog": 65512.18736394052
+      },
+      "group": "shifting_bottleneck",
+      "maxweight": {
+        "completed": 205874.00000000006,
+        "end_backlog": 0.0,
+        "mean_backlog": 26721.55987964832,
+        "moves": 7,
+        "peak_backlog": 83389.42178761118
+      },
+      "scenario_seed": 100,
+      "static": {
+        "completed": 205874.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 12771.268616399111,
+        "moves": 0,
+        "peak_backlog": 58250.390529993536
+      }
+    },
+    {
+      "abc": {
+        "completed": 186301.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 17054.55709025075,
+        "moves": 7,
+        "peak_backlog": 64720.62786109365
+      },
+      "group": "shifting_bottleneck",
+      "maxweight": {
+        "completed": 186301.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 22235.702604320377,
+        "moves": 7,
+        "peak_backlog": 71617.75738308042
+      },
+      "scenario_seed": 101,
+      "static": {
+        "completed": 186300.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 12048.06313932352,
+        "moves": 0,
+        "peak_backlog": 55187.24463493329
+      }
+    },
+    {
+      "abc": {
+        "completed": 176768.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 31190.43901709331,
+        "moves": 7,
+        "peak_backlog": 93635.79448914599
+      },
+      "group": "shifting_bottleneck",
+      "maxweight": {
+        "completed": 176769.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 28482.7522977458,
+        "moves": 7,
+        "peak_backlog": 92838.9586241976
+      },
+      "scenario_seed": 102,
+      "static": {
+        "completed": 176768.99999999997,
+        "end_backlog": 0.0,
+        "mean_backlog": 16795.386394608166,
+        "moves": 0,
+        "peak_backlog": 68838.67958038588
+      }
+    },
+    {
+      "abc": {
+        "completed": 178441.30074615657,
+        "end_backlog": 10.699253843437342,
+        "mean_backlog": 21405.79028340593,
+        "moves": 7,
+        "peak_backlog": 78318.2438948326
+      },
+      "group": "shifting_bottleneck",
+      "maxweight": {
+        "completed": 178452.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 22366.53683895534,
+        "moves": 7,
+        "peak_backlog": 73040.43892817314
+      },
+      "scenario_seed": 103,
+      "static": {
+        "completed": 178452.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 15241.929433134026,
+        "moves": 0,
+        "peak_backlog": 64835.417327165145
+      }
+    },
+    {
+      "abc": {
+        "completed": 165008.30583294758,
+        "end_backlog": 796.6941670523926,
+        "mean_backlog": 19660.64428517627,
+        "moves": 7,
+        "peak_backlog": 72941.40860297105
+      },
+      "group": "shifting_bottleneck",
+      "maxweight": {
+        "completed": 165805.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 24831.186022947186,
+        "moves": 7,
+        "peak_backlog": 83686.25057652676
+      },
+      "scenario_seed": 104,
+      "static": {
+        "completed": 165805.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 13201.655542185705,
+        "moves": 0,
+        "peak_backlog": 57515.84741973847
+      }
+    },
+    {
+      "abc": {
+        "completed": 175369.76531473346,
+        "end_backlog": 121.23468526651807,
+        "mean_backlog": 15717.686638136378,
+        "moves": 7,
+        "peak_backlog": 63266.778991964035
+      },
+      "group": "shifting_bottleneck",
+      "maxweight": {
+        "completed": 175491.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 18244.33611871265,
+        "moves": 7,
+        "peak_backlog": 61935.32042524111
+      },
+      "scenario_seed": 105,
+      "static": {
+        "completed": 175491.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 9708.865270250437,
+        "moves": 0,
+        "peak_backlog": 48378.02204391982
+      }
+    },
+    {
+      "abc": {
+        "completed": 177218.074807263,
+        "end_backlog": 112.9251927370132,
+        "mean_backlog": 18219.00296029185,
+        "moves": 7,
+        "peak_backlog": 63517.539691815764
+      },
+      "group": "shifting_bottleneck",
+      "maxweight": {
+        "completed": 177331.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 21397.253702326812,
+        "moves": 7,
+        "peak_backlog": 71274.23080935185
+      },
+      "scenario_seed": 106,
+      "static": {
+        "completed": 177331.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 15401.140906643013,
+        "moves": 0,
+        "peak_backlog": 63563.531945335766
+      }
+    },
+    {
+      "abc": {
+        "completed": 163943.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 14634.749437470184,
+        "moves": 7,
+        "peak_backlog": 50593.53219767993
+      },
+      "group": "shifting_bottleneck",
+      "maxweight": {
+        "completed": 163943.0,
+        "end_backlog": 0.0,
+        "mean_backlog": 15469.286428379413,
+        "moves": 7,
+        "peak_backlog": 54340.34370036774
+      },
+      "scenario_seed": 107,
+      "static": {
+        "completed": 163943.00000000003,
+        "end_backlog": 0.0,
+        "mean_backlog": 9071.552153647559,
+        "moves": 0,
+        "peak_backlog": 45404.82216484644
+      }
+    }
+  ],
+  "episodes": 200,
+  "max_budget_error": 0.0,
+  "max_mass_error": 1.2028067430946976e-10,
+  "minutes": 12000,
+  "overall": {
+    "abc": {
+      "completed": 178099.8318281823,
+      "end_backlog": 507.9681718176958,
+      "mean_backlog": 12493.241524270772,
+      "moves": 7,
+      "peak_backlog": 55794.56714335936
+    },
+    "maxweight": {
+      "completed": 178510.1935314106,
+      "end_backlog": 97.606468589407,
+      "mean_backlog": 15906.423512834946,
+      "moves": 7,
+      "peak_backlog": 61543.90734128066
+    },
+    "static": {
+      "completed": 178607.8,
+      "end_backlog": 0.0,
+      "mean_backlog": 8575.47342345434,
+      "moves": 0,
+      "peak_backlog": 44457.84787942576
+    }
+  },
+  "scenarios": 40
+}

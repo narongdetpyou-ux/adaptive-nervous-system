@@ -1,0 +1,32 @@
+{
+  "primary_pass": true,
+  "source_slice_conditions": {
+    "legacy_flash_vs_static": {
+      "lower_ci95": 2517.089061659239,
+      "pass": true
+    },
+    "legacy_flash_vs_abc_guard": {
+      "lower_ci95": 2583.248088538889,
+      "pass": true
+    },
+    "generated_synthetic_vs_static": {
+      "lower_ci95": 10351.577236097975,
+      "pass": true
+    },
+    "generated_synthetic_vs_abc_guard": {
+      "lower_ci95": 25499.73270092698,
+      "pass": true
+    }
+  },
+  "underload_zero_backlog_and_zero_moves": true,
+  "invariants_and_validated_workflow_pass": true,
+  "advancement_pass": true,
+  "decision": "Proceed to broader synthetic and observational telemetry evaluation; this is not approval for live automated resource changes.",
+  "evidence_scope": "Internal held-out seeds in prespecified synthetic families only; unadjusted paired percentile intervals conditional on the model.",
+  "limitations_to_carry_forward": [
+    "Surge-only mean backlog is worse than static.",
+    "20 of176 paired scenarios are worse than static on mean backlog.",
+    "The ensemble does not include arbitrary unseen faults; no formal safety guarantee.",
+    "Development terminal backlog was worse than static; validation terminal comparisons remain descriptive."
+  ]
+}

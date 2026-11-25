@@ -1,0 +1,75 @@
+{
+  "version": "0.4.0",
+  "reviewed_at_utc": "2026-11-25T06:25:41.744142+00:00",
+  "review_scope": "Pre-freeze design/source review; read-only inspection and existing-test evidence, no new simulation.",
+  "acceptance": {
+    "declared_sha256": "1105442baf50d0cee923c671ebc2c024d3e8697e90e280843fbdffdd005fb6ef",
+    "observed_sha256": "1105442baf50d0cee923c671ebc2c024d3e8697e90e280843fbdffdd005fb6ef",
+    "recorded_sha256_matches": true,
+    "draft_criteria_exactly_match_declaration": true,
+    "criteria_changed": false
+  },
+  "checked_core_source_sha256": {
+    "v4_environment.py": "41acc9970c579d30293782b95baf22b1c53730d33a6a64f4829d4d370f5ff17b",
+    "v4_scenarios.py": "6f022fa8c204d2874cb2ca4cbc63acd1f6322f80fa0c560e1e188ce4af1beeb7",
+    "v4_policy.py": "e0231e9dcd07c492794da828b54852c519b8ab53d305a414e2edfa0c733e3a12",
+    "v4_simulation.py": "18eca8025f89513d50190a5426ef552788686993a4f489060a78f3726de90966",
+    "v4_metrics.py": "fb32e94e3a246595225a35aa337954021ba6c3d99003a10028888834474b6e65",
+    "v4_agents.py": "ca22ebbeb43626fa3627612a384ac9a8a8009fe87e623727b46180322440b10f",
+    "run_v4.py": "e5de8d39bc54be05ca3593fc31e58fa61169b5666a16a7ca598ec164d58796ca",
+    "freeze_v4.py": "ef759110854c131bb158f90f83f0daa0f3a11b8ba33d2f055dca6f4e5dccb827",
+    "audit_v4.py": "a094ff949b48b63119c438aba7484fae804755406507faa3f529d3898b9d2548",
+    "test_v4.py": "48b5fbbd3642a1c0d70ffbdbb615bba98be2a560535ce7882d1774fb9d54b1e9",
+    "develop_v4.py": "28edc8c36fef748e8100a6741e5c5551b55e18bbc0457575c6acca174e3ba13c",
+    "evaluate_v4.py": "94d0cdc18e87fd2833b0e3f53a45dedfe9c58f741aa2e7f823db74929279acf5",
+    "test_v4_metrics.py": "fcd3126fa85e1a706ef348703530a534eb3982658530810f8aeaeaec58c99490"
+  },
+  "unit_test_evidence": {
+    "tests_run": 79,
+    "passed": true,
+    "all_recorded_test_source_hashes_still_match": true,
+    "report_sha256": "7582b797952ccb0fdc1497e9be0c45b8f66b2de5d39bcab247eb07ce270bc356"
+  },
+  "grid_execution_sources_unchanged_since_plan": true,
+  "behavioral_or_accounting_bugs_found": [],
+  "checks_passed": [
+    "Known transfer/startup/pipeline timing and integer projection match actual physics.",
+    "Source timestamps, common source-indexed noise and same-source effective resource normalization match actual adapter.",
+    "Controller receives measured observations and exact resource commands; no future truth arrays or terminal schedule.",
+    "Hold and candidate costs pay transit/startup through lost service; no duplicated arbitrary transition penalty.",
+    "Dropped work remains in demand deficit; retained queue plus pipeline governs physical clearance.",
+    "Bootstrap pairing, static-relative risk definition, acceptance signs and fixed margins match declaration.",
+    "Validation rejects configuration overrides and binds the selected configuration through freeze and worker inputs.",
+    "Current peak-service-queue prose correctly defines maximum-over-time SUM of service queues, excluding pipeline."
+  ],
+  "prose_issues_reported_to_root": [
+    {
+      "topic": "Idle recovery",
+      "prior_description": "Three consecutive empty observed end queues.",
+      "actual_behavior": "Three consecutive samples with total measured end queue <=10 work units.",
+      "resolution": "Root to clarify prose only; do not change controller."
+    },
+    {
+      "topic": "Pressure streak",
+      "prior_description": "Persistent observed queue growth.",
+      "actual_behavior": "Total measured queue must exceed10 and may decline by up to max(10 work units,2% of the previous measured queue) while extending the streak.",
+      "resolution": "Root to clarify near-flat/slightly-declining tolerance in prose only."
+    },
+    {
+      "topic": "Stale-anchor uncertainty",
+      "prior_description": "The busy anchor expires after eight minutes, with uncertainty widening.",
+      "actual_behavior": "Removing an old low anchor can narrow the interval; recent-evidence count and sensor lag separately widen the point-relative band.",
+      "verified_fixture": {
+        "lower_before_expiry": 59.5,
+        "lower_after_expiry": 135.0,
+        "upper_before_and_after": 225.0
+      },
+      "resolution": "Root to distinguish anchor removal from sparse/lagged uncertainty widening in prose only."
+    }
+  ],
+  "core_files_changed_by_review": false,
+  "reserved_validation_outcomes_generated_by_review": false,
+  "reserved_validation_outcomes_inspected_by_review": false,
+  "draft_sha256_at_recording": "c9c0a48e458cd977e34cc74838e249ae60fb99af5555da1e3d18f264872f65a7",
+  "historical_note": "Issues record the prose encountered during review. Root authorized pre-freeze prose-only clarifications; the current draft may already contain them."
+}

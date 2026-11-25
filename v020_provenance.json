@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "parent_bundle": {
+    "filename": "Adaptive_Nervous_System.zip",
+    "library_file_id": "libfile_bd8c74d40bb8819189e4d5a013ce273a",
+    "file_id": "file_00000000cf54820793ca4dd42ec00954",
+    "bytes": 145509,
+    "sha256": "f80c2123a67da6e87389e74b037fba3d801cea92454341cbf95c131688fc950d"
+  },
+  "upstream_provenance_file": "provenance.json",
+  "upstream_integrity_manifest": "source_checksums.sha256",
+  "frozen_validation_protocol": "capacity_protocol.json",
+  "added_capabilities": [
+    "Observation-only capacity estimation",
+    "ABC proposal veto with state commit only on acceptance",
+    "Separate capacity-model action selector using the existing catalog",
+    "Independent synthetic arrival families and paired held-out validation",
+    "Independent physical and observation-only controller replay"
+  ],
+  "original_core_modifications": false,
+  "data_kind": "Synthetic only; no real service telemetry or live resource control",
+  "report_date_bangkok": "2026-11-25"
+}

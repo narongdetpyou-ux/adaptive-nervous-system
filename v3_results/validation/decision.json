@@ -1,0 +1,260 @@
+{
+  "version": "0.3.0",
+  "split": "validation",
+  "candidate": "v3_full",
+  "acceptance_criteria_sha256": "49cc704a73d2b680a9d2c26632f79155720d02110825bbb814cb29cb758581ac",
+  "evaluation_scope": "fresh validation",
+  "primary": {
+    "condition": "lower endpoint of paired95% absolute mean-improvement CI >0",
+    "regime": "instant",
+    "baseline": "static",
+    "passed": true,
+    "absolute_improvement_ci95": [
+      5684.04162936343,
+      6960.097869362157
+    ],
+    "reduction_pct": 18.829715060353173,
+    "reduction_pct_ci95": [
+      16.999661694079624,
+      20.657395352613058
+    ]
+  },
+  "noninferiority": {
+    "condition": "lower endpoint of paired95% reduction_pct CI >=-5.0%",
+    "regime": "instant",
+    "baseline": "capacity_v2",
+    "engineering_margin_pct": 5.0,
+    "evaluation_mode": "Percentage lower interval endpoint >= negative declared engineering margin",
+    "passed": false,
+    "evaluated_lower_endpoint": -10.603763168038249,
+    "absolute_improvement_ci95": [
+      -2610.9951781483464,
+      -1729.8046027717558
+    ],
+    "reduction_pct": -8.596825718141268,
+    "reduction_pct_ci95": [
+      -10.603763168038249,
+      -6.770253109908267
+    ]
+  },
+  "advancement_checks": {
+    "primary_and_noninferiority": {
+      "condition": "Both the primary and noninferiority criteria pass",
+      "passed": false,
+      "primary_passed": true,
+      "noninferiority_passed": false
+    },
+    "surge_only_mean": {
+      "condition": "v3_full point mean backlog <= Static point mean backlog +1e-6",
+      "regime": "instant",
+      "group": "surge_only",
+      "candidate_mean_backlog": 749.1455705531381,
+      "static_mean_backlog": 749.1455705531381,
+      "allowed_numerical_tolerance": 1e-06,
+      "passed": true
+    },
+    "mean_vs_static_each_regime": {
+      "condition": "For every regime, the paired95% absolute mean-backlog improvement lower CI endpoint versus Static >0",
+      "regimes": {
+        "instant": {
+          "absolute_improvement_ci95": [
+            5684.04162936343,
+            6960.097869362157
+          ],
+          "reduction_pct": 18.829715060353173,
+          "passed": true
+        },
+        "transit_1": {
+          "absolute_improvement_ci95": [
+            4657.358483205616,
+            5960.968073473884
+          ],
+          "reduction_pct": 15.837090764330535,
+          "passed": true
+        },
+        "transit_3": {
+          "absolute_improvement_ci95": [
+            2319.6670054349443,
+            3703.4726729824197
+          ],
+          "reduction_pct": 8.90601678303052,
+          "passed": true
+        }
+      },
+      "passed": true,
+      "failed_regimes": []
+    },
+    "static_relative_cvar_each_regime": {
+      "condition": "For every regime, v3_full point CVaR90 of positive case mean-backlog harm relative to Static is strictly less than the corresponding capacity_v2 point CVaR90, or both CVaRs are zero within1e-6",
+      "regimes": {
+        "instant": {
+          "candidate_cvar90_vs_static": 5053.984501359421,
+          "v2_cvar90_vs_static": 2032.0008590180544,
+          "strict_reduction": false,
+          "both_numerically_zero": false,
+          "passed": false
+        },
+        "transit_1": {
+          "candidate_cvar90_vs_static": 7103.372119341161,
+          "v2_cvar90_vs_static": 2763.8755630836326,
+          "strict_reduction": false,
+          "both_numerically_zero": false,
+          "passed": false
+        },
+        "transit_3": {
+          "candidate_cvar90_vs_static": 13606.593130353682,
+          "v2_cvar90_vs_static": 6068.440321686041,
+          "strict_reduction": false,
+          "both_numerically_zero": false,
+          "passed": false
+        }
+      },
+      "passed": false,
+      "failed_regimes": [
+        "instant",
+        "transit_1",
+        "transit_3"
+      ]
+    },
+    "tail_auc_each_regime": {
+      "condition": "For every regime, v3_full point mean32-minute tail AUC <= capacity_v2 point mean tail AUC +1e-6",
+      "regimes": {
+        "instant": {
+          "metric": "tail_auc",
+          "candidate_mean": 254151.86812775536,
+          "v2_mean": 243085.4239788011,
+          "signed_excess": 11066.444148954266,
+          "allowed_numerical_tolerance": 1e-06,
+          "passed": false
+        },
+        "transit_1": {
+          "metric": "tail_auc",
+          "candidate_mean": 277050.10688355204,
+          "v2_mean": 257855.7746363382,
+          "signed_excess": 19194.33224721384,
+          "allowed_numerical_tolerance": 1e-06,
+          "passed": false
+        },
+        "transit_3": {
+          "metric": "tail_auc",
+          "candidate_mean": 378106.61552423093,
+          "v2_mean": 273731.635665929,
+          "signed_excess": 104374.97985830193,
+          "allowed_numerical_tolerance": 1e-06,
+          "passed": false
+        }
+      },
+      "passed": false,
+      "failed_regimes": [
+        "instant",
+        "transit_1",
+        "transit_3"
+      ]
+    },
+    "original_terminal_each_regime": {
+      "condition": "For every regime, v3_full point mean original-H end backlog <= capacity_v2 point mean original-H end backlog +1e-6",
+      "regimes": {
+        "instant": {
+          "metric": "end_backlog",
+          "candidate_mean": 23352.6356268628,
+          "v2_mean": 22666.448576852537,
+          "signed_excess": 686.1870500102632,
+          "allowed_numerical_tolerance": 1e-06,
+          "passed": false
+        },
+        "transit_1": {
+          "metric": "end_backlog",
+          "candidate_mean": 24448.999900970925,
+          "v2_mean": 23166.88175404975,
+          "signed_excess": 1282.1181469211733,
+          "allowed_numerical_tolerance": 1e-06,
+          "passed": false
+        },
+        "transit_3": {
+          "metric": "end_backlog",
+          "candidate_mean": 27882.880974395597,
+          "v2_mean": 24221.06926132693,
+          "signed_excess": 3661.811713068666,
+          "allowed_numerical_tolerance": 1e-06,
+          "passed": false
+        }
+      },
+      "passed": false,
+      "failed_regimes": [
+        "instant",
+        "transit_1",
+        "transit_3"
+      ]
+    },
+    "invariants_tests_underload": {
+      "condition": "All declared invariant checks and tests pass. Every v3_full generated_underload episode in every regime has zero backlog and no reallocation over original H and follow-up, within1e-6 for work/resource values",
+      "invariant_checks": {
+        "workflow_succeeded": true,
+        "summary_scope_matches_protocol": true,
+        "row_audit_matches_protocol": true,
+        "declared_scope_matches_protocol": true,
+        "mass_conservation": true,
+        "resource_conservation": true,
+        "prespecified_physical_replay_complete": true,
+        "statistics_check_recorded": true,
+        "retry_attempts_match": true,
+        "duplicate_job_reused": true,
+        "restart_preserves_attempts": true,
+        "restart_preserves_report": true,
+        "corrupt_output_rejected": true
+      },
+      "test_checks": {
+        "declared_modules": true,
+        "tests_ran": true,
+        "successful": true,
+        "no_failures_or_skips": true
+      },
+      "tests_run": 42,
+      "underload": {
+        "instant": {
+          "cases_checked": 32,
+          "expected_cases": 32,
+          "scope_complete": true,
+          "failed_cases": [],
+          "passed": true
+        },
+        "transit_1": {
+          "cases_checked": 32,
+          "expected_cases": 32,
+          "scope_complete": true,
+          "failed_cases": [],
+          "passed": true
+        },
+        "transit_3": {
+          "cases_checked": 32,
+          "expected_cases": 32,
+          "scope_complete": true,
+          "failed_cases": [],
+          "passed": true
+        }
+      },
+      "passed": true
+    }
+  },
+  "advancement_passed": false,
+  "failed_criteria": [
+    "primary_and_noninferiority",
+    "static_relative_cvar_each_regime",
+    "tail_auc_each_regime",
+    "original_terminal_each_regime"
+  ],
+  "decision": "does_not_meet_declared_engineering_conditions",
+  "scope": "Advancement supports broader experimentation only. It does not establish universal non-regression, deployment safety, statistical familywise coverage or a formal stability guarantee.",
+  "reporting": "Report each criterion separately, including every failed regime/family. An overall pass is an intersection of these declared engineering conditions; secondary intervals remain unadjusted.",
+  "interpretation": "A failed condition remains a failure; the rule is an intersection, not a vote. Development outcomes do not establish held-out success.",
+  "evaluation_metadata": {
+    "evaluator_file": "evaluate_v3.py",
+    "evaluator_sha256": "533b0ec4814eba86956b450b34085af035bddd7196eae3234a58795edec9932b",
+    "protocol_file": "v3_protocol.json",
+    "protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054",
+    "summary_sha256": "557c6316b1e21ba03029d7fc277f0774661d3bcb6cd647414f247444b92ea8bb",
+    "verification_sha256": "1818129f1b6866c5ece71a361564f5fb0906a84358aa3427dd51a3120a06e97a",
+    "tests_evidence_sha256": "737f10f9de6a879961810442cc9d16e60e31b6ccaa45434406196f7f37cc1dc5",
+    "frozen_experiment_verified": true
+  }
+}

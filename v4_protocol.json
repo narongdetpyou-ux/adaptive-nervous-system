@@ -1,0 +1,724 @@
+{
+  "version": "0.4.0",
+  "status": "frozen locally after known-case development and before new validation; no external registry",
+  "created_at_utc": "2026-11-25T06:10:24.498677+00:00",
+  "purpose": "Test a causal hybrid of balance-based recovery and finite stress-risk penalties against harmful inaction, while adding six nested realism regimes and preserving dropped-work accounting.",
+  "parent_v3_protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054",
+  "scenario_design": {
+    "families": "All eleven prior scenario families; preserve source slices and each family without outcome-based removal.",
+    "legacy_groups": [
+      "surge_only",
+      "ingress_slow",
+      "processing_slow",
+      "delivery_slow",
+      "shifting_bottleneck"
+    ],
+    "generated_groups": [
+      "generated_underload",
+      "generated_sustained_processing_fault",
+      "generated_switching_fault",
+      "generated_pulsed_short_fault",
+      "generated_asymmetric_recovery",
+      "generated_sustained_overload"
+    ],
+    "original_horizon": "60 minutes for legacy families; 96 minutes for generated families.",
+    "development": {
+      "seeds": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007
+      ],
+      "scenarios": 88,
+      "regime_count": 6,
+      "episodes": 3696,
+      "original_minutes": 294336,
+      "followup_minutes": 118272,
+      "total_minutes": 412608,
+      "status": "Known v0.3 validation cases now openly reused for development. All v0.3 outcomes are known evidence, not fresh validation."
+    },
+    "validation": {
+      "seeds": [
+        4000,
+        4001,
+        4002,
+        4003,
+        4004,
+        4005,
+        4006,
+        4007,
+        4008,
+        4009,
+        4010,
+        4011,
+        4012,
+        4013,
+        4014,
+        4015,
+        4016,
+        4017,
+        4018,
+        4019,
+        4020,
+        4021,
+        4022,
+        4023,
+        4024,
+        4025,
+        4026,
+        4027,
+        4028,
+        4029,
+        4030,
+        4031,
+        4032,
+        4033,
+        4034,
+        4035,
+        4036,
+        4037,
+        4038,
+        4039,
+        4040,
+        4041,
+        4042,
+        4043,
+        4044,
+        4045,
+        4046,
+        4047,
+        4048,
+        4049,
+        4050,
+        4051,
+        4052,
+        4053,
+        4054,
+        4055,
+        4056,
+        4057,
+        4058,
+        4059,
+        4060,
+        4061,
+        4062,
+        4063
+      ],
+      "scenarios": 704,
+      "regime_count": 6,
+      "episodes": 29568,
+      "original_minutes": 2354688,
+      "followup_minutes": 946176,
+      "total_minutes": 3300864,
+      "status": "Reserved seeds. No controller outcomes may be evaluated before final source/configuration freeze."
+    }
+  },
+  "nested_regimes": [
+    {
+      "name": "legacy_instant",
+      "addition": "Original fluid, same-minute serial service; zero resource transfer delay."
+    },
+    {
+      "name": "legacy_transit3",
+      "addition": "Resource transfer loses exactly three complete service intervals."
+    },
+    {
+      "name": "integer_transit3",
+      "addition": "Integer resource allocations by stable largest-remainder projection of raw catalogue targets; service and workload remain continuous fluid."
+    },
+    {
+      "name": "finite_pipeline",
+      "addition": "One full interval of forwarding between stages and finite stage buffers [60000,40000,40000]. Overflow is explicit dropped work, never erased from demand deficit."
+    },
+    {
+      "name": "startup",
+      "addition": "Incoming resource service at 50% and 75% during the first two active intervals after the three-interval transfer."
+    },
+    {
+      "name": "delayed_noisy",
+      "addition": "Sensor lag of two intervals and 5% lognormal multiplicative sensor noise. The exact packet timing, channel treatment and stochastic streams must be frozen before validation."
+    }
+  ],
+  "policies": [
+    "static",
+    "capacity_v2",
+    "capacity_balance",
+    "v3_full",
+    "v4_hybrid",
+    "v4_no_risk",
+    "v4_no_recovery"
+  ],
+  "policy_seeds": {
+    "static": [
+      null
+    ],
+    "capacity_v2": [
+      null
+    ],
+    "capacity_balance": [
+      null
+    ],
+    "v3_full": [
+      null
+    ],
+    "v4_hybrid": [
+      null
+    ],
+    "v4_no_risk": [
+      null
+    ],
+    "v4_no_recovery": [
+      null
+    ]
+  },
+  "controller_configuration": {
+    "nominal_rate": 200.0,
+    "warmup": 5,
+    "dwell": 8,
+    "lookahead": 16,
+    "minimum_staff": 10.0,
+    "saturated_update": 0.7,
+    "unsaturated_prior_reversion": 0.1,
+    "rate_lower_factor": 0.85,
+    "demand_spread": 0.2,
+    "arrival_window": 3,
+    "terminal_weight": 0.5,
+    "relative_gain": 0.01,
+    "absolute_gain": 10.0,
+    "worst_case_regression_fraction": 0.0,
+    "tolerance": 1e-07,
+    "risk_weight": 0.1,
+    "maximum_transfer": 20.0,
+    "evidence_window": 5,
+    "rate_band": 0.15,
+    "sparse_rate_band": 0.25,
+    "stale_anchor_minutes": 8,
+    "pressure_time_scale": 8.0,
+    "escape_floor": 0.25,
+    "idle_recovery_observations": 3,
+    "balance_preference_fraction": 0.1,
+    "stress_tail_fraction": 0.25
+  },
+  "policy_information_boundary": "Only the declared observation interface, known mechanics, resource commands and causal history are available. No true future arrivals/productivity, hidden scenario identity, validation outcome or offline static counterfactual is an online input. Censored flow is not treated as exact service capacity.",
+  "resource_model": {
+    "budget": 207,
+    "initial_allocation": [
+      69,
+      69,
+      69
+    ],
+    "minimum_staff": 10,
+    "warmup": 5,
+    "dwell": 8,
+    "catalogue": "Original frozen action catalogue, including hold; no overlapping transfers.",
+    "loss_units": "resource_minutes_lost counts pending resources only; startup_capacity_minutes_lost counts active minus effective resources. Keep original and follow-up totals separate, in resource-minutes, without monetary interpretation."
+  },
+  "followup": {
+    "minutes": 32,
+    "arrivals": 0,
+    "productivity": "Fixed at the last original-horizon true productivity row.",
+    "information": "The controller is not told original H or the future follow-up switch.",
+    "drainage": "Physical drainage uses retained queues plus in-flight work; permanent drops are not cleared jobs. A nonzero demand deficit caused by drops need not imply physical retained work remains."
+  },
+  "scoring": {
+    "per_minute_deficit": "D_t = cumulative offered work minus cumulative completed work = retained queued work + in-flight work + cumulative dropped work.",
+    "primary_case_metric": "M = mean of end-of-minute D_t over original H only; no normalization by completed or accepted work.",
+    "static_relative_harm": "h_p = max(M_p - M_static, 0) for the same scenario and realism regime.",
+    "cvar90": "R_p is the exact empirical mean over the largest 10% of h_p, with fractional mass at the boundary. Compare R_p values using the same paired bootstrap, not CVaR of candidate-minus-comparator harms.",
+    "required_loss_reporting": "Report original and follow-up offered/completed/dropped separately and full-run totals. A finite buffer cannot improve the score by discarding work.",
+    "endpoints": "Report original terminal deficit, follow-up deficit mean/AUC/end, retained queue and in-flight work, physical capped drainage time and censoring.",
+    "definitions": "mean_queue/end_queue/tail_end_queue include retained service queues plus forwarding pipeline. peak_service_queue_max_over_full_run is max_t of the SUM of service queues over original plus follow-up, excluding pipeline; end_inflight_work and tail_end_inflight_work are scalar pipeline sums."
+  },
+  "analysis": {
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 20261127,
+    "confidence_interval": 0.95,
+    "bootstrap": "Paired percentile resampling of scenario cases within each family; all policies use the same resampled indices. Regimes remain separate.",
+    "weighting": "Equal case weights with equal counts per family; this does not normalize workload scale.",
+    "regime_handling": "Six nested regimes analyzed separately, without pooling them into one headline effect or treating them as independent replications.",
+    "noninferiority": "Use the declared linear slack statistic 1.05*mean(baseline)-mean(candidate), including zero baselines; do not substitute a confidence interval for a different ratio statistic.",
+    "sources": "Report both legacy_flash and generated_synthetic slices and all eleven families.",
+    "interval_scope": "Conditional Monte Carlo uncertainty for the declared synthetic workload and mechanics; not real-system uncertainty, calibrated forecast confidence, or a deployment guarantee."
+  },
+  "acceptance_criteria": {
+    "status": "Declared and accepted by root before any v0.4 development outcomes; fixed throughout development and validation.",
+    "declared_at_utc": "2026-11-25T06:10:24.498677+00:00",
+    "candidate": "v4_hybrid",
+    "tolerance_absolute": 1e-06,
+    "primary": {
+      "regime": "delayed_noisy",
+      "baseline": "v3_full",
+      "metric": "static-relative positive-harm CVaR90 of original-H mean demand deficit",
+      "condition": "paired-bootstrap lower endpoint of the 95% CI for R_v3_full minus R_v4_hybrid is strictly greater than zero",
+      "point_when_both_zero": "This superiority criterion does not pass merely because both risks are zero."
+    },
+    "risk_point_nonworsening": {
+      "regimes": [
+        "legacy_instant",
+        "legacy_transit3",
+        "integer_transit3",
+        "finite_pipeline",
+        "startup",
+        "delayed_noisy"
+      ],
+      "baselines": [
+        "v3_full",
+        "capacity_v2",
+        "capacity_balance"
+      ],
+      "condition": "R_v4_hybrid <= R_baseline + tolerance_absolute in every regime for every listed baseline",
+      "scope": "Engineering point checks, not statistical tail-risk noninferiority claims; no positive risk margin."
+    },
+    "mean_noninferiority": {
+      "regimes": [
+        "legacy_instant",
+        "legacy_transit3",
+        "integer_transit3",
+        "finite_pipeline",
+        "startup",
+        "delayed_noisy"
+      ],
+      "baselines": [
+        "capacity_v2",
+        "capacity_balance"
+      ],
+      "margin_fraction": 0.05,
+      "statistic": "1.05 * mean(M_baseline) - mean(M_v4_hybrid)",
+      "condition": "paired-bootstrap lower endpoint of the 95% CI for the statistic is >= 0 in every regime for each baseline, within tolerance_absolute",
+      "scope": "The same candidate is compared separately with both fixed baselines; do not choose the empirically best baseline after outcomes."
+    },
+    "loss_and_endpoint_point_nonworsening": {
+      "regimes": [
+        "legacy_instant",
+        "legacy_transit3",
+        "integer_transit3",
+        "finite_pipeline",
+        "startup",
+        "delayed_noisy"
+      ],
+      "baselines": [
+        "capacity_v2",
+        "capacity_balance"
+      ],
+      "metrics": [
+        "total_dropped",
+        "end_deficit",
+        "tail_auc_deficit"
+      ],
+      "condition": "candidate point mean <= baseline point mean + tolerance_absolute in each regime, for each metric and baseline",
+      "metric_scopes": {
+        "total_dropped": "all original H plus the fixed 32-minute follow-up",
+        "end_deficit": "original-H terminal offered minus completed",
+        "tail_auc_deficit": "sum of offered-minus-completed deficit over the fixed 32 follow-up minutes"
+      }
+    },
+    "integrity": {
+      "condition": "All required unit tests, frozen identities, full episode accounting, source/sensor/observation boundary audit, paired scope checks, and independent representative replay checks pass."
+    },
+    "underload": {
+      "group": "generated_underload",
+      "policy": "v4_hybrid",
+      "condition": "Every underload case in every regime has zero dropped work and zero moves over original H plus follow-up, within tolerance_absolute",
+      "scope": "Retained work, pipeline work and demand deficit may be positive due to declared flow timing; zero backlog is not required."
+    },
+    "advancement": "Every primary, risk point, mean noninferiority, loss/endpoint, integrity and underload condition must pass. Report every failed condition. Criteria cannot be relaxed using development or validation outcomes.",
+    "inference_scope": "One predeclared primary CVaR comparison in the final realism regime. The global decision also uses the listed engineering intersection and mean-noninferiority checks. Secondary, source, family and ablation intervals are descriptive and unadjusted; no universal safety or deployment claim."
+  },
+  "no_tuning": "Freeze controller/environment/metrics/evaluator/configuration/manifest/source hashes before reserved outcomes. No acceptance change during development or validation. Any post-validation change requires a new version and new held-out design.",
+  "development_grid": {
+    "declared_before_any_v4_development_outcomes": true,
+    "recorded_at_utc": "2026-11-25T06:13:34.596931+00:00",
+    "grid": {
+      "stress_penalty_weight": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "maximum_total_transfer": [
+        20,
+        30
+      ]
+    },
+    "candidates": 6,
+    "fixed_configuration": {
+      "lookahead": 16,
+      "terminal_weight": 0.5,
+      "minimum_staff": 10,
+      "dwell": 8,
+      "warmup": 5,
+      "balance_arbitration_tolerance": 0.1,
+      "stale_busy_anchor_expiry_minutes": 8,
+      "busy_observation_window": 5,
+      "recovery_factor_floor": 0.25,
+      "idle_empty_observations": 3,
+      "idle_stress_cost_increase_limit": 10
+    },
+    "selection_scope": "All 88 known development scenarios in all six regimes. Retain outcomes for every grid member; no fresh-seed outcome is available to selection.",
+    "lexicographic_ranking": [
+      "Count of point-mean margin violations across 6 regimes and both capacity_v2/capacity_balance: mean_hybrid > 1.05*mean_baseline + 1e-6.",
+      "Maximum over 6 regimes of R_hybrid / max(min(R_v3_full,R_capacity_v2,R_capacity_balance),1 work unit).",
+      "Sum over the 6 regimes of R_hybrid.",
+      "Mean original-H moves across all known cases and regimes.",
+      "Ascending stress_penalty_weight, then ascending maximum_total_transfer."
+    ],
+    "scope_warning": "This cross-regime ordering and one-unit denominator floor are development selection rules only, never pooled headline effects, calibrated losses or validation acceptance rules.",
+    "bootstrap": "Point outcomes suffice for the fixed selection ordering. The selected development candidate and validation summary use the frozen 2000-draw analysis."
+  },
+  "controller_semantics": {
+    "status": "Specified before development outcomes; final selected grid values and implementation hashes remain pending freeze.",
+    "state": "One shared estimator/history/resource command state and one dwell clock; do not hot-switch independently advancing stateful controllers.",
+    "forecasts": "Sixteen steps; nine base design forecasts and 24 independent stage-rate stress corners. Known transfer/startup/pipeline mechanics are predicted. Engineering scenarios are not calibrated probability samples.",
+    "score": "Mean base-nine cost improvement versus hold minus lambda times the upper-quartile mean of positive stress-corner regret. Forecast cost is mean predicted deficit plus 0.5 times terminal deficit; there is no separate terminal hard veto.",
+    "hurdle": "max(10 work units,0.01*mean recent observed arrival), with the declared recovery attenuation when applicable; it is tied to flow, not backlog stock.",
+    "catalogue": "Evaluate the complete legal original catalogue subject to a declared maximum total transfer of20 or30 resource units per move, defined as the sum of positive deltas. Both raw and integer-projected applied deltas must satisfy the cap. Explicitly evaluate the inverse-estimated-rate capacity-balance proposal among legal capped candidates.",
+    "arbitration": "Prefer the balance-directed proposal when its positive adjusted gain is at least 90% of the best positive adjusted gain and clears the applicable hurdle.",
+    "stale_observations": "The previous busy-rate lower anchor expires after eight source minutes. Removing a stale low anchor can narrow the interval. Sparse evidence and sensor lag separately widen the point-relative band. Recent evidence uses a five-observation window. Prior reversion remains an explicit estimator assumption, not observed recovery.",
+    "pressure_recovery": "For persistent observed pressure with total end queue above10 work units and target-allocation imbalance of at least5 resource units (half L1 distance), multiply both the risk weight and hurdle by max(0.25,1/(1+pressure_streak/8)). The streak permits a decline of at most max(10 work units,2% of the previous observed queue), so it includes nearly flat or slightly declining queues. Physical constraints are unchanged.",
+    "idle_recovery": "After three consecutive delivered end-queue observations with total measured queue <=10 work units, allow a balance-directed move only if the mean cost across the nine base forecasts does not increase and none of all33 forecasts increases cost by more than10 work units. This permits a model-neutral return under low observed queue pressure without requiring strictly positive gain.",
+    "v4_no_risk": "Only the stress-score penalty weight is set to zero; physical constraints and idle-recovery checks remain.",
+    "v4_no_recovery": "Both pressure-recovery attenuation and idle-rebalance recovery are disabled. This is a combined recovery ablation, not an isolation of one component.",
+    "hard_constraints": "Keep resource budget, reserve, catalogue, warmup, dwell, and physical movement timing hard. A model stress test is not a formal safety proof."
+  },
+  "research_basis": [
+    {
+      "title": "Adaptive Policies for Scheduling with Reconfiguration Delay: An End-to-End Solution for All-Optical Data Centers",
+      "authors": "Chang-Heng Wang and Tara Javidi",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1511.03417",
+      "doi": "10.1109/TNET.2016.2644617",
+      "relevance": "Motivates candidate-versus-current improvement thresholds that account for reconfiguration overhead. Its network stability theorem is not asserted for this ANS model."
+    },
+    {
+      "title": "Delay-Optimal Scheduling for Queueing Systems with Switching Overhead",
+      "authors": "Ping-Chun Hsieh, I-Hong Hou and Xi Liu",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1701.03831",
+      "relevance": "Motivates modeling lost service during switching and a controlled bias toward the current allocation. Its parallel-queue assumptions and guarantees do not establish ANS performance."
+    },
+    {
+      "title": "Linear robust adaptive model predictive control: Computational complexity and conservatism",
+      "authors": "Johannes Koehler, Elisa Andina, Raffaele Soloperto, Matthias A. Mueller and Frank Allgoewer",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/1909.01813",
+      "relevance": "Motivates separating point-estimate performance from uncertainty handling and using recent observations. ANS stress weights are uncalibrated engineering choices, not this paper's robust constraint guarantee."
+    }
+  ],
+  "frozen_at_utc": "2026-11-25T06:34:09.966846+00:00",
+  "selected_configuration_sha256": "46f76f0b38f66058d4c8be557a446252f3a93c44178dfbd58fb71e184bb89b11",
+  "implementation_sha256": {
+    "v4_environment.py": "41acc9970c579d30293782b95baf22b1c53730d33a6a64f4829d4d370f5ff17b",
+    "v4_scenarios.py": "6f022fa8c204d2874cb2ca4cbc63acd1f6322f80fa0c560e1e188ce4af1beeb7",
+    "v4_policy.py": "e0231e9dcd07c492794da828b54852c519b8ab53d305a414e2edfa0c733e3a12",
+    "v4_simulation.py": "18eca8025f89513d50190a5426ef552788686993a4f489060a78f3726de90966",
+    "v4_metrics.py": "fb32e94e3a246595225a35aa337954021ba6c3d99003a10028888834474b6e65",
+    "v4_agents.py": "ca22ebbeb43626fa3627612a384ac9a8a8009fe87e623727b46180322440b10f",
+    "run_v4.py": "e5de8d39bc54be05ca3593fc31e58fa61169b5666a16a7ca598ec164d58796ca",
+    "freeze_v4.py": "ef759110854c131bb158f90f83f0daa0f3a11b8ba33d2f055dca6f4e5dccb827",
+    "audit_v4.py": "a094ff949b48b63119c438aba7484fae804755406507faa3f529d3898b9d2548",
+    "test_v4.py": "48b5fbbd3642a1c0d70ffbdbb615bba98be2a560535ce7882d1774fb9d54b1e9",
+    "develop_v4.py": "28edc8c36fef748e8100a6741e5c5551b55e18bbc0457575c6acca174e3ba13c",
+    "evaluate_v4.py": "94d0cdc18e87fd2833b0e3f53a45dedfe9c58f741aa2e7f823db74929279acf5",
+    "diagnose_v3.py": "5cbb1f8487ca87c1cb08467abae686b162371d5f11089cbb0d99867a31c98980",
+    "test_v4_metrics.py": "fcd3126fa85e1a706ef348703530a534eb3982658530810f8aeaeaec58c99490",
+    "v4_selected_config.json": "46f76f0b38f66058d4c8be557a446252f3a93c44178dfbd58fb71e184bb89b11",
+    "v4_protocol_draft.json": "02fe892366fa8f3acb51e844c7bd06f2fc111f83ebc3cb4a17357327654229c3",
+    "v4_acceptance_predeclared.json": "1105442baf50d0cee923c671ebc2c024d3e8697e90e280843fbdffdd005fb6ef",
+    "v4_acceptance_predeclared.sha256": "f406a05afc80d09b936117fdffdffb1f1d4bf285ed95b0e98d2f5f18b4115247",
+    "V4_DEVELOPMENT_NOTES.md": "16fa1b175e0579f030780e163da9f28fa5893e1f6d2cc81832a9c75fb2505d52"
+  },
+  "acceptance_declaration_sha256": "1105442baf50d0cee923c671ebc2c024d3e8697e90e280843fbdffdd005fb6ef",
+  "parent_v3_verification": {
+    "protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054",
+    "implementation_sha256": {
+      "v3_policy.py": "147b44efed5bd71d04d45c0d4d832552c5b5f0698e8d9f03dd21f12d6c488d0b",
+      "v3_simulation.py": "16e8f5241aca6fdf74c9356e30508012efcee106f0f140fb315aec13a557500a",
+      "v3_scenarios.py": "35dc4d8437aef5c7fe241b797aa76850e083c3d9d09b32846938f53b1b39d8a9",
+      "v3_metrics.py": "8014489c86035ee99ad3d6bd32580fd4df34088a8580c0d0394146422738d11b",
+      "v3_agents.py": "a836bc9a8ef35ae579b6bff0d3a36555d09f759018ff9dc3b495cb4a5e38c4eb",
+      "run_v3.py": "00d98669523323b6ce033d89cd51802956dae9eca724a9a1ebaa6b91e227ef66",
+      "freeze_v3.py": "ed6248726af3343a7953e77a2a5a330df3c5abca894b8096e9f073d43de73f06",
+      "audit_v3.py": "cd8ad97fa67d96c5387cef83e5c6fe2fb43fabbafac9844b394e99b66b7d20b6",
+      "test_v3.py": "31a24a94914f4d086126391ae947f24042d0ba5e6b50dc2c3d094c45fc667bdf",
+      "diagnose_v2.py": "89fa102b821c1cf80c8a4b08b6656d64ef22a8fe2dca929fcc5058ee920efc72",
+      "v3_protocol_draft.json": "21fd6d6f8d27adedde1640085c391d166e28527c385503a62901b0aca7c8f20d"
+    },
+    "parent_v2_verification": {
+      "protocol_sha256": "94eb90191ec2bb6b58b20760f8ad355f6ade41f3806558d8adfe888cb67519a9",
+      "implementation_sha256": {
+        "capacity_policy.py": "5eb6fd45cfd0527dc5b50a99bf981693732db72888239558ce445ff3bcdfbb77",
+        "capacity_simulation.py": "716c3a201a3201175981be8ad37db40ca20994c186e7063f564d9ae73f1763c2",
+        "capacity_scenarios.py": "218d74c2e35cd721b94ed33a1a69e2340289e410f79307199afb7577d6abc6aa",
+        "capacity_metrics.py": "32456344e3f624c1c98cd008cc424e878296bc6bc41b27bd974c11aacd13b286",
+        "capacity_agents.py": "31e7d748f83a20a86b36c7c4da65a49722f8e823daaca9f27c751365676c0f30",
+        "run_capacity.py": "1c956cdc0eeeb709ef4cb71e9614b6a2e1fd330cff90e417f5dee3a402745589",
+        "audit_capacity.py": "e8010171ede21ceb31806e5cbb5a8e5026461c832f7f73024100490110f37cc8",
+        "test_capacity.py": "92df2d927392760b7638fdd0295e4fbe93d7ddd0ac1c80cea2d033d92f890352",
+        "freeze_capacity.py": "14152ef2ca026b967cc916f07be0f9d4e693477411c85bd03963d79e819471ff",
+        "simulation.py": "644b4541f7d3ffcab438b0436c9504d46dce461447b923eb10b38234e0bffe5d",
+        "protocol.json": "6e370a01ea1f9f7e652b08bc1a9be5e749faf90338e7de00bd18ac7250529e92",
+        "protocol.sha256": "c746b75cf5eba79bea075c353c430590d797be5854560b696225dac72d2cd9a6",
+        "source_checksums.sha256": "e4f81af5760fe4b8e54b550cb135166c3b629a9bc0bedb8842455196097c38b3",
+        "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7"
+      },
+      "upstream_sha256": {
+        "neuron_flow/__init__.py": "62ef7b355ba00e0a986c51451b252eb3448678b527fa0bc3bfdcf93d2dd81d6f",
+        "neuron_flow/agents.py": "15eab79daba253d8c34c52ed1b39f943ae6e5d08e58564b29f62f4cddf754fa4",
+        "neuron_flow/engine.py": "621e7f45de72831ee53e855cb39831759545369540310e70504c1bd088dc14a9",
+        "neuron_flow/model.py": "e2cf7ce942d3e3a2bd029da5e1f5d049c4861041ccc5741a45dc4727f2d72134",
+        "neuron_flow/storage.py": "59a3f3ed143cf330d74dabc037994c917cb02e594f9e3e2ce84162d06ed87558",
+        "abc_service/__init__.py": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41",
+        "abc_service/frozen.py": "0df444936e90b016e84dfabc9fb30011d76fe591db758d63a35de9f313bb9ea3",
+        "abc_service/_frozen/experiment.py": "83aa8b68b2f68ab83a26ff56a651332878d5355bfff0a7aee985f72b05090342",
+        "abc_service/_frozen/original/ABC.H.txt": "f8a50611ba65a935c2b0079241df3d7f90a0ef7746c647d88d0feb293e33af00",
+        "abc_service/_frozen/action_catalog.json": "a36d6614f1c7af608451e75974c1df23ed68f78f4b098c5badb487a8dafc03eb",
+        "data/load_test_summary_per_minute.csv": "0120255045744fc79008d22e81f72d1e15e28ed0fda81760683119002800f253"
+      },
+      "validation_manifest_sha256": "b5ce7c420fa560b0fbaaee4cfda79af0081734836bb843bfd65937bdf7cd6c1f"
+    },
+    "validation_manifest_sha256": "99c9d2e68e109df1b1b2a63d467ffe151fb141d50258fb59cf5b6d22ce07a49a"
+  },
+  "regime_configurations": {
+    "legacy_instant": {
+      "name": "legacy_instant",
+      "transit_delay": 0,
+      "integer_resources": false,
+      "same_minute_forwarding": true,
+      "buffer_capacities": [
+        null,
+        null,
+        null
+      ],
+      "startup_factors": [],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "legacy_transit3": {
+      "name": "legacy_transit3",
+      "transit_delay": 3,
+      "integer_resources": false,
+      "same_minute_forwarding": true,
+      "buffer_capacities": [
+        null,
+        null,
+        null
+      ],
+      "startup_factors": [],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "integer_transit3": {
+      "name": "integer_transit3",
+      "transit_delay": 3,
+      "integer_resources": true,
+      "same_minute_forwarding": true,
+      "buffer_capacities": [
+        null,
+        null,
+        null
+      ],
+      "startup_factors": [],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "finite_pipeline": {
+      "name": "finite_pipeline",
+      "transit_delay": 3,
+      "integer_resources": true,
+      "same_minute_forwarding": false,
+      "buffer_capacities": [
+        60000.0,
+        40000.0,
+        40000.0
+      ],
+      "startup_factors": [],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "startup": {
+      "name": "startup",
+      "transit_delay": 3,
+      "integer_resources": true,
+      "same_minute_forwarding": false,
+      "buffer_capacities": [
+        60000.0,
+        40000.0,
+        40000.0
+      ],
+      "startup_factors": [
+        0.5,
+        0.75
+      ],
+      "sensor_lag": 0,
+      "sensor_noise_sigma": 0.0,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    },
+    "delayed_noisy": {
+      "name": "delayed_noisy",
+      "transit_delay": 3,
+      "integer_resources": true,
+      "same_minute_forwarding": false,
+      "buffer_capacities": [
+        60000.0,
+        40000.0,
+        40000.0
+      ],
+      "startup_factors": [
+        0.5,
+        0.75
+      ],
+      "sensor_lag": 2,
+      "sensor_noise_sigma": 0.05,
+      "budget": 207.0,
+      "minimum_staff": 10.0,
+      "warmup_minutes": 5,
+      "dwell_minutes": 8
+    }
+  },
+  "policy_names": [
+    "static",
+    "capacity_v2",
+    "capacity_balance",
+    "v3_full",
+    "v4_hybrid",
+    "v4_no_risk",
+    "v4_no_recovery"
+  ],
+  "split_seeds": {
+    "development": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007
+    ],
+    "validation": [
+      4000,
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010,
+      4011,
+      4012,
+      4013,
+      4014,
+      4015,
+      4016,
+      4017,
+      4018,
+      4019,
+      4020,
+      4021,
+      4022,
+      4023,
+      4024,
+      4025,
+      4026,
+      4027,
+      4028,
+      4029,
+      4030,
+      4031,
+      4032,
+      4033,
+      4034,
+      4035,
+      4036,
+      4037,
+      4038,
+      4039,
+      4040,
+      4041,
+      4042,
+      4043,
+      4044,
+      4045,
+      4046,
+      4047,
+      4048,
+      4049,
+      4050,
+      4051,
+      4052,
+      4053,
+      4054,
+      4055,
+      4056,
+      4057,
+      4058,
+      4059,
+      4060,
+      4061,
+      4062,
+      4063
+    ]
+  },
+  "validation_manifest_sha256": "25ed806e4886384f171b95bfeb61d727802d19721a6267f51855129bce60eb3c",
+  "development_manifest_sha256": "c07ce8234f6b69ff7a449678ade216334e2f111578530d9c8697b9a17427a0a6",
+  "expected_development_scope": {
+    "scenarios": 88,
+    "groups": 11,
+    "seeds_per_group": 8,
+    "regimes": 6,
+    "scenario_regime_pairs": 528,
+    "policy_draws_per_case": 7,
+    "episodes": 3696,
+    "original_minutes": 294336,
+    "followup_minutes": 118272,
+    "total_minutes": 412608
+  },
+  "expected_validation_scope": {
+    "scenarios": 704,
+    "groups": 11,
+    "seeds_per_group": 64,
+    "regimes": 6,
+    "scenario_regime_pairs": 4224,
+    "policy_draws_per_case": 7,
+    "episodes": 29568,
+    "original_minutes": 2354688,
+    "followup_minutes": 946176,
+    "total_minutes": 3300864
+  },
+  "representative_selection": "First scenario seed in every family, for every deterministic policy and each of six regimes; 462 complete traces and 51576 original-plus-followup minutes selected before outcomes.",
+  "workflow": "Original Neuron Flow runtime; 42 regime/policy evaluation steps with three workers and a comparison join; descriptor-only artifact exchange; first-attempt legacy_instant/v4_hybrid transient failure before policy computation; restart/duplicate reuse; separate completed+1 static corruption rejected with dependent branch blocked and independent branch successful.",
+  "boundary": "Policy inputs contain current commanded resources and timestamped observations; declared sensor lag and startup use historical same-source effective resources. True environment arrays, common future noise and terminal schedule remain outside the controller.",
+  "no_tuning_rule": "No controller, configuration, generator, sensor, metric or acceptance changes after inspecting validation outcomes. A subsequent change is a new experiment.",
+  "known_development_evidence_sha256": {
+    "v4_results/diagnosis/diagnosis.json": "cdfc02108e41b423fa0f95988be0673dd99723a09a25883af2255c50ef51c7ee",
+    "v4_results/development_grid/selection.json": "256efb10b99ac3fe01db51b2af23deaf92a36afb1e9e3b0e267ed2a560c2aeaf",
+    "v4_results/development/summary.json": "f980afb10b574930f1ff0195909682038c8dd8954e3d069af5ef170daf8ff2cb",
+    "v4_results/development/verification.json": "b8afe8f7bef70129ba6963cdabccb9dc4c1a76a9e50f54b0d3845d1f8195bac8",
+    "V4_DIAGNOSIS_NOTES.md": "85612c0879b74cfc5eb915549c12a4f767d76b9acdbab752d4f8ad32b3a494c2"
+  }
+}

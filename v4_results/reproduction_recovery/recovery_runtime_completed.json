@@ -1,0 +1,89 @@
+{
+  "status": "SUCCEEDED",
+  "job_id": "v4_validation",
+  "interruption_cause": "unknown",
+  "accepted_evaluations_preserved": 41,
+  "accepted_artifact_files_preserved": 123,
+  "completed_step_outputs_and_attempts_preserved": true,
+  "accepted_artifact_hashes_sizes_and_mtimes_preserved": true,
+  "interrupted_step": "delayed_noisy__v4_no_recovery",
+  "interrupted_attempt": 1,
+  "recovered_attempt": 2,
+  "controller_interrupted_events": [
+    {
+      "sequence": 88,
+      "event_id": "v4_validation:delayed_noisy__v4_no_recovery:1:RETRY_WAIT",
+      "job_id": "v4_validation",
+      "step_id": "delayed_noisy__v4_no_recovery",
+      "kind": "step.retry_wait",
+      "audience": [
+        "soma",
+        "monitor",
+        "step:comparison"
+      ],
+      "payload": {
+        "attempt": 1,
+        "error": {
+          "message": "Previous controller stopped during this attempt",
+          "type": "ControllerInterrupted"
+        }
+      },
+      "timestamp": 1795592193.7598255
+    }
+  ],
+  "actual_attempts": {
+    "legacy_instant__static": 1,
+    "legacy_instant__capacity_v2": 1,
+    "legacy_instant__capacity_balance": 1,
+    "legacy_instant__v3_full": 1,
+    "legacy_instant__v4_hybrid": 2,
+    "legacy_instant__v4_no_risk": 1,
+    "legacy_instant__v4_no_recovery": 1,
+    "legacy_transit3__static": 1,
+    "legacy_transit3__capacity_v2": 1,
+    "legacy_transit3__capacity_balance": 1,
+    "legacy_transit3__v3_full": 1,
+    "legacy_transit3__v4_hybrid": 1,
+    "legacy_transit3__v4_no_risk": 1,
+    "legacy_transit3__v4_no_recovery": 1,
+    "integer_transit3__static": 1,
+    "integer_transit3__capacity_v2": 1,
+    "integer_transit3__capacity_balance": 1,
+    "integer_transit3__v3_full": 1,
+    "integer_transit3__v4_hybrid": 1,
+    "integer_transit3__v4_no_risk": 1,
+    "integer_transit3__v4_no_recovery": 1,
+    "finite_pipeline__static": 1,
+    "finite_pipeline__capacity_v2": 1,
+    "finite_pipeline__capacity_balance": 1,
+    "finite_pipeline__v3_full": 1,
+    "finite_pipeline__v4_hybrid": 1,
+    "finite_pipeline__v4_no_risk": 1,
+    "finite_pipeline__v4_no_recovery": 1,
+    "startup__static": 1,
+    "startup__capacity_v2": 1,
+    "startup__capacity_balance": 1,
+    "startup__v3_full": 1,
+    "startup__v4_hybrid": 1,
+    "startup__v4_no_risk": 1,
+    "startup__v4_no_recovery": 1,
+    "delayed_noisy__static": 1,
+    "delayed_noisy__capacity_v2": 1,
+    "delayed_noisy__capacity_balance": 1,
+    "delayed_noisy__v3_full": 1,
+    "delayed_noisy__v4_hybrid": 1,
+    "delayed_noisy__v4_no_risk": 1,
+    "delayed_noisy__v4_no_recovery": 2,
+    "comparison": 1
+  },
+  "recovery_session_peak_workers": 1,
+  "recovery_elapsed_seconds": 369.41,
+  "timing_scope": "Recovery session only; original total wall time and interruption cause are not inferred.",
+  "receipt": {
+    "bytes": 49045,
+    "path": "/workspace/scratch/faa307b55489/ANS_v040_reproduction_run/workspace/reports/v4_validation.json",
+    "sha256": "f1d2d0e845083505a0c18cf31a629fea6dc6cd554845a392ca6d981616171176"
+  },
+  "helper_sha256": "c5a48fc1fce521ef137c1089bafe78ceaa83e05607cf77d50ccc6e4498fe418b",
+  "finalization_status": "not yet run; finalize_v4_recovery.py will perform truthful post-run checks"
+}

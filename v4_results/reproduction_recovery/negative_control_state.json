@@ -1,0 +1,48 @@
+{
+  "job_id": "v4_negative_validation",
+  "status": "FAILED",
+  "receipt": {
+    "bytes": 431,
+    "path": "/workspace/scratch/faa307b55489/ANS_v040_reproduction_run/workspace/reports/v4_negative_validation.json",
+    "sha256": "3ca0117ebfb2b6087d9badf5d36c58f4a5b473f34b730be728d3460d970eed1c"
+  },
+  "delivery_error": null,
+  "steps": {
+    "bad": {
+      "job_id": "v4_negative_validation",
+      "id": "bad",
+      "status": "FAILED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": null,
+      "error": {
+        "message": "Row accounting failed: total_completed",
+        "type": "OutputValidationError"
+      }
+    },
+    "independent": {
+      "job_id": "v4_negative_validation",
+      "id": "independent",
+      "status": "SUCCEEDED",
+      "attempts": 1,
+      "ready_at": 0.0,
+      "output": {
+        "ok": true
+      },
+      "error": null
+    },
+    "blocked": {
+      "job_id": "v4_negative_validation",
+      "id": "blocked",
+      "status": "BLOCKED",
+      "attempts": 0,
+      "ready_at": 0.0,
+      "output": null,
+      "error": {
+        "message": "A required step did not succeed",
+        "type": "DependencyFailed"
+      }
+    }
+  },
+  "peak_workers": 2
+}

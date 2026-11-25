@@ -1,0 +1,4227 @@
+{
+  "scope": "offline diagnosis of the already-known v0.2 validation set; development evidence for v0.3",
+  "causal_boundary": "actual future rates and arrivals are evaluator-only; local hold counterfactual covers one locked dwell and does not identify full-episode causal effect",
+  "counterfactual": "same observed current queue and actual future environment; compare current allocation held with recorded applied allocation held; no subsequent actions within window",
+  "cost": "mean total end-minute backlog over dwell plus 0.25 times terminal backlog; truncated final windows flagged and excluded from prediction-error summaries",
+  "arrival_error_definition": "recorded constant forecast minus actual mean of subsequent minutes; current known arrival excluded",
+  "rate_error_definition": "recorded point estimate before decision minus actual mean productivity over the evaluated dwell",
+  "flag_limit": "flags overlap and are descriptive; they do not prove a unique mechanism or identify the contribution of each error",
+  "episodes_reproduced": 176,
+  "episode_rows_exact_match": true,
+  "minutes_independently_replayed": 14016,
+  "mean_backlog_regressions_vs_static": 20,
+  "terminal_regressions_vs_static": 8,
+  "all_moves": {
+    "moves": 761,
+    "full_dwell_moves": 752,
+    "truncated_moves": 9,
+    "local_harmful_moves": 99,
+    "local_neutral_moves": 58,
+    "local_beneficial_moves": 595,
+    "local_harm_fraction": 0.13164893617021275,
+    "mean_predicted_gain": 7184.098971071283,
+    "mean_realized_local_gain": 5816.948797373379,
+    "harmful_move_flags": {
+      "future_mean_demand_below_low_forecast": 11,
+      "donor_rate_overestimated_by_over_15pct": 45,
+      "recipient_rate_underestimated_by_over_15pct": 21,
+      "donor_queue_mean_increased": 99,
+      "recipient_at_most_one_saturated_observation": 40
+    },
+    "worst_local_losses": [
+      {
+        "group": "generated_sustained_processing_fault",
+        "scenario_seed": 1004,
+        "t": 49,
+        "delta": [
+          30.0,
+          -30.0,
+          0.0
+        ],
+        "predicted_mean_gain": 721.9532388435447,
+        "predicted_worst_gain": 35.98418964515986,
+        "actual_gain": -14288.08456464399,
+        "forecast_demand": 10629.333333333334,
+        "actual_future_demand_mean": 10123.142857142857,
+        "estimated_rates": [
+          194.90489350157029,
+          182.97084068249478,
+          200.0
+        ],
+        "actual_mean_rates": [
+          206.20451087707477,
+          127.594557819818,
+          221.35005180928346
+        ],
+        "saturated_observations_before_move": [
+          1,
+          12,
+          0
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1001,
+        "t": 54,
+        "delta": [
+          -5.0,
+          -15.0,
+          20.0
+        ],
+        "predicted_mean_gain": 9637.22192619765,
+        "predicted_worst_gain": 649.5590127996984,
+        "actual_gain": -7319.832735019794,
+        "forecast_demand": 20489.333333333332,
+        "actual_future_demand_mean": 20236.285714285714,
+        "estimated_rates": [
+          205.55336604930338,
+          211.12653016165194,
+          130.31309951986034
+        ],
+        "actual_mean_rates": [
+          201.89629042967437,
+          203.43094453088426,
+          184.5004546602271
+        ],
+        "saturated_observations_before_move": [
+          44,
+          39,
+          33
+        ]
+      },
+      {
+        "group": "surge_only",
+        "scenario_seed": 1013,
+        "t": 11,
+        "delta": [
+          -7.0,
+          0.0,
+          7.0
+        ],
+        "predicted_mean_gain": 2897.586629507191,
+        "predicted_worst_gain": 1233.0187681353154,
+        "actual_gain": -7027.546947272738,
+        "forecast_demand": 13575.666666666666,
+        "actual_future_demand_mean": 12962.42857142857,
+        "estimated_rates": [
+          216.32439742653725,
+          188.4339662337953,
+          180.82447356172727
+        ],
+        "actual_mean_rates": [
+          200.0620463797179,
+          202.0452178286057,
+          205.57832359645542
+        ],
+        "saturated_observations_before_move": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "group": "generated_asymmetric_recovery",
+        "scenario_seed": 1008,
+        "t": 32,
+        "delta": [
+          -5.0,
+          20.0,
+          -15.0
+        ],
+        "predicted_mean_gain": 9111.832352265586,
+        "predicted_worst_gain": 2049.5588838942294,
+        "actual_gain": -6416.13361803778,
+        "forecast_demand": 9417.0,
+        "actual_future_demand_mean": 9531.42857142857,
+        "estimated_rates": [
+          200.0,
+          137.00250351489456,
+          156.9868202503361
+        ],
+        "actual_mean_rates": [
+          250.84129478239774,
+          148.3624738263656,
+          121.8653274086881
+        ],
+        "saturated_observations_before_move": [
+          0,
+          10,
+          7
+        ]
+      },
+      {
+        "group": "generated_asymmetric_recovery",
+        "scenario_seed": 1005,
+        "t": 37,
+        "delta": [
+          0.0,
+          -30.0,
+          30.0
+        ],
+        "predicted_mean_gain": 4910.814143349417,
+        "predicted_worst_gain": 642.9664440336819,
+        "actual_gain": -6130.042152564451,
+        "forecast_demand": 9934.0,
+        "actual_future_demand_mean": 10698.0,
+        "estimated_rates": [
+          200.36315135,
+          174.54821683022598,
+          138.04613742123024
+        ],
+        "actual_mean_rates": [
+          285.1836989737378,
+          133.99717888935407,
+          139.38106784950523
+        ],
+        "saturated_observations_before_move": [
+          0,
+          13,
+          9
+        ]
+      },
+      {
+        "group": "generated_sustained_processing_fault",
+        "scenario_seed": 1008,
+        "t": 25,
+        "delta": [
+          20.0,
+          -15.0,
+          -5.0
+        ],
+        "predicted_mean_gain": 11960.012986551616,
+        "predicted_worst_gain": 10831.991003970008,
+        "actual_gain": -5814.319846276456,
+        "forecast_demand": 12364.666666666666,
+        "actual_future_demand_mean": 11512.285714285714,
+        "estimated_rates": [
+          179.94448609273144,
+          163.5724457581536,
+          200.0
+        ],
+        "actual_mean_rates": [
+          180.1532481129245,
+          119.51510132457413,
+          194.62714353437892
+        ],
+        "saturated_observations_before_move": [
+          8,
+          2,
+          0
+        ]
+      },
+      {
+        "group": "surge_only",
+        "scenario_seed": 1010,
+        "t": 11,
+        "delta": [
+          -7.0,
+          0.0,
+          7.0
+        ],
+        "predicted_mean_gain": 5311.411248374553,
+        "predicted_worst_gain": 2507.271852945005,
+        "actual_gain": -5348.357942118972,
+        "forecast_demand": 14024.666666666666,
+        "actual_future_demand_mean": 12733.142857142857,
+        "estimated_rates": [
+          219.60743492999214,
+          197.24151194209242,
+          182.97608736030156
+        ],
+        "actual_mean_rates": [
+          196.85931404446984,
+          199.60867516405776,
+          197.95058358801595
+        ],
+        "saturated_observations_before_move": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "group": "generated_switching_fault",
+        "scenario_seed": 1000,
+        "t": 71,
+        "delta": [
+          20.0,
+          -5.0,
+          -15.0
+        ],
+        "predicted_mean_gain": 13016.302059640886,
+        "predicted_worst_gain": 11931.88069171345,
+        "actual_gain": -5021.918306744148,
+        "forecast_demand": 11768.0,
+        "actual_future_demand_mean": 12056.57142857143,
+        "estimated_rates": [
+          112.75270472852053,
+          187.27985033936358,
+          203.80115888838554
+        ],
+        "actual_mean_rates": [
+          206.72038650324956,
+          199.26939668399424,
+          208.3275731133443
+        ],
+        "saturated_observations_before_move": [
+          39,
+          28,
+          12
+        ]
+      },
+      {
+        "group": "generated_pulsed_short_fault",
+        "scenario_seed": 1004,
+        "t": 14,
+        "delta": [
+          -15.0,
+          20.0,
+          -5.0
+        ],
+        "predicted_mean_gain": 11918.536550159239,
+        "predicted_worst_gain": 8258.225345849773,
+        "actual_gain": -4984.167035089591,
+        "forecast_demand": 20076.333333333332,
+        "actual_future_demand_mean": 8868.714285714286,
+        "estimated_rates": [
+          195.97389962017877,
+          114.33423827288121,
+          200.0
+        ],
+        "actual_mean_rates": [
+          191.23190474665842,
+          181.9586257547851,
+          209.20473080387583
+        ],
+        "saturated_observations_before_move": [
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "group": "generated_switching_fault",
+        "scenario_seed": 1013,
+        "t": 31,
+        "delta": [
+          7.0,
+          0.0,
+          -7.0
+        ],
+        "predicted_mean_gain": 1342.083799406806,
+        "predicted_worst_gain": 138.66116650173058,
+        "actual_gain": -4769.296050804362,
+        "forecast_demand": 10788.0,
+        "actual_future_demand_mean": 10952.714285714286,
+        "estimated_rates": [
+          98.99504808486915,
+          191.77466874814596,
+          200.0
+        ],
+        "actual_mean_rates": [
+          183.979335938539,
+          197.94976580285984,
+          105.34412981820229
+        ],
+        "saturated_observations_before_move": [
+          9,
+          3,
+          0
+        ]
+      }
+    ]
+  },
+  "by_group": {
+    "surge_only": {
+      "moves": 21,
+      "full_dwell_moves": 21,
+      "truncated_moves": 0,
+      "local_harmful_moves": 11,
+      "local_neutral_moves": 2,
+      "local_beneficial_moves": 8,
+      "local_harm_fraction": 0.5238095238095238,
+      "mean_predicted_gain": 2037.2629358333381,
+      "mean_realized_local_gain": -880.8102225388961,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 2,
+        "donor_rate_overestimated_by_over_15pct": 0,
+        "recipient_rate_underestimated_by_over_15pct": 0,
+        "donor_queue_mean_increased": 11,
+        "recipient_at_most_one_saturated_observation": 9
+      },
+      "worst_local_losses": [
+        {
+          "group": "surge_only",
+          "scenario_seed": 1013,
+          "t": 11,
+          "delta": [
+            -7.0,
+            0.0,
+            7.0
+          ],
+          "predicted_mean_gain": 2897.586629507191,
+          "predicted_worst_gain": 1233.0187681353154,
+          "actual_gain": -7027.546947272738,
+          "forecast_demand": 13575.666666666666,
+          "actual_future_demand_mean": 12962.42857142857,
+          "estimated_rates": [
+            216.32439742653725,
+            188.4339662337953,
+            180.82447356172727
+          ],
+          "actual_mean_rates": [
+            200.0620463797179,
+            202.0452178286057,
+            205.57832359645542
+          ],
+          "saturated_observations_before_move": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1010,
+          "t": 11,
+          "delta": [
+            -7.0,
+            0.0,
+            7.0
+          ],
+          "predicted_mean_gain": 5311.411248374553,
+          "predicted_worst_gain": 2507.271852945005,
+          "actual_gain": -5348.357942118972,
+          "forecast_demand": 14024.666666666666,
+          "actual_future_demand_mean": 12733.142857142857,
+          "estimated_rates": [
+            219.60743492999214,
+            197.24151194209242,
+            182.97608736030156
+          ],
+          "actual_mean_rates": [
+            196.85931404446984,
+            199.60867516405776,
+            197.95058358801595
+          ],
+          "saturated_observations_before_move": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1006,
+          "t": 11,
+          "delta": [
+            -2.5,
+            -2.5,
+            5.0
+          ],
+          "predicted_mean_gain": 2466.5983452383352,
+          "predicted_worst_gain": 1046.886466980537,
+          "actual_gain": -2386.062778765776,
+          "forecast_demand": 13641.333333333334,
+          "actual_future_demand_mean": 13018.142857142857,
+          "estimated_rates": [
+            195.30478530602088,
+            200.0,
+            182.68451509360892
+          ],
+          "actual_mean_rates": [
+            201.80735056829326,
+            200.6505132591589,
+            201.67243885269795
+          ],
+          "saturated_observations_before_move": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1015,
+          "t": 11,
+          "delta": [
+            -2.5,
+            5.0,
+            -2.5
+          ],
+          "predicted_mean_gain": 1800.4991458964957,
+          "predicted_worst_gain": 536.0247512100359,
+          "actual_gain": -2299.9372706870236,
+          "forecast_demand": 13879.666666666666,
+          "actual_future_demand_mean": 12796.57142857143,
+          "estimated_rates": [
+            199.6353370170058,
+            186.2825190173549,
+            200.0
+          ],
+          "actual_mean_rates": [
+            197.22780849852649,
+            204.1793138035113,
+            205.96586204812613
+          ],
+          "saturated_observations_before_move": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1002,
+          "t": 11,
+          "delta": [
+            -7.0,
+            7.0,
+            0.0
+          ],
+          "predicted_mean_gain": 3589.3975420554375,
+          "predicted_worst_gain": 660.7244432763757,
+          "actual_gain": -1552.7472264001435,
+          "forecast_demand": 12111.333333333334,
+          "actual_future_demand_mean": 11081.142857142857,
+          "estimated_rates": [
+            213.34863969668856,
+            182.17048776484904,
+            200.0
+          ],
+          "actual_mean_rates": [
+            196.9720252911886,
+            198.61122428275797,
+            199.1821613999575
+          ],
+          "saturated_observations_before_move": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1014,
+          "t": 11,
+          "delta": [
+            -4.0,
+            -3.0,
+            7.0
+          ],
+          "predicted_mean_gain": 5120.6542577840655,
+          "predicted_worst_gain": 888.4997316602073,
+          "actual_gain": -363.0489826109342,
+          "forecast_demand": 12514.333333333334,
+          "actual_future_demand_mean": 11517.42857142857,
+          "estimated_rates": [
+            214.40579710144928,
+            206.30874303389697,
+            182.62168108208635
+          ],
+          "actual_mean_rates": [
+            205.0339958276865,
+            192.47682378730312,
+            200.29958450362025
+          ],
+          "saturated_observations_before_move": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1005,
+          "t": 11,
+          "delta": [
+            -2.5,
+            5.0,
+            -2.5
+          ],
+          "predicted_mean_gain": 1076.7395416253562,
+          "predicted_worst_gain": 230.91139105464936,
+          "actual_gain": -358.51354941337286,
+          "forecast_demand": 11345.333333333334,
+          "actual_future_demand_mean": 10207.285714285714,
+          "estimated_rates": [
+            191.68911048768865,
+            181.41172221315088,
+            200.0
+          ],
+          "actual_mean_rates": [
+            199.29944982205762,
+            197.22008189188801,
+            201.9177761263919
+          ],
+          "saturated_observations_before_move": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1000,
+          "t": 12,
+          "delta": [
+            5.0,
+            -2.5,
+            -2.5
+          ],
+          "predicted_mean_gain": 1794.3907504769147,
+          "predicted_worst_gain": 409.5607451254525,
+          "actual_gain": -286.81876791398076,
+          "forecast_demand": 14750.333333333334,
+          "actual_future_demand_mean": 9713.42857142857,
+          "estimated_rates": [
+            186.00594161182963,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            203.0530336478386,
+            194.46363286935716,
+            202.78856772315535
+          ],
+          "saturated_observations_before_move": [
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1012,
+          "t": 11,
+          "delta": [
+            -2.5,
+            -2.5,
+            5.0
+          ],
+          "predicted_mean_gain": 764.3376950727801,
+          "predicted_worst_gain": 115.28312483787454,
+          "actual_gain": -98.09274668044372,
+          "forecast_demand": 10194.333333333334,
+          "actual_future_demand_mean": 9748.142857142857,
+          "estimated_rates": [
+            200.0,
+            200.0,
+            184.45299974059924
+          ],
+          "actual_mean_rates": [
+            199.71561055050572,
+            203.28283161608,
+            202.61380927381444
+          ],
+          "saturated_observations_before_move": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "group": "surge_only",
+          "scenario_seed": 1001,
+          "t": 11,
+          "delta": [
+            5.0,
+            -2.5,
+            -2.5
+          ],
+          "predicted_mean_gain": 1904.2429767430044,
+          "predicted_worst_gain": 226.2415113015836,
+          "actual_gain": -91.8437096239627,
+          "forecast_demand": 11967.666666666666,
+          "actual_future_demand_mean": 10764.42857142857,
+          "estimated_rates": [
+            184.05067376289145,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            195.24024078836482,
+            196.46336980465526,
+            200.45146508557633
+          ],
+          "saturated_observations_before_move": [
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "ingress_slow": {
+      "moves": 35,
+      "full_dwell_moves": 35,
+      "truncated_moves": 0,
+      "local_harmful_moves": 0,
+      "local_neutral_moves": 2,
+      "local_beneficial_moves": 33,
+      "local_harm_fraction": 0.0,
+      "mean_predicted_gain": 5702.192849383261,
+      "mean_realized_local_gain": 6334.882817114636,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 0,
+        "donor_rate_overestimated_by_over_15pct": 0,
+        "recipient_rate_underestimated_by_over_15pct": 0,
+        "donor_queue_mean_increased": 0,
+        "recipient_at_most_one_saturated_observation": 0
+      },
+      "worst_local_losses": [
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1001,
+          "t": 19,
+          "delta": [
+            0.0,
+            7.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 648.7633410543523,
+          "predicted_worst_gain": 114.50480936344502,
+          "actual_gain": 0.0,
+          "forecast_demand": 7787.666666666667,
+          "actual_future_demand_mean": 2426.0,
+          "estimated_rates": [
+            112.49942950761346,
+            186.68372074662855,
+            200.0
+          ],
+          "actual_mean_rates": [
+            149.78107330656965,
+            197.3301309354893,
+            200.0516049226382
+          ],
+          "saturated_observations_before_move": [
+            9,
+            2,
+            0
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1013,
+          "t": 27,
+          "delta": [
+            -7.0,
+            7.0,
+            0.0
+          ],
+          "predicted_mean_gain": 35.6695345864778,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": 0.0,
+          "forecast_demand": 1343.0,
+          "actual_future_demand_mean": 902.7142857142857,
+          "estimated_rates": [
+            207.0003416261803,
+            188.82314895117642,
+            209.3770224223761
+          ],
+          "actual_mean_rates": [
+            196.97236898597936,
+            201.90261913938218,
+            204.1054513779466
+          ],
+          "saturated_observations_before_move": [
+            14,
+            4,
+            2
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1007,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 832.0662611575905,
+          "predicted_worst_gain": 767.763363302477,
+          "actual_gain": 32.72691478645356,
+          "forecast_demand": 1489.6666666666667,
+          "actual_future_demand_mean": 1073.857142857143,
+          "estimated_rates": [
+            200.01278876171352,
+            203.91010213925958,
+            191.13966589428895
+          ],
+          "actual_mean_rates": [
+            200.86566660445837,
+            197.81906496039795,
+            197.84547496619822
+          ],
+          "saturated_observations_before_move": [
+            15,
+            4,
+            1
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1004,
+          "t": 19,
+          "delta": [
+            7.0,
+            0.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 478.52887839570053,
+          "predicted_worst_gain": 81.0339368875832,
+          "actual_gain": 87.41435694571828,
+          "forecast_demand": 7137.666666666667,
+          "actual_future_demand_mean": 2353.0,
+          "estimated_rates": [
+            112.76551216576874,
+            197.85929773803858,
+            200.0
+          ],
+          "actual_mean_rates": [
+            154.03903134277533,
+            200.91717190326565,
+            203.68733663057074
+          ],
+          "saturated_observations_before_move": [
+            9,
+            3,
+            0
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1003,
+          "t": 19,
+          "delta": [
+            7.0,
+            -7.0,
+            0.0
+          ],
+          "predicted_mean_gain": 1608.9751450908805,
+          "predicted_worst_gain": 199.570736733461,
+          "actual_gain": 105.27996383240861,
+          "forecast_demand": 8427.0,
+          "actual_future_demand_mean": 2522.5714285714284,
+          "estimated_rates": [
+            118.22474564882566,
+            200.0,
+            207.10305593837998
+          ],
+          "actual_mean_rates": [
+            155.07189778435253,
+            199.32258577780996,
+            200.35664246120692
+          ],
+          "saturated_observations_before_move": [
+            9,
+            0,
+            8
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1005,
+          "t": 27,
+          "delta": [
+            -7.0,
+            7.0,
+            0.0
+          ],
+          "predicted_mean_gain": 128.14813842060076,
+          "predicted_worst_gain": 114.6588606921166,
+          "actual_gain": 162.12046586646716,
+          "forecast_demand": 1458.0,
+          "actual_future_demand_mean": 1060.5714285714287,
+          "estimated_rates": [
+            180.3580190835495,
+            196.32775189615384,
+            201.48268541710345
+          ],
+          "actual_mean_rates": [
+            200.83784935212145,
+            194.06622047813485,
+            201.8638534315901
+          ],
+          "saturated_observations_before_move": [
+            15,
+            4,
+            0
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1015,
+          "t": 19,
+          "delta": [
+            7.0,
+            -7.0,
+            0.0
+          ],
+          "predicted_mean_gain": 3120.4635053079983,
+          "predicted_worst_gain": 584.4716321660144,
+          "actual_gain": 930.4044410961569,
+          "forecast_demand": 8335.333333333334,
+          "actual_future_demand_mean": 2697.1428571428573,
+          "estimated_rates": [
+            111.32792993638395,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            153.93216183569317,
+            206.48692549902896,
+            202.46875250385733
+          ],
+          "saturated_observations_before_move": [
+            9,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1000,
+          "t": 19,
+          "delta": [
+            8.0,
+            -1.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 3363.169893008312,
+          "predicted_worst_gain": 726.9536792895833,
+          "actual_gain": 965.6661454675359,
+          "forecast_demand": 7753.666666666667,
+          "actual_future_demand_mean": 2434.285714285714,
+          "estimated_rates": [
+            96.64760522375612,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            144.70288994776124,
+            201.713561865722,
+            207.2948175826537
+          ],
+          "saturated_observations_before_move": [
+            9,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1014,
+          "t": 19,
+          "delta": [
+            8.0,
+            -7.0,
+            -1.0
+          ],
+          "predicted_mean_gain": 3100.4094902419893,
+          "predicted_worst_gain": 928.2563700148494,
+          "actual_gain": 1065.4103049464456,
+          "forecast_demand": 7343.333333333333,
+          "actual_future_demand_mean": 2367.0,
+          "estimated_rates": [
+            84.73226185977441,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            138.52883828695224,
+            195.82722081076992,
+            203.88645874753067
+          ],
+          "saturated_observations_before_move": [
+            9,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "ingress_slow",
+          "scenario_seed": 1006,
+          "t": 19,
+          "delta": [
+            8.0,
+            -1.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 3474.1787224907966,
+          "predicted_worst_gain": 116.18597345971284,
+          "actual_gain": 1352.4935264243668,
+          "forecast_demand": 9343.333333333334,
+          "actual_future_demand_mean": 2723.714285714286,
+          "estimated_rates": [
+            107.1346174013791,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            153.7473856398949,
+            201.96298986676618,
+            199.15200998546442
+          ],
+          "saturated_observations_before_move": [
+            9,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "processing_slow": {
+      "moves": 32,
+      "full_dwell_moves": 32,
+      "truncated_moves": 0,
+      "local_harmful_moves": 0,
+      "local_neutral_moves": 0,
+      "local_beneficial_moves": 32,
+      "local_harm_fraction": 0.0,
+      "mean_predicted_gain": 7972.640034829649,
+      "mean_realized_local_gain": 7903.842809371175,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 0,
+        "donor_rate_overestimated_by_over_15pct": 0,
+        "recipient_rate_underestimated_by_over_15pct": 0,
+        "donor_queue_mean_increased": 0,
+        "recipient_at_most_one_saturated_observation": 0
+      },
+      "worst_local_losses": [
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1010,
+          "t": 20,
+          "delta": [
+            -5.0,
+            9.0,
+            -4.0
+          ],
+          "predicted_mean_gain": 167.6612854844623,
+          "predicted_worst_gain": 116.08315362327016,
+          "actual_gain": 138.5041137047342,
+          "forecast_demand": 6242.666666666667,
+          "actual_future_demand_mean": 2061.4285714285716,
+          "estimated_rates": [
+            186.20765811288504,
+            121.39414757989029,
+            200.0
+          ],
+          "actual_mean_rates": [
+            196.35294135021314,
+            170.29958958765596,
+            196.76136748170495
+          ],
+          "saturated_observations_before_move": [
+            10,
+            10,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1005,
+          "t": 21,
+          "delta": [
+            -5.0,
+            10.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 425.4589476322339,
+          "predicted_worst_gain": 182.42976860013346,
+          "actual_gain": 396.0900186211436,
+          "forecast_demand": 5230.666666666667,
+          "actual_future_demand_mean": 2001.5714285714287,
+          "estimated_rates": [
+            206.81551871307707,
+            119.46701217388915,
+            200.0
+          ],
+          "actual_mean_rates": [
+            205.77570476961122,
+            178.25605367405677,
+            203.30119068894106
+          ],
+          "saturated_observations_before_move": [
+            11,
+            11,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1011,
+          "t": 19,
+          "delta": [
+            0.0,
+            7.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 2286.9900478196023,
+          "predicted_worst_gain": 695.1707691094816,
+          "actual_gain": 592.090135740491,
+          "forecast_demand": 7547.333333333333,
+          "actual_future_demand_mean": 2364.0,
+          "estimated_rates": [
+            207.88126261997962,
+            73.24976981703968,
+            200.0
+          ],
+          "actual_mean_rates": [
+            207.1594032694441,
+            129.42153425713082,
+            203.89593418694955
+          ],
+          "saturated_observations_before_move": [
+            8,
+            9,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1015,
+          "t": 19,
+          "delta": [
+            0.0,
+            7.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 2354.340721868719,
+          "predicted_worst_gain": 658.8513124416277,
+          "actual_gain": 647.4731969853965,
+          "forecast_demand": 8509.0,
+          "actual_future_demand_mean": 2398.0,
+          "estimated_rates": [
+            208.21742237346555,
+            76.08162581722064,
+            200.0
+          ],
+          "actual_mean_rates": [
+            200.41025487971254,
+            142.8987991403465,
+            202.43496494199803
+          ],
+          "saturated_observations_before_move": [
+            8,
+            9,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1012,
+          "t": 20,
+          "delta": [
+            -3.0,
+            6.0,
+            -3.0
+          ],
+          "predicted_mean_gain": 2500.78929364007,
+          "predicted_worst_gain": 195.59672228478848,
+          "actual_gain": 706.2623704014059,
+          "forecast_demand": 7208.666666666667,
+          "actual_future_demand_mean": 2429.285714285714,
+          "estimated_rates": [
+            195.33037053277755,
+            113.76975403824618,
+            200.0
+          ],
+          "actual_mean_rates": [
+            196.0178416794935,
+            168.22332391195036,
+            200.32311312034105
+          ],
+          "saturated_observations_before_move": [
+            10,
+            10,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1009,
+          "t": 19,
+          "delta": [
+            7.0,
+            0.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 2644.542019107032,
+          "predicted_worst_gain": -7.275957614183426e-12,
+          "actual_gain": 722.8054883651075,
+          "forecast_demand": 7908.333333333333,
+          "actual_future_demand_mean": 2479.714285714286,
+          "estimated_rates": [
+            195.17257267463683,
+            79.8571649297501,
+            200.0
+          ],
+          "actual_mean_rates": [
+            196.25659019897154,
+            135.15866925721224,
+            197.05263784027056
+          ],
+          "saturated_observations_before_move": [
+            9,
+            9,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1013,
+          "t": 19,
+          "delta": [
+            -6.0,
+            8.0,
+            -2.0
+          ],
+          "predicted_mean_gain": 3813.766308130795,
+          "predicted_worst_gain": 880.4627088232446,
+          "actual_gain": 1293.1860356719444,
+          "forecast_demand": 8941.666666666666,
+          "actual_future_demand_mean": 2773.0,
+          "estimated_rates": [
+            201.89201250239802,
+            108.80932742617273,
+            200.0
+          ],
+          "actual_mean_rates": [
+            190.70535348541335,
+            148.3138843734144,
+            195.3296372401695
+          ],
+          "saturated_observations_before_move": [
+            9,
+            9,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1014,
+          "t": 19,
+          "delta": [
+            -7.0,
+            8.0,
+            -1.0
+          ],
+          "predicted_mean_gain": 4048.2546203450256,
+          "predicted_worst_gain": 2502.2006664714136,
+          "actual_gain": 1739.8919969456656,
+          "forecast_demand": 9819.333333333334,
+          "actual_future_demand_mean": 2827.5714285714284,
+          "estimated_rates": [
+            196.72743590803083,
+            100.23454464203417,
+            200.0
+          ],
+          "actual_mean_rates": [
+            206.3082084786588,
+            155.1634965147649,
+            205.57518550668317
+          ],
+          "saturated_observations_before_move": [
+            9,
+            9,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1000,
+          "t": 19,
+          "delta": [
+            -15.0,
+            20.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 7633.604592651122,
+          "predicted_worst_gain": 181.3434397253077,
+          "actual_gain": 2138.0041236527877,
+          "forecast_demand": 8145.333333333333,
+          "actual_future_demand_mean": 2414.5714285714284,
+          "estimated_rates": [
+            210.16830775783978,
+            91.13143234905044,
+            200.0
+          ],
+          "actual_mean_rates": [
+            205.1610292998146,
+            152.51122634496014,
+            200.5830864770722
+          ],
+          "saturated_observations_before_move": [
+            7,
+            9,
+            0
+          ]
+        },
+        {
+          "group": "processing_slow",
+          "scenario_seed": 1003,
+          "t": 19,
+          "delta": [
+            -15.0,
+            20.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 7518.887484042469,
+          "predicted_worst_gain": 237.8624588370476,
+          "actual_gain": 2322.2833811433547,
+          "forecast_demand": 7811.333333333333,
+          "actual_future_demand_mean": 2443.8571428571427,
+          "estimated_rates": [
+            193.27055294574552,
+            88.11989977934103,
+            200.0
+          ],
+          "actual_mean_rates": [
+            202.90513693312826,
+            143.4586354357009,
+            202.21823914312506
+          ],
+          "saturated_observations_before_move": [
+            8,
+            9,
+            0
+          ]
+        }
+      ]
+    },
+    "delivery_slow": {
+      "moves": 32,
+      "full_dwell_moves": 32,
+      "truncated_moves": 0,
+      "local_harmful_moves": 0,
+      "local_neutral_moves": 0,
+      "local_beneficial_moves": 32,
+      "local_harm_fraction": 0.0,
+      "mean_predicted_gain": 10518.540689548254,
+      "mean_realized_local_gain": 7864.964594850551,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 0,
+        "donor_rate_overestimated_by_over_15pct": 0,
+        "recipient_rate_underestimated_by_over_15pct": 0,
+        "donor_queue_mean_increased": 0,
+        "recipient_at_most_one_saturated_observation": 0
+      },
+      "worst_local_losses": [
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1003,
+          "t": 19,
+          "delta": [
+            -7.0,
+            -1.0,
+            8.0
+          ],
+          "predicted_mean_gain": 2818.2252824692678,
+          "predicted_worst_gain": 581.3672249226574,
+          "actual_gain": 340.27838764593344,
+          "forecast_demand": 8417.0,
+          "actual_future_demand_mean": 2478.4285714285716,
+          "estimated_rates": [
+            189.67005141445813,
+            199.2788645475469,
+            110.44802814041834
+          ],
+          "actual_mean_rates": [
+            200.8506046237081,
+            201.5496729358417,
+            160.20259709992905
+          ],
+          "saturated_observations_before_move": [
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1005,
+          "t": 19,
+          "delta": [
+            -15.0,
+            -5.0,
+            20.0
+          ],
+          "predicted_mean_gain": 5959.887255594237,
+          "predicted_worst_gain": 1088.208316575415,
+          "actual_gain": 805.27403401528,
+          "forecast_demand": 8129.666666666667,
+          "actual_future_demand_mean": 2526.4285714285716,
+          "estimated_rates": [
+            201.2901921987431,
+            211.13003198917067,
+            105.2562040479457
+          ],
+          "actual_mean_rates": [
+            195.5582626155949,
+            200.4458042633871,
+            161.29892500985312
+          ],
+          "saturated_observations_before_move": [
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1006,
+          "t": 19,
+          "delta": [
+            -15.0,
+            -5.0,
+            20.0
+          ],
+          "predicted_mean_gain": 5681.160552584102,
+          "predicted_worst_gain": 1251.035956905465,
+          "actual_gain": 850.2897810252025,
+          "forecast_demand": 8095.333333333333,
+          "actual_future_demand_mean": 2455.0,
+          "estimated_rates": [
+            191.74302048684444,
+            192.38903536059314,
+            108.60346502777409
+          ],
+          "actual_mean_rates": [
+            195.53959098531993,
+            201.19076096801254,
+            163.25943811180983
+          ],
+          "saturated_observations_before_move": [
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1002,
+          "t": 19,
+          "delta": [
+            -5.0,
+            -15.0,
+            20.0
+          ],
+          "predicted_mean_gain": 6583.253048181855,
+          "predicted_worst_gain": 1435.9730072808643,
+          "actual_gain": 1195.2748126468969,
+          "forecast_demand": 7835.333333333333,
+          "actual_future_demand_mean": 2524.4285714285716,
+          "estimated_rates": [
+            187.79038468901737,
+            197.84619620677384,
+            103.13049951490879
+          ],
+          "actual_mean_rates": [
+            197.96889988208454,
+            202.8429174437392,
+            153.5680389096574
+          ],
+          "saturated_observations_before_move": [
+            9,
+            1,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1011,
+          "t": 19,
+          "delta": [
+            -5.0,
+            -15.0,
+            20.0
+          ],
+          "predicted_mean_gain": 6587.89564139956,
+          "predicted_worst_gain": 1605.2853227162223,
+          "actual_gain": 1233.442706711222,
+          "forecast_demand": 7938.333333333333,
+          "actual_future_demand_mean": 2437.285714285714,
+          "estimated_rates": [
+            211.98742673181883,
+            197.6284343797557,
+            111.76097213327598
+          ],
+          "actual_mean_rates": [
+            203.6857262635036,
+            197.221901828243,
+            161.04412078259614
+          ],
+          "saturated_observations_before_move": [
+            6,
+            2,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1014,
+          "t": 19,
+          "delta": [
+            -5.0,
+            -15.0,
+            20.0
+          ],
+          "predicted_mean_gain": 8614.605302040753,
+          "predicted_worst_gain": 2731.069775845559,
+          "actual_gain": 2410.4016936095613,
+          "forecast_demand": 7613.666666666667,
+          "actual_future_demand_mean": 2521.285714285714,
+          "estimated_rates": [
+            191.51843951875117,
+            198.0170737632536,
+            97.43376165743427
+          ],
+          "actual_mean_rates": [
+            192.24324509237104,
+            197.82986297977754,
+            151.48747074342913
+          ],
+          "saturated_observations_before_move": [
+            8,
+            1,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1008,
+          "t": 19,
+          "delta": [
+            -5.0,
+            -15.0,
+            20.0
+          ],
+          "predicted_mean_gain": 9007.386538982493,
+          "predicted_worst_gain": 2994.794661531252,
+          "actual_gain": 2473.728092070468,
+          "forecast_demand": 8035.666666666667,
+          "actual_future_demand_mean": 2499.8571428571427,
+          "estimated_rates": [
+            199.16604546291993,
+            194.81533068262956,
+            100.4106104808999
+          ],
+          "actual_mean_rates": [
+            208.8141112869422,
+            196.921730004837,
+            148.837521097854
+          ],
+          "saturated_observations_before_move": [
+            9,
+            1,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1007,
+          "t": 19,
+          "delta": [
+            -5.0,
+            -15.0,
+            20.0
+          ],
+          "predicted_mean_gain": 9362.857858832593,
+          "predicted_worst_gain": 1423.7308721901627,
+          "actual_gain": 2530.6136986469137,
+          "forecast_demand": 8457.666666666666,
+          "actual_future_demand_mean": 2856.285714285714,
+          "estimated_rates": [
+            193.57890249179792,
+            201.84303331792432,
+            110.29339337068546
+          ],
+          "actual_mean_rates": [
+            198.8346832766278,
+            201.90601802700883,
+            145.64579978288728
+          ],
+          "saturated_observations_before_move": [
+            9,
+            1,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1001,
+          "t": 19,
+          "delta": [
+            -5.0,
+            -15.0,
+            20.0
+          ],
+          "predicted_mean_gain": 9998.210706903725,
+          "predicted_worst_gain": 7254.1584127742935,
+          "actual_gain": 3911.706750431271,
+          "forecast_demand": 9163.666666666666,
+          "actual_future_demand_mean": 2992.1428571428573,
+          "estimated_rates": [
+            198.70965823029056,
+            193.6245608904163,
+            92.70900573816857
+          ],
+          "actual_mean_rates": [
+            208.09643603653572,
+            201.70395754227033,
+            148.14908424102723
+          ],
+          "saturated_observations_before_move": [
+            9,
+            3,
+            9
+          ]
+        },
+        {
+          "group": "delivery_slow",
+          "scenario_seed": 1010,
+          "t": 19,
+          "delta": [
+            0.0,
+            -30.0,
+            30.0
+          ],
+          "predicted_mean_gain": 11194.063757958394,
+          "predicted_worst_gain": 4341.943990788339,
+          "actual_gain": 4034.3572207595043,
+          "forecast_demand": 7862.333333333333,
+          "actual_future_demand_mean": 2459.714285714286,
+          "estimated_rates": [
+            198.43579375608775,
+            200.0,
+            78.33997846214594
+          ],
+          "actual_mean_rates": [
+            199.08542011658793,
+            199.27572861858835,
+            135.63051720510106
+          ],
+          "saturated_observations_before_move": [
+            7,
+            0,
+            9
+          ]
+        }
+      ]
+    },
+    "shifting_bottleneck": {
+      "moves": 46,
+      "full_dwell_moves": 46,
+      "truncated_moves": 0,
+      "local_harmful_moves": 0,
+      "local_neutral_moves": 0,
+      "local_beneficial_moves": 46,
+      "local_harm_fraction": 0.0,
+      "mean_predicted_gain": 11049.39055837151,
+      "mean_realized_local_gain": 6293.297636968718,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 0,
+        "donor_rate_overestimated_by_over_15pct": 0,
+        "recipient_rate_underestimated_by_over_15pct": 0,
+        "donor_queue_mean_increased": 0,
+        "recipient_at_most_one_saturated_observation": 0
+      },
+      "worst_local_losses": [
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1005,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 264.9920604464853,
+          "predicted_worst_gain": 225.32088856223118,
+          "actual_gain": 150.41456847969584,
+          "forecast_demand": 1383.0,
+          "actual_future_demand_mean": 1015.5714285714286,
+          "estimated_rates": [
+            199.12155396825847,
+            200.08942828579197,
+            108.02647975372344
+          ],
+          "actual_mean_rates": [
+            199.89247626693978,
+            201.152442221161,
+            191.13672832113173
+          ],
+          "saturated_observations_before_move": [
+            10,
+            9,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1014,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 362.194288224215,
+          "predicted_worst_gain": 355.31569556732745,
+          "actual_gain": 325.3454617773398,
+          "forecast_demand": 1460.6666666666667,
+          "actual_future_demand_mean": 1005.8571428571429,
+          "estimated_rates": [
+            198.91974300839627,
+            194.13733159518836,
+            111.4715907662204
+          ],
+          "actual_mean_rates": [
+            199.35508632613812,
+            210.7707193465431,
+            190.11261773475124
+          ],
+          "saturated_observations_before_move": [
+            11,
+            11,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1013,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 406.93446421443593,
+          "predicted_worst_gain": 387.92273632831507,
+          "actual_gain": 383.27775649458874,
+          "forecast_demand": 1290.3333333333333,
+          "actual_future_demand_mean": 904.1428571428571,
+          "estimated_rates": [
+            203.27655338717406,
+            197.6789479908658,
+            103.44606302088403
+          ],
+          "actual_mean_rates": [
+            202.6139039721255,
+            200.07361645094147,
+            187.53925772824493
+          ],
+          "saturated_observations_before_move": [
+            9,
+            8,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1015,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 638.4541527375026,
+          "predicted_worst_gain": 463.34732749749594,
+          "actual_gain": 395.88197497363603,
+          "forecast_demand": 1324.6666666666667,
+          "actual_future_demand_mean": 908.4285714285714,
+          "estimated_rates": [
+            201.35597473229623,
+            196.82220062659835,
+            98.74211362357406
+          ],
+          "actual_mean_rates": [
+            204.0404466185607,
+            201.69374417170533,
+            181.71242079552883
+          ],
+          "saturated_observations_before_move": [
+            10,
+            8,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1010,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 1202.2570940860305,
+          "predicted_worst_gain": 933.4151409946687,
+          "actual_gain": 412.80743529843744,
+          "forecast_demand": 1471.0,
+          "actual_future_demand_mean": 1000.0,
+          "estimated_rates": [
+            204.098350412427,
+            191.73891217629486,
+            98.3074722524934
+          ],
+          "actual_mean_rates": [
+            201.37553330514652,
+            201.82058067702567,
+            192.35955862178974
+          ],
+          "saturated_observations_before_move": [
+            10,
+            8,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1009,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 3300.8387326680004,
+          "predicted_worst_gain": 2009.0334927165304,
+          "actual_gain": 1072.6054552247845,
+          "forecast_demand": 1207.6666666666667,
+          "actual_future_demand_mean": 839.7142857142857,
+          "estimated_rates": [
+            198.81034328593398,
+            187.75429697320556,
+            78.0880627524002
+          ],
+          "actual_mean_rates": [
+            193.33633711378576,
+            201.9120811822383,
+            188.82894892180508
+          ],
+          "saturated_observations_before_move": [
+            10,
+            8,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1002,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 2586.8306725701914,
+          "predicted_worst_gain": 1786.2847048627991,
+          "actual_gain": 1241.640269111268,
+          "forecast_demand": 1361.6666666666667,
+          "actual_future_demand_mean": 1023.8571428571429,
+          "estimated_rates": [
+            201.79870586296445,
+            203.52838843073133,
+            95.8017143799379
+          ],
+          "actual_mean_rates": [
+            201.70792855502515,
+            210.68221028116542,
+            184.4431817197589
+          ],
+          "saturated_observations_before_move": [
+            11,
+            9,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1008,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 3467.9687283304356,
+          "predicted_worst_gain": 2324.7557870615415,
+          "actual_gain": 1353.0050548949162,
+          "forecast_demand": 1258.0,
+          "actual_future_demand_mean": 902.2857142857143,
+          "estimated_rates": [
+            197.5443376736737,
+            206.30820284590484,
+            89.16059814568916
+          ],
+          "actual_mean_rates": [
+            202.20461245541497,
+            203.88664996660566,
+            183.8657600929387
+          ],
+          "saturated_observations_before_move": [
+            10,
+            8,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1000,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 4075.013528781592,
+          "predicted_worst_gain": 2334.4167773084305,
+          "actual_gain": 1396.7335353119583,
+          "forecast_demand": 1236.0,
+          "actual_future_demand_mean": 829.5714285714286,
+          "estimated_rates": [
+            198.840899056826,
+            202.27953944938457,
+            76.65437291141598
+          ],
+          "actual_mean_rates": [
+            200.56593309772936,
+            206.4307515119529,
+            181.66875209154875
+          ],
+          "saturated_observations_before_move": [
+            9,
+            8,
+            5
+          ]
+        },
+        {
+          "group": "shifting_bottleneck",
+          "scenario_seed": 1012,
+          "t": 27,
+          "delta": [
+            -30.0,
+            0.0,
+            30.0
+          ],
+          "predicted_mean_gain": 6034.65302205772,
+          "predicted_worst_gain": 3123.9852724703815,
+          "actual_gain": 1711.5236980799455,
+          "forecast_demand": 1254.6666666666667,
+          "actual_future_demand_mean": 853.2857142857143,
+          "estimated_rates": [
+            203.96187011374207,
+            192.5531882601525,
+            81.71184998227564
+          ],
+          "actual_mean_rates": [
+            205.9898040244651,
+            207.13457254727365,
+            182.771017937535
+          ],
+          "saturated_observations_before_move": [
+            11,
+            9,
+            5
+          ]
+        }
+      ]
+    },
+    "generated_underload": {
+      "moves": 0,
+      "full_dwell_moves": 0,
+      "truncated_moves": 0,
+      "local_harmful_moves": 0,
+      "local_neutral_moves": 0,
+      "local_beneficial_moves": 0,
+      "local_harm_fraction": null,
+      "mean_predicted_gain": null,
+      "mean_realized_local_gain": null,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 0,
+        "donor_rate_overestimated_by_over_15pct": 0,
+        "recipient_rate_underestimated_by_over_15pct": 0,
+        "donor_queue_mean_increased": 0,
+        "recipient_at_most_one_saturated_observation": 0
+      },
+      "worst_local_losses": []
+    },
+    "generated_sustained_processing_fault": {
+      "moves": 94,
+      "full_dwell_moves": 94,
+      "truncated_moves": 0,
+      "local_harmful_moves": 14,
+      "local_neutral_moves": 5,
+      "local_beneficial_moves": 75,
+      "local_harm_fraction": 0.14893617021276595,
+      "mean_predicted_gain": 5724.848695028771,
+      "mean_realized_local_gain": 5722.992608702437,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 0,
+        "donor_rate_overestimated_by_over_15pct": 7,
+        "recipient_rate_underestimated_by_over_15pct": 1,
+        "donor_queue_mean_increased": 14,
+        "recipient_at_most_one_saturated_observation": 5
+      },
+      "worst_local_losses": [
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1004,
+          "t": 49,
+          "delta": [
+            30.0,
+            -30.0,
+            0.0
+          ],
+          "predicted_mean_gain": 721.9532388435447,
+          "predicted_worst_gain": 35.98418964515986,
+          "actual_gain": -14288.08456464399,
+          "forecast_demand": 10629.333333333334,
+          "actual_future_demand_mean": 10123.142857142857,
+          "estimated_rates": [
+            194.90489350157029,
+            182.97084068249478,
+            200.0
+          ],
+          "actual_mean_rates": [
+            206.20451087707477,
+            127.594557819818,
+            221.35005180928346
+          ],
+          "saturated_observations_before_move": [
+            1,
+            12,
+            0
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1008,
+          "t": 25,
+          "delta": [
+            20.0,
+            -15.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 11960.012986551616,
+          "predicted_worst_gain": 10831.991003970008,
+          "actual_gain": -5814.319846276456,
+          "forecast_demand": 12364.666666666666,
+          "actual_future_demand_mean": 11512.285714285714,
+          "estimated_rates": [
+            179.94448609273144,
+            163.5724457581536,
+            200.0
+          ],
+          "actual_mean_rates": [
+            180.1532481129245,
+            119.51510132457413,
+            194.62714353437892
+          ],
+          "saturated_observations_before_move": [
+            8,
+            2,
+            0
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1015,
+          "t": 25,
+          "delta": [
+            9.0,
+            -5.0,
+            -4.0
+          ],
+          "predicted_mean_gain": 7707.164190598358,
+          "predicted_worst_gain": 1541.1580243976164,
+          "actual_gain": -3741.697999542268,
+          "forecast_demand": 10815.666666666666,
+          "actual_future_demand_mean": 10721.0,
+          "estimated_rates": [
+            190.21686658013147,
+            142.07257732685207,
+            200.0
+          ],
+          "actual_mean_rates": [
+            199.28130075221452,
+            115.35339261082643,
+            217.91370194045024
+          ],
+          "saturated_observations_before_move": [
+            8,
+            6,
+            0
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1000,
+          "t": 63,
+          "delta": [
+            0.0,
+            7.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 2882.0104561383423,
+          "predicted_worst_gain": 88.58498449668696,
+          "actual_gain": -2603.9229848004034,
+          "forecast_demand": 11308.666666666666,
+          "actual_future_demand_mean": 10741.714285714286,
+          "estimated_rates": [
+            197.0783387006712,
+            104.35632451698896,
+            199.35299173779936
+          ],
+          "actual_mean_rates": [
+            189.83300527491122,
+            168.7132014107604,
+            175.09074492485865
+          ],
+          "saturated_observations_before_move": [
+            41,
+            48,
+            10
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1014,
+          "t": 46,
+          "delta": [
+            -2.0,
+            -6.0,
+            8.0
+          ],
+          "predicted_mean_gain": 1778.247962616906,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -1990.471459558575,
+          "forecast_demand": 8818.666666666666,
+          "actual_future_demand_mean": 9784.285714285714,
+          "estimated_rates": [
+            200.0,
+            169.4307497801692,
+            164.6604094825725
+          ],
+          "actual_mean_rates": [
+            188.87694012713092,
+            115.73558879561068,
+            189.24898511446108
+          ],
+          "saturated_observations_before_move": [
+            0,
+            7,
+            1
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1007,
+          "t": 48,
+          "delta": [
+            5.0,
+            -2.5,
+            -2.5
+          ],
+          "predicted_mean_gain": 2954.7366419384066,
+          "predicted_worst_gain": 1561.490788209645,
+          "actual_gain": -1620.4844948386526,
+          "forecast_demand": 11243.666666666666,
+          "actual_future_demand_mean": 10802.857142857143,
+          "estimated_rates": [
+            197.56095996662566,
+            112.2599190256745,
+            200.0
+          ],
+          "actual_mean_rates": [
+            209.87803360513422,
+            99.22557434751016,
+            202.51802195438663
+          ],
+          "saturated_observations_before_move": [
+            30,
+            32,
+            0
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1011,
+          "t": 25,
+          "delta": [
+            7.0,
+            -4.0,
+            -3.0
+          ],
+          "predicted_mean_gain": 1094.3471359008304,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -1018.5299535088675,
+          "forecast_demand": 9299.666666666666,
+          "actual_future_demand_mean": 10163.857142857143,
+          "estimated_rates": [
+            200.0,
+            141.41393764536497,
+            200.0
+          ],
+          "actual_mean_rates": [
+            206.64229611871062,
+            116.9516657987362,
+            189.1446876442584
+          ],
+          "saturated_observations_before_move": [
+            0,
+            6,
+            0
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1011,
+          "t": 42,
+          "delta": [
+            0.0,
+            -7.0,
+            7.0
+          ],
+          "predicted_mean_gain": 944.8326075686291,
+          "predicted_worst_gain": 28.177284220874753,
+          "actual_gain": -752.8653403562812,
+          "forecast_demand": 10241.0,
+          "actual_future_demand_mean": 10103.42857142857,
+          "estimated_rates": [
+            199.41610947876782,
+            128.90899977767486,
+            183.506472001398
+          ],
+          "actual_mean_rates": [
+            205.31948196011496,
+            120.49941008165476,
+            191.84409588671195
+          ],
+          "saturated_observations_before_move": [
+            1,
+            14,
+            2
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1001,
+          "t": 43,
+          "delta": [
+            8.0,
+            -7.0,
+            -1.0
+          ],
+          "predicted_mean_gain": 3588.475020298314,
+          "predicted_worst_gain": 1.6452720136708194,
+          "actual_gain": -711.9231026842385,
+          "forecast_demand": 9746.666666666666,
+          "actual_future_demand_mean": 10206.285714285714,
+          "estimated_rates": [
+            192.5632798329141,
+            124.31368272409605,
+            195.80351148393146
+          ],
+          "actual_mean_rates": [
+            201.53634530224033,
+            116.96493156894857,
+            205.19815013639146
+          ],
+          "saturated_observations_before_move": [
+            22,
+            27,
+            2
+          ]
+        },
+        {
+          "group": "generated_sustained_processing_fault",
+          "scenario_seed": 1014,
+          "t": 26,
+          "delta": [
+            8.0,
+            -6.0,
+            -2.0
+          ],
+          "predicted_mean_gain": 844.2314814814815,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -679.1987660022592,
+          "forecast_demand": 8970.666666666666,
+          "actual_future_demand_mean": 9580.42857142857,
+          "estimated_rates": [
+            200.0,
+            165.2332363114652,
+            200.0
+          ],
+          "actual_mean_rates": [
+            188.80062973254655,
+            123.80683088215503,
+            178.23374170149074
+          ],
+          "saturated_observations_before_move": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    "generated_switching_fault": {
+      "moves": 151,
+      "full_dwell_moves": 148,
+      "truncated_moves": 3,
+      "local_harmful_moves": 11,
+      "local_neutral_moves": 6,
+      "local_beneficial_moves": 131,
+      "local_harm_fraction": 0.07432432432432433,
+      "mean_predicted_gain": 11838.993636872066,
+      "mean_realized_local_gain": 11139.310210327292,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 1,
+        "donor_rate_overestimated_by_over_15pct": 7,
+        "recipient_rate_underestimated_by_over_15pct": 5,
+        "donor_queue_mean_increased": 11,
+        "recipient_at_most_one_saturated_observation": 3
+      },
+      "worst_local_losses": [
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1000,
+          "t": 71,
+          "delta": [
+            20.0,
+            -5.0,
+            -15.0
+          ],
+          "predicted_mean_gain": 13016.302059640886,
+          "predicted_worst_gain": 11931.88069171345,
+          "actual_gain": -5021.918306744148,
+          "forecast_demand": 11768.0,
+          "actual_future_demand_mean": 12056.57142857143,
+          "estimated_rates": [
+            112.75270472852053,
+            187.27985033936358,
+            203.80115888838554
+          ],
+          "actual_mean_rates": [
+            206.72038650324956,
+            199.26939668399424,
+            208.3275731133443
+          ],
+          "saturated_observations_before_move": [
+            39,
+            28,
+            12
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1013,
+          "t": 31,
+          "delta": [
+            7.0,
+            0.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 1342.083799406806,
+          "predicted_worst_gain": 138.66116650173058,
+          "actual_gain": -4769.296050804362,
+          "forecast_demand": 10788.0,
+          "actual_future_demand_mean": 10952.714285714286,
+          "estimated_rates": [
+            98.99504808486915,
+            191.77466874814596,
+            200.0
+          ],
+          "actual_mean_rates": [
+            183.979335938539,
+            197.94976580285984,
+            105.34412981820229
+          ],
+          "saturated_observations_before_move": [
+            9,
+            3,
+            0
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1013,
+          "t": 71,
+          "delta": [
+            30.0,
+            0.0,
+            -30.0
+          ],
+          "predicted_mean_gain": 13475.95059457213,
+          "predicted_worst_gain": 8150.484248740875,
+          "actual_gain": -4382.6766845227685,
+          "forecast_demand": 10835.0,
+          "actual_future_demand_mean": 10333.42857142857,
+          "estimated_rates": [
+            89.47295227990438,
+            191.85889004605042,
+            204.04928889848938
+          ],
+          "actual_mean_rates": [
+            178.32193173991038,
+            197.27180575264344,
+            211.0680446270167
+          ],
+          "saturated_observations_before_move": [
+            32,
+            33,
+            13
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1001,
+          "t": 71,
+          "delta": [
+            30.0,
+            -30.0,
+            0.0
+          ],
+          "predicted_mean_gain": 16773.631871328318,
+          "predicted_worst_gain": 10960.389297802918,
+          "actual_gain": -2737.1095425912063,
+          "forecast_demand": 11782.333333333334,
+          "actual_future_demand_mean": 12135.714285714286,
+          "estimated_rates": [
+            109.1074326158893,
+            173.01495771575702,
+            198.87527429089087
+          ],
+          "actual_mean_rates": [
+            181.57352920725185,
+            184.2349430386383,
+            201.4301368357385
+          ],
+          "saturated_observations_before_move": [
+            38,
+            38,
+            16
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1001,
+          "t": 31,
+          "delta": [
+            -2.5,
+            5.0,
+            -2.5
+          ],
+          "predicted_mean_gain": 4886.073027378514,
+          "predicted_worst_gain": 4443.446415416096,
+          "actual_gain": -1891.5496897473786,
+          "forecast_demand": 12336.666666666666,
+          "actual_future_demand_mean": 11981.57142857143,
+          "estimated_rates": [
+            108.24608804130749,
+            180.5997909491,
+            200.0
+          ],
+          "actual_mean_rates": [
+            190.9664344472862,
+            183.76759027738808,
+            116.75313529775124
+          ],
+          "saturated_observations_before_move": [
+            13,
+            10,
+            0
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1000,
+          "t": 31,
+          "delta": [
+            -2.5,
+            5.0,
+            -2.5
+          ],
+          "predicted_mean_gain": 1068.1730111894883,
+          "predicted_worst_gain": 93.77317931047355,
+          "actual_gain": -1844.6222315661653,
+          "forecast_demand": 9876.666666666666,
+          "actual_future_demand_mean": 11089.57142857143,
+          "estimated_rates": [
+            106.74541530533199,
+            191.50593519841908,
+            200.0
+          ],
+          "actual_mean_rates": [
+            205.95750755537506,
+            200.20452110662717,
+            114.29585092316482
+          ],
+          "saturated_observations_before_move": [
+            12,
+            3,
+            0
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1004,
+          "t": 14,
+          "delta": [
+            -2.5,
+            -2.5,
+            5.0
+          ],
+          "predicted_mean_gain": 2111.160301704887,
+          "predicted_worst_gain": 115.72413955028424,
+          "actual_gain": -1534.095328692194,
+          "forecast_demand": 13101.666666666666,
+          "actual_future_demand_mean": 11734.57142857143,
+          "estimated_rates": [
+            200.0,
+            200.0,
+            185.1586232804547
+          ],
+          "actual_mean_rates": [
+            93.72606350320463,
+            194.99575580174363,
+            187.18953874070075
+          ],
+          "saturated_observations_before_move": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1015,
+          "t": 80,
+          "delta": [
+            -2.5,
+            5.0,
+            -2.5
+          ],
+          "predicted_mean_gain": 5069.278023143397,
+          "predicted_worst_gain": 4063.9461840068398,
+          "actual_gain": -1277.9386385716862,
+          "forecast_demand": 10132.333333333334,
+          "actual_future_demand_mean": 5376.285714285715,
+          "estimated_rates": [
+            192.84293419875598,
+            211.40114248027942,
+            199.34507583923514
+          ],
+          "actual_mean_rates": [
+            187.93259142629086,
+            215.82219459000677,
+            183.26487091318006
+          ],
+          "saturated_observations_before_move": [
+            66,
+            37,
+            21
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1010,
+          "t": 56,
+          "delta": [
+            -7.0,
+            8.0,
+            -1.0
+          ],
+          "predicted_mean_gain": 4045.3706592126773,
+          "predicted_worst_gain": 1168.1842498627757,
+          "actual_gain": -463.0704011844646,
+          "forecast_demand": 10626.333333333334,
+          "actual_future_demand_mean": 10204.714285714286,
+          "estimated_rates": [
+            206.23295000000002,
+            110.5423519665658,
+            194.8125157983615
+          ],
+          "actual_mean_rates": [
+            162.32842550636093,
+            164.33466411937246,
+            205.10825713485207
+          ],
+          "saturated_observations_before_move": [
+            12,
+            17,
+            1
+          ]
+        },
+        {
+          "group": "generated_switching_fault",
+          "scenario_seed": 1009,
+          "t": 24,
+          "delta": [
+            -3.0,
+            6.0,
+            -3.0
+          ],
+          "predicted_mean_gain": 556.9666666666662,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -210.03191812244665,
+          "forecast_demand": 8445.666666666666,
+          "actual_future_demand_mean": 9117.0,
+          "estimated_rates": [
+            162.76642152500628,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            122.83161456220121,
+            199.92432147071045,
+            190.82908088248456
+          ],
+          "saturated_observations_before_move": [
+            2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "generated_pulsed_short_fault": {
+      "moves": 127,
+      "full_dwell_moves": 127,
+      "truncated_moves": 0,
+      "local_harmful_moves": 27,
+      "local_neutral_moves": 3,
+      "local_beneficial_moves": 97,
+      "local_harm_fraction": 0.2125984251968504,
+      "mean_predicted_gain": 4999.189522605191,
+      "mean_realized_local_gain": 2939.0036884403,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 8,
+        "donor_rate_overestimated_by_over_15pct": 14,
+        "recipient_rate_underestimated_by_over_15pct": 4,
+        "donor_queue_mean_increased": 27,
+        "recipient_at_most_one_saturated_observation": 8
+      },
+      "worst_local_losses": [
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1004,
+          "t": 14,
+          "delta": [
+            -15.0,
+            20.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 11918.536550159239,
+          "predicted_worst_gain": 8258.225345849773,
+          "actual_gain": -4984.167035089591,
+          "forecast_demand": 20076.333333333332,
+          "actual_future_demand_mean": 8868.714285714286,
+          "estimated_rates": [
+            195.97389962017877,
+            114.33423827288121,
+            200.0
+          ],
+          "actual_mean_rates": [
+            191.23190474665842,
+            181.9586257547851,
+            209.20473080387583
+          ],
+          "saturated_observations_before_move": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1008,
+          "t": 31,
+          "delta": [
+            -6.0,
+            -2.0,
+            8.0
+          ],
+          "predicted_mean_gain": 6777.936289075575,
+          "predicted_worst_gain": 4713.03979725964,
+          "actual_gain": -3649.7129001809662,
+          "forecast_demand": 13165.0,
+          "actual_future_demand_mean": 13019.142857142857,
+          "estimated_rates": [
+            201.42473480021098,
+            188.8064211790993,
+            212.34908423882692
+          ],
+          "actual_mean_rates": [
+            162.6747899020757,
+            185.27362246851393,
+            226.14761409950177
+          ],
+          "saturated_observations_before_move": [
+            13,
+            9,
+            7
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1003,
+          "t": 74,
+          "delta": [
+            9.0,
+            -4.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 7837.276802831302,
+          "predicted_worst_gain": 2001.6046292786687,
+          "actual_gain": -3536.110569679331,
+          "forecast_demand": 10336.666666666666,
+          "actual_future_demand_mean": 13054.857142857143,
+          "estimated_rates": [
+            203.23570095721394,
+            195.5280904886296,
+            200.8093781953003
+          ],
+          "actual_mean_rates": [
+            211.8591591954584,
+            146.70951399979663,
+            195.86438625451748
+          ],
+          "saturated_observations_before_move": [
+            32,
+            30,
+            13
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1005,
+          "t": 51,
+          "delta": [
+            -2.0,
+            6.0,
+            -4.0
+          ],
+          "predicted_mean_gain": 252.80873430105663,
+          "predicted_worst_gain": 46.05309063046525,
+          "actual_gain": -3299.0016679639157,
+          "forecast_demand": 8576.666666666666,
+          "actual_future_demand_mean": 16639.85714285714,
+          "estimated_rates": [
+            197.63205449796337,
+            201.08546124335058,
+            200.10144747356264
+          ],
+          "actual_mean_rates": [
+            209.49355289552778,
+            198.04342275912418,
+            154.10867356250787
+          ],
+          "saturated_observations_before_move": [
+            18,
+            16,
+            6
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1014,
+          "t": 14,
+          "delta": [
+            -15.0,
+            20.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 11807.156289984185,
+          "predicted_worst_gain": 9267.552858846859,
+          "actual_gain": -3219.921865628916,
+          "forecast_demand": 22644.0,
+          "actual_future_demand_mean": 9639.42857142857,
+          "estimated_rates": [
+            194.707823488278,
+            108.74809152226884,
+            200.0
+          ],
+          "actual_mean_rates": [
+            194.71731923744014,
+            181.01223058415084,
+            207.9530728302478
+          ],
+          "saturated_observations_before_move": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1006,
+          "t": 13,
+          "delta": [
+            5.0,
+            -2.5,
+            -2.5
+          ],
+          "predicted_mean_gain": 1394.5087033951759,
+          "predicted_worst_gain": 106.26236759699532,
+          "actual_gain": -2676.40836640459,
+          "forecast_demand": 16977.0,
+          "actual_future_demand_mean": 12372.0,
+          "estimated_rates": [
+            187.83962910290938,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            193.68787565077133,
+            178.3018368063448,
+            203.45058361347958
+          ],
+          "saturated_observations_before_move": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1011,
+          "t": 14,
+          "delta": [
+            -15.0,
+            20.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 12262.774934539673,
+          "predicted_worst_gain": 8689.461600425406,
+          "actual_gain": -2660.973257203441,
+          "forecast_demand": 22788.666666666668,
+          "actual_future_demand_mean": 9115.285714285714,
+          "estimated_rates": [
+            201.2169636385986,
+            116.83519003406875,
+            203.6648746155737
+          ],
+          "actual_mean_rates": [
+            200.0873614624708,
+            185.04085182728,
+            220.66644094609813
+          ],
+          "saturated_observations_before_move": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1000,
+          "t": 13,
+          "delta": [
+            5.0,
+            -2.5,
+            -2.5
+          ],
+          "predicted_mean_gain": 3718.7133598676464,
+          "predicted_worst_gain": 1846.6964317261445,
+          "actual_gain": -2350.5623905628963,
+          "forecast_demand": 17946.333333333332,
+          "actual_future_demand_mean": 11995.57142857143,
+          "estimated_rates": [
+            181.53370858070235,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            210.192724216989,
+            163.91346016176303,
+            183.6446670190948
+          ],
+          "saturated_observations_before_move": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1010,
+          "t": 13,
+          "delta": [
+            5.0,
+            -2.5,
+            -2.5
+          ],
+          "predicted_mean_gain": 1811.0231422853312,
+          "predicted_worst_gain": 418.1608553774713,
+          "actual_gain": -2220.9440237387753,
+          "forecast_demand": 19811.0,
+          "actual_future_demand_mean": 14956.42857142857,
+          "estimated_rates": [
+            186.7095621181976,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            193.44745556308152,
+            157.8488511099777,
+            189.77133653269598
+          ],
+          "saturated_observations_before_move": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "generated_pulsed_short_fault",
+          "scenario_seed": 1011,
+          "t": 31,
+          "delta": [
+            -4.0,
+            -3.0,
+            7.0
+          ],
+          "predicted_mean_gain": 6853.730076938675,
+          "predicted_worst_gain": 1826.2818385562096,
+          "actual_gain": -2042.0182667715162,
+          "forecast_demand": 11332.0,
+          "actual_future_demand_mean": 10209.42857142857,
+          "estimated_rates": [
+            198.11007115708662,
+            199.07082121451424,
+            209.82606399090045
+          ],
+          "actual_mean_rates": [
+            155.27004366174845,
+            199.3743090906496,
+            217.61081176622463
+          ],
+          "saturated_observations_before_move": [
+            11,
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    "generated_asymmetric_recovery": {
+      "moves": 118,
+      "full_dwell_moves": 118,
+      "truncated_moves": 0,
+      "local_harmful_moves": 23,
+      "local_neutral_moves": 39,
+      "local_beneficial_moves": 56,
+      "local_harm_fraction": 0.19491525423728814,
+      "mean_predicted_gain": 3287.3520339689553,
+      "mean_realized_local_gain": 1682.1282236764562,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 0,
+        "donor_rate_overestimated_by_over_15pct": 14,
+        "recipient_rate_underestimated_by_over_15pct": 10,
+        "donor_queue_mean_increased": 23,
+        "recipient_at_most_one_saturated_observation": 13
+      },
+      "worst_local_losses": [
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1008,
+          "t": 32,
+          "delta": [
+            -5.0,
+            20.0,
+            -15.0
+          ],
+          "predicted_mean_gain": 9111.832352265586,
+          "predicted_worst_gain": 2049.5588838942294,
+          "actual_gain": -6416.13361803778,
+          "forecast_demand": 9417.0,
+          "actual_future_demand_mean": 9531.42857142857,
+          "estimated_rates": [
+            200.0,
+            137.00250351489456,
+            156.9868202503361
+          ],
+          "actual_mean_rates": [
+            250.84129478239774,
+            148.3624738263656,
+            121.8653274086881
+          ],
+          "saturated_observations_before_move": [
+            0,
+            10,
+            7
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1005,
+          "t": 37,
+          "delta": [
+            0.0,
+            -30.0,
+            30.0
+          ],
+          "predicted_mean_gain": 4910.814143349417,
+          "predicted_worst_gain": 642.9664440336819,
+          "actual_gain": -6130.042152564451,
+          "forecast_demand": 9934.0,
+          "actual_future_demand_mean": 10698.0,
+          "estimated_rates": [
+            200.36315135,
+            174.54821683022598,
+            138.04613742123024
+          ],
+          "actual_mean_rates": [
+            285.1836989737378,
+            133.99717888935407,
+            139.38106784950523
+          ],
+          "saturated_observations_before_move": [
+            0,
+            13,
+            9
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1002,
+          "t": 29,
+          "delta": [
+            -2.0,
+            8.0,
+            -6.0
+          ],
+          "predicted_mean_gain": 1930.9228062263128,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -4765.160628575068,
+          "forecast_demand": 9274.0,
+          "actual_future_demand_mean": 9608.142857142857,
+          "estimated_rates": [
+            200.0,
+            133.74367270412117,
+            179.07521259053766
+          ],
+          "actual_mean_rates": [
+            258.81123892144,
+            136.9505160616922,
+            122.70865340710603
+          ],
+          "saturated_observations_before_move": [
+            0,
+            6,
+            1
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1000,
+          "t": 29,
+          "delta": [
+            -5.0,
+            20.0,
+            -15.0
+          ],
+          "predicted_mean_gain": 9574.437730368167,
+          "predicted_worst_gain": 1913.955285933438,
+          "actual_gain": -4389.870111261524,
+          "forecast_demand": 9876.666666666666,
+          "actual_future_demand_mean": 10667.714285714286,
+          "estimated_rates": [
+            201.66805084745764,
+            146.90794250095172,
+            172.51752391858795
+          ],
+          "actual_mean_rates": [
+            296.7420076676836,
+            146.58032363448447,
+            126.57305256955574
+          ],
+          "saturated_observations_before_move": [
+            0,
+            9,
+            1
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1012,
+          "t": 39,
+          "delta": [
+            6.0,
+            -4.0,
+            -2.0
+          ],
+          "predicted_mean_gain": 654.0299471329404,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -3321.2433385936874,
+          "forecast_demand": 9430.333333333334,
+          "actual_future_demand_mean": 10355.0,
+          "estimated_rates": [
+            203.2379089615727,
+            154.69531816869514,
+            145.73211045147488
+          ],
+          "actual_mean_rates": [
+            268.3226895561777,
+            131.64928340766383,
+            135.9351726400186
+          ],
+          "saturated_observations_before_move": [
+            0,
+            21,
+            14
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1008,
+          "t": 72,
+          "delta": [
+            -2.5,
+            -2.5,
+            5.0
+          ],
+          "predicted_mean_gain": 20.436095107978165,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -2061.1234928113427,
+          "forecast_demand": 10262.333333333334,
+          "actual_future_demand_mean": 10047.57142857143,
+          "estimated_rates": [
+            203.2881843251176,
+            200.1022096046217,
+            201.15594930777664
+          ],
+          "actual_mean_rates": [
+            256.6370409889628,
+            142.05102187985577,
+            227.97033190315588
+          ],
+          "saturated_observations_before_move": [
+            0,
+            24,
+            21
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1015,
+          "t": 29,
+          "delta": [
+            0.0,
+            -30.0,
+            30.0
+          ],
+          "predicted_mean_gain": 3244.563679237807,
+          "predicted_worst_gain": 99.48498756296635,
+          "actual_gain": -1990.8432587976627,
+          "forecast_demand": 8624.666666666666,
+          "actual_future_demand_mean": 8707.142857142857,
+          "estimated_rates": [
+            200.0,
+            169.7266610050523,
+            134.15902699149984
+          ],
+          "actual_mean_rates": [
+            264.33061502581984,
+            138.39044672183874,
+            137.69479666907472
+          ],
+          "saturated_observations_before_move": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1004,
+          "t": 35,
+          "delta": [
+            0.0,
+            7.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 1070.6585453872542,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -1912.1471672220382,
+          "forecast_demand": 9969.333333333334,
+          "actual_future_demand_mean": 9633.0,
+          "estimated_rates": [
+            200.0,
+            142.8935364238259,
+            166.50582295199416
+          ],
+          "actual_mean_rates": [
+            261.6329705925042,
+            141.84252308988857,
+            141.92684429886822
+          ],
+          "saturated_observations_before_move": [
+            0,
+            11,
+            5
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1009,
+          "t": 37,
+          "delta": [
+            8.0,
+            -2.0,
+            -6.0
+          ],
+          "predicted_mean_gain": 904.8407407407423,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -1351.5200862566062,
+          "forecast_demand": 8897.333333333334,
+          "actual_future_demand_mean": 8932.42857142857,
+          "estimated_rates": [
+            200.0,
+            177.0922951572108,
+            184.90773752323852
+          ],
+          "actual_mean_rates": [
+            269.54412638893484,
+            158.6792056040987,
+            116.81799121779655
+          ],
+          "saturated_observations_before_move": [
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "group": "generated_asymmetric_recovery",
+          "scenario_seed": 1001,
+          "t": 21,
+          "delta": [
+            8.0,
+            -6.0,
+            -2.0
+          ],
+          "predicted_mean_gain": 1327.2777777777783,
+          "predicted_worst_gain": 0.0,
+          "actual_gain": -666.530061697152,
+          "forecast_demand": 9178.333333333334,
+          "actual_future_demand_mean": 9257.57142857143,
+          "estimated_rates": [
+            200.0,
+            172.32361076909385,
+            200.0
+          ],
+          "actual_mean_rates": [
+            273.0949172944255,
+            141.5489272240405,
+            146.47385156440208
+          ],
+          "saturated_observations_before_move": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    "generated_sustained_overload": {
+      "moves": 105,
+      "full_dwell_moves": 99,
+      "truncated_moves": 6,
+      "local_harmful_moves": 13,
+      "local_neutral_moves": 1,
+      "local_beneficial_moves": 85,
+      "local_harm_fraction": 0.13131313131313133,
+      "mean_predicted_gain": 7545.272333641838,
+      "mean_realized_local_gain": 6249.538063547692,
+      "harmful_move_flags": {
+        "future_mean_demand_below_low_forecast": 0,
+        "donor_rate_overestimated_by_over_15pct": 3,
+        "recipient_rate_underestimated_by_over_15pct": 1,
+        "donor_queue_mean_increased": 13,
+        "recipient_at_most_one_saturated_observation": 2
+      },
+      "worst_local_losses": [
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1001,
+          "t": 54,
+          "delta": [
+            -5.0,
+            -15.0,
+            20.0
+          ],
+          "predicted_mean_gain": 9637.22192619765,
+          "predicted_worst_gain": 649.5590127996984,
+          "actual_gain": -7319.832735019794,
+          "forecast_demand": 20489.333333333332,
+          "actual_future_demand_mean": 20236.285714285714,
+          "estimated_rates": [
+            205.55336604930338,
+            211.12653016165194,
+            130.31309951986034
+          ],
+          "actual_mean_rates": [
+            201.89629042967437,
+            203.43094453088426,
+            184.5004546602271
+          ],
+          "saturated_observations_before_move": [
+            44,
+            39,
+            33
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1013,
+          "t": 12,
+          "delta": [
+            -4.0,
+            -2.0,
+            6.0
+          ],
+          "predicted_mean_gain": 3171.5732405369,
+          "predicted_worst_gain": 2022.4306770952317,
+          "actual_gain": -3725.8835450096813,
+          "forecast_demand": 17229.666666666668,
+          "actual_future_demand_mean": 17283.714285714286,
+          "estimated_rates": [
+            196.02193951157258,
+            187.84522618288077,
+            177.08652601805605
+          ],
+          "actual_mean_rates": [
+            181.562902615994,
+            188.3647856501704,
+            187.9202807345948
+          ],
+          "saturated_observations_before_move": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1004,
+          "t": 18,
+          "delta": [
+            -2.5,
+            -2.5,
+            5.0
+          ],
+          "predicted_mean_gain": 1158.9703224363705,
+          "predicted_worst_gain": 265.72897938394453,
+          "actual_gain": -3090.071441091517,
+          "forecast_demand": 16487.666666666668,
+          "actual_future_demand_mean": 19265.428571428572,
+          "estimated_rates": [
+            207.35311756968937,
+            208.5120715210299,
+            199.12928736910555
+          ],
+          "actual_mean_rates": [
+            191.2328427536345,
+            210.8184362202868,
+            206.41799323721298
+          ],
+          "saturated_observations_before_move": [
+            8,
+            0,
+            2
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1008,
+          "t": 30,
+          "delta": [
+            7.0,
+            0.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 6515.390345240636,
+          "predicted_worst_gain": 5096.4378970149555,
+          "actual_gain": -2859.619048643566,
+          "forecast_demand": 16541.333333333332,
+          "actual_future_demand_mean": 17432.714285714286,
+          "estimated_rates": [
+            195.28996078511295,
+            180.56899779516456,
+            189.7713044892927
+          ],
+          "actual_mean_rates": [
+            199.6057872000291,
+            189.02517240640327,
+            153.67445749013052
+          ],
+          "saturated_observations_before_move": [
+            20,
+            18,
+            14
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1000,
+          "t": 11,
+          "delta": [
+            5.0,
+            -2.5,
+            -2.5
+          ],
+          "predicted_mean_gain": 4195.913909737976,
+          "predicted_worst_gain": 1682.7059715035557,
+          "actual_gain": -2810.116407863243,
+          "forecast_demand": 14046.0,
+          "actual_future_demand_mean": 17844.0,
+          "estimated_rates": [
+            179.3683106745986,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            184.69214327321208,
+            211.5312469638045,
+            179.39305198814384
+          ],
+          "saturated_observations_before_move": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1014,
+          "t": 86,
+          "delta": [
+            10.0,
+            -5.0,
+            -5.0
+          ],
+          "predicted_mean_gain": 10262.408389494683,
+          "predicted_worst_gain": 9206.248104507045,
+          "actual_gain": -2163.2583143944503,
+          "forecast_demand": 6289.0,
+          "actual_future_demand_mean": 6334.428571428572,
+          "estimated_rates": [
+            179.4675847316188,
+            200.16826322158417,
+            201.40860798961359
+          ],
+          "actual_mean_rates": [
+            200.47621699067042,
+            204.00699739606168,
+            184.105938858562
+          ],
+          "saturated_observations_before_move": [
+            76,
+            39,
+            26
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1007,
+          "t": 11,
+          "delta": [
+            5.0,
+            -2.5,
+            -2.5
+          ],
+          "predicted_mean_gain": 3512.620307050226,
+          "predicted_worst_gain": 916.5043614900101,
+          "actual_gain": -1948.0537883701,
+          "forecast_demand": 13328.333333333334,
+          "actual_future_demand_mean": 15527.714285714286,
+          "estimated_rates": [
+            180.53346288960714,
+            200.0,
+            200.0
+          ],
+          "actual_mean_rates": [
+            196.01705311257535,
+            206.77797361379626,
+            199.8673861308706
+          ],
+          "saturated_observations_before_move": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1011,
+          "t": 29,
+          "delta": [
+            7.0,
+            -4.0,
+            -3.0
+          ],
+          "predicted_mean_gain": 7777.423604473941,
+          "predicted_worst_gain": 7182.420982474607,
+          "actual_gain": -1864.3072928339825,
+          "forecast_demand": 17537.333333333332,
+          "actual_future_demand_mean": 16616.14285714286,
+          "estimated_rates": [
+            191.93374481089742,
+            196.9206044966304,
+            196.9384061951762
+          ],
+          "actual_mean_rates": [
+            198.9242126000177,
+            183.53388984362437,
+            156.6321883084318
+          ],
+          "saturated_observations_before_move": [
+            19,
+            6,
+            4
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1010,
+          "t": 42,
+          "delta": [
+            0.0,
+            7.0,
+            -7.0
+          ],
+          "predicted_mean_gain": 6751.372323038163,
+          "predicted_worst_gain": 5666.4935762482055,
+          "actual_gain": -1571.4961595934874,
+          "forecast_demand": 17029.0,
+          "actual_future_demand_mean": 17167.0,
+          "estimated_rates": [
+            182.41472065198778,
+            201.387204523771,
+            170.54286113164557
+          ],
+          "actual_mean_rates": [
+            180.76699745823078,
+            210.50429393385775,
+            155.12764555124133
+          ],
+          "saturated_observations_before_move": [
+            32,
+            22,
+            7
+          ]
+        },
+        {
+          "group": "generated_sustained_overload",
+          "scenario_seed": 1012,
+          "t": 27,
+          "delta": [
+            -2.0,
+            6.0,
+            -4.0
+          ],
+          "predicted_mean_gain": 2729.248539223658,
+          "predicted_worst_gain": 2484.898331808072,
+          "actual_gain": -1337.2238945387799,
+          "forecast_demand": 16036.666666666666,
+          "actual_future_demand_mean": 18235.14285714286,
+          "estimated_rates": [
+            199.4866590846359,
+            202.91291225595327,
+            204.90281802919654
+          ],
+          "actual_mean_rates": [
+            198.8146960048469,
+            207.98640971248318,
+            177.768081483699
+          ],
+          "saturated_observations_before_move": [
+            17,
+            14,
+            9
+          ]
+        }
+      ]
+    }
+  },
+  "mean_regression_cases": {
+    "moves": 91,
+    "full_dwell_moves": 89,
+    "truncated_moves": 2,
+    "local_harmful_moves": 25,
+    "local_neutral_moves": 10,
+    "local_beneficial_moves": 54,
+    "local_harm_fraction": 0.2808988764044944,
+    "mean_predicted_gain": 6884.223177719874,
+    "mean_realized_local_gain": 4273.22488990184,
+    "harmful_move_flags": {
+      "future_mean_demand_below_low_forecast": 5,
+      "donor_rate_overestimated_by_over_15pct": 8,
+      "recipient_rate_underestimated_by_over_15pct": 6,
+      "donor_queue_mean_increased": 25,
+      "recipient_at_most_one_saturated_observation": 15
+    },
+    "worst_local_losses": [
+      {
+        "group": "surge_only",
+        "scenario_seed": 1013,
+        "t": 11,
+        "delta": [
+          -7.0,
+          0.0,
+          7.0
+        ],
+        "predicted_mean_gain": 2897.586629507191,
+        "predicted_worst_gain": 1233.0187681353154,
+        "actual_gain": -7027.546947272738,
+        "forecast_demand": 13575.666666666666,
+        "actual_future_demand_mean": 12962.42857142857,
+        "estimated_rates": [
+          216.32439742653725,
+          188.4339662337953,
+          180.82447356172727
+        ],
+        "actual_mean_rates": [
+          200.0620463797179,
+          202.0452178286057,
+          205.57832359645542
+        ],
+        "saturated_observations_before_move": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "group": "surge_only",
+        "scenario_seed": 1010,
+        "t": 11,
+        "delta": [
+          -7.0,
+          0.0,
+          7.0
+        ],
+        "predicted_mean_gain": 5311.411248374553,
+        "predicted_worst_gain": 2507.271852945005,
+        "actual_gain": -5348.357942118972,
+        "forecast_demand": 14024.666666666666,
+        "actual_future_demand_mean": 12733.142857142857,
+        "estimated_rates": [
+          219.60743492999214,
+          197.24151194209242,
+          182.97608736030156
+        ],
+        "actual_mean_rates": [
+          196.85931404446984,
+          199.60867516405776,
+          197.95058358801595
+        ],
+        "saturated_observations_before_move": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "group": "generated_pulsed_short_fault",
+        "scenario_seed": 1004,
+        "t": 14,
+        "delta": [
+          -15.0,
+          20.0,
+          -5.0
+        ],
+        "predicted_mean_gain": 11918.536550159239,
+        "predicted_worst_gain": 8258.225345849773,
+        "actual_gain": -4984.167035089591,
+        "forecast_demand": 20076.333333333332,
+        "actual_future_demand_mean": 8868.714285714286,
+        "estimated_rates": [
+          195.97389962017877,
+          114.33423827288121,
+          200.0
+        ],
+        "actual_mean_rates": [
+          191.23190474665842,
+          181.9586257547851,
+          209.20473080387583
+        ],
+        "saturated_observations_before_move": [
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "group": "generated_switching_fault",
+        "scenario_seed": 1013,
+        "t": 31,
+        "delta": [
+          7.0,
+          0.0,
+          -7.0
+        ],
+        "predicted_mean_gain": 1342.083799406806,
+        "predicted_worst_gain": 138.66116650173058,
+        "actual_gain": -4769.296050804362,
+        "forecast_demand": 10788.0,
+        "actual_future_demand_mean": 10952.714285714286,
+        "estimated_rates": [
+          98.99504808486915,
+          191.77466874814596,
+          200.0
+        ],
+        "actual_mean_rates": [
+          183.979335938539,
+          197.94976580285984,
+          105.34412981820229
+        ],
+        "saturated_observations_before_move": [
+          9,
+          3,
+          0
+        ]
+      },
+      {
+        "group": "generated_switching_fault",
+        "scenario_seed": 1013,
+        "t": 71,
+        "delta": [
+          30.0,
+          0.0,
+          -30.0
+        ],
+        "predicted_mean_gain": 13475.95059457213,
+        "predicted_worst_gain": 8150.484248740875,
+        "actual_gain": -4382.6766845227685,
+        "forecast_demand": 10835.0,
+        "actual_future_demand_mean": 10333.42857142857,
+        "estimated_rates": [
+          89.47295227990438,
+          191.85889004605042,
+          204.04928889848938
+        ],
+        "actual_mean_rates": [
+          178.32193173991038,
+          197.27180575264344,
+          211.0680446270167
+        ],
+        "saturated_observations_before_move": [
+          32,
+          33,
+          13
+        ]
+      },
+      {
+        "group": "generated_pulsed_short_fault",
+        "scenario_seed": 1011,
+        "t": 14,
+        "delta": [
+          -15.0,
+          20.0,
+          -5.0
+        ],
+        "predicted_mean_gain": 12262.774934539673,
+        "predicted_worst_gain": 8689.461600425406,
+        "actual_gain": -2660.973257203441,
+        "forecast_demand": 22788.666666666668,
+        "actual_future_demand_mean": 9115.285714285714,
+        "estimated_rates": [
+          201.2169636385986,
+          116.83519003406875,
+          203.6648746155737
+        ],
+        "actual_mean_rates": [
+          200.0873614624708,
+          185.04085182728,
+          220.66644094609813
+        ],
+        "saturated_observations_before_move": [
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "group": "surge_only",
+        "scenario_seed": 1006,
+        "t": 11,
+        "delta": [
+          -2.5,
+          -2.5,
+          5.0
+        ],
+        "predicted_mean_gain": 2466.5983452383352,
+        "predicted_worst_gain": 1046.886466980537,
+        "actual_gain": -2386.062778765776,
+        "forecast_demand": 13641.333333333334,
+        "actual_future_demand_mean": 13018.142857142857,
+        "estimated_rates": [
+          195.30478530602088,
+          200.0,
+          182.68451509360892
+        ],
+        "actual_mean_rates": [
+          201.80735056829326,
+          200.6505132591589,
+          201.67243885269795
+        ],
+        "saturated_observations_before_move": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "group": "surge_only",
+        "scenario_seed": 1015,
+        "t": 11,
+        "delta": [
+          -2.5,
+          5.0,
+          -2.5
+        ],
+        "predicted_mean_gain": 1800.4991458964957,
+        "predicted_worst_gain": 536.0247512100359,
+        "actual_gain": -2299.9372706870236,
+        "forecast_demand": 13879.666666666666,
+        "actual_future_demand_mean": 12796.57142857143,
+        "estimated_rates": [
+          199.6353370170058,
+          186.2825190173549,
+          200.0
+        ],
+        "actual_mean_rates": [
+          197.22780849852649,
+          204.1793138035113,
+          205.96586204812613
+        ],
+        "saturated_observations_before_move": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "group": "generated_pulsed_short_fault",
+        "scenario_seed": 1011,
+        "t": 31,
+        "delta": [
+          -4.0,
+          -3.0,
+          7.0
+        ],
+        "predicted_mean_gain": 6853.730076938675,
+        "predicted_worst_gain": 1826.2818385562096,
+        "actual_gain": -2042.0182667715162,
+        "forecast_demand": 11332.0,
+        "actual_future_demand_mean": 10209.42857142857,
+        "estimated_rates": [
+          198.11007115708662,
+          199.07082121451424,
+          209.82606399090045
+        ],
+        "actual_mean_rates": [
+          155.27004366174845,
+          199.3743090906496,
+          217.61081176622463
+        ],
+        "saturated_observations_before_move": [
+          11,
+          4,
+          4
+        ]
+      },
+      {
+        "group": "generated_asymmetric_recovery",
+        "scenario_seed": 1015,
+        "t": 29,
+        "delta": [
+          0.0,
+          -30.0,
+          30.0
+        ],
+        "predicted_mean_gain": 3244.563679237807,
+        "predicted_worst_gain": 99.48498756296635,
+        "actual_gain": -1990.8432587976627,
+        "forecast_demand": 8624.666666666666,
+        "actual_future_demand_mean": 8707.142857142857,
+        "estimated_rates": [
+          200.0,
+          169.7266610050523,
+          134.15902699149984
+        ],
+        "actual_mean_rates": [
+          264.33061502581984,
+          138.39044672183874,
+          137.69479666907472
+        ],
+        "saturated_observations_before_move": [
+          0,
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  "terminal_regression_cases": {
+    "moves": 53,
+    "full_dwell_moves": 50,
+    "truncated_moves": 3,
+    "local_harmful_moves": 3,
+    "local_neutral_moves": 1,
+    "local_beneficial_moves": 46,
+    "local_harm_fraction": 0.06,
+    "mean_predicted_gain": 8521.206683895825,
+    "mean_realized_local_gain": 7728.627938625646,
+    "harmful_move_flags": {
+      "future_mean_demand_below_low_forecast": 0,
+      "donor_rate_overestimated_by_over_15pct": 0,
+      "recipient_rate_underestimated_by_over_15pct": 0,
+      "donor_queue_mean_increased": 3,
+      "recipient_at_most_one_saturated_observation": 2
+    },
+    "worst_local_losses": [
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1004,
+        "t": 18,
+        "delta": [
+          -2.5,
+          -2.5,
+          5.0
+        ],
+        "predicted_mean_gain": 1158.9703224363705,
+        "predicted_worst_gain": 265.72897938394453,
+        "actual_gain": -3090.071441091517,
+        "forecast_demand": 16487.666666666668,
+        "actual_future_demand_mean": 19265.428571428572,
+        "estimated_rates": [
+          207.35311756968937,
+          208.5120715210299,
+          199.12928736910555
+        ],
+        "actual_mean_rates": [
+          191.2328427536345,
+          210.8184362202868,
+          206.41799323721298
+        ],
+        "saturated_observations_before_move": [
+          8,
+          0,
+          2
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1000,
+        "t": 11,
+        "delta": [
+          5.0,
+          -2.5,
+          -2.5
+        ],
+        "predicted_mean_gain": 4195.913909737976,
+        "predicted_worst_gain": 1682.7059715035557,
+        "actual_gain": -2810.116407863243,
+        "forecast_demand": 14046.0,
+        "actual_future_demand_mean": 17844.0,
+        "estimated_rates": [
+          179.3683106745986,
+          200.0,
+          200.0
+        ],
+        "actual_mean_rates": [
+          184.69214327321208,
+          211.5312469638045,
+          179.39305198814384
+        ],
+        "saturated_observations_before_move": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1007,
+        "t": 11,
+        "delta": [
+          5.0,
+          -2.5,
+          -2.5
+        ],
+        "predicted_mean_gain": 3512.620307050226,
+        "predicted_worst_gain": 916.5043614900101,
+        "actual_gain": -1948.0537883701,
+        "forecast_demand": 13328.333333333334,
+        "actual_future_demand_mean": 15527.714285714286,
+        "estimated_rates": [
+          180.53346288960714,
+          200.0,
+          200.0
+        ],
+        "actual_mean_rates": [
+          196.01705311257535,
+          206.77797361379626,
+          199.8673861308706
+        ],
+        "saturated_observations_before_move": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1006,
+        "t": 11,
+        "delta": [
+          -7.0,
+          7.0,
+          0.0
+        ],
+        "predicted_mean_gain": 1784.318806864254,
+        "predicted_worst_gain": 44.31011124662473,
+        "actual_gain": 0.0,
+        "forecast_demand": 14116.333333333334,
+        "actual_future_demand_mean": 18574.571428571428,
+        "estimated_rates": [
+          221.71252588864473,
+          192.89607153924055,
+          200.0
+        ],
+        "actual_mean_rates": [
+          216.66680314578304,
+          204.68033578783547,
+          195.08113729224993
+        ],
+        "saturated_observations_before_move": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1006,
+        "t": 21,
+        "delta": [
+          6.0,
+          -4.0,
+          -2.0
+        ],
+        "predicted_mean_gain": 2758.4941013021244,
+        "predicted_worst_gain": 1999.6064060123754,
+        "actual_gain": 154.22119615462725,
+        "forecast_demand": 17869.666666666668,
+        "actual_future_demand_mean": 20892.571428571428,
+        "estimated_rates": [
+          218.27894245209927,
+          199.85318789826397,
+          208.0501723676332
+        ],
+        "actual_mean_rates": [
+          211.19326359492538,
+          213.95230350497536,
+          199.08274789847044
+        ],
+        "saturated_observations_before_move": [
+          11,
+          2,
+          10
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1004,
+        "t": 26,
+        "delta": [
+          7.0,
+          0.0,
+          -7.0
+        ],
+        "predicted_mean_gain": 3653.74840227027,
+        "predicted_worst_gain": 2815.866598607099,
+        "actual_gain": 501.337043003703,
+        "forecast_demand": 19865.666666666668,
+        "actual_future_demand_mean": 17845.428571428572,
+        "estimated_rates": [
+          190.94010752927693,
+          201.5807005767997,
+          199.62518676306712
+        ],
+        "actual_mean_rates": [
+          191.2568414450419,
+          194.0494256653694,
+          189.21083990212566
+        ],
+        "saturated_observations_before_move": [
+          16,
+          1,
+          2
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1007,
+        "t": 19,
+        "delta": [
+          -7.0,
+          0.0,
+          7.0
+        ],
+        "predicted_mean_gain": 4249.25955316719,
+        "predicted_worst_gain": 3777.800135945894,
+        "actual_gain": 748.4286355166041,
+        "forecast_demand": 14815.666666666666,
+        "actual_future_demand_mean": 16166.857142857143,
+        "estimated_rates": [
+          184.17538481763256,
+          202.21212471422447,
+          199.94013316607004
+        ],
+        "actual_mean_rates": [
+          186.53183021561165,
+          196.7809127779019,
+          207.45506414962173
+        ],
+        "saturated_observations_before_move": [
+          9,
+          8,
+          8
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1002,
+        "t": 15,
+        "delta": [
+          5.0,
+          -2.5,
+          -2.5
+        ],
+        "predicted_mean_gain": 1527.8083650134804,
+        "predicted_worst_gain": 206.08114696796838,
+        "actual_gain": 853.400063462992,
+        "forecast_demand": 18562.0,
+        "actual_future_demand_mean": 20474.0,
+        "estimated_rates": [
+          185.84637378551406,
+          198.30706884124007,
+          200.0
+        ],
+        "actual_mean_rates": [
+          190.72481828616534,
+          200.6849719698433,
+          216.39977484702797
+        ],
+        "saturated_observations_before_move": [
+          5,
+          3,
+          0
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1007,
+        "t": 62,
+        "delta": [
+          0.0,
+          7.0,
+          -7.0
+        ],
+        "predicted_mean_gain": 8227.655523172418,
+        "predicted_worst_gain": 7404.705258137896,
+        "actual_gain": 1860.0063137245015,
+        "forecast_demand": 18613.666666666668,
+        "actual_future_demand_mean": 17041.571428571428,
+        "estimated_rates": [
+          192.64099374714004,
+          193.7760932288592,
+          180.43023588312175
+        ],
+        "actual_mean_rates": [
+          183.14957614771146,
+          210.8305217610107,
+          214.30827368151057
+        ],
+        "saturated_observations_before_move": [
+          52,
+          31,
+          28
+        ]
+      },
+      {
+        "group": "generated_sustained_overload",
+        "scenario_seed": 1007,
+        "t": 27,
+        "delta": [
+          6.0,
+          -2.0,
+          -4.0
+        ],
+        "predicted_mean_gain": 5224.749778297109,
+        "predicted_worst_gain": 2885.6648233794476,
+        "actual_gain": 2042.0915624600166,
+        "forecast_demand": 16164.0,
+        "actual_future_demand_mean": 18281.14285714286,
+        "estimated_rates": [
+          185.1248854711457,
+          214.6275977788094,
+          202.56199803116385
+        ],
+        "actual_mean_rates": [
+          183.00607376444236,
+          202.29461759643607,
+          185.1641005956307
+        ],
+        "saturated_observations_before_move": [
+          17,
+          16,
+          9
+        ]
+      }
+    ]
+  },
+  "original_rows_sha256": "db19c7a7d7eb66076423f5feb0b443d372bf5ff86a30e8f2c9fbe19372afc82f",
+  "diagnostic_code_sha256": "89fa102b821c1cf80c8a4b08b6656d64ef22a8fe2dca929fcc5058ee920efc72",
+  "upstream_hashes": {
+    "neuron_flow/__init__.py": "62ef7b355ba00e0a986c51451b252eb3448678b527fa0bc3bfdcf93d2dd81d6f",
+    "neuron_flow/agents.py": "15eab79daba253d8c34c52ed1b39f943ae6e5d08e58564b29f62f4cddf754fa4",
+    "neuron_flow/engine.py": "621e7f45de72831ee53e855cb39831759545369540310e70504c1bd088dc14a9",
+    "neuron_flow/model.py": "e2cf7ce942d3e3a2bd029da5e1f5d049c4861041ccc5741a45dc4727f2d72134",
+    "neuron_flow/storage.py": "59a3f3ed143cf330d74dabc037994c917cb02e594f9e3e2ce84162d06ed87558",
+    "abc_service/__init__.py": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41",
+    "abc_service/frozen.py": "0df444936e90b016e84dfabc9fb30011d76fe591db758d63a35de9f313bb9ea3",
+    "abc_service/_frozen/experiment.py": "83aa8b68b2f68ab83a26ff56a651332878d5355bfff0a7aee985f72b05090342",
+    "abc_service/_frozen/original/ABC.H.txt": "f8a50611ba65a935c2b0079241df3d7f90a0ef7746c647d88d0feb293e33af00",
+    "abc_service/_frozen/action_catalog.json": "a36d6614f1c7af608451e75974c1df23ed68f78f4b098c5badb487a8dafc03eb",
+    "data/load_test_summary_per_minute.csv": "0120255045744fc79008d22e81f72d1e15e28ed0fda81760683119002800f253"
+  },
+  "config": {
+    "nominal_rate": 200.0,
+    "warmup": 5,
+    "dwell": 8,
+    "lookahead": 8,
+    "minimum_staff": 10.0,
+    "saturated_update": 0.7,
+    "unsaturated_prior_reversion": 0.1,
+    "rate_lower_factor": 0.85,
+    "demand_spread": 0.2,
+    "arrival_window": 3,
+    "terminal_weight": 0.25,
+    "relative_gain": 0.02,
+    "absolute_gain": 10.0,
+    "worst_case_regression_fraction": 0.0,
+    "tolerance": 1e-07
+  }
+}

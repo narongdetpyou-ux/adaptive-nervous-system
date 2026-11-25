@@ -1,0 +1,140 @@
+[
+  {
+    "sequence": 97,
+    "event_id": "v4_negative_validation:submitted",
+    "job_id": "v4_negative_validation",
+    "step_id": null,
+    "kind": "job.submitted",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {},
+    "timestamp": 1795592567.7038233
+  },
+  {
+    "sequence": 98,
+    "event_id": "v4_negative_validation:RUNNING:37cc8063e7a94a56bb79bbbbb9157b30",
+    "job_id": "v4_negative_validation",
+    "step_id": null,
+    "kind": "job.running",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": null
+    },
+    "timestamp": 1795592567.7053378
+  },
+  {
+    "sequence": 99,
+    "event_id": "v4_negative_validation:bad:1:RUNNING",
+    "job_id": "v4_negative_validation",
+    "step_id": "bad",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795592567.7066777
+  },
+  {
+    "sequence": 100,
+    "event_id": "v4_negative_validation:independent:1:RUNNING",
+    "job_id": "v4_negative_validation",
+    "step_id": "independent",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795592567.9182446
+  },
+  {
+    "sequence": 101,
+    "event_id": "v4_negative_validation:independent:1:SUCCEEDED",
+    "job_id": "v4_negative_validation",
+    "step_id": "independent",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795592568.1171067
+  },
+  {
+    "sequence": 102,
+    "event_id": "v4_negative_validation:bad:1:FAILED",
+    "job_id": "v4_negative_validation",
+    "step_id": "bad",
+    "kind": "step.failed",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:blocked"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": {
+        "message": "Row accounting failed: total_completed",
+        "type": "OutputValidationError"
+      }
+    },
+    "timestamp": 1795592569.9237254
+  },
+  {
+    "sequence": 103,
+    "event_id": "v4_negative_validation:blocked:0:BLOCKED",
+    "job_id": "v4_negative_validation",
+    "step_id": "blocked",
+    "kind": "step.blocked",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 0,
+      "error": {
+        "message": "A required step did not succeed",
+        "type": "DependencyFailed"
+      }
+    },
+    "timestamp": 1795592569.927334
+  },
+  {
+    "sequence": 104,
+    "event_id": "v4_negative_validation:FAILED:94cf9feafcfb4934af7af9aa0a2be0a1",
+    "job_id": "v4_negative_validation",
+    "step_id": null,
+    "kind": "job.failed",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": {
+        "bytes": 431,
+        "path": "/workspace/scratch/faa307b55489/ANS_v040_reproduction_run/workspace/reports/v4_negative_validation.json",
+        "sha256": "3ca0117ebfb2b6087d9badf5d36c58f4a5b473f34b730be728d3460d970eed1c"
+      }
+    },
+    "timestamp": 1795592569.931258
+  }
+]

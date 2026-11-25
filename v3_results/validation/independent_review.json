@@ -1,0 +1,77 @@
+{
+  "version": "0.3.0",
+  "split": "validation",
+  "scope": {
+    "scenarios_checked": 352,
+    "regimes_checked": 3,
+    "scenario_regime_pairs": 1056,
+    "episodes_checked": 8448,
+    "original_minutes": 672768,
+    "followup_minutes": 270336,
+    "simulated_minutes": 943104
+  },
+  "checks": {
+    "frozen_v3_and_parent_v2_identity_verified": true,
+    "upstream_sources_verified": true,
+    "environment_manifest_verified": true,
+    "row_trace_summary_receipt_hashes_verified": true,
+    "csv_rows_match_json": true,
+    "full_row_scope_and_accounting_verified": true,
+    "independent_point_statistics": {
+      "aggregate_point_means_checked": 3780,
+      "paired_primary_comparisons_checked": 336,
+      "static_relative_cvar_point_values_checked": 252,
+      "scope": "Independent scalar point calculations; bootstrap intervals remain those in the frozen statistical artifact"
+    },
+    "independent_scalar_physical_replay": {
+      "traces": 198,
+      "minutes": 22104,
+      "scope": "Original H and all32 follow-up intervals; active/committed/pending resources, activation time, flow, accounting and censoring"
+    },
+    "observation_only_controller_replay": {
+      "traces": 99,
+      "decisions": 11052,
+      "all_actions_and_full_evidence_match": true,
+      "by_policy": {
+        "v3_full": {
+          "traces": 33,
+          "decisions": 3684
+        },
+        "v3_signal_only": {
+          "traces": 33,
+          "decisions": 3684
+        },
+        "capacity_balance": {
+          "traces": 33,
+          "decisions": 3684
+        }
+      },
+      "inputs": "Current observed queue and arrival, prior observed queues, committed allocation; after decision, active allocation/completed flow/end queue. No true rates or future schedule."
+    },
+    "generated_underload": {
+      "episodes_checked": 96,
+      "nonzero_cases": [],
+      "passed": true
+    }
+  },
+  "representative_transfer_exposure": {
+    "observed_resource_minutes": 13022.0,
+    "future_resource_minutes_after_observation_window": 0.0,
+    "identity": "Observed plus unobserved exposure equals total transferred units times physical delay for each trace"
+  },
+  "review_metadata": {
+    "script": "review_v3_results.py",
+    "script_sha256": "8d1be63119b40d43a1b823924c5dd855dc26ae587cd0c1335384a47b8b6cf47a",
+    "protocol_sha256": "62ff3968ad9a27b8ccaf732301efc1fa4eba785de2cd57308f0c3d8ccdd1e054",
+    "summary_sha256": "557c6316b1e21ba03029d7fc277f0774661d3bcb6cd647414f247444b92ea8bb",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scope": "Saved-evidence replay and point-statistic verification only; no fresh policy experiment, tuning or changed acceptance threshold"
+  },
+  "limitations": [
+    "Full physical replay covers198prespecified representative traces, not all8448rollouts; every rollout has inline and summary invariants.",
+    "Observation replay covers the99prespecified traces for the three new deterministic controllers; oldV2andABCbehavior is covered by frozen sources, original tests, and physical replay.",
+    "Bootstrap intervals are produced by the frozen statistical module; this independent review recomputes point means and risks without claiming an independent interval implementation.",
+    "An implementation/replay pass is separate from the engineering acceptance decision. See decision.json for all failed criteria."
+  ]
+}

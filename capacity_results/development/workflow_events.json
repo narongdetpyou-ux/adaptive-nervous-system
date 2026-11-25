@@ -1,0 +1,319 @@
+[
+  {
+    "sequence": 1,
+    "event_id": "capacity_v020_development:submitted",
+    "job_id": "capacity_v020_development",
+    "step_id": null,
+    "kind": "job.submitted",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {},
+    "timestamp": 1795565328.073201
+  },
+  {
+    "sequence": 2,
+    "event_id": "capacity_v020_development:RUNNING:7c26fff558ac42349beeafee99363c32",
+    "job_id": "capacity_v020_development",
+    "step_id": null,
+    "kind": "job.running",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": null
+    },
+    "timestamp": 1795565328.0745306
+  },
+  {
+    "sequence": 3,
+    "event_id": "capacity_v020_development:static:1:RUNNING",
+    "job_id": "capacity_v020_development",
+    "step_id": "static",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.075914
+  },
+  {
+    "sequence": 4,
+    "event_id": "capacity_v020_development:maxweight:1:RUNNING",
+    "job_id": "capacity_v020_development",
+    "step_id": "maxweight",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.2003243
+  },
+  {
+    "sequence": 5,
+    "event_id": "capacity_v020_development:abc:1:RUNNING",
+    "job_id": "capacity_v020_development",
+    "step_id": "abc",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.321953
+  },
+  {
+    "sequence": 6,
+    "event_id": "capacity_v020_development:static:1:SUCCEEDED",
+    "job_id": "capacity_v020_development",
+    "step_id": "static",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.5021522
+  },
+  {
+    "sequence": 7,
+    "event_id": "capacity_v020_development:abc_guard:1:RUNNING",
+    "job_id": "capacity_v020_development",
+    "step_id": "abc_guard",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.5054526
+  },
+  {
+    "sequence": 8,
+    "event_id": "capacity_v020_development:maxweight:1:SUCCEEDED",
+    "job_id": "capacity_v020_development",
+    "step_id": "maxweight",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.5444849
+  },
+  {
+    "sequence": 9,
+    "event_id": "capacity_v020_development:abc_capacity:1:RUNNING",
+    "job_id": "capacity_v020_development",
+    "step_id": "abc_capacity",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.548956
+  },
+  {
+    "sequence": 10,
+    "event_id": "capacity_v020_development:abc_capacity:1:RETRY_WAIT",
+    "job_id": "capacity_v020_development",
+    "step_id": "abc_capacity",
+    "kind": "step.retry_wait",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": {
+        "message": "Controlled first-attempt failure before any simulation",
+        "type": "TransientAgentError"
+      }
+    },
+    "timestamp": 1795565328.5607939
+  },
+  {
+    "sequence": 11,
+    "event_id": "capacity_v020_development:capacity_aware:1:RUNNING",
+    "job_id": "capacity_v020_development",
+    "step_id": "capacity_aware",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.5626826
+  },
+  {
+    "sequence": 12,
+    "event_id": "capacity_v020_development:abc:1:SUCCEEDED",
+    "job_id": "capacity_v020_development",
+    "step_id": "abc",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.8695235
+  },
+  {
+    "sequence": 13,
+    "event_id": "capacity_v020_development:abc_capacity:2:RUNNING",
+    "job_id": "capacity_v020_development",
+    "step_id": "abc_capacity",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795565328.8749404
+  },
+  {
+    "sequence": 14,
+    "event_id": "capacity_v020_development:abc_guard:1:SUCCEEDED",
+    "job_id": "capacity_v020_development",
+    "step_id": "abc_guard",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565328.921061
+  },
+  {
+    "sequence": 15,
+    "event_id": "capacity_v020_development:capacity_aware:1:SUCCEEDED",
+    "job_id": "capacity_v020_development",
+    "step_id": "capacity_aware",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565330.0128074
+  },
+  {
+    "sequence": 16,
+    "event_id": "capacity_v020_development:abc_capacity:2:SUCCEEDED",
+    "job_id": "capacity_v020_development",
+    "step_id": "abc_capacity",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "step:comparison"
+    ],
+    "payload": {
+      "attempt": 2,
+      "error": null
+    },
+    "timestamp": 1795565335.2446194
+  },
+  {
+    "sequence": 17,
+    "event_id": "capacity_v020_development:comparison:1:RUNNING",
+    "job_id": "capacity_v020_development",
+    "step_id": "comparison",
+    "kind": "step.running",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565335.2477489
+  },
+  {
+    "sequence": 18,
+    "event_id": "capacity_v020_development:comparison:1:SUCCEEDED",
+    "job_id": "capacity_v020_development",
+    "step_id": "comparison",
+    "kind": "step.succeeded",
+    "audience": [
+      "soma",
+      "monitor"
+    ],
+    "payload": {
+      "attempt": 1,
+      "error": null
+    },
+    "timestamp": 1795565335.395136
+  },
+  {
+    "sequence": 19,
+    "event_id": "capacity_v020_development:SUCCEEDED:ab4b0a980504462fa8b3ab8d951634ea",
+    "job_id": "capacity_v020_development",
+    "step_id": null,
+    "kind": "job.succeeded",
+    "audience": [
+      "soma",
+      "monitor",
+      "terminal"
+    ],
+    "payload": {
+      "error": null,
+      "receipt": {
+        "bytes": 216518,
+        "path": "/workspace/scratch/faa307b55489/Adaptive_Nervous_System_v020/capacity_results/development/workspace/reports/capacity_v020_development.json",
+        "sha256": "d4b2ab1b77b4fc4275e14ccb1dea422190305839b5d5aa8b1b8b6025dc44e2c2"
+      }
+    },
+    "timestamp": 1795565335.4046767
+  }
+]

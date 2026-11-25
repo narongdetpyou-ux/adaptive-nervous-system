@@ -1,0 +1,84 @@
+{
+  "status": "Declared and accepted by root before any v0.4 development outcomes; fixed throughout development and validation.",
+  "declared_at_utc": "2026-11-25T06:10:24.498677+00:00",
+  "candidate": "v4_hybrid",
+  "tolerance_absolute": 1e-06,
+  "primary": {
+    "regime": "delayed_noisy",
+    "baseline": "v3_full",
+    "metric": "static-relative positive-harm CVaR90 of original-H mean demand deficit",
+    "condition": "paired-bootstrap lower endpoint of the 95% CI for R_v3_full minus R_v4_hybrid is strictly greater than zero",
+    "point_when_both_zero": "This superiority criterion does not pass merely because both risks are zero."
+  },
+  "risk_point_nonworsening": {
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
+    "baselines": [
+      "v3_full",
+      "capacity_v2",
+      "capacity_balance"
+    ],
+    "condition": "R_v4_hybrid <= R_baseline + tolerance_absolute in every regime for every listed baseline",
+    "scope": "Engineering point checks, not statistical tail-risk noninferiority claims; no positive risk margin."
+  },
+  "mean_noninferiority": {
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
+    "baselines": [
+      "capacity_v2",
+      "capacity_balance"
+    ],
+    "margin_fraction": 0.05,
+    "statistic": "1.05 * mean(M_baseline) - mean(M_v4_hybrid)",
+    "condition": "paired-bootstrap lower endpoint of the 95% CI for the statistic is >= 0 in every regime for each baseline, within tolerance_absolute",
+    "scope": "The same candidate is compared separately with both fixed baselines; do not choose the empirically best baseline after outcomes."
+  },
+  "loss_and_endpoint_point_nonworsening": {
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
+    "baselines": [
+      "capacity_v2",
+      "capacity_balance"
+    ],
+    "metrics": [
+      "total_dropped",
+      "end_deficit",
+      "tail_auc_deficit"
+    ],
+    "condition": "candidate point mean <= baseline point mean + tolerance_absolute in each regime, for each metric and baseline",
+    "metric_scopes": {
+      "total_dropped": "all original H plus the fixed 32-minute follow-up",
+      "end_deficit": "original-H terminal offered minus completed",
+      "tail_auc_deficit": "sum of offered-minus-completed deficit over the fixed 32 follow-up minutes"
+    }
+  },
+  "integrity": {
+    "condition": "All required unit tests, frozen identities, full episode accounting, source/sensor/observation boundary audit, paired scope checks, and independent representative replay checks pass."
+  },
+  "underload": {
+    "group": "generated_underload",
+    "policy": "v4_hybrid",
+    "condition": "Every underload case in every regime has zero dropped work and zero moves over original H plus follow-up, within tolerance_absolute",
+    "scope": "Retained work, pipeline work and demand deficit may be positive due to declared flow timing; zero backlog is not required."
+  },
+  "advancement": "Every primary, risk point, mean noninferiority, loss/endpoint, integrity and underload condition must pass. Report every failed condition. Criteria cannot be relaxed using development or validation outcomes.",
+  "inference_scope": "One predeclared primary CVaR comparison in the final realism regime. The global decision also uses the listed engineering intersection and mean-noninferiority checks. Secondary, source, family and ablation intervals are descriptive and unadjusted; no universal safety or deployment claim."
+}

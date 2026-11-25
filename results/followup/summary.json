@@ -1,0 +1,63 @@
+{
+  "scenarios": 40,
+  "episodes": 320,
+  "minutes": 19200,
+  "overall": {
+    "static": {
+      "mean_backlog": 8371.474594556466,
+      "peak_backlog": 44339.23415892952,
+      "end_backlog": 0.0,
+      "completed": 177334.175,
+      "moves": 0
+    },
+    "maxweight": {
+      "mean_backlog": 15077.703355483773,
+      "peak_backlog": 59283.27805937461,
+      "end_backlog": 314.22522601291166,
+      "completed": 177019.9497739871,
+      "moves": 7
+    },
+    "abc": {
+      "mean_backlog": 12504.107703498586,
+      "peak_backlog": 54455.462808642784,
+      "end_backlog": 568.8326527003225,
+      "completed": 176765.34234729968,
+      "moves": 7
+    },
+    "abc_guard": {
+      "mean_backlog": 8669.154539010839,
+      "peak_backlog": 42212.69092110745,
+      "end_backlog": 41.87986466699612,
+      "completed": 177292.295135333,
+      "moves": 2.675
+    }
+  },
+  "guard_vs": {
+    "static": {
+      "wins": 20,
+      "ties": 1,
+      "losses": 19,
+      "reduction_pct": -3.555884224362789
+    },
+    "maxweight": {
+      "wins": 38,
+      "ties": 0,
+      "losses": 2,
+      "reduction_pct": 42.50348123570252
+    },
+    "abc": {
+      "wins": 35,
+      "ties": 0,
+      "losses": 5,
+      "reduction_pct": 30.669546803525588
+    }
+  },
+  "max_mass_error": 9.913492249324918e-11,
+  "max_budget_error": 0.0,
+  "protocol_sha256": "852f6cba9b5a412df8ef001934bf95f15557b8fc1f1cfb98ca1914a240956eb6",
+  "frozen_hashes": {
+    "experiment.py": "83aa8b68b2f68ab83a26ff56a651332878d5355bfff0a7aee985f72b05090342",
+    "original/ABC.H.txt": "f8a50611ba65a935c2b0079241df3d7f90a0ef7746c647d88d0feb293e33af00",
+    "action_catalog.json": "a36d6614f1c7af608451e75974c1df23ed68f78f4b098c5badb487a8dafc03eb"
+  }
+}

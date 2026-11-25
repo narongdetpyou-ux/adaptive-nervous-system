@@ -1,0 +1,986 @@
+{
+  "version": "0.3.0",
+  "split": "development",
+  "scenario_count": 44,
+  "scenario_regime_pairs": 132,
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003
+  ],
+  "regime_delays_minutes": {
+    "instant": 0,
+    "transit_1": 1,
+    "transit_3": 3
+  },
+  "followup": {
+    "minutes": 32,
+    "arrivals": "zero",
+    "productivity": "constant last true original-horizon row",
+    "scope": "modeling assumption; future arrivals, productivity and terminal schedule hidden from policy"
+  },
+  "cases": [
+    {
+      "group": "surge_only",
+      "scenario_seed": 1000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 170900.0,
+      "arrivals_sha256": "c7e555704f39d50749aaa7e8dcedf728b4c5dfe0a533bd0b981215a09f9a317e",
+      "productivity_sha256": "11d62decf670b94c9dedab62ad78dad210fb7fe67abdf6067ddf5db98cfb85b5",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "eb504cdb06ee4741638864a03af0f42bd9da59747097c743f36965cd66c7889a",
+      "extended_productivity_sha256": "b626feeb0651ae401a9c76cfbc9eacdcb389ffd3181fd4ff0d0341d794595e73"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 1001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 174689.0,
+      "arrivals_sha256": "a1e68bcade909cd9ae2dc00759c0cc42caf7397d311c26940e6adec6ece154a8",
+      "productivity_sha256": "5056b26494ca95958757a63e09da25edb92aed72ec8e16d2ddc05da932d4cce7",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "58cdad085b00d759b7aebe8ca1352072d70b7624831cd3d1f8521c5f581dc50e",
+      "extended_productivity_sha256": "a30bc6d42d611090fc59945724cf7fbaf3e64e603e1741e05fbc4b0c7c5a17ad"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 1002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 176967.0,
+      "arrivals_sha256": "ff3ffd9adb94964e20983effdff430d8312c83752d3435407598ed7185b408f0",
+      "productivity_sha256": "a4b4bb5c7a2c36d7f1af9b16943e4fa658747f408e18e5635e7b4e15664a5c5b",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "a8b93e4e71e92e99faa316d7f9d3a004fe26817fa66644cfee9c8bb3d0fff0a5",
+      "extended_productivity_sha256": "2fcbd1a651f8eda58d0a0e3343472ecf3b29ce2934960b2bc802241eae8d6948"
+    },
+    {
+      "group": "surge_only",
+      "scenario_seed": 1003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 175406.0,
+      "arrivals_sha256": "56f962aa6e9c958e3c42b910d4106526680ed549c6d681ad60e946538fbef9be",
+      "productivity_sha256": "238f5bc2fb12d2413a73af4fc86473f3835039a130a056a5ed5561f11948f65e",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "d9faa81c181b18dae0d60b6f0cf53e8b9dd2ecb68d7bfc5db8700ec86e99d3d3",
+      "extended_productivity_sha256": "74e54072a3dd66c3c39de0ed4068aaf142edb20cc38cfc55512fcfe5ebe146e1"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 1000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 162135.0,
+      "arrivals_sha256": "770a6d018d65d0369a0cae2552ad2372b6eb21f8a143b4971f28efd917dc06d3",
+      "productivity_sha256": "a0effe45dc68aee623aab461e27fb0e6a30771d4a2edd904afc92805df7355be",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "432b03ef856e22aa074049ab3af12d980b70bfb55969d344e71c26ce5e7cc92c",
+      "extended_productivity_sha256": "c73fa1de8fad5c9facc9ec4dc2e6b2f38253f1e94b080b247d1ecd3c4b0af39a"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 1001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 158145.0,
+      "arrivals_sha256": "5b6fa463e1d473c381e6899164f5232e1ff7dab2cf19b538060b21bfca1b80f4",
+      "productivity_sha256": "99971a1ee83ffaa18bf37f65431b69b746c393cb5f987d4b9621a31ea139de99",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "e76325969b91c99e14551d42e5e29d39ea1ba514175c5d64042fb6da4c7604a7",
+      "extended_productivity_sha256": "aafbafabaa790199d89ae4977e719de39fe57a012756c45ae02c03be70210cae"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 1002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 203413.0,
+      "arrivals_sha256": "c6a67d6bc5fbbcf711932a5021f4dfdf05d3b482a56dfbf9a88d3fd5318f9151",
+      "productivity_sha256": "10fbb13f5d0e09669f8524688cfbb51785a610a07fa6e300f53b33ffb3e5ab8c",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "e492f1fda087cf5a790b4b767272901e77e990c1c9a998a9cd5974e3a14bdaf1",
+      "extended_productivity_sha256": "96d1de4518b90c26e420ad74ec8b57f339e2302edc660aae4e6db7d245c0c6c8"
+    },
+    {
+      "group": "ingress_slow",
+      "scenario_seed": 1003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 167437.0,
+      "arrivals_sha256": "d636f90fdc3ec878eb1018f638dfdfdb9bc0624ba93de82093d452a187f58fdd",
+      "productivity_sha256": "4650df3a49881c8c4695572ed6b523f13a6550c8bd08b2a428492e5d43af2a8f",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "ae00f3fa1fa77432cf6a3c55b1f58a0a982cd8b6942715a7ab62c1b4adc526e4",
+      "extended_productivity_sha256": "3a63b092380e1b925627c40c2a02fb049f1c6a618996fc9980edcc82ce8926e7"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 1000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 160185.0,
+      "arrivals_sha256": "b8c38d737211279325eac6d37b22d0929594ca7540a3d2db1571739f2a400709",
+      "productivity_sha256": "7a11ec5acda535dae8f5dda812057e317b30a03156c21b1aef06c3a146ec4762",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "5f7697c248eb84bd5f0bc33176405469787d40a894dfb5b98cee5f523dc519fc",
+      "extended_productivity_sha256": "52a42cff06fbca90f9b1be2e1692261498618654f6cdcbca43e24bee4365213e"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 1001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 189303.0,
+      "arrivals_sha256": "3e90fa7086aa4d34b51fa3efa3298c6cdc76221aadc620bb6e0e7e41b0d8bfc9",
+      "productivity_sha256": "e06035cf146f913dc57a91c556542f26212c5c6677a7043d8613830f5e457f78",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "28fca6e2a9e3f6b43d547845db254c39fd2ca9b6c32cefeaf0b8a4363762ca36",
+      "extended_productivity_sha256": "73f487f1c17264635a56611e08e0cc2d38560d5c167f98b856038af80395f42a"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 1002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 185884.0,
+      "arrivals_sha256": "9122a70fe60d2341cc1e2fda3a1c0948d28a6c7298565e9d821febfc787754d4",
+      "productivity_sha256": "38da1ad775522a88c0dcda6482b35b36cc683780efdb8e3876229f44dc10f0cf",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "7d9667a7e88373d593ef3f23f826f3c95d8ae2640ff398dcef7207f888a1a234",
+      "extended_productivity_sha256": "c5673c884236e6b0fef11631b65e6d36f34de5a091305c91c362138f43e4c677"
+    },
+    {
+      "group": "processing_slow",
+      "scenario_seed": 1003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 157706.0,
+      "arrivals_sha256": "5ac66e24e673a46f2836ee05b82a2af183d88a6683030e8b200cd008b8aea30f",
+      "productivity_sha256": "1fecd0ec1d2103b34e973713a8e5112160f55f208be56c44fcee5d27a85ffbf4",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "427341f2d1b96b87813787728d7e8b3241dd2925d1ac7bd502a49313afc1b280",
+      "extended_productivity_sha256": "1e7b93c3ef5fd720492fd59dca9df840bcfd658d9b21c2ba9d41dd6ee8fe5dd0"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 1000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 186595.0,
+      "arrivals_sha256": "4e96d508aa2a322a49e7fb7330860ccea34168a76a89b35ca5cc0bfce987fae3",
+      "productivity_sha256": "2996b38e7182d2410430fc2bea3c50bcce03c688ee2d835aac2a6f53414f3144",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "cb081d56858ad2d457f88bd475d770a97aaf7214aab758ea85e28ec13d1496d0",
+      "extended_productivity_sha256": "6db52e43c3e8d548efcdaa02f31d5043cf716834de113a972d952ab95030e1c3"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 1001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 189826.0,
+      "arrivals_sha256": "de00ee185ea519041fb8aa8b180ebfe0fc9ed65568ed656019d2d3652bcf25be",
+      "productivity_sha256": "4eaf186575f60ac51f4653dd66dd8273d576413f3aedc9ca4f2e090ddbdbd548",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "15c4eeabdd29e29284e39c3734930c7be3d4201361818ace7e5ce1f407811822",
+      "extended_productivity_sha256": "70f21c2725d71b94f1db37c5f8c24b81d02f090c9d13603381c17c2ef06cdf09"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 1002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 160429.0,
+      "arrivals_sha256": "4309b45759b398cf85054e7c9fb20d91464621097ebda84c52023569ef1b7e92",
+      "productivity_sha256": "22dd2d26ca585875c1fa8ea9d05b6347eeed68e38f44112f8d474be57b6fa435",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "4c13abcc11494e6d1ea2a000b74da16010c10ace3cf44505b9929db2a949d916",
+      "extended_productivity_sha256": "62561c9dcef2b374f3116d93f9e49dc72cff4d32afc0cf4e0e36cad1d053e5d7"
+    },
+    {
+      "group": "delivery_slow",
+      "scenario_seed": 1003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 166389.0,
+      "arrivals_sha256": "94ebb0ec3d5fbe8116758c60a94997b42dd9869f74a13dc6d087e22c208143a1",
+      "productivity_sha256": "50835c3f8885a45887d11332d48317aba729da50edd47fd6e92a739c42380c94",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "2c0e94041d645167311f79515d1b391e1bb752857062ace1f6cc41b022602f92",
+      "extended_productivity_sha256": "ee4ef137cc6ce474db46c1eac611e04362e415cd986f8429fa5d4e0dea734295"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 1000,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 163514.0,
+      "arrivals_sha256": "14ddea179a5add8ffbc0cc73c22010769f12d589cc7c3445a465db1d688ceb14",
+      "productivity_sha256": "fbe477ebbd39b809c8b8b5b72128a63bf8e046dd04677cd869117dad5e5bfe2c",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "f22b8e99d418254c0b3ee21bc8d3a49c84127e20612e2871cb1fb9df2d36ca17",
+      "extended_productivity_sha256": "5f4c6095a715f6e9235bb71930ba0b3299656f249f96dc54238ebe98f3b20bd2"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 1001,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 191540.0,
+      "arrivals_sha256": "fd24fb9bc8487f87e73890c7293bf81a9950eaddc932ce3f14370f4cd35fa8c4",
+      "productivity_sha256": "74a7172040848192b2fb62201fd1c7c4f8b5f761b68e231f70e888b02327c328",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "cdd64883113448fb674a79175553f23409c69f7aab40ecee7ad565024a971feb",
+      "extended_productivity_sha256": "632684e8dac518c110bdf73dacd556eb09e2eb13b3ccb7375b52c732ca18c61d"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 1002,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 193492.0,
+      "arrivals_sha256": "354ee3daedc4c1de055bb3ddc61921a461a8f579549fa570e4bf7da393464fa9",
+      "productivity_sha256": "85bacdfbec3e3f9722746dd8c516aa26b42a8f7241dab77b2627660456f6441d",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "6e8db15b99366df62f30f17a4ce60fe861f7f2d177ec6e9f9cc52955f375bd6f",
+      "extended_productivity_sha256": "ed1766ecaf7866f29818ae8979595bdd58c62494ee00f1a3164bb8b26b7da1b7"
+    },
+    {
+      "group": "shifting_bottleneck",
+      "scenario_seed": 1003,
+      "source": "legacy_flash",
+      "horizon": 60,
+      "arrivals_total": 183225.0,
+      "arrivals_sha256": "624108bb2adeaae88aa466d74781530a65179a1f132a2f3ccea297dd85b55acf",
+      "productivity_sha256": "e33ef2e04466a3197d181a0f2a486bccbbc39c62bedc022975df4400743de80d",
+      "metadata": {
+        "generation": "unchanged original Flash Sale generator; v0.3 seed split",
+        "trace": "data/load_test_summary_per_minute.csv"
+      },
+      "original_horizon": 60,
+      "followup_minutes": 32,
+      "total_horizon": 92,
+      "extended_arrivals_sha256": "9c8f21f4c26300fb684dff598fc298cd13b2d7981c1b6f96fa8fe7f310c56636",
+      "extended_productivity_sha256": "8a575652b301176e2ba80fe8691133f2a27aafdd9c92e57aba99c5fb43c53211"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 1000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 446026.0,
+      "arrivals_sha256": "74df14c4de4ad5574231847df3335d098b24e2bbbab1b3b88ee38ac26e2d6e77",
+      "productivity_sha256": "991f6713c71586fe60aa22edf91f59421d058b5216f8ff269fcc5d3006104ed2",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.053847196188301,
+        "stage_productivity_scale": [
+          0.961526077896532,
+          1.0128517170133309,
+          0.944076404797616
+        ],
+        "fault_factor": 0.5780850113874119,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "7508c44bd25fdbe0dca77e4f7efae3f92a08992494fc9070be586525004a0067",
+      "extended_productivity_sha256": "d51fe7abb0b12ce293276b4d9a485020fc29b8e8c8abed77b28776ac12cf6d65"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 1001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 404979.0,
+      "arrivals_sha256": "3084cef091cbbd6ef690796013568e28d89bec605d2f5e1c27283520bd42b18a",
+      "productivity_sha256": "28da3409356b73d9c726641894804d2702f2f7fa114f6a4b981444259cc34a75",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9640770504150694,
+        "stage_productivity_scale": [
+          1.043432424799829,
+          1.0591689984229573,
+          1.0078363530192749
+        ],
+        "fault_factor": 0.5205041164155333,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "4a7916277af9884cd1285358c11e76e0e50e2cf3187fa12a0e2a02732d3032f0",
+      "extended_productivity_sha256": "673de9245fb0b7b847723c9054b90c484cf3884de8609c031230e7f353f77946"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 1002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 426627.0,
+      "arrivals_sha256": "f39d191fed217b90aeb07f4c94c814a69c146a0c77696183ed9138289d4a0faf",
+      "productivity_sha256": "5cfc3d8c8a97879ffb99eb47e75ea06acc681870a4a86170166c10074de851d4",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0180585391366208,
+        "stage_productivity_scale": [
+          1.0380495231826843,
+          0.9589267724641145,
+          1.0028387172674185
+        ],
+        "fault_factor": 0.460226865072177,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "5a7ab5f445fedf9a46e4689ed8ca81b1f6fd8e82bfe9ccd627ba165b9173bdb1",
+      "extended_productivity_sha256": "be2a9a8d1d069c1822eb4ee15e8d3e6029e73327382e71fffb28dcaf24279309"
+    },
+    {
+      "group": "generated_underload",
+      "scenario_seed": 1003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 422261.0,
+      "arrivals_sha256": "726487f240cdf2fe0470b20af298213b5149406fa1aef3aaba3bb15859e12d17",
+      "productivity_sha256": "d087b239505c31ea8cdda779fafe54a195e6bfe0318cad4c09d46072be0d17e0",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9979113795696971,
+        "stage_productivity_scale": [
+          1.0595772484916397,
+          0.9660778772644745,
+          1.0020908918994929
+        ],
+        "fault_factor": 0.42976130959465136,
+        "events": "moderate stage-1 slowdown [24,44), zero arrivals [64,72); ample capacity"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "911562c2e5a5854b3612a9177d0b90d11b7126375c2198cdb2a45e1a33430302",
+      "extended_productivity_sha256": "00a81bde8cde4aa991dc34a361cbe1e3e8a54bd99dedfe4a710b9f3ff0268279"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 1000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 869687.0,
+      "arrivals_sha256": "2b2999f55ab719d81d747b811d9b810a277e34d7d08fe1f616143d2899f79389",
+      "productivity_sha256": "be7362fee9d8c23f0a2fb5b616a3bd8edf228b2b04c1eecbc6550dbab101e1b3",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.073983918465919,
+        "stage_productivity_scale": [
+          0.9857245110488532,
+          0.9201093428249317,
+          0.9285961658803212
+        ],
+        "fault_factor": 0.5578763822524806,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "9aa0765e42705edb9d81254c5f2e61701b2e28fbdfd2b91276113e98d818db3c",
+      "extended_productivity_sha256": "6ebb982ac07fab715eb75ac58aee3cd8efa5418cb63c75e2d9bf1056fadfbdcb"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 1001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 829394.0,
+      "arrivals_sha256": "a57d95576bb8db36312ab27f7d2e43ab4edf30637334e60e20048f708e25e058",
+      "productivity_sha256": "35975b9a5ac0c002d956e60f680e93f1ee215fb73b56052d3185dd112a0601da",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0225752500618828,
+        "stage_productivity_scale": [
+          0.9942071995119767,
+          1.071771704099956,
+          1.0001310153553744
+        ],
+        "fault_factor": 0.5420936496112041,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "e5b374d1669c24c1587906e21501bf05345d787a055cf5c220a0ba21f551a1c8",
+      "extended_productivity_sha256": "91f855f18966885c6dd72af8fa08e909d5a9d0306065a7823bc1677bd2d3275f"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 1002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 848002.0,
+      "arrivals_sha256": "fc82a3c4a0d27e4d263698e1a92f10be24731f617b84ef951b7f92069ca2a68e",
+      "productivity_sha256": "2678a740c77256c98904fa0df384689db0b0c09528b84c85601a4083dd9e2a93",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.033091445815873,
+        "stage_productivity_scale": [
+          1.0433481730901133,
+          1.0668907351910515,
+          1.0465452416284087
+        ],
+        "fault_factor": 0.4402187149877624,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "bc8c3c833d97b01ab5f6ee2b90c6db674fe89feeb7ee05e01aa967b33ff05fee",
+      "extended_productivity_sha256": "17bb8c2d95473f31a03b372a5072324e1caecf5b67a4eea0fa8d7ea77a45beec"
+    },
+    {
+      "group": "generated_sustained_processing_fault",
+      "scenario_seed": 1003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 847180.0,
+      "arrivals_sha256": "251793738230f9af5c4984bc3ac76c2343ab2e1e97f4d886200fc2ba727f389d",
+      "productivity_sha256": "9d979efc00b6e75214790faf920973ef8a755bfbe380a333cb0331e9685de9f8",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0216322627501497,
+        "stage_productivity_scale": [
+          0.9834619410632336,
+          1.0386230968203112,
+          1.0579296015437214
+        ],
+        "fault_factor": 0.5422756894952084,
+        "events": "stage-1 fault [16,64); high load [12,72), low-load recovery"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "948c75e43e866926a83b20d44e20bcf302d81d93c9820f443f133bae0a2e2daf",
+      "extended_productivity_sha256": "9f0b1b102133a6e1d60eb330a1938f9a11ef7d0a176a56033c911bd232cd478f"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 1000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 863948.0,
+      "arrivals_sha256": "7f1e3f9dcf7177a1dbab5633b60c689910e1f2b68924db9c9e6d1e773e5de6aa",
+      "productivity_sha256": "b1c31112532a3a52f3c06542e328b73b753a13180394b44be62c81760f73a75b",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0519286221855053,
+        "stage_productivity_scale": [
+          1.0216561846370367,
+          0.949080683934641,
+          1.0622399314967583
+        ],
+        "fault_factor": 0.5445351716860074,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "60250613e9e3455d1cdbf816837cfcfce714ed281da43d8f914de176a65a02fb",
+      "extended_productivity_sha256": "d4ee29097e15ddc30425d4ec57e6f7122f577b3f0cd3e594e4008d8949f8c8d5"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 1001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 864128.0,
+      "arrivals_sha256": "d802e3f71785fdc0d5d0855cc1601782c30db2c0bbd28e38085c6e89b446c4ff",
+      "productivity_sha256": "799eefdc188ae153628daa2d3f9d2ea45dde409858be6534353abc8545858073",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0553703160876449,
+        "stage_productivity_scale": [
+          0.9436526870759157,
+          0.9243280488956052,
+          1.0099133027845935
+        ],
+        "fault_factor": 0.5752861147847467,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "f3e36433dbb8e724dba24492f86831938ed6e7162425e77bbd909e0f7ba3e80e",
+      "extended_productivity_sha256": "0f608235fee09f9c35ab050668dcc00c5d74829fdd5aabf6a807190222f85dc7"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 1002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 746708.0,
+      "arrivals_sha256": "38a230a6d329fde7f2c777befe1e40b9199ea1528507fa2fc0fc3c5ebf1f9400",
+      "productivity_sha256": "c098fdaae6296d648e160e5e4d6f53269f668719f080fa89877f0162d91f520c",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9174693587480411,
+        "stage_productivity_scale": [
+          1.0599826231411302,
+          0.9700504133994302,
+          0.999801640513513
+        ],
+        "fault_factor": 0.5135020076995869,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "b51c9bcbb4ffa7befca78281492f359f07b683ae81baffd9d177e12c2e29b54e",
+      "extended_productivity_sha256": "16348652c1d7499232f23ab845516033b2479f907ef6e64ae0d81ecc83e1f440"
+    },
+    {
+      "group": "generated_switching_fault",
+      "scenario_seed": 1003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 875970.0,
+      "arrivals_sha256": "5817167e19b983362b8d2883d488b5f5bb7e18b7baa9ded211c16d2fa3fd2e1d",
+      "productivity_sha256": "23a7df28e6403b824723a2ce70d19bf41bfee85f53c206e2c6f8eb961dc16bbd",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0694961865774402,
+        "stage_productivity_scale": [
+          1.0108038146386416,
+          1.0093933610945647,
+          1.0017859031023195
+        ],
+        "fault_factor": 0.5443834434288072,
+        "events": "fault stages 0 [14,31), 2 [31,39), 1 [39,59), 0 [59,71)"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "2de69d3ddf45a2cbaf916c2ec26ab3bd3c76d81b097557d4943685330b5176d2",
+      "extended_productivity_sha256": "6f04d2d3963da5512fcad43fd8b804865a55a0acd16e7d24437b56609535a1c8"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 1000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 773932.0,
+      "arrivals_sha256": "26220cb7fc4f8c6954efed44fc1babda30ed758d14a592033c76e9f195ae853f",
+      "productivity_sha256": "1266d466053a1ee88a60c9312bb072b38ed5044013be9fee6e0b2b6ff748b042",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9796085146126593,
+        "stage_productivity_scale": [
+          1.0277488987016181,
+          0.9777991999094016,
+          0.9532020957110093
+        ],
+        "fault_factor": 0.5301863610182946,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "3b43429c7c23f34d1b6dbe0483893e81d3d5de83cfa6aaf922b09b5dddcfdf81",
+      "extended_productivity_sha256": "2976792752390f875cdb5e3e4fe1da4e2d5358a1979fc1c97d9dcedc8b8c4e8d"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 1001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 783346.0,
+      "arrivals_sha256": "3271423b215902ab83eb753ae16530e9edfc551edd02f57ba88db95d69e1b688",
+      "productivity_sha256": "fb5e816714366bec9c3ec6362ccc500305adbfcd77095001c281bc78f76788fb",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0149685921734324,
+        "stage_productivity_scale": [
+          1.015575778599713,
+          1.0057288540352642,
+          0.9554693882559094
+        ],
+        "fault_factor": 0.519055187997209,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "63cea3bc10188a951669a349446b7a97e41a2b5ab629b79ca028fcf815a3b888",
+      "extended_productivity_sha256": "c52633a0aeb0ea559ca58ff337bcb1dd5228453970b9d56b4251928e1b3505c0"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 1002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 823546.0,
+      "arrivals_sha256": "00951bc06ccac69d989475ebf9766521a75c82bb1ccd9eddb2d601e2caf3661c",
+      "productivity_sha256": "b9e5bab5060c02fe7da0d94a4956cfc63cc0b6e04ede652b153a8bc7dc8a0867",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0657535408053571,
+        "stage_productivity_scale": [
+          0.9685037734624871,
+          1.0127641848204514,
+          0.9476121725913291
+        ],
+        "fault_factor": 0.485456496077449,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "249bf06f1a10b79cd73128af497a82b9a8ffa5fe089014264c133223962b838e",
+      "extended_productivity_sha256": "5ae94ab300be1e9e58270b6a7c3e17b7197b1df8734e4c43576da40c46c41acb"
+    },
+    {
+      "group": "generated_pulsed_short_fault",
+      "scenario_seed": 1003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 767213.0,
+      "arrivals_sha256": "e5709f6800b56f6ec215d29f9f713d7b762439a01146d08b860a128378d32c1d",
+      "productivity_sha256": "7dadc42d0672fc5cf7cba295bb3825191eb1e54811bd32385785e0db0b08477a",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9662063224428552,
+        "stage_productivity_scale": [
+          1.0457798610088889,
+          0.9295980145836137,
+          1.0086779704985436
+        ],
+        "fault_factor": 0.48099317914709894,
+        "events": "3-7 minute arrival pulses; 3-minute faults shorter than the 8-minute dwell"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "d0b35575aa91040b5c0a41da82b0c60ac3b7e2f6d17ad4aef1bac40946cc8b5b",
+      "extended_productivity_sha256": "09eb46981cc5a44108bf2e96ae9c7dd601abfcd1c486fbdd54ad0e726a6603d2"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 1000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 851657.0,
+      "arrivals_sha256": "d89bff647fdb13555b1abe66cf5a44b44d4b3d44a517b14230ccb8a77ab5033c",
+      "productivity_sha256": "d9faa751b548b89fe29536927641ad2e880a387824cb40a8fca8a053f4f3fd46",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0917703012811164,
+        "stage_productivity_scale": [
+          1.0763628895522395,
+          1.00182763572434,
+          0.9604448678823868
+        ],
+        "fault_factor": 0.5527694369484923,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "c93166a21731c9267c82efb4e093748c8c77bc047469e4d6b4d883f9f7a36e8d",
+      "extended_productivity_sha256": "78020bbdfd5f3d2b985765f08c4d8ad95af5eb142feb6b33a3738a6b579f3498"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 1001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 738370.0,
+      "arrivals_sha256": "059b5bce42f0a49aa36cc799caffd85371bb445f77a07998c235d809d8bb0ebd",
+      "productivity_sha256": "48c82148fefd642409571da031383fd62a6efce2e98efe76b518b832d2b7ca37",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9569713609009018,
+        "stage_productivity_scale": [
+          1.0577107940310995,
+          0.9830998875800878,
+          1.0282994407926536
+        ],
+        "fault_factor": 0.5590193832103048,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "be3871fad4b0d51da4bf0d0b06963d6771f55313d52cec2ffb1992d5571b36f0",
+      "extended_productivity_sha256": "40d34d71f0149173a27c610a8176b373bf2e6251dc0a8c3aa83ca8bf07d7d8d5"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 1002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 763944.0,
+      "arrivals_sha256": "c90bb2687572ab53cf61fe13c389b3b2acb574499b1fe01130cc0908c161c254",
+      "productivity_sha256": "ab577bbd71bf261821ae1758135e292dba15198849cf9db7eee9110209a4f046",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9964685042350516,
+        "stage_productivity_scale": [
+          0.9426733011772809,
+          0.9630224420294635,
+          0.981139333394192
+        ],
+        "fault_factor": 0.5687835201987881,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "8061794bc52bf70e9a1d772a829e9a6aec63c0a7137efc6978084cd633616784",
+      "extended_productivity_sha256": "48d93d348db0f2d45fadfaab5f2b8dfed34127c59ff54a1b9e0f97aed557afc7"
+    },
+    {
+      "group": "generated_asymmetric_recovery",
+      "scenario_seed": 1003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 857504.0,
+      "arrivals_sha256": "b402c01e4f834980602b54af267f959bbd31f0c02c5c556a0b3b505d1a921245",
+      "productivity_sha256": "960ce16f59589535b039897947ce923005dbf7f1428eb42f9ae5d84372e206e0",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0979926072569437,
+        "stage_productivity_scale": [
+          0.9446027414654772,
+          1.0308990699796967,
+          1.054297498246356
+        ],
+        "fault_factor": 0.5482044730714295,
+        "events": "base multipliers [1.35,.72,1.18]; stage-2 fault [20,48), stage-1 speedup [48,72)"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "ec02bb630ee30cfc43368cc2cf393ca8fbaf6f99e6b9e4913b9843c1baa50b09",
+      "extended_productivity_sha256": "ad40e7f85feb686cc0fc40606bc1f3f0003ff8dfb3439403425375df3fdfffaf"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 1000,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1335197.0,
+      "arrivals_sha256": "b9b75395856a7a41842d598aea522a511e2871f60df14ab2ed79d615a5cabc26",
+      "productivity_sha256": "dea4bce064c0daeb45f6c648fd92c185c603af8e108e094df28cf8ab4c12c10d",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9313074501979505,
+        "stage_productivity_scale": [
+          0.928992573975884,
+          1.0562242094163776,
+          0.9520646447188429
+        ],
+        "fault_factor": 0.4420812167454325,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "a5b4d1f8a3919e824fef69f8ebb7f694c530d318c31678ac8d54815351da0cec",
+      "extended_productivity_sha256": "eb4bcdb0a937f29c5be8ba08cb423b99a432640cae8becfd9b36752e5b3c682e"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 1001,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1531726.0,
+      "arrivals_sha256": "ceefb75e8346f39a1ac2b5ad9a4f8df16cf0e5b6bcdfa52722b3c8fccc9c2e4a",
+      "productivity_sha256": "aedc39fec9147c79840298f3fb9a69f63f9b1fc656e70654a17cba67c6012392",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.088877769066365,
+        "stage_productivity_scale": [
+          1.0168504055358234,
+          1.0069654357467324,
+          0.9607405060655068
+        ],
+        "fault_factor": 0.47231210371235904,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "850b0bdded7aec2069205215bc47f31cac0faa642852d523e7b9bf082c032d7c",
+      "extended_productivity_sha256": "b5a35a3708d4523fb2c48fd30d8da36b5d60ac5b36ba8164bf8738a3a2e0f683"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 1002,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1514553.0,
+      "arrivals_sha256": "c2da5c2718104f6a9aa06ff206d5979ff2aa358c3cfb06f1e204493b1da94262",
+      "productivity_sha256": "586254ebbeb7a23fcb57a268e7c4d799c9183c9eace8b3870187bcc7999d7f6e",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 1.0694695673058194,
+        "stage_productivity_scale": [
+          0.9275774581789783,
+          0.9645741043822597,
+          1.0255218413180864
+        ],
+        "fault_factor": 0.537719695984625,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "261c0d3d10a03ad5c8a2c36c3a637b6aed8f1ab3efa3fd21fc054d690b4d4e86",
+      "extended_productivity_sha256": "c5e9c0a6d2c4d7c201ee5aea05f2ba9408be0e1520bc989b5f400ea5fd725054"
+    },
+    {
+      "group": "generated_sustained_overload",
+      "scenario_seed": 1003,
+      "source": "generated_synthetic",
+      "horizon": 96,
+      "arrivals_total": 1253134.0,
+      "arrivals_sha256": "874b02545d0de280ea8c1df115e755535b59fff6a59f150063e00f5143e7dd2c",
+      "productivity_sha256": "ab61e1b581cd1caada476e1bedd3880116deedc474f0ee24a94829698cc26d0b",
+      "metadata": {
+        "generation": "independent synthetic arrivals and latent productivity",
+        "arrival_scale": 0.9027205906205262,
+        "stage_productivity_scale": [
+          1.0664368859990918,
+          1.0422341610891528,
+          0.9704506811730798
+        ],
+        "fault_factor": 0.5536103396364153,
+        "events": "arrival overload [10,80), moderate stage-2 slowdown [32,56), finite recovery tail"
+      },
+      "original_horizon": 96,
+      "followup_minutes": 32,
+      "total_horizon": 128,
+      "extended_arrivals_sha256": "3283dd91debc53720a5ebfba6a3e29d43ddb680e77675378a0011472b518bd09",
+      "extended_productivity_sha256": "7facb018dbde06a3fe7429d0101bdbe09fc1c8f661c081be3b01797ca882eaeb"
+    }
+  ],
+  "manifest_sha256": "2aa046724ac256f1a304daab3d41f3112b1cf85b1021ddf145a2c588edbe40a6"
+}

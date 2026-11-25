@@ -1,0 +1,55 @@
+{
+  "interruption_observed": true,
+  "interruption_cause": "unknown",
+  "observations": "Original execution handle was reported unavailable; this process acquired the original OS workspace lock.",
+  "method": "Original Runtime.run on the unchanged stored job; ControllerInterrupted retry used its original budget.",
+  "original_accepted_evaluations_preserved": 41,
+  "original_accepted_artifact_files_preserved": 123,
+  "original_accepted_states_hashes_sizes_mtimes_preserved": true,
+  "interrupted_step": "delayed_noisy__v4_no_recovery",
+  "interrupted_attempt": 1,
+  "recovered_attempt": 2,
+  "controller_interrupted_events": [
+    {
+      "sequence": 88,
+      "event_id": "v4_validation:delayed_noisy__v4_no_recovery:1:RETRY_WAIT",
+      "job_id": "v4_validation",
+      "step_id": "delayed_noisy__v4_no_recovery",
+      "kind": "step.retry_wait",
+      "audience": [
+        "soma",
+        "monitor",
+        "step:comparison"
+      ],
+      "payload": {
+        "attempt": 1,
+        "error": {
+          "message": "Previous controller stopped during this attempt",
+          "type": "ControllerInterrupted"
+        }
+      },
+      "timestamp": 1795592193.7598255
+    }
+  ],
+  "stored_specification_fingerprint": "494e2218226a624444856ffdf148989b4020c7715e3724a8dd72bbf1de002f9e",
+  "runtime_recovery_helper_sha256": "c5a48fc1fce521ef137c1089bafe78ceaa83e05607cf77d50ccc6e4498fe418b",
+  "finalization_helper_sha256": "a0598ff9418700ea26e13f7a764aa770fc1077f43fc960e142132e1107c47123",
+  "original_runtime_session_peak_workers": null,
+  "recovery_runtime_session_peak_workers": 1,
+  "original_full_run_wall_seconds": null,
+  "runtime_recovery_elapsed_seconds": 369.41,
+  "finalization_elapsed_seconds": 13.38,
+  "recovery_wall_seconds_including_interphase_gap": 386.749,
+  "counting_scope": "29,568 accepted deterministic episode rows and their declared simulated minutes. Uncommitted work from the interrupted first attempt is unknown and adds no independent cases.",
+  "fresh_physical_sensor_replay": {
+    "traces": 462,
+    "minutes": 51576
+  },
+  "accepted_controller_replay_provenance": {
+    "retained_validated_evaluations": 41,
+    "evaluation_validated_after_retry": 1,
+    "scope": "All accepted evaluation outputs passed the unchanged frozen validator, including exact observation-only controller replay. The finalizer freshly replays physics/sensors; it does not claim an additional full controller replay."
+  },
+  "evidence_directory": "/workspace/scratch/faa307b55489/Adaptive_Nervous_System_v040/v4_results/reproduction_recovery",
+  "negative_control_submission_created": true
+}
