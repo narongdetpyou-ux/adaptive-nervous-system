@@ -19,3 +19,9 @@ Acceptance was committed first: 17c0e57726761dbd386887eeb984ebf23e604a49. Do not
 
 ## Current scope
 Prototype only. OOD execution, complete development grid, independent replay, frozen validation, and full acceptance results are not yet established. Do not run reserved seed ranges from this draft. Any proposed changes to study scope must be committed before data are generated and must not relax existing gates.
+
+## First development slice
+
+After the five published switching cases, run the first original development seed (2000) for all eleven families and all six regimes. Keep all native baselines, all declared variants, and the two additional matched action-space arms. This gives 66 paired family/regime combinations and 1,188 episodes. Report every case. This slice is descriptive and does not select a configuration or open the reserved validation and OOD ranges. The candidate, acceptance thresholds and freeze requirements remain those in `v5_acceptance_predeclared.json`.
+
+[First development results and reproduction commands (Thai)](V5_DEVELOPMENT_RESULTS_TH.md)

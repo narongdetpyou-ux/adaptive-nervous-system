@@ -21,11 +21,12 @@ POLICIES=V4_POLICIES+tuple(VARIANTS)
 TOL=1e-6
 
 
-def make_controller(policy,environment,config=None):
+def make_controller(policy,environment,config=None, *, action_space='variant'):
     if policy not in POLICIES:raise ValueError('Unknown policy')
     if isinstance(environment,str):environment=REGIME_CONFIGS[environment]
     if not isinstance(environment,EnvironmentConfig):raise TypeError('Environment config required')
-    if policy in VARIANTS:return V5Policy(environment,policy,config)
+    if policy in VARIANTS:return V5Policy(environment,policy,config,action_space=action_space)
+    if action_space != 'variant':raise ValueError('Action-space override requires a V5 policy')
     if policy=='static':return None
     if policy=='capacity_v2':return CapacityAwarePolicy('catalog')
     if policy=='capacity_balance':return CapacityBalance()
@@ -41,11 +42,11 @@ def _measurement(channel,values,source_t,scenario,environment):
     return measured
 
 
-def simulate_case(policy,scenario,policy_seed=None,regime='legacy_instant',detailed=False,config=None):
+def simulate_case(policy,scenario,policy_seed=None,regime='legacy_instant',detailed=False,config=None, *, action_space='variant'):
     if policy_seed is not None:raise ValueError('All v4 policies are deterministic')
     if regime not in REGIME_CONFIGS:raise ValueError('Unknown physical regime')
     environment=REGIME_CONFIGS[regime];env=Env(environment)
-    ctrl=make_controller(policy,environment,config)
+    ctrl=make_controller(policy,environment,config,action_space=action_space)
     arrivals,productivity=drain_arrays(scenario)
     horizon=scenario.horizon;total=horizon+FOLLOWUP_MINUTES
     pre_records=[];post_records=[];history=[];trace=[];moves=[];branches=Counter()

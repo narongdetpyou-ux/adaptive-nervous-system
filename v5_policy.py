@@ -21,10 +21,14 @@ class V5Config(V4Config):
     loss_tolerance: float = 1e-6
 
 class V5Policy(HybridPolicy):
-    def __init__(self,environment,variant='v5_full',config=None):
+    def __init__(self,environment,variant='v5_full',config=None, *, action_space='variant'):
+        if action_space not in ('variant', 'capped', 'catalog'):
+            raise ValueError('Unknown V5 action space')
         super().__init__(environment,config=config or V5Config())
         self.features=VARIANTS[variant]
         self.variant=variant
+        self.cap_transfers = (action_space == 'capped' or
+                              (action_space == 'variant' and 'balance' not in self.features))
         self.ledger=ActionLedger(environment)
         self.detector=RegimeDetector()
 
@@ -59,8 +63,10 @@ class V5Policy(HybridPolicy):
         for aid,move in enumerate(self.moves):
             if min(staff+move)<env.minimum_staff:continue
             delta=project_action(staff,move,env)
-            # Independent balance variant uses full physically legal catalogue.
-            if 'balance' not in self.features and (np.maximum(move,0).sum()>c.maximum_transfer+c.tolerance or np.maximum(delta,0).sum()>c.maximum_transfer+c.tolerance):continue
+            if self.cap_transfers:
+                limit = c.maximum_transfer + c.tolerance
+                if np.maximum(move, 0).sum() > limit or np.maximum(delta, 0).sum() > limit:
+                    continue
             if np.any(delta):raw.append(move);actual.append(delta);ids.append(aid)
         if len(ids)==1:return hold('no_feasible_move')
         allocations=staff+np.asarray(actual)
