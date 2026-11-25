@@ -14,6 +14,8 @@ from v4_environment import project_action
 
 class Queue:
     def __init__(self, jobs, frame_counts, arm):
+        if arm not in ('fixed4','oldest_ready','current_v5') and not arm.startswith('size_'):
+            raise ValueError(f'Unknown benchmark arm {arm!r}; experimental arms use their study runner')
         self.jobs=jobs
         self.frame_counts=frame_counts
         self.arm=arm
@@ -145,8 +147,8 @@ def service(profile,name,stage,frame,family,now):
     return seconds
 
 
-def replay(jobs,family,profile,arm):
-    q=Queue(jobs,{k:len(v['frames']) for k,v in profile.items()},arm)
+def replay(jobs,family,profile,arm,queue_factory=Queue):
+    q=queue_factory(jobs,{k:len(v['frames']) for k,v in profile.items()},arm)
     events=[]
     now=0.
     while len(q.ends)<len(jobs):

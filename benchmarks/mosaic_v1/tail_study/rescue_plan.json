@@ -1,0 +1,12 @@
+{
+  "first_attempt": "tail_18_0.16 remains recorded, including its official score. It is not reselected. No other policy from its grid is scored.",
+  "incumbent": "size_600_0.03",
+  "question": "Can lending a bounded number of workers to the oldest overdue request improve P99 on long streams with little cost to the rest?",
+  "grid": {"age_seconds":[32,48,64,80,96,120,144], "worker_limit":[1,2,4]},
+  "default_order": "Use incumbent size priority for all normal dispatches. Only the oldest unfinished admitted job can override it when its waiting age exceeds the configured delay and it has ready work and fewer than the configured number of workers serving it. A blocked job never reserves an idle worker. Controls and science are unchanged.",
+  "development": {"families":"all original eight", "seeds":[31,37,41,43],"requests_per_stream":256},
+  "confirmation": {"seeds":[47,53,59,61],"requests_per_stream":256,"policy":"incumbent and one frozen selection only; no fallback to the next candidate"},
+  "selection": "Select on fresh development streams only. Consider candidates meeting all original replay ratio checks on those streams, reducing pooled P99 and keeping pooled mean and P95 within 10% of incumbent. Among these, minimize the maximum of the four per-seed pooled P99 ratios, then global P99, mean and arm id. If none qualify stop. Require those same aggregate conditions on the separate confirmation sample before a single official replay.",
+  "decision": "Use the existing 22 gates and science integrity for the official benchmark. Recommend replacing the incumbent only if the official pooled P99 drops and the replay mean and P95 are within 10% of incumbent. Record public replay, live and tail trade-offs. Do not choose another candidate from this grid after confirmation or scoring.",
+  "live": "Use this session's same fixed4 and incumbent measurements, four CPUs and manifest. Run the selected confirmed rescue arm once after the first candidate. The official workload, conditions and gates remain frozen. The reported live P99 of 48 jobs is descriptive."
+}
