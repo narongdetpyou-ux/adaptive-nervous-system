@@ -1,0 +1,18 @@
+{
+  "policy": "v5_full",
+  "research_revision": "22676ec9848b4b28cb84edd73b61e5eef630bd55",
+  "warmup_minutes": 5,
+  "decision_period_seconds": 60,
+  "t0_branch": "warmup",
+  "t0_move": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "probe": "Offline cold-start gate only. Native model uses 207 abstract resource units. No mapping to four CPUs or live speedup was assumed.",
+  "source_git_blobs": {
+    "v5_policy.py": "7ddabed4d569f1c1daad2fe24677702f6f6e54cb",
+    "v4_environment.py": "a5178d254c24fc717690816af59e2ab2dc04f17e",
+    "capacity_policy.py": "3aebeb254f529f626c501b05e0cff20437c8219d"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "standard_median": 4.200368037000317,
+  "parallel_median": 2.8872156970001015,
+  "standard_range": [
+    3.9631686709999485,
+    6.277449617000002
+  ],
+  "parallel_range": [
+    2.443336034999902,
+    3.315649007999582
+  ],
+  "median_time_reduction_pct": 31.26279241325719,
+  "pairwise_reduction_pct": [
+    47.18159108723945,
+    35.186719085698336,
+    39.59962247930172,
+    38.02516436490426,
+    27.148806001445625
+  ],
+  "stage_medians": [
+    [
+      "raw_table",
+      0.027522555000359716,
+      0.02290413599985186
+    ],
+    [
+      "project",
+      2.3929523649999282,
+      0.8677250979999371
+    ],
+    [
+      "projected_table",
+      0.022447559999818623,
+      0.02259417699997357
+    ],
+    [
+      "overlaps",
+      0.056418148999910045,
+      0.04522642199981419
+    ],
+    [
+      "diff",
+      0.34574019299998326,
+      0.2964814580000166
+    ],
+    [
+      "fit",
+      0.23628278800015323,
+      0.21392619400012336
+    ],
+    [
+      "model",
+      0.26405743899977097,
+      0.28053645099998903
+    ],
+    [
+      "correct",
+      0.7422232479998456,
+      0.9564136519998101
+    ],
+    [
+      "coadd",
+      0.21771126000021468,
+      0.20914243700008228
+    ]
+  ],
+  "trial_count": 10,
+  "identical_flux_and_area": true,
+  "one_cpu_set": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "native_live_gain": null,
+  "python": "3.12.14",
+  "montage": "6.1+dfsg-1+b1",
+  "sources": {
+    "input/tutorial-initial.tar.gz": "7f9e1f1406029264431c4184d2c9f83ea9adc25c80920beaa3bffdf5b2946106",
+    "input/reference.fits": "76e4f552ab20603c70fceae4a6d2dafb1c20adf04a788358c62be6409f452250",
+    "input/reference_area.fits": "345e36c54ddcdbcd796d330ab84f29bfda4bb91294a3143a0c166a5fb5b06a67",
+    "tools/montage.deb": "062dd70749e2f393b0a12db219c56be78cbddc6e7c29927439efea6abe7e4c05",
+    "tools/wcstools.deb": "51b9d23c8ff93c6305ca17f466f8305d7818692fa7ed339b3d6c73ead3b866c9",
+    "input/m101/rawdir/2mass-atlas-990214n-j1100244.fits": "d826db235bf08ec18720d65fb9be51053301c783c284ce4f16e54b3744b46af2",
+    "input/m101/rawdir/2mass-atlas-990214n-j1100256.fits": "fcc9c3489b2ff5d43dc956977216ce310a6684f06343dfee3ba6eead4570eb29",
+    "input/m101/rawdir/2mass-atlas-990214n-j1110021.fits": "400998b4a1a36499ef43ed8552a5c51ecd35e8a5926aa3e96a1f2aa72f7eebbe",
+    "input/m101/rawdir/2mass-atlas-990214n-j1110032.fits": "af8920e541cc5e1b773dde48d69e4973fa796aea45d5db62052d6127cd20786c",
+    "input/m101/rawdir/2mass-atlas-990214n-j1180244.fits": "cb5f208018d4472085fd15f1a410b293370ea79e0b0177dc527bc342db9ef69c",
+    "input/m101/rawdir/2mass-atlas-990214n-j1180256.fits": "70e6580c714f0d7cf50be0da414dc57ab7602d0fecedb690237c013878f338f9",
+    "input/m101/rawdir/2mass-atlas-990214n-j1190021.fits": "4cc6a868f23e428e9181d368a28940e0759cb01ced27d28016f50be695d71e9d",
+    "input/m101/rawdir/2mass-atlas-990214n-j1190032.fits": "d1ab766ef539ffdb18ba8e27ba5681f4ad0fac6095e9f1301acf48f13a87c430",
+    "input/m101/rawdir/2mass-atlas-990214n-j1200244.fits": "90ffa97e362db065daf7bce45a3c78260b723c43e3c10fd48c6b3b20f6387bc4",
+    "input/m101/rawdir/2mass-atlas-990214n-j1200256.fits": "6dbb9c96a163851d83f0632e2fc2c4e7718d6f14ced2c1baafc8e6fd2e245ae4"
+  }
+}
