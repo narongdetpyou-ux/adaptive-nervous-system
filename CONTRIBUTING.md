@@ -1,0 +1,105 @@
+# พัฒนา ANS รอบถัดไป
+
+อ่าน [GITHUB_START.md](GITHUB_START.md) สำหรับขอบเขตของสำเนาซอร์สและตำแหน่งแพ็กเกจฉบับเต็ม
+
+## จุดอ้างอิง v0.4.0
+
+ซอร์สตั้งต้นที่ตรวจครบ 200 ไฟล์อยู่ที่ commit
+`fd3e40ec8c801b611b55faeb885e575dbd4fca86` และใช้ชื่อ tag `v0.4.0-source`
+สำหรับอ้างอิง snapshot นี้ ชื่อ tag หมายถึงสำเนาซอร์ส ไม่ใช่การประกาศว่า
+v0.4.0 ผ่านเกณฑ์เลื่อนรุ่นทั้งหมด และไม่ใช่แพ็กเกจฉบับเต็มสำหรับสมุดงาน Colab เดิม
+
+เก็บ baseline นี้ไว้สำหรับเปรียบเทียบ การพัฒนารุ่นใหม่ต้องไม่เปลี่ยน protocol,
+hash หรือหลักฐานเดิมเพื่อให้ผลตรวจย้อนหลังผ่าน
+
+## ขั้นตอนทำงาน
+
+1. สร้าง branch จาก `main` สำหรับงานหนึ่งเรื่อง เช่น `feat/v05-drop-reduction`
+2. เพิ่มหรือแก้ implementation ของรุ่นใหม่ พร้อม tests ที่ตรวจพฤติกรรมที่เปลี่ยน
+3. เปิด Pull Request อธิบายเหตุผล สิ่งที่เปลี่ยน และหลักฐานการตรวจ
+4. ตรวจ diff และผล `ANS CI` ของการแก้ไขล่าสุดก่อนรวมเข้า `main`
+5. เมื่อมี candidate พร้อมประเมิน ให้ใช้ protocol และเกณฑ์ที่กำหนดไว้ก่อนดูผล validation
+
+ปัจจุบัน repository นี้ยังไม่มีการบังคับ branch protection/rulesets ดังนั้นขั้นตอน
+ตรวจ CI ก่อน merge เป็นสิ่งที่ผู้รวมโค้ดต้องตรวจเอง หากภายหลังเปิดกฎได้ ให้กำหนด
+`baseline-and-regression` เป็น required status check และป้องกัน force push/การลบ `main`
+โดยไม่ตั้งจำนวนผู้อนุมัติที่ทำให้งานของผู้พัฒนาคนเดียวเดินต่อไม่ได้
+
+## CI และการตรวจในเครื่อง
+
+CI ทำงานบน `ubuntu-24.04` ด้วย Python `3.12.14` และ dependency ตาม
+`requirements.txt` (`numpy==2.3.5`) รันเมื่อเปิดหรืออัปเดต PR ที่เข้า `main`,
+เมื่อ push เข้า `main` และเมื่อสั่ง Run workflow ด้วยตนเอง
+
+รันจากราก repository:
+
+```bash
+python -m pip install --requirement requirements.txt
+python freeze_v4.py --verify
+python -m unittest discover -s . -p 'test_*.py' -v
+```
+
+CI แสดงสองผลที่มีหน้าที่ต่างกัน:
+
+- **Verify frozen v0.4 chain** ตรวจ hash และสายหลักฐาน v0.4 → v0.3 → v0.2
+- **Run regression tests** ค้นหาและรัน `test_*.py` ใน checkout ที่กำลังตรวจ
+
+ตอนเริ่มต้นมี 79 tests จาก `test_lab`, `test_capacity`, `test_v3`, `test_v4`
+และ `test_v4_metrics` ชุด tests นี้ไม่ได้เรียกการตรวจ frozen chain ครบเอง
+จึงต้องรันคำสั่ง `freeze_v4.py --verify` แยกด้วย
+
+เมื่อเพิ่ม v0.5 ให้เพิ่ม `test_v5_*.py` ที่ import และเรียกใช้ implementation v0.5 จริง
+การมีไฟล์ `v5_policy.py` เพียงอย่างเดียวไม่ได้ทำให้ tests ของ v0.4 ทดสอบ v0.5
+ผล CI ผ่านยืนยันได้เฉพาะสิ่งที่ tests ตรวจ ไม่ได้ยืนยันว่าตัวควบคุมรุ่นใหม่ผ่าน
+เกณฑ์งานตกหล่น ผลปลายช่วง หรือเกณฑ์เลื่อนรุ่นทางการทดลอง
+
+ใช้ GitHub-hosted runner หนึ่งชุด, timeout 10 นาที, repository token แบบอ่านอย่างเดียว
+และ Actions ที่อ้างอิง commit SHA ของ release ที่ตรวจสอบแล้ว
+ไม่ต้องติดตั้ง `report_requirements.txt` สำหรับชุดตรวจนี้
+
+## ขอบเขตที่ถูกตรึงไว้
+
+รายการ hash ใน `freeze_capacity.py`, `freeze_v3.py`, `freeze_v4.py` และ
+`source_checksums.sha256` เป็นรายการไฟล์แบบระบุชื่อ การเพิ่ม workflow, เอกสารใหม่,
+`v5_*.py` และ `test_v5_*.py` ข้างโมดูลเดิมทำได้โดยไม่เปลี่ยน frozen chain
+
+ไฟล์ที่ถูกตรึงมีทั้งโค้ดและ tests รุ่นเดิม, protocol, acceptance declaration,
+หลักฐาน development, `simulation.py`, ไฟล์ต้นทางใน `abc_service/` และ
+`neuron_flow/` รวมถึง **`requirements.txt`** ด้วย
+
+หากรุ่นใหม่ต้องเปลี่ยน dependency ให้สร้างไฟล์ dependency และสภาพแวดล้อมของรุ่นใหม่
+แยกต่างหาก พร้อมเพิ่ม job ทดสอบ candidate ที่ใช้สภาพแวดล้อมนั้น ส่วน job ตรวจ baseline
+ยังใช้ dependency เดิม อย่าเปลี่ยน NumPy ใน `requirements.txt` เดิมหรือสร้าง hash ของ
+v0.4 ใหม่เพื่อรองรับการแก้ของ v0.5
+
+หากต้องเปลี่ยนโมดูลที่ใช้ร่วมกับ baseline ให้สร้าง implementation ของรุ่นใหม่และ
+ทดสอบแยกก่อน การย้ายหรือปรับโครงสร้าง baseline ต้องเป็นงานที่วางแผน migration ชัดเจน
+และรักษาการตรวจ snapshot เดิมไว้
+
+## ผลทดลองและเกณฑ์ประเมิน
+
+เก็บผลใหม่ในตำแหน่งใหม่ เช่น `local_runs/`, `local_reports/`, `local_packages/`
+หรือ `local_qa/` ตาม `.gitignore` และกำหนด path ผลให้ reviewer ชัดเจน
+อย่ารันเขียนทับ `v4_results/development/` หรือหลักฐานอื่นที่ผูก hash
+
+ก่อนประเมิน candidate ให้บันทึก commit, รุ่น Python/NumPy, config, seeds,
+protocol และเกณฑ์ตัดสิน เพื่อให้แยกผลแต่ละรอบและตรวจซ้ำได้
+แยก development ออกจาก reserved validation และไม่ปรับเกณฑ์ย้อนหลังตามผลที่เห็น
+
+สำเนาบน GitHub ไม่มี rows/traces และไฟล์ประกอบของแพ็กเกจเดิมครบ จึงใช้ unit tests
+และ frozen verification เป็น CI เบื้องต้น การ replay validation ฉบับเต็ม,
+สร้าง PDF เดิม หรือสร้างแพ็กเกจเดิมใหม่ต้องใช้แพ็กเกจฉบับเต็มตาม GITHUB_START.md
+
+## Dependency และการดูแล workflow
+
+`.github/dependabot.yml` ให้ Dependabot เสนอ PR อัปเดต GitHub Actions รายเดือน
+และรวม updates ของ Actions เป็นกลุ่ม ตรวจผล CI และ release notes ก่อน merge
+การตั้งค่านี้ไม่เปิด auto-merge และไม่เสนอเปลี่ยน dependency ของ baseline โดยอัตโนมัติ
+
+Dependency graph และ Dependabot alerts เป็นการตั้งค่าที่เจ้าของ repository เปิดได้
+ในหน้าการตั้งค่าด้าน security ของ GitHub การเพิ่ม `dependabot.yml` ไม่ได้ยืนยันว่า
+alerts เปิดแล้ว เมื่อพบ alert ของแพ็กเกจ ให้ประเมินและแก้ในรุ่น/สภาพแวดล้อมที่เหมาะสม
+พร้อมเก็บ baseline เดิมเพื่อการตรวจย้อนหลัง
+
+ก่อนเปลี่ยน action pin ให้ตรวจว่า SHA มาจาก release ของ repository ต้นทางจริง
+และคง token permissions ของ CI เท่าที่จำเป็น
