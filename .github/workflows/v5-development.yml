@@ -2,7 +2,7 @@ name: ANS V5 development
 on:
   pull_request:
     branches: [main]
-    paths: ['v5_*.py', 'test_v5*.py', 'v5_acceptance_predeclared.json', 'v5_switch_study_plan.json', 'diagnose_v4_for_v5.py', '.github/workflows/v5-development.yml']
+    paths: ['simulation/v5_*.py', 'simulation/test_v5*.py', 'simulation/v5_acceptance_predeclared.json', 'simulation/v5_switch_study_plan.json', 'simulation/diagnose_v4_for_v5.py', '.github/workflows/v5-development.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -10,6 +10,10 @@ jobs:
   development:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    defaults:
+      run:
+        # V5 sits beside the imported v0.1-v0.4 modules it imports.
+        working-directory: simulation
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -33,9 +37,9 @@ jobs:
         with:
           name: v5-development-${{ github.sha }}
           path: |
-            local_runs/v5_known_study/
-            local_runs/v5_development/episodes-2000.csv
-            local_runs/v5_development/cohort-2000.json
-            local_runs/v5_switch_study/
+            simulation/local_runs/v5_known_study/
+            simulation/local_runs/v5_development/episodes-2000.csv
+            simulation/local_runs/v5_development/cohort-2000.json
+            simulation/local_runs/v5_switch_study/
           if-no-files-found: error
       - run: git diff --exit-code HEAD

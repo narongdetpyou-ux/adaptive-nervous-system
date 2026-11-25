@@ -32,7 +32,7 @@ Run the existing 18 arms for seeds 2001 through 2007 and retain the seed 2000 sl
 
 For each switching-fault seed in delayed/noisy observations, replay minutes 39 through 58 inclusive. Record the first accepted positive transfer to the middle stage, the staff committed immediately before the switch, and middle-stage dropped work in that window. Record a missing transfer explicitly. Decisions and service activation can occur in different minutes. This timing comparison does not estimate the causal effect of a single move.
 
-Reproduce the sweep from the repository root:
+Reproduce the sweep from the `simulation/` folder:
 
 ```bash
 for seed in {2000..2007}; do

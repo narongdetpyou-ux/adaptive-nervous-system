@@ -49,7 +49,7 @@ V5 ลดค่าเฉลี่ยจาก V4 ลง 41.8% ส่วนต่
 
 ## หลักฐานและการรันซ้ำ
 
-ใช้ Python 3.12.14 และ NumPy 2.3.5 รันจากราก repository ได้ดังนี้
+ใช้ Python 3.12.14 และ NumPy 2.3.5 รันจากโฟลเดอร์ `simulation/` ได้ดังนี้
 
 ```bash
 python freeze_v4.py --verify

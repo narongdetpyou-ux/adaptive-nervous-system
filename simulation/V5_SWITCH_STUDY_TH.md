@@ -88,7 +88,7 @@
 
 ## รันซ้ำ
 
-ใช้ Python 3.12.14 และ NumPy 2.3.5 รันจากราก repository
+ใช้ Python 3.12.14 และ NumPy 2.3.5 รันจากโฟลเดอร์ `simulation/`
 
 ```bash
 python freeze_v4.py --verify
@@ -96,4 +96,4 @@ python -m unittest discover -s . -p 'test_*.py'
 OPENBLAS_NUM_THREADS=1 python v5_switch_study.py
 ```
 
-ผลอยู่ที่ `local_runs/v5_switch_study/episodes.csv` (ทุก arm ของทุกกรณี รวม arm ที่ใช้ไม่ได้และเหตุผล) และ `local_runs/v5_switch_study/summary.json` (ผลรายกรณี ผลตามกติกา และ manifest ของข้อมูลขาเข้า)
+ผลอยู่ที่ `simulation/local_runs/v5_switch_study/episodes.csv` (ทุก arm ของทุกกรณี รวม arm ที่ใช้ไม่ได้และเหตุผล) และ `simulation/local_runs/v5_switch_study/summary.json` (ผลรายกรณี ผลตามกติกา และ manifest ของข้อมูลขาเข้า)
