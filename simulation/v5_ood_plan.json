@@ -10,11 +10,25 @@
     "only then generate and run validation seeds 6000..6063 and OOD seeds 8000..8063, twice",
     "evaluate, review independently and report every result"
   ],
-  "policies": ["static", "capacity_v2", "capacity_balance", "v3_full", "v4_hybrid", "v5_full"],
+  "policies": [
+    "static",
+    "capacity_v2",
+    "capacity_balance",
+    "v3_full",
+    "v4_hybrid",
+    "v5_full"
+  ],
   "validation": {
     "seeds": "6000..6063 inclusive",
     "cases": "all eleven families from the unchanged v0.4 generators and sensor-noise rule (704 cases per regime)",
-    "regimes": ["legacy_instant", "legacy_transit3", "integer_transit3", "finite_pipeline", "startup", "delayed_noisy"],
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
     "episodes": 25344
   },
   "ood": {
@@ -27,28 +41,55 @@
     "switching_demand": "10000 + 1500 sin(2 pi t / 37 + phase), phase U(0, 2 pi); minutes [0,10) set to 4000 and [80,96) to 5000",
     "default_sensor_multipliers": "mean-one lognormal, sigma 0.05, per channel (arrival; pre_queue, end_queue and flow per stage), as v4_scenarios.generate_sensor_noise",
     "families": [
-      {"index": 0, "name": "rapid_switching", "demand": "switching_demand",
-       "productivity": "from minute 12 until 84, consecutive segments of U{5..9} minutes; each segment multiplies one stage by the fault factor, chosen uniformly from the two stages not faulted in the previous segment (first segment uniform over three)",
-       "physics": "base", "sensor": "default"},
-      {"index": 1, "name": "false_recovery", "demand": "switching_demand",
-       "productivity": "one stage, uniform over three: x fault factor on [14,40), unchanged on [40,46), x 0.85 fault factor on [46,76)",
-       "physics": "base", "sensor": "default"},
-      {"index": 2, "name": "sensor_degradation", "demand": "switching_demand",
-       "productivity": "generated_switching_fault schedule: stage 0 [14,31), stage 2 [31,39), stage 1 [39,59), stage 0 [59,71), each x fault factor",
-       "physics": "base",
-       "sensor": "default, except sigma 0.20 (mean-one lognormal) on every channel for source minutes [30,70); in addition the stage-1 pre_queue and end_queue multipliers are x 0.8 for source minutes [45,60)"},
-      {"index": 3, "name": "buffer_cascade", "demand": "10500 on [12,72), 4500 on [0,12), 5500 on [72,96)",
-       "productivity": "stage 2 x fault factor on [20,44); stage 1 x fault factor on [36,60)",
-       "physics": "base with buffers (30000, 20000, 20000)", "sensor": "default"},
-      {"index": 4, "name": "transfer_failure", "demand": "switching_demand",
-       "productivity": "generated_switching_fault schedule as in sensor_degradation",
-       "physics": "base plus transfer failure windows",
-       "transfer_failure": "two windows, lengths U{12..20}; first start U{15..40}; second start U{first end + 4 .. 80 - second length}. For a move applied at a minute inside a window, floor(0.5 x units) of each recipient's incoming units fail: at the scheduled arrival minute they rejoin the donor stages (split by donor share, largest remainder, lower stage first) instead of the recipient, and the committed ledger is updated at that minute. Budget, integrality, minimum staff and committed = active + pending hold every minute. Returning units have no startup; units that arrive keep the normal startup.",
-       "sensor": "default"},
-      {"index": 5, "name": "compound_stress", "demand": "switching_demand",
-       "productivity": "rapid_switching schedule",
-       "physics": "base with buffers (30000, 20000, 20000) plus transfer failure windows as in transfer_failure",
-       "sensor": "sensor_degradation multipliers, except the x 0.8 under-report applies to every stage's queue channels on [45,60)"}
+      {
+        "index": 0,
+        "name": "rapid_switching",
+        "demand": "switching_demand",
+        "productivity": "from minute 12 until 84, consecutive segments of U{5..9} minutes (the last one ends at 84); each segment multiplies one stage by the fault factor, chosen uniformly from the two stages not faulted in the previous segment (first segment uniform over three)",
+        "physics": "base",
+        "sensor": "default"
+      },
+      {
+        "index": 1,
+        "name": "false_recovery",
+        "demand": "switching_demand",
+        "productivity": "one stage, uniform over three: x fault factor on [14,40), unchanged on [40,46), x 0.85 fault factor on [46,76)",
+        "physics": "base",
+        "sensor": "default"
+      },
+      {
+        "index": 2,
+        "name": "sensor_degradation",
+        "demand": "switching_demand",
+        "productivity": "generated_switching_fault schedule: stage 0 [14,31), stage 2 [31,39), stage 1 [39,59), stage 0 [59,71), each x fault factor",
+        "physics": "base",
+        "sensor": "default, except sigma 0.20 (mean-one lognormal) on every channel for source minutes [30,70); in addition the stage-1 pre_queue and end_queue multipliers are x 0.8 for source minutes [45,60)"
+      },
+      {
+        "index": 3,
+        "name": "buffer_cascade",
+        "demand": "10500 on [12,72), 4500 on [0,12), 5500 on [72,96)",
+        "productivity": "stage 2 x fault factor on [20,44); stage 1 x fault factor on [36,60)",
+        "physics": "base with buffers (30000, 20000, 20000)",
+        "sensor": "default"
+      },
+      {
+        "index": 4,
+        "name": "transfer_failure",
+        "demand": "switching_demand",
+        "productivity": "generated_switching_fault schedule as in sensor_degradation",
+        "physics": "base plus transfer failure windows",
+        "transfer_failure": "two windows: first length U{12..20}, first start U{15..40}; second length U{12..min(20, 76 - first end)}, second start U{first end + 4 .. 80 - second length}, so the second window always fits. For a move applied at a minute inside a window, floor(0.5 x units) of each recipient's incoming units fail: at the scheduled arrival minute they rejoin the donor stages (split by donor share, largest remainder, lower stage first) instead of the recipient, and the committed ledger is updated at that minute. Budget, integrality, minimum staff and committed = active + pending hold every minute. Returning units have no startup; units that arrive keep the normal startup.",
+        "sensor": "default"
+      },
+      {
+        "index": 5,
+        "name": "compound_stress",
+        "demand": "switching_demand",
+        "productivity": "rapid_switching schedule",
+        "physics": "base with buffers (30000, 20000, 20000) plus transfer failure windows as in transfer_failure",
+        "sensor": "sensor_degradation multipliers, except the x 0.8 under-report applies to every stage's queue channels on [45,60)"
+      }
     ],
     "observation_interface": "Unchanged for all policies: lagged, multiplied observations through v5_simulation; committed staff as recorded by the environment ledger. No policy receives failure windows, sensor multipliers or family labels.",
     "underload": "No OOD family is an underload family; the OOD part of the underload gate is not applicable."
@@ -73,5 +114,8 @@
     "ood": "every family, seeds 8000..8001, every policy (72 traces)"
   },
   "reproduction": "Run validation and OOD completely twice into separate directories from the same frozen commit; every episode file and trace file must match byte for byte.",
-  "outputs": "Rows and traces stay under local_runs/ (SHA-256 recorded). Committed: v5_results/validation/decision.json, independent_review.json, reproducibility.json, summary.json and the Thai report V5_VALIDATION_TH.md."
+  "outputs": "Rows and traces stay under local_runs/ (SHA-256 recorded). Committed: v5_results/validation/decision.json, independent_review.json, reproducibility.json, summary.json and the Thai report V5_VALIDATION_TH.md.",
+  "amendments": [
+    "Before any OOD code or array existed: the second transfer-failure window length is drawn from U{12..min(20, 76 - first end)} so its start range is never empty, and the last rapid-switching segment ends at minute 84."
+  ]
 }
