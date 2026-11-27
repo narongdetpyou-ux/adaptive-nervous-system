@@ -42,10 +42,17 @@ def _measurement(channel,values,source_t,scenario,environment):
     return measured
 
 
-def simulate_case(policy,scenario,policy_seed=None,regime='legacy_instant',detailed=False,config=None, *, action_space='variant', controller=None):
+def simulate_case(policy,scenario,policy_seed=None,regime='legacy_instant',detailed=False,config=None, *, action_space='variant', controller=None, environment=None, env_factory=None):
     if policy_seed is not None:raise ValueError('All v4 policies are deterministic')
-    if regime not in REGIME_CONFIGS:raise ValueError('Unknown physical regime')
-    environment=REGIME_CONFIGS[regime];env=Env(environment)
+    if environment is None:
+        if regime not in REGIME_CONFIGS:raise ValueError('Unknown physical regime')
+        environment=REGIME_CONFIGS[regime]
+    else:
+        # Declared OOD physics: the config names the row's regime.
+        if not isinstance(environment,EnvironmentConfig):raise TypeError('Environment config required')
+        regime=environment.name
+    env=Env(environment) if env_factory is None else env_factory(environment)
+    if not isinstance(env,Env) or env.config is not environment:raise ValueError('Environment factory must build this config')
     if controller is None:
         ctrl=make_controller(policy,environment,config,action_space=action_space)
     else:
