@@ -52,4 +52,16 @@ OPENBLAS_NUM_THREADS=1 python v5_switch_study.py
 
 [Switch study results (Thai)](V5_SWITCH_STUDY_TH.md)
 
+## Development and selection grids
+
+Sequence step 2 ran under `v5_selection_plan.json`, committed before any selection array was generated. All 18 arms ran on the development seeds (2000..2007, 4000..4063; 85,536 episodes) and the selection seeds (5000..5015; 19,008 episodes). The declared rule, applied to the selection seeds only, chooses `v5_full`: 6 of 36 loss/endpoint checks and 3 of 24 risk checks fail, all in end deficit and tail AUC against Capacity Balance with unlimited buffers and in risk against V4 Hybrid. The known V4 validation cases reproduce the archived V4 decision values within 2.6e-9, and a repeated selection seed is byte-identical. Promotion remains NOT_EVALUATED; the next declared steps are OOD adapters, the evaluator and independent reviewer, freeze and reproduction, then validation.
+
+```bash
+OPENBLAS_NUM_THREADS=1 python v5_grid.py run --split selection --workers 4
+OPENBLAS_NUM_THREADS=1 python v5_grid.py run --split development --workers 4
+python v5_grid.py summarize
+```
+
+[Development and selection results (Thai)](V5_SELECTION_TH.md)
+
 End each round's progress report with the next research step and any action the project owner needs to take. State explicitly when no owner action is needed.
