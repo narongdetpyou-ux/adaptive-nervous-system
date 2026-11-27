@@ -75,7 +75,8 @@ ANS คืองานวิจัยตัวควบคุมที่ตั�
 
 - [`neuron_flow/`](../simulation/neuron_flow): runtime ของ Neuron Flow
 - [`abc_service/`](../simulation/abc_service): ABC Causal Service ที่ตรึงไว้
-- `requirements.txt`: dependency ของ baseline (ตรึงไว้) และ `report_requirements.txt` สำหรับสร้างรายงาน PDF
+- `requirements.txt`: dependency ของ baseline (ตรึงไว้) และ `report_requirements.txt` บันทึก environment ที่ใช้สร้างรายงาน PDF ต้นฉบับ (ตรึงไว้)
+- [`report_env/`](../simulation/report_env/requirements.txt): environment ปัจจุบันสำหรับสร้างรายงาน PDF ใหม่ (PyMuPDF 1.26.7)
 
 ### การนำเข้าและการตรวจ hash
 

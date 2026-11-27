@@ -133,5 +133,19 @@ Dependency graph และ Dependabot alerts เป็นการตั้ง�
 alerts เปิดแล้ว เมื่อพบ alert ของแพ็กเกจ ให้ประเมินและแก้ในรุ่น/สภาพแวดล้อมที่เหมาะสม
 พร้อมเก็บ baseline เดิมเพื่อการตรวจย้อนหลัง
 
+`simulation/requirements.txt` และ `simulation/report_requirements.txt` เป็นบันทึก
+environment ของ v0.4.0 ที่ถูกตรึงไว้ `test_source_layout.py` จึงตกทุกครั้งที่มี PR แก้ไฟล์นี้
+ซึ่งเป็นพฤติกรรมที่ตั้งใจ `dependabot.yml` จึงตั้งไม่ให้ Dependabot เปิด PR ในโฟลเดอร์
+`simulation/` แต่ alert ยังแสดงในแท็บ Security ตามปกติ เมื่อมี alert ให้ทำดังนี้
+
+1. ตรวจว่าโค้ดของโครงการเรียกส่วนที่มีช่องโหว่หรือไม่
+2. แก้ใน environment แยกที่อยู่ในโฟลเดอร์ย่อยของตัวเอง เช่น `simulation/report_env/`
+   ซึ่ง Dependabot ยังดูแลให้ตามปกติ
+3. Dismiss alert ของไฟล์ที่ถูกตรึง พร้อมเขียนเหตุผลไว้
+
+ถ้าจะสร้างรายงาน PDF ใหม่ ให้ติดตั้งจาก `simulation/report_env/requirements.txt`
+(PyMuPDF 1.26.7 ซึ่งแก้ CVE-2026-3029 แล้ว) แทนไฟล์ที่ถูกตรึง environment ของรุ่นใหม่
+อื่น ๆ ก็ให้อยู่ในโฟลเดอร์ย่อยของตัวเองเช่นเดียวกัน
+
 ก่อนเปลี่ยน action pin ให้ตรวจว่า SHA มาจาก release ของ repository ต้นทางจริง
 และคง token permissions ของ CI เท่าที่จำเป็น
