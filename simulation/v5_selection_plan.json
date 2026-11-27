@@ -1,0 +1,43 @@
+{
+  "version": "v5-selection-1",
+  "status": "predeclared before any selection-range (5000..5015) array was generated",
+  "parent_commit": "045f9f62b9199ed9e8ce0e94a8f106717473cabe",
+  "purpose": "Run the declared V5 development grid and selection grid (V5_DESIGN.md sequence step 2) and choose one configuration with the selection rule in v5_acceptance_predeclared.json. This does not open validation or OOD seeds and does not evaluate promotion.",
+  "declaration": "v5_acceptance_predeclared.json is unchanged; its tolerance, metrics and selection rule apply as written.",
+  "splits": {
+    "development": {"seeds": "2000..2007 and 4000..4063 inclusive (data.development_seed_ranges)", "use": "descriptive results retained in full; not used to choose the configuration"},
+    "selection": {"seeds": "5000..5015 inclusive (data.development_selection_seed_range)", "use": "the only data that decides the configuration"}
+  },
+  "closed_ranges": ["6000..6063 validation", "8000..8063 OOD validation"],
+  "cases": "All eleven families with the unchanged v0.4 generators and sensor-noise rule, in all six regimes. Selection cases are built from the same generator calls as v4_scenarios.generate_scenarios with the selection seeds; equivalence is tested on the development and known splits.",
+  "arms": "v5_development.study_arms(): five baselines, the twelve declared development variants (v4_hybrid listed once) and the two matched action-space arms v5_full/capped and v5_no_balance/catalog, 18 arms per case and regime.",
+  "eligible_configurations": ["v4_hybrid", "v5_a", "v5_b", "v5_c", "v5_d", "v5_e", "v5_full", "v5_no_observer", "v5_no_loss", "v5_no_regime", "v5_no_balance", "v5_no_multihorizon"],
+  "eligibility_note": "Exactly development.variants, each in its native action space. The matched action-space arms are reported but not eligible.",
+  "selection_rule": {
+    "computed_on": "selection split only, all 176 cases per regime, paired by case",
+    "order": [
+      "loss_endpoint_failures: count of the 36 checks (6 regimes x capacity_v2, capacity_balance x total_dropped, end_deficit, tail_auc_deficit) where config mean > baseline mean + tolerance",
+      "risk_failures: count of the 24 checks (6 regimes x v3_full, capacity_v2, capacity_balance, v4_hybrid) where config risk > baseline risk + tolerance",
+      "delayed_noisy mean total_dropped",
+      "delayed_noisy risk",
+      "configuration ID, lexicographic"
+    ],
+    "risk": "CVaR90 with fractional boundary of max(mean_deficit(config) - mean_deficit(static), 0) across the regime's cases, v4_metrics._cvar_last_axis",
+    "tolerance": 1e-06,
+    "result": "lowest tuple wins; all ties broken by the following key"
+  },
+  "sensitivity": "Report the same ranking on the development split and on development plus selection. These rankings do not change the chosen configuration.",
+  "verification": [
+    "the explicit-seed case builder reproduces v4_scenarios.generate_scenarios manifests exactly for the development and known splits",
+    "development cases 2000..2007 match the frozen development scenario manifest (v5_development.development_cases)",
+    "on 4000..4063, per-regime means of v4_hybrid, capacity_v2 and capacity_balance and risks of v4_hybrid, v3_full, capacity_v2 and capacity_balance match v4_results/validation/decision.json within the tolerance",
+    "every seed file holds 11 families x 6 regimes x 18 arms with physical accounting checks passed",
+    "rerunning one selection seed reproduces its file byte for byte",
+    "no closed-range seed is generated or evaluated"
+  ],
+  "outputs": {
+    "rows": "local_runs/v5_grid/<split>/episodes-<seed>.csv (not committed; per-seed SHA-256 recorded in the summaries)",
+    "committed": "v5_results/selection/summary.json, v5_results/development_grid/summary.json and the Thai report V5_SELECTION_TH.md"
+  },
+  "after_selection": "The chosen configuration becomes the candidate for the remaining declared steps (OOD adapters, evaluator, freeze, reproduction, then validation). Promotion stays NOT_EVALUATED."
+}

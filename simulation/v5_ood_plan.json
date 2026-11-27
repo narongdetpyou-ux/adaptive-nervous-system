@@ -1,0 +1,121 @@
+{
+  "version": "v5-ood-validation-1",
+  "status": "predeclared before any OOD adapter code, OOD array, validation array or evaluator output existed",
+  "parent_commit": "5ae38651880312cc9ed5eff9775770e89512fae2",
+  "candidate": "v5_full (chosen by v5_selection_plan.json on seeds 5000..5015)",
+  "declaration": "v5_acceptance_predeclared.json is unchanged; every gate, tolerance and bootstrap setting applies as written.",
+  "order": [
+    "implement OOD adapters, evaluator and independent reviewer, tested only on smoke seeds 9000..9003 and development data",
+    "freeze source, declaration, plans, selection result and candidate configuration (v5_freeze.py)",
+    "only then generate and run validation seeds 6000..6063 and OOD seeds 8000..8063, twice",
+    "evaluate, review independently and report every result"
+  ],
+  "policies": [
+    "static",
+    "capacity_v2",
+    "capacity_balance",
+    "v3_full",
+    "v4_hybrid",
+    "v5_full"
+  ],
+  "validation": {
+    "seeds": "6000..6063 inclusive",
+    "cases": "all eleven families from the unchanged v0.4 generators and sensor-noise rule (704 cases per regime)",
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
+    "episodes": 25344
+  },
+  "ood": {
+    "seeds": "8000..8063 inclusive for each family (384 cases)",
+    "episodes": 2304,
+    "base_physics": "delayed_noisy: transit 3, integer resources, no same-minute forwarding, buffers (60000, 40000, 40000), startup (0.5, 0.75), sensor lag 2, sensor sigma 0.05, budget 207, minimum 10, warmup 5, dwell 8",
+    "horizon": "96 original minutes plus the unchanged 32-minute drain (zero arrivals, last productivity row held)",
+    "rng": "numpy SeedSequence([20261127, 5, family_index, seed, stream]); stream 0 arrivals, 1 productivity, 2 shock schedule, 3 sensor multipliers. Every shock depends only on family and seed, so all policies face the same shocks.",
+    "common_generator": "As capacity_scenarios._generated: arrival scale U(0.9,1.1); stage productivity 200 x U(0.92,1.08) x clip(1 + AR(1) noise, 0.82, 1.18) with AR 0.65 and innovation N(0, 0.035); fault factor U(0.42,0.62); arrivals Poisson(demand x arrival scale x lognormal minute factor, sigma 0.08, mean one).",
+    "switching_demand": "10000 + 1500 sin(2 pi t / 37 + phase), phase U(0, 2 pi); minutes [0,10) set to 4000 and [80,96) to 5000",
+    "default_sensor_multipliers": "mean-one lognormal, sigma 0.05, per channel (arrival; pre_queue, end_queue and flow per stage), as v4_scenarios.generate_sensor_noise",
+    "families": [
+      {
+        "index": 0,
+        "name": "rapid_switching",
+        "demand": "switching_demand",
+        "productivity": "from minute 12 until 84, consecutive segments of U{5..9} minutes (the last one ends at 84); each segment multiplies one stage by the fault factor, chosen uniformly from the two stages not faulted in the previous segment (first segment uniform over three)",
+        "physics": "base",
+        "sensor": "default"
+      },
+      {
+        "index": 1,
+        "name": "false_recovery",
+        "demand": "switching_demand",
+        "productivity": "one stage, uniform over three: x fault factor on [14,40), unchanged on [40,46), x 0.85 fault factor on [46,76)",
+        "physics": "base",
+        "sensor": "default"
+      },
+      {
+        "index": 2,
+        "name": "sensor_degradation",
+        "demand": "switching_demand",
+        "productivity": "generated_switching_fault schedule: stage 0 [14,31), stage 2 [31,39), stage 1 [39,59), stage 0 [59,71), each x fault factor",
+        "physics": "base",
+        "sensor": "default, except sigma 0.20 (mean-one lognormal) on every channel for source minutes [30,70); in addition the stage-1 pre_queue and end_queue multipliers are x 0.8 for source minutes [45,60)"
+      },
+      {
+        "index": 3,
+        "name": "buffer_cascade",
+        "demand": "10500 on [12,72), 4500 on [0,12), 5500 on [72,96)",
+        "productivity": "stage 2 x fault factor on [20,44); stage 1 x fault factor on [36,60)",
+        "physics": "base with buffers (30000, 20000, 20000)",
+        "sensor": "default"
+      },
+      {
+        "index": 4,
+        "name": "transfer_failure",
+        "demand": "switching_demand",
+        "productivity": "generated_switching_fault schedule as in sensor_degradation",
+        "physics": "base plus transfer failure windows",
+        "transfer_failure": "two windows: first length U{12..20}, first start U{15..40}; second length U{12..min(20, 76 - first end)}, second start U{first end + 4 .. 80 - second length}, so the second window always fits. For a move applied at a minute inside a window, floor(0.5 x units) of each recipient's incoming units fail: at the scheduled arrival minute they rejoin the donor stages (split by donor share, largest remainder, lower stage first) instead of the recipient, and the committed ledger is updated at that minute. Budget, integrality, minimum staff and committed = active + pending hold every minute. Returning units have no startup; units that arrive keep the normal startup.",
+        "sensor": "default"
+      },
+      {
+        "index": 5,
+        "name": "compound_stress",
+        "demand": "switching_demand",
+        "productivity": "rapid_switching schedule",
+        "physics": "base with buffers (30000, 20000, 20000) plus transfer failure windows as in transfer_failure",
+        "sensor": "sensor_degradation multipliers, except the x 0.8 under-report applies to every stage's queue channels on [45,60)"
+      }
+    ],
+    "observation_interface": "Unchanged for all policies: lagged, multiplied observations through v5_simulation; committed staff as recorded by the environment ledger. No policy receives failure windows, sensor multipliers or family labels.",
+    "underload": "No OOD family is an underload family; the OOD part of the underload gate is not applicable."
+  },
+  "evaluation": {
+    "bootstrap": "v4_metrics._bootstrap_indices over the 704 validation cases grouped by family, 2000 replicates, seed 5026025; the same resampled cases for every policy and regime",
+    "risk": "CVaR90 with fractional boundary of max(mean_deficit(policy) - mean_deficit(static), 0) over the regime's cases (v4_metrics._cvar_last_axis)",
+    "gates": {
+      "primary_risk": "delayed_noisy: 2.5th percentile of bootstrap risk(v3_full) - risk(v5_full) > 0",
+      "primary_drops": "delayed_noisy: 2.5th percentile of bootstrap mean total_dropped(v4_hybrid) - mean total_dropped(v5_full) > 0",
+      "risk_point_nonworsening": "24 checks: v5_full risk <= baseline risk + 1e-6 for v3_full, capacity_v2, capacity_balance, v4_hybrid in every regime",
+      "mean_noninferiority": "12 checks: 2.5th percentile of bootstrap 1.05 x mean_deficit(baseline) - mean_deficit(v5_full) >= -1e-6 for capacity_v2 and capacity_balance in every regime",
+      "loss_endpoint_point_nonworsening": "36 checks: v5_full mean <= baseline mean + 1e-6 for total_dropped, end_deficit, tail_auc_deficit against capacity_v2 and capacity_balance in every regime",
+      "underload": "every v5_full generated_underload validation episode (384): total_dropped <= 1e-6 and total_moves == 0",
+      "ood": "complete paired evidence for all six families and six policies, no accounting violation, and pooled v5_full risk and mean total_dropped over the 384 OOD cases each <= the v4_hybrid and capacity_balance values + 1e-6; every family reported separately",
+      "integrity": "fresh unit tests pass, freeze_v4.py --verify passes, v5_freeze.py --verify passes, scenario manifests regenerate identically, every row passes accounting, recorded decision inputs respect the observation boundary, the independent reviewer replays the representative traces exactly and matches the evaluator, the reviewer rejects a tampered copy, and the repeated run is byte-identical"
+    },
+    "decision": "PASS only if every gate passes; NOT_EVALUATED if any evidence is missing or incomplete; otherwise FAIL. Results are reported in full whatever the outcome and the gates are not changed afterwards."
+  },
+  "representative_traces": {
+    "validation": "families generated_switching_fault, generated_underload and generated_sustained_overload, seeds 6000..6002, every regime and policy (324 traces)",
+    "ood": "every family, seeds 8000..8001, every policy (72 traces)"
+  },
+  "reproduction": "Run validation and OOD completely twice into separate directories from the same frozen commit; every episode file and trace file must match byte for byte.",
+  "outputs": "Rows and traces stay under local_runs/ (SHA-256 recorded). Committed: v5_results/validation/decision.json, independent_review.json, reproducibility.json, summary.json and the Thai report V5_VALIDATION_TH.md.",
+  "amendments": [
+    "Before any OOD code or array existed: the second transfer-failure window length is drawn from U{12..min(20, 76 - first end)} so its start range is never empty, and the last rapid-switching segment ends at minute 84."
+  ]
+}

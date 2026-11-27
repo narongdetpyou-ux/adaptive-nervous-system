@@ -1,0 +1,55 @@
+{
+  "version": "v5-switch-study-1",
+  "status": "predeclared before any intervention episode was run",
+  "parent_commit": "22676ec9848b4b28cb84edd73b61e5eef630bd55",
+  "question": "When the bottleneck switches to the middle stage, does V5 Full lose more work than Capacity Balance because of when it moves (an earlier move that does not reinforce the middle, followed by the dwell lock) or because of how much it moves into the middle stage?",
+  "design": "Replace exactly one V5 Full decision, at a minute where V5 itself was free to act, and leave every other decision to the unmodified V5 Full policy. Every arm starts from the identical case, physics, sensor-noise stream and controller state as the reference V5 Full episode; traces must be identical before the replaced minute.",
+  "scope": "Development diagnosis only. Not a promotion gate, does not change v5_acceptance_predeclared.json, does not select a configuration and does not generate or read validation (6000..6063) or OOD (8000..8063) seeds.",
+  "regime": "delayed_noisy",
+  "family": "generated_switching_fault",
+  "window": {"start_inclusive": 39, "stop_exclusive": 59, "reason": "the frozen generator impairs the middle stage during [39,59)"},
+  "cases": {
+    "original_development_seeds": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+    "known_v4_switching_seeds": [4008, 4015, 4031, 4040, 4046],
+    "loaders": ["v5_development.development_cases", "diagnose_v4_for_v5.known_cases"]
+  },
+  "references": ["v5_full", "capacity_balance"],
+  "definitions": {
+    "W": "middle-stage dropped work summed over the window (dropped_by_stage[1])",
+    "m2": "first window minute where V5 Full applied a positive middle-stage transfer",
+    "m1": "first window minute before m2 (or anywhere in the window if m2 does not exist) where V5 Full applied a move that does not reinforce the middle stage",
+    "b": "first window minute where Capacity Balance applied a positive middle-stage transfer",
+    "free": "V5 Full decision branch is v5_hold or v5_selected (not warmup, locked or no_feasible_move)",
+    "same_pattern": "catalog actions with the same give/receive/zero sign pattern as V5 Full's own action at m2"
+  },
+  "arms": [
+    {"id": "hold@m1", "kind": "timing", "minute": "m1", "replacement": "hold", "applicable": "m1 exists"},
+    {"id": "own_middle@m1", "kind": "timing", "minute": "m1", "replacement": "V5 Full's own catalog action at m2", "applicable": "m1 and m2 exist and the action is feasible at m1"},
+    {"id": "own_middle@b", "kind": "timing", "minute": "b", "replacement": "V5 Full's own catalog action at m2", "applicable": "b and m2 exist, b < m2, b != m1, V5 Full is free at b and the action is feasible at b"},
+    {"id": "middle_max@m2", "kind": "size", "minute": "m2", "replacement": "same_pattern catalog action with the largest middle-stage gain, if larger than V5 Full's own", "applicable": "m2 exists and the action is feasible"},
+    {"id": "middle_min@m2", "kind": "size", "minute": "m2", "replacement": "same_pattern catalog action with the smallest middle-stage gain, if smaller than V5 Full's own", "applicable": "m2 exists and the action is feasible"}
+  ],
+  "feasibility": "A replacement must be a catalog action, keep every stage at or above minimum staff, have a nonzero projected effect and respect the transfer cap only where V5 Full's action space applies one. Arms that do not apply to a case are recorded as not applicable, never imputed.",
+  "metrics": ["W", "total_dropped", "end_deficit", "tail_auc_deficit", "mean_deficit", "first_middle_reinforcement_minute"],
+  "verification": [
+    "the intervention controller without a replacement reproduces V5 Full rows and traces exactly",
+    "every arm trace equals the V5 Full trace at every minute before the replaced minute",
+    "mass and budget errors within the declared tolerance in every episode",
+    "only the declared development seeds are used",
+    "two complete runs produce byte-identical outputs"
+  ],
+  "tolerance": 1e-06,
+  "decision": {
+    "diagnosed_cases": "D = cases with W(v5_full) - W(capacity_balance) > tolerance",
+    "gap_closed": "(W(v5_full) - W(arm)) / (W(v5_full) - W(capacity_balance)) for each case in D",
+    "supports": "an arm supports its kind when it applies to at least 2 cases in D, closes at least 0.5 of the gap in at least ceil(2/3 of those cases), and lowers mean total_dropped over those cases relative to V5 Full",
+    "conclusion": "timing if any timing arm supports; size if any size arm supports; both, or neither",
+    "controls": "cases outside D are reported for side effects and do not enter the decision",
+    "next_step": {
+      "timing_or_both": "propose one development variant addressing move timing; amend development.variants only with owner approval and before any selection-range data are generated",
+      "size_only": "propose one development variant addressing middle-stage move size under the same conditions",
+      "neither": "keep the declared variants and proceed to the declared development and selection grid"
+    }
+  },
+  "outputs": "local_runs/v5_switch_study/episodes.csv and summary.json, published only after the complete study passes verification"
+}

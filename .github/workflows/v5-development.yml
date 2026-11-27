@@ -1,0 +1,46 @@
+name: ANS V5 development
+on:
+  pull_request:
+    branches: [main]
+    paths: ['simulation/v5_*.py', 'simulation/test_v5*.py', 'simulation/v5_*.json', 'simulation/v5_results/**', 'simulation/diagnose_v4_for_v5.py', '.github/workflows/v5-development.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  development:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        # V5 sits beside the imported v0.1-v0.4 modules it imports.
+        working-directory: simulation
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -r requirements.txt
+      - run: python freeze_v4.py --verify
+      - run: python v5_freeze.py --verify
+      - run: python -m unittest discover -s . -p 'test_*.py' -v
+      - run: python v5_smoke.py
+      - run: python v5_known_study.py
+      - run: python v5_development.py --seed 2000 --workers 2
+        env:
+          OPENBLAS_NUM_THREADS: 1
+      - run: python v5_development_cohort.py --seeds 2000 --output local_runs/v5_development/cohort-2000.json
+      - run: python v5_switch_study.py
+        env:
+          OPENBLAS_NUM_THREADS: 1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: v5-development-${{ github.sha }}
+          path: |
+            simulation/local_runs/v5_known_study/
+            simulation/local_runs/v5_development/episodes-2000.csv
+            simulation/local_runs/v5_development/cohort-2000.json
+            simulation/local_runs/v5_switch_study/
+          if-no-files-found: error
+      - run: git diff --exit-code HEAD

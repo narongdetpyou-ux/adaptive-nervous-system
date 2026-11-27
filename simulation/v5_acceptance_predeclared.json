@@ -1,0 +1,145 @@
+{
+  "version": "0.5.0",
+  "status": "predeclared before V5 implementation or outcome inspection",
+  "parent_v4_commit": "3c3b3e46f50c165240b00fd6034ebc8b941944cb",
+  "candidate": "v5_full",
+  "tolerance": 0.000001,
+  "data": {
+    "diagnostic_known_seeds": [
+      4000,
+      4063
+    ],
+    "development_seed_ranges": [
+      [
+        2000,
+        2007
+      ],
+      [
+        4000,
+        4063
+      ]
+    ],
+    "development_selection_seed_range": [
+      5000,
+      5015
+    ],
+    "validation_seed_range": [
+      6000,
+      6063
+    ],
+    "ood_validation_seed_range": [
+      8000,
+      8063
+    ],
+    "ranges_inclusive": true,
+    "validation_count": 704,
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
+    "followup_minutes": 32,
+    "rule": "No generation or evaluation of validation/OOD arrays before implementation, candidate configuration, evaluator and manifest rules are frozen. Known V4 validation cases are development only. Identical case/physics/sensor streams within all paired comparisons."
+  },
+  "metrics": {
+    "mean_deficit": "mean original-H offered minus completed",
+    "risk": "CVaR90 of max(mean_deficit(policy)-mean_deficit(static),0) across cases, fractional boundary",
+    "total_dropped": "all H+32 minutes",
+    "end_deficit": "original H terminal offered minus completed",
+    "tail_auc_deficit": "sum of offered minus completed across fixed 32 followup minutes",
+    "bootstrap": {
+      "replicates": 2000,
+      "seed": 5026025,
+      "method": "paired family-stratified percentile 95% CI, preserve shared case IDs and regime pairing; resample cases within family; no pooling regimes as independent cases"
+    }
+  },
+  "primary": [
+    {
+      "regime": "delayed_noisy",
+      "metric": "risk",
+      "baseline": "v3_full",
+      "condition": "lower95 of baseline minus candidate > 0"
+    },
+    {
+      "regime": "delayed_noisy",
+      "metric": "total_dropped",
+      "baseline": "v4_hybrid",
+      "condition": "lower95 of mean baseline minus mean candidate > 0"
+    }
+  ],
+  "risk_point_nonworsening": {
+    "baselines": [
+      "v3_full",
+      "capacity_v2",
+      "capacity_balance",
+      "v4_hybrid"
+    ],
+    "condition": "candidate risk <= each baseline risk + tolerance in every original regime"
+  },
+  "mean_noninferiority": {
+    "baselines": [
+      "capacity_v2",
+      "capacity_balance"
+    ],
+    "margin": 0.05,
+    "condition": "lower95 of 1.05*mean baseline minus mean candidate >= -tolerance in every original regime"
+  },
+  "loss_endpoint_point_nonworsening": {
+    "baselines": [
+      "capacity_v2",
+      "capacity_balance"
+    ],
+    "metrics": [
+      "total_dropped",
+      "end_deficit",
+      "tail_auc_deficit"
+    ],
+    "condition": "candidate mean <= each baseline mean + tolerance in every original regime",
+    "required_checks": 36
+  },
+  "underload": {
+    "family": "generated_underload",
+    "condition": "every original and applicable OOD underload episode: zero dropped work and zero resource moves through H+32, within tolerance"
+  },
+  "integrity": {
+    "condition": "all required fresh tests, unchanged frozen V4, V5 frozen hashes, scenario identity, full accounting, observation boundary, independent representative replay, negative tamper test, and deterministic repeat evidence pass; missing evidence is not pass"
+  },
+  "ood": {
+    "families": [
+      "rapid_switching",
+      "false_recovery",
+      "sensor_degradation",
+      "buffer_cascade",
+      "transfer_failure",
+      "compound_stress"
+    ],
+    "condition": "all six families and baselines must have complete paired evidence, no physical or causal violations, candidate pooled OOD risk and mean total_dropped <= both V4 hybrid and Capacity Balance + tolerance; report each family separately; original regime promotion also requires OOD gate",
+    "rules": "Define OOD physics and adapter before generation; equal observation interfaces, physical constraints and paired shocks across policies. If unimplemented or incomplete, promotion blocked."
+  },
+  "development": {
+    "variants": [
+      "v4_hybrid",
+      "v5_a",
+      "v5_b",
+      "v5_c",
+      "v5_d",
+      "v5_e",
+      "v5_full",
+      "v5_no_observer",
+      "v5_no_loss",
+      "v5_no_regime",
+      "v5_no_balance",
+      "v5_no_multihorizon"
+    ],
+    "selection": "On development only, retain every result. Compare single changes and full candidate ablations; choose one config deterministically by count of original loss/endpoints failed vs Balance/V2, then risk point failures, then delayed_noisy mean dropped work, then delayed_noisy risk, then lexicographic config ID. All ties deterministic. No post-validation tuning. A failed candidate stays failed; a later redesign needs new predeclaration and new validation seeds."
+  },
+  "targets_nonbinding": {
+    "delayed_noisy_mean_deficit": "<= Capacity Balance",
+    "report": "per-family paired intervals, worst cases, drop contributions, loss/latency tradeoffs; avoid claiming independent endpoints or calibrated stress probabilities"
+  },
+  "advancement": "PASS only if all original gates, both primary comparisons, underload, integrity and OOD gate pass concurrently. Missing or incomplete evidence => NOT_EVALUATED/BLOCKED, never PASS. Engineering point gates are not statistical superiority; primary claims require both predeclared comparisons. Do not relax criteria after seeing outcomes.",
+  "scope": "Synthetic control study only; no production control or real-world performance claim. Preserve v0.4.0 code and evidence verbatim."
+}
