@@ -5,6 +5,6 @@
 # PyMuPDF to 1.26.7, which fixes CVE-2026-3029 (GHSA-cxqh-p2w9-fmr7).
 # NumPy is pinned here directly instead of including ../requirements.txt,
 # so dependency updates never touch the frozen files.
-numpy==2.3.5
+numpy==2.5.5
 PyMuPDF==1.26.7
 matplotlib==3.10.8
