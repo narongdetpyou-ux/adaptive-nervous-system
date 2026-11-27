@@ -18,7 +18,7 @@ Acceptance was committed first: 17c0e57726761dbd386887eeb984ebf23e604a49. Do not
 5. Promotion requires every gate in the declaration. Missing evidence blocks. No merge/release on smoke alone.
 
 ## Current scope
-Prototype only. The development grid, selection, OOD adapters, evaluator, independent reviewer and the freeze are complete; validation and OOD results are pending. Reserved seed ranges are opened only by `v5_validation.py` from the frozen commit. Any proposed changes to study scope must be committed before data are generated and must not relax existing gates.
+Prototype only, now evaluated: **V5 Full FAILS promotion** on the frozen validation and OOD sets with complete evidence. Seeds 6000..6063 and 8000..8063 are used; any later candidate needs a new declaration and new held-out seeds. Any proposed changes to study scope must be committed before data are generated and must not relax existing gates.
 
 ## First development slice
 
@@ -82,5 +82,33 @@ OPENBLAS_NUM_THREADS=1 python v5_validation.py run run_a --workers 2
 OPENBLAS_NUM_THREADS=1 python v5_validation.py run run_b --workers 2
 python v5_decide.py local_runs/v5_validation/run_a local_runs/v5_validation/run_b
 ```
+
+## Validation and OOD results
+
+Both official runs started together from frozen commit `b2af839`. Each covered 25,344 validation episodes and 2,304 OOD episodes, and all 261 output files match byte for byte.
+
+**Decision: FAIL.** All integrity evidence passes, so this is a result of the gates, not missing evidence. The integrity evidence covers:
+
+- 135 fresh tests;
+- both freezes;
+- manifest regeneration;
+- accounting within 4.1e-9;
+- 396/396 traces and controller decisions replayed exactly;
+- zero mismatches between the independent reviewer and the evaluator;
+- tamper detection.
+
+| Gate | Result | Detail |
+|---|---|---|
+| Primary risk vs V3 Full (delayed_noisy) | Pass | lower by 7,338 (95% CI 5,397–9,273) |
+| Primary dropped work vs V4 Hybrid (delayed_noisy) | Pass | lower by 4,842 per case, 10.2% (95% CI 4,230–5,508) |
+| Mean noninferiority | Pass, 12/12 | |
+| Underload | Pass, 384/384 | |
+| Risk point non-worsening | Fail, 23/24 | `legacy_instant` vs V4 Hybrid: 337.6 vs 331.2 |
+| Loss/endpoint point non-worsening | Fail, 30/36 | End deficit (+2.6–3.0%) and tail AUC (+5.0–5.8%) vs Capacity Balance in the three unlimited-buffer regimes, the same six checks that failed on the selection seeds |
+| OOD | Fail | Pooled risk 30,601 vs V4 Hybrid 27,913. Pooled dropped work 84,468 is below both V4 Hybrid (85,162) and Balance (85,045) |
+
+Descriptively, Static loses less work than every adaptive policy in four OOD families: rapid switching, sensor degradation, transfer failure and compound stress.
+
+[Validation and OOD report (Thai)](V5_VALIDATION_TH.md)
 
 End each round's progress report with the next research step and any action the project owner needs to take. State explicitly when no owner action is needed.
