@@ -11,6 +11,7 @@ from pathlib import Path
 import numpy as np
 
 from v4_metrics import _bootstrap_indices, _cvar_last_axis
+from v4_scenarios import GROUPS
 
 ROOT = Path(__file__).resolve().parent
 DECLARATION = json.loads((ROOT / 'v5_acceptance_predeclared.json').read_text())
@@ -26,6 +27,20 @@ METRICS = ('mean_deficit', 'total_dropped', 'end_deficit', 'tail_auc_deficit', '
 MD, DROP = METRICS.index('mean_deficit'), METRICS.index('total_dropped')
 INTEGRITY = ('fresh_tests', 'frozen_v4', 'frozen_v5', 'scenario_identity', 'accounting',
              'observation_boundary', 'independent_replay', 'tamper_test', 'deterministic_repeat')
+
+
+def _seeds(pair):
+    return tuple(range(pair[0], pair[1] + 1))
+
+
+# The declared case populations: an official decision is NOT_EVALUATED unless the rows match exactly.
+DECLARED = {
+    'validation': tuple(sorted((family, seed) for family in GROUPS
+                               for seed in _seeds(DECLARATION['data']['validation_seed_range']))),
+    'ood': _seeds(DECLARATION['data']['ood_validation_seed_range']),
+}
+if len(DECLARED['validation']) != DECLARATION['data']['validation_count']:
+    raise ValueError('Declared validation population differs from the declared count')
 
 
 class Incomplete(ValueError):
@@ -75,8 +90,10 @@ def _interval(values):
     return [float(x) for x in np.percentile(values, [2.5, 97.5])]
 
 
-def original_gates(rows):
+def original_gates(rows, population=None):
     data, order, accounting = matrices(rows, REGIMES)
+    if population is not None and tuple(order) != tuple(population):
+        raise Incomplete(f'Validation cases differ from the declared population ({len(order)} of {len(population)})')
     labels = np.array([family for family, _ in order])
     draws = _bootstrap_indices(labels, REPLICATES, BOOT_SEED)
     noisy = 'delayed_noisy'
@@ -130,7 +147,7 @@ def original_gates(rows):
     }
 
 
-def ood_gate(rows):
+def ood_gate(rows, seeds=None):
     families = {}
     pooled_rows = []
     for family in OOD_FAMILIES:
@@ -138,6 +155,8 @@ def ood_gate(rows):
         if not subset:
             raise Incomplete(f'No rows for OOD family {family}')
         data, order, accounting = matrices(subset, (f'ood_{family}',))
+        if seeds is not None and tuple(s for _, s in order) != tuple(seeds):
+            raise Incomplete(f'OOD family {family} differs from the declared seeds ({len(order)} of {len(seeds)})')
         regime = f'ood_{family}'
         families[family] = {'cases': len(order), 'max_accounting_error': accounting,
                             'risk': {p: _risk(data, regime, p) for p in POLICIES},
@@ -156,18 +175,21 @@ def ood_gate(rows):
             'passed': all(c['passed'] for c in checks) and accounting <= TOL}
 
 
-def evaluate(validation_rows, ood_rows, integrity):
+def evaluate(validation_rows, ood_rows, integrity, population=None):
+    """population=DECLARED for the official decision; None only for synthetic and development checks."""
     record = {'version': PLAN['version'], 'candidate': CANDIDATE, 'tolerance': TOL,
-              'bootstrap': {'replicates': REPLICATES, 'seed': BOOT_SEED}}
+              'bootstrap': {'replicates': REPLICATES, 'seed': BOOT_SEED},
+              'declared_population_checked': population is not None}
     missing = []
+    population = population or {}
     try:
-        record['original'] = original_gates(validation_rows)
+        record['original'] = original_gates(validation_rows, population.get('validation'))
         if record['original']['max_accounting_error'] > TOL:
             record['original']['accounting_failed'] = True
     except Incomplete as error:
         missing.append(f'validation: {error}')
     try:
-        record['ood'] = ood_gate(ood_rows)
+        record['ood'] = ood_gate(ood_rows, population.get('ood'))
     except Incomplete as error:
         missing.append(f'ood: {error}')
     flags = {name: integrity.get(name) for name in INTEGRITY}

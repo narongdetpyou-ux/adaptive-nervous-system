@@ -63,8 +63,13 @@ def check_open(seeds):
 
 
 def explicit_cases(seeds):
-    """The calls of v4_scenarios.generate_scenarios, for an explicit seed tuple."""
-    seeds = check_open(seeds)
+    """The calls of v4_scenarios.generate_scenarios, for an explicit open seed tuple."""
+    return _build_cases(check_open(seeds))
+
+
+def _build_cases(seeds):
+    """Unguarded builder: only the frozen validation runner and reviewer call it with closed seeds."""
+    seeds = tuple(seeds)
     trace = load_trace(ROOT / 'data/load_test_summary_per_minute.csv')
     result = [
         Scenario(group, seed, arrivals, productivity, 'legacy_flash', {

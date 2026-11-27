@@ -2,7 +2,7 @@ name: ANS V5 development
 on:
   pull_request:
     branches: [main]
-    paths: ['simulation/v5_*.py', 'simulation/test_v5*.py', 'simulation/v5_acceptance_predeclared.json', 'simulation/v5_switch_study_plan.json', 'simulation/diagnose_v4_for_v5.py', '.github/workflows/v5-development.yml']
+    paths: ['simulation/v5_*.py', 'simulation/test_v5*.py', 'simulation/v5_*.json', 'simulation/v5_results/**', 'simulation/diagnose_v4_for_v5.py', '.github/workflows/v5-development.yml']
   workflow_dispatch:
 permissions:
   contents: read

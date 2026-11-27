@@ -74,6 +74,17 @@ class DecisionTests(unittest.TestCase):
         ood = [r for r in ood_rows() if r['group'] != 'transfer_failure']
         self.assertEqual(ev.evaluate(validation_rows(), ood, GOOD)['decision'], 'NOT_EVALUATED')
 
+    def test_population_must_match_the_declaration_exactly(self):
+        population = {'validation': tuple(sorted((f, s) for f in FAMILIES for s in SEEDS)), 'ood': SEEDS}
+        self.assertEqual(ev.evaluate(validation_rows(), ood_rows(), GOOD, population)['decision'], 'PASS')
+        for wrong in ({**population, 'validation': population['validation'] + (('generated_underload', 4),)},
+                      {**population, 'ood': SEEDS + (4,)}):
+            record = ev.evaluate(validation_rows(), ood_rows(), GOOD, wrong)
+            self.assertEqual(record['decision'], 'NOT_EVALUATED')
+            self.assertTrue(record['missing_evidence'])
+        self.assertEqual(len(ev.DECLARED['validation']), 704)
+        self.assertEqual(ev.DECLARED['ood'], tuple(range(8000, 8064)))
+
     def test_accounting_error_fails(self):
         special = {('finite_pipeline', 'v4_hybrid', 'generated_switching_fault', 1): {'max_mass_error': 1.0}}
         record = ev.evaluate(validation_rows(special), ood_rows(), GOOD)
