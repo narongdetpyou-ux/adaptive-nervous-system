@@ -11,5 +11,21 @@ updates:
         patterns:
           - "*"
 
-# requirements.txt is part of the frozen v0.4 parent chain.
-# Review package alerts and plan dependency changes in a new version/environment.
+  # simulation/requirements.txt and simulation/report_requirements.txt are
+  # frozen v0.4.0 records checked byte for byte by test_source_layout.py.
+  # Never open pull requests against them; alerts still appear under
+  # Security. Fix a vulnerable package in a separate environment instead.
+  - package-ecosystem: pip
+    directory: /simulation
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: "*"
+
+  # Current report-building environment, kept up to date normally.
+  - package-ecosystem: pip
+    directory: /simulation/report_env
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 2

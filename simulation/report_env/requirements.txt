@@ -1,0 +1,10 @@
+# Current environment for rebuilding the Thai PDF reports with
+# build_capacity_report.py, build_v3_report.py and build_v4_report.py.
+# ../report_requirements.txt is the frozen record of the environment that
+# built the original reports and must stay byte-identical. This file moves
+# PyMuPDF to 1.26.7, which fixes CVE-2026-3029 (GHSA-cxqh-p2w9-fmr7).
+# NumPy is pinned here directly instead of including ../requirements.txt,
+# so dependency updates never touch the frozen files.
+numpy==2.3.5
+PyMuPDF==1.26.7
+matplotlib==3.10.8
