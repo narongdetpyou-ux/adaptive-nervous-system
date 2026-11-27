@@ -18,7 +18,7 @@ Acceptance was committed first: 17c0e57726761dbd386887eeb984ebf23e604a49. Do not
 5. Promotion requires every gate in the declaration. Missing evidence blocks. No merge/release on smoke alone.
 
 ## Current scope
-Prototype only. OOD execution, complete development grid, independent replay, frozen validation, and full acceptance results are not yet established. Do not run reserved seed ranges from this draft. Any proposed changes to study scope must be committed before data are generated and must not relax existing gates.
+Prototype only. The development grid, selection, OOD adapters, evaluator, independent reviewer and the freeze are complete; validation and OOD results are pending. Reserved seed ranges are opened only by `v5_validation.py` from the frozen commit. Any proposed changes to study scope must be committed before data are generated and must not relax existing gates.
 
 ## First development slice
 
@@ -63,5 +63,24 @@ python v5_grid.py summarize
 ```
 
 [Development and selection results (Thai)](V5_SELECTION_TH.md)
+
+## Validation and OOD freeze
+
+Sequence steps 3 and 4 follow `v5_ood_plan.json`. It was committed before any OOD adapter, validation array or evaluator output existed, and its one amendment was also made before any code. Five files implement it:
+
+- `v5_ood.py` implements the six OOD families on the delayed_noisy physics, including a transfer-failure environment that keeps the resource ledger exact every minute.
+- `v5_evaluate.py` applies every declared gate. Its result is NOT_EVALUATED unless the rows match the declared population exactly.
+- `v5_review.py` recomputes every gate number on a separate code path. It also replays the 396 representative traces and their controller decisions, regenerates the scenario manifests, and must reject tampered copies.
+- `v5_decide.py` assembles the integrity evidence and writes `v5_results/validation/`.
+- `v5_freeze_record.json` holds the SHA-256 of every V5 source and test, the plans, the declaration, the selection result, the imported v0.1–v0.3 modules and data, and the `v5_full` configuration.
+
+`python v5_freeze.py --verify` runs in CI. `v5_validation.py` refuses to open seeds 6000..6063 or 8000..8063 unless the freeze verifies and the tracked tree is clean. The two runs start from the same frozen commit and must match byte for byte.
+
+```bash
+python v5_freeze.py --verify
+OPENBLAS_NUM_THREADS=1 python v5_validation.py run run_a --workers 2
+OPENBLAS_NUM_THREADS=1 python v5_validation.py run run_b --workers 2
+python v5_decide.py local_runs/v5_validation/run_a local_runs/v5_validation/run_b
+```
 
 End each round's progress report with the next research step and any action the project owner needs to take. State explicitly when no owner action is needed.
