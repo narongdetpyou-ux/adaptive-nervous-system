@@ -1,0 +1,168 @@
+{
+  "version": "0.6.0",
+  "status": "predeclared before any V6 implementation, V6 episode array or V6 outcome existed",
+  "parent_main_commit": "d25178de15b430d849f98881fdaed74e54cb1be0",
+  "v5_freeze_commit": "b2af839717947012b950888339fc652e150f9807",
+  "v5_results_commit": "6965dfe6be44dfb542549f4129d79b28ab1d1e59",
+  "goal": "Make a new candidate pass the standing promotion gates that V5 Full failed, by correcting the two mechanisms diagnosed from the V5 validation traces: backlog held at the first stage slows the drain when buffers are unlimited, and frequent large moves under fast switching, failed transfers or degraded sensors cost more than holding.",
+  "candidate": "exactly one of v6_drain, v6_restraint, v6_full, chosen by v6_selection_plan.json on the selection seeds only",
+  "tolerance": 0.000001,
+  "policies": {
+    "baselines": [
+      "static",
+      "capacity_v2",
+      "capacity_balance",
+      "v3_full",
+      "v4_hybrid",
+      "v5_full"
+    ],
+    "frozen_baseline_rule": "Baselines run from unchanged code: the v0.4 chain (freeze_v4.py --verify) and the 38 V5 files in v5_freeze_record.json (v5_freeze.py --verify). v5_full uses the frozen V5Config exactly as in the V5 validation run.",
+    "variants": [
+      "v6_drain",
+      "v6_restraint",
+      "v6_full"
+    ]
+  },
+  "mechanisms": {
+    "drain": "The forecast terminal cost counts retained work by the stage visits still ahead of it (work queued at the first stage weighs more than work at the last stage). Candidate actions still pass the unchanged V5 loss filter (v5_forecast.loss_candidates) first, so the change never trades predicted overflow for drain speed.",
+    "restraint": "Raise the gain hurdle and cap the transfer size while either observed signal is active: the bottleneck switches faster than a move can take effect (transit + startup + dwell), using the unchanged RegimeDetector; or recent moves under-delivered, measured only from the committed-staff ledger and lagged flow observations.",
+    "variants": {
+      "v6_drain": "V5 Full + drain",
+      "v6_restraint": "V5 Full + restraint",
+      "v6_full": "V5 Full + drain + restraint"
+    },
+    "parameters": "Set on development seeds only, then fixed in v6_selection_plan.json before any selection array exists.",
+    "implementation_rule": "V6 code subclasses or imports the frozen V5 modules and never edits them."
+  },
+  "observation_rules": "Every policy sees the same lagged, multiplied observations and the committed staff recorded by the environment ledger, as in V5. Known environment configuration (budget, minimum staff, buffer capacities, transit, startup factors, sensor lag, dwell) may be used. No policy receives failure windows, sensor multipliers, family labels, true productivity or future arrivals.",
+  "data": {
+    "development_seed_ranges": [
+      [2000, 2007],
+      [4000, 4063],
+      [6000, 6063]
+    ],
+    "development_ood_seed_range": [8000, 8063],
+    "smoke_seed_range": [9000, 9003],
+    "selection_seed_range": [5100, 5131],
+    "selection_ood_seed_range": [8200, 8231],
+    "validation_seed_range": [7000, 7063],
+    "ood_validation_seed_range": [8100, 8163],
+    "ranges_inclusive": true,
+    "validation_count": 704,
+    "ood_validation_count": 384,
+    "previously_used_ranges": [
+      [11, 47], [100, 107], [200, 207], [300, 303], [1000, 1015], [2000, 2031],
+      [4000, 4063], [5000, 5015], [6000, 6063], [8000, 8063], [9000, 9003]
+    ],
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
+    "unlimited_buffer_regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3"
+    ],
+    "followup_minutes": 32,
+    "case_generators": "Validation-type cases: the unchanged eleven v0.4 families through v5_grid._build_cases. OOD cases: the unchanged six families of v5_ood.py (v5_ood_plan.json physics and RNG namespace) with the seeds above.",
+    "rule": "The V5 validation and OOD seeds (6000..6063, 8000..8063) are V6 development data. No generation or evaluation of V6 selection arrays before v6_selection_plan.json is committed, and none of the V6 validation or OOD validation arrays before implementation, candidate configuration, evaluator and manifest rules are frozen. Identical case, physics, shock and sensor streams within all paired comparisons."
+  },
+  "metrics": {
+    "mean_deficit": "mean original-H offered minus completed",
+    "risk": "CVaR90 of max(mean_deficit(policy)-mean_deficit(static),0) across cases, fractional boundary",
+    "total_dropped": "all H+32 minutes",
+    "end_deficit": "original H terminal offered minus completed",
+    "tail_auc_deficit": "sum of offered minus completed across fixed 32 followup minutes",
+    "bootstrap": {
+      "replicates": 2000,
+      "seed": 6026028,
+      "method": "paired family-stratified percentile 95% CI as in v5_acceptance_predeclared.json: preserve shared case IDs and regime pairing; resample cases within family; no pooling regimes as independent cases. OOD intervals resample the 384 OOD cases within their six families."
+    }
+  },
+  "standing_promotion_gates": "Every gate of v5_acceptance_predeclared.json applies unchanged to the V6 candidate, with the same baselines, metrics, thresholds and tolerance; only the bootstrap seed above is new.",
+  "primary": [
+    {
+      "regime": "delayed_noisy",
+      "metric": "risk",
+      "baseline": "v3_full",
+      "condition": "lower95 of baseline minus candidate > 0"
+    },
+    {
+      "regime": "delayed_noisy",
+      "metric": "total_dropped",
+      "baseline": "v4_hybrid",
+      "condition": "lower95 of mean baseline minus mean candidate > 0"
+    }
+  ],
+  "risk_point_nonworsening": {
+    "baselines": [
+      "v3_full",
+      "capacity_v2",
+      "capacity_balance",
+      "v4_hybrid"
+    ],
+    "condition": "candidate risk <= each baseline risk + tolerance in every original regime"
+  },
+  "mean_noninferiority": {
+    "baselines": [
+      "capacity_v2",
+      "capacity_balance"
+    ],
+    "margin": 0.05,
+    "condition": "lower95 of 1.05*mean baseline minus mean candidate >= -tolerance in every original regime"
+  },
+  "loss_endpoint_point_nonworsening": {
+    "baselines": [
+      "capacity_v2",
+      "capacity_balance"
+    ],
+    "metrics": [
+      "total_dropped",
+      "end_deficit",
+      "tail_auc_deficit"
+    ],
+    "condition": "candidate mean <= each baseline mean + tolerance in every original regime",
+    "required_checks": 36
+  },
+  "underload": {
+    "family": "generated_underload",
+    "condition": "every original and applicable OOD underload episode: zero dropped work and zero resource moves through H+32, within tolerance"
+  },
+  "ood": {
+    "families": [
+      "rapid_switching",
+      "false_recovery",
+      "sensor_degradation",
+      "buffer_cascade",
+      "transfer_failure",
+      "compound_stress"
+    ],
+    "condition": "all six families and baselines must have complete paired evidence, no physical or causal violations, candidate pooled OOD risk and mean total_dropped <= both V4 hybrid and Capacity Balance + tolerance; report each family separately; original regime promotion also requires OOD gate"
+  },
+  "integrity": {
+    "condition": "all required fresh tests, unchanged frozen V4 (freeze_v4.py --verify), unchanged frozen V5 (v5_freeze.py --verify), V6 frozen hashes, scenario identity, full accounting, observation boundary, independent representative replay, negative tamper test, and deterministic repeat evidence pass; frozen baselines reproduce the V5 validation rows byte for byte on seeds they share; missing evidence is not pass"
+  },
+  "round_hypotheses": {
+    "role": "The goal of this round, reported separately as supported or not supported. They never change the promotion decision.",
+    "H1_drain": "In each unlimited-buffer regime, lower95 of the paired bootstrap mean of v5_full minus candidate > 0 for end_deficit and for tail_auc_deficit on the validation cases (six comparisons, all required).",
+    "H2_restraint": "On the 384 OOD validation cases, lower95 of the bootstrap of pooled risk(v5_full) minus pooled risk(candidate) > 0.",
+    "attribution": "Single-change contributions (v6_drain and v6_restraint against v5_full, and each against v6_full) are reported on development and selection data only; they are descriptive."
+  },
+  "selection": "On the selection seeds only, choose one variant deterministically by: total failed standing point checks (36 loss/endpoint + 24 risk + the 4 pooled OOD checks), then delayed_noisy mean total_dropped, then delayed_noisy risk, then lexicographic variant ID. v6_selection_plan.json fixes the parameters and this rule before any selection array exists. All results are retained.",
+  "order": [
+    "commit this declaration first",
+    "diagnose on development data, implement the two mechanisms with tests, run the development grid",
+    "commit v6_selection_plan.json, then generate and run the selection seeds and choose one variant",
+    "build and test the evaluator, independent reviewer and freeze; commit v6_validation_plan.json and freeze",
+    "only then generate the validation and OOD validation seeds, run them twice, evaluate, review and report every result"
+  ],
+  "targets_nonbinding": {
+    "report": "per-family paired intervals against V5 Full, Capacity Balance and V4 Hybrid, worst cases, move counts and sizes, drop contributions; avoid claiming independent endpoints or calibrated stress probabilities"
+  },
+  "advancement": "PASS only if all original gates, both primary comparisons, underload, integrity and OOD gate pass concurrently. Missing or incomplete evidence => NOT_EVALUATED, never PASS. Engineering point gates are not statistical superiority; primary claims require both predeclared comparisons. Do not relax criteria after seeing outcomes. A failed candidate stays failed; a later redesign needs a new declaration and new held-out seeds.",
+  "scope": "Synthetic control study only; no production control or real-world performance claim. Preserve v0.4.0 code and evidence and the frozen V5 files verbatim."
+}
