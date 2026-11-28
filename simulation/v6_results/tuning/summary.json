@@ -66,6 +66,185 @@
     "variant": "v6_drain"
   },
   {
+    "candidate": "v6_full",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 42180.715040452415,
+    "delayed_noisy_risk": 9413.011258470755,
+    "failed_loss_endpoint_checks": [],
+    "failed_ood_checks": [],
+    "failed_point_checks": 1,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 78262.8475696716,
+      "risk": 17989.321534904648
+    },
+    "overrides": {
+      "drain_weight": 1.0,
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 16,
+      "restraint_neutral": 1.0,
+      "restraint_neutral_tolerance": 10.0
+    },
+    "set": "full_neutral16",
+    "variant": "v6_full"
+  },
+  {
+    "candidate": "v6_full",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 41934.16519223223,
+    "delayed_noisy_risk": 9365.775808500122,
+    "failed_loss_endpoint_checks": [],
+    "failed_ood_checks": [],
+    "failed_point_checks": 3,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "legacy_transit3",
+        "v4_hybrid"
+      ],
+      [
+        "integer_transit3",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 78188.68416997729,
+      "risk": 21675.765103305104
+    },
+    "overrides": {
+      "drain_weight": 1.0,
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 8,
+      "restraint_neutral": 1.0,
+      "restraint_neutral_tolerance": 10.0
+    },
+    "set": "full_neutral8",
+    "variant": "v6_full"
+  },
+  {
+    "candidate": "v6_restraint",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 42028.1050236416,
+    "delayed_noisy_risk": 10790.818971080731,
+    "failed_loss_endpoint_checks": [
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ]
+    ],
+    "failed_ood_checks": [],
+    "failed_point_checks": 6,
+    "failed_risk_checks": [],
+    "ood_pooled": {
+      "mean_total_dropped": 77203.8385938509,
+      "risk": 16750.13835249353
+    },
+    "overrides": {
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 16,
+      "restraint_neutral": 1.0,
+      "restraint_neutral_tolerance": 10.0
+    },
+    "set": "neutral16",
+    "variant": "v6_restraint"
+  },
+  {
+    "candidate": "v6_restraint",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 41881.61860096081,
+    "delayed_noisy_risk": 11136.866307871958,
+    "failed_loss_endpoint_checks": [
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ]
+    ],
+    "failed_ood_checks": [],
+    "failed_point_checks": 8,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "finite_pipeline",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 76605.12695048765,
+      "risk": 19730.576123003717
+    },
+    "overrides": {
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 8,
+      "restraint_neutral": 1.0,
+      "restraint_neutral_tolerance": 10.0
+    },
+    "set": "neutral8",
+    "variant": "v6_restraint"
+  },
+  {
     "candidate": "v6_restraint",
     "cases_per_regime": 352,
     "delayed_noisy_mean_total_dropped": 42138.62475217897,

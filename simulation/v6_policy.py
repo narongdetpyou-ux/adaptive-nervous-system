@@ -32,12 +32,16 @@ from v6_restraint import RestraintMonitor
 
 @dataclass(frozen=True)
 class V6Config(V5Config):
-    drain_weight: float = 2.0
+    # Defaults chosen on development seeds by the rule in V6_DESIGN.md:
+    # drain from the best drain-only set (drain_w1), restraint from the best
+    # drain-plus-restraint set (full_neutral16). The hurdle and loss fields
+    # only apply in the original hurdle mode.
+    drain_weight: float = 1.0
     restraint_hurdle_factor: float = 3.0
-    restraint_max_transfer: float = 10.0
+    restraint_max_transfer: float = 1e9
     restraint_loss_fraction: float = 0.25
     restraint_memory: int = 16
-    restraint_neutral: float = 0.0  # 0: the original hurdle mode; 1: neutral mode (amendment 1)
+    restraint_neutral: float = 1.0  # 0: the original hurdle mode; 1: neutral mode (amendment 1)
     restraint_neutral_tolerance: float = 10.0
 
 

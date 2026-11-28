@@ -61,13 +61,13 @@ CLOSED = (DATA['validation_seed_range'], DATA['ood_validation_seed_range'])
 TUNING = {
     'drain_w1': ('v6_drain', {'drain_weight': 1.0}),
     'drain_w2': ('v6_drain', {'drain_weight': 2.0}),
-    'restraint_mild': ('v6_restraint', {'restraint_hurdle_factor': 3.0, 'restraint_max_transfer': 10.0,
+    'restraint_mild': ('v6_restraint', {'restraint_neutral': 0.0, 'restraint_hurdle_factor': 3.0, 'restraint_max_transfer': 10.0,
                                         'restraint_loss_fraction': 0.25, 'restraint_memory': 16}),
-    'restraint_strong': ('v6_restraint', {'restraint_hurdle_factor': 10.0, 'restraint_max_transfer': 1e9,
+    'restraint_strong': ('v6_restraint', {'restraint_neutral': 0.0, 'restraint_hurdle_factor': 10.0, 'restraint_max_transfer': 1e9,
                                           'restraint_loss_fraction': 0.5, 'restraint_memory': 16}),
-    'restraint_hold16': ('v6_restraint', {'restraint_hurdle_factor': 1e9, 'restraint_max_transfer': 1e9,
+    'restraint_hold16': ('v6_restraint', {'restraint_neutral': 0.0, 'restraint_hurdle_factor': 1e9, 'restraint_max_transfer': 1e9,
                                           'restraint_loss_fraction': 1.0, 'restraint_memory': 16}),
-    'restraint_hold8': ('v6_restraint', {'restraint_hurdle_factor': 1e9, 'restraint_max_transfer': 1e9,
+    'restraint_hold8': ('v6_restraint', {'restraint_neutral': 0.0, 'restraint_hurdle_factor': 1e9, 'restraint_max_transfer': 1e9,
                                          'restraint_loss_fraction': 1.0, 'restraint_memory': 8}),
     # Amendment 1: return to the even split while restrained, fast-switching signal.
     'neutral8': ('v6_restraint', {'restraint_neutral': 1.0, 'restraint_memory': 8,

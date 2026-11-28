@@ -93,8 +93,26 @@ These findings led to **amendment 1** of the declaration, made before any select
 - **Fast-switching signal.** Restraint is triggered by two consecutive intervals between stage changes that are each shorter than transit + startup + dwell. The detector's 12-minute flag is no longer used.
 - **Unchanged.** Gates, hypotheses, seeds, the selection rule and the reversal and bounce signals are unchanged. The hurdle mode stays implemented, and its rows still reproduce exactly.
 
+With amendment 1 in place, the four neutral-mode sets ran on the same seeds:
+
+| Set | Failed checks | Loss/endpoint | Risk | OOD | OOD pooled risk |
+|---|---:|---:|---:|---:|---:|
+| `full_neutral16` (`v6_full`: drain weight 1, neutral restraint, memory 16) | **1** | **0** | 1 | **0** | **17,989** |
+| `full_neutral8` (`v6_full`: drain weight 1, neutral restraint, memory 8) | 3 | 0 | 3 | 0 | 21,676 |
+| `neutral16` (`v6_restraint`, memory 16) | 6 | 6 | 0 | 0 | 16,750 |
+| `neutral8` (`v6_restraint`, memory 8) | 8 | 6 | 2 | 0 | 19,731 |
+
+Returning to the even split brings pooled OOD risk well below V4 Hybrid's 25,432, and OOD dropped work below both V4 Hybrid and Capacity Balance. Restraint alone leaves the six unlimited-buffer end/tail failures, which drain removes. The one check `full_neutral16` still fails is the risk check in `legacy_instant` against V4 Hybrid, which V5 Full also fails.
+
 **Rule for the final parameters.**
 
 - The drain weight is the best drain-only set by the declared ranking.
 - The restraint parameters are those of the best drain-plus-restraint set (`v6_full`) by the same ranking.
 - The chosen values become the `V6Config` defaults, and `v6_selection_plan.json` fixes them before any selection array exists.
+
+**Chosen parameters**, which are now the `V6Config` defaults:
+
+- **Drain:** `drain_weight` 1, from `drain_w1`.
+- **Restraint:** `restraint_neutral` 1, `restraint_memory` 16, `restraint_neutral_tolerance` 10, and no transfer cap. These come from `full_neutral16`.
+- **Hurdle-mode fields:** `restraint_hurdle_factor` and `restraint_loss_fraction` apply only in the hurdle mode.
+- **Reproducibility:** the tuning rows of every set still reproduce exactly. The hurdle-mode sets now name their mode explicitly.
