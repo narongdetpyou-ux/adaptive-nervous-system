@@ -62,3 +62,39 @@ Expected reach on development data:
 - **Signals mostly silent:** sustained faults, false recovery, buffer cascade, underload.
 
 The single-change variants `v6_drain` and `v6_restraint` measure what each mechanism adds.
+
+## Tuning on development seeds
+
+Parameters were tuned with `python v6_grid.py run --split tune --set all`, then ranked with `python v6_grid.py tune`; the results are in [`v6_results/tuning/summary.json`](v6_results/tuning/summary.json). Each set runs one variant on seeds 6000..6031 (352 cases per regime) and OOD 8000..8031 (192 cases). The frozen baselines come from the V5 validation rows, which use identical code and identical seeds.
+
+Every set is ranked by the declared selection rule. The rule counts the failed standing point checks: 36 loss/endpoint, 24 risk and the 4 pooled OOD checks. Ties are broken by `delayed_noisy` mean dropped work, then risk.
+
+| Set | Failed checks | Loss/endpoint | Risk | OOD | OOD pooled risk |
+|---|---:|---:|---:|---:|---:|
+| V5 Full (reference) | 9 | 6 | 2 | 1 | 27,783 |
+| `drain_w1` (drain weight 1) | **2** | **0** | 1 | 1 | 29,898 |
+| `drain_w2` (drain weight 2) | 4 | 0 | 3 | 1 | 29,824 |
+| `restraint_strong` (hurdle ×10, no cap) | 10 | 6 | 3 | 1 | 27,686 |
+| `restraint_mild` (hurdle ×3, cap 10) | 27 | 15 | 11 | 1 | 27,441 |
+| `restraint_hold8` (hold while restrained, memory 8) | 31 | 15 | 12 | 4 | 34,839 |
+| `restraint_hold16` (hold while restrained, memory 16) | 32 | 15 | 13 | 4 | 35,805 |
+
+On the same seeds, V4 Hybrid's pooled OOD risk is 25,432.
+
+Three findings:
+
+- **Drain works.** With weight 1 it removes all six end-deficit and tail-AUC failures and lowers `delayed_noisy` risk from 11,243 to 9,580. It does raise OOD risk, mostly in rapid switching (37,482 against V5's 28,749).
+- **Holding locks in the wrong allocation.** In the original hurdle mode, holding while restrained freezes whatever allocation earlier moves reached. In rapid switching, restraint started after two moves at `[54, 59, 94]`, and the episode ended worse than both V5 and Static. When restraint started near the even split, it came close to Static.
+- **The detector's flag fires too widely.** Its 12-minute two-stage switching flag also fired in slow switching faults, 26–34% of minutes. In `finite_pipeline`, holding there raised dropped work from 45,126 to 79,493.
+
+These findings led to **amendment 1** of the declaration, made before any selection array existed:
+
+- **Neutral mode.** While restrained, the controller returns toward the even split and then holds.
+- **Fast-switching signal.** Restraint is triggered by two consecutive intervals between stage changes that are each shorter than transit + startup + dwell. The detector's 12-minute flag is no longer used.
+- **Unchanged.** Gates, hypotheses, seeds, the selection rule and the reversal and bounce signals are unchanged. The hurdle mode stays implemented, and its rows still reproduce exactly.
+
+**Rule for the final parameters.**
+
+- The drain weight is the best drain-only set by the declared ranking.
+- The restraint parameters are those of the best drain-plus-restraint set (`v6_full`) by the same ranking.
+- The chosen values become the `V6Config` defaults, and `v6_selection_plan.json` fixes them before any selection array exists.

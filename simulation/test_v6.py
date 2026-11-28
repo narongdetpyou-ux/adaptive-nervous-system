@@ -1,4 +1,5 @@
 """V6 mechanisms: exact V5 parity without features, drain arithmetic, restraint signals, causality, underload, seed guards."""
+import dataclasses
 import tempfile
 import unittest
 
@@ -13,7 +14,7 @@ from v4_policy import forecast_costs as v4_forecast
 from v4_scenarios import REGIMES
 from v5_simulation import simulate_case
 from v6_forecast import forecast_costs, stage_weights
-from v6_policy import V6Policy
+from v6_policy import V6Config, V6Policy
 from v6_restraint import RestraintMonitor
 
 
@@ -87,7 +88,8 @@ class RestraintTests(unittest.TestCase):
         monitor.note_detector([(10, 1), (14, 1)])
         self.assertEqual(monitor.reasons(14 + env.sensor_lag + 4, False), ['reversal'])
         self.assertEqual(monitor.reasons(14 + env.sensor_lag + 17, False), [])
-        self.assertEqual(monitor.reasons(20, True)[0], 'switching')
+        hurdle = RestraintMonitor(env, dwell=8, memory=16, detector_switching=True, fast_switching=False)
+        self.assertEqual(hurdle.reasons(20, True), ['switching'])
         slow = RestraintMonitor(env, dwell=8, memory=16)
         slow.note_detector([(10, 1), (30, 1)])
         self.assertEqual(slow.reasons(34, False), [])
@@ -102,6 +104,34 @@ class RestraintTests(unittest.TestCase):
         arrived.record_move(20, [69., 69., 69.], [10., -10., 0.])
         arrived.note_staff(24, [79., 59., 69.])
         self.assertEqual(arrived.bounces, [])
+
+    def test_fast_switching_needs_two_short_intervals(self):
+        env = REGIME_CONFIGS['delayed_noisy']
+        fast = RestraintMonitor(env, dwell=8, memory=16)
+        fast.note_detector([(10, 0), (15, 1), (20, 2), (25, 0)])
+        self.assertEqual(fast.fast_switches, [25])
+        self.assertIn('fast_switching', fast.reasons(25 + env.sensor_lag + 1, False))
+        slow = RestraintMonitor(env, dwell=8, memory=16)
+        slow.note_detector([(10, 0), (30, 1), (50, 2), (70, 0)])
+        self.assertEqual(slow.fast_switches, [])
+        hurdle = RestraintMonitor(env, dwell=8, memory=16, detector_switching=True, fast_switching=False)
+        hurdle.note_detector([(10, 0), (15, 1), (20, 2), (25, 0)])
+        self.assertEqual(hurdle.reasons(28, False), [])
+        self.assertEqual(hurdle.reasons(28, True), ['switching'])
+
+    def test_neutral_restraint_moves_toward_the_even_split_then_holds(self):
+        config = dataclasses.replace(V6Config(), restraint_neutral=1.0, restraint_max_transfer=1e9)
+        # Seed 9001: restraint starts at [44, 104, 59], far from the even split.
+        ood = v5_ood.build_case('rapid_switching', 9001)
+        _, trace = sim.run_ood('v6_restraint', ood, detailed=True, config=config)
+        neutral = [r for r in trace if r['branch'] == 'v6_restrained_neutral']
+        self.assertTrue(neutral)
+        for record in neutral:
+            evidence = record['decision_evidence']
+            self.assertLess(evidence['neutral_gap_after'], evidence['neutral_gap_before'])
+        self.assertTrue(any(r['branch'] == 'v6_restrained_hold' for r in trace))
+        with self.assertRaises(ValueError):
+            V6Policy(REGIME_CONFIGS['delayed_noisy'], 'v6_full', dataclasses.replace(V6Config(), restraint_neutral=0.5))
 
     def test_restraint_sees_failed_transfers_and_restrains(self):
         ood = v5_ood.build_case('transfer_failure', 9000)

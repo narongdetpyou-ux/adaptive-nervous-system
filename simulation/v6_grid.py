@@ -69,6 +69,15 @@ TUNING = {
                                           'restraint_loss_fraction': 1.0, 'restraint_memory': 16}),
     'restraint_hold8': ('v6_restraint', {'restraint_hurdle_factor': 1e9, 'restraint_max_transfer': 1e9,
                                          'restraint_loss_fraction': 1.0, 'restraint_memory': 8}),
+    # Amendment 1: return to the even split while restrained, fast-switching signal.
+    'neutral8': ('v6_restraint', {'restraint_neutral': 1.0, 'restraint_memory': 8,
+                                  'restraint_neutral_tolerance': 10.0, 'restraint_max_transfer': 1e9}),
+    'neutral16': ('v6_restraint', {'restraint_neutral': 1.0, 'restraint_memory': 16,
+                                   'restraint_neutral_tolerance': 10.0, 'restraint_max_transfer': 1e9}),
+    'full_neutral8': ('v6_full', {'drain_weight': 1.0, 'restraint_neutral': 1.0, 'restraint_memory': 8,
+                                  'restraint_neutral_tolerance': 10.0, 'restraint_max_transfer': 1e9}),
+    'full_neutral16': ('v6_full', {'drain_weight': 1.0, 'restraint_neutral': 1.0, 'restraint_memory': 16,
+                                   'restraint_neutral_tolerance': 10.0, 'restraint_max_transfer': 1e9}),
 }
 
 

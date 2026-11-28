@@ -4,10 +4,14 @@ V6Policy subclasses the frozen V5Policy and never edits it. decide() is V5's
 decision procedure line for line, with three marked hooks:
 1. drain: the forecast terminal term counts retained work by the stage visits
    still ahead of it (v6_forecast.score); drain_weight 0 is exactly V5.
-2. restraint, while RestraintMonitor reports a reason: candidate transfers
-   above restraint_max_transfer are dropped, the gain hurdle is multiplied by
-   restraint_hurdle_factor, and the V5 loss veto lets the controller hold when
-   acting would cut predicted drops by no more than restraint_loss_fraction.
+2. restraint, while RestraintMonitor reports a reason. In the original
+   hurdle mode (restraint_neutral 0), candidate transfers above restraint_max_transfer are dropped,
+   the gain hurdle is multiplied by restraint_hurdle_factor, and the V5 loss
+   veto lets the controller hold when acting would cut predicted drops by no
+   more than restraint_loss_fraction. In the neutral mode (restraint_neutral 1, amendment 1 of
+   v6_acceptance_predeclared.json) the controller holds when its allocation is
+   within restraint_neutral_tolerance of the even split, and otherwise takes
+   the feasible catalog move that most reduces the distance to it.
 3. restraint bookkeeping: the monitor reads the detector's events and the
    committed staff, and remembers each own move's intended allocation.
 With no V6 feature (`v6_base`) every decision equals V5 Full's.
@@ -33,6 +37,8 @@ class V6Config(V5Config):
     restraint_max_transfer: float = 10.0
     restraint_loss_fraction: float = 0.25
     restraint_memory: int = 16
+    restraint_neutral: float = 0.0  # 0: the original hurdle mode; 1: neutral mode (amendment 1)
+    restraint_neutral_tolerance: float = 10.0
 
 
 V6_VARIANTS = {
@@ -50,7 +56,11 @@ class V6Policy(V5Policy):
         super().__init__(environment, 'v5_full', config or V6Config())
         self.variant = variant
         self.v6_features = V6_VARIANTS[variant]
-        self.monitor = RestraintMonitor(environment, self.config.dwell, self.config.restraint_memory)
+        if self.config.restraint_neutral not in (0.0, 1.0):
+            raise ValueError('restraint_neutral must be 0 (hurdle mode) or 1 (neutral mode)')
+        hurdle = self.config.restraint_neutral == 0.0
+        self.monitor = RestraintMonitor(environment, self.config.dwell, self.config.restraint_memory,
+                                        detector_switching=hurdle, fast_switching=not hurdle)
 
     def decide(self, t, queues, history, staff, current_arrival):
         if type(t) is not int or t != self.last_decision + 1 or self.estimator.last_observed != t - 1:
@@ -97,6 +107,22 @@ class V6Policy(V5Policy):
                     continue
             if np.any(delta): raw.append(move); actual.append(delta); ids.append(aid)
         if len(ids) == 1: return hold('no_feasible_move')
+        # Hook 2d: neutral restraint returns toward the even split, then holds.
+        if restrained and c.restraint_neutral == 1.0:
+            neutral = np.full(3, env.budget / 3.0)
+            gap = np.abs(staff - neutral).sum() / 2
+            if gap < c.restraint_neutral_tolerance:
+                return hold('v6_restrained_hold')
+            reached = np.abs(staff + np.asarray(actual) - neutral).sum(axis=1) / 2
+            size = np.abs(actual).sum(axis=1)
+            j = min(range(len(ids)), key=lambda j: (reached[j], size[j], ids[j]))
+            if j == 0 or reached[j] >= gap - c.tolerance:
+                return hold('v6_restrained_hold')
+            self.ledger.record(t, staff, raw[j])
+            self.monitor.record_move(t, staff, actual[j])
+            self.last_change = t
+            return raw[j].copy(), {**note, 'branch': 'v6_restrained_neutral', 'selected_action_id': ids[j],
+                                   'neutral_gap_before': float(gap), 'neutral_gap_after': float(reached[j])}
         allocations = staff + np.asarray(actual)
         target = env.budget / np.maximum(point, 1e-9); target *= env.budget / target.sum()
         distance = np.square(allocations - target).sum(axis=1)

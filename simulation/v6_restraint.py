@@ -1,30 +1,40 @@
 """Observable evidence that moves cannot pay off (v6_acceptance_predeclared.json, mechanism `restraint`).
 
-Three signals, each from data every policy already receives:
-- switching: the unchanged V5 RegimeDetector sees rate changes at two or more
-  stages within 12 minutes;
-- reversal: the detector sees a stage's rate change and change back within the
-  time a move needs to take effect and become revisable
-  (transit + startup + dwell), the signature of a short pulse;
+Signals, each from data every policy already receives (the unchanged V5
+RegimeDetector's rate-change events and the environment's committed-staff
+ledger):
+- fast switching: the last two intervals between rate-change events at
+  different stages are both within the time a move needs to take effect and
+  become revisable (transit + startup + dwell). Slow switching, where moving
+  still pays, does not qualify.
+- reversal: a stage's rate changes and changes back within that time, the
+  signature of a short pulse.
 - bounce: after one of the controller's own moves arrives, the committed staff
-  recorded by the environment ledger falls short of the intended allocation.
+  falls short of the intended allocation.
+- switching (the detector's own 12-minute two-stage flag) is kept only for the
+  original hurdle mode (amendment 1 of v6_acceptance_predeclared.json).
 No failure window, sensor multiplier, family label or true rate is used.
 """
 import numpy as np
 
 
 class RestraintMonitor:
-    def __init__(self, environment, dwell, memory):
+    def __init__(self, environment, dwell, memory, *, detector_switching=False, fast_switching=True):
         if memory < 0:
             raise ValueError('Restraint memory must be non-negative')
         self.environment = environment
         self.reach = environment.transit_delay + len(environment.startup_factors) + dwell
         self.memory = memory
+        self.detector_switching = detector_switching
+        self.use_fast_switching = fast_switching
         self.pending = []
         self.bounces = []
         self.reversals = []
+        self.fast_switches = []
         self._seen = set()
         self._last_event = {}
+        self._last_switch_stage = None
+        self._switch_times = []
 
     def note_detector(self, events):
         """Read the detector's event list (source minute, stage) in source order."""
@@ -36,6 +46,12 @@ class RestraintMonitor:
             if previous is not None and source - previous <= self.reach:
                 self.reversals.append(source)
             self._last_event[stage] = source
+            if self._last_switch_stage is not None and stage != self._last_switch_stage:
+                self._switch_times.append(source)
+                times = self._switch_times[-3:]
+                if len(times) == 3 and times[2] - times[1] <= self.reach and times[1] - times[0] <= self.reach:
+                    self.fast_switches.append(source)
+            self._last_switch_stage = stage
 
     def record_move(self, t, staff, delta):
         """Remember the allocation the controller intends once its own move has arrived."""
@@ -56,8 +72,10 @@ class RestraintMonitor:
     def reasons(self, t, switching):
         lag = self.environment.sensor_lag
         found = []
-        if switching:
+        if self.detector_switching and switching:
             found.append('switching')
+        if self.use_fast_switching and any(0 <= t - lag - source <= self.memory for source in self.fast_switches):
+            found.append('fast_switching')
         if any(0 <= t - lag - source <= self.memory for source in self.reversals):
             found.append('reversal')
         if any(0 <= t - minute <= self.memory for minute in self.bounces):
