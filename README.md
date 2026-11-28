@@ -80,7 +80,13 @@
 
 ## License
 
-repository นี้ยังไม่ได้ระบุ license ถ้าต้องการนำโค้ดไปใช้ แก้ไข หรือเผยแพร่ต่อ โปรดติดต่อเจ้าของโครงการก่อน
+โค้ดและเอกสารใน repository นี้ใช้ [MIT License](LICENSE):
+
+- **ใช้ได้เต็มที่:** นำไปใช้ แก้ไข และเผยแพร่ต่อได้ รวมถึงใช้เชิงพาณิชย์
+- **เงื่อนไข:** ต้องคงประกาศลิขสิทธิ์และข้อความ license ไว้
+- **ไม่มีการรับประกัน:** ซอฟต์แวร์ให้มาตามสภาพ
+
+ข้อมูลภาพท้องฟ้า 2MASS ที่ benchmark ดาวน์โหลดตอนรันไม่ได้อยู่ใน repository ข้อมูลนั้นใช้เงื่อนไขและคำขอบคุณของผู้เผยแพร่ (NASA/IPAC IRSA) ตามที่ระบุใน [benchmarks/mosaic_v1/README.md](benchmarks/mosaic_v1/README.md)
 
 ## โฟลเดอร์หลัก
 
@@ -91,7 +97,7 @@ repository นี้ยังไม่ได้ระบุ license ถ้าต
 | [`pilots/`](pilots/m101/README.md) | pilot ภาพ M101 ที่ใช้กำหนดชุดทดสอบ |
 | `.github/` | CI, แม่แบบ PR และ Dependabot |
 
-ที่รากมีเพียงโฟลเดอร์ข้างบน, หน้านี้ (`README.md`), `AGENTS.md`, `CONTRIBUTING.md`, `.gitattributes` และ `.gitignore`
+ที่รากมีเพียงโฟลเดอร์ข้างบน, หน้านี้ (`README.md`), `LICENSE`, `AGENTS.md`, `CONTRIBUTING.md`, `.gitattributes` และ `.gitignore`
 
 ## แผนที่ไฟล์ใน `simulation/`
 

@@ -33,8 +33,8 @@ hash หรือหลักฐานเดิมเพื่อให้ผล
   งาน v0.5 (`v5_*`, `test_v5*.py`, `V5_*.md` และ `v5_results/`) อยู่ในโฟลเดอร์นี้ และตรึงไว้ใน `v5_freeze_record.json` แล้ว
   งานรุ่นใหม่ของแบบจำลอง เช่น `v6_*.py` และ `test_v6_*.py` ให้วางในโฟลเดอร์นี้ข้างโมดูลเดิม
 - `benchmarks/` และ `pilots/` เก็บงานที่รันจริงบนเครื่อง แต่ละงานอยู่ในโฟลเดอร์ของตัวเอง
-- ที่รากเหลือเพียง `README.md` (หน้าแรกของ repository), `.github/` (CI, แม่แบบ PR และ Dependabot),
-  `AGENTS.md`, `CONTRIBUTING.md`, `.gitattributes` และ `.gitignore` ซึ่ง git อ่านจากรากเท่านั้น
+- ที่รากเหลือเพียง `README.md` (หน้าแรกของ repository), `LICENSE` (MIT), `.github/` (CI, แม่แบบ PR และ Dependabot),
+  `AGENTS.md`, `CONTRIBUTING.md`, `.gitattributes` และ `.gitignore` ซึ่ง git อ่านจากรากหรือ GitHub แสดงจากราก
 
 ซอร์สถูกย้ายเข้า `simulation/` เมื่อ 25 พฤศจิกายน 2026 ด้วย `git mv` เท่านั้น
 `simulation/test_source_layout.py` ตรวจว่าไฟล์ทั้ง 199 ไฟล์ที่ `SOURCE_IMPORT_MANIFEST.json`
