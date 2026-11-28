@@ -116,3 +116,34 @@ Returning to the even split brings pooled OOD risk well below V4 Hybrid's 25,432
 - **Restraint:** `restraint_neutral` 1, `restraint_memory` 16, `restraint_neutral_tolerance` 10, and no transfer cap. These come from `full_neutral16`.
 - **Hurdle-mode fields:** `restraint_hurdle_factor` and `restraint_loss_fraction` apply only in the hurdle mode.
 - **Reproducibility:** the tuning rows of every set still reproduce exactly. The hurdle-mode sets now name their mode explicitly.
+
+## Development grid
+
+The grid ran all six baselines and the three variants on every development seed, using the fixed parameters:
+
+- **Seeds:** 2000..2007, 4000..4063 and 6000..6063, which give 1,496 cases per regime, plus OOD 8000..8063 (384 cases).
+- **Commands:** `python v6_grid.py run --split development`, then `python v6_grid.py summarize --split development`.
+- **Results:** [`v6_results/development_grid/summary.json`](v6_results/development_grid/summary.json).
+- **Baseline reproduction:** the frozen baselines reproduce all 27,648 V5 validation rows they share byte for byte (six policies on seeds 6000..6063 and OOD 8000..8063).
+
+| Variant | Failed point checks | Loss/endpoint | Risk | OOD | OOD pooled risk | H1 (drain vs V5 Full) | H2 (OOD risk vs V5 Full) |
+|---|---:|---:|---:|---:|---:|---|---|
+| `v6_full` | **4** | 3 | 1 | 0 | **19,392** | supported | supported: 11,210 (95% CI 9,007–13,527) |
+| `v6_drain` | 6 | 0 | 3 | 3 | 31,508 | supported | not supported |
+| `v6_restraint` | 7 | 6 | 1 | 0 | 18,877 | not supported | supported |
+| V5 Full | 8 | 6 | 1 | 1 | 30,601 | — | — |
+| V4 Hybrid | 16 | 15 | 0 | 1 | 27,913 | — | — |
+
+The single-change variants attribute the gains: drain removes the unlimited-buffer end/tail failures, and restraint the OOD failures.
+
+`v6_full` fails three `finite_pipeline` checks against Capacity Balance and one risk check:
+
+| Check | `v6_full` | Capacity Balance | Gap |
+|---|---:|---:|---:|
+| Dropped work | 40,115 | 40,030 | +0.21% |
+| End deficit | 46,405 | 46,320 | +0.18% |
+| Tail AUC | 1,286,814 | 1,284,101 | +0.21% |
+
+Almost all of the gap comes from `generated_switching_fault`, where restraint gives up moves that still pay in that regime. The risk check is `legacy_instant` against V4 Hybrid, which V5 Full also fails.
+
+This grid is descriptive. The parameters stay as fixed by the tuning rule above, and the selection seeds decide among the three variants.

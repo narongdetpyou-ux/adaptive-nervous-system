@@ -1,0 +1,809 @@
+{
+  "baseline_reproduction": {
+    "all_identical": true,
+    "compared_rows": 27648,
+    "identical_rows": 27648
+  },
+  "chosen_variant": "v6_full",
+  "episode_files_sha256": {
+    "cases/episodes-2000.csv": "9f49b306da6b67172220628514cba092e51956592861b12d700a9e4d6be38e9e",
+    "cases/episodes-2001.csv": "cbad541b0a09230db6241d12c77cacef7e5079a78ff7ef5dccf097071fbf0a96",
+    "cases/episodes-2002.csv": "59372f211a62e25cb8e1140630c2f6841efb41a2079375e77aa63ef06ae3c908",
+    "cases/episodes-2003.csv": "556d31ae440d8b52bc504ddac9e254a66f6771f9bba7bbb079fc55d09846a266",
+    "cases/episodes-2004.csv": "83b8427c628393409f4c4a69c59ff85375807719abcbc8e580147948582a52de",
+    "cases/episodes-2005.csv": "037726c866df46776c6e0aa7a5360733ca026e57927a957714121bfa852ecb25",
+    "cases/episodes-2006.csv": "398101d85a5528d1cedfa44139fe0401b43be747efc3c669652e8ca68e692ea2",
+    "cases/episodes-2007.csv": "af042c9bc778257f1eb90880d7e7700c9b6ac781a781cc18bcff3c04bac75380",
+    "cases/episodes-4000.csv": "21be175c67b0a2d9a9fb6cc42ea88a3fbfcb5ef7f3b2f992d99166ddc524e733",
+    "cases/episodes-4001.csv": "3a211839bef457636e4b25cadca16ff1c8dbc37cc8de06de80ecd84e8944fa84",
+    "cases/episodes-4002.csv": "2ea0b021a62c02ffb70d000cd13ee86e6bc5dda1c111d4886cf763ae5d3a5385",
+    "cases/episodes-4003.csv": "1d63830487eb1697ae8b8bdf670bf8c5c96bc58d5490e8672834f26ac718f95e",
+    "cases/episodes-4004.csv": "e5bc3af73bdd1936b390e13746d5718062c741c4024fcbf14a68d642f11e2cd1",
+    "cases/episodes-4005.csv": "d63789bf9f9fcce95b9dacad5b1849529b9eb96c859a8e0b66350477fc66bd6a",
+    "cases/episodes-4006.csv": "c236d3ac9bd6212e42932bea07bd66e9685ce552508ebf20c50234188dd938b2",
+    "cases/episodes-4007.csv": "c1e39b668045cc78ea5ebf6bbd553587907e0d79cda0fdf6ea7402bc9ef88f2a",
+    "cases/episodes-4008.csv": "9a82061316f1211b24d55324e27d5a60ee08ab19260212c275228e7341bd9129",
+    "cases/episodes-4009.csv": "20f4b7930aefc3a6c5173f20c9cf3cd1110bb85564e31384198910415a635854",
+    "cases/episodes-4010.csv": "f33f0a42c20ef82bdd18c89386c8822456bcf2bed4d81d5530197d746cb77c74",
+    "cases/episodes-4011.csv": "03cac147554e1e922ea3dff6d42fc06ca8ebc02c6d477524b3e694062c8297e3",
+    "cases/episodes-4012.csv": "c44cf84849d07f7820dacd689777dcc25e143700821092662bfef2a0618cdf4c",
+    "cases/episodes-4013.csv": "a9ae91b4d164117eb431c553bdcd34735e21f476a0fcfecaa471385f20b64e6a",
+    "cases/episodes-4014.csv": "d98cd073a93117be7c37a50bb9bc9997c909ea85bafaa37ec4beea5871b020d1",
+    "cases/episodes-4015.csv": "87e86707a6fa4299b4d214ef4b007ca41c92ae3abee7d4b71851f88b4c8d735d",
+    "cases/episodes-4016.csv": "1e335c3fa90015d6493aad67ba2b0e581e8104aa7ca0309cdf0bd733ee955687",
+    "cases/episodes-4017.csv": "d210f9a35109e1835c3dcc99e783cd923aabf48a3fb388064f977cca6804d237",
+    "cases/episodes-4018.csv": "d9d7fcbed7550c82a74f93b5f55faa352bdff70ff1996bca789ac87c26c1b5c0",
+    "cases/episodes-4019.csv": "f8e9a4007d7713de3f6f2999acb9683c642f877417992df3f368a4b7938ae1a3",
+    "cases/episodes-4020.csv": "d0276940ff820aba4fa60cdc68c64bf01b1e3c873cbd01fc64d7b3f4fec3b447",
+    "cases/episodes-4021.csv": "eef9741344dca9a2de6434b5c762da1ef54b46ec6352f7a700a3a63ed904b9f7",
+    "cases/episodes-4022.csv": "1cb0434f9812820eaf0f3bbcac458dd91a689f8f907d6de5d0d0a409951ea551",
+    "cases/episodes-4023.csv": "6c7d0c2cf2b2601a3e9234e6e687542ba5c422eb5bb8bf2ec87132a01709337e",
+    "cases/episodes-4024.csv": "9e038f5fdfa982abe5ff19698bf1a0a2291de1c8715e314978bfa2c94dd18368",
+    "cases/episodes-4025.csv": "f090e568b67c970f9b01dd2302a7ec10f5486ad0ae26e08b54a809ca0bfe28ac",
+    "cases/episodes-4026.csv": "e8e84e9d60ff24bfd458118ec843fe3feaa39db5a83511f455c910a80006f437",
+    "cases/episodes-4027.csv": "d228f852e307f5026bb4c45bdc11498ddd6e0a8fa1c063299fd2170dd193c4eb",
+    "cases/episodes-4028.csv": "adf19747f01cc3af0ec2f45afc69fc9ce4512b3677819b88a31e3b459db09a59",
+    "cases/episodes-4029.csv": "370e94450e727554623f242257e8eac25aafa2cdac1cde6f45787e449975396c",
+    "cases/episodes-4030.csv": "b7031d3b147184057aa4996cd16c117526fdab8ffd27509cf63e8650ab746cfe",
+    "cases/episodes-4031.csv": "c6474b07786c30988e5424b50d1a4fd23b9b308b959a7afbbbbaf88cfbf37cfc",
+    "cases/episodes-4032.csv": "413f6c80ad6cf1d355d069733a861fb1bcc52efedbd8cbbbdae0be80ffb18fdd",
+    "cases/episodes-4033.csv": "7041aca2375eb065c8a7fd20569df4c8bfd0d48bce3d51801082ca411818753d",
+    "cases/episodes-4034.csv": "d6daacd0e17f26e982c9ce0dedc095f4bfffdedc7ee8668c8e574ef1561d364b",
+    "cases/episodes-4035.csv": "e54609f46b64e993c4b2cf35b1f7cd4305cb81ae6868c57a8235f3c12c400ea9",
+    "cases/episodes-4036.csv": "c96fca29226b0a403109c73ac9511f0e58dcb609d51475b1d80162958e63a45f",
+    "cases/episodes-4037.csv": "67ce7f986166a4fe7313598c397e49da011729113d05718fac45dbd652660d50",
+    "cases/episodes-4038.csv": "e09b111936b9e1fbeb8b9e3b46649e0200508d1059a3971d69424efd9697ea2c",
+    "cases/episodes-4039.csv": "7bbca880b8f35e23c880f236a880cda4a97e9913b6e64a9c55f677502e589510",
+    "cases/episodes-4040.csv": "5bf647f6604e7906673e608cb0fcfce40a586becd38c410478b8087de896d2a1",
+    "cases/episodes-4041.csv": "19950e8489bfeed81c84a5bba417b998dfa6f679a72ebfceee7914139606deb9",
+    "cases/episodes-4042.csv": "a240b9cc8ede3554b465e74b2d981edf262b564973ee6a51cdc98181e89deb43",
+    "cases/episodes-4043.csv": "00793ac9280dafd381fb1a1ec14033958711073f646f933a2a235f3d53f26562",
+    "cases/episodes-4044.csv": "c3565357fb4e33f65c6dab0acc648d05670109e4085bd6f6af72ce253ed02dd3",
+    "cases/episodes-4045.csv": "3ce673a9efc140f2a2893f99f6b6c2844b480c788c5b10362d9e11210dc3ea9c",
+    "cases/episodes-4046.csv": "0d9f5e6af39e41689b11f869513bdb282bf6d7c849d28a4f153b716abab54525",
+    "cases/episodes-4047.csv": "e8813ada0c6dfa6b245e6884fc9bbc02a8c2e28fb0bb70e941a5ae6cffa4cd7f",
+    "cases/episodes-4048.csv": "a27678b9702fe0029c0cc523f26f6f91ae27030540c3b567f10f7c205fab4141",
+    "cases/episodes-4049.csv": "850c018c0aa697e71b158d44e05e5bc382a128338184e34c274c8741484c2ccb",
+    "cases/episodes-4050.csv": "dc62eea3a4e064c90b46c98bdcc0e93cb109a5bab0f058d23d15b75b16283057",
+    "cases/episodes-4051.csv": "66bd7471ad6dd9f40ac1db64f6af50d5a0dd61183c9ed328381f76f3c3302d9d",
+    "cases/episodes-4052.csv": "ba178c6ce7719dec91cce67279935ceb5e3bf275f07348016ba5eaaca3ec3b80",
+    "cases/episodes-4053.csv": "438c553f3e1c3a7288d538985fb20ea269e03fbaf3526b5d9c9c8bd112259dd2",
+    "cases/episodes-4054.csv": "732a99f17dff18465f4fefcf4f78180dab7c527e303d9b3c74436c6d22dbcdde",
+    "cases/episodes-4055.csv": "43d263c98a1dd1abbebbf81078ca7ddab36cc640d6abdbff75d6915ae0f59403",
+    "cases/episodes-4056.csv": "d153ab4f9e71c2e14d92b55e5137160f1d93c870d20674646b69c1f5eda8b239",
+    "cases/episodes-4057.csv": "77510bba3961aabe46eaf14a0698756aa2ea6cadfd6a3c60b71a51a8817e8f0f",
+    "cases/episodes-4058.csv": "8156f2e1e4f9bf4ebe7741456a6af37f2df54339b7e76ea5eaa0e0c356e19bbd",
+    "cases/episodes-4059.csv": "5df22c50f0b73539fca5a59aec4914067adeecc1a91118eaa9edf956bc7d324f",
+    "cases/episodes-4060.csv": "ac05d83b450ee1bff1b3150200bd4e4bc8b86b147c11153c18e1b3d837df03c6",
+    "cases/episodes-4061.csv": "3ca876dac8f7a6a3bbbe364b98eebd51ce220d2cb3a35e039e219385ab9ac3bb",
+    "cases/episodes-4062.csv": "4540c0916e6f5f8700542dab77e3b29d1e6a5a7e5cd0fd4138b116679cf7d445",
+    "cases/episodes-4063.csv": "dd029068b8d0cb1fac3a3fc447674e78986b5fa4a690b9bc988c469480e8e63d",
+    "cases/episodes-6000.csv": "f9d1c3f66e67922c5ada55072f96dfb121eb048fd0b5b136bd7a7a0119adbe3f",
+    "cases/episodes-6001.csv": "ec759025a539ca559e820e9b8e70ed9114a0aea2730f65535b4098d75cd9d81e",
+    "cases/episodes-6002.csv": "fc13627a9d5b2e66919be3f0b0ec73e41bee4381ce42061339cdd93e46004276",
+    "cases/episodes-6003.csv": "005fc7daacd9cbb65556e5e10649714b7d7f86d03d6fdf7b91743fe682d9578c",
+    "cases/episodes-6004.csv": "6d874c8e4f95cf5e470b856fa35fa5c81ba7cdc55c951a1e537c7478a0e3db9f",
+    "cases/episodes-6005.csv": "e331a31aab7fcd0a7f662b8a5e2fb55862d7d957c58379ae571e0f495ef5419c",
+    "cases/episodes-6006.csv": "951295c954b233be6d49ddd8951e56d63a0958e874e06463ba78cdf97bcd7771",
+    "cases/episodes-6007.csv": "a2b00b9f9ae24b539811d75a0ca1b2756ea6749d40de4f0bfaf880bd2d93ee0b",
+    "cases/episodes-6008.csv": "d0bb36a5340463177ed619a519bc919c9783c84716c1ee27040b8e28c72eb1e8",
+    "cases/episodes-6009.csv": "13d1407e1ba5e06e5b31ca6ee3dad971168eba1eb293c635d5085bc2e74b404e",
+    "cases/episodes-6010.csv": "51a403409ed4ebda428266fc15e499305cfc2f3d5442e07de3da51c1a902d0c1",
+    "cases/episodes-6011.csv": "b316d8f67c0a4bebb0b68d1a103a07f61432592f644f62788c463c9ca410016c",
+    "cases/episodes-6012.csv": "4654d242ed7867d9b7d633f8dc7af0f30661df405593da005285ac06a04eb053",
+    "cases/episodes-6013.csv": "04279043c52bfbec9f72a1f44acade8a8d384de6d10d256222e16b813691783f",
+    "cases/episodes-6014.csv": "796247dbcba5b3a33cc6fe82b742d2f4e0ec67e938da1037e8ebd30bc7a12671",
+    "cases/episodes-6015.csv": "8426c88669e9c1c686bcc5dafe7a6af89f3c944f36f0290f1a2f2ccc5a1921d2",
+    "cases/episodes-6016.csv": "10bba6a7beaca5aa0fd715a98773e125a40b3db4a02728638987c98bcc27690c",
+    "cases/episodes-6017.csv": "b0d2915ec096595de7301b445eadc9c6b313c183f6346799977c0031fa6cbe2c",
+    "cases/episodes-6018.csv": "6db3202015a36902bd73b715b540364f3de76ee102b352dea93797b05ea3e33c",
+    "cases/episodes-6019.csv": "6e4c8fd3990d1263204cde9bf5c0910c6815a3711f2e1e8665df371446d068e2",
+    "cases/episodes-6020.csv": "d2a7b80c0e56e55fe359f069fe9e62b836b687f0a498a76336d5056c78ea605a",
+    "cases/episodes-6021.csv": "9ce2954fc46b346c2ec6caaa322ac10df81e544bfdc318d4f142e05998415a2d",
+    "cases/episodes-6022.csv": "e7ccba80dde113595c547db5cb05e79fa7182c949716689445112c03b801fd6a",
+    "cases/episodes-6023.csv": "4093234b565b0a7bfe11694bf77a236843368a3cdfcb5ecc37a049ec5df880a2",
+    "cases/episodes-6024.csv": "4c686b5f3a38f1574e5e3203e1d31ea5271d4426e0e8a6fc6a6da07b240b5c26",
+    "cases/episodes-6025.csv": "76c5774fe8bd9a42a0868fb9f57c57d30b8e6b926aaf334cc49f83c34b40dd00",
+    "cases/episodes-6026.csv": "1f8e0e50af97f4347c1dd706d30c17eab718a14b7bb9add977c24eb6d198ca77",
+    "cases/episodes-6027.csv": "0d6f6da44f66313dee84f3f43c45b600ba46c918bdd5f77a24dab372b13867e0",
+    "cases/episodes-6028.csv": "fe2befaa95dd709a85dbfea6e4566a511268b69c7e71433266811b0fbc7d01a1",
+    "cases/episodes-6029.csv": "b8e37f6b0f55ed2d1d4fe04af137f3888afbd4f32a88f717d36ef5b4ca0cf584",
+    "cases/episodes-6030.csv": "25160c3b7b6ff033daee3e22e2fc03f629f42deb245503e9717b556bc971f7a9",
+    "cases/episodes-6031.csv": "94fe6d711af0dc25470055163ed18ca1c0b78ddd002196a627b248ba08cf213d",
+    "cases/episodes-6032.csv": "0b991f73c52f933ba8382bcec6982e503fa03852a15230e51eb5fad64583d3d7",
+    "cases/episodes-6033.csv": "c26548ffef3afedc96e4fcc439cfdf185ec475ced8d7bfd4dea3438981405f3b",
+    "cases/episodes-6034.csv": "ed9c24cf053952f21c1a815bf6a1447107976d4b28c25509f86a93db850ece3b",
+    "cases/episodes-6035.csv": "a91645046957a07c4a99afc6c8db7577af962822df77cec537f91bd91ec720ed",
+    "cases/episodes-6036.csv": "5ddf650bbaaa4bf0c5842ed4f10fd2b80f53ccf340e563890c860b7bb5f00379",
+    "cases/episodes-6037.csv": "cceb1a00a9e1324e2b632e61aeaca74177c53b9b0975a3bbeb4f115a4f1c6897",
+    "cases/episodes-6038.csv": "78af6292eea66896cf3790b6e0ce6b6e4c30e9b5dc41a28015c0f7e26d435015",
+    "cases/episodes-6039.csv": "2aa67e15667a58f1476bfbb99ddadbe739894a56a1d25959d4c3d9e885db216b",
+    "cases/episodes-6040.csv": "499ed0b3bc40b60dea7023e07d6d5524b95acf9a36280ac136651616faf4fa6e",
+    "cases/episodes-6041.csv": "1e4bfbf64c636dc37f0eeb0e61e6cc4463179b4bd450d87c1b5649fa39047a36",
+    "cases/episodes-6042.csv": "49c8a8c6ac94ae5961b6a021f759ad93b44f2975cb9f5ad9933fb7e4c60159ad",
+    "cases/episodes-6043.csv": "312a29c0019d3e4e853c00701081f6b57063c965c365919dad71f7a75a716763",
+    "cases/episodes-6044.csv": "8e871822b9e2be29d09d549cc64fb633aa6e26548b8006bf253b8545f033640d",
+    "cases/episodes-6045.csv": "34aa00f7b5b5873cd6eca3947100a68ef27462abb457ea326f1da3270d3f8b25",
+    "cases/episodes-6046.csv": "6be5feb0d23939c7b0a4419f0c1bbdd78d5c0665e2b0dfdb4b0caee6751c432b",
+    "cases/episodes-6047.csv": "cbf8337756908f9f4449214fded7693422800fa4f68c5742fc67b101b868d829",
+    "cases/episodes-6048.csv": "4a8bb64b6036e6773df2223a7f0b6b78e105cfd4e19f7efd917541f3051460a4",
+    "cases/episodes-6049.csv": "22a12ad5bd5fcacb106970de59576811c6e8e9c0bfeac044e4e365551d699e72",
+    "cases/episodes-6050.csv": "077e15c662fce8e42edf1d9eb2f874fd5681875b43ab56fbee43dc1895c658d9",
+    "cases/episodes-6051.csv": "ab614fb939183e9d2194f5c0d135babe5dc180d01e7434cc6efa310522767575",
+    "cases/episodes-6052.csv": "9cbec732742f60f94e525c2b3bb8db56cc210571dc520c41b8aa1b81996b0685",
+    "cases/episodes-6053.csv": "c49163518c986776e68267e0d3d755f1c1facb6423bf2247d56841afc3e2ce1e",
+    "cases/episodes-6054.csv": "1607219b648c868f63fca1c14be7c69c0c2f5c4c453a77284529b742329de458",
+    "cases/episodes-6055.csv": "ed3c07bad329750120bccd68b29d203992588421178dd7f275f4cf13d6b0b97d",
+    "cases/episodes-6056.csv": "d751c6860cf5b3ad1b237d9192f0c7d4e1d0681a64f75c96760461396fbb9517",
+    "cases/episodes-6057.csv": "dcab8890983f058bda2d412dab67e0a0712c6ed27e74c8864b4b982629450b44",
+    "cases/episodes-6058.csv": "5dbb3a77dfaa542350c1ada29efd94f46580eb615976a66471a3aca97a50936d",
+    "cases/episodes-6059.csv": "693bce598d7b6d162eefa65de9a86fe8cb17609a07a13a589cfee0c44e83464b",
+    "cases/episodes-6060.csv": "41086169b2570a32344a10f91eedcf8aa977ac6176218349ae6642a5e19c00bf",
+    "cases/episodes-6061.csv": "77a9c390ced79a019bfaef1e65503852a49c71b2120e4e23be1fe24b9091de9a",
+    "cases/episodes-6062.csv": "7cbde6cb32b1d4e412993625f0c608aaefddb3be8b5809c06b1014ae18f8a696",
+    "cases/episodes-6063.csv": "cf265970b88d5e403d9234214055c1a9df4be331fbcc4be64fedee9c343b92e3",
+    "ood/episodes-8000.csv": "e6248209653323106642d5fa6e2875daf256ae2442e4b1862ec821b4c4895a0a",
+    "ood/episodes-8001.csv": "fea84b9b6aa641fc6faed7b8770f8cd90ca5db045b69c5172905928357e7ca13",
+    "ood/episodes-8002.csv": "b2c0c80b903bb21ab04e232a257579c962a641b993e67a4f6bebea4fa715cae7",
+    "ood/episodes-8003.csv": "eff78b4dce6189da272a9ba2de3fa598892ae9fe22fbd86afdf07b585014e725",
+    "ood/episodes-8004.csv": "6e3e3e7dc563c150298b512de831ea49aee3519c564ae3cb33cfd57974a7ae83",
+    "ood/episodes-8005.csv": "a7528667c379662e998e46ae9be476dea8258fba8ae75eff0c44096e9ff67b89",
+    "ood/episodes-8006.csv": "3ccb745ba721d48995faa10a5abc25eef4df411c57e7e1bdb63007e09133cdc2",
+    "ood/episodes-8007.csv": "30df6e1a282e7f99b591787d0e35152d3772f9d7ac4bc4fa15ba889b967dc442",
+    "ood/episodes-8008.csv": "390e8eaa5240568b306a1caec1c32832e55825ebc0faa35de90f67d4f2c7a1d0",
+    "ood/episodes-8009.csv": "fb51419bd7ead36b1166ee4e8cb8587fd3e94dc79a8686d883b03c553dc5ce49",
+    "ood/episodes-8010.csv": "805b776ac8aca1b472b7200142d656f32b7557433cdd2085517444a4772a6b40",
+    "ood/episodes-8011.csv": "e58319678a442a195cdbce094644681b699f7ba3d8fa5b70488ecd16234dab5c",
+    "ood/episodes-8012.csv": "1470c46e4f4780d4ab665118fa64e1b7de1f17e09f67d92d28a5dace9064b0c2",
+    "ood/episodes-8013.csv": "e13a84072be69e1a88a9df2570efb73ec2fdbf261df09c0e0599e4251a88b46b",
+    "ood/episodes-8014.csv": "0f4eefb2e5b1f715fe5b02d9427b105007d58f83eff73108365ca8d366199156",
+    "ood/episodes-8015.csv": "d64735e03740cbe7a61340994d3cded82b8504bd23e66602087a99a72b262506",
+    "ood/episodes-8016.csv": "ac42eb44563226249188bd34da400be5501d954cf921480f2e44abc66547bc95",
+    "ood/episodes-8017.csv": "a2428775690f800f6128fb6486fdf239fb36a8b4cd193820204a2c621655e3c1",
+    "ood/episodes-8018.csv": "c64e149a9a735f919270762777352893d30c32acd386bae31b166262d10bb0f4",
+    "ood/episodes-8019.csv": "80ee33cadc71138bdef9f56610b2e411895d0861353622dd0c7b1edf24cec367",
+    "ood/episodes-8020.csv": "6d1a5eb94172f4b5c957b811dc515e3b3f132e1f799977188362b89e23be846d",
+    "ood/episodes-8021.csv": "4aba68d549e8827385cd2ddfd4427327f9ba9d358a83500789b6351e7274993f",
+    "ood/episodes-8022.csv": "2d76e7ae68944f8ec00cca4afa1478a3916142df1892ba0155e4b1bf7690dbb0",
+    "ood/episodes-8023.csv": "e02c6069adaf2ea7f90c080621bd58914a3ec2b2e6c1fceddbdb8332ce4ee872",
+    "ood/episodes-8024.csv": "4981939067ff3bec6ac97b78547299894e901a970f17fa278519be1f3cb712ed",
+    "ood/episodes-8025.csv": "1e3fa4f5b5be1a48f1d6c94c2d0b48a7f03936a5ac5e84a96005c2f8e7d1a4ef",
+    "ood/episodes-8026.csv": "83e0025893fb39f7e3bdddf13341aace5610f6952a1f84922547ccbb4fa13346",
+    "ood/episodes-8027.csv": "b192c3886b144b926186efa28982d7db0277a5353b2fe3a0a4243c8b0775efe2",
+    "ood/episodes-8028.csv": "3c753812f0df5652451b6f882270833904ac0a81d1b6ceaf312f0fee0ae6e729",
+    "ood/episodes-8029.csv": "d57ba9fe7e314812c26597cadbfc3d237c174bd9b27ba1ad6cfd0be4d255a9b4",
+    "ood/episodes-8030.csv": "0eb1a9466c2e8df1d7baee89ee085e31db3b119b695ad17472bce1930ec323dc",
+    "ood/episodes-8031.csv": "110bba3b046c6383123f3f91555ba5eb609dd797a213f6ea3755a52ced3059f1",
+    "ood/episodes-8032.csv": "ee8ba2f6fa76ca2b9910b17dbafa8414891467c36115bfc71534ca558fe44c84",
+    "ood/episodes-8033.csv": "15163ba3cac2321b6b18336a9ff2f193006aa99e66cc749b2ec4d6f8aef5edac",
+    "ood/episodes-8034.csv": "03e8322a92cbb91d26b76e945c63b006f70e6c909477bdc0a42b77424e096deb",
+    "ood/episodes-8035.csv": "76fcc859a2b5061ebf24347ef7ad2ba1c3f003d8be9d6c8134fb6848ec21d077",
+    "ood/episodes-8036.csv": "e83df82dd3a531c49d187dd634a5a4bc43731bf2ae903fa21527b09013a7ba6e",
+    "ood/episodes-8037.csv": "f00a55fdf390aa99a94b7ba4716ab01d6605483b8dc5463fd5c8f8046568fa2d",
+    "ood/episodes-8038.csv": "3dc56fb089b598d50998dd3770bec9c55f378fdd825f32c2a8baa0c4156f511b",
+    "ood/episodes-8039.csv": "1f3d9f896c72596b20c851aae317fc0fa3d6a64fc304af0a0bfdedd502cf2d26",
+    "ood/episodes-8040.csv": "9ba03c6fc11dcb15a6935fc704d80c523178ad045923cdbabb20a9b77fec797b",
+    "ood/episodes-8041.csv": "4fbca65147e0f9874c825ccb31ef2b9dd54c54bab04b1fedb8f756d086268ba4",
+    "ood/episodes-8042.csv": "1243f8094ec8a9e90d75cc6084d25c3734cc51c06fed70db88d7aa6e08e05624",
+    "ood/episodes-8043.csv": "b1472dc9da1c3b9c4467fc74ab303514d4552d4d9659a7e95653a48eff111b8d",
+    "ood/episodes-8044.csv": "b0403708b363d54588ee284870ad0501e3bd4c03a7e8979cfa0bfd421c385ae4",
+    "ood/episodes-8045.csv": "80978c7e2fd293a666c9ec811535a09d4aa559053a38893429e4376cd95d9462",
+    "ood/episodes-8046.csv": "f951e5e464fe0c4ba87ab40b04ce6ceb68c81384152011ca1f293cb3a36760bf",
+    "ood/episodes-8047.csv": "598b73c506d6567e7581bd74529397d2448e785c0cfd3b44da83c3e905a6a6a6",
+    "ood/episodes-8048.csv": "56eb56dcf8a834b1ebfb44c59d4e823e3c9bbbcbb94f962002f6262a0f255771",
+    "ood/episodes-8049.csv": "483a387a9a1fb441246449c4173ec715e49d525d6dcbd9f8b645f501a4208b7d",
+    "ood/episodes-8050.csv": "4e242046238f9712df41b5457c32ccf4fb483618e37dc7ff43fae149dcc732ba",
+    "ood/episodes-8051.csv": "03882dc00f107294caa5949872a14bcf47c95f691e33a6b972b10ca166976371",
+    "ood/episodes-8052.csv": "21e4a08e429bfb20e829bb8565a2a24415c1016f962e45d62c5f89223bca19aa",
+    "ood/episodes-8053.csv": "a6ce11f1ff3138133e2681254ad09b3a041edd7da777b3ec953fc39db8c05896",
+    "ood/episodes-8054.csv": "79df5c3f82c5f55fe624e9034a1a782423c8457151eab4efa06d470adafca31b",
+    "ood/episodes-8055.csv": "0e39f3f03e0499c41db765457f0d6791dfd69c54c5d240c433fd76f8e35541e5",
+    "ood/episodes-8056.csv": "eacc8cc3985f82c0630ae53ae57e79cd2f84227dd0e3d18a9fc5b0ab5b4ea82d",
+    "ood/episodes-8057.csv": "943ede6ad68b369ad072d4fecd50e7af786fb5e0b5a67750bee3041617b5de23",
+    "ood/episodes-8058.csv": "2dcca1691bcd3f7e575d23259b1a06af640de2c5767a81cb2d546de1a5c71b25",
+    "ood/episodes-8059.csv": "96202edb0f4b589aec850bc23fb68db0fc3675c82b74e925308afd50111a930c",
+    "ood/episodes-8060.csv": "6a03116fa6c2c2f3d6974746c7cd06cee099323dcba0971f1f3e04ba6f502302",
+    "ood/episodes-8061.csv": "4d6c2459615ab9ba799b6f07b36430a2148af906dff813267599fb00dee0240d",
+    "ood/episodes-8062.csv": "59ab8a62336ad7e4e66101e3da72968bc9afdfc6a0866e6aefdc3dd571752462",
+    "ood/episodes-8063.csv": "f9520051c414b503c344933b078c4e140948894ef2be21d9e5163f524a3ea82b"
+  },
+  "ood_seeds": [
+    8000,
+    8001,
+    8002,
+    8003,
+    8004,
+    8005,
+    8006,
+    8007,
+    8008,
+    8009,
+    8010,
+    8011,
+    8012,
+    8013,
+    8014,
+    8015,
+    8016,
+    8017,
+    8018,
+    8019,
+    8020,
+    8021,
+    8022,
+    8023,
+    8024,
+    8025,
+    8026,
+    8027,
+    8028,
+    8029,
+    8030,
+    8031,
+    8032,
+    8033,
+    8034,
+    8035,
+    8036,
+    8037,
+    8038,
+    8039,
+    8040,
+    8041,
+    8042,
+    8043,
+    8044,
+    8045,
+    8046,
+    8047,
+    8048,
+    8049,
+    8050,
+    8051,
+    8052,
+    8053,
+    8054,
+    8055,
+    8056,
+    8057,
+    8058,
+    8059,
+    8060,
+    8061,
+    8062,
+    8063
+  ],
+  "parameters": {
+    "absolute_gain": 10.0,
+    "arrival_window": 3,
+    "balance_preference_fraction": 0.1,
+    "demand_spread": 0.2,
+    "drain_weight": 1.0,
+    "dwell": 8,
+    "escape_floor": 0.25,
+    "evidence_window": 5,
+    "idle_recovery_observations": 3,
+    "lookahead": 16,
+    "loss_tolerance": 1e-06,
+    "maximum_transfer": 20.0,
+    "minimum_staff": 10.0,
+    "nominal_rate": 200.0,
+    "pressure_time_scale": 8.0,
+    "rate_band": 0.15,
+    "rate_lower_factor": 0.85,
+    "relative_gain": 0.01,
+    "restraint_hurdle_factor": 3.0,
+    "restraint_loss_fraction": 0.25,
+    "restraint_max_transfer": 1000000000.0,
+    "restraint_memory": 16,
+    "restraint_neutral": 1.0,
+    "restraint_neutral_tolerance": 10.0,
+    "risk_weight": 0.1,
+    "saturated_update": 0.7,
+    "sparse_rate_band": 0.25,
+    "stale_anchor_minutes": 8,
+    "stress_tail_fraction": 0.25,
+    "terminal_weight": 0.5,
+    "tolerance": 1e-07,
+    "unsaturated_prior_reversion": 0.1,
+    "warmup": 5,
+    "worst_case_regression_fraction": 0.0
+  },
+  "ranking": [
+    {
+      "candidate": "v6_full",
+      "cases_per_regime": 1496,
+      "delayed_noisy_mean_total_dropped": 43936.06197748786,
+      "delayed_noisy_risk": 10185.88351456771,
+      "failed_loss_endpoint_checks": [
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "total_dropped"
+        ],
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ]
+      ],
+      "failed_ood_checks": [],
+      "failed_point_checks": 4,
+      "failed_risk_checks": [
+        [
+          "legacy_instant",
+          "v4_hybrid"
+        ]
+      ],
+      "hypotheses_vs_v5_full": {
+        "H1_drain": {
+          "checks": [
+            {
+              "ci95": [
+                435.3973923160106,
+                833.5265010352944
+              ],
+              "metric": "end_deficit",
+              "point": 637.7493219122277,
+              "regime": "legacy_instant",
+              "supported": true
+            },
+            {
+              "ci95": [
+                11135.433738196665,
+                17923.78606268013
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 14552.18080379728,
+              "regime": "legacy_instant",
+              "supported": true
+            },
+            {
+              "ci95": [
+                553.8203649052341,
+                911.4426759615069
+              ],
+              "metric": "end_deficit",
+              "point": 735.8921580418212,
+              "regime": "legacy_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                13349.387207872,
+                20139.59419526861
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 16739.062994414326,
+              "regime": "legacy_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                773.6060517638277,
+                1138.9642181697345
+              ],
+              "metric": "end_deficit",
+              "point": 960.2486078164021,
+              "regime": "integer_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                15798.226416695137,
+                22806.967893969617
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 19264.48081083133,
+              "regime": "integer_transit3",
+              "supported": true
+            }
+          ],
+          "supported": true
+        },
+        "H2_restraint": {
+          "ci95": [
+            9006.699049310464,
+            13526.650534683908
+          ],
+          "point": 11209.502159568103,
+          "supported": true
+        },
+        "reference": "v5_full"
+      },
+      "ood_pooled": {
+        "mean_total_dropped": 81648.21208897051,
+        "risk": 19391.74324912659
+      },
+      "variant": "v6_full"
+    },
+    {
+      "candidate": "v6_drain",
+      "cases_per_regime": 1496,
+      "delayed_noisy_mean_total_dropped": 43929.42424816714,
+      "delayed_noisy_risk": 10276.464480902161,
+      "failed_loss_endpoint_checks": [],
+      "failed_ood_checks": [
+        [
+          "risk",
+          "v4_hybrid"
+        ],
+        [
+          "mean_total_dropped",
+          "v4_hybrid"
+        ],
+        [
+          "mean_total_dropped",
+          "capacity_balance"
+        ]
+      ],
+      "failed_point_checks": 6,
+      "failed_risk_checks": [
+        [
+          "legacy_instant",
+          "v4_hybrid"
+        ],
+        [
+          "legacy_transit3",
+          "v4_hybrid"
+        ],
+        [
+          "integer_transit3",
+          "v4_hybrid"
+        ]
+      ],
+      "hypotheses_vs_v5_full": {
+        "H1_drain": {
+          "checks": [
+            {
+              "ci95": [
+                435.39739231601243,
+                833.526501035295
+              ],
+              "metric": "end_deficit",
+              "point": 637.7493219122256,
+              "regime": "legacy_instant",
+              "supported": true
+            },
+            {
+              "ci95": [
+                11135.433738196654,
+                17923.786062680134
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 14552.18080379721,
+              "regime": "legacy_instant",
+              "supported": true
+            },
+            {
+              "ci95": [
+                553.8203649052383,
+                911.4426759615075
+              ],
+              "metric": "end_deficit",
+              "point": 735.8921580418213,
+              "regime": "legacy_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                13349.387207871874,
+                20139.594195268648
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 16739.06299441433,
+              "regime": "legacy_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                773.6060517638242,
+                1138.964218169734
+              ],
+              "metric": "end_deficit",
+              "point": 960.2486078163994,
+              "regime": "integer_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                15798.226416695039,
+                22806.96789396946
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 19264.480810831246,
+              "regime": "integer_transit3",
+              "supported": true
+            }
+          ],
+          "supported": true
+        },
+        "H2_restraint": {
+          "ci95": [
+            -2817.442432406447,
+            843.3417419270431
+          ],
+          "point": -907.1811123665684,
+          "supported": false
+        },
+        "reference": "v5_full"
+      },
+      "ood_pooled": {
+        "mean_total_dropped": 85280.58004929576,
+        "risk": 31508.42652106126
+      },
+      "variant": "v6_drain"
+    },
+    {
+      "candidate": "v6_restraint",
+      "cases_per_regime": 1496,
+      "delayed_noisy_mean_total_dropped": 43722.54941984495,
+      "delayed_noisy_risk": 11367.076186860306,
+      "failed_loss_endpoint_checks": [
+        [
+          "legacy_instant",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "legacy_instant",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ],
+        [
+          "legacy_transit3",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "legacy_transit3",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ],
+        [
+          "integer_transit3",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "integer_transit3",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ]
+      ],
+      "failed_ood_checks": [],
+      "failed_point_checks": 7,
+      "failed_risk_checks": [
+        [
+          "legacy_instant",
+          "v4_hybrid"
+        ]
+      ],
+      "hypotheses_vs_v5_full": {
+        "H1_drain": {
+          "checks": [
+            {
+              "ci95": [
+                -2.9381056114493366e-12,
+                5.2137878090940056e-12
+              ],
+              "metric": "end_deficit",
+              "point": 1.1089026310386505e-12,
+              "regime": "legacy_instant",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -9.401937956637877e-11,
+                1.6684120989100818e-10
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 3.5484884193236815e-11,
+              "regime": "legacy_instant",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -2.803383668994202e-12,
+                5.449186437788165e-12
+              ],
+              "metric": "end_deficit",
+              "point": 1.4007191128909269e-12,
+              "regime": "legacy_transit3",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -8.970827740781447e-11,
+                1.7437396600922127e-10
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 4.482301161250966e-11,
+              "regime": "legacy_transit3",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -3.034891411263675e-12,
+                4.980334623612184e-12
+              ],
+              "metric": "end_deficit",
+              "point": 1.0894481989151653e-12,
+              "regime": "integer_transit3",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -9.71165251604376e-11,
+                1.593707079555899e-10
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 3.486234236528529e-11,
+              "regime": "integer_transit3",
+              "supported": false
+            }
+          ],
+          "supported": false
+        },
+        "H2_restraint": {
+          "ci95": [
+            9607.940756758739,
+            13934.075438823695
+          ],
+          "point": 11724.62683962765,
+          "supported": true
+        },
+        "reference": "v5_full"
+      },
+      "ood_pooled": {
+        "mean_total_dropped": 80384.76158639515,
+        "risk": 18876.618569067043
+      },
+      "variant": "v6_restraint"
+    }
+  ],
+  "seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    4000,
+    4001,
+    4002,
+    4003,
+    4004,
+    4005,
+    4006,
+    4007,
+    4008,
+    4009,
+    4010,
+    4011,
+    4012,
+    4013,
+    4014,
+    4015,
+    4016,
+    4017,
+    4018,
+    4019,
+    4020,
+    4021,
+    4022,
+    4023,
+    4024,
+    4025,
+    4026,
+    4027,
+    4028,
+    4029,
+    4030,
+    4031,
+    4032,
+    4033,
+    4034,
+    4035,
+    4036,
+    4037,
+    4038,
+    4039,
+    4040,
+    4041,
+    4042,
+    4043,
+    4044,
+    4045,
+    4046,
+    4047,
+    4048,
+    4049,
+    4050,
+    4051,
+    4052,
+    4053,
+    4054,
+    4055,
+    4056,
+    4057,
+    4058,
+    4059,
+    4060,
+    4061,
+    4062,
+    4063,
+    6000,
+    6001,
+    6002,
+    6003,
+    6004,
+    6005,
+    6006,
+    6007,
+    6008,
+    6009,
+    6010,
+    6011,
+    6012,
+    6013,
+    6014,
+    6015,
+    6016,
+    6017,
+    6018,
+    6019,
+    6020,
+    6021,
+    6022,
+    6023,
+    6024,
+    6025,
+    6026,
+    6027,
+    6028,
+    6029,
+    6030,
+    6031,
+    6032,
+    6033,
+    6034,
+    6035,
+    6036,
+    6037,
+    6038,
+    6039,
+    6040,
+    6041,
+    6042,
+    6043,
+    6044,
+    6045,
+    6046,
+    6047,
+    6048,
+    6049,
+    6050,
+    6051,
+    6052,
+    6053,
+    6054,
+    6055,
+    6056,
+    6057,
+    6058,
+    6059,
+    6060,
+    6061,
+    6062,
+    6063
+  ],
+  "split": "development"
+}
