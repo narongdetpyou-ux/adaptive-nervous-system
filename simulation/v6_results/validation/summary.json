@@ -1,0 +1,4685 @@
+{
+  "candidate": "v6_full",
+  "commit": "15b4d45ab4a758d2c1b678e4a7ca2e894a30aea2",
+  "decision": "FAIL",
+  "failed_gates": [
+    "risk_point_nonworsening",
+    "loss_endpoint_point_nonworsening"
+  ],
+  "hypotheses": {
+    "H1_drain": {
+      "checks": [
+        {
+          "ci95": [
+            399.9415482971601,
+            891.1794303225246
+          ],
+          "metric": "end_deficit",
+          "point": 644.3264006547165,
+          "regime": "legacy_instant",
+          "supported": true
+        },
+        {
+          "ci95": [
+            9210.015602288548,
+            17792.282079881636
+          ],
+          "metric": "tail_auc_deficit",
+          "point": 13270.667159394065,
+          "regime": "legacy_instant",
+          "supported": true
+        },
+        {
+          "ci95": [
+            1040.582587998918,
+            1514.859742235035
+          ],
+          "metric": "end_deficit",
+          "point": 1276.4180244191198,
+          "regime": "legacy_transit3",
+          "supported": true
+        },
+        {
+          "ci95": [
+            20364.903379208565,
+            29017.36408314734
+          ],
+          "metric": "tail_auc_deficit",
+          "point": 24715.699391980088,
+          "regime": "legacy_transit3",
+          "supported": true
+        },
+        {
+          "ci95": [
+            663.6672468601045,
+            1206.0609853145381
+          ],
+          "metric": "end_deficit",
+          "point": 955.8220597485921,
+          "regime": "integer_transit3",
+          "supported": true
+        },
+        {
+          "ci95": [
+            13354.130369425275,
+            23947.060316943745
+          ],
+          "metric": "tail_auc_deficit",
+          "point": 18684.562274442724,
+          "regime": "integer_transit3",
+          "supported": true
+        }
+      ],
+      "supported": true
+    },
+    "H2_restraint": {
+      "ci95": [
+        8533.041904161717,
+        13120.103449604921
+      ],
+      "point": 10695.362621950026,
+      "supported": true
+    },
+    "reference": "v5_full"
+  },
+  "missing_evidence": [],
+  "ood": {
+    "families": {
+      "buffer_cascade": {
+        "cases": 64,
+        "means_and_risk": {
+          "capacity_balance": {
+            "end_deficit": 98629.82614016831,
+            "mean_deficit": 73992.00512839924,
+            "risk": 133.84074837105004,
+            "tail_auc_deficit": 2809214.608360386,
+            "total_dropped": 87617.56051516831,
+            "total_moves": 6.875
+          },
+          "capacity_v2": {
+            "end_deficit": 101712.43697650757,
+            "mean_deficit": 72358.71468481839,
+            "risk": 3455.914874729681,
+            "tail_auc_deficit": 2907858.155123243,
+            "total_dropped": 90700.17135150763,
+            "total_moves": 10.53125
+          },
+          "static": {
+            "end_deficit": 131502.22936093295,
+            "mean_deficit": 90113.72915642483,
+            "risk": 0.0,
+            "tail_auc_deficit": 3861131.5114248544,
+            "total_dropped": 120489.963735933,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 129345.92838772162,
+            "mean_deficit": 87090.29848471178,
+            "risk": 14936.668219344041,
+            "tail_auc_deficit": 3792129.880282092,
+            "total_dropped": 118333.66276272162,
+            "total_moves": 4.375
+          },
+          "v4_hybrid": {
+            "end_deficit": 99823.71098773663,
+            "mean_deficit": 74849.35211663441,
+            "risk": 3233.8536299556363,
+            "tail_auc_deficit": 2847418.923482572,
+            "total_dropped": 88811.44536273663,
+            "total_moves": 8.765625
+          },
+          "v5_full": {
+            "end_deficit": 93450.66173120489,
+            "mean_deficit": 72095.1169281904,
+            "risk": 503.49631831305317,
+            "tail_auc_deficit": 2643481.3472735565,
+            "total_dropped": 82438.39610620489,
+            "total_moves": 9.078125
+          },
+          "v6_full": {
+            "end_deficit": 96557.2061668287,
+            "mean_deficit": 73524.39725873416,
+            "risk": 2081.003929155688,
+            "tail_auc_deficit": 2742890.7692135186,
+            "total_dropped": 85544.94054182866,
+            "total_moves": 9.109375
+          }
+        }
+      },
+      "compound_stress": {
+        "cases": 64,
+        "means_and_risk": {
+          "capacity_balance": {
+            "end_deficit": 158952.7542317469,
+            "mean_deficit": 98265.40580259002,
+            "risk": 34099.68340665388,
+            "tail_auc_deficit": 4773459.3697909005,
+            "total_dropped": 149014.2542317469,
+            "total_moves": 9.21875
+          },
+          "capacity_v2": {
+            "end_deficit": 153336.53157076729,
+            "mean_deficit": 96671.49723699881,
+            "risk": 32247.092333409284,
+            "tail_auc_deficit": 4593740.244639554,
+            "total_dropped": 143398.03157076723,
+            "total_moves": 11.375
+          },
+          "static": {
+            "end_deficit": 122189.50834740383,
+            "mean_deficit": 79211.81078510133,
+            "risk": 0.0,
+            "tail_auc_deficit": 3597035.5014919224,
+            "total_dropped": 112251.00834740384,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 144449.99453805608,
+            "mean_deficit": 93455.56341071524,
+            "risk": 33150.859091848964,
+            "tail_auc_deficit": 4309371.059592795,
+            "total_dropped": 134511.49453805608,
+            "total_moves": 6.8125
+          },
+          "v4_hybrid": {
+            "end_deficit": 146388.2605414985,
+            "mean_deficit": 92280.73491966589,
+            "risk": 22481.693696393748,
+            "tail_auc_deficit": 4371395.571702952,
+            "total_dropped": 136449.76054149843,
+            "total_moves": 11.453125
+          },
+          "v5_full": {
+            "end_deficit": 156109.0521981822,
+            "mean_deficit": 96999.57740240052,
+            "risk": 31963.048115343718,
+            "tail_auc_deficit": 4682460.904716831,
+            "total_dropped": 146170.5521981822,
+            "total_moves": 11.75
+          },
+          "v6_full": {
+            "end_deficit": 135839.15727129977,
+            "mean_deficit": 88534.26871807796,
+            "risk": 20703.616539926825,
+            "tail_auc_deficit": 4033824.267056592,
+            "total_dropped": 125900.65727129976,
+            "total_moves": 5.0625
+          }
+        }
+      },
+      "false_recovery": {
+        "cases": 64,
+        "means_and_risk": {
+          "capacity_balance": {
+            "end_deficit": 29269.13011372553,
+            "mean_deficit": 44141.52787919907,
+            "risk": 0.0,
+            "tail_auc_deficit": 613234.3321200488,
+            "total_dropped": 18999.063470031564,
+            "total_moves": 9.0
+          },
+          "capacity_v2": {
+            "end_deficit": 70778.0858680027,
+            "mean_deficit": 68220.70750761534,
+            "risk": 708.0153643160082,
+            "tail_auc_deficit": 1912347.5988517795,
+            "total_dropped": 59583.83527222675,
+            "total_moves": 9.578125
+          },
+          "static": {
+            "end_deficit": 138715.4563203861,
+            "mean_deficit": 91772.76844819107,
+            "risk": 0.0,
+            "tail_auc_deficit": 4127896.102252354,
+            "total_dropped": 128840.75319538606,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 57073.08124657394,
+            "mean_deficit": 61813.3752554246,
+            "risk": 14.881326632206537,
+            "tail_auc_deficit": 1495003.5744388641,
+            "total_dropped": 46533.6853970685,
+            "total_moves": 3.859375
+          },
+          "v4_hybrid": {
+            "end_deficit": 30782.764687266616,
+            "mean_deficit": 43724.82975038469,
+            "risk": 0.0,
+            "tail_auc_deficit": 645018.0614456212,
+            "total_dropped": 19981.823072676376,
+            "total_moves": 11.78125
+          },
+          "v5_full": {
+            "end_deficit": 30908.271948097667,
+            "mean_deficit": 44284.09229692572,
+            "risk": 0.0,
+            "tail_auc_deficit": 657961.9785613252,
+            "total_dropped": 20394.452143517163,
+            "total_moves": 11.125
+          },
+          "v6_full": {
+            "end_deficit": 61385.30694093264,
+            "mean_deficit": 53397.33150488448,
+            "risk": 0.0,
+            "tail_auc_deficit": 1648893.091281949,
+            "total_dropped": 51370.51469042579,
+            "total_moves": 11.140625
+          }
+        }
+      },
+      "rapid_switching": {
+        "cases": 64,
+        "means_and_risk": {
+          "capacity_balance": {
+            "end_deficit": 88920.89744153497,
+            "mean_deficit": 75213.74730087724,
+            "risk": 43567.241303107956,
+            "tail_auc_deficit": 2533705.890004119,
+            "total_dropped": 79023.178691535,
+            "total_moves": 9.78125
+          },
+          "capacity_v2": {
+            "end_deficit": 90864.57124869135,
+            "mean_deficit": 78922.82030564404,
+            "risk": 52865.364591712256,
+            "tail_auc_deficit": 2537574.462226726,
+            "total_dropped": 79067.96027460042,
+            "total_moves": 11.578125
+          },
+          "static": {
+            "end_deficit": 53744.31292022392,
+            "mean_deficit": 53338.86419644306,
+            "risk": 0.0,
+            "tail_auc_deficit": 1408055.185322166,
+            "total_dropped": 43846.594170223936,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 95408.72441042626,
+            "mean_deficit": 80569.6081797489,
+            "risk": 50619.318946471416,
+            "tail_auc_deficit": 2702324.009529515,
+            "total_dropped": 84271.89591669802,
+            "total_moves": 8.140625
+          },
+          "v4_hybrid": {
+            "end_deficit": 77418.82095770212,
+            "mean_deficit": 68826.19443007399,
+            "risk": 28482.579349915803,
+            "tail_auc_deficit": 2165639.4425214687,
+            "total_dropped": 67521.10220770212,
+            "total_moves": 11.953125
+          },
+          "v5_full": {
+            "end_deficit": 83825.65375446498,
+            "mean_deficit": 72516.12590995168,
+            "risk": 35108.61991860694,
+            "tail_auc_deficit": 2370658.0920178792,
+            "total_dropped": 73927.93500446496,
+            "total_moves": 11.9375
+          },
+          "v6_full": {
+            "end_deficit": 64140.7434162409,
+            "mean_deficit": 62331.53958357801,
+            "risk": 21253.49111882444,
+            "tail_auc_deficit": 1740740.9611947087,
+            "total_dropped": 54243.024666240846,
+            "total_moves": 5.90625
+          }
+        }
+      },
+      "sensor_degradation": {
+        "cases": 64,
+        "means_and_risk": {
+          "capacity_balance": {
+            "end_deficit": 82140.23403336658,
+            "mean_deficit": 74144.95787446035,
+            "risk": 23588.15786331122,
+            "tail_auc_deficit": 2314950.6296927314,
+            "total_dropped": 72186.20278336659,
+            "total_moves": 9.109375
+          },
+          "capacity_v2": {
+            "end_deficit": 100604.38924670868,
+            "mean_deficit": 85113.90335439674,
+            "risk": 27710.17598890835,
+            "tail_auc_deficit": 2905803.596519678,
+            "total_dropped": 90650.35799670866,
+            "total_moves": 10.75
+          },
+          "static": {
+            "end_deficit": 74514.36659512829,
+            "mean_deficit": 69575.92898807676,
+            "risk": 0.0,
+            "tail_auc_deficit": 2070922.8716691046,
+            "total_dropped": 64560.335345128246,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 103192.94833789156,
+            "mean_deficit": 83182.52350538746,
+            "risk": 30450.648578531058,
+            "tail_auc_deficit": 2988637.48743753,
+            "total_dropped": 93238.9170878916,
+            "total_moves": 6.109375
+          },
+          "v4_hybrid": {
+            "end_deficit": 100355.4880775698,
+            "mean_deficit": 82761.72769746867,
+            "risk": 23815.998103892733,
+            "tail_auc_deficit": 2897838.7591072344,
+            "total_dropped": 90401.45682756978,
+            "total_moves": 11.0
+          },
+          "v5_full": {
+            "end_deficit": 92225.62869944898,
+            "mean_deficit": 77346.95853378279,
+            "risk": 25189.778179605022,
+            "tail_auc_deficit": 2637683.2590073673,
+            "total_dropped": 82271.59744944902,
+            "total_moves": 10.8125
+          },
+          "v6_full": {
+            "end_deficit": 82603.43302878503,
+            "mean_deficit": 72654.07725891694,
+            "risk": 12625.934141079237,
+            "tail_auc_deficit": 2329772.997546121,
+            "total_dropped": 72649.40177878505,
+            "total_moves": 6.0625
+          }
+        }
+      },
+      "transfer_failure": {
+        "cases": 64,
+        "means_and_risk": {
+          "capacity_balance": {
+            "end_deficit": 94824.40188866714,
+            "mean_deficit": 81699.31588101469,
+            "risk": 23768.735233722004,
+            "tail_auc_deficit": 2717339.2354373485,
+            "total_dropped": 84759.29251366715,
+            "total_moves": 9.15625
+          },
+          "capacity_v2": {
+            "end_deficit": 124125.51547730912,
+            "mean_deficit": 96361.60774906691,
+            "risk": 33657.51213039069,
+            "tail_auc_deficit": 3654976.446724569,
+            "total_dropped": 114060.40610230912,
+            "total_moves": 11.109375
+          },
+          "static": {
+            "end_deficit": 87226.36893397155,
+            "mean_deficit": 76685.01665694246,
+            "risk": 0.0,
+            "tail_auc_deficit": 2474202.1808870905,
+            "total_dropped": 77161.25955897156,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 116726.66352420062,
+            "mean_deficit": 89682.35084032126,
+            "risk": 25073.45557866659,
+            "tail_auc_deficit": 3418211.6077744197,
+            "total_dropped": 106661.55414920069,
+            "total_moves": 6.203125
+          },
+          "v4_hybrid": {
+            "end_deficit": 110353.13540788353,
+            "mean_deficit": 88684.57798077125,
+            "risk": 17365.83531700932,
+            "tail_auc_deficit": 3214258.708052274,
+            "total_dropped": 100288.0260328835,
+            "total_moves": 10.75
+          },
+          "v5_full": {
+            "end_deficit": 102493.86141470826,
+            "mean_deficit": 84498.68183088445,
+            "risk": 19870.8339335578,
+            "tail_auc_deficit": 2962761.940270664,
+            "total_dropped": 92428.75203970817,
+            "total_moves": 10.75
+          },
+          "v6_full": {
+            "end_deficit": 100199.51456822589,
+            "mean_deficit": 82012.0176946469,
+            "risk": 13066.41402033,
+            "tail_auc_deficit": 2889342.8411832284,
+            "total_dropped": 90134.40519322589,
+            "total_moves": 8.171875
+          }
+        }
+      }
+    },
+    "pooled": {
+      "capacity_balance": {
+        "mean_total_dropped": 81933.25870091926,
+        "risk": 32254.060057122675
+      },
+      "capacity_v2": {
+        "mean_total_dropped": 96243.46042801994,
+        "risk": 37050.18342234714
+      },
+      "static": {
+        "mean_total_dropped": 91191.65239217442,
+        "risk": 0.0
+      },
+      "v3_full": {
+        "mean_total_dropped": 97258.53497527273,
+        "risk": 37406.13380783072
+      },
+      "v4_hybrid": {
+        "mean_total_dropped": 83908.93567417782,
+        "risk": 23363.286772739255
+      },
+      "v5_full": {
+        "mean_total_dropped": 82938.61415692106,
+        "risk": 28420.831624423907
+      },
+      "v6_full": {
+        "mean_total_dropped": 79973.82402363433,
+        "risk": 17725.46900247388
+      }
+    }
+  },
+  "rows": {
+    "ood": 2688,
+    "validation": 29568
+  },
+  "validation": {
+    "by_family": {
+      "delayed_noisy": {
+        "delivery_slow": {
+          "capacity_balance": {
+            "end_deficit": 15356.676672875714,
+            "mean_deficit": 22196.053173303688,
+            "risk": 1971.0238170581868,
+            "tail_auc_deficit": 437495.54415702296,
+            "total_dropped": 13644.848547875717,
+            "total_moves": 2.0
+          },
+          "capacity_v2": {
+            "end_deficit": 19611.196448711675,
+            "mean_deficit": 24493.88480735915,
+            "risk": 0.0,
+            "tail_auc_deficit": 573640.1769837736,
+            "total_dropped": 17899.36832371167,
+            "total_moves": 2.0
+          },
+          "static": {
+            "end_deficit": 24520.0761752895,
+            "mean_deficit": 28097.03219291657,
+            "risk": 0.0,
+            "tail_auc_deficit": 730724.328234264,
+            "total_dropped": 22808.248050289505,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 13038.410556941502,
+            "mean_deficit": 20534.998058788453,
+            "risk": 0.0,
+            "tail_auc_deficit": 363311.0284471282,
+            "total_dropped": 11326.582431941502,
+            "total_moves": 1.96875
+          },
+          "v4_hybrid": {
+            "end_deficit": 22646.735711945967,
+            "mean_deficit": 26774.684994227177,
+            "risk": 2334.455322725918,
+            "tail_auc_deficit": 670777.4334072712,
+            "total_dropped": 20934.907586945974,
+            "total_moves": 5.359375
+          },
+          "v5_full": {
+            "end_deficit": 17000.888776834974,
+            "mean_deficit": 23241.669022591,
+            "risk": 2286.1024134478616,
+            "tail_auc_deficit": 490110.3314837192,
+            "total_dropped": 15289.060651834978,
+            "total_moves": 4.546875
+          },
+          "v6_full": {
+            "end_deficit": 17140.973982808395,
+            "mean_deficit": 23345.931332492863,
+            "risk": 2376.0998705730335,
+            "tail_auc_deficit": 494593.05807486863,
+            "total_dropped": 15429.145857808398,
+            "total_moves": 4.453125
+          }
+        },
+        "generated_asymmetric_recovery": {
+          "capacity_balance": {
+            "end_deficit": 9091.765625,
+            "mean_deficit": 17647.602890904418,
+            "risk": 1189.9480019505188,
+            "tail_auc_deficit": 4544.390625,
+            "total_dropped": 0.0,
+            "total_moves": 3.84375
+          },
+          "capacity_v2": {
+            "end_deficit": 9091.765625000011,
+            "mean_deficit": 17454.92793392925,
+            "risk": 599.4679715487871,
+            "tail_auc_deficit": 4544.390625000349,
+            "total_dropped": 0.0,
+            "total_moves": 7.890625
+          },
+          "static": {
+            "end_deficit": 9528.029186939899,
+            "mean_deficit": 18794.339512590283,
+            "risk": 0.0,
+            "tail_auc_deficit": 18504.824607076764,
+            "total_dropped": 436.2635619399029,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 9118.643762613783,
+            "mean_deficit": 17538.25660674668,
+            "risk": 62.577514949941246,
+            "tail_auc_deficit": 5404.4910286410595,
+            "total_dropped": 26.8781376137934,
+            "total_moves": 1.484375
+          },
+          "v4_hybrid": {
+            "end_deficit": 9091.765624999995,
+            "mean_deficit": 17665.877916105535,
+            "risk": 469.5664576560664,
+            "tail_auc_deficit": 4544.390624999825,
+            "total_dropped": 0.0,
+            "total_moves": 9.265625
+          },
+          "v5_full": {
+            "end_deficit": 9091.765625000004,
+            "mean_deficit": 17650.436906988525,
+            "risk": 468.5428017460775,
+            "tail_auc_deficit": 4544.390625000116,
+            "total_dropped": 0.0,
+            "total_moves": 8.921875
+          },
+          "v6_full": {
+            "end_deficit": 9091.765625000002,
+            "mean_deficit": 17879.734895345133,
+            "risk": 1261.0724623821732,
+            "tail_auc_deficit": 4544.390625000058,
+            "total_dropped": 0.0,
+            "total_moves": 8.671875
+          }
+        },
+        "generated_pulsed_short_fault": {
+          "capacity_balance": {
+            "end_deficit": 32307.650743014565,
+            "mean_deficit": 48385.22818750323,
+            "risk": 25280.47809074293,
+            "tail_auc_deficit": 748554.2612764663,
+            "total_dropped": 23252.056993014547,
+            "total_moves": 8.078125
+          },
+          "capacity_v2": {
+            "end_deficit": 66646.51323032637,
+            "mean_deficit": 62023.220060716376,
+            "risk": 30202.291818604157,
+            "tail_auc_deficit": 1846515.5156730833,
+            "total_dropped": 57563.34619290885,
+            "total_moves": 10.265625
+          },
+          "static": {
+            "end_deficit": 28140.55639834531,
+            "mean_deficit": 43601.230231177826,
+            "risk": 0.0,
+            "tail_auc_deficit": 615207.2422470499,
+            "total_dropped": 19084.962648345318,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 48699.33994368195,
+            "mean_deficit": 53946.76646892127,
+            "risk": 20911.342074146218,
+            "tail_auc_deficit": 1272784.6100848934,
+            "total_dropped": 39634.25539327791,
+            "total_moves": 5.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 34702.14551076441,
+            "mean_deficit": 46693.67377112755,
+            "risk": 6304.182200502574,
+            "tail_auc_deficit": 825178.0938444606,
+            "total_dropped": 25646.551760764407,
+            "total_moves": 9.5
+          },
+          "v5_full": {
+            "end_deficit": 37103.52882788697,
+            "mean_deficit": 48729.09709494014,
+            "risk": 22199.73431217454,
+            "tail_auc_deficit": 902022.3599923828,
+            "total_dropped": 28047.935077886952,
+            "total_moves": 9.375
+          },
+          "v6_full": {
+            "end_deficit": 32420.74161567892,
+            "mean_deficit": 47762.952200905645,
+            "risk": 20883.368388813262,
+            "tail_auc_deficit": 752173.1692017256,
+            "total_dropped": 23365.14786567893,
+            "total_moves": 7.546875
+          }
+        },
+        "generated_sustained_overload": {
+          "capacity_balance": {
+            "end_deficit": 325681.4492650109,
+            "mean_deficit": 218673.24461091074,
+            "risk": 11381.145024549269,
+            "tail_auc_deficit": 10039001.345230348,
+            "total_dropped": 313527.7773900109,
+            "total_moves": 9.984375
+          },
+          "capacity_v2": {
+            "end_deficit": 431715.12119171827,
+            "mean_deficit": 267154.45709421573,
+            "risk": 66386.02402060023,
+            "tail_auc_deficit": 13432078.846884985,
+            "total_dropped": 419561.4493167182,
+            "total_moves": 9.71875
+          },
+          "static": {
+            "end_deficit": 330763.9523705887,
+            "mean_deficit": 226310.17506464338,
+            "risk": 0.0,
+            "tail_auc_deficit": 10201641.44460884,
+            "total_dropped": 318610.28049558855,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 391181.16128931206,
+            "mean_deficit": 233771.02287972003,
+            "risk": 26337.91690234759,
+            "tail_auc_deficit": 12134992.130007986,
+            "total_dropped": 379027.489414312,
+            "total_moves": 3.546875
+          },
+          "v4_hybrid": {
+            "end_deficit": 345349.11955994146,
+            "mean_deficit": 220744.1392612475,
+            "risk": 9971.319901556357,
+            "tail_auc_deficit": 10668366.794668127,
+            "total_dropped": 333195.4476849414,
+            "total_moves": 10.6875
+          },
+          "v5_full": {
+            "end_deficit": 323808.31129622617,
+            "mean_deficit": 218836.1067560117,
+            "risk": 11662.730258406486,
+            "tail_auc_deficit": 9979060.930229237,
+            "total_dropped": 311654.63942122605,
+            "total_moves": 10.515625
+          },
+          "v6_full": {
+            "end_deficit": 323784.4322662645,
+            "mean_deficit": 218702.75488891295,
+            "risk": 11058.939764215469,
+            "tail_auc_deficit": 9978296.801270464,
+            "total_dropped": 311630.76039126434,
+            "total_moves": 10.4375
+          }
+        },
+        "generated_sustained_processing_fault": {
+          "capacity_balance": {
+            "end_deficit": 30636.87147639208,
+            "mean_deficit": 46373.70750386767,
+            "risk": 0.0,
+            "tail_auc_deficit": 639374.6841195468,
+            "total_dropped": 19813.918351392073,
+            "total_moves": 7.75
+          },
+          "capacity_v2": {
+            "end_deficit": 57982.00386166834,
+            "mean_deficit": 65708.30148090108,
+            "risk": 0.0,
+            "tail_auc_deficit": 1514418.9204483868,
+            "total_dropped": 47159.05073666834,
+            "total_moves": 10.203125
+          },
+          "static": {
+            "end_deficit": 144032.84763109722,
+            "mean_deficit": 102708.5821511277,
+            "risk": 0.0,
+            "tail_auc_deficit": 4268045.921070111,
+            "total_dropped": 133209.89450609725,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 48365.754757760165,
+            "mean_deficit": 58921.62163097747,
+            "risk": 0.0,
+            "tail_auc_deficit": 1206698.9491233253,
+            "total_dropped": 37542.80163276015,
+            "total_moves": 3.765625
+          },
+          "v4_hybrid": {
+            "end_deficit": 29738.61715613336,
+            "mean_deficit": 44922.428954984935,
+            "risk": 0.0,
+            "tail_auc_deficit": 610630.5458712678,
+            "total_dropped": 18915.664031133347,
+            "total_moves": 10.140625
+          },
+          "v5_full": {
+            "end_deficit": 26138.629247228735,
+            "mean_deficit": 44256.02447989741,
+            "risk": 0.0,
+            "tail_auc_deficit": 495430.9327863196,
+            "total_dropped": 15315.676122228724,
+            "total_moves": 9.53125
+          },
+          "v6_full": {
+            "end_deficit": 27087.611727617714,
+            "mean_deficit": 44673.8942258878,
+            "risk": 0.0,
+            "tail_auc_deficit": 525798.372158767,
+            "total_dropped": 16264.658602617683,
+            "total_moves": 9.625
+          }
+        },
+        "generated_switching_fault": {
+          "capacity_balance": {
+            "end_deficit": 68158.8651007175,
+            "mean_deficit": 66126.93741298662,
+            "risk": 20500.692461490606,
+            "tail_auc_deficit": 1872969.5425979602,
+            "total_dropped": 58376.39635071749,
+            "total_moves": 8.9375
+          },
+          "capacity_v2": {
+            "end_deficit": 92969.93520332941,
+            "mean_deficit": 79710.06593767776,
+            "risk": 27525.820548462423,
+            "tail_auc_deficit": 2666923.785881541,
+            "total_dropped": 83187.46645332941,
+            "total_moves": 10.53125
+          },
+          "static": {
+            "end_deficit": 67217.7373918872,
+            "mean_deficit": 64114.646535670836,
+            "risk": 0.0,
+            "tail_auc_deficit": 1842853.4559153912,
+            "total_dropped": 57435.26864188719,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 100999.75687674448,
+            "mean_deficit": 78596.89982652183,
+            "risk": 27093.02664912185,
+            "tail_auc_deficit": 2923878.0794308214,
+            "total_dropped": 91217.28812674448,
+            "total_moves": 5.890625
+          },
+          "v4_hybrid": {
+            "end_deficit": 83879.74238338729,
+            "mean_deficit": 73226.30527532636,
+            "risk": 19905.903536437057,
+            "tail_auc_deficit": 2376037.6156433932,
+            "total_dropped": 74097.2736333873,
+            "total_moves": 10.765625
+          },
+          "v5_full": {
+            "end_deficit": 73692.28265718154,
+            "mean_deficit": 66940.74406413635,
+            "risk": 17586.56738245355,
+            "tail_auc_deficit": 2050038.9044048102,
+            "total_dropped": 63909.81390718155,
+            "total_moves": 10.640625
+          },
+          "v6_full": {
+            "end_deficit": 74493.97604445097,
+            "mean_deficit": 67336.59153024909,
+            "risk": 17780.288434326947,
+            "tail_auc_deficit": 2075693.0927974312,
+            "total_dropped": 64711.50729445094,
+            "total_moves": 10.015625
+          }
+        },
+        "generated_underload": {
+          "capacity_balance": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "capacity_v2": {
+            "end_deficit": 9740.564559744082,
+            "mean_deficit": 8814.144795110893,
+            "risk": 2.0713235047799117,
+            "tail_auc_deficit": 4911.980466091967,
+            "total_dropped": 0.0,
+            "total_moves": 5.21875
+          },
+          "static": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v5_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v6_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          }
+        },
+        "ingress_slow": {
+          "capacity_balance": {
+            "end_deficit": 6608.8118302258945,
+            "mean_deficit": 17661.79492933139,
+            "risk": 43.91586357505787,
+            "tail_auc_deficit": 159164.77544222862,
+            "total_dropped": 4948.0618302258945,
+            "total_moves": 2.53125
+          },
+          "capacity_v2": {
+            "end_deficit": 9704.91196724867,
+            "mean_deficit": 20838.735151999346,
+            "risk": 4010.090337038736,
+            "tail_auc_deficit": 258239.97982695742,
+            "total_dropped": 8044.161967248671,
+            "total_moves": 3.0
+          },
+          "static": {
+            "end_deficit": 7715.359354218362,
+            "mean_deficit": 18605.941376703056,
+            "risk": 0.0,
+            "tail_auc_deficit": 194574.29620998757,
+            "total_dropped": 6054.609354218357,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 7202.644293519439,
+            "mean_deficit": 18051.973507015344,
+            "risk": 6.821300733085138,
+            "tail_auc_deficit": 178167.41426762205,
+            "total_dropped": 5541.894293519437,
+            "total_moves": 0.9375
+          },
+          "v4_hybrid": {
+            "end_deficit": 6185.1869879667165,
+            "mean_deficit": 16943.620848331593,
+            "risk": 0.0,
+            "tail_auc_deficit": 145608.78048993493,
+            "total_dropped": 4524.4369879667165,
+            "total_moves": 5.828125
+          },
+          "v5_full": {
+            "end_deficit": 6185.186987966714,
+            "mean_deficit": 16953.060582368045,
+            "risk": 0.0,
+            "tail_auc_deficit": 145608.78048993484,
+            "total_dropped": 4524.4369879667165,
+            "total_moves": 5.484375
+          },
+          "v6_full": {
+            "end_deficit": 6185.1869879667165,
+            "mean_deficit": 16943.83461294562,
+            "risk": 0.0,
+            "tail_auc_deficit": 145608.780489935,
+            "total_dropped": 4524.4369879667165,
+            "total_moves": 5.5
+          }
+        },
+        "processing_slow": {
+          "capacity_balance": {
+            "end_deficit": 13087.67865720704,
+            "mean_deficit": 20817.558536548844,
+            "risk": 0.0,
+            "tail_auc_deficit": 365155.35765562527,
+            "total_dropped": 11384.444282207036,
+            "total_moves": 2.390625
+          },
+          "capacity_v2": {
+            "end_deficit": 20926.021788535647,
+            "mean_deficit": 25794.643083137467,
+            "risk": 699.2914980428767,
+            "tail_auc_deficit": 615982.3378581407,
+            "total_dropped": 19222.78741353565,
+            "total_moves": 2.28125
+          },
+          "static": {
+            "end_deficit": 21835.385974953788,
+            "mean_deficit": 26283.858986125,
+            "risk": 0.0,
+            "tail_auc_deficit": 645081.9918235212,
+            "total_dropped": 20132.151599953788,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 9063.420518963332,
+            "mean_deficit": 18269.476944568345,
+            "risk": 0.0,
+            "tail_auc_deficit": 236379.09723182666,
+            "total_dropped": 7360.186143963332,
+            "total_moves": 1.59375
+          },
+          "v4_hybrid": {
+            "end_deficit": 18100.776644085097,
+            "mean_deficit": 23681.905961325436,
+            "risk": 1719.4615082626447,
+            "tail_auc_deficit": 525574.4932357231,
+            "total_dropped": 16397.542269085097,
+            "total_moves": 5.875
+          },
+          "v5_full": {
+            "end_deficit": 12239.774708478088,
+            "mean_deficit": 20214.96070625124,
+            "risk": 1628.5806759922214,
+            "tail_auc_deficit": 338022.4312962988,
+            "total_dropped": 10536.540333478082,
+            "total_moves": 4.6875
+          },
+          "v6_full": {
+            "end_deficit": 13493.973955787704,
+            "mean_deficit": 20987.937213251473,
+            "risk": 1391.078133196798,
+            "tail_auc_deficit": 378156.8072102065,
+            "total_dropped": 11790.7395807877,
+            "total_moves": 4.765625
+          }
+        },
+        "shifting_bottleneck": {
+          "capacity_balance": {
+            "end_deficit": 28856.522619892858,
+            "mean_deficit": 32808.80657060608,
+            "risk": 16332.293682387468,
+            "tail_auc_deficit": 870022.7082115717,
+            "total_dropped": 27161.553869892858,
+            "total_moves": 3.0
+          },
+          "capacity_v2": {
+            "end_deficit": 7003.8881337713865,
+            "mean_deficit": 20264.81628700607,
+            "risk": 1038.594746185649,
+            "tail_auc_deficit": 170738.40465568437,
+            "total_dropped": 5308.919383771379,
+            "total_moves": 3.0
+          },
+          "static": {
+            "end_deficit": 12473.69117527862,
+            "mean_deficit": 22530.004142223428,
+            "risk": 0.0,
+            "tail_auc_deficit": 345772.10198391596,
+            "total_dropped": 10778.722425278622,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 18640.622456571116,
+            "mean_deficit": 26352.102836208433,
+            "risk": 8146.112392258388,
+            "tail_auc_deficit": 543113.9029852758,
+            "total_dropped": 16945.653706571124,
+            "total_moves": 2.5625
+          },
+          "v4_hybrid": {
+            "end_deficit": 25795.440189608868,
+            "mean_deficit": 30968.082101982032,
+            "risk": 13942.15571813419,
+            "tail_auc_deficit": 772068.0704424835,
+            "total_dropped": 24100.471439608875,
+            "total_moves": 4.09375
+          },
+          "v5_full": {
+            "end_deficit": 26255.730815961826,
+            "mean_deficit": 31043.289433217273,
+            "risk": 13141.650068969215,
+            "tail_auc_deficit": 786797.3704857784,
+            "total_dropped": 24560.76206596182,
+            "total_moves": 5.40625
+          },
+          "v6_full": {
+            "end_deficit": 21846.69865279199,
+            "mean_deficit": 28333.07728504774,
+            "risk": 9935.920594238769,
+            "tail_auc_deficit": 645708.3412643436,
+            "total_dropped": 20151.729902791994,
+            "total_moves": 5.65625
+          }
+        },
+        "surge_only": {
+          "capacity_balance": {
+            "end_deficit": 1695.421874999999,
+            "mean_deficit": 6808.590116376073,
+            "risk": 384.3347126802991,
+            "tail_auc_deficit": 841.4374999999709,
+            "total_dropped": 0.0,
+            "total_moves": 1.1875
+          },
+          "capacity_v2": {
+            "end_deficit": 1695.4218750000005,
+            "mean_deficit": 6950.876022997126,
+            "risk": 684.210390324946,
+            "tail_auc_deficit": 841.4375000000146,
+            "total_dropped": 0.0,
+            "total_moves": 2.0
+          },
+          "static": {
+            "end_deficit": 1695.421875,
+            "mean_deficit": 6719.1137014148735,
+            "risk": 0.0,
+            "tail_auc_deficit": 841.4375,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 1695.421875,
+            "mean_deficit": 6719.1137014148735,
+            "risk": 0.0,
+            "tail_auc_deficit": 841.4375,
+            "total_dropped": 0.0,
+            "total_moves": 0.015625
+          },
+          "v4_hybrid": {
+            "end_deficit": 1695.421874999999,
+            "mean_deficit": 6804.867018982697,
+            "risk": 313.02140736460103,
+            "tail_auc_deficit": 841.4374999999709,
+            "total_dropped": 0.0,
+            "total_moves": 2.796875
+          },
+          "v5_full": {
+            "end_deficit": 1695.4218749999986,
+            "mean_deficit": 6804.045440538952,
+            "risk": 360.64423833310775,
+            "tail_auc_deficit": 841.4374999999563,
+            "total_dropped": 0.0,
+            "total_moves": 2.796875
+          },
+          "v6_full": {
+            "end_deficit": 1695.4218749999986,
+            "mean_deficit": 6803.671719826403,
+            "risk": 360.64423833310775,
+            "tail_auc_deficit": 841.4374999999563,
+            "total_dropped": 0.0,
+            "total_moves": 2.765625
+          }
+        }
+      },
+      "finite_pipeline": {
+        "delivery_slow": {
+          "capacity_balance": {
+            "end_deficit": 9668.61471910699,
+            "mean_deficit": 18241.46017690228,
+            "risk": 1688.9614896447067,
+            "tail_auc_deficit": 255477.5616364236,
+            "total_dropped": 7956.786594106994,
+            "total_moves": 2.015625
+          },
+          "capacity_v2": {
+            "end_deficit": 10772.38179979276,
+            "mean_deficit": 18748.801403383568,
+            "risk": 0.0,
+            "tail_auc_deficit": 290798.1082183683,
+            "total_dropped": 9060.553674792754,
+            "total_moves": 2.078125
+          },
+          "static": {
+            "end_deficit": 24520.0761752895,
+            "mean_deficit": 28097.03219291657,
+            "risk": 0.0,
+            "tail_auc_deficit": 730724.328234264,
+            "total_dropped": 22808.248050289505,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 3160.468280649037,
+            "mean_deficit": 14153.59323585929,
+            "risk": 0.0,
+            "tail_auc_deficit": 47216.87560576918,
+            "total_dropped": 1448.6401556490378,
+            "total_moves": 1.84375
+          },
+          "v4_hybrid": {
+            "end_deficit": 16676.649320346492,
+            "mean_deficit": 22576.230417398765,
+            "risk": 1746.2119774230011,
+            "tail_auc_deficit": 479734.66887608764,
+            "total_dropped": 14964.821195346485,
+            "total_moves": 5.5625
+          },
+          "v5_full": {
+            "end_deficit": 10392.569345156848,
+            "mean_deficit": 18676.561312334183,
+            "risk": 1666.1962300369864,
+            "tail_auc_deficit": 278644.1096700191,
+            "total_dropped": 8680.741220156853,
+            "total_moves": 4.5625
+          },
+          "v6_full": {
+            "end_deficit": 12059.255002250367,
+            "mean_deficit": 19753.40149652407,
+            "risk": 1678.6216155007312,
+            "tail_auc_deficit": 331978.0506970119,
+            "total_dropped": 10347.426877250371,
+            "total_moves": 4.609375
+          }
+        },
+        "generated_asymmetric_recovery": {
+          "capacity_balance": {
+            "end_deficit": 9091.765624999989,
+            "mean_deficit": 17320.172719471426,
+            "risk": 1273.6633339003426,
+            "tail_auc_deficit": 4544.390624999651,
+            "total_dropped": 0.0,
+            "total_moves": 3.609375
+          },
+          "capacity_v2": {
+            "end_deficit": 9091.765624999985,
+            "mean_deficit": 16753.604286578502,
+            "risk": 154.77722842313943,
+            "tail_auc_deficit": 4544.390624999534,
+            "total_dropped": 0.0,
+            "total_moves": 7.640625
+          },
+          "static": {
+            "end_deficit": 9528.029186939899,
+            "mean_deficit": 18794.339512590283,
+            "risk": 0.0,
+            "tail_auc_deficit": 18504.824607076764,
+            "total_dropped": 436.2635619399029,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 9091.765625000015,
+            "mean_deficit": 17227.76044944665,
+            "risk": 13.818321641609828,
+            "tail_auc_deficit": 4544.390625000466,
+            "total_dropped": 0.0,
+            "total_moves": 1.390625
+          },
+          "v4_hybrid": {
+            "end_deficit": 9091.765624999989,
+            "mean_deficit": 17147.62470360722,
+            "risk": 372.22432055738193,
+            "tail_auc_deficit": 4544.390624999651,
+            "total_dropped": 0.0,
+            "total_moves": 9.109375
+          },
+          "v5_full": {
+            "end_deficit": 9091.765624999993,
+            "mean_deficit": 17208.38863904753,
+            "risk": 449.7035846505391,
+            "tail_auc_deficit": 4544.390624999767,
+            "total_dropped": 0.0,
+            "total_moves": 8.96875
+          },
+          "v6_full": {
+            "end_deficit": 9091.76562499999,
+            "mean_deficit": 17495.57966866856,
+            "risk": 1222.3170982513454,
+            "tail_auc_deficit": 4544.390624999709,
+            "total_dropped": 0.0,
+            "total_moves": 8.765625
+          }
+        },
+        "generated_pulsed_short_fault": {
+          "capacity_balance": {
+            "end_deficit": 35013.20105951953,
+            "mean_deficit": 50365.49563849476,
+            "risk": 22965.13888641677,
+            "tail_auc_deficit": 835131.8714046252,
+            "total_dropped": 25957.607309519535,
+            "total_moves": 8.0
+          },
+          "capacity_v2": {
+            "end_deficit": 62424.60066598973,
+            "mean_deficit": 59392.98613062094,
+            "risk": 28858.9266022496,
+            "tail_auc_deficit": 1712296.658811671,
+            "total_dropped": 53369.006915989754,
+            "total_moves": 9.921875
+          },
+          "static": {
+            "end_deficit": 28140.55639834531,
+            "mean_deficit": 43601.230231177826,
+            "risk": 0.0,
+            "tail_auc_deficit": 615207.2422470499,
+            "total_dropped": 19084.962648345318,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 55505.88311359452,
+            "mean_deficit": 58417.69932563202,
+            "risk": 24191.045120730512,
+            "tail_auc_deficit": 1490897.6971350247,
+            "total_dropped": 46450.28936359451,
+            "total_moves": 5.484375
+          },
+          "v4_hybrid": {
+            "end_deficit": 35753.59329473841,
+            "mean_deficit": 48238.94013865875,
+            "risk": 10066.278834858773,
+            "tail_auc_deficit": 858824.4229316296,
+            "total_dropped": 26697.99954473845,
+            "total_moves": 10.125
+          },
+          "v5_full": {
+            "end_deficit": 38104.12913297438,
+            "mean_deficit": 50142.547518622385,
+            "risk": 19893.0642000028,
+            "tail_auc_deficit": 934041.56975518,
+            "total_dropped": 29048.535382974365,
+            "total_moves": 10.890625
+          },
+          "v6_full": {
+            "end_deficit": 34870.20099746274,
+            "mean_deficit": 49343.65801929671,
+            "risk": 18280.391817185184,
+            "tail_auc_deficit": 830555.8694188078,
+            "total_dropped": 25814.607247462754,
+            "total_moves": 7.578125
+          }
+        },
+        "generated_sustained_overload": {
+          "capacity_balance": {
+            "end_deficit": 313907.0679150666,
+            "mean_deficit": 211656.20676894233,
+            "risk": 952.9368593752952,
+            "tail_auc_deficit": 9662221.14203213,
+            "total_dropped": 301753.39604006655,
+            "total_moves": 9.359375
+          },
+          "capacity_v2": {
+            "end_deficit": 435729.38152020564,
+            "mean_deficit": 270205.92043918086,
+            "risk": 67086.92680386297,
+            "tail_auc_deficit": 13560535.17739658,
+            "total_dropped": 423575.70964520576,
+            "total_moves": 9.125
+          },
+          "static": {
+            "end_deficit": 330763.9523705887,
+            "mean_deficit": 226310.17506464338,
+            "risk": 0.0,
+            "tail_auc_deficit": 10201641.44460884,
+            "total_dropped": 318610.28049558855,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 391711.73279392795,
+            "mean_deficit": 234700.26875170998,
+            "risk": 30167.5246767999,
+            "tail_auc_deficit": 12151970.418155694,
+            "total_dropped": 379558.0609189279,
+            "total_moves": 3.171875
+          },
+          "v4_hybrid": {
+            "end_deficit": 333097.37647820305,
+            "mean_deficit": 214513.15560631652,
+            "risk": 5373.463108075566,
+            "tail_auc_deficit": 10276311.016052494,
+            "total_dropped": 320943.7046032031,
+            "total_moves": 10.125
+          },
+          "v5_full": {
+            "end_deficit": 310468.6764563193,
+            "mean_deficit": 211572.02827297078,
+            "risk": 2144.357144837245,
+            "tail_auc_deficit": 9552192.615352217,
+            "total_dropped": 298315.0045813191,
+            "total_moves": 9.640625
+          },
+          "v6_full": {
+            "end_deficit": 310627.92409416044,
+            "mean_deficit": 211656.3393220748,
+            "risk": 1732.0931892435192,
+            "tail_auc_deficit": 9557288.539763134,
+            "total_dropped": 298474.2522191603,
+            "total_moves": 9.71875
+          }
+        },
+        "generated_sustained_processing_fault": {
+          "capacity_balance": {
+            "end_deficit": 26901.162027416663,
+            "mean_deficit": 41859.12990265435,
+            "risk": 0.0,
+            "tail_auc_deficit": 519831.98175233364,
+            "total_dropped": 16078.208902416682,
+            "total_moves": 7.265625
+          },
+          "capacity_v2": {
+            "end_deficit": 46879.50377156981,
+            "mean_deficit": 56994.98159681531,
+            "risk": 0.0,
+            "tail_auc_deficit": 1159138.9175652345,
+            "total_dropped": 36056.550646569834,
+            "total_moves": 9.25
+          },
+          "static": {
+            "end_deficit": 144032.84763109722,
+            "mean_deficit": 102708.5821511277,
+            "risk": 0.0,
+            "tail_auc_deficit": 4268045.921070111,
+            "total_dropped": 133209.89450609725,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 39169.06579376836,
+            "mean_deficit": 53241.457967545844,
+            "risk": 0.0,
+            "tail_auc_deficit": 912404.9022755878,
+            "total_dropped": 28346.11266876832,
+            "total_moves": 3.59375
+          },
+          "v4_hybrid": {
+            "end_deficit": 25081.507992617175,
+            "mean_deficit": 39385.7925465869,
+            "risk": 0.0,
+            "tail_auc_deficit": 461603.0526387496,
+            "total_dropped": 14258.554867617198,
+            "total_moves": 9.96875
+          },
+          "v5_full": {
+            "end_deficit": 20734.478522934005,
+            "mean_deficit": 39017.9142303641,
+            "risk": 0.0,
+            "tail_auc_deficit": 322498.1096088882,
+            "total_dropped": 9911.525397934,
+            "total_moves": 9.140625
+          },
+          "v6_full": {
+            "end_deficit": 20929.835876663696,
+            "mean_deficit": 38833.5058134903,
+            "risk": 0.0,
+            "tail_auc_deficit": 328749.54492823826,
+            "total_dropped": 10106.88275166369,
+            "total_moves": 9.25
+          }
+        },
+        "generated_switching_fault": {
+          "capacity_balance": {
+            "end_deficit": 46422.559174075584,
+            "mean_deficit": 52905.160151030606,
+            "risk": 9133.22777279598,
+            "tail_auc_deficit": 1177407.752945419,
+            "total_dropped": 36640.09042407559,
+            "total_moves": 8.625
+          },
+          "capacity_v2": {
+            "end_deficit": 75651.13704972425,
+            "mean_deficit": 70307.84267554372,
+            "risk": 21526.009697469,
+            "tail_auc_deficit": 2112722.2449661763,
+            "total_dropped": 65868.66829972426,
+            "total_moves": 10.21875
+          },
+          "static": {
+            "end_deficit": 67217.7373918872,
+            "mean_deficit": 64114.646535670836,
+            "risk": 0.0,
+            "tail_auc_deficit": 1842853.4559153912,
+            "total_dropped": 57435.26864188719,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 86138.27738280277,
+            "mean_deficit": 71707.0856004892,
+            "risk": 19411.113626468705,
+            "tail_auc_deficit": 2448310.7356246887,
+            "total_dropped": 76355.80863280274,
+            "total_moves": 6.03125
+          },
+          "v4_hybrid": {
+            "end_deficit": 71513.30421208446,
+            "mean_deficit": 65192.44190872913,
+            "risk": 10725.208054543811,
+            "tail_auc_deficit": 1980311.5941617028,
+            "total_dropped": 61730.83546208446,
+            "total_moves": 10.796875
+          },
+          "v5_full": {
+            "end_deficit": 54402.7945112356,
+            "mean_deficit": 55440.764729475064,
+            "risk": 5056.327994340392,
+            "tail_auc_deficit": 1432775.2837345393,
+            "total_dropped": 44620.32576123561,
+            "total_moves": 10.84375
+          },
+          "v6_full": {
+            "end_deficit": 60732.327150627985,
+            "mean_deficit": 58444.278861268365,
+            "risk": 6016.993898476204,
+            "tail_auc_deficit": 1635320.3281950955,
+            "total_dropped": 50949.85840062796,
+            "total_moves": 10.234375
+          }
+        },
+        "generated_underload": {
+          "capacity_balance": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "capacity_v2": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8814.279575472921,
+            "risk": 3.4191271250580257,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 4.953125
+          },
+          "static": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v5_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v6_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          }
+        },
+        "ingress_slow": {
+          "capacity_balance": {
+            "end_deficit": 4716.409090241305,
+            "mean_deficit": 15786.124686182668,
+            "risk": 0.0,
+            "tail_auc_deficit": 98607.88776272179,
+            "total_dropped": 3055.659090241304,
+            "total_moves": 2.515625
+          },
+          "capacity_v2": {
+            "end_deficit": 10410.059543626438,
+            "mean_deficit": 21274.315441051513,
+            "risk": 4916.203071028081,
+            "tail_auc_deficit": 280804.7022710461,
+            "total_dropped": 8749.309543626441,
+            "total_moves": 3.0
+          },
+          "static": {
+            "end_deficit": 7715.359354218362,
+            "mean_deficit": 18605.941376703056,
+            "risk": 0.0,
+            "tail_auc_deficit": 194574.29620998757,
+            "total_dropped": 6054.609354218357,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 6064.566308130411,
+            "mean_deficit": 17104.08083762837,
+            "risk": 0.0,
+            "tail_auc_deficit": 141748.91873517315,
+            "total_dropped": 4403.816308130413,
+            "total_moves": 1.015625
+          },
+          "v4_hybrid": {
+            "end_deficit": 4337.534572358003,
+            "mean_deficit": 15055.852854907811,
+            "risk": 0.0,
+            "tail_auc_deficit": 86483.90319045613,
+            "total_dropped": 2676.7845723580017,
+            "total_moves": 6.0
+          },
+          "v5_full": {
+            "end_deficit": 4337.534572358001,
+            "mean_deficit": 15059.441778247285,
+            "risk": 0.0,
+            "tail_auc_deficit": 86483.90319045607,
+            "total_dropped": 2676.7845723580017,
+            "total_moves": 5.671875
+          },
+          "v6_full": {
+            "end_deficit": 4337.534572358003,
+            "mean_deficit": 15035.506193523719,
+            "risk": 0.0,
+            "tail_auc_deficit": 86483.90319045611,
+            "total_dropped": 2676.7845723580017,
+            "total_moves": 5.671875
+          }
+        },
+        "processing_slow": {
+          "capacity_balance": {
+            "end_deficit": 6908.604999486466,
+            "mean_deficit": 16519.880123218052,
+            "risk": 0.0,
+            "tail_auc_deficit": 167425.00060856686,
+            "total_dropped": 5205.370624486465,
+            "total_moves": 2.375
+          },
+          "capacity_v2": {
+            "end_deficit": 14874.45059139037,
+            "mean_deficit": 22113.668047939205,
+            "risk": 167.6712328415769,
+            "tail_auc_deficit": 422332.05954949185,
+            "total_dropped": 13171.216216390361,
+            "total_moves": 2.375
+          },
+          "static": {
+            "end_deficit": 21835.385974953788,
+            "mean_deficit": 26283.858986125,
+            "risk": 0.0,
+            "tail_auc_deficit": 645081.9918235212,
+            "total_dropped": 20132.151599953788,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 2375.809820209096,
+            "mean_deficit": 13742.991193021597,
+            "risk": 0.0,
+            "tail_auc_deficit": 22375.55487169107,
+            "total_dropped": 672.5754452090963,
+            "total_moves": 1.421875
+          },
+          "v4_hybrid": {
+            "end_deficit": 11516.863164021459,
+            "mean_deficit": 19312.262239803513,
+            "risk": 1466.003865243863,
+            "tail_auc_deficit": 314889.2618736866,
+            "total_dropped": 9813.628789021452,
+            "total_moves": 5.875
+          },
+          "v5_full": {
+            "end_deficit": 8178.708992548807,
+            "mean_deficit": 17139.986148211738,
+            "risk": 1245.9249288763365,
+            "tail_auc_deficit": 208068.32838656183,
+            "total_dropped": 6475.474617548808,
+            "total_moves": 4.96875
+          },
+          "v6_full": {
+            "end_deficit": 8828.297456007484,
+            "mean_deficit": 17570.36576976293,
+            "risk": 1266.2127127737688,
+            "tail_auc_deficit": 228855.15921723947,
+            "total_dropped": 7125.063081007487,
+            "total_moves": 5.125
+          }
+        },
+        "shifting_bottleneck": {
+          "capacity_balance": {
+            "end_deficit": 27763.35848192593,
+            "mean_deficit": 32185.13851516229,
+            "risk": 16258.414385031248,
+            "tail_auc_deficit": 835041.4557966298,
+            "total_dropped": 26068.38973192593,
+            "total_moves": 3.0
+          },
+          "capacity_v2": {
+            "end_deficit": 6093.121132423956,
+            "mean_deficit": 20096.666935907524,
+            "risk": 1025.7144071523733,
+            "tail_auc_deficit": 141593.8606125667,
+            "total_dropped": 4398.152382423953,
+            "total_moves": 3.0
+          },
+          "static": {
+            "end_deficit": 12473.69117527862,
+            "mean_deficit": 22530.004142223428,
+            "risk": 0.0,
+            "tail_auc_deficit": 345772.10198391596,
+            "total_dropped": 10778.722425278622,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 18509.53722121289,
+            "mean_deficit": 26301.979574858386,
+            "risk": 6982.933201402952,
+            "tail_auc_deficit": 538919.1754538125,
+            "total_dropped": 16814.568471212893,
+            "total_moves": 2.65625
+          },
+          "v4_hybrid": {
+            "end_deficit": 24198.083329496963,
+            "mean_deficit": 29747.23313081627,
+            "risk": 11875.322915421684,
+            "tail_auc_deficit": 720952.6509189028,
+            "total_dropped": 22503.11457949697,
+            "total_moves": 4.140625
+          },
+          "v5_full": {
+            "end_deficit": 22687.820558079366,
+            "mean_deficit": 28812.15861245602,
+            "risk": 10059.875768917256,
+            "tail_auc_deficit": 672624.2422335397,
+            "total_dropped": 20992.85180807937,
+            "total_moves": 5.828125
+          },
+          "v6_full": {
+            "end_deficit": 19094.337929463385,
+            "mean_deficit": 26594.53695685208,
+            "risk": 6979.662517412363,
+            "tail_auc_deficit": 557632.7981178283,
+            "total_dropped": 17399.369179463385,
+            "total_moves": 5.984375
+          }
+        },
+        "surge_only": {
+          "capacity_balance": {
+            "end_deficit": 1695.421875000001,
+            "mean_deficit": 6808.240672056499,
+            "risk": 329.5692763330185,
+            "tail_auc_deficit": 841.4375000000291,
+            "total_dropped": 0.0,
+            "total_moves": 1.140625
+          },
+          "capacity_v2": {
+            "end_deficit": 1695.4218749999982,
+            "mean_deficit": 7240.591885955625,
+            "risk": 1153.8767343545128,
+            "tail_auc_deficit": 841.4374999999418,
+            "total_dropped": 0.0,
+            "total_moves": 2.0
+          },
+          "static": {
+            "end_deficit": 1695.421875,
+            "mean_deficit": 6719.1137014148735,
+            "risk": 0.0,
+            "tail_auc_deficit": 841.4375,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 1695.421875,
+            "mean_deficit": 6719.1137014148735,
+            "risk": 0.0,
+            "tail_auc_deficit": 841.4375,
+            "total_dropped": 0.0,
+            "total_moves": 0.015625
+          },
+          "v4_hybrid": {
+            "end_deficit": 1695.4218750000005,
+            "mean_deficit": 6806.799476019607,
+            "risk": 360.46702401717806,
+            "tail_auc_deficit": 841.4375000000146,
+            "total_dropped": 0.0,
+            "total_moves": 2.484375
+          },
+          "v5_full": {
+            "end_deficit": 1695.421875,
+            "mean_deficit": 6824.091886483078,
+            "risk": 464.4371192905412,
+            "tail_auc_deficit": 841.4375,
+            "total_dropped": 0.0,
+            "total_moves": 2.546875
+          },
+          "v6_full": {
+            "end_deficit": 1695.4218749999986,
+            "mean_deficit": 6822.010705111963,
+            "risk": 402.28057125226957,
+            "tail_auc_deficit": 841.4374999999563,
+            "total_dropped": 0.0,
+            "total_moves": 2.5625
+          }
+        }
+      },
+      "integer_transit3": {
+        "delivery_slow": {
+          "capacity_balance": {
+            "end_deficit": 0.0,
+            "mean_deficit": 8181.665573711978,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 2.171875
+          },
+          "capacity_v2": {
+            "end_deficit": 5.002220859751105e-12,
+            "mean_deficit": 7919.429075983069,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.6007106751203537e-10,
+            "total_dropped": 0.0,
+            "total_moves": 2.0
+          },
+          "static": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 10587.129384922342,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 2.2737367544323206e-12,
+            "mean_deficit": 8246.054245939784,
+            "risk": 0.0,
+            "tail_auc_deficit": 7.275957614183426e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 7975.5844460641865,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.9375
+          },
+          "v5_full": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 7954.994802964116,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.203125
+          },
+          "v6_full": {
+            "end_deficit": 3.183231456205249e-12,
+            "mean_deficit": 7999.58940251645,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.328125
+          }
+        },
+        "generated_asymmetric_recovery": {
+          "capacity_balance": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 1109.6777820807981,
+            "risk": 1431.979735006231,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 3.484375
+          },
+          "capacity_v2": {
+            "end_deficit": 1.4551915228366852e-11,
+            "mean_deficit": 1149.2975832500688,
+            "risk": 870.836795862881,
+            "tail_auc_deficit": 4.656612873077393e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.234375
+          },
+          "static": {
+            "end_deficit": 7.275957614183426e-12,
+            "mean_deficit": 2550.2857300567002,
+            "risk": 0.0,
+            "tail_auc_deficit": 2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 1.2732925824820995e-11,
+            "mean_deficit": 1814.2047539671905,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.0745362639427185e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.78125
+          },
+          "v4_hybrid": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 1037.7287864354112,
+            "risk": 632.1818594729793,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 9.234375
+          },
+          "v5_full": {
+            "end_deficit": -5.4569682106375694e-12,
+            "mean_deficit": 1078.2407775357292,
+            "risk": 792.5193092375239,
+            "tail_auc_deficit": -1.7462298274040222e-10,
+            "total_dropped": 0.0,
+            "total_moves": 9.359375
+          },
+          "v6_full": {
+            "end_deficit": -7.275957614183426e-12,
+            "mean_deficit": 1328.9305728355869,
+            "risk": 1463.7679463892475,
+            "tail_auc_deficit": -2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 9.28125
+          }
+        },
+        "generated_pulsed_short_fault": {
+          "capacity_balance": {
+            "end_deficit": -7.275957614183426e-12,
+            "mean_deficit": 20056.325560126552,
+            "risk": 5083.854252734067,
+            "tail_auc_deficit": -2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.890625
+          },
+          "capacity_v2": {
+            "end_deficit": -3.8198777474462986e-11,
+            "mean_deficit": 18789.69830879339,
+            "risk": 2652.9300489655957,
+            "tail_auc_deficit": -1.2223608791828156e-09,
+            "total_dropped": 0.0,
+            "total_moves": 8.0
+          },
+          "static": {
+            "end_deficit": -2.1827872842550278e-11,
+            "mean_deficit": 17460.88089935417,
+            "risk": 0.0,
+            "tail_auc_deficit": -6.984919309616089e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -1.0913936421275139e-11,
+            "mean_deficit": 19910.58083303241,
+            "risk": 5790.245536926675,
+            "tail_auc_deficit": -3.4924596548080444e-10,
+            "total_dropped": 0.0,
+            "total_moves": 3.828125
+          },
+          "v4_hybrid": {
+            "end_deficit": 0.0,
+            "mean_deficit": 18226.196671442387,
+            "risk": 1991.3797081362618,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 10.09375
+          },
+          "v5_full": {
+            "end_deficit": -7.275957614183426e-12,
+            "mean_deficit": 18494.13519622094,
+            "risk": 2721.9708631037324,
+            "tail_auc_deficit": -2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.40625
+          },
+          "v6_full": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 18620.35212996175,
+            "risk": 2654.753491873091,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 6.625
+          }
+        },
+        "generated_sustained_overload": {
+          "capacity_balance": {
+            "end_deficit": 238212.26650332357,
+            "mean_deficit": 183661.33377291478,
+            "risk": 2579.5572458642755,
+            "tail_auc_deficit": 2283645.455780451,
+            "total_dropped": 0.0,
+            "total_moves": 10.859375
+          },
+          "capacity_v2": {
+            "end_deficit": 281240.34872097854,
+            "mean_deficit": 192584.16591237497,
+            "risk": 11397.810120419732,
+            "tail_auc_deficit": 3401318.1751751355,
+            "total_dropped": 0.0,
+            "total_moves": 7.625
+          },
+          "static": {
+            "end_deficit": 262840.9239131559,
+            "mean_deficit": 199833.4850206258,
+            "risk": 0.0,
+            "tail_auc_deficit": 2735454.5334348176,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 321663.2413713395,
+            "mean_deficit": 200590.94385611537,
+            "risk": 28899.848724108095,
+            "tail_auc_deficit": 4707482.608507546,
+            "total_dropped": 0.0,
+            "total_moves": 3.640625
+          },
+          "v4_hybrid": {
+            "end_deficit": 250078.0489407404,
+            "mean_deficit": 186508.36403326932,
+            "risk": 5463.679960241175,
+            "tail_auc_deficit": 2485194.7326311884,
+            "total_dropped": 0.0,
+            "total_moves": 12.09375
+          },
+          "v5_full": {
+            "end_deficit": 249322.99234711064,
+            "mean_deficit": 186343.43901138456,
+            "risk": 5036.389540120277,
+            "tail_auc_deficit": 2471432.423803208,
+            "total_dropped": 0.0,
+            "total_moves": 12.015625
+          },
+          "v6_full": {
+            "end_deficit": 239043.3730933931,
+            "mean_deficit": 183392.31866024138,
+            "risk": 2232.478900372721,
+            "tail_auc_deficit": 2265947.8501492403,
+            "total_dropped": 0.0,
+            "total_moves": 12.15625
+          }
+        },
+        "generated_sustained_processing_fault": {
+          "capacity_balance": {
+            "end_deficit": 1.4551915228366852e-11,
+            "mean_deficit": 23439.838848910353,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.656612873077393e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.375
+          },
+          "capacity_v2": {
+            "end_deficit": 653.8455771497684,
+            "mean_deficit": 22090.559336315917,
+            "risk": 0.0,
+            "tail_auc_deficit": 790.4908926967728,
+            "total_dropped": 0.0,
+            "total_moves": 6.25
+          },
+          "static": {
+            "end_deficit": 8021.3243503061785,
+            "mean_deficit": 68204.59095785623,
+            "risk": 0.0,
+            "tail_auc_deficit": 14084.542844595533,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 567.5371612614363,
+            "mean_deficit": 28660.46481392351,
+            "risk": 0.0,
+            "tail_auc_deficit": 344.2867412096457,
+            "total_dropped": 0.0,
+            "total_moves": 3.890625
+          },
+          "v4_hybrid": {
+            "end_deficit": 1337.9568977508843,
+            "mean_deficit": 21205.26169744444,
+            "risk": 0.0,
+            "tail_auc_deficit": 740.9674425169105,
+            "total_dropped": 0.0,
+            "total_moves": 10.125
+          },
+          "v5_full": {
+            "end_deficit": 3.092281986027956e-11,
+            "mean_deficit": 20290.390431817417,
+            "risk": 0.0,
+            "tail_auc_deficit": 9.89530235528946e-10,
+            "total_dropped": 0.0,
+            "total_moves": 9.921875
+          },
+          "v6_full": {
+            "end_deficit": 2.9103830456733704e-11,
+            "mean_deficit": 20648.75352308598,
+            "risk": 0.0,
+            "tail_auc_deficit": 9.313225746154785e-10,
+            "total_dropped": 0.0,
+            "total_moves": 9.0625
+          }
+        },
+        "generated_switching_fault": {
+          "capacity_balance": {
+            "end_deficit": 1474.7008170085865,
+            "mean_deficit": 29915.614721737526,
+            "risk": 21448.110455362923,
+            "tail_auc_deficit": 1662.8675655314128,
+            "total_dropped": 0.0,
+            "total_moves": 8.75
+          },
+          "capacity_v2": {
+            "end_deficit": 3305.907464415848,
+            "mean_deficit": 34806.0583420686,
+            "risk": 16626.62256416264,
+            "tail_auc_deficit": 2392.18128753599,
+            "total_dropped": 0.0,
+            "total_moves": 9.421875
+          },
+          "static": {
+            "end_deficit": 2.000888343900442e-11,
+            "mean_deficit": 31697.206432864856,
+            "risk": 0.0,
+            "tail_auc_deficit": 6.402842700481415e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 4350.198281627956,
+            "mean_deficit": 41582.08369149455,
+            "risk": 20265.20366212488,
+            "tail_auc_deficit": 5626.025138175555,
+            "total_dropped": 0.0,
+            "total_moves": 7.015625
+          },
+          "v4_hybrid": {
+            "end_deficit": 7.275957614183426e-12,
+            "mean_deficit": 33869.1235015485,
+            "risk": 7667.2046895363865,
+            "tail_auc_deficit": 2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.71875
+          },
+          "v5_full": {
+            "end_deficit": 234.4234035169793,
+            "mean_deficit": 31008.065773362523,
+            "risk": 8748.031223079202,
+            "tail_auc_deficit": 45.611364902850255,
+            "total_dropped": 0.0,
+            "total_moves": 11.328125
+          },
+          "v6_full": {
+            "end_deficit": 2.000888343900442e-11,
+            "mean_deficit": 32401.446202217834,
+            "risk": 8261.011164307249,
+            "tail_auc_deficit": 6.402842700481415e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.65625
+          }
+        },
+        "generated_underload": {
+          "capacity_balance": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "capacity_v2": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "static": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v5_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v6_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          }
+        },
+        "ingress_slow": {
+          "capacity_balance": {
+            "end_deficit": 9.094947017729282e-13,
+            "mean_deficit": 8470.099108064916,
+            "risk": 455.21433105298144,
+            "tail_auc_deficit": 2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.421875
+          },
+          "capacity_v2": {
+            "end_deficit": 0.0,
+            "mean_deficit": 7786.0157480051,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 2.265625
+          },
+          "static": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 9636.750367816654,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -2.7284841053187847e-12,
+            "mean_deficit": 8808.688487499632,
+            "risk": 0.0,
+            "tail_auc_deficit": -8.731149137020111e-11,
+            "total_dropped": 0.0,
+            "total_moves": 1.34375
+          },
+          "v4_hybrid": {
+            "end_deficit": 2.7284841053187847e-12,
+            "mean_deficit": 7860.142304342598,
+            "risk": 0.0,
+            "tail_auc_deficit": 8.731149137020111e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.9375
+          },
+          "v5_full": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 7855.800032570559,
+            "risk": 0.0,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.671875
+          },
+          "v6_full": {
+            "end_deficit": 3.183231456205249e-12,
+            "mean_deficit": 7719.655290243775,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.4375
+          }
+        },
+        "processing_slow": {
+          "capacity_balance": {
+            "end_deficit": 9.094947017729282e-13,
+            "mean_deficit": 8397.742584990578,
+            "risk": 108.95002982114221,
+            "tail_auc_deficit": 2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.28125
+          },
+          "capacity_v2": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 7648.861940184477,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.140625
+          },
+          "static": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 9955.371991721366,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -3.637978807091713e-12,
+            "mean_deficit": 7795.80651461964,
+            "risk": 0.0,
+            "tail_auc_deficit": -1.1641532182693481e-10,
+            "total_dropped": 0.0,
+            "total_moves": 1.609375
+          },
+          "v4_hybrid": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 7898.836877467209,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 6.0625
+          },
+          "v5_full": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 7876.084732764416,
+            "risk": 0.0,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.265625
+          },
+          "v6_full": {
+            "end_deficit": 3.183231456205249e-12,
+            "mean_deficit": 8033.15729004893,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.34375
+          }
+        },
+        "shifting_bottleneck": {
+          "capacity_balance": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 13441.809430308856,
+            "risk": 2963.9627803701346,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.9375
+          },
+          "capacity_v2": {
+            "end_deficit": -2.2737367544323206e-12,
+            "mean_deficit": 12498.014165555356,
+            "risk": 1115.876459980259,
+            "tail_auc_deficit": -7.275957614183426e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.9375
+          },
+          "static": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 11707.392275009981,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -6.821210263296962e-12,
+            "mean_deficit": 12558.762868854377,
+            "risk": 1337.8741827111269,
+            "tail_auc_deficit": -2.1827872842550278e-10,
+            "total_dropped": 0.0,
+            "total_moves": 2.671875
+          },
+          "v4_hybrid": {
+            "end_deficit": -4.547473508864641e-12,
+            "mean_deficit": 12808.58199071939,
+            "risk": 1520.8103120219278,
+            "tail_auc_deficit": -1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 4.484375
+          },
+          "v5_full": {
+            "end_deficit": -1.3642420526593924e-12,
+            "mean_deficit": 12483.568283793156,
+            "risk": 1115.876459980259,
+            "tail_auc_deficit": -4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 6.3125
+          },
+          "v6_full": {
+            "end_deficit": 3.637978807091713e-12,
+            "mean_deficit": 12188.415726857173,
+            "risk": 1316.6890946728365,
+            "tail_auc_deficit": 1.1641532182693481e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.328125
+          }
+        },
+        "surge_only": {
+          "capacity_balance": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 808.0065776137379,
+            "risk": 284.82847074115045,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 1.0
+          },
+          "capacity_v2": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 823.1899044255532,
+            "risk": 344.3122601792045,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 1.0625
+          },
+          "static": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 722.667913742112,
+            "risk": 0.0,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 722.667913742112,
+            "risk": 0.0,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": -1.3642420526593924e-12,
+            "mean_deficit": 818.548798247244,
+            "risk": 343.819846165929,
+            "tail_auc_deficit": -4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.65625
+          },
+          "v5_full": {
+            "end_deficit": -4.547473508864641e-13,
+            "mean_deficit": 829.4526233012192,
+            "risk": 378.60651664052574,
+            "tail_auc_deficit": -1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.65625
+          },
+          "v6_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 809.637255462046,
+            "risk": 300.27019342158127,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 2.71875
+          }
+        }
+      },
+      "legacy_instant": {
+        "delivery_slow": {
+          "capacity_balance": {
+            "end_deficit": -1.3642420526593924e-12,
+            "mean_deficit": 6812.792717843649,
+            "risk": 0.0,
+            "tail_auc_deficit": -4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.171875
+          },
+          "capacity_v2": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 6493.457773238835,
+            "risk": 0.0,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.0
+          },
+          "static": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 10587.129384922342,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -2.2737367544323206e-12,
+            "mean_deficit": 6702.4013622616285,
+            "risk": 0.0,
+            "tail_auc_deficit": -7.275957614183426e-11,
+            "total_dropped": 0.0,
+            "total_moves": 1.984375
+          },
+          "v4_hybrid": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 6586.581192290603,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 6.0
+          },
+          "v5_full": {
+            "end_deficit": -1.3642420526593924e-12,
+            "mean_deficit": 6494.175258481131,
+            "risk": 0.0,
+            "tail_auc_deficit": -4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.59375
+          },
+          "v6_full": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 6603.250729851848,
+            "risk": 0.0,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.484375
+          }
+        },
+        "generated_asymmetric_recovery": {
+          "capacity_balance": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 937.8850661451912,
+            "risk": 909.2701470874943,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 3.5625
+          },
+          "capacity_v2": {
+            "end_deficit": 9.094947017729282e-12,
+            "mean_deficit": 1104.8235324488658,
+            "risk": 726.0503310409265,
+            "tail_auc_deficit": 2.9103830456733704e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.421875
+          },
+          "static": {
+            "end_deficit": 7.275957614183426e-12,
+            "mean_deficit": 2550.2857300567002,
+            "risk": 0.0,
+            "tail_auc_deficit": 2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 1475.2996553356563,
+            "risk": 3.6201359106020803,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.84375
+          },
+          "v4_hybrid": {
+            "end_deficit": 1.8189894035458565e-11,
+            "mean_deficit": 796.5361434864924,
+            "risk": 168.68119480490523,
+            "tail_auc_deficit": 5.820766091346741e-10,
+            "total_dropped": 0.0,
+            "total_moves": 8.984375
+          },
+          "v5_full": {
+            "end_deficit": 5.4569682106375694e-12,
+            "mean_deficit": 968.4512873476854,
+            "risk": 462.6208423810736,
+            "tail_auc_deficit": 1.7462298274040222e-10,
+            "total_dropped": 0.0,
+            "total_moves": 9.0625
+          },
+          "v6_full": {
+            "end_deficit": -9.094947017729282e-12,
+            "mean_deficit": 945.3809227712215,
+            "risk": 647.9169546154686,
+            "tail_auc_deficit": -2.9103830456733704e-10,
+            "total_dropped": 0.0,
+            "total_moves": 8.90625
+          }
+        },
+        "generated_pulsed_short_fault": {
+          "capacity_balance": {
+            "end_deficit": -2.546585164964199e-11,
+            "mean_deficit": 18385.69648040661,
+            "risk": 3087.6470916263897,
+            "tail_auc_deficit": -8.149072527885437e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.859375
+          },
+          "capacity_v2": {
+            "end_deficit": 3.456079866737127e-11,
+            "mean_deficit": 17281.308927231385,
+            "risk": 1329.3719485093004,
+            "tail_auc_deficit": 1.1059455573558807e-09,
+            "total_dropped": 0.0,
+            "total_moves": 7.890625
+          },
+          "static": {
+            "end_deficit": -2.1827872842550278e-11,
+            "mean_deficit": 17460.88089935417,
+            "risk": 0.0,
+            "tail_auc_deficit": -6.984919309616089e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -7.275957614183426e-12,
+            "mean_deficit": 19811.118843407312,
+            "risk": 6417.103999252246,
+            "tail_auc_deficit": -2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.21875
+          },
+          "v4_hybrid": {
+            "end_deficit": 3.092281986027956e-11,
+            "mean_deficit": 17212.446290563552,
+            "risk": 1103.6738852389465,
+            "tail_auc_deficit": 9.89530235528946e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.765625
+          },
+          "v5_full": {
+            "end_deficit": 4.9112713895738125e-11,
+            "mean_deficit": 17476.074250792008,
+            "risk": 1706.5521077023714,
+            "tail_auc_deficit": 1.57160684466362e-09,
+            "total_dropped": 0.0,
+            "total_moves": 11.125
+          },
+          "v6_full": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 17751.305102173206,
+            "risk": 1742.1572054364883,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 6.734375
+          }
+        },
+        "generated_sustained_overload": {
+          "capacity_balance": {
+            "end_deficit": 228132.55383586246,
+            "mean_deficit": 178189.73334752608,
+            "risk": 0.0,
+            "tail_auc_deficit": 2092977.5721008107,
+            "total_dropped": 0.0,
+            "total_moves": 10.765625
+          },
+          "capacity_v2": {
+            "end_deficit": 262861.1051202403,
+            "mean_deficit": 185831.6836684201,
+            "risk": 8797.631021863257,
+            "tail_auc_deficit": 2943769.7690055454,
+            "total_dropped": 0.0,
+            "total_moves": 8.046875
+          },
+          "static": {
+            "end_deficit": 262840.9239131559,
+            "mean_deficit": 199833.4850206258,
+            "risk": 0.0,
+            "tail_auc_deficit": 2735454.5334348176,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 271782.76522557484,
+            "mean_deficit": 187030.98881012277,
+            "risk": 6764.556562360873,
+            "tail_auc_deficit": 3162319.6132989437,
+            "total_dropped": 0.0,
+            "total_moves": 5.90625
+          },
+          "v4_hybrid": {
+            "end_deficit": 235202.0812003695,
+            "mean_deficit": 179589.09103924115,
+            "risk": 265.4299565798465,
+            "tail_auc_deficit": 2200381.6188322166,
+            "total_dropped": 0.0,
+            "total_moves": 12.46875
+          },
+          "v5_full": {
+            "end_deficit": 232661.94339724476,
+            "mean_deficit": 178872.14162857668,
+            "risk": 265.4299565798465,
+            "tail_auc_deficit": 2154182.800978248,
+            "total_dropped": 0.0,
+            "total_moves": 12.578125
+          },
+          "v6_full": {
+            "end_deficit": 225574.35299004294,
+            "mean_deficit": 176889.03825205145,
+            "risk": 153.59787474045334,
+            "tail_auc_deficit": 2008205.4622249163,
+            "total_dropped": 0.0,
+            "total_moves": 12.90625
+          }
+        },
+        "generated_sustained_processing_fault": {
+          "capacity_balance": {
+            "end_deficit": -1.2732925824820995e-11,
+            "mean_deficit": 17640.451965295753,
+            "risk": 0.0,
+            "tail_auc_deficit": -4.0745362639427185e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.09375
+          },
+          "capacity_v2": {
+            "end_deficit": -1.4551915228366852e-11,
+            "mean_deficit": 17678.043715347918,
+            "risk": 0.0,
+            "tail_auc_deficit": -4.656612873077393e-10,
+            "total_dropped": 0.0,
+            "total_moves": 6.0625
+          },
+          "static": {
+            "end_deficit": 8021.3243503061785,
+            "mean_deficit": 68204.59095785623,
+            "risk": 0.0,
+            "tail_auc_deficit": 14084.542844595533,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -3.637978807091713e-12,
+            "mean_deficit": 23459.998948924494,
+            "risk": 0.0,
+            "tail_auc_deficit": -1.1641532182693481e-10,
+            "total_dropped": 0.0,
+            "total_moves": 3.8125
+          },
+          "v4_hybrid": {
+            "end_deficit": 165.61242082762146,
+            "mean_deficit": 15360.66356526279,
+            "risk": 0.0,
+            "tail_auc_deficit": 2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.03125
+          },
+          "v5_full": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 15272.216536865035,
+            "risk": 0.0,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 9.703125
+          },
+          "v6_full": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 15135.189568913162,
+            "risk": 0.0,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 9.5
+          }
+        },
+        "generated_switching_fault": {
+          "capacity_balance": {
+            "end_deficit": 195.006738286138,
+            "mean_deficit": 21201.59365717466,
+            "risk": 9572.053275084023,
+            "tail_auc_deficit": -1.1641532182693481e-10,
+            "total_dropped": 0.0,
+            "total_moves": 8.28125
+          },
+          "capacity_v2": {
+            "end_deficit": 305.43141478589496,
+            "mean_deficit": 22584.22851889185,
+            "risk": 4554.885721164946,
+            "tail_auc_deficit": 82.73883092319738,
+            "total_dropped": 0.0,
+            "total_moves": 8.96875
+          },
+          "static": {
+            "end_deficit": 2.000888343900442e-11,
+            "mean_deficit": 31697.206432864856,
+            "risk": 0.0,
+            "tail_auc_deficit": 6.402842700481415e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 876.2384261797488,
+            "mean_deficit": 31776.6671056756,
+            "risk": 11521.548313979425,
+            "tail_auc_deficit": 194.226933753529,
+            "total_dropped": 0.0,
+            "total_moves": 7.203125
+          },
+          "v4_hybrid": {
+            "end_deficit": 0.0,
+            "mean_deficit": 25465.90357357648,
+            "risk": 2053.191441564862,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 10.65625
+          },
+          "v5_full": {
+            "end_deficit": 5.4569682106375694e-11,
+            "mean_deficit": 22395.837874799385,
+            "risk": 2.598264791923839,
+            "tail_auc_deficit": 1.7462298274040222e-09,
+            "total_dropped": 0.0,
+            "total_moves": 10.96875
+          },
+          "v6_full": {
+            "end_deficit": 1.0913936421275139e-11,
+            "mean_deficit": 23719.230287060862,
+            "risk": 1269.2992889429756,
+            "tail_auc_deficit": 3.4924596548080444e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.46875
+          }
+        },
+        "generated_underload": {
+          "capacity_balance": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "capacity_v2": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "static": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v5_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v6_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          }
+        },
+        "ingress_slow": {
+          "capacity_balance": {
+            "end_deficit": -4.547473508864641e-13,
+            "mean_deficit": 6969.587625003151,
+            "risk": 0.0,
+            "tail_auc_deficit": -1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.3125
+          },
+          "capacity_v2": {
+            "end_deficit": 2.2737367544323206e-12,
+            "mean_deficit": 6351.510402702697,
+            "risk": 0.0,
+            "tail_auc_deficit": 7.275957614183426e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.1875
+          },
+          "static": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 9636.750367816654,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -2.7284841053187847e-12,
+            "mean_deficit": 7395.748818267931,
+            "risk": 0.0,
+            "tail_auc_deficit": -8.731149137020111e-11,
+            "total_dropped": 0.0,
+            "total_moves": 1.421875
+          },
+          "v4_hybrid": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 6315.7390796039745,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.9375
+          },
+          "v5_full": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 6273.345875449746,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.609375
+          },
+          "v6_full": {
+            "end_deficit": 9.094947017729282e-13,
+            "mean_deficit": 6169.796248269264,
+            "risk": 0.0,
+            "tail_auc_deficit": 2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.46875
+          }
+        },
+        "processing_slow": {
+          "capacity_balance": {
+            "end_deficit": 3.183231456205249e-12,
+            "mean_deficit": 6879.629880955954,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 2.21875
+          },
+          "capacity_v2": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 6165.395547323163,
+            "risk": 0.0,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.09375
+          },
+          "static": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 9955.371991721366,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 6455.585118040207,
+            "risk": 0.0,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 1.828125
+          },
+          "v4_hybrid": {
+            "end_deficit": -3.183231456205249e-12,
+            "mean_deficit": 6425.548128151856,
+            "risk": 0.0,
+            "tail_auc_deficit": -1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 6.171875
+          },
+          "v5_full": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 6262.2612315611805,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.625
+          },
+          "v6_full": {
+            "end_deficit": 9.094947017729282e-13,
+            "mean_deficit": 6414.296329618186,
+            "risk": 0.0,
+            "tail_auc_deficit": 2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.5
+          }
+        },
+        "shifting_bottleneck": {
+          "capacity_balance": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 10712.20370027025,
+            "risk": 754.3330655278612,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.796875
+          },
+          "capacity_v2": {
+            "end_deficit": -1.3642420526593924e-12,
+            "mean_deficit": 9459.523927860915,
+            "risk": 0.0,
+            "tail_auc_deficit": -4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.734375
+          },
+          "static": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 11707.392275009981,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -4.547473508864641e-13,
+            "mean_deficit": 10675.667385742932,
+            "risk": 56.19291658549429,
+            "tail_auc_deficit": -1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.75
+          },
+          "v4_hybrid": {
+            "end_deficit": 3.183231456205249e-12,
+            "mean_deficit": 10074.679531229505,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.1875
+          },
+          "v5_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 9449.78560254169,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 6.453125
+          },
+          "v6_full": {
+            "end_deficit": 2.7284841053187847e-12,
+            "mean_deficit": 8871.050906674987,
+            "risk": 0.0,
+            "tail_auc_deficit": 8.731149137020111e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.25
+          }
+        },
+        "surge_only": {
+          "capacity_balance": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 792.4766987714163,
+            "risk": 268.82771703684267,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.984375
+          },
+          "capacity_v2": {
+            "end_deficit": 0.0,
+            "mean_deficit": 800.1951893229666,
+            "risk": 326.7718078526307,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 1.0625
+          },
+          "static": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 722.667913742112,
+            "risk": 0.0,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 722.667913742112,
+            "risk": 0.0,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 798.8566574106123,
+            "risk": 291.3350476055576,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 3.015625
+          },
+          "v5_full": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 808.0600123677892,
+            "risk": 347.57950156551533,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 3.015625
+          },
+          "v6_full": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 798.06987388916,
+            "risk": 252.70007629452616,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 3.15625
+          }
+        }
+      },
+      "legacy_transit3": {
+        "delivery_slow": {
+          "capacity_balance": {
+            "end_deficit": 0.0,
+            "mean_deficit": 8181.665573711978,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 2.171875
+          },
+          "capacity_v2": {
+            "end_deficit": 5.002220859751105e-12,
+            "mean_deficit": 7919.429075983069,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.6007106751203537e-10,
+            "total_dropped": 0.0,
+            "total_moves": 2.0
+          },
+          "static": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 10587.129384922342,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 2.2737367544323206e-12,
+            "mean_deficit": 8246.054245939784,
+            "risk": 0.0,
+            "tail_auc_deficit": 7.275957614183426e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 7975.5844460641865,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.953125
+          },
+          "v5_full": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 7954.994802964116,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.234375
+          },
+          "v6_full": {
+            "end_deficit": 3.183231456205249e-12,
+            "mean_deficit": 7999.58940251645,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.375
+          }
+        },
+        "generated_asymmetric_recovery": {
+          "capacity_balance": {
+            "end_deficit": 0.0,
+            "mean_deficit": 1106.9731682547454,
+            "risk": 1431.979735006231,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 3.484375
+          },
+          "capacity_v2": {
+            "end_deficit": 2.000888343900442e-11,
+            "mean_deficit": 1144.5383796502701,
+            "risk": 863.7898342655026,
+            "tail_auc_deficit": 6.402842700481415e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.203125
+          },
+          "static": {
+            "end_deficit": 7.275957614183426e-12,
+            "mean_deficit": 2550.2857300567002,
+            "risk": 0.0,
+            "tail_auc_deficit": 2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 1.4551915228366852e-11,
+            "mean_deficit": 1814.1325294315795,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.656612873077393e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.78125
+          },
+          "v4_hybrid": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 1036.503699037231,
+            "risk": 634.0193880323995,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 9.0
+          },
+          "v5_full": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 1077.379716083937,
+            "risk": 796.8535863024082,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 9.25
+          },
+          "v6_full": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 1328.4836603151273,
+            "risk": 1464.676595674216,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 9.1875
+          }
+        },
+        "generated_pulsed_short_fault": {
+          "capacity_balance": {
+            "end_deficit": 0.0,
+            "mean_deficit": 20037.702830411195,
+            "risk": 5089.701391138182,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 7.875
+          },
+          "capacity_v2": {
+            "end_deficit": -3.092281986027956e-11,
+            "mean_deficit": 18768.124332144744,
+            "risk": 2614.8047577698467,
+            "tail_auc_deficit": -9.89530235528946e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.984375
+          },
+          "static": {
+            "end_deficit": -2.1827872842550278e-11,
+            "mean_deficit": 17460.88089935417,
+            "risk": 0.0,
+            "tail_auc_deficit": -6.984919309616089e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -7.275957614183426e-12,
+            "mean_deficit": 19910.871201344307,
+            "risk": 5790.245536926677,
+            "tail_auc_deficit": -2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 3.828125
+          },
+          "v4_hybrid": {
+            "end_deficit": -1.2732925824820995e-11,
+            "mean_deficit": 18300.290085293163,
+            "risk": 2098.058613281154,
+            "tail_auc_deficit": -4.0745362639427185e-10,
+            "total_dropped": 0.0,
+            "total_moves": 9.90625
+          },
+          "v5_full": {
+            "end_deficit": -1.0913936421275139e-11,
+            "mean_deficit": 18543.722625275685,
+            "risk": 2895.067603399273,
+            "tail_auc_deficit": -3.4924596548080444e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.140625
+          },
+          "v6_full": {
+            "end_deficit": -2.000888343900442e-11,
+            "mean_deficit": 18536.9573865716,
+            "risk": 2571.8782779109465,
+            "tail_auc_deficit": -6.402842700481415e-10,
+            "total_dropped": 0.0,
+            "total_moves": 6.40625
+          }
+        },
+        "generated_sustained_overload": {
+          "capacity_balance": {
+            "end_deficit": 238729.63132253286,
+            "mean_deficit": 183851.87848096827,
+            "risk": 1453.3898300153078,
+            "tail_auc_deficit": 2292394.3934913334,
+            "total_dropped": 0.0,
+            "total_moves": 10.828125
+          },
+          "capacity_v2": {
+            "end_deficit": 282215.8536377826,
+            "mean_deficit": 192888.22456889483,
+            "risk": 11828.239728477021,
+            "tail_auc_deficit": 3399302.217410001,
+            "total_dropped": 0.0,
+            "total_moves": 7.484375
+          },
+          "static": {
+            "end_deficit": 262840.9239131559,
+            "mean_deficit": 199833.4850206258,
+            "risk": 0.0,
+            "tail_auc_deficit": 2735454.5334348176,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 318911.5975390813,
+            "mean_deficit": 199929.61230876922,
+            "risk": 29062.676076705884,
+            "tail_auc_deficit": 4642345.8557268595,
+            "total_dropped": 0.0,
+            "total_moves": 3.5625
+          },
+          "v4_hybrid": {
+            "end_deficit": 250731.1857161284,
+            "mean_deficit": 186644.9568169352,
+            "risk": 4507.891213736753,
+            "tail_auc_deficit": 2501478.405026359,
+            "total_dropped": 0.0,
+            "total_moves": 11.78125
+          },
+          "v5_full": {
+            "end_deficit": 249776.3983975024,
+            "mean_deficit": 186457.87401871083,
+            "risk": 3713.2115252760013,
+            "tail_auc_deficit": 2484205.0452060606,
+            "total_dropped": 0.0,
+            "total_moves": 11.953125
+          },
+          "v6_full": {
+            "end_deficit": 235970.22353240906,
+            "mean_deficit": 182614.74581677146,
+            "risk": 2389.887377501368,
+            "tail_auc_deficit": 2212377.9632591796,
+            "total_dropped": 0.0,
+            "total_moves": 12.046875
+          }
+        },
+        "generated_sustained_processing_fault": {
+          "capacity_balance": {
+            "end_deficit": -1.0913936421275139e-11,
+            "mean_deficit": 23271.21247830915,
+            "risk": 0.0,
+            "tail_auc_deficit": -3.4924596548080444e-10,
+            "total_dropped": 0.0,
+            "total_moves": 7.40625
+          },
+          "capacity_v2": {
+            "end_deficit": 653.8455771497429,
+            "mean_deficit": 22161.127575146365,
+            "risk": 0.0,
+            "tail_auc_deficit": 790.4908926959579,
+            "total_dropped": 0.0,
+            "total_moves": 6.296875
+          },
+          "static": {
+            "end_deficit": 8021.3243503061785,
+            "mean_deficit": 68204.59095785623,
+            "risk": 0.0,
+            "tail_auc_deficit": 14084.542844595533,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 567.5371612614363,
+            "mean_deficit": 28658.80371290686,
+            "risk": 0.0,
+            "tail_auc_deficit": 344.2867412096457,
+            "total_dropped": 0.0,
+            "total_moves": 3.890625
+          },
+          "v4_hybrid": {
+            "end_deficit": 1601.6019923063523,
+            "mean_deficit": 21420.386819498173,
+            "risk": 0.0,
+            "tail_auc_deficit": 916.7817765282489,
+            "total_dropped": 0.0,
+            "total_moves": 10.125
+          },
+          "v5_full": {
+            "end_deficit": -1.8189894035458565e-12,
+            "mean_deficit": 20346.984768481678,
+            "risk": 0.0,
+            "tail_auc_deficit": -5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 9.765625
+          },
+          "v6_full": {
+            "end_deficit": 4.729372449219227e-11,
+            "mean_deficit": 20421.838696935993,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.5133991837501526e-09,
+            "total_dropped": 0.0,
+            "total_moves": 8.890625
+          }
+        },
+        "generated_switching_fault": {
+          "capacity_balance": {
+            "end_deficit": 1461.5784161079264,
+            "mean_deficit": 29917.739795627564,
+            "risk": 21442.054134153408,
+            "tail_auc_deficit": 1662.867565531762,
+            "total_dropped": 0.0,
+            "total_moves": 8.765625
+          },
+          "capacity_v2": {
+            "end_deficit": 3365.3439766160045,
+            "mean_deficit": 34771.69796691604,
+            "risk": 17243.77694250667,
+            "tail_auc_deficit": 2457.8355527982203,
+            "total_dropped": 0.0,
+            "total_moves": 9.421875
+          },
+          "static": {
+            "end_deficit": 2.000888343900442e-11,
+            "mean_deficit": 31697.206432864856,
+            "risk": 0.0,
+            "tail_auc_deficit": 6.402842700481415e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 4355.667052277224,
+            "mean_deficit": 41616.00863513108,
+            "risk": 20265.20366212488,
+            "tail_auc_deficit": 5650.66196036974,
+            "total_dropped": 0.0,
+            "total_moves": 7.0
+          },
+          "v4_hybrid": {
+            "end_deficit": -7.275957614183426e-12,
+            "mean_deficit": 33703.14142622946,
+            "risk": 7628.275151983648,
+            "tail_auc_deficit": -2.3283064365386963e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.65625
+          },
+          "v5_full": {
+            "end_deficit": 234.42340351700113,
+            "mean_deficit": 31068.363993011997,
+            "risk": 9294.499888318687,
+            "tail_auc_deficit": 45.61136490354875,
+            "total_dropped": 0.0,
+            "total_moves": 11.265625
+          },
+          "v6_full": {
+            "end_deficit": 1.2732925824820995e-11,
+            "mean_deficit": 32609.37958480428,
+            "risk": 8174.642388054908,
+            "tail_auc_deficit": 4.0745362639427185e-10,
+            "total_dropped": 0.0,
+            "total_moves": 10.5625
+          }
+        },
+        "generated_underload": {
+          "capacity_balance": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "capacity_v2": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "static": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v5_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v6_full": {
+            "end_deficit": 0.0,
+            "mean_deficit": 0.0,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          }
+        },
+        "ingress_slow": {
+          "capacity_balance": {
+            "end_deficit": 9.094947017729282e-13,
+            "mean_deficit": 8470.099108064916,
+            "risk": 455.21433105298144,
+            "tail_auc_deficit": 2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.421875
+          },
+          "capacity_v2": {
+            "end_deficit": 0.0,
+            "mean_deficit": 7786.0157480051,
+            "risk": 0.0,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 2.265625
+          },
+          "static": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 9636.750367816654,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -4.092726157978177e-12,
+            "mean_deficit": 8808.045126786592,
+            "risk": 0.0,
+            "tail_auc_deficit": -1.3096723705530167e-10,
+            "total_dropped": 0.0,
+            "total_moves": 1.34375
+          },
+          "v4_hybrid": {
+            "end_deficit": 2.7284841053187847e-12,
+            "mean_deficit": 7860.142304342598,
+            "risk": 0.0,
+            "tail_auc_deficit": 8.731149137020111e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.921875
+          },
+          "v5_full": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 7855.800032570559,
+            "risk": 0.0,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.59375
+          },
+          "v6_full": {
+            "end_deficit": 3.183231456205249e-12,
+            "mean_deficit": 7719.655290243775,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.421875
+          }
+        },
+        "processing_slow": {
+          "capacity_balance": {
+            "end_deficit": 9.094947017729282e-13,
+            "mean_deficit": 8397.742584990578,
+            "risk": 108.95002982114221,
+            "tail_auc_deficit": 2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.28125
+          },
+          "capacity_v2": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 7648.861940184477,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.140625
+          },
+          "static": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 9955.371991721366,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -3.637978807091713e-12,
+            "mean_deficit": 7795.80651461964,
+            "risk": 0.0,
+            "tail_auc_deficit": -1.1641532182693481e-10,
+            "total_dropped": 0.0,
+            "total_moves": 1.609375
+          },
+          "v4_hybrid": {
+            "end_deficit": 4.547473508864641e-12,
+            "mean_deficit": 7898.836877467209,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 6.078125
+          },
+          "v5_full": {
+            "end_deficit": 1.8189894035458565e-12,
+            "mean_deficit": 7876.084732764416,
+            "risk": 0.0,
+            "tail_auc_deficit": 5.820766091346741e-11,
+            "total_dropped": 0.0,
+            "total_moves": 5.21875
+          },
+          "v6_full": {
+            "end_deficit": 3.183231456205249e-12,
+            "mean_deficit": 8033.15729004893,
+            "risk": 0.0,
+            "tail_auc_deficit": 1.0186340659856796e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.328125
+          }
+        },
+        "shifting_bottleneck": {
+          "capacity_balance": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 13441.809430308856,
+            "risk": 2963.9627803701346,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.9375
+          },
+          "capacity_v2": {
+            "end_deficit": -2.2737367544323206e-12,
+            "mean_deficit": 12498.014165555356,
+            "risk": 1115.876459980259,
+            "tail_auc_deficit": -7.275957614183426e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.9375
+          },
+          "static": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 11707.392275009981,
+            "risk": 0.0,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -6.821210263296962e-12,
+            "mean_deficit": 12558.762868854377,
+            "risk": 1337.8741827111269,
+            "tail_auc_deficit": -2.1827872842550278e-10,
+            "total_dropped": 0.0,
+            "total_moves": 2.671875
+          },
+          "v4_hybrid": {
+            "end_deficit": -4.547473508864641e-12,
+            "mean_deficit": 12808.58199071939,
+            "risk": 1520.8103120219278,
+            "tail_auc_deficit": -1.4551915228366852e-10,
+            "total_dropped": 0.0,
+            "total_moves": 4.5625
+          },
+          "v5_full": {
+            "end_deficit": -1.3642420526593924e-12,
+            "mean_deficit": 12483.568283793156,
+            "risk": 1115.876459980259,
+            "tail_auc_deficit": -4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 6.3125
+          },
+          "v6_full": {
+            "end_deficit": 3.637978807091713e-12,
+            "mean_deficit": 12188.415726857173,
+            "risk": 1316.6890946728365,
+            "tail_auc_deficit": 1.1641532182693481e-10,
+            "total_dropped": 0.0,
+            "total_moves": 5.28125
+          }
+        },
+        "surge_only": {
+          "capacity_balance": {
+            "end_deficit": 0.0,
+            "mean_deficit": 804.2073031203136,
+            "risk": 273.40263537687247,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 0.984375
+          },
+          "capacity_v2": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 822.0041090673226,
+            "risk": 341.8245994832847,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 1.0625
+          },
+          "static": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 722.667913742112,
+            "risk": 0.0,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": -9.094947017729282e-13,
+            "mean_deficit": 722.667913742112,
+            "risk": 0.0,
+            "tail_auc_deficit": -2.9103830456733704e-11,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 0.0,
+            "mean_deficit": 823.4175764505213,
+            "risk": 340.6772061957574,
+            "tail_auc_deficit": 0.0,
+            "total_dropped": 0.0,
+            "total_moves": 3.015625
+          },
+          "v5_full": {
+            "end_deficit": 4.547473508864641e-13,
+            "mean_deficit": 831.2971666265895,
+            "risk": 364.8537337816058,
+            "tail_auc_deficit": 1.4551915228366852e-11,
+            "total_dropped": 0.0,
+            "total_moves": 2.96875
+          },
+          "v6_full": {
+            "end_deficit": 1.3642420526593924e-12,
+            "mean_deficit": 809.7324878067883,
+            "risk": 286.6598730243176,
+            "tail_auc_deficit": 4.3655745685100555e-11,
+            "total_dropped": 0.0,
+            "total_moves": 3.046875
+          }
+        }
+      },
+      "startup": {
+        "delivery_slow": {
+          "capacity_balance": {
+            "end_deficit": 9975.430266713684,
+            "mean_deficit": 18626.79531658353,
+            "risk": 1801.115538349297,
+            "tail_auc_deficit": 265295.6591598379,
+            "total_dropped": 8263.602141713682,
+            "total_moves": 2.015625
+          },
+          "capacity_v2": {
+            "end_deficit": 11212.968961323968,
+            "mean_deficit": 19201.04362255012,
+            "risk": 0.0,
+            "tail_auc_deficit": 304896.8973873671,
+            "total_dropped": 9501.140836323968,
+            "total_moves": 2.0625
+          },
+          "static": {
+            "end_deficit": 24520.0761752895,
+            "mean_deficit": 28097.03219291657,
+            "risk": 0.0,
+            "tail_auc_deficit": 730724.328234264,
+            "total_dropped": 22808.248050289505,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 3623.766456387013,
+            "mean_deficit": 14658.606782407212,
+            "risk": 0.0,
+            "tail_auc_deficit": 62042.41722938442,
+            "total_dropped": 1911.9383313870146,
+            "total_moves": 1.84375
+          },
+          "v4_hybrid": {
+            "end_deficit": 17275.765272456836,
+            "mean_deficit": 23078.814364269183,
+            "risk": 1819.798743260676,
+            "tail_auc_deficit": 498906.3793436189,
+            "total_dropped": 15563.937147456836,
+            "total_moves": 5.546875
+          },
+          "v5_full": {
+            "end_deficit": 10886.435758584259,
+            "mean_deficit": 19176.147852626924,
+            "risk": 1752.3619807072805,
+            "tail_auc_deficit": 294447.8348996963,
+            "total_dropped": 9174.607633584255,
+            "total_moves": 4.484375
+          },
+          "v6_full": {
+            "end_deficit": 12149.560298523222,
+            "mean_deficit": 19986.84734153,
+            "risk": 1771.379550646244,
+            "tail_auc_deficit": 334867.8201777432,
+            "total_dropped": 10437.732173523225,
+            "total_moves": 4.53125
+          }
+        },
+        "generated_asymmetric_recovery": {
+          "capacity_balance": {
+            "end_deficit": 9091.765624999998,
+            "mean_deficit": 17439.89925723418,
+            "risk": 1462.5489475685442,
+            "tail_auc_deficit": 4544.390624999942,
+            "total_dropped": 0.0,
+            "total_moves": 3.6875
+          },
+          "capacity_v2": {
+            "end_deficit": 9091.76562500001,
+            "mean_deficit": 16910.15076402239,
+            "risk": 298.59763072657796,
+            "tail_auc_deficit": 4544.390625000291,
+            "total_dropped": 0.0,
+            "total_moves": 7.5625
+          },
+          "static": {
+            "end_deficit": 9528.029186939899,
+            "mean_deficit": 18794.339512590283,
+            "risk": 0.0,
+            "tail_auc_deficit": 18504.824607076764,
+            "total_dropped": 436.2635619399029,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 9091.765625000013,
+            "mean_deficit": 17302.144589606094,
+            "risk": 13.818321641609828,
+            "tail_auc_deficit": 4544.390625000407,
+            "total_dropped": 0.0,
+            "total_moves": 1.4375
+          },
+          "v4_hybrid": {
+            "end_deficit": 9091.765624999982,
+            "mean_deficit": 17215.27742578327,
+            "risk": 427.0026804932962,
+            "tail_auc_deficit": 4544.390624999418,
+            "total_dropped": 0.0,
+            "total_moves": 9.171875
+          },
+          "v5_full": {
+            "end_deficit": 9091.76562500001,
+            "mean_deficit": 17238.16357269282,
+            "risk": 485.5013170671882,
+            "tail_auc_deficit": 4544.390625000291,
+            "total_dropped": 0.0,
+            "total_moves": 8.84375
+          },
+          "v6_full": {
+            "end_deficit": 9091.765625000004,
+            "mean_deficit": 17668.478053094892,
+            "risk": 1326.5708473435297,
+            "tail_auc_deficit": 4544.390625000116,
+            "total_dropped": 0.0,
+            "total_moves": 8.71875
+          }
+        },
+        "generated_pulsed_short_fault": {
+          "capacity_balance": {
+            "end_deficit": 35277.35066802645,
+            "mean_deficit": 50496.458909738656,
+            "risk": 23577.180992196063,
+            "tail_auc_deficit": 843584.6588768465,
+            "total_dropped": 26221.756918026458,
+            "total_moves": 8.046875
+          },
+          "capacity_v2": {
+            "end_deficit": 63617.0942094287,
+            "mean_deficit": 60048.07075548542,
+            "risk": 27809.710346337244,
+            "tail_auc_deficit": 1750456.452201718,
+            "total_dropped": 54561.500459428724,
+            "total_moves": 9.890625
+          },
+          "static": {
+            "end_deficit": 28140.55639834531,
+            "mean_deficit": 43601.230231177826,
+            "risk": 0.0,
+            "tail_auc_deficit": 615207.2422470499,
+            "total_dropped": 19084.962648345318,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 55567.52138984247,
+            "mean_deficit": 58562.229189409816,
+            "risk": 24992.448672207393,
+            "tail_auc_deficit": 1492870.121974959,
+            "total_dropped": 46511.92763984243,
+            "total_moves": 5.46875
+          },
+          "v4_hybrid": {
+            "end_deficit": 36022.55384851892,
+            "mean_deficit": 48533.81720380388,
+            "risk": 10549.096466077011,
+            "tail_auc_deficit": 867431.1606526054,
+            "total_dropped": 26966.96009851889,
+            "total_moves": 9.96875
+          },
+          "v5_full": {
+            "end_deficit": 39187.068589054616,
+            "mean_deficit": 50777.85753970482,
+            "risk": 20773.333960030344,
+            "tail_auc_deficit": 968695.6323497472,
+            "total_dropped": 30131.47483905459,
+            "total_moves": 10.703125
+          },
+          "v6_full": {
+            "end_deficit": 35461.31910151554,
+            "mean_deficit": 49756.08219113839,
+            "risk": 18434.774903225665,
+            "tail_auc_deficit": 849471.6487484972,
+            "total_dropped": 26405.725351515546,
+            "total_moves": 7.765625
+          }
+        },
+        "generated_sustained_overload": {
+          "capacity_balance": {
+            "end_deficit": 317046.5408121596,
+            "mean_deficit": 213140.6666060099,
+            "risk": 760.2562611774647,
+            "tail_auc_deficit": 9762684.274739109,
+            "total_dropped": 304892.8689371597,
+            "total_moves": 9.3125
+          },
+          "capacity_v2": {
+            "end_deficit": 438523.8215938793,
+            "mean_deficit": 272055.0968027246,
+            "risk": 71502.20237823731,
+            "tail_auc_deficit": 13649957.259754138,
+            "total_dropped": 426370.1497188792,
+            "total_moves": 9.015625
+          },
+          "static": {
+            "end_deficit": 330763.9523705887,
+            "mean_deficit": 226310.17506464338,
+            "risk": 0.0,
+            "tail_auc_deficit": 10201641.44460884,
+            "total_dropped": 318610.28049558855,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 393525.40007282386,
+            "mean_deficit": 235489.6774604173,
+            "risk": 31151.229953433784,
+            "tail_auc_deficit": 12210007.771080364,
+            "total_dropped": 381371.72819782374,
+            "total_moves": 3.203125
+          },
+          "v4_hybrid": {
+            "end_deficit": 337096.90219768195,
+            "mean_deficit": 216114.5672569584,
+            "risk": 6463.707240185679,
+            "tail_auc_deficit": 10404295.839075822,
+            "total_dropped": 324943.23032268195,
+            "total_moves": 9.796875
+          },
+          "v5_full": {
+            "end_deficit": 313603.51686036144,
+            "mean_deficit": 213108.86900588855,
+            "risk": 2686.7043957883425,
+            "tail_auc_deficit": 9652507.508281566,
+            "total_dropped": 301449.84498536144,
+            "total_moves": 9.625
+          },
+          "v6_full": {
+            "end_deficit": 314430.1522559625,
+            "mean_deficit": 213090.93648966125,
+            "risk": 2596.6398604544565,
+            "tail_auc_deficit": 9678959.8409408,
+            "total_dropped": 302276.48038096254,
+            "total_moves": 9.625
+          }
+        },
+        "generated_sustained_processing_fault": {
+          "capacity_balance": {
+            "end_deficit": 28580.005124353767,
+            "mean_deficit": 43410.073911000814,
+            "risk": 0.0,
+            "tail_auc_deficit": 573554.9608543206,
+            "total_dropped": 17757.051999353756,
+            "total_moves": 7.203125
+          },
+          "capacity_v2": {
+            "end_deficit": 50266.771354164724,
+            "mean_deficit": 59317.84869777235,
+            "risk": 0.0,
+            "tail_auc_deficit": 1267531.4802082712,
+            "total_dropped": 39443.818229164695,
+            "total_moves": 9.21875
+          },
+          "static": {
+            "end_deficit": 144032.84763109722,
+            "mean_deficit": 102708.5821511277,
+            "risk": 0.0,
+            "tail_auc_deficit": 4268045.921070111,
+            "total_dropped": 133209.89450609725,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 41768.46151506738,
+            "mean_deficit": 54885.27400805398,
+            "risk": 0.0,
+            "tail_auc_deficit": 995585.5653571563,
+            "total_dropped": 30945.508390067367,
+            "total_moves": 3.65625
+          },
+          "v4_hybrid": {
+            "end_deficit": 26125.61327177468,
+            "mean_deficit": 40674.91811541703,
+            "risk": 0.0,
+            "tail_auc_deficit": 495014.42157178937,
+            "total_dropped": 15302.660146774664,
+            "total_moves": 10.171875
+          },
+          "v5_full": {
+            "end_deficit": 21994.770733866375,
+            "mean_deficit": 40329.308616720606,
+            "risk": 0.0,
+            "tail_auc_deficit": 362827.4603587239,
+            "total_dropped": 11171.817608866331,
+            "total_moves": 9.0625
+          },
+          "v6_full": {
+            "end_deficit": 22085.675563090394,
+            "mean_deficit": 40255.46652875502,
+            "risk": 0.0,
+            "tail_auc_deficit": 365736.41489389254,
+            "total_dropped": 11262.722438090368,
+            "total_moves": 9.390625
+          }
+        },
+        "generated_switching_fault": {
+          "capacity_balance": {
+            "end_deficit": 50696.27282530043,
+            "mean_deficit": 55590.8430920531,
+            "risk": 11507.224082078292,
+            "tail_auc_deficit": 1314166.5897846143,
+            "total_dropped": 40913.80407530045,
+            "total_moves": 8.671875
+          },
+          "capacity_v2": {
+            "end_deficit": 82138.21341552107,
+            "mean_deficit": 73829.46820075238,
+            "risk": 24022.770697354365,
+            "tail_auc_deficit": 2320308.688671674,
+            "total_dropped": 72355.74466552104,
+            "total_moves": 10.359375
+          },
+          "static": {
+            "end_deficit": 67217.7373918872,
+            "mean_deficit": 64114.646535670836,
+            "risk": 0.0,
+            "tail_auc_deficit": 1842853.4559153912,
+            "total_dropped": 57435.26864188719,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 89530.80563157971,
+            "mean_deficit": 73463.00451143953,
+            "risk": 21578.029499810866,
+            "tail_auc_deficit": 2556871.63958555,
+            "total_dropped": 79748.33688157973,
+            "total_moves": 5.953125
+          },
+          "v4_hybrid": {
+            "end_deficit": 75136.13841374121,
+            "mean_deficit": 67439.04852097329,
+            "risk": 12667.067594376012,
+            "tail_auc_deficit": 2096242.2886147187,
+            "total_dropped": 65353.66966374121,
+            "total_moves": 10.890625
+          },
+          "v5_full": {
+            "end_deficit": 56829.87725670909,
+            "mean_deficit": 57110.125255949286,
+            "risk": 6659.034543693558,
+            "tail_auc_deficit": 1510441.931589691,
+            "total_dropped": 47047.40850670911,
+            "total_moves": 10.84375
+          },
+          "v6_full": {
+            "end_deficit": 63451.25607288472,
+            "mean_deficit": 60642.73983746788,
+            "risk": 9295.460638954843,
+            "tail_auc_deficit": 1722326.053707311,
+            "total_dropped": 53668.78732288473,
+            "total_moves": 9.71875
+          }
+        },
+        "generated_underload": {
+          "capacity_balance": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "capacity_v2": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8814.279575472921,
+            "risk": 3.4191271250580257,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 4.953125
+          },
+          "static": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v4_hybrid": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v5_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v6_full": {
+            "end_deficit": 9738.71875,
+            "mean_deficit": 8813.937662760416,
+            "risk": 0.0,
+            "tail_auc_deficit": 4911.578125,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          }
+        },
+        "ingress_slow": {
+          "capacity_balance": {
+            "end_deficit": 5203.549848059994,
+            "mean_deficit": 16279.4285696375,
+            "risk": 44.25889277929457,
+            "tail_auc_deficit": 114196.39201291975,
+            "total_dropped": 3542.7998480599927,
+            "total_moves": 2.515625
+          },
+          "capacity_v2": {
+            "end_deficit": 10410.059543626434,
+            "mean_deficit": 21392.389462684074,
+            "risk": 5064.344934676712,
+            "tail_auc_deficit": 280804.7022710459,
+            "total_dropped": 8749.309543626441,
+            "total_moves": 3.0
+          },
+          "static": {
+            "end_deficit": 7715.359354218362,
+            "mean_deficit": 18605.941376703056,
+            "risk": 0.0,
+            "tail_auc_deficit": 194574.29620998757,
+            "total_dropped": 6054.609354218357,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 6368.900883604895,
+            "mean_deficit": 17360.33486001562,
+            "risk": 0.0,
+            "tail_auc_deficit": 151487.62515035665,
+            "total_dropped": 4708.150883604894,
+            "total_moves": 1.015625
+          },
+          "v4_hybrid": {
+            "end_deficit": 4774.845992186911,
+            "mean_deficit": 15562.635406184458,
+            "risk": 0.0,
+            "tail_auc_deficit": 100477.86862498114,
+            "total_dropped": 3114.0959921869085,
+            "total_moves": 5.921875
+          },
+          "v5_full": {
+            "end_deficit": 4774.845992186909,
+            "mean_deficit": 15572.108208388729,
+            "risk": 0.0,
+            "tail_auc_deficit": 100477.86862498106,
+            "total_dropped": 3114.0959921869085,
+            "total_moves": 5.625
+          },
+          "v6_full": {
+            "end_deficit": 4774.845992186907,
+            "mean_deficit": 15540.2472380105,
+            "risk": 0.0,
+            "tail_auc_deficit": 100477.86862498104,
+            "total_dropped": 3114.0959921869085,
+            "total_moves": 5.59375
+          }
+        },
+        "processing_slow": {
+          "capacity_balance": {
+            "end_deficit": 7606.186601918684,
+            "mean_deficit": 17151.98152161545,
+            "risk": 0.0,
+            "tail_auc_deficit": 189747.61188639782,
+            "total_dropped": 5902.952226918682,
+            "total_moves": 2.40625
+          },
+          "capacity_v2": {
+            "end_deficit": 14898.446964017981,
+            "mean_deficit": 22251.79429721705,
+            "risk": 276.6590144077615,
+            "tail_auc_deficit": 423099.9434735754,
+            "total_dropped": 13195.212589017972,
+            "total_moves": 2.421875
+          },
+          "static": {
+            "end_deficit": 21835.385974953788,
+            "mean_deficit": 26283.858986125,
+            "risk": 0.0,
+            "tail_auc_deficit": 645081.9918235212,
+            "total_dropped": 20132.151599953788,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 2636.5676786014205,
+            "mean_deficit": 14152.961914064328,
+            "risk": 0.0,
+            "tail_auc_deficit": 30719.806340245457,
+            "total_dropped": 933.3333036014229,
+            "total_moves": 1.40625
+          },
+          "v4_hybrid": {
+            "end_deficit": 12227.592243104336,
+            "mean_deficit": 19905.959258833715,
+            "risk": 1523.567050688521,
+            "tail_auc_deficit": 337632.59240433865,
+            "total_dropped": 10524.357868104327,
+            "total_moves": 5.890625
+          },
+          "v5_full": {
+            "end_deficit": 8634.302548882313,
+            "mean_deficit": 17636.255353630408,
+            "risk": 1401.0768805689497,
+            "tail_auc_deficit": 222647.32218923402,
+            "total_dropped": 6931.068173882313,
+            "total_moves": 4.890625
+          },
+          "v6_full": {
+            "end_deficit": 9419.769381925687,
+            "mean_deficit": 18149.627747571496,
+            "risk": 1329.2513052816878,
+            "tail_auc_deficit": 247782.260846622,
+            "total_dropped": 7716.535006925689,
+            "total_moves": 4.90625
+          }
+        },
+        "shifting_bottleneck": {
+          "capacity_balance": {
+            "end_deficit": 27540.521530969105,
+            "mean_deficit": 32075.049431070234,
+            "risk": 16258.414385031243,
+            "tail_auc_deficit": 827910.6733660111,
+            "total_dropped": 25845.552780969087,
+            "total_moves": 3.0
+          },
+          "capacity_v2": {
+            "end_deficit": 6050.930958671874,
+            "mean_deficit": 20099.217719755547,
+            "risk": 1025.7144071523749,
+            "tail_auc_deficit": 140243.77505250007,
+            "total_dropped": 4355.962208671871,
+            "total_moves": 3.0
+          },
+          "static": {
+            "end_deficit": 12473.69117527862,
+            "mean_deficit": 22530.004142223428,
+            "risk": 0.0,
+            "tail_auc_deficit": 345772.10198391596,
+            "total_dropped": 10778.722425278622,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 18196.626897450882,
+            "mean_deficit": 26145.226281229734,
+            "risk": 6858.2929475138535,
+            "tail_auc_deficit": 528906.0450934282,
+            "total_dropped": 16501.658147450893,
+            "total_moves": 2.65625
+          },
+          "v4_hybrid": {
+            "end_deficit": 25007.796631944482,
+            "mean_deficit": 30366.716247132226,
+            "risk": 12519.030045347905,
+            "tail_auc_deficit": 746863.4765972234,
+            "total_dropped": 23312.827881944482,
+            "total_moves": 4.109375
+          },
+          "v5_full": {
+            "end_deficit": 22952.8665279494,
+            "mean_deficit": 29157.949289141194,
+            "risk": 10066.426394014388,
+            "tail_auc_deficit": 681105.7132693809,
+            "total_dropped": 21257.897777949394,
+            "total_moves": 5.875
+          },
+          "v6_full": {
+            "end_deficit": 19426.156036207452,
+            "mean_deficit": 26982.49247050154,
+            "risk": 7070.829999441155,
+            "tail_auc_deficit": 568250.9775336385,
+            "total_dropped": 17731.187286207452,
+            "total_moves": 6.0
+          }
+        },
+        "surge_only": {
+          "capacity_balance": {
+            "end_deficit": 1695.421875000001,
+            "mean_deficit": 6808.482473989549,
+            "risk": 329.5692763330185,
+            "tail_auc_deficit": 841.4375000000291,
+            "total_dropped": 0.0,
+            "total_moves": 1.140625
+          },
+          "capacity_v2": {
+            "end_deficit": 1695.4218749999982,
+            "mean_deficit": 7240.513642530305,
+            "risk": 1153.8767343545128,
+            "tail_auc_deficit": 841.4374999999418,
+            "total_dropped": 0.0,
+            "total_moves": 2.0
+          },
+          "static": {
+            "end_deficit": 1695.421875,
+            "mean_deficit": 6719.1137014148735,
+            "risk": 0.0,
+            "tail_auc_deficit": 841.4375,
+            "total_dropped": 0.0,
+            "total_moves": 0.0
+          },
+          "v3_full": {
+            "end_deficit": 1695.421875,
+            "mean_deficit": 6719.1137014148735,
+            "risk": 0.0,
+            "tail_auc_deficit": 841.4375,
+            "total_dropped": 0.0,
+            "total_moves": 0.015625
+          },
+          "v4_hybrid": {
+            "end_deficit": 1695.421875000001,
+            "mean_deficit": 6807.727200356174,
+            "risk": 360.4670240171809,
+            "tail_auc_deficit": 841.4375000000291,
+            "total_dropped": 0.0,
+            "total_moves": 2.453125
+          },
+          "v5_full": {
+            "end_deficit": 1695.4218750000005,
+            "mean_deficit": 6825.670325105063,
+            "risk": 475.81290196525373,
+            "tail_auc_deficit": 841.4375000000146,
+            "total_dropped": 0.0,
+            "total_moves": 2.546875
+          },
+          "v6_full": {
+            "end_deficit": 1695.421874999999,
+            "mean_deficit": 6822.471545677055,
+            "risk": 403.8216919250498,
+            "tail_auc_deficit": 841.4374999999709,
+            "total_dropped": 0.0,
+            "total_moves": 2.5625
+          }
+        }
+      }
+    },
+    "cases_per_regime": 704,
+    "means_and_risk": {
+      "delayed_noisy": {
+        "capacity_balance": {
+          "end_deficit": 49201.85751048519,
+          "mean_deficit": 46028.49650864542,
+          "risk": 14197.711637045746,
+          "tail_auc_deficit": 1376548.6931764344,
+          "total_dropped": 42919.0052377579,
+          "total_moves": 4.518465909090909
+        },
+        "capacity_v2": {
+          "end_deficit": 66098.84944409587,
+          "mean_deficit": 54473.46115045915,
+          "risk": 41947.15855173597,
+          "tail_auc_deficit": 1917166.8888003326,
+          "total_dropped": 59813.32270799021,
+          "total_moves": 6.009943181818182
+        },
+        "static": {
+          "end_deficit": 59787.434207599865,
+          "mean_deficit": 51507.16923248666,
+          "risk": 0.0,
+          "tail_auc_deficit": 1715287.1474841044,
+          "total_dropped": 53504.5819348726,
+          "total_moves": 0.0
+        },
+        "v3_full": {
+          "end_deficit": 59794.89955282807,
+          "mean_deficit": 49228.74273851298,
+          "risk": 19447.163128704855,
+          "tail_auc_deficit": 1715498.4289302314,
+          "total_dropped": 53511.18448006403,
+          "total_moves": 2.4332386363636362
+        },
+        "v4_hybrid": {
+          "end_deficit": 53356.69730853031,
+          "mean_deficit": 47021.774887854655,
+          "risk": 12299.170089592566,
+          "tail_auc_deficit": 1509503.5667138775,
+          "total_dropped": 47073.845035803,
+          "total_moves": 6.755681818181818
+        },
+        "v5_full": {
+          "end_deficit": 49359.11268797864,
+          "mean_deficit": 45771.21564997278,
+          "risk": 12383.00518670701,
+          "tail_auc_deficit": 1381580.8588562259,
+          "total_dropped": 43076.260415251374,
+          "total_moves": 6.536931818181818
+        },
+        "v6_full": {
+          "end_deficit": 48816.31831666966,
+          "mean_deficit": 45598.574324329515,
+          "risk": 10615.788871763798,
+          "tail_auc_deficit": 1364211.4389743393,
+          "total_dropped": 42533.466043942404,
+          "total_moves": 6.3125
+        }
+      },
+      "finite_pipeline": {
+        "capacity_balance": {
+          "end_deficit": 44711.53488334899,
+          "mean_deficit": 42950.99518335233,
+          "risk": 12283.883287942252,
+          "tail_auc_deficit": 1232858.369108077,
+          "total_dropped": 38428.68261062173,
+          "total_moves": 4.355113636363637
+        },
+        "capacity_v2": {
+          "end_deficit": 62123.685665883844,
+          "mean_deficit": 51994.878038040835,
+          "risk": 43412.513973690686,
+          "tail_auc_deficit": 1790047.1941491934,
+          "total_dropped": 55840.83339315664,
+          "total_moves": 5.778409090909091
+        },
+        "static": {
+          "end_deficit": 59787.434207599865,
+          "mean_deficit": 51507.16923248666,
+          "risk": 0.0,
+          "tail_auc_deficit": 1715287.1474841044,
+          "total_dropped": 53504.5819348726,
+          "total_moves": 0.0
+        },
+        "v3_full": {
+          "end_deficit": 56651.022451299585,
+          "mean_deficit": 47466.360754578796,
+          "risk": 19901.754767588292,
+          "tail_auc_deficit": 1614921.9712824963,
+          "total_dropped": 50368.17017857233,
+          "total_moves": 2.4204545454545454
+        },
+        "v4_hybrid": {
+          "end_deficit": 49336.43805580601,
+          "mean_deficit": 44253.66097141859,
+          "risk": 9190.032819428441,
+          "tail_auc_deficit": 1380855.2706267016,
+          "total_dropped": 43053.58578307875,
+          "total_moves": 6.744318181818182
+        },
+        "v5_full": {
+          "end_deficit": 44530.23803105507,
+          "mean_deficit": 42609.80189008839,
+          "risk": 9029.794116738549,
+          "tail_auc_deficit": 1227056.8698346715,
+          "total_dropped": 38247.38575832779,
+          "total_moves": 6.642045454545454
+        },
+        "v6_full": {
+          "end_deficit": 44727.78357536306,
+          "mean_deficit": 42760.28367903038,
+          "risk": 7531.94932997609,
+          "tail_auc_deficit": 1233378.3272525268,
+          "total_dropped": 38444.93130263577,
+          "total_moves": 6.318181818181818
+        }
+      },
+      "integer_transit3": {
+        "capacity_balance": {
+          "end_deficit": 21789.72430184838,
+          "mean_deficit": 27043.82854186001,
+          "risk": 5168.736164924289,
+          "tail_auc_deficit": 207755.30212236205,
+          "total_dropped": 0.0,
+          "total_moves": 4.470170454545454
+        },
+        "capacity_v2": {
+          "end_deficit": 25927.28197841311,
+          "mean_deficit": 27826.844574268824,
+          "risk": 5971.306136610932,
+          "tail_auc_deficit": 309500.07703230606,
+          "total_dropped": 0.0,
+          "total_moves": 4.448863636363637
+        },
+        "static": {
+          "end_deficit": 24623.840751223826,
+          "mean_deficit": 32941.43281581546,
+          "risk": 0.0,
+          "tail_auc_deficit": 249958.0978435831,
+          "total_dropped": 0.0,
+          "total_moves": 0.0
+        },
+        "v3_full": {
+          "end_deficit": 29689.179710384433,
+          "mean_deficit": 30062.750725380753,
+          "risk": 14114.608597033122,
+          "tail_auc_deficit": 428495.7200351754,
+          "total_dropped": 0.0,
+          "total_moves": 2.434659090909091
+        },
+        "v4_hybrid": {
+          "end_deficit": 22856.000530771937,
+          "mean_deficit": 27109.851736998244,
+          "risk": 3491.8637352944315,
+          "tail_auc_deficit": 225994.154552155,
+          "total_dropped": 0.0,
+          "total_moves": 7.03125
+        },
+        "v5_full": {
+          "end_deficit": 22687.037795511602,
+          "mean_deficit": 26746.742878701338,
+          "risk": 2948.6778401121064,
+          "tail_auc_deficit": 224679.82137891903,
+          "total_dropped": 0.0,
+          "total_moves": 7.103693181818182
+        },
+        "v6_full": {
+          "end_deficit": 21731.21573576301,
+          "mean_deficit": 26649.296004861,
+          "risk": 3055.856343226868,
+          "tail_auc_deficit": 205995.2591044764,
+          "total_dropped": 0.0,
+          "total_moves": 6.5397727272727275
+        }
+      },
+      "legacy_instant": {
+        "capacity_balance": {
+          "end_deficit": 20757.050961286237,
+          "mean_deficit": 24411.09555812661,
+          "risk": 1915.2397122907119,
+          "tail_auc_deficit": 190270.68837280088,
+          "total_dropped": 0.0,
+          "total_moves": 4.3678977272727275
+        },
+        "capacity_v2": {
+          "end_deficit": 23924.230594093293,
+          "mean_deficit": 24886.379200253497,
+          "risk": 1562.5414993004968,
+          "tail_auc_deficit": 267622.9552578609,
+          "total_dropped": 0.0,
+          "total_moves": 4.40625
+        },
+        "static": {
+          "end_deficit": 24623.840751223826,
+          "mean_deficit": 32941.43281581546,
+          "risk": 0.0,
+          "tail_auc_deficit": 249958.0978435831,
+          "total_dropped": 0.0,
+          "total_moves": 0.0
+        },
+        "v3_full": {
+          "end_deficit": 24787.182150159508,
+          "mean_deficit": 26864.194905592805,
+          "risk": 4629.628220415791,
+          "tail_auc_deficit": 287501.2582029724,
+          "total_dropped": 0.0,
+          "total_moves": 2.815340909090909
+        },
+        "v4_hybrid": {
+          "end_deficit": 21397.06305647247,
+          "mean_deficit": 24420.549563710632,
+          "risk": 442.62020808487557,
+          "tail_auc_deficit": 200034.69262111076,
+          "total_dropped": 0.0,
+          "total_moves": 7.201704545454546
+        },
+        "v5_full": {
+          "end_deficit": 21151.085763385894,
+          "mean_deficit": 24024.759050798406,
+          "risk": 436.09556955529894,
+          "tail_auc_deficit": 195834.8000889318,
+          "total_dropped": 0.0,
+          "total_moves": 7.248579545454546
+        },
+        "v6_full": {
+          "end_deficit": 20506.759362731176,
+          "mean_deficit": 23936.055292843048,
+          "risk": 657.8562607647176,
+          "tail_auc_deficit": 182564.13292953785,
+          "total_dropped": 0.0,
+          "total_moves": 6.670454545454546
+        }
+      },
+      "legacy_transit3": {
+        "capacity_balance": {
+          "end_deficit": 21835.564521694618,
+          "mean_deficit": 27043.73006852433,
+          "risk": 5028.351395911753,
+          "tail_auc_deficit": 208550.66009607867,
+          "total_dropped": 0.0,
+          "total_moves": 4.46875
+        },
+        "capacity_v2": {
+          "end_deficit": 26021.36756286804,
+          "mean_deficit": 27855.27616923165,
+          "risk": 6042.80788012999,
+          "tail_auc_deficit": 309322.7767141359,
+          "total_dropped": 0.0,
+          "total_moves": 4.436079545454546
+        },
+        "static": {
+          "end_deficit": 24623.840751223826,
+          "mean_deficit": 32941.43281581546,
+          "risk": 0.0,
+          "tail_auc_deficit": 249958.0978435831,
+          "total_dropped": 0.0,
+          "total_moves": 0.0
+        },
+        "v3_full": {
+          "end_deficit": 29439.52743205635,
+          "mean_deficit": 30005.524096138663,
+          "risk": 14133.285914365322,
+          "tail_auc_deficit": 422576.4367662217,
+          "total_dropped": 0.0,
+          "total_moves": 2.4261363636363638
+        },
+        "v4_hybrid": {
+          "end_deficit": 22939.34433713043,
+          "mean_deficit": 27133.80382200336,
+          "risk": 3303.880181467989,
+          "tail_auc_deficit": 227490.47152753512,
+          "total_dropped": 0.0,
+          "total_moves": 7.0
+        },
+        "v5_full": {
+          "end_deficit": 22728.256527365396,
+          "mean_deficit": 26772.370012753014,
+          "risk": 2951.815848761343,
+          "tail_auc_deficit": 225840.96877917842,
+          "total_dropped": 0.0,
+          "total_moves": 7.063920454545454
+        },
+        "v6_full": {
+          "end_deficit": 21451.838502946277,
+          "mean_deficit": 26569.268667533797,
+          "risk": 3133.2233644098483,
+          "tail_auc_deficit": 201125.26938719812,
+          "total_dropped": 0.0,
+          "total_moves": 6.504261363636363
+        }
+      },
+      "startup": {
+        "capacity_balance": {
+          "end_deficit": 45677.43308431835,
+          "mean_deficit": 43621.23788651755,
+          "risk": 12451.918202505965,
+          "tail_auc_deficit": 1263767.1115390966,
+          "total_dropped": 39394.58081159109,
+          "total_moves": 4.363636363636363
+        },
+        "capacity_v2": {
+          "end_deficit": 63422.201204603116,
+          "mean_deficit": 52832.715776451565,
+          "risk": 45049.604914014104,
+          "tail_auc_deficit": 1831599.6913882087,
+          "total_dropped": 57139.34893187582,
+          "total_moves": 5.771306818181818
+        },
+        "static": {
+          "end_deficit": 59787.434207599865,
+          "mean_deficit": 51507.16923248666,
+          "risk": 0.0,
+          "tail_auc_deficit": 1715287.1474841044,
+          "total_dropped": 53504.5819348726,
+          "total_moves": 0.0
+        },
+        "v3_full": {
+          "end_deficit": 57431.26879775979,
+          "mean_deficit": 47959.31917825625,
+          "risk": 20720.714427208506,
+          "tail_auc_deficit": 1639889.8543692224,
+          "total_dropped": 51148.41652503251,
+          "total_moves": 2.4232954545454546
+        },
+        "v4_hybrid": {
+          "end_deficit": 50381.19219285545,
+          "mean_deficit": 44955.765332952,
+          "risk": 10206.020254725427,
+          "tail_auc_deficit": 1414287.4030122827,
+          "total_dropped": 44098.33992012815,
+          "total_moves": 6.720170454545454
+        },
+        "v5_full": {
+          "end_deficit": 45399.05368341767,
+          "mean_deficit": 43249.672062055295,
+          "risk": 9503.537507785759,
+          "tail_auc_deficit": 1254858.970710274,
+          "total_dropped": 39116.20141069037,
+          "total_moves": 6.590909090909091
+        },
+        "v6_full": {
+          "end_deficit": 45611.33099566328,
+          "mean_deficit": 43428.120646015275,
+          "risk": 8241.795276151679,
+          "tail_auc_deficit": 1261651.8447021344,
+          "total_dropped": 39328.478722936015,
+          "total_moves": 6.255681818181818
+        }
+      }
+    }
+  }
+}

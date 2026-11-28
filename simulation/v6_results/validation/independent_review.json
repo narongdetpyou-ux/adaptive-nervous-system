@@ -1,0 +1,37 @@
+{
+  "baseline_reproduction": {
+    "all_identical": true,
+    "compared_rows": 27648,
+    "identical_rows": 27648
+  },
+  "freeze_v4_log_tail": "41a45dc4727f2d72134\",\n        \"neuron_flow/storage.py\": \"59a3f3ed143cf330d74dabc037994c917cb02e594f9e3e2ce84162d06ed87558\",\n        \"abc_service/__init__.py\": \"667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41\",\n        \"abc_service/frozen.py\": \"0df444936e90b016e84dfabc9fb30011d76fe591db758d63a35de9f313bb9ea3\",\n        \"abc_service/_frozen/experiment.py\": \"83aa8b68b2f68ab83a26ff56a651332878d5355bfff0a7aee985f72b05090342\",\n        \"abc_service/_frozen/original/ABC.H.txt\": \"f8a50611ba65a935c2b0079241df3d7f90a0ef7746c647d88d0feb293e33af00\",\n        \"abc_service/_frozen/action_catalog.json\": \"a36d6614f1c7af608451e75974c1df23ed68f78f4b098c5badb487a8dafc03eb\",\n        \"data/load_test_summary_per_minute.csv\": \"0120255045744fc79008d22e81f72d1e15e28ed0fda81760683119002800f253\"\n      },\n      \"validation_manifest_sha256\": \"b5ce7c420fa560b0fbaaee4cfda79af0081734836bb843bfd65937bdf7cd6c1f\"\n    },\n    \"validation_manifest_sha256\": \"99c9d2e68e109df1b1b2a63d467ffe151fb141d50258fb59cf5b6d22ce07a49a\"\n  },\n  \"validation_manifest_sha256\": \"25ed806e4886384f171b95bfeb61d727802d19721a6267f51855129bce60eb3c\",\n  \"acceptance_declaration_sha256\": \"1105442baf50d0cee923c671ebc2c024d3e8697e90e280843fbdffdd005fb6ef\",\n  \"controller_configuration\": {\n    \"nominal_rate\": 200.0,\n    \"warmup\": 5,\n    \"dwell\": 8,\n    \"lookahead\": 16,\n    \"minimum_staff\": 10.0,\n    \"saturated_update\": 0.7,\n    \"unsaturated_prior_reversion\": 0.1,\n    \"rate_lower_factor\": 0.85,\n    \"demand_spread\": 0.2,\n    \"arrival_window\": 3,\n    \"terminal_weight\": 0.5,\n    \"relative_gain\": 0.01,\n    \"absolute_gain\": 10.0,\n    \"worst_case_regression_fraction\": 0.0,\n    \"tolerance\": 1e-07,\n    \"risk_weight\": 0.1,\n    \"maximum_transfer\": 20.0,\n    \"evidence_window\": 5,\n    \"rate_band\": 0.15,\n    \"sparse_rate_band\": 0.25,\n    \"stale_anchor_minutes\": 8,\n    \"pressure_time_scale\": 8.0,\n    \"escape_floor\": 0.25,\n    \"idle_recovery_observations\": 3,\n    \"balance_preference_fraction\": 0.1,\n    \"stress_tail_fraction\": 0.25\n  }\n}\n",
+  "freeze_v4_passed": true,
+  "freeze_v5_error": "",
+  "freeze_v5_passed": true,
+  "freeze_v6_error": "",
+  "freeze_v6_passed": true,
+  "fresh_tests_log_tail": "selection 5000 already complete\nood 9001 done 6 rows 6 traces in 1s 18:02:03\nood 9001 done 6 rows 6 traces in 1s 18:02:04\nood 9000 done 12 rows 12 traces in 1s 18:02:05\nvalidation 2000 done 6 rows 6 traces in 1s 18:02:07\nood 9001 done 7 rows 7 traces in 1s 18:02:49\nood 9001 done 7 rows 7 traces in 1s 18:02:50\nood 9000 done 7 rows 7 traces in 2s 18:02:53\nvalidation 2000 done 7 rows 7 traces in 2s 18:02:55\n.................................................................................................................................................s............\n----------------------------------------------------------------------\nRan 158 tests in 91.684s\n\nOK (skipped=1)\n",
+  "fresh_tests_passed": true,
+  "review": {
+    "flags": {
+      "accounting": true,
+      "independent_replay": true,
+      "observation_boundary": true,
+      "scenario_identity": true,
+      "statistics_match": true,
+      "tamper_test": true
+    },
+    "replay": {
+      "controller_replay": 588,
+      "exact": 588,
+      "invariant_problems": [],
+      "traces": 588
+    },
+    "rows": {
+      "ood": 2688,
+      "validation": 29568
+    },
+    "scenario_mismatches": [],
+    "statistic_mismatches": []
+  }
+}

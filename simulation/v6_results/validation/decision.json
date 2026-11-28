@@ -1,0 +1,955 @@
+{
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 6026028
+  },
+  "candidate": "v6_full",
+  "decision": "FAIL",
+  "declared_population_checked": true,
+  "failed_gates": [
+    "risk_point_nonworsening",
+    "loss_endpoint_point_nonworsening"
+  ],
+  "hypotheses": {
+    "H1_drain": {
+      "checks": [
+        {
+          "ci95": [
+            399.9415482971601,
+            891.1794303225246
+          ],
+          "metric": "end_deficit",
+          "point": 644.3264006547165,
+          "regime": "legacy_instant",
+          "supported": true
+        },
+        {
+          "ci95": [
+            9210.015602288548,
+            17792.282079881636
+          ],
+          "metric": "tail_auc_deficit",
+          "point": 13270.667159394065,
+          "regime": "legacy_instant",
+          "supported": true
+        },
+        {
+          "ci95": [
+            1040.582587998918,
+            1514.859742235035
+          ],
+          "metric": "end_deficit",
+          "point": 1276.4180244191198,
+          "regime": "legacy_transit3",
+          "supported": true
+        },
+        {
+          "ci95": [
+            20364.903379208565,
+            29017.36408314734
+          ],
+          "metric": "tail_auc_deficit",
+          "point": 24715.699391980088,
+          "regime": "legacy_transit3",
+          "supported": true
+        },
+        {
+          "ci95": [
+            663.6672468601045,
+            1206.0609853145381
+          ],
+          "metric": "end_deficit",
+          "point": 955.8220597485921,
+          "regime": "integer_transit3",
+          "supported": true
+        },
+        {
+          "ci95": [
+            13354.130369425275,
+            23947.060316943745
+          ],
+          "metric": "tail_auc_deficit",
+          "point": 18684.562274442724,
+          "regime": "integer_transit3",
+          "supported": true
+        }
+      ],
+      "supported": true
+    },
+    "H2_restraint": {
+      "ci95": [
+        8533.041904161717,
+        13120.103449604921
+      ],
+      "point": 10695.362621950026,
+      "supported": true
+    },
+    "reference": "v5_full"
+  },
+  "integrity": {
+    "flags": {
+      "accounting": true,
+      "baseline_reproduction": true,
+      "deterministic_repeat": true,
+      "fresh_tests": true,
+      "frozen_v4": true,
+      "frozen_v5": true,
+      "frozen_v6": true,
+      "independent_replay": true,
+      "observation_boundary": true,
+      "scenario_identity": true,
+      "tamper_test": true
+    },
+    "passed": true
+  },
+  "missing_evidence": [],
+  "ood": {
+    "checks": [
+      {
+        "baseline": "v4_hybrid",
+        "baseline_value": 23363.286772739255,
+        "candidate": 17725.46900247388,
+        "metric": "risk",
+        "passed": true
+      },
+      {
+        "baseline": "capacity_balance",
+        "baseline_value": 32254.060057122675,
+        "candidate": 17725.46900247388,
+        "metric": "risk",
+        "passed": true
+      },
+      {
+        "baseline": "v4_hybrid",
+        "baseline_value": 83908.93567417782,
+        "candidate": 79973.82402363433,
+        "metric": "mean_total_dropped",
+        "passed": true
+      },
+      {
+        "baseline": "capacity_balance",
+        "baseline_value": 81933.25870091926,
+        "candidate": 79973.82402363433,
+        "metric": "mean_total_dropped",
+        "passed": true
+      }
+    ],
+    "families": {
+      "buffer_cascade": {
+        "cases": 64,
+        "max_accounting_error": 5.384208634495735e-10,
+        "mean_total_dropped": {
+          "capacity_balance": 87617.56051516833,
+          "capacity_v2": 90700.1713515076,
+          "static": 120489.96373593302,
+          "v3_full": 118333.6627627216,
+          "v4_hybrid": 88811.44536273666,
+          "v5_full": 82438.39610620488,
+          "v6_full": 85544.94054182866
+        },
+        "risk": {
+          "capacity_balance": 133.84074837105004,
+          "capacity_v2": 3455.914874729681,
+          "static": 0.0,
+          "v3_full": 14936.668219344041,
+          "v4_hybrid": 3233.8536299556363,
+          "v5_full": 503.49631831305317,
+          "v6_full": 2081.003929155688
+        }
+      },
+      "compound_stress": {
+        "cases": 64,
+        "max_accounting_error": 5.529727786779404e-10,
+        "mean_total_dropped": {
+          "capacity_balance": 149014.2542317469,
+          "capacity_v2": 143398.0315707672,
+          "static": 112251.00834740381,
+          "v3_full": 134511.49453805608,
+          "v4_hybrid": 136449.76054149846,
+          "v5_full": 146170.55219818227,
+          "v6_full": 125900.65727129974
+        },
+        "risk": {
+          "capacity_balance": 34099.68340665388,
+          "capacity_v2": 32247.092333409284,
+          "static": 0.0,
+          "v3_full": 33150.859091848964,
+          "v4_hybrid": 22481.693696393748,
+          "v5_full": 31963.048115343718,
+          "v6_full": 20703.616539926825
+        }
+      },
+      "false_recovery": {
+        "cases": 64,
+        "max_accounting_error": 5.384208634495735e-10,
+        "mean_total_dropped": {
+          "capacity_balance": 18999.063470031564,
+          "capacity_v2": 59583.83527222674,
+          "static": 128840.75319538609,
+          "v3_full": 46533.68539706849,
+          "v4_hybrid": 19981.82307267638,
+          "v5_full": 20394.452143517163,
+          "v6_full": 51370.5146904258
+        },
+        "risk": {
+          "capacity_balance": 0.0,
+          "capacity_v2": 708.0153643160082,
+          "static": 0.0,
+          "v3_full": 14.881326632206537,
+          "v4_hybrid": 0.0,
+          "v5_full": 0.0,
+          "v6_full": 0.0
+        }
+      },
+      "rapid_switching": {
+        "cases": 64,
+        "max_accounting_error": 6.402842700481415e-10,
+        "mean_total_dropped": {
+          "capacity_balance": 79023.178691535,
+          "capacity_v2": 79067.96027460044,
+          "static": 43846.59417022393,
+          "v3_full": 84271.895916698,
+          "v4_hybrid": 67521.10220770212,
+          "v5_full": 73927.93500446496,
+          "v6_full": 54243.02466624086
+        },
+        "risk": {
+          "capacity_balance": 43567.241303107956,
+          "capacity_v2": 52865.364591712256,
+          "static": 0.0,
+          "v3_full": 50619.318946471416,
+          "v4_hybrid": 28482.579349915803,
+          "v5_full": 35108.61991860694,
+          "v6_full": 21253.49111882444
+        }
+      },
+      "sensor_degradation": {
+        "cases": 64,
+        "max_accounting_error": 4.656612873077393e-10,
+        "mean_total_dropped": {
+          "capacity_balance": 72186.20278336658,
+          "capacity_v2": 90650.35799670868,
+          "static": 64560.335345128246,
+          "v3_full": 93238.91708789163,
+          "v4_hybrid": 90401.45682756978,
+          "v5_full": 82271.59744944901,
+          "v6_full": 72649.40177878505
+        },
+        "risk": {
+          "capacity_balance": 23588.15786331122,
+          "capacity_v2": 27710.17598890835,
+          "static": 0.0,
+          "v3_full": 30450.648578531058,
+          "v4_hybrid": 23815.998103892733,
+          "v5_full": 25189.778179605022,
+          "v6_full": 12625.934141079237
+        }
+      },
+      "transfer_failure": {
+        "cases": 64,
+        "max_accounting_error": 5.820766091346741e-10,
+        "mean_total_dropped": {
+          "capacity_balance": 84759.29251366717,
+          "capacity_v2": 114060.4061023091,
+          "static": 77161.25955897156,
+          "v3_full": 106661.55414920065,
+          "v4_hybrid": 100288.0260328835,
+          "v5_full": 92428.75203970818,
+          "v6_full": 90134.40519322589
+        },
+        "risk": {
+          "capacity_balance": 23768.735233722004,
+          "capacity_v2": 33657.51213039069,
+          "static": 0.0,
+          "v3_full": 25073.45557866659,
+          "v4_hybrid": 17365.83531700932,
+          "v5_full": 19870.8339335578,
+          "v6_full": 13066.41402033
+        }
+      }
+    },
+    "max_accounting_error": 6.402842700481415e-10,
+    "passed": true,
+    "pooled": {
+      "capacity_balance": {
+        "mean_total_dropped": 81933.25870091926,
+        "risk": 32254.060057122675
+      },
+      "capacity_v2": {
+        "mean_total_dropped": 96243.46042801994,
+        "risk": 37050.18342234714
+      },
+      "static": {
+        "mean_total_dropped": 91191.65239217442,
+        "risk": 0.0
+      },
+      "v3_full": {
+        "mean_total_dropped": 97258.53497527273,
+        "risk": 37406.13380783072
+      },
+      "v4_hybrid": {
+        "mean_total_dropped": 83908.93567417782,
+        "risk": 23363.286772739255
+      },
+      "v5_full": {
+        "mean_total_dropped": 82938.61415692106,
+        "risk": 28420.831624423907
+      },
+      "v6_full": {
+        "mean_total_dropped": 79973.82402363433,
+        "risk": 17725.46900247388
+      }
+    }
+  },
+  "original": {
+    "cases_per_regime": 704,
+    "loss_endpoint_point_nonworsening": {
+      "checks": [
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 0.0,
+          "candidate_mean": 0.0,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 23924.230594093286,
+          "candidate_mean": 20506.759362731176,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 267622.9552578609,
+          "candidate_mean": 182564.13292953788,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 0.0,
+          "candidate_mean": 0.0,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 20757.05096128623,
+          "candidate_mean": 20506.759362731176,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 190270.68837280083,
+          "candidate_mean": 182564.13292953788,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 0.0,
+          "candidate_mean": 0.0,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 26021.36756286804,
+          "candidate_mean": 21451.83850294628,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 309322.77671413595,
+          "candidate_mean": 201125.26938719823,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 0.0,
+          "candidate_mean": 0.0,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 21835.56452169461,
+          "candidate_mean": 21451.83850294628,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 208550.66009607865,
+          "candidate_mean": 201125.26938719823,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 0.0,
+          "candidate_mean": 0.0,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 25927.28197841311,
+          "candidate_mean": 21731.215735763006,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 309500.0770323062,
+          "candidate_mean": 205995.2591044765,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 0.0,
+          "candidate_mean": 0.0,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 21789.724301848382,
+          "candidate_mean": 21731.215735763006,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 207755.30212236205,
+          "candidate_mean": 205995.2591044765,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 55840.833393156645,
+          "candidate_mean": 38444.931302635836,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 62123.68566588391,
+          "candidate_mean": 44727.78357536311,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 1790047.194149194,
+          "candidate_mean": 1233378.3272525284,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 38428.68261062173,
+          "candidate_mean": 38444.931302635836,
+          "metric": "total_dropped",
+          "passed": false,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 44711.534883349,
+          "candidate_mean": 44727.78357536311,
+          "metric": "end_deficit",
+          "passed": false,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 1232858.3691080771,
+          "candidate_mean": 1233378.3272525284,
+          "metric": "tail_auc_deficit",
+          "passed": false,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 57139.34893187583,
+          "candidate_mean": 39328.47872293604,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 63422.2012046031,
+          "candidate_mean": 45611.33099566331,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 1831599.6913882084,
+          "candidate_mean": 1261651.844702135,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 39394.58081159108,
+          "candidate_mean": 39328.47872293604,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 45677.43308431834,
+          "candidate_mean": 45611.33099566331,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 1263767.1115390959,
+          "candidate_mean": 1261651.844702135,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 59813.32270799019,
+          "candidate_mean": 42533.466043942426,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 66098.8494440958,
+          "candidate_mean": 48816.31831666971,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_mean": 1917166.8888003312,
+          "candidate_mean": 1364211.43897434,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 42919.005237757854,
+          "candidate_mean": 42533.466043942426,
+          "metric": "total_dropped",
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 49201.85751048513,
+          "candidate_mean": 48816.31831666971,
+          "metric": "end_deficit",
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_mean": 1376548.6931764332,
+          "candidate_mean": 1364211.43897434,
+          "metric": "tail_auc_deficit",
+          "passed": true,
+          "regime": "delayed_noisy"
+        }
+      ],
+      "passed": false
+    },
+    "max_accounting_error": 4.132743924856186e-09,
+    "mean_noninferiority": {
+      "checks": [
+        {
+          "allowance_slack": 2194.642867423158,
+          "baseline": "capacity_v2",
+          "baseline_mean": 24886.37920025352,
+          "candidate_mean": 23936.055292843037,
+          "ci95": [
+            1958.4404948893712,
+            2453.0655860796087
+          ],
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "allowance_slack": 1695.595043189907,
+          "baseline": "capacity_balance",
+          "baseline_mean": 24411.09555812661,
+          "candidate_mean": 23936.055292843037,
+          "ci95": [
+            1436.6723629515416,
+            1977.4052094940273
+          ],
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "allowance_slack": 2678.7713101593895,
+          "baseline": "capacity_v2",
+          "baseline_mean": 27855.276169231594,
+          "candidate_mean": 26569.268667533794,
+          "ci95": [
+            2445.9836401646567,
+            2929.2166060066206
+          ],
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "allowance_slack": 1826.6479044167586,
+          "baseline": "capacity_balance",
+          "baseline_mean": 27043.730068524324,
+          "candidate_mean": 26569.268667533794,
+          "ci95": [
+            1563.7090007295203,
+            2101.4747661312626
+          ],
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "allowance_slack": 2568.890798121223,
+          "baseline": "capacity_v2",
+          "baseline_mean": 27826.844574268776,
+          "candidate_mean": 26649.29600486099,
+          "ci95": [
+            2337.675370135017,
+            2820.3507782320357
+          ],
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "allowance_slack": 1746.7239640920095,
+          "baseline": "capacity_balance",
+          "baseline_mean": 27043.82854186,
+          "candidate_mean": 26649.29600486099,
+          "ci95": [
+            1479.1449204430526,
+            2032.6728089935327
+          ],
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "allowance_slack": 11834.338260912564,
+          "baseline": "capacity_v2",
+          "baseline_mean": 51994.87803804088,
+          "candidate_mean": 42760.28367903036,
+          "ci95": [
+            11305.589380720667,
+            12386.849668965078
+          ],
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "allowance_slack": 2338.2612634895913,
+          "baseline": "capacity_balance",
+          "baseline_mean": 42950.99518335233,
+          "candidate_mean": 42760.28367903036,
+          "ci95": [
+            1981.0432259208646,
+            2678.475755668373
+          ],
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "allowance_slack": 12046.230919258827,
+          "baseline": "capacity_v2",
+          "baseline_mean": 52832.71577645156,
+          "candidate_mean": 43428.12064601531,
+          "ci95": [
+            11513.564775276902,
+            12592.372752336465
+          ],
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "allowance_slack": 2374.1791348281436,
+          "baseline": "capacity_balance",
+          "baseline_mean": 43621.23788651757,
+          "candidate_mean": 43428.12064601531,
+          "ci95": [
+            2031.1763373654567,
+            2713.3411407085327
+          ],
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "allowance_slack": 11598.559883652522,
+          "baseline": "capacity_v2",
+          "baseline_mean": 54473.46115045912,
+          "candidate_mean": 45598.57432432955,
+          "ci95": [
+            11016.891968230804,
+            12168.685368795814
+          ],
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "allowance_slack": 2731.347009748102,
+          "baseline": "capacity_balance",
+          "baseline_mean": 46028.49650864539,
+          "candidate_mean": 45598.57432432955,
+          "ci95": [
+            2386.960672106436,
+            3053.7724433972603
+          ],
+          "passed": true,
+          "regime": "delayed_noisy"
+        }
+      ],
+      "passed": true
+    },
+    "primary": {
+      "risk_vs_v3_full": {
+        "ci95": [
+          6722.323342492793,
+          10839.177321633877
+        ],
+        "passed": true,
+        "point": 8831.374256941057
+      },
+      "total_dropped_vs_v4_hybrid": {
+        "ci95": [
+          3862.8583541606827,
+          5203.729454344043
+        ],
+        "passed": true,
+        "point": 4540.378991860583
+      }
+    },
+    "risk_point_nonworsening": {
+      "checks": [
+        {
+          "baseline": "v3_full",
+          "baseline_risk": 4629.628220415791,
+          "candidate_risk": 657.8562607647176,
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_risk": 1562.5414993004968,
+          "candidate_risk": 657.8562607647176,
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_risk": 1915.2397122907119,
+          "candidate_risk": 657.8562607647176,
+          "passed": true,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "v4_hybrid",
+          "baseline_risk": 442.62020808487557,
+          "candidate_risk": 657.8562607647176,
+          "passed": false,
+          "regime": "legacy_instant"
+        },
+        {
+          "baseline": "v3_full",
+          "baseline_risk": 14133.285914365322,
+          "candidate_risk": 3133.2233644098483,
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_risk": 6042.80788012999,
+          "candidate_risk": 3133.2233644098483,
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_risk": 5028.351395911753,
+          "candidate_risk": 3133.2233644098483,
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "v4_hybrid",
+          "baseline_risk": 3303.880181467989,
+          "candidate_risk": 3133.2233644098483,
+          "passed": true,
+          "regime": "legacy_transit3"
+        },
+        {
+          "baseline": "v3_full",
+          "baseline_risk": 14114.608597033122,
+          "candidate_risk": 3055.856343226868,
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_risk": 5971.306136610932,
+          "candidate_risk": 3055.856343226868,
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_risk": 5168.736164924289,
+          "candidate_risk": 3055.856343226868,
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "v4_hybrid",
+          "baseline_risk": 3491.8637352944315,
+          "candidate_risk": 3055.856343226868,
+          "passed": true,
+          "regime": "integer_transit3"
+        },
+        {
+          "baseline": "v3_full",
+          "baseline_risk": 19901.754767588292,
+          "candidate_risk": 7531.94932997609,
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_risk": 43412.513973690686,
+          "candidate_risk": 7531.94932997609,
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_risk": 12283.883287942252,
+          "candidate_risk": 7531.94932997609,
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "v4_hybrid",
+          "baseline_risk": 9190.032819428441,
+          "candidate_risk": 7531.94932997609,
+          "passed": true,
+          "regime": "finite_pipeline"
+        },
+        {
+          "baseline": "v3_full",
+          "baseline_risk": 20720.714427208506,
+          "candidate_risk": 8241.795276151679,
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_risk": 45049.604914014104,
+          "candidate_risk": 8241.795276151679,
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_risk": 12451.918202505965,
+          "candidate_risk": 8241.795276151679,
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "v4_hybrid",
+          "baseline_risk": 10206.020254725427,
+          "candidate_risk": 8241.795276151679,
+          "passed": true,
+          "regime": "startup"
+        },
+        {
+          "baseline": "v3_full",
+          "baseline_risk": 19447.163128704855,
+          "candidate_risk": 10615.788871763798,
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "baseline": "capacity_v2",
+          "baseline_risk": 41947.15855173597,
+          "candidate_risk": 10615.788871763798,
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "baseline": "capacity_balance",
+          "baseline_risk": 14197.711637045746,
+          "candidate_risk": 10615.788871763798,
+          "passed": true,
+          "regime": "delayed_noisy"
+        },
+        {
+          "baseline": "v4_hybrid",
+          "baseline_risk": 12299.170089592566,
+          "candidate_risk": 10615.788871763798,
+          "passed": true,
+          "regime": "delayed_noisy"
+        }
+      ],
+      "passed": false
+    },
+    "underload": {
+      "episodes_checked": 384,
+      "passed": true,
+      "violations": []
+    }
+  },
+  "run": {
+    "candidate": "v6_full",
+    "commit": "15b4d45ab4a758d2c1b678e4a7ca2e894a30aea2",
+    "numpy": "2.5.3",
+    "python": "3.13.18",
+    "started_utc": "2026-11-28T16:54:30Z"
+  },
+  "tolerance": 1e-06,
+  "version": "0.6.0"
+}

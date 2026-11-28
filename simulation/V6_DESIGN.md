@@ -1,6 +1,6 @@
 # ANS v0.6.0 — Drain and restraint (research draft)
 
-Acceptance was committed first: `04c3afd` ([`v6_acceptance_predeclared.json`](v6_acceptance_predeclared.json)), before any V6 code or V6 episode array. Every gate of `v5_acceptance_predeclared.json` applies unchanged; the round's goal is reported separately as hypotheses H1 (drain) and H2 (restraint) against the frozen V5 Full. The v0.4 chain and the 38 frozen V5 files are never edited. No production claim.
+**Result: V6 Full FAILS promotion on the frozen validation and OOD sets (4 of 64 point checks, against V5's 8), passes the OOD gate, and supports both round hypotheses; see [the Thai report](V6_VALIDATION_TH.md).** Acceptance was committed first: `04c3afd` ([`v6_acceptance_predeclared.json`](v6_acceptance_predeclared.json)), before any V6 code or V6 episode array. Every gate of `v5_acceptance_predeclared.json` applies unchanged; the round's goal is reported separately as hypotheses H1 (drain) and H2 (restraint) against the frozen V5 Full. The v0.4 chain and the 38 frozen V5 files are never edited. No production claim.
 
 ## Diagnosis
 
@@ -174,3 +174,42 @@ The results are in [`v6_results/selection_grid/summary.json`](v6_results/selecti
 - **Risk in `legacy_instant`.** Its risk is 1,002, against 598 for Capacity V2 and 792 for V4 Hybrid.
 
 The selection summary's baseline-reproduction field is empty because no V5 rows exist for these seeds. The integrity check uses the development grid's comparison instead: 27,648 rows, all identical.
+
+## Validation and OOD validation result
+
+Both official runs started together from frozen commit `15b4d45`. Each covered 29,568 validation episodes (seeds 7000..7063) and 2,688 OOD episodes (8100..8163), and all 261 output files match byte for byte.
+
+**Decision: FAIL.** All 11 integrity checks pass, so this is a result of the gates, not missing evidence. The checks cover:
+
+- 158 fresh tests;
+- the v0.4, V5 and V6 freezes;
+- manifests;
+- accounting;
+- 588/588 traces and controller decisions replayed exactly;
+- reviewer/evaluator agreement, including the hypotheses;
+- tamper detection;
+- the byte-identical repeat;
+- baseline reproduction.
+
+| Gate | Result | Detail |
+|---|---|---|
+| Primary risk vs V3 Full | Pass | lower by 8,831 (95% CI 6,722–10,839) |
+| Primary dropped work vs V4 Hybrid | Pass | lower by 4,540 per case (95% CI 3,863–5,204) |
+| Mean noninferiority | Pass, 12/12 | |
+| Underload | Pass, 384/384 | |
+| OOD | **Pass**, 4/4 | Pooled risk 17,725 vs V4 Hybrid 23,363 and Capacity Balance 32,254. Pooled dropped work 79,974 vs 83,909 and 81,933 |
+| Risk point non-worsening | Fail, 23/24 | `legacy_instant` vs V4 Hybrid: 657.9 vs 442.6 |
+| Loss/endpoint point non-worsening | Fail, 33/36 | `finite_pipeline` vs Capacity Balance, +0.04% each: dropped 38,445 vs 38,429, end 44,728 vs 44,712, tail AUC 1,233,378 vs 1,232,858 |
+
+**Round hypotheses, both supported against V5 Full on the same seeds.**
+
+- **H1:** all six end-deficit and tail-AUC lower bounds are above zero; for example, `legacy_transit3` tail AUC is 24,716 lower (CI 20,365–29,017).
+- **H2:** pooled OOD risk is 10,695 lower (CI 8,533–13,120).
+
+**Remaining weaknesses.**
+
+- **Restraint gives up useful moves in slow switching faults** in `finite_pipeline`: +14,310 dropped per switching-fault case against Balance, offset by gains in other families.
+- **Restraint mistakes false recovery for a short pulse:** false-recovery OOD dropped work rises from V5 Full's 20,394 to 51,371.
+- **`legacy_instant` risk rises** in asymmetric-recovery and pulsed cases.
+
+[Validation and OOD report (Thai)](V6_VALIDATION_TH.md)
