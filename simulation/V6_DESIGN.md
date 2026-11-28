@@ -147,3 +147,30 @@ The single-change variants attribute the gains: drain removes the unlimited-buff
 Almost all of the gap comes from `generated_switching_fault`, where restraint gives up moves that still pay in that regime. The risk check is `legacy_instant` against V4 Hybrid, which V5 Full also fails.
 
 This grid is descriptive. The parameters stay as fixed by the tuning rule above, and the selection seeds decide among the three variants.
+
+## Selection
+
+`v6_selection_plan.json` was committed before any selection array existed (`27c7381`). The selection grid then ran on seeds 5100..5131 (352 cases per regime) and OOD 8200..8231 (192 cases):
+
+```bash
+python v6_grid.py run --split selection
+```
+
+```bash
+python v6_grid.py summarize --split selection
+```
+
+The results are in [`v6_results/selection_grid/summary.json`](v6_results/selection_grid/summary.json). The declared rule chooses **`v6_full`**:
+
+| Variant | Failed point checks | Loss/endpoint | Risk | OOD | OOD pooled risk | H1 | H2 |
+|---|---:|---:|---:|---:|---:|---|---|
+| **`v6_full`** | **8** | 6 | 2 | 0 | 16,128 | supported | supported |
+| `v6_restraint` | 9 | 9 | 0 | 0 | 17,623 | not supported | supported |
+| `v6_drain` | 10 | 6 | 3 | 1 | 28,258 | supported | not supported |
+
+`v6_full`'s failures on these seeds:
+
+- **Finite buffers.** It loses to Capacity Balance by 1.1–1.4% in `finite_pipeline` and `startup` on dropped work, end deficit and tail AUC; for example, `finite_pipeline` dropped work is 37,643 against 37,158. On these seeds V5 Full also loses there (37,276).
+- **Risk in `legacy_instant`.** Its risk is 1,002, against 598 for Capacity V2 and 792 for V4 Hybrid.
+
+The selection summary's baseline-reproduction field is empty because no V5 rows exist for these seeds. The integrity check uses the development grid's comparison instead: 27,648 rows, all identical.
