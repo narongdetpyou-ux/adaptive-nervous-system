@@ -1,0 +1,798 @@
+[
+  {
+    "candidate": "v6_drain",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 42004.688933277015,
+    "delayed_noisy_risk": 9579.520515929979,
+    "failed_loss_endpoint_checks": [],
+    "failed_ood_checks": [
+      [
+        "risk",
+        "v4_hybrid"
+      ]
+    ],
+    "failed_point_checks": 2,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 81371.49088998635,
+      "risk": 29897.873676171585
+    },
+    "overrides": {
+      "drain_weight": 1.0
+    },
+    "set": "drain_w1",
+    "variant": "v6_drain"
+  },
+  {
+    "candidate": "v6_drain",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 42269.19089586316,
+    "delayed_noisy_risk": 9645.609298218484,
+    "failed_loss_endpoint_checks": [],
+    "failed_ood_checks": [
+      [
+        "risk",
+        "v4_hybrid"
+      ]
+    ],
+    "failed_point_checks": 4,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "capacity_v2"
+      ],
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "integer_transit3",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 81514.3604159202,
+      "risk": 29824.434119396454
+    },
+    "overrides": {
+      "drain_weight": 2.0
+    },
+    "set": "drain_w2",
+    "variant": "v6_drain"
+  },
+  {
+    "candidate": "v6_full",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 42180.715040452415,
+    "delayed_noisy_risk": 9413.011258470755,
+    "failed_loss_endpoint_checks": [],
+    "failed_ood_checks": [],
+    "failed_point_checks": 1,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 78262.8475696716,
+      "risk": 17989.321534904648
+    },
+    "overrides": {
+      "drain_weight": 1.0,
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 16,
+      "restraint_neutral": 1.0,
+      "restraint_neutral_tolerance": 10.0
+    },
+    "set": "full_neutral16",
+    "variant": "v6_full"
+  },
+  {
+    "candidate": "v6_full",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 41934.16519223223,
+    "delayed_noisy_risk": 9365.775808500122,
+    "failed_loss_endpoint_checks": [],
+    "failed_ood_checks": [],
+    "failed_point_checks": 3,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "legacy_transit3",
+        "v4_hybrid"
+      ],
+      [
+        "integer_transit3",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 78188.68416997729,
+      "risk": 21675.765103305104
+    },
+    "overrides": {
+      "drain_weight": 1.0,
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 8,
+      "restraint_neutral": 1.0,
+      "restraint_neutral_tolerance": 10.0
+    },
+    "set": "full_neutral8",
+    "variant": "v6_full"
+  },
+  {
+    "candidate": "v6_restraint",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 42028.1050236416,
+    "delayed_noisy_risk": 10790.818971080731,
+    "failed_loss_endpoint_checks": [
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ]
+    ],
+    "failed_ood_checks": [],
+    "failed_point_checks": 6,
+    "failed_risk_checks": [],
+    "ood_pooled": {
+      "mean_total_dropped": 77203.8385938509,
+      "risk": 16750.13835249353
+    },
+    "overrides": {
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 16,
+      "restraint_neutral": 1.0,
+      "restraint_neutral_tolerance": 10.0
+    },
+    "set": "neutral16",
+    "variant": "v6_restraint"
+  },
+  {
+    "candidate": "v6_restraint",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 41881.61860096081,
+    "delayed_noisy_risk": 11136.866307871958,
+    "failed_loss_endpoint_checks": [
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ]
+    ],
+    "failed_ood_checks": [],
+    "failed_point_checks": 8,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "finite_pipeline",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 76605.12695048765,
+      "risk": 19730.576123003717
+    },
+    "overrides": {
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 8,
+      "restraint_neutral": 1.0,
+      "restraint_neutral_tolerance": 10.0
+    },
+    "set": "neutral8",
+    "variant": "v6_restraint"
+  },
+  {
+    "candidate": "v6_restraint",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 42138.62475217897,
+    "delayed_noisy_risk": 11147.3907477189,
+    "failed_loss_endpoint_checks": [
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ]
+    ],
+    "failed_ood_checks": [
+      [
+        "risk",
+        "v4_hybrid"
+      ]
+    ],
+    "failed_point_checks": 10,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "finite_pipeline",
+        "v4_hybrid"
+      ],
+      [
+        "startup",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 80932.826186796,
+      "risk": 27685.757205835274
+    },
+    "overrides": {
+      "restraint_hurdle_factor": 10.0,
+      "restraint_loss_fraction": 0.5,
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 16
+    },
+    "set": "restraint_strong",
+    "variant": "v6_restraint"
+  },
+  {
+    "candidate": "v6_restraint",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 43388.60757838596,
+    "delayed_noisy_risk": 13137.77067587514,
+    "failed_loss_endpoint_checks": [
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ]
+    ],
+    "failed_ood_checks": [
+      [
+        "risk",
+        "v4_hybrid"
+      ]
+    ],
+    "failed_point_checks": 27,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "capacity_v2"
+      ],
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_v2"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance"
+      ],
+      [
+        "legacy_transit3",
+        "v4_hybrid"
+      ],
+      [
+        "integer_transit3",
+        "capacity_v2"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance"
+      ],
+      [
+        "integer_transit3",
+        "v4_hybrid"
+      ],
+      [
+        "finite_pipeline",
+        "v4_hybrid"
+      ],
+      [
+        "startup",
+        "v4_hybrid"
+      ],
+      [
+        "delayed_noisy",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 81547.18097226188,
+      "risk": 27440.60408334996
+    },
+    "overrides": {
+      "restraint_hurdle_factor": 3.0,
+      "restraint_loss_fraction": 0.25,
+      "restraint_max_transfer": 10.0,
+      "restraint_memory": 16
+    },
+    "set": "restraint_mild",
+    "variant": "v6_restraint"
+  },
+  {
+    "candidate": "v6_restraint",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 43959.773727958316,
+    "delayed_noisy_risk": 13507.839663371202,
+    "failed_loss_endpoint_checks": [
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ]
+    ],
+    "failed_ood_checks": [
+      [
+        "risk",
+        "v4_hybrid"
+      ],
+      [
+        "risk",
+        "capacity_balance"
+      ],
+      [
+        "mean_total_dropped",
+        "v4_hybrid"
+      ],
+      [
+        "mean_total_dropped",
+        "capacity_balance"
+      ]
+    ],
+    "failed_point_checks": 31,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "capacity_v2"
+      ],
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_v2"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance"
+      ],
+      [
+        "legacy_transit3",
+        "v4_hybrid"
+      ],
+      [
+        "integer_transit3",
+        "capacity_v2"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance"
+      ],
+      [
+        "integer_transit3",
+        "v4_hybrid"
+      ],
+      [
+        "finite_pipeline",
+        "v4_hybrid"
+      ],
+      [
+        "startup",
+        "v4_hybrid"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance"
+      ],
+      [
+        "delayed_noisy",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 84400.18196880016,
+      "risk": 34839.28347557238
+    },
+    "overrides": {
+      "restraint_hurdle_factor": 1000000000.0,
+      "restraint_loss_fraction": 1.0,
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 8
+    },
+    "set": "restraint_hold8",
+    "variant": "v6_restraint"
+  },
+  {
+    "candidate": "v6_restraint",
+    "cases_per_regime": 352,
+    "delayed_noisy_mean_total_dropped": 44061.84445502944,
+    "delayed_noisy_risk": 13595.697033094817,
+    "failed_loss_endpoint_checks": [
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "finite_pipeline",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "startup",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "total_dropped"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "end_deficit"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance",
+        "tail_auc_deficit"
+      ]
+    ],
+    "failed_ood_checks": [
+      [
+        "risk",
+        "v4_hybrid"
+      ],
+      [
+        "risk",
+        "capacity_balance"
+      ],
+      [
+        "mean_total_dropped",
+        "v4_hybrid"
+      ],
+      [
+        "mean_total_dropped",
+        "capacity_balance"
+      ]
+    ],
+    "failed_point_checks": 32,
+    "failed_risk_checks": [
+      [
+        "legacy_instant",
+        "capacity_v2"
+      ],
+      [
+        "legacy_instant",
+        "capacity_balance"
+      ],
+      [
+        "legacy_instant",
+        "v4_hybrid"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_v2"
+      ],
+      [
+        "legacy_transit3",
+        "capacity_balance"
+      ],
+      [
+        "legacy_transit3",
+        "v4_hybrid"
+      ],
+      [
+        "integer_transit3",
+        "capacity_v2"
+      ],
+      [
+        "integer_transit3",
+        "capacity_balance"
+      ],
+      [
+        "integer_transit3",
+        "v4_hybrid"
+      ],
+      [
+        "finite_pipeline",
+        "v4_hybrid"
+      ],
+      [
+        "startup",
+        "v4_hybrid"
+      ],
+      [
+        "delayed_noisy",
+        "capacity_balance"
+      ],
+      [
+        "delayed_noisy",
+        "v4_hybrid"
+      ]
+    ],
+    "ood_pooled": {
+      "mean_total_dropped": 85131.85445499684,
+      "risk": 35804.57995088457
+    },
+    "overrides": {
+      "restraint_hurdle_factor": 1000000000.0,
+      "restraint_loss_fraction": 1.0,
+      "restraint_max_transfer": 1000000000.0,
+      "restraint_memory": 16
+    },
+    "set": "restraint_hold16",
+    "variant": "v6_restraint"
+  }
+]

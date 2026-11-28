@@ -1,0 +1,380 @@
+{
+  "drain": {
+    "integer_transit3": {
+      "cases": 64,
+      "correlation_visits_gap_vs_tail_gap": 0.7899679442220001,
+      "end_deficit": {
+        "capacity_balance": 228319.68274611392,
+        "v5_full": 234330.75391464535
+      },
+      "remaining_visits_at_end": {
+        "capacity_balance": 654635.741735355,
+        "v5_full": 695498.6521359293
+      },
+      "stage0_share_at_end": {
+        "capacity_balance": 0.8815864504603697,
+        "v5_full": 0.9736523226310674
+      },
+      "tail_auc_deficit": {
+        "capacity_balance": 2042944.1518258122,
+        "v5_full": 2144797.6376328636
+      },
+      "v5_followup_moves": 2.015625,
+      "v5_hold_followup_tail_auc_deficit": 2190040.505343128
+    },
+    "legacy_instant": {
+      "cases": 64,
+      "correlation_visits_gap_vs_tail_gap": 0.8024746630715245,
+      "end_deficit": {
+        "capacity_balance": 214099.57466813485,
+        "v5_full": 219934.55224922806
+      },
+      "remaining_visits_at_end": {
+        "capacity_balance": 616919.353991153,
+        "v5_full": 652341.1793974296
+      },
+      "stage0_share_at_end": {
+        "capacity_balance": 0.9006656910062212,
+        "v5_full": 0.972146290473922
+      },
+      "tail_auc_deficit": {
+        "capacity_balance": 1795928.2325256746,
+        "v5_full": 1898663.950488178
+      },
+      "v5_followup_moves": 2.234375,
+      "v5_hold_followup_tail_auc_deficit": 1955251.611086797
+    },
+    "legacy_transit3": {
+      "cases": 64,
+      "correlation_visits_gap_vs_tail_gap": 0.8319158877637486,
+      "end_deficit": {
+        "capacity_balance": 227442.36779481225,
+        "v5_full": 234262.92035685247
+      },
+      "remaining_visits_at_end": {
+        "capacity_balance": 656197.7917654349,
+        "v5_full": 695334.5831345262
+      },
+      "stage0_share_at_end": {
+        "capacity_balance": 0.8943421433182865,
+        "v5_full": 0.9739029329356383
+      },
+      "tail_auc_deficit": {
+        "capacity_balance": 2028488.7521836846,
+        "v5_full": 2145330.7936226027
+      },
+      "v5_followup_moves": 1.984375,
+      "v5_hold_followup_tail_auc_deficit": 2214163.6048417613
+    }
+  },
+  "moves": {
+    "buffer_cascade": {
+      "capacity_balance": {
+        "mean_total_dropped": 88817.94816872352,
+        "moves_per_episode": 6.90625,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.2918552036199095,
+        "share_no_fault_when_effective": 0.5610859728506787,
+        "share_reaching_fault": 0.4298642533936652,
+        "units_per_episode": 118.4375
+      },
+      "static": {
+        "mean_total_dropped": 118754.85926223185,
+        "moves_per_episode": 0.0,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.0,
+        "share_no_fault_when_effective": 0.0,
+        "share_reaching_fault": 0.0,
+        "units_per_episode": 0.0
+      },
+      "v4_hybrid": {
+        "mean_total_dropped": 87501.87410982788,
+        "moves_per_episode": 8.71875,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.24193548387096775,
+        "share_no_fault_when_effective": 0.6362007168458781,
+        "share_reaching_fault": 0.34408602150537637,
+        "units_per_episode": 108.75
+      },
+      "v5_full": {
+        "mean_total_dropped": 81511.38860857135,
+        "moves_per_episode": 9.21875,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.22542372881355932,
+        "share_no_fault_when_effective": 0.6593220338983051,
+        "share_reaching_fault": 0.3169491525423729,
+        "switching_share": 0.03976117886178862,
+        "units_per_episode": 116.546875
+      }
+    },
+    "compound_stress": {
+      "capacity_balance": {
+        "mean_total_dropped": 162320.27395217252,
+        "moves_per_episode": 9.296875,
+        "share_bounced": 0.4336134453781513,
+        "share_fault_unchanged": 0.23361344537815126,
+        "share_no_fault_when_effective": 0.14285714285714285,
+        "share_reaching_fault": 0.10084033613445378,
+        "units_per_episode": 237.140625
+      },
+      "static": {
+        "mean_total_dropped": 126467.89092472565,
+        "moves_per_episode": 0.0,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.0,
+        "share_no_fault_when_effective": 0.0,
+        "share_reaching_fault": 0.0,
+        "units_per_episode": 0.0
+      },
+      "v4_hybrid": {
+        "mean_total_dropped": 152121.56855602816,
+        "moves_per_episode": 11.53125,
+        "share_bounced": 0.3319783197831978,
+        "share_fault_unchanged": 0.17208672086720866,
+        "share_no_fault_when_effective": 0.3062330623306233,
+        "share_reaching_fault": 0.1070460704607046,
+        "units_per_episode": 185.140625
+      },
+      "v5_full": {
+        "mean_total_dropped": 159288.82375636813,
+        "moves_per_episode": 12.078125,
+        "share_bounced": 0.31565329883570503,
+        "share_fault_unchanged": 0.16946959896507116,
+        "share_no_fault_when_effective": 0.33764553686934023,
+        "share_reaching_fault": 0.10608020698576973,
+        "switching_share": 0.5270579268292683,
+        "units_per_episode": 238.859375
+      }
+    },
+    "false_recovery": {
+      "capacity_balance": {
+        "mean_total_dropped": 27124.07842095964,
+        "moves_per_episode": 8.828125,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.6159292035398231,
+        "share_no_fault_when_effective": 0.2902654867256637,
+        "share_reaching_fault": 0.44778761061946903,
+        "units_per_episode": 124.265625
+      },
+      "static": {
+        "mean_total_dropped": 126775.70337853525,
+        "moves_per_episode": 0.0,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.0,
+        "share_no_fault_when_effective": 0.0,
+        "share_reaching_fault": 0.0,
+        "units_per_episode": 0.0
+      },
+      "v4_hybrid": {
+        "mean_total_dropped": 23065.820123421683,
+        "moves_per_episode": 11.578125,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.48043184885290147,
+        "share_no_fault_when_effective": 0.4399460188933873,
+        "share_reaching_fault": 0.3481781376518219,
+        "units_per_episode": 125.21875
+      },
+      "v5_full": {
+        "mean_total_dropped": 22810.39915388558,
+        "moves_per_episode": 10.78125,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.48405797101449277,
+        "share_no_fault_when_effective": 0.43623188405797103,
+        "share_reaching_fault": 0.35942028985507246,
+        "switching_share": 0.010797764227642276,
+        "units_per_episode": 130.078125
+      }
+    },
+    "rapid_switching": {
+      "capacity_balance": {
+        "mean_total_dropped": 83135.823202928,
+        "moves_per_episode": 9.6875,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.21935483870967742,
+        "share_no_fault_when_effective": 0.1774193548387097,
+        "share_reaching_fault": 0.08870967741935484,
+        "units_per_episode": 254.75
+      },
+      "static": {
+        "mean_total_dropped": 41918.55288466064,
+        "moves_per_episode": 0.0,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.0,
+        "share_no_fault_when_effective": 0.0,
+        "share_reaching_fault": 0.0,
+        "units_per_episode": 0.0
+      },
+      "v4_hybrid": {
+        "mean_total_dropped": 72835.93611635873,
+        "moves_per_episode": 11.625,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.2056451612903226,
+        "share_no_fault_when_effective": 0.30913978494623656,
+        "share_reaching_fault": 0.10349462365591398,
+        "units_per_episode": 193.5
+      },
+      "v5_full": {
+        "mean_total_dropped": 76775.96061167025,
+        "moves_per_episode": 12.015625,
+        "share_bounced": 0.0013003901170351106,
+        "share_fault_unchanged": 0.19375812743823148,
+        "share_no_fault_when_effective": 0.33159947984395316,
+        "share_reaching_fault": 0.10403120936280884,
+        "switching_share": 0.5340447154471544,
+        "units_per_episode": 262.640625
+      }
+    },
+    "sensor_degradation": {
+      "capacity_balance": {
+        "mean_total_dropped": 75514.46206972464,
+        "moves_per_episode": 9.015625,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.3934142114384749,
+        "share_no_fault_when_effective": 0.3327556325823224,
+        "share_reaching_fault": 0.36915077989601386,
+        "units_per_episode": 180.734375
+      },
+      "static": {
+        "mean_total_dropped": 65161.26213591273,
+        "moves_per_episode": 0.0,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.0,
+        "share_no_fault_when_effective": 0.0,
+        "share_reaching_fault": 0.0,
+        "units_per_episode": 0.0
+      },
+      "v4_hybrid": {
+        "mean_total_dropped": 87589.97810021366,
+        "moves_per_episode": 10.609375,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.47569955817378495,
+        "share_no_fault_when_effective": 0.38144329896907214,
+        "share_reaching_fault": 0.36229749631811486,
+        "units_per_episode": 161.171875
+      },
+      "v5_full": {
+        "mean_total_dropped": 83984.16154865187,
+        "moves_per_episode": 10.734375,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.4774381368267831,
+        "share_no_fault_when_effective": 0.388646288209607,
+        "share_reaching_fault": 0.3551673944687045,
+        "switching_share": 0.3539126016260163,
+        "units_per_episode": 203.828125
+      }
+    },
+    "transfer_failure": {
+      "capacity_balance": {
+        "mean_total_dropped": 73359.68659037433,
+        "moves_per_episode": 9.109375,
+        "share_bounced": 0.43739279588336194,
+        "share_fault_unchanged": 0.346483704974271,
+        "share_no_fault_when_effective": 0.34476843910806176,
+        "share_reaching_fault": 0.346483704974271,
+        "units_per_episode": 181.59375
+      },
+      "static": {
+        "mean_total_dropped": 63457.38394159086,
+        "moves_per_episode": 0.0,
+        "share_bounced": 0.0,
+        "share_fault_unchanged": 0.0,
+        "share_no_fault_when_effective": 0.0,
+        "share_reaching_fault": 0.0,
+        "units_per_episode": 0.0
+      },
+      "v4_hybrid": {
+        "mean_total_dropped": 87857.70914716486,
+        "moves_per_episode": 11.0,
+        "share_bounced": 0.3565340909090909,
+        "share_fault_unchanged": 0.48011363636363635,
+        "share_no_fault_when_effective": 0.3934659090909091,
+        "share_reaching_fault": 0.3494318181818182,
+        "units_per_episode": 158.4375
+      },
+      "v5_full": {
+        "mean_total_dropped": 82436.41423451668,
+        "moves_per_episode": 10.703125,
+        "share_bounced": 0.362043795620438,
+        "share_fault_unchanged": 0.4905109489051095,
+        "share_no_fault_when_effective": 0.381021897810219,
+        "share_reaching_fault": 0.3562043795620438,
+        "switching_share": 0.20731707317073172,
+        "units_per_episode": 193.421875
+      }
+    }
+  },
+  "risk_legacy_instant": {
+    "v4_hybrid": {
+      "harm_by_family": {
+        "delivery_slow": 0.0,
+        "generated_asymmetric_recovery": 0.3755333867414105,
+        "generated_pulsed_short_fault": 13.568088536544833,
+        "generated_sustained_overload": 0.0,
+        "generated_sustained_processing_fault": 0.0,
+        "generated_switching_fault": 14.183366603305528,
+        "generated_underload": 0.0,
+        "ingress_slow": 0.0,
+        "processing_slow": 0.0,
+        "shifting_bottleneck": 0.0,
+        "surge_only": 5.220161410612428
+      },
+      "risk": 331.22103010093076,
+      "tail_families": {
+        "generated_asymmetric_recovery": 3,
+        "generated_pulsed_short_fault": 28,
+        "generated_switching_fault": 5,
+        "surge_only": 35
+      }
+    },
+    "v5_full": {
+      "harm_by_family": {
+        "delivery_slow": 0.0,
+        "generated_asymmetric_recovery": 0.3643541075633451,
+        "generated_pulsed_short_fault": 27.297451092125833,
+        "generated_sustained_overload": 0.0,
+        "generated_sustained_processing_fault": 0.0,
+        "generated_switching_fault": 0.8502925161161969,
+        "generated_underload": 0.0,
+        "ingress_slow": 0.0,
+        "processing_slow": 0.0,
+        "shifting_bottleneck": 0.0,
+        "surge_only": 5.3354333457583785
+      },
+      "risk": 337.61608136200306,
+      "tail_families": {
+        "generated_asymmetric_recovery": 6,
+        "generated_pulsed_short_fault": 28,
+        "generated_switching_fault": 1,
+        "surge_only": 36
+      }
+    }
+  },
+  "switching_share_v5_full": {
+    "delayed_noisy": {
+      "delivery_slow": 0.014008620689655173,
+      "generated_asymmetric_recovery": 0.004573170731707318,
+      "generated_pulsed_short_fault": 0.021341463414634144,
+      "generated_sustained_overload": 0.012322154471544715,
+      "generated_sustained_processing_fault": 0.006478658536585366,
+      "generated_switching_fault": 0.20973069105691056,
+      "generated_underload": 0.0,
+      "ingress_slow": 0.010416666666666668,
+      "processing_slow": 0.016522988505747127,
+      "shifting_bottleneck": 0.14583333333333334,
+      "surge_only": 0.0
+    },
+    "legacy_instant": {
+      "delivery_slow": 0.0,
+      "generated_asymmetric_recovery": 0.0016514227642276424,
+      "generated_pulsed_short_fault": 0.001524390243902439,
+      "generated_sustained_overload": 0.0,
+      "generated_sustained_processing_fault": 0.0,
+      "generated_switching_fault": 0.20248983739837398,
+      "generated_underload": 0.0,
+      "ingress_slow": 0.0,
+      "processing_slow": 0.0,
+      "shifting_bottleneck": 0.12517959770114945,
+      "surge_only": 0.0
+    }
+  }
+}

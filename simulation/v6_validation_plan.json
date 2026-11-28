@@ -1,0 +1,50 @@
+{
+  "version": "v6-validation-1",
+  "status": "committed before any V6 validation or OOD validation array existed",
+  "declaration": "v6_acceptance_predeclared.json, including amendment 1, applies unchanged; every gate, tolerance and the bootstrap setting apply as written",
+  "candidate": "v6_full (v6_results/selection_grid/summary.json, chosen by v6_selection_plan.json on seeds 5100..5131 and 8200..8231)",
+  "order": [
+    "freeze source, declaration, plans, all V6 results so far and the candidate configuration (v6_freeze.py)",
+    "only then generate and run validation seeds 7000..7063 and OOD validation seeds 8100..8163, twice from the same commit",
+    "evaluate, review independently and report every result"
+  ],
+  "policies": [
+    "static",
+    "capacity_v2",
+    "capacity_balance",
+    "v3_full",
+    "v4_hybrid",
+    "v5_full",
+    "v6_full"
+  ],
+  "validation": {
+    "seeds": "7000..7063 inclusive",
+    "cases": "all eleven families from the unchanged v0.4 generators (704 cases per regime)",
+    "regimes": [
+      "legacy_instant",
+      "legacy_transit3",
+      "integer_transit3",
+      "finite_pipeline",
+      "startup",
+      "delayed_noisy"
+    ],
+    "episodes": 29568
+  },
+  "ood": {
+    "seeds": "8100..8163 inclusive for each family (384 cases)",
+    "episodes": 2688,
+    "physics": "the six unchanged v5_ood.py families (v5_ood_plan.json physics, RNG namespace and observation interface)"
+  },
+  "evaluation": {
+    "standing_gates": "primary (2), risk point (24), mean noninferiority (12), loss/endpoint point (36), underload, OOD and integrity exactly as in v6_acceptance_predeclared.json, computed by v6_evaluate.Gates on the declared population",
+    "hypotheses": "H1 (end deficit and tail AUC below v5_full in the three unlimited-buffer regimes, six paired bootstrap lower bounds > 0) and H2 (pooled OOD risk below v5_full, bootstrap lower bound > 0), reported separately; they never change the decision",
+    "integrity": "fresh tests; freeze_v4, v5_freeze and v6_freeze verify; manifests regenerate; accounting within 1e-6; recorded decision inputs respect the observation boundary; the independent reviewer replays the representative traces and every controller decision exactly and matches the evaluator's numbers and hypotheses; the reviewer rejects tampered copies; the repeated run is byte-identical; the frozen baselines reproduced the V5 validation rows on the development seeds",
+    "decision": "PASS only if every gate passes; NOT_EVALUATED if any evidence is missing or incomplete; otherwise FAIL"
+  },
+  "representative_traces": {
+    "validation": "families generated_switching_fault, generated_underload, generated_sustained_overload and generated_pulsed_short_fault, seeds 7000..7002, every regime and policy (504 traces)",
+    "ood": "every family, seeds 8100..8101, every policy (84 traces)"
+  },
+  "reproduction": "Run validation and OOD validation completely twice into separate directories from the same frozen commit; every episode, manifest and trace file must match byte for byte.",
+  "outputs": "Rows and traces stay under local_runs/v6_validation (SHA-256 recorded). Committed: v6_results/validation/decision.json, independent_review.json, reproducibility.json, summary.json and the Thai report V6_VALIDATION_TH.md."
+}

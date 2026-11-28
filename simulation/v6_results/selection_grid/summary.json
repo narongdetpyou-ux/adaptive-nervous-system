@@ -1,0 +1,589 @@
+{
+  "baseline_reproduction": {
+    "all_identical": false,
+    "compared_rows": 0,
+    "identical_rows": 0
+  },
+  "chosen_variant": "v6_full",
+  "episode_files_sha256": {
+    "cases/episodes-5100.csv": "e705131d8cd1a1f24c8b24241c5ff6cae97cfb1d8f4bf73594bf851417f97665",
+    "cases/episodes-5101.csv": "8501491c198ab334e445b6232e0c1d9764bb05fbad324595a141dd1787a4209d",
+    "cases/episodes-5102.csv": "499621fc13f9655ef409ab2a6447a42e1c21e13e0a49e17b4b2174182a6d08b2",
+    "cases/episodes-5103.csv": "0febe6e6286b65557f00461a9ff60b3ec667862ce918907779a4354085315718",
+    "cases/episodes-5104.csv": "23b9c29ab2a5caa7cba45cea828cb9f9aafffbd21cf89cb4b2b5b23ef60f811d",
+    "cases/episodes-5105.csv": "160066cc933ada6b0c23512a415387489bb4f8f0a42021b274ea7b80a11b2c9a",
+    "cases/episodes-5106.csv": "30910776b5e4885799b883add827e05befe086e226f821a7faad51a8e8639bbd",
+    "cases/episodes-5107.csv": "b0aff331e2f2152567b945efd98ec17062ac3ad2e854b2255bc4c8ef0d89b2b6",
+    "cases/episodes-5108.csv": "43f3a2b27e5a99acd6d38d858216c1d0ffd74ee19ca794443a1fd7ffa2c8f04c",
+    "cases/episodes-5109.csv": "5167eb288ee390b9b258d2fb1e19e9d01b6394c708ea36526afc4b0e0dfc8657",
+    "cases/episodes-5110.csv": "400e90278177280d6f72a5683f1106b8a135560e02d58307ead0e72844682613",
+    "cases/episodes-5111.csv": "d95c39355d6a67aab8974cddc9628a04a3badb69848d01de80919f552d539881",
+    "cases/episodes-5112.csv": "9f462deec514436bfd46093ad8a841e470d2dbdf0550e2b8c2e5e8bee2beb1e3",
+    "cases/episodes-5113.csv": "b272360e04d00b33d606329fe19e347875798a6029f51282eb92dbf3e27a5c33",
+    "cases/episodes-5114.csv": "5dcc5106ee6d0a1544a4f56157a69b04af376fff6fac3e318be0a225917d4c6b",
+    "cases/episodes-5115.csv": "cf32e3ef079b8e3395be23ccec8a729755ce8b92c1a46fe08ca52fef6aec81ae",
+    "cases/episodes-5116.csv": "02e2aa55c76d33b560178015cef2b63fcbaaa6aba78bb8caa6486cad15ab685f",
+    "cases/episodes-5117.csv": "c3550be207bd5ce0e4b7cf38dc91c128326ffe8321b3c435c9ae79366af08e79",
+    "cases/episodes-5118.csv": "71697d4631ae20b34a928ed218161cae9e347b4b640d0a72b7d0480154b2a16b",
+    "cases/episodes-5119.csv": "380692933fbcb4a993d2a9567413385e155e5ece56253e7e9e4ced63affd973b",
+    "cases/episodes-5120.csv": "c8d92099a57f83a573fa17d1925b4e348b998ce1d0bf852d3273d2598e3b393b",
+    "cases/episodes-5121.csv": "4c00a4d62e8b0387cc74a752b2f52de392ebf03bdc70ceec51112dac4d46f2c2",
+    "cases/episodes-5122.csv": "45090cf9c5238854b14abe21bb537d9f8de2409e32236dab2bc14b3d065f34f8",
+    "cases/episodes-5123.csv": "61089a13ad0aa6b405307251f0f7d5937321b0617030fdcf2c1d2b658f0ade47",
+    "cases/episodes-5124.csv": "fa79d5f383bff9145d4f7a7e178f7d5459ae53b5305e36a9284aa3eca2f3192b",
+    "cases/episodes-5125.csv": "f1d435385471e4e74d117fca02a61c412ad0c190331e4aa1130c212c1526318b",
+    "cases/episodes-5126.csv": "162b73e6b68a29c01fef696ef229bc9d5e9aa3744c9f0d96af6852be578ee5d6",
+    "cases/episodes-5127.csv": "ba812cef1daa676309347609e6fd9c9fda56b0a4f455e297bdc0b6677f3ad9d2",
+    "cases/episodes-5128.csv": "d9b00e303b11f8e88b395228a45f232571386fe9db6c0b4e72002854e487be70",
+    "cases/episodes-5129.csv": "ff5eb7759d5eefb8029e897cdc0803410de616ea6039a7566a98aa34dfe10c6d",
+    "cases/episodes-5130.csv": "bce7535b8a8717b7238d756102e2f375e18d1a4032bb84056ee504fad469e353",
+    "cases/episodes-5131.csv": "d1bc43539809f3487c21d53b188874fea8cd69687c26b1a9b9fb54b47fc3592b",
+    "ood/episodes-8200.csv": "28a074ad1fccfc5d2b04e15e13c81aba2d597cf6e9a5d9053c813e4392faad8d",
+    "ood/episodes-8201.csv": "831168622371e69058eab615d6b398707eea3f18f907d8cc0f8d9ccb2145ab94",
+    "ood/episodes-8202.csv": "ac9a991ec79bdf7053eb212beb7417a8f0d5e46cee7b31130e93d108db7ce848",
+    "ood/episodes-8203.csv": "4feba002933e4e1f89e8a18590edea89e1956f68343f34295687c59bcc79354f",
+    "ood/episodes-8204.csv": "f4bcc40a6850c1e2e4d0050d5edde467258566e86b756a712165dbccc38fac36",
+    "ood/episodes-8205.csv": "501bc1d9086690f0e2c0e7c031d8a23e2e23b6a20b7edc9e42ad450b3a5c9cf6",
+    "ood/episodes-8206.csv": "fa7fd74b5b0a0bdf2b765ff3b0e7888f7c9095afe083fadbf86f6e0792988643",
+    "ood/episodes-8207.csv": "d6a18f87633d154dd83b96665cb6fc060e4fefdc5e3e67f3c1df44659c1d78f7",
+    "ood/episodes-8208.csv": "1d6043ee4575a419ae54414f2dcabced78a6afa14c8f472b3ce1f7633262fcd9",
+    "ood/episodes-8209.csv": "5fd574222efec2043ecc7d819262da43e34e357e9cf4f0731f30e8c168d4f4ce",
+    "ood/episodes-8210.csv": "ea730940325ffad66d65396680816720cb45f02ffaae659fc9345b3163a294a7",
+    "ood/episodes-8211.csv": "74bea4aba4e7ab53b91ae6e8bbd8743f50920df30f0fe67507289a51f9a61da2",
+    "ood/episodes-8212.csv": "33142b1ba4e13479ee74b6ec73075028b25d314961ed847f66d078d4dce34672",
+    "ood/episodes-8213.csv": "38cd19aeb59792c1b8769cf8b88abefe6f9cd6b23bc369d670e547f29dc3806a",
+    "ood/episodes-8214.csv": "069ff45c4d5a7389b527473511b04cec19b47ffb320cf7cece41661108c6ad73",
+    "ood/episodes-8215.csv": "1ab367caa43fe55ff6702c6338ffbfc80f921955746e18bac7c31c639c562e08",
+    "ood/episodes-8216.csv": "0da0c8ab895b515f19182c01a648670ffc009c77bc87c71aa50a6e5cf46d01c0",
+    "ood/episodes-8217.csv": "57e2542b370d97069f5f1d4cd3d3a1f52e8cf713dfe69c1f474a11a815c033f1",
+    "ood/episodes-8218.csv": "cf05a45512150551b1f1ea195b2725035d5016fb0a78c7268f4add727715b73c",
+    "ood/episodes-8219.csv": "259e16937bcd0b8871859b0d04c5b7191d132e421112a25fe08be2882612b01c",
+    "ood/episodes-8220.csv": "4217347ed9526b1f94808fdf176b347fc3db43b2d9e6351c0590018539859b84",
+    "ood/episodes-8221.csv": "e4272ae240315a15fcbd454e2bca1bc6681190947cb7396c66c8ce4072f8d4e8",
+    "ood/episodes-8222.csv": "afa04cf7b75754b89e05502bdc78ba0d2a0d0b97430a3254b765faa74414e095",
+    "ood/episodes-8223.csv": "cccb519cd8894afb30ac33f67ee6344aa1900ab467ab42def8e346fd13793fe7",
+    "ood/episodes-8224.csv": "2aa220019c1f0265fb3c556df83a1e0551f65c8bd255818cf3581a4cd422e852",
+    "ood/episodes-8225.csv": "e883106e02682985dda73e2e7f430623cf892fe9445d70c765a1bce5a9c617a5",
+    "ood/episodes-8226.csv": "c8a362f60509c69dace59f0cab2e4a2a43fd6fc78b2f92e70b4b7b6e353d7c78",
+    "ood/episodes-8227.csv": "e976b59ccbc64568901a551d87c1e2927b8e651f276c849ddc254a7a8d9d9c29",
+    "ood/episodes-8228.csv": "c54cab18a1788bc1b504fed228ca6d1ce9d54007a3669236c305dde395f49396",
+    "ood/episodes-8229.csv": "9099e79c9d1e454a5be83c919677308f6209dc7f8ab8865746df862a6388e2f4",
+    "ood/episodes-8230.csv": "97d3f59f739c3a3f806083ac4448dca2e2da72a542afd1eb3bfdc3a27935f54f",
+    "ood/episodes-8231.csv": "059057ae8da6a7ab4d39a8b53bd18ab48e261389c4ad90934e1313460e344b08"
+  },
+  "ood_seeds": [
+    8200,
+    8201,
+    8202,
+    8203,
+    8204,
+    8205,
+    8206,
+    8207,
+    8208,
+    8209,
+    8210,
+    8211,
+    8212,
+    8213,
+    8214,
+    8215,
+    8216,
+    8217,
+    8218,
+    8219,
+    8220,
+    8221,
+    8222,
+    8223,
+    8224,
+    8225,
+    8226,
+    8227,
+    8228,
+    8229,
+    8230,
+    8231
+  ],
+  "parameters": {
+    "absolute_gain": 10.0,
+    "arrival_window": 3,
+    "balance_preference_fraction": 0.1,
+    "demand_spread": 0.2,
+    "drain_weight": 1.0,
+    "dwell": 8,
+    "escape_floor": 0.25,
+    "evidence_window": 5,
+    "idle_recovery_observations": 3,
+    "lookahead": 16,
+    "loss_tolerance": 1e-06,
+    "maximum_transfer": 20.0,
+    "minimum_staff": 10.0,
+    "nominal_rate": 200.0,
+    "pressure_time_scale": 8.0,
+    "rate_band": 0.15,
+    "rate_lower_factor": 0.85,
+    "relative_gain": 0.01,
+    "restraint_hurdle_factor": 3.0,
+    "restraint_loss_fraction": 0.25,
+    "restraint_max_transfer": 1000000000.0,
+    "restraint_memory": 16,
+    "restraint_neutral": 1.0,
+    "restraint_neutral_tolerance": 10.0,
+    "risk_weight": 0.1,
+    "saturated_update": 0.7,
+    "sparse_rate_band": 0.25,
+    "stale_anchor_minutes": 8,
+    "stress_tail_fraction": 0.25,
+    "terminal_weight": 0.5,
+    "tolerance": 1e-07,
+    "unsaturated_prior_reversion": 0.1,
+    "warmup": 5,
+    "worst_case_regression_fraction": 0.0
+  },
+  "ranking": [
+    {
+      "candidate": "v6_full",
+      "cases_per_regime": 352,
+      "delayed_noisy_mean_total_dropped": 41269.29844039926,
+      "delayed_noisy_risk": 11512.223619785638,
+      "failed_loss_endpoint_checks": [
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "total_dropped"
+        ],
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "total_dropped"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ]
+      ],
+      "failed_ood_checks": [],
+      "failed_point_checks": 8,
+      "failed_risk_checks": [
+        [
+          "legacy_instant",
+          "capacity_v2"
+        ],
+        [
+          "legacy_instant",
+          "v4_hybrid"
+        ]
+      ],
+      "hypotheses_vs_v5_full": {
+        "H1_drain": {
+          "checks": [
+            {
+              "ci95": [
+                445.01214546375434,
+                1225.8479609377937
+              ],
+              "metric": "end_deficit",
+              "point": 840.0881994893043,
+              "regime": "legacy_instant",
+              "supported": true
+            },
+            {
+              "ci95": [
+                5483.5581394232695,
+                19987.669006451448
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 12628.884642197108,
+              "regime": "legacy_instant",
+              "supported": true
+            },
+            {
+              "ci95": [
+                345.2098371991186,
+                999.4985064282242
+              ],
+              "metric": "end_deficit",
+              "point": 684.59904698439,
+              "regime": "legacy_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                9266.87521784937,
+                21365.323379847883
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 15319.792417409784,
+              "regime": "legacy_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                717.7989554365186,
+                1391.9615324948638
+              ],
+              "metric": "end_deficit",
+              "point": 1042.0361940093135,
+              "regime": "integer_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                14484.014811611052,
+                26934.757870281257
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 20356.182433273254,
+              "regime": "integer_transit3",
+              "supported": true
+            }
+          ],
+          "supported": true
+        },
+        "H2_restraint": {
+          "ci95": [
+            10766.483773411906,
+            16148.607070970505
+          ],
+          "point": 13484.93868861489,
+          "supported": true
+        },
+        "reference": "v5_full"
+      },
+      "ood_pooled": {
+        "mean_total_dropped": 79921.68106758386,
+        "risk": 16127.700712212954
+      },
+      "variant": "v6_full"
+    },
+    {
+      "candidate": "v6_restraint",
+      "cases_per_regime": 352,
+      "delayed_noisy_mean_total_dropped": 41450.68872266124,
+      "delayed_noisy_risk": 13251.90167395835,
+      "failed_loss_endpoint_checks": [
+        [
+          "legacy_instant",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "legacy_instant",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ],
+        [
+          "legacy_transit3",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "legacy_transit3",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ],
+        [
+          "integer_transit3",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "integer_transit3",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "total_dropped"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ]
+      ],
+      "failed_ood_checks": [],
+      "failed_point_checks": 9,
+      "failed_risk_checks": [],
+      "hypotheses_vs_v5_full": {
+        "H1_drain": {
+          "checks": [
+            {
+              "ci95": [
+                -7.606682960282672e-12,
+                8.598858998580413e-12
+              ],
+              "metric": "end_deficit",
+              "point": 3.3072534609924664e-13,
+              "regime": "legacy_instant",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -2.434138547290455e-10,
+                2.751634879545732e-10
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 1.0583211075175893e-11,
+              "regime": "legacy_instant",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -6.283781575885686e-12,
+                9.921760382977398e-12
+              ],
+              "metric": "end_deficit",
+              "point": 2.3150774226947264e-12,
+              "regime": "legacy_transit3",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -2.0108101042834195e-10,
+                3.1749633225527674e-10
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 7.408247752623124e-11,
+              "regime": "legacy_transit3",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -1.190611245957288e-11,
+                5.291605537587946e-12
+              ],
+              "metric": "end_deficit",
+              "point": -2.97652811489322e-12,
+              "regime": "integer_transit3",
+              "supported": false
+            },
+            {
+              "ci95": [
+                -3.8099559870633214e-10,
+                1.6933137720281428e-10
+              ],
+              "metric": "tail_auc_deficit",
+              "point": -9.524889967658304e-11,
+              "regime": "integer_transit3",
+              "supported": false
+            }
+          ],
+          "supported": false
+        },
+        "H2_restraint": {
+          "ci95": [
+            9406.214588674686,
+            14716.411920993398
+          ],
+          "point": 11989.674036612574,
+          "supported": true
+        },
+        "reference": "v5_full"
+      },
+      "ood_pooled": {
+        "mean_total_dropped": 78406.3959434369,
+        "risk": 17622.96536421527
+      },
+      "variant": "v6_restraint"
+    },
+    {
+      "candidate": "v6_drain",
+      "cases_per_regime": 352,
+      "delayed_noisy_mean_total_dropped": 41196.0982438183,
+      "delayed_noisy_risk": 11797.78103859891,
+      "failed_loss_endpoint_checks": [
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "total_dropped"
+        ],
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "finite_pipeline",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "total_dropped"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "end_deficit"
+        ],
+        [
+          "startup",
+          "capacity_balance",
+          "tail_auc_deficit"
+        ]
+      ],
+      "failed_ood_checks": [
+        [
+          "risk",
+          "v4_hybrid"
+        ]
+      ],
+      "failed_point_checks": 10,
+      "failed_risk_checks": [
+        [
+          "legacy_transit3",
+          "v4_hybrid"
+        ],
+        [
+          "integer_transit3",
+          "v4_hybrid"
+        ],
+        [
+          "finite_pipeline",
+          "v4_hybrid"
+        ]
+      ],
+      "hypotheses_vs_v5_full": {
+        "H1_drain": {
+          "checks": [
+            {
+              "ci95": [
+                445.0121454637601,
+                1225.8479609377944
+              ],
+              "metric": "end_deficit",
+              "point": 840.088199489306,
+              "regime": "legacy_instant",
+              "supported": true
+            },
+            {
+              "ci95": [
+                5483.558139423343,
+                19987.66900645135
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 12628.884642197161,
+              "regime": "legacy_instant",
+              "supported": true
+            },
+            {
+              "ci95": [
+                345.2098371991262,
+                999.4985064282175
+              ],
+              "metric": "end_deficit",
+              "point": 684.5990469843907,
+              "regime": "legacy_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                9266.875217849443,
+                21365.323379847785
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 15319.792417409806,
+              "regime": "legacy_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                717.7989554365145,
+                1391.961532494862
+              ],
+              "metric": "end_deficit",
+              "point": 1042.0361940093148,
+              "regime": "integer_transit3",
+              "supported": true
+            },
+            {
+              "ci95": [
+                14484.014811611203,
+                26934.757870281417
+              ],
+              "metric": "tail_auc_deficit",
+              "point": 20356.182433273298,
+              "regime": "integer_transit3",
+              "supported": true
+            }
+          ],
+          "supported": true
+        },
+        "H2_restraint": {
+          "ci95": [
+            -457.6719431485868,
+            3077.7759859668445
+          ],
+          "point": 1354.4989021010879,
+          "supported": false
+        },
+        "reference": "v5_full"
+      },
+      "ood_pooled": {
+        "mean_total_dropped": 79860.07699070439,
+        "risk": 28258.140498726756
+      },
+      "variant": "v6_drain"
+    }
+  ],
+  "seeds": [
+    5100,
+    5101,
+    5102,
+    5103,
+    5104,
+    5105,
+    5106,
+    5107,
+    5108,
+    5109,
+    5110,
+    5111,
+    5112,
+    5113,
+    5114,
+    5115,
+    5116,
+    5117,
+    5118,
+    5119,
+    5120,
+    5121,
+    5122,
+    5123,
+    5124,
+    5125,
+    5126,
+    5127,
+    5128,
+    5129,
+    5130,
+    5131
+  ],
+  "split": "selection"
+}

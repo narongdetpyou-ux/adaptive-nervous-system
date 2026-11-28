@@ -30,8 +30,9 @@ hash หรือหลักฐานเดิมเพื่อให้ผล
 
 - `simulation/` เก็บซอร์ส v0.1–v0.4 ที่นำเข้ามาทั้งชุด ทั้งโค้ด tests protocol และหลักฐาน
   ทุกไฟล์มีไบต์และตำแหน่งภายในโฟลเดอร์เหมือนตอนนำเข้า เพราะโค้ด import กันและอ่านไฟล์ตามตำแหน่งนี้
-  งาน v0.5 (`v5_*`, `test_v5*.py`, `V5_*.md` และ `v5_results/`) อยู่ในโฟลเดอร์นี้ และตรึงไว้ใน `v5_freeze_record.json` แล้ว
-  งานรุ่นใหม่ของแบบจำลอง เช่น `v6_*.py` และ `test_v6_*.py` ให้วางในโฟลเดอร์นี้ข้างโมดูลเดิม
+  งาน v0.5 และ v0.6 (`v5_*`/`v6_*`, `test_v5*.py`/`test_v6*.py`, `V5_*.md`/`V6_*.md`, `v5_results/`/`v6_results/`)
+  อยู่ในโฟลเดอร์นี้ และตรึงไว้ใน `v5_freeze_record.json` และ `v6_freeze_record.json` แล้ว
+  งานรุ่นใหม่ของแบบจำลอง เช่น `v7_*.py` และ `test_v7_*.py` ให้วางในโฟลเดอร์นี้ข้างโมดูลเดิม
 - `benchmarks/` และ `pilots/` เก็บงานที่รันจริงบนเครื่อง แต่ละงานอยู่ในโฟลเดอร์ของตัวเอง
 - ที่รากเหลือเพียง `README.md` (หน้าแรกของ repository), `LICENSE` (MIT), `.github/` (CI, แม่แบบ PR และ Dependabot),
   `AGENTS.md`, `CONTRIBUTING.md`, `.gitattributes` และ `.gitignore` ซึ่ง git อ่านจากรากหรือ GitHub แสดงจากราก
@@ -80,9 +81,9 @@ CI แสดงสองผลที่มีหน้าที่ต่าง�
 จึงต้องรันคำสั่ง `freeze_v4.py --verify` แยกด้วย หลังย้ายโฟลเดอร์มี `test_source_layout`
 เพิ่มอีกหนึ่งข้อ เพื่อตรวจไบต์ของไฟล์ที่นำเข้า
 
-เมื่อเพิ่มรุ่นใหม่ เช่น v0.6 ให้เพิ่ม `test_v6_*.py` ที่ import และเรียกใช้ implementation รุ่นนั้นจริง
-การมีไฟล์ `v6_policy.py` เพียงอย่างเดียวไม่ได้ทำให้ tests รุ่นเดิมทดสอบรุ่นใหม่
-workflow ของ V5 ยังรัน `v5_freeze.py --verify` เพื่อยืนยันว่าไฟล์ v0.5 ที่ตรึงไว้ไม่เปลี่ยน
+เมื่อเพิ่มรุ่นใหม่ เช่น v0.7 ให้เพิ่ม `test_v7_*.py` ที่ import และเรียกใช้ implementation รุ่นนั้นจริง
+การมีไฟล์ `v7_policy.py` เพียงอย่างเดียวไม่ได้ทำให้ tests รุ่นเดิมทดสอบรุ่นใหม่
+workflow ของ V5 และ V6 ยังรัน `v5_freeze.py --verify` และ `v6_freeze.py --verify` เพื่อยืนยันว่าไฟล์ที่ตรึงไว้ไม่เปลี่ยน
 ผล CI ผ่านยืนยันได้เฉพาะสิ่งที่ tests ตรวจ ไม่ได้ยืนยันว่าตัวควบคุมรุ่นใหม่ผ่าน
 เกณฑ์งานตกหล่น ผลปลายช่วง หรือเกณฑ์เลื่อนรุ่นทางการทดลอง
 
@@ -94,8 +95,8 @@ workflow ของ V5 ยังรัน `v5_freeze.py --verify` เพื่อ
 
 รายการ hash ใน `freeze_capacity.py`, `freeze_v3.py`, `freeze_v4.py` และ
 `source_checksums.sha256` เป็นรายการไฟล์แบบระบุชื่อ ส่วน `v5_freeze_record.json` ตรึงไฟล์ v0.5 38 ไฟล์
-และ config ของ V5 Full การเพิ่ม workflow, เอกสารใหม่, `v6_*.py` และ `test_v6_*.py`
-ข้างโมดูลเดิมใน `simulation/` ทำได้โดยไม่เปลี่ยน frozen chain
+และ config ของ V5 Full และ `v6_freeze_record.json` ตรึงไฟล์ v0.6 21 ไฟล์และ config ของ V6 Full
+การเพิ่ม workflow, เอกสารใหม่, `v7_*.py` และ `test_v7_*.py` ข้างโมดูลเดิมใน `simulation/` ทำได้โดยไม่เปลี่ยน frozen chain
 
 ไฟล์ที่ถูกตรึงมีทั้งโค้ดและ tests รุ่นเดิม, protocol, acceptance declaration,
 หลักฐาน development, `simulation.py`, ไฟล์ต้นทางใน `abc_service/` และ

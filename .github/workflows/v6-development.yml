@@ -1,0 +1,44 @@
+name: ANS V6 development
+on:
+  pull_request:
+    branches: [main]
+    paths: ['simulation/v6_*.py', 'simulation/test_v6*.py', 'simulation/v6_*.json', 'simulation/v6_results/**', '.github/workflows/v6-development.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  development:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        # V6 sits beside the frozen v0.1-v0.5 modules it imports.
+        working-directory: simulation
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -r requirements.txt
+      - run: python freeze_v4.py --verify
+      - run: python v5_freeze.py --verify
+      - run: python v6_freeze.py --verify
+      - name: Check the V6 declaration's seed ranges
+        run: |
+          python - <<'EOF'
+          import json
+          d = json.load(open('v6_acceptance_predeclared.json'))['data']
+          new = [d['selection_seed_range'], d['selection_ood_seed_range'],
+                 d['validation_seed_range'], d['ood_validation_seed_range']]
+          used = d['previously_used_ranges'] + [r for r in d['development_seed_ranges']] + [d['development_ood_seed_range']]
+          overlap = lambda a, b: a[0] <= b[1] and b[0] <= a[1]
+          bad = [(a, b) for a in new for b in used if overlap(a, b)]
+          bad += [(a, b) for i, a in enumerate(new) for b in new[i + 1:] if overlap(a, b)]
+          assert not bad, bad
+          assert d['validation_seed_range'][1] - d['validation_seed_range'][0] + 1 == 64
+          print('V6 held-out and selection ranges are fresh:', new)
+          EOF
+      - run: python -m unittest discover -s . -p 'test_*.py' -v
+      - run: git diff --exit-code HEAD
